@@ -1,0 +1,274 @@
+{
+ "library_folder": "https://drive.google.com/drive/folders/1VEWVEb-JLDLzPgDo8MRH6Uwr5-MiLtOh",
+ "historical_folder": "https://drive.google.com/drive/folders/1CUau07RBh-MxkDx9r519OxWKBj-V47Lq",
+ "data_folder": "https://drive.google.com/drive/folders/1NnNnv76BOImXfXCcDeG64A1sdLIPWYWy",
+ "docs": [
+  {
+   "title": "The A.A. Service Manual 2026-2028 (BM-31), bookmarked",
+   "url": "https://drive.google.com/file/d/1p01aF0SHgai5ie6CWQvkmNys2NF8YBze/view",
+   "group": "Service Manual & history",
+   "main": true
+  },
+  {
+   "title": "The A.A. Service Manual 2024-2026 (previous edition)",
+   "url": "https://drive.google.com/file/d/1JC9TW1Jme1z2JnhNsivH5uSbJuP7UmBV/view",
+   "why": "The edition before the one the app cites. Compare it with 2026-2028, which lists its changes at the front (pp. VIII-IX).",
+   "group": "Service Manual & history"
+  },
+  {
+   "title": "Third Legacy Manual (1955), forerunner of the Service Manual",
+   "url": "https://drive.google.com/file/d/11rnbAogiJtKTgDtoh22u126UBb4QGGJZ/view",
+   "why": "Bill W.'s manual of the Conference plan. The current Service Manual grew out of it (p. 2), and the Conference Charter's footnote still cites its pages 57-58 (p. 123).",
+   "group": "Service Manual & history"
+  },
+  {
+   "title": "Our Great Responsibility: Bill W.'s General Service Conference talks 1951-1970 (bookmarked)",
+   "url": "https://drive.google.com/file/d/17Z-4yhWtke8iSYNF2jZ29-lYl_hgbtSO/view",
+   "why": "Bill W.'s 16 talks to the early Conferences, in his own words. On the manual's reading list for new GSRs (p. 9) and in Appendix R (p. 164).",
+   "group": "Service Manual & history"
+  },
+  {
+   "title": "Alcoholics Anonymous Comes of Age (B-3, bookmarked)",
+   "url": "https://drive.google.com/file/d/10dx_bY0kYR9WYwuyRE-4DpRHCS66Yf-0/view",
+   "why": "Bill W. on how A.A. started, how the Steps and Traditions evolved and how the Fellowship grew (p. 161). On the GSR reading list (p. 9); the manual suggests new delegates read or reread it (p. 35).",
+   "group": "Service Manual & history"
+  },
+  {
+   "title": "The Language of the Heart: Bill W.'s Grapevine writings (bookmarked)",
+   "url": "https://drive.google.com/file/d/1FwExi6FDby1xUx2vKJELEI6-37CgqoBl/view",
+   "why": "Bill W.'s Grapevine articles, including his writing on the Traditions and on service. On the manual's GSR reading list (p. 9).",
+   "group": "Service Manual & history"
+  },
+  {
+   "title": "M-39 Advisory Actions 1951-2026",
+   "url": "https://www.aa.org/m-39-advisory-actions",
+   "why": "GSO's compilation of every Conference Advisory Action (pp. 35, 44). The app's Advisory Actions page indexes it.",
+   "group": "Service Manual & history"
+  },
+  {
+   "title": "P-44 A.A.'s Legacy of Service",
+   "url": "https://www.aa.org/aas-legacy-service",
+   "why": "Bill W.'s essay as a separate pamphlet: the beginnings of group and general services, the origin of the Traditions and the birth of the Conference (Appendix R, p. 164). GSRs are encouraged to read it (p. 9).",
+   "group": "Service Manual & history"
+  },
+  {
+   "title": "SMF-116 The General Service Conference Structure",
+   "url": "https://drive.google.com/file/d/1O7UZ3N1dyn1o0V1l5w6PjyZ0Lsw5ut7N/view",
+   "group": "Structure, maps & GSO"
+  },
+  {
+   "title": "SMF-118 Regional Map of the U.S. and Canada",
+   "url": "https://drive.google.com/file/d/1nLa8W9RfjHTrz7RIyRYnioGXvJYrTyoG/view",
+   "group": "Structure, maps & GSO"
+  },
+  {
+   "title": "SMF-146 Area Map of the U.S. and Canada",
+   "url": "https://drive.google.com/file/d/1ZL_AHGhahGn6qbyt1EPLf9ojILNEgImQ/view",
+   "group": "Structure, maps & GSO"
+  },
+  {
+   "title": "SMF-179 Structure of the Conference (U.S. and Canada): the upside-down triangle",
+   "url": "https://www.aa.org/structure-conference-us-and-canada",
+   "why": "One-page chart of the upside-down triangle: groups, GSRs, districts, area assemblies, the Conference, the General Service Board and AAWS/AA Grapevine. The same chart is Appendix C (p. 108).",
+   "group": "Structure, maps & GSO"
+  },
+  {
+   "title": "SMF-176 Services Provided by GSO/AAWS (the manual's F-176)",
+   "url": "https://www.aa.org/services-provided-gsoaaws",
+   "why": "What each GSO staff desk and department does. This is the manual's answer for a GSR whose group asks what GSO does with its contributions (p. 12).",
+   "group": "Structure, maps & GSO"
+  },
+  {
+   "title": "F-15 GSO Staff Assignments (revised September 2025)",
+   "url": "https://www.aa.org/gso-staff-assignments",
+   "why": "One page listing each GSO staff desk, the trustees' and Conference committees it serves as secretary to, and the region it corresponds with. Staff serve as committee secretaries (p. 70).",
+   "group": "Structure, maps & GSO"
+  },
+  {
+   "title": "Video: Your General Service Office, the Grapevine and the General Service Structure",
+   "url": "https://www.aa.org/your-general-service-office-video",
+   "why": "AAWS's video on GSO, the Grapevine and the service structure, listed in the GSR kit. Areas use service videos to stir interest in general service (p. 172).",
+   "group": "Structure, maps & GSO"
+  },
+  {
+   "title": "P-19 G.S.R. General Service Representative",
+   "url": "https://www.aa.org/gsr-general-service-representative",
+   "why": "For a new GSR: the job and where to find information. For a group: what to keep in mind when electing one (p. 163). First on the manual's GSR reading list (p. 9).",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "F-12 Your D.C.M. - District Committee Member",
+   "url": "https://www.aa.org/your-dcm-district-committee-member",
+   "why": "Conference-approved flyer: what a DCM is, how and when DCMs are elected, and what they do as the link between GSRs and the area (Appendix R, p. 164).",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "SMF-174 Sharing From D.C.M.s to a New D.C.M.",
+   "url": "https://www.aa.org/sharing-dcms-new-dcm",
+   "why": "Past DCMs share what to read, how to work with GSRs, and how to run district meetings and workshops. The manual covers the DCM's job on pp. 15-17.",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "GSR Kit: contents list (digital, Rev. 10/25)",
+   "url": "https://www.aa.org/contents-general-service-representative-gsr-kit-list",
+   "why": "Two-page list of what GSO sends a new GSR (p. 12): BM-31, the 2025 Final Report (M-23), SMF-116/118/176/29/91/131, P-19/45/16/43/8/52, MG-25 and F-28. A ready-made reading list.",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "Information for new trusted servants / GSR kit",
+   "url": "https://www.aa.org/information-for-new-trusted-servants",
+   "why": "aa.org's starting page for newly elected trusted servants, with links to the service kits. When GSO learns of a new GSR, it sends a kit (welcome letter, the Service Manual, pamphlets and order forms), and all service kits can be downloaded from aa.org (p. 12).",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "P-16 The A.A. Group...Where It All Begins",
+   "url": "https://www.aa.org/aa-groupwhere-it-all-begins",
+   "why": "How a group works, how to start one and how each group is linked to A.A. as a whole (p. 163). On the GSR reading list (p. 9) and in the GSR kit.",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "F-3 Self-Support: Where Money and Spirituality Mix",
+   "url": "https://www.aa.org/self-support-where-money-and-spirituality-mix",
+   "why": "The Conference-approved pamphlet with suggestions for sharing group contributions among service entities, including the local intergroup/central office (p. 8). On the GSR reading list (p. 9).",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "F-203 Seventh Tradition Fact Sheet: Your Seventh Tradition Contributions",
+   "url": "https://www.aa.org/seventh-tradition-fact-sheet-your-seventh-tradition-contributions",
+   "why": "What group contributions pay for at GSO, with the year's figures. The manual pairs it with Services Provided by GSO/AAWS (p. 12).",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "P-17 A.A. Tradition: How It Developed",
+   "url": "https://www.aa.org/aa-tradition-how-it-developed",
+   "why": "Bill W.'s 1946-47 Grapevine articles tracing how the Traditions evolved (p. 162). On the GSR reading list (p. 9).",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "P-43 The Twelve Traditions Illustrated",
+   "url": "https://www.aa.org/twelve-traditions-illustrated",
+   "why": "Each Tradition explained with illustrations (p. 162). AAWS's item number is P-43. The manual's reading list (p. 9) prints P-55, which is The Twelve Steps Illustrated.",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "P-8 The Twelve Concepts for World Service Illustrated",
+   "url": "https://www.aa.org/twelve-concepts-world-service-illustrated",
+   "why": "A short illustrated pamphlet on how Bill W. explained the Concepts and how the parts of the structure work together. On the manual's GSR reading list (p. 9) and in the GSR kit.",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "SMF-91 Concepts Checklist",
+   "url": "https://www.aa.org/concepts-checklist",
+   "why": "Discussion questions on each Concept for groups, districts and areas, from the GSR kit. Useful for self-study or a Concepts workshop (p. 172).",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "P-15 Questions & Answers on Sponsorship",
+   "url": "https://drive.google.com/file/d/1DtYhq2_tb5Q5x1bsNIlsr2gJJiR0mGNN/view",
+   "why": "Has a section on the service sponsor; the manual sends members here for more on service sponsorship (p. 10).",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "Twelve Steps and Twelve Traditions",
+   "url": "https://drive.google.com/file/d/1zBhgMgWVySXOB7PTzd9FQ8bhSUCP3iHf/view",
+   "why": "Bill W.'s essays. The manual's GSR reading list points to the second half, on the Traditions (p. 9).",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "P-45 Circles of Love and Service",
+   "url": "https://www.aa.org/circles-love-and-service",
+   "why": "Short illustrated leaflet on how groups, districts, area assemblies and the Conference work together, and how central/intergroup offices differ. Part of the GSR kit (Rev. 10/25).",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "Grapevine GVR resources: Grapevine Workbook and GVR Handbook",
+   "url": "https://www.aagrapevine.org/gvr-resources",
+   "why": "The Grapevine Workbook (updated each year) and the handbook for Grapevine representatives (p. 83). The address the manual gives, aagrapevine.org/gvr, now redirects elsewhere.",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "La Viña recursos: Libro de trabajo de La Viña, Manual del Representante LV",
+   "url": "https://www.aalavina.org/recursos",
+   "why": "The La Viña workbook and RLV handbook the manual points to (p. 83).",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "F-96 The A.A. Group Treasurer",
+   "url": "https://www.aa.org/aa-group-treasurer",
+   "why": "Appendix R's pamphlet on a group treasurer's role and responsibilities (p. 163). Useful to a GSR who works with the treasurer on Seventh Tradition support (p. 8).",
+   "group": "For GSRs & DCMs"
+  },
+  {
+   "title": "F-30 GSO New Group Listing Guidelines/Form (rev. 4/2024, Appendix H)",
+   "url": "https://www.aa.org/gso-new-group-listing-guidelinesform",
+   "why": "The form a new group sends to be listed with GSO, with GSO's guidelines: groups not meetings, preferred district and area, primary contact, the 30-day pending period. Printed in the manual as Appendix H (p. 117).",
+   "group": "Forms & guidelines"
+  },
+  {
+   "title": "F-28 GSO Group Information Change Form (rev. 4/2024, Appendix I)",
+   "url": "https://www.aa.org/gso-group-information-change-form",
+   "why": "How a group reports a new GSR or alternate, or a new name, location or format. Printed in the manual as Appendix I (p. 118).",
+   "group": "Forms & guidelines"
+  },
+  {
+   "title": "F-43 GSO DCM & DCMC Information Change Form (rev. 4/2024, Appendix J)",
+   "url": "https://www.aa.org/gso-dcm-dcmc-information-change-form",
+   "why": "How a district reports a new DCM or DCMC; the DCM then gets read-only Fellowship Connection access. Printed in the manual as Appendix J (p. 119).",
+   "group": "Forms & guidelines"
+  },
+  {
+   "title": "SMF-101 Frequently Asked Questions About A.A. Websites",
+   "url": "https://www.aa.org/frequently-asked-questions-about-aa-websites",
+   "why": "The 'FAQ on A.A. Websites' the manual points area web committees to: anonymity, meeting lists, posting literature and PSAs.",
+   "group": "Forms & guidelines"
+  },
+  {
+   "title": "MG-18 A.A. Guidelines on the Internet",
+   "url": "https://www.aa.org/aa-guidelines-internet",
+   "why": "GSO's guidelines for A.A. websites and online anonymity, which the manual cites for area websites.",
+   "group": "Forms & guidelines"
+  },
+  {
+   "title": "MG-02 A.A. Guidelines on Central or Intergroup Offices",
+   "url": "https://www.aa.org/aa-guidelines-central-or-intergroup-offices",
+   "why": "How intergroup/central offices and the general service structure differ and work together. Appendix S (pp. 166-169) is taken from these Guidelines (Rev. 3/24).",
+   "group": "Forms & guidelines"
+  },
+  {
+   "title": "MG-17 A.A. Guidelines on Archives",
+   "url": "https://www.aa.org/aa-guidelines-archives",
+   "why": "Shared experience for area and district archives committees. GSO's Archives department provides them on request (pp. 23, 76).",
+   "group": "Forms & guidelines"
+  },
+  {
+   "title": "MG-04 A.A. Guidelines on Conferences, Conventions and Roundups",
+   "url": "https://www.aa.org/aa-guidelines-conferences-conventions-and-roundups",
+   "why": "How areas and intergroups put on conventions and other A.A. events; the manual cites it for area conventions and local events.",
+   "group": "Forms & guidelines"
+  },
+  {
+   "title": "Box 4-5-9 (F-36): GSO's quarterly newsletter, back issues",
+   "url": "https://www.aa.org/box-459",
+   "why": "GSO's newsletter archive, from Oct-Nov 2004 to Summer 2026. A main source for GSR reports (p. 11), and the way a region's groups hear of a regional trustee opening (p. 54).",
+   "group": "Newsletters & reports"
+  },
+  {
+   "title": "Quarterly Report (F-14): General Service Board, AAWS and Grapevine",
+   "url": "https://www.aa.org/quarterly-reports-from-gso",
+   "why": "The board's quarterly report (p. 77). A suggested source for GSR reports (p. 11), and where the trustees report what they have done about Advisory Actions (p. 5). aa.org now calls it 'Quarterly Report from GSO'.",
+   "group": "Newsletters & reports"
+  },
+  {
+   "title": "Regional Forum Final Reports",
+   "url": "https://www.aa.org/resources/literature?terms=regional+forum&format=20&items_per_page=24&sort_bef_combine=title_DESC",
+   "why": "aa.org's literature listing of Regional Forum reports by year and region (Southwest 2019, 2021, 2023 and 2025 among them). Forums take no actions; the sharing is captured in Forum Final Reports, which go to all attendees and are available on GSO's website (p. 62).",
+   "group": "Newsletters & reports"
+  },
+  {
+   "title": "aa.org What's New",
+   "url": "https://www.aa.org/news-and-announcements",
+   "why": "The 'What's New' button on aa.org, one of the manual's suggested sources for GSR reports (Service Manual p. 11).",
+   "group": "Newsletters & reports"
+  }
+ ]
+}

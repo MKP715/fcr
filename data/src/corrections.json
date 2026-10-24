@@ -1,0 +1,453 @@
+[
+  {
+    "year": 2024,
+    "op": "append",
+    "path": "newly_elected",
+    "value": {
+      "name": "Scott H.",
+      "position": "General Service Board chair (Class B)",
+      "position_id": "GSB_CHAIR",
+      "class": "B",
+      "city": "Kamloops, BC",
+      "seat_since": 2024,
+      "past_delegate": {"panel": 61, "area": 79, "area_inferred": true}
+    },
+    "source": "2024 FR p.101 L11002-11005 (trustees' Nominating Committee): 'the GSB elected Scott H., past Class B trustee ... to serve as GSB Chair following the annual meeting of the members of the GSB in April 2024.' The 2024 printed officers list predates that meeting (interim chair Mike L.)."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Scott H.",
+    "value": {"panel": 61, "area": 79, "area_inferred": true},
+    "source": "Bios (e.g. 2019 FR p.123 L16971, 2025 FR p.173 L19992) say 'Scott H. (Kamloops, BC) ... A Panel 61 delegate' without the area; Kamloops is in Area 79 British Columbia/Yukon, which elects odd panels (Panel 57 Trish L., Panel 69 Gail P.). Inferred."
+  },
+  {
+    "year": 2022,
+    "op": "set_role",
+    "committee": "POLICY",
+    "area": 59,
+    "role": "chair",
+    "inferred": true,
+    "source": "2022 roster prints no chair marks for Policy/Admissions; the 2021 report's '2022 Chairpersons and Alternates' table names Caroline N. (Area 59)."
+  },
+  {
+    "year": 2022,
+    "op": "set_role",
+    "committee": "POLICY",
+    "area": 85,
+    "role": "alt_chair",
+    "inferred": true,
+    "source": "2021 report's '2022 Chairpersons and Alternates' table names Mary M. (Area 85) as alternate."
+  },
+  {
+    "year": 2025,
+    "op": "patch_person",
+    "path": "trustees",
+    "name": "Terry B.",
+    "set": {
+      "emeritus": true,
+      "note": "Listed under Class A in 2025 but serves as trustee emeritus / interim treasurer; not counted in the 21-22 seats."
+    },
+    "source": "2025 report lists Terry B. among Trustees Emeriti (p.181 L20824) and on no trustees' committee; the May 3, 2025 officer slate (2025 FR p.40 L3358-3359) prints 'Terrance B., FACHE, Trustee Emeriti' as treasurer; 2026 report: interim treasurer, no Conference Members bio."
+  },
+  {
+    "year": 2026,
+    "op": "set_field",
+    "field": "next_conference_chair",
+    "value": {"name": "Tammy S.", "area": 86},
+    "source": "2026 FR p.5 L251-253: 'On Saturday morning, Tammy S., Area 86, Western Ontario, was introduced as the 77th General Service Conference delegate chairperson.' (That she came from the first-year delegates not elected committee chair/alternate follows the practice described in 2024 FR p.47 L4608-4611; it is not stated in the 2026 report.)"
+  },
+  {
+    "year": 2017,
+    "op": "set_field",
+    "field": "next_conference_alt_chair",
+    "value": {"name": "Joann L.", "area": 6},
+    "source": "2017 FR p.5 (printed p.4) L312-315: 'At the Delegates Only meeting Tuesday evening, Ben B., Oklahoma, was selected as the delegate chair for the 68th Conference; Joann L., Petaluma, California, will be alternate chair.' Joann L. is the Area 6 (Northern Coastal California) Panel 67 delegate in the 2017 roster."
+  },
+  {
+    "year": 2018,
+    "op": "set_field",
+    "field": "next_conference_alt_chair",
+    "value": {"name": "Rebecca (Becky) P.", "area": 78, "printed_name": "Becky P."},
+    "source": "2018 FR p.5 (printed p.4) L314-317: 'At the Delegates Only meeting Tuesday evening Anthony F., South Dakota, was selected as the delegate chair for the 69th Conference; Becky P., Alberta/NWT, will be alternate chair.' Area 78 Panel 68 delegate Rebecca (Becky) P. in the 2018 roster."
+  },
+  {
+    "year": 2024,
+    "op": "set_field",
+    "field": "next_conference_chair",
+    "value": {"name": "Karen O. C.", "area": 78, "printed_name": "Karen C."},
+    "source": "2024 FR p.5 L271-273: 'Delegate Chair Mary A., in her rotating remarks, passed the gavel to incoming Delegate Chair-elect Karen C., of Alberta/Northwest Territories'. She is the 2025 conference_chair Karen O. C. (2025 FR p.5 L270-274: 'from another hat to be the Delegate Chair to the 75th Conference')."
+  },
+  {
+    "year": 2021,
+    "op": "set_delegate",
+    "area": 58,
+    "set": {
+      "name": "Amber N.",
+      "city": "",
+      "status": "alternate",
+      "elected_delegate": "James (Jim) F.",
+      "status_inferred": true,
+      "note": "The 2021 Area Delegates list prints 'James (Jim) F., Tillamook, OR' (carried over from 2020); the Public Information roster prints Amber N. for the Area 58 Panel 70 seat. She is the Panel 72 Area 58 delegate in 2022. Status inferred."
+    },
+    "source": "2021 FR p.128 L17980 (Public Information roster, PANEL 70: 'Amber N. - Area 58, Oregon') vs p.135 L18883 (Area Delegates list: '58. OREGON (Panel 70) James (Jim) F., Tillamook, OR'); 2022 FR p.159 L20039 and p.166 L21022 ('58. OREGON (Panel 72) Amber N., Milwaukie, OR'). No admissions note in the 2021 FR; status inferred."
+  },
+  {
+    "year": 2024,
+    "op": "set_delegate",
+    "area": 80,
+    "set": {
+      "status": "alternate",
+      "elected_delegate": "Lawrence P.",
+      "note": "Alice G., Area 80 alternate delegate, was seated as a 2024 Conference member; the area said Lawrence P. continues as the Area 80 (Panel 74) delegate."
+    },
+    "source": "2024 FR p.39 L3706-3711 (Policy/Admissions, approved Apr 9, 2024): 'Alice G., who currently serves as the Area 80 Alternate Delegate and has been selected by the Area to replace Lawrence P., serve as a 2024 Conference Member during Conference Week. The Area has communicated that Lawrence P. will continue to serve as the Area 80 Delegate.' Area highlight signed Lawrence P. (p.138-139 L17934-17968)."
+  },
+  {
+    "year": 2025,
+    "op": "set_delegate",
+    "area": 80,
+    "set": {
+      "status": "alternate",
+      "elected_delegate": "Lawrence P.",
+      "status_inferred": true,
+      "note": "The 2025 Area Delegates list and Archives roster print Alice G.; the Literature roster prints Lawrence P., the elected Panel 74 delegate."
+    },
+    "source": "2025 FR p.170 L19512 (Literature roster 'Lawrence P. - Area 80, Manitoba') vs L19588 (Archives 'Alice G. - Area 80') and p.180 L20687 (Area Delegates list 'Alice G., Winnipeg, MB'); 2024 FR p.39 L3710-3711 says Lawrence P. continues as delegate. Status inferred."
+  },
+  {
+    "year": 2025,
+    "op": "set_delegate",
+    "area": 82,
+    "set": {"elected_delegate": "Dwayne M."},
+    "source": "2025 FR p.39 L3202-3205: 'Anne B., who currently serves as the Area 82 alternate delegate ... temporarily replace Dwayne M. as a 2025 Conference member.'"
+  },
+  {
+    "year": 2022,
+    "op": "patch_person",
+    "path": "nontrustee_directors",
+    "name": "Carolyn W.",
+    "set": {"elected_year": 2018},
+    "source": "2018 FR p.123 L17181: 'Carolyn W. was elected A.A.W.S. director in April 2018' (same in the 2019-2021 bios); 2024 FR p.152 L19550-19551: 'served as a nontrustee director on the AAWS Board from 2018-2022'. The 2022 bio (p.163 L20696-20697, 'since 2017') is a misprint."
+  },
+  {
+    "year": 2025,
+    "op": "patch_person",
+    "path": "trustees",
+    "name": "Kerry M.",
+    "set": {"rotating": false, "note": "The 2025 bio prints the rotation star, but she stayed: Class A trustee on the May 3, 2025 slate and First Vice-Chair."},
+    "source": "2025 FR p.172 L19870 prints '*Hon. Kerry M.' (rotation star), but the May 3, 2025 slate (p.40 L3290, L3352-3353) lists her as Class A trustee and First Vice-Chairperson, she is not among the seven trustees and one director in Trustee Farewells (p.182 L20874), and the 2026 FR (p.9 L538-540: 'nine trustees rotating after last year's Conference'; p.41 L3399-3400 treasurer) shows her still serving."
+  },
+  {
+    "years": [2024, 2025, 2026],
+    "op": "patch_person",
+    "path": "trustees",
+    "name": "David S.",
+    "set": {"elected_year": 2023, "elected_year_inferred": true},
+    "source": "2023 FR p.152 L19801-19857: David S. (East Chatham, NY) served as Grapevine director April 2022-2023 and is listed among the Class B trustees elected by the GSB following the 2023 Conference ('(see above)'); 2023 newly_elected lists him as general service trustee. The 2026 FR rotation schedule (p.109 L10147-10150) has 1 general service trustee rotating in 2027 = 2023 + 4. Year not printed in his 2024-2026 bios (inferred)."
+  },
+  {
+    "years": [2023, 2024, 2025],
+    "op": "past_delegate",
+    "name": "Robert L.",
+    "value": {"panel": 48, "area": 87},
+    "source": "2026 FR p.170 L20840-20842: 'He was a Panel 48 delegate for Area 87, southwest Quebec'. The 2023-2025 bios (2023 FR p.152 L19837-19839) say Area 89, northeast Quebec, but Panel 48 is even and Southwest Quebec (87) has elected even panels and Northeast Quebec (89) odd panels in every roster from 1969 to 2026 (e.g. 2009 FR p.78: 87 = Panel 58, 89 = Panel 59)."
+  },
+  {
+    "year": 2021,
+    "op": "patch_person",
+    "path": "newly_elected",
+    "name": "Molly A.",
+    "set": {"name": "Molly A. A.", "printed_name": "Molly A."},
+    "source": "2021 FR p.132 L18553: 'Molly A. A. (Williamsville, NY) was elected Class A trustee in April 2021' (full surname printed there, reduced to its initial); the same trustee is 'Molly O.' (new surname) from 2023 and 'Molly Ann O.' in 2026 (p.168 L20702)."
+  },
+  {
+    "op": "alias",
+    "names": ["Molly Ann O.", "Molly O.", "Molly A. A.", "Molly A.", "Molly A. O."],
+    "kinds": ["board"],
+    "source": "One Class A trustee (elected April 2021) under a changed surname (initial A., later O.): 2021 FR p.132 L18553 'Molly A. A. (Williamsville, NY)'; 2023 slate p.39 L3208 'Molly O.'; 2026 FR p.168 L20702 'Molly Ann O. (Williamsville, NY) was elected Class A nonalcoholic trustee in April 2021'. (Surnames printed in full in the source are reduced to initials here.)"
+  },
+  {
+    "op": "alias",
+    "names": ["Yolanda F.", "Yoli F."],
+    "kinds": ["board"],
+    "source": "Southwest regional trustee 2015-2019: 2019 FR p.4 L243 'delivered on Monday by Yoli F., Southwest regional trustee' (keynote); the same report's trustee list prints 'Yolanda F., Southwest Regional Trustee' (L547) and her bio 'Yolanda F. (San Antonio, TX) was elected Southwest regional trustee' (p.123 L16963)."
+  },
+  {
+    "op": "alias",
+    "names": ["Robert S.", "Bob S."],
+    "kinds": ["staff"],
+    "source": "GSO director of finance (nonalcoholic employee; surname printed in full and reduced to the initial here): 2017 FR L15330 'Robert S., secretary' (trustees' Finance and Budgetary Committee) and L16168 'Robert S., Director of Finance'; 2018 FR L5034 lists the GSB assistant treasurer as 'Bob S.', as do the 2017-2020 staff lists and Conference Finance rosters."
+  },
+  {
+    "op": "alias",
+    "names": ["Jo Ann M.", "Jo Ann D."],
+    "source": "Area 49 Panel 73 delegate: 'Jo Ann M.' in the 2023 delegate list and Policy roster (2023 FR p.154 L20082, p.148 L19182) and the 2024 chairs table and Policy roster (2024 FR p.148 L18971); the 2024 Area Delegates list prints 'Jo Ann D., Jamaica, NY' (p.155 L19914)."
+  },
+  {
+    "op": "alias",
+    "names": ["Allen D. A.", "Allen DenA."],
+    "source": "Area 92 Panel 68 delegate: 'Allen D. A.' in 2018 FR (p.74 L7577 highlight signature; p.119 L16645 rosters) and 'Allen DenA.' in 2019 FR (p.120 L16498, L16586; p.126 L17555)."
+  },
+  {
+    "op": "alias",
+    "names": ["Robert (Bob) W.", "Bob W.", "Robert W."],
+    "kinds": ["board", "staff"],
+    "source": "GSO general manager since June 1, 2021 is the former trustee-at-large/U.S. (2022 FR p.19 L1585-1586: 'GSO welcomed former trustee-at-large U.S. Bob W. as our sole executive on June 1, 2021'); the AAWS director lists print 'Robert W., GSO general manager' (2025 FR p.181 L20841) and the 2026 slate 'Robert (Bob) W.*' (p.41 L3432)."
+  },
+  {
+    "years": [2022, 2023, 2024, 2025, 2026],
+    "op": "set_field",
+    "field": "general_manager",
+    "value": "Robert (Bob) W.",
+    "source": "Same spelling for the GSO general manager in every place (Today, Staff, AAWS board): 2026 FR p.41 L3432 slate prints 'Robert (Bob) W.*'; 2022 FR p.19 L1586 'Bob W.'."
+  },
+  {
+    "years": [2022, 2026],
+    "op": "patch_person",
+    "path": "aaws_directors",
+    "name": "Robert W.",
+    "set": {"name": "Robert (Bob) W.", "printed_name": "Robert W."},
+    "source": "AAWS director list prints 'Robert W., GSO general manager' (e.g. 2026 FR p.176); the same person as general manager 'Bob W.' (2026 FR p.41 L3432 'Robert (Bob) W.*')."
+  },
+  {
+    "years": [2023, 2024, 2025],
+    "op": "patch_person",
+    "path": "aaws_directors",
+    "name": "Bob W.",
+    "set": {"name": "Robert (Bob) W."},
+    "source": "Consistent spelling with the general manager field and the 2026 slate (2026 FR p.41 L3432 'Robert (Bob) W.*')."
+  },
+  {
+    "op": "alias",
+    "names": ["Terrance (Terry) M. B.", "Terry B.", "Terrance M. B.", "Terrance B."],
+    "kinds": ["board"],
+    "source": "Class A trustee 2008-2017 and GSB chair (2017 FR p.5 L273 'Terry B., Class A (nonalcoholic) chairperson'), later trustee emeritus and interim treasurer (2025 FR p.40 L3358 'Terrance B., FACHE, Trustee Emeriti'; 2026 officers 'Terrance M. B.')."
+  },
+  {
+    "op": "alias",
+    "names": ["Thomas L. A.", "Tom A.", "Thomas A."],
+    "kinds": ["board"],
+    "source": "West Central regional trustee 2016-2020: 2019 FR p.122 L16898 'Thomas L. A. (Waite Park, MN) ... Tom was a Panel 50 delegate'; AAWS list 'Tom A.' (2019)."
+  },
+  {
+    "op": "alias",
+    "names": ["Kathryn (Kathi) F.", "Kathryn A. F.", "Kathryn F.", "Kathi F."],
+    "kinds": ["board"],
+    "source": "Pacific regional trustee 2018-2022: 2018 FR p.5 L318 'Kathi F. of Tucson, Arizona, was selected as Pacific regional trustee'; 2022 file 'Kathryn (Kathi) F.'."
+  },
+  {
+    "op": "alias",
+    "names": ["Inocencio (Ino) F.", "Inocencio F.", "Ino F."],
+    "kinds": ["board"],
+    "source": "AA Grapevine nontrustee director 2018-2022: 2018 FR p.123 L17170-17171 'Inocencio F. ... \"Ino\"'."
+  },
+  {
+    "op": "alias",
+    "names": ["Peter F. L.", "Peter L.", "Pete L."],
+    "kinds": ["board"],
+    "source": "Class A trustee 2015-2021: 'Peter F. L.' (2017), 'Peter L.' (2018-2021 trustee lists), 'Pete L.' (2021 trustees' committee roster)."
+  },
+  {
+    "op": "alias",
+    "names": ["Clinton (Clint) M.", "Clinton M.", "Clint M."],
+    "kinds": ["board"],
+    "source": "AAWS nontrustee director 2022-2026, general service trustee from May 2026: 2026 FR p.41 L3378 'Clinton (Clint) M.'; p.109 L10114-10118 'Clinton M.'; trustees' committee rosters 'Clint M.' (2026 FR p.167)."
+  },
+  {
+    "op": "alias",
+    "names": ["Charles (Charlie) H.", "Charles H.", "Charlie H."],
+    "kinds": ["board"],
+    "source": "West Central regional trustee from 2024: 2026 FR p.41 L3366 'Charles (Charlie) H.'; 2024 slate p.40 L3829 'Charles H.'."
+  },
+  {
+    "op": "alias",
+    "names": ["Matthew (Matt) K.", "Matthew K.", "Matt K."],
+    "kinds": ["board"],
+    "source": "AAWS nontrustee director from 2025: 2025 slate p.40 L3387 'Matthew K.'; 2026 slate p.41 L3434 'Matthew (Matt) K.'."
+  },
+  {
+    "op": "alias",
+    "names": ["Gregory (Greg) T.", "Greg T.", "Gregory T."],
+    "kinds": ["board", "staff"],
+    "source": "GSO general manager until Feb 1, 2021 (2021 FR p.19 L1653-1655 'Greg T. completed his term of service as general manager'); AAWS lists print 'Gregory T.' (2019-2021)."
+  },
+  {
+    "op": "alias",
+    "names": ["Deborah (Deb) K.", "Deborah K.", "Deborah K. A.", "Deborah A.", "Deb K."],
+    "kinds": ["board"],
+    "source": "AAWS nontrustee director 2017-2021, general service trustee 2021-2025, a Panel 59 delegate from North Carolina: 2017 FR p.102 L15669-15670 'Deborah K. A. was elected A.A.W.S. Board director in April 2017. A Panel 59 delegate from North Carolina'; 2018 slate 'Deborah A.'; 2019+ 'Deborah K.' (Durham, NC); 2025 FR p.109 L9979-9980 'John W. to succeed Deb K.'; 2009 FR p.72 (2010 chairs table) 'Deborah A., North Carolina'."
+  },
+  {
+    "op": "alias",
+    "names": ["Irma V. B.-N.", "Irma V.", "Irma V. de B-N", "Irma V. B-N"],
+    "kinds": ["board"],
+    "source": "Western Canada regional trustee 2020-2024 (Esterhazy, SK; Panel 59, Area 91): 'Irma V. de B-N' (2020 slate p.53 L5314), 'Irma V.' (2021-2023), 'Irma V. B.-N.' (2024 officers)."
+  },
+  {
+    "op": "alias",
+    "names": ["Zenaida (Zenny) M.", "Zenaida M.", "Zenny M."],
+    "kinds": ["staff"],
+    "source": "GSO finance staff member (nonalcoholic; assistant director of finance, later controller) who is secretary of the Finance committees: 2021 FR p.128 L17936 'Secretary: Zenny M.' and p.129 L18124 'Zenaida M., secretary'; 2025 FR p.170 L19494 'Secretary: Zenaida M.'."
+  },
+  {
+    "op": "distinct_people",
+    "name": "Ken T.",
+    "people": [
+      {"key": "ken-t-ne", "label": "Ken T. — Northeast regional trustee (Pepperell, MA; Panel 63, Area 30)", "default": true, "match": {"kinds": ["trustee", "trustee_elect", "officer", "aaws_board", "grapevine_board", "tc_chair", "consultant", "acm", "director"]}},
+      {"key": "ken-t-a45", "label": "Kenneth (Ken) T. — Panel 72 delegate, Area 45 (Little Egg Harbor, NJ)", "match": {"area": 45, "panel": 72}}
+    ],
+    "source": "2023 FR p.152 L19858-19859: 'Ken T. (Pepperell, MA) was elected Northeast regional trustee in April 2023. A past panel 63 delegate' (Area 30); the Panel 72 Area 45 delegate is 'Kenneth (Ken) T., Little Egg Harbor, NJ' (2022-2023 delegate lists)."
+  },
+  {
+    "op": "distinct_people",
+    "name": "David S.",
+    "people": [
+      {"key": "david-s-gst", "label": "David S. — general service trustee (Grapevine), East Chatham, NY", "default": true, "match": {"kinds": ["trustee", "trustee_elect", "director", "director_elect", "officer", "aaws_board", "grapevine_board", "tc_chair", "consultant", "acm"]}},
+      {"key": "david-s-a78", "label": "David S. — Panel 76 delegate, Area 78 Alberta/NWT", "match": {"area": 78, "panel": 76}}
+    ],
+    "source": "2023 FR p.152 L19801: 'David S. (East Chatham, NY) served as Grapevine director from April 2022-2023'; the Panel 76 Area 78 delegate David S. is from Alberta (2026 FR Area Delegates list)."
+  },
+  {
+    "op": "distinct_people",
+    "name": "Tim M.",
+    "people": [
+      {"key": "tim-m-classa", "label": "Timothy (Tim) M. — Class A (nonalcoholic) trustee elected 2026, St. Paul, MN", "default": true, "match": {"kinds": ["trustee", "trustee_elect", "officer", "aaws_board", "grapevine_board", "tc_chair"]}},
+      {"key": "tim-m-a82", "label": "Tim M. — Panel 67 delegate, Area 82", "match": {"area": 82, "panel": 67}}
+    ],
+    "source": "Class A trustees are nonalcoholic and cannot be past delegates: 2026 FR p.40 L3352 slate 'Timothy (Tim) M.' (Class A; surname printed in full); the Panel 67 Area 82 delegate Tim M. is in the 2017-2018 rosters."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Inocencio F.",
+    "value": {"panel": 60, "area": 77},
+    "source": "2018 FR p.123 L17170-17171: 'From 2008 to 2011, \"Ino\" served as Area 77 (Puerto Rico) alternate delegate/delegate'; 2019 FR p.123 L17014-17015: 'A Panel 60 delegate'."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Jimmy D.",
+    "value": {"panel": 59, "area": 65},
+    "source": "2009 FR (historical, 59th GSC) p.72 '2010 Conference Chairpersons and Alternates' lists 'Jimmy D., Northeast Texas' and the p.78 delegate roster lists Area 65, Panel 59, Jimmy D., Dallas, TX; bios: 2019 FR p.124 L17101 'James (Jimmy) D. (Dallas, TX) ... A Panel 59 delegate'; 2021 FR p.93 L9251-9252 Area 65 highlight: 'home of our Southwest regional trustee'."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Carole B.",
+    "value": {"panel": 59, "area": 40},
+    "source": "2009 FR (historical) p.77 delegate roster: Montana, Area 40, Panel 59, Carole B.; p.72 2010 chairs table 'Carole B., Montana'; 2019 FR p.123 L16929 'Carole B. (Billings, MT) ... A Panel 59 delegate'."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Chet P.",
+    "value": {"panel": 59, "area": 14},
+    "source": "2009 FR (historical) p.76 delegate roster: North Florida, Area 14, Panel 59, Chet P.; 2017 FR p.101 L15574-15575 'Chet P. was elected Southeast regional trustee in April 2013. A Panel 59 delegate'."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Teresa J.",
+    "value": {"panel": 68, "area": 46},
+    "source": "2019 FR p.120 L16473 (Literature roster) and L16587 (Archives roster): 'Teresa J. - Area 46, New Mexico' (Panel 68); 2023 FR p.152 L19825 'Teresa J. (Albuquerque, New Mexico) ... A Panel 68 delegate'."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Cate W.",
+    "value": {"panel": 60, "area": 80, "area_inferred": true},
+    "source": "2019 FR p.123 L17007: 'Cate W. (Winnipeg, MB) ... A Panel 60 delegate'. Winnipeg is in Area 80 Manitoba, which elects even panels (Panel 74, 76). Inferred."
+  },
+  {
+    "op": "past_delegate",
+    "name": "David N.",
+    "value": {"panel": 59, "area": 6, "area_inferred": true},
+    "source": "2019 FR p.123 L16985: 'David N. (Petaluma, CA) ... A Panel 59 delegate'. Petaluma is in Area 6 Northern Coastal California, which elects odd panels (Panel 67 Joann L. of Petaluma, Panel 69, 71). Inferred."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Francis G.",
+    "value": {"panel": 57, "area": 30, "area_inferred": true},
+    "source": "2019 FR p.124 L17109: 'Francis H. G. (Chelmsford, MA) ... A Panel 57 delegate'. Chelmsford is in Area 30 Eastern Massachusetts, which elects odd panels (Panel 63 Ken T., Panel 75). Inferred."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Richard P.",
+    "value": {"panel": 60, "area": 43, "area_inferred": true},
+    "source": "2019 FR p.123 L17001: 'Richard P. (Windham, NH) ... A Panel 60 delegate'. New Hampshire is one area (43), which elects even panels (Panel 72, 76). Inferred."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Yolanda F.",
+    "value": {"panel": 50, "area": 68, "area_inferred": true},
+    "source": "2019 FR p.123 L16963: 'Yolanda F. (San Antonio, TX) ... a Panel 50 delegate'. San Antonio is in Area 68 Southwest Texas, which elects even panels (Panel 76). Inferred."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Mark E.",
+    "value": {"panel": 62, "area": 56, "area_inferred": true},
+    "source": "2017 newly elected record 'Mark E. (Lebanon, OH) ... A Panel 62 delegate' (2017 FR p.102 L15620-15621); Lebanon, OH is in Area 56 Southwest Ohio, which elects even panels (Panel 76). (He later lived in Chesapeake, OH, Area 53, which elects odd panels.) Inferred."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Joyce S.",
+    "value": {"panel": 65, "area": 83, "area_inferred": true},
+    "source": "2023 FR p.151 L19696: 'Joyce S. (Toronto, Ontario) ... A Panel 65 delegate'. Toronto is in Area 83 Eastern Ontario (the 2023-2024 data list the Area 83 Panel 73 delegate James O. as Toronto, ON); Area 83 elects odd panels (Panel 73, 75), consistent with Panel 65. The other odd-panel Ontario area, 85 Northwest Ontario (Thunder Bay, Sioux Lookout), does not include Toronto; 84 and 86 elect even panels. Inferred."
+  },
+  {
+    "op": "past_delegate",
+    "name": "Thomas L. A.",
+    "value": {"panel": 50, "area": 35, "area_inferred": true},
+    "source": "2019 FR p.122 L16898: 'Thomas L. A. (Waite Park, MN) ... Tom was a Panel 50 delegate'. Of the two Minnesota areas only Area 35 Northern Minnesota elects even panels (Panel 76, Grey Eagle, MN); Area 36 Southern Minnesota elects odd panels. Inferred from panel parity."
+  },
+  {
+    "year": 2022,
+    "op": "patch_person",
+    "path": "trustees",
+    "name": "Kathryn (Kathi) F.",
+    "set": {"past_delegate": {"panel": 64, "area": 3}},
+    "source": "Pacific regional trustee 2018-2022: 2018 newly elected 'Kathryn A. F.' Panel 64, Area 3 (Tucson, AZ); 2021 file Area 3. The 2022 file left past_delegate empty."
+  },
+  {
+    "year": 2025,
+    "op": "append",
+    "path": "newly_elected",
+    "value": {
+      "name": "John W.",
+      "position": "general service trustee (AAWS)",
+      "position_id": "GST",
+      "class": "B",
+      "board": "AAWS",
+      "succeeds": "Deb K.",
+      "city": "",
+      "past_delegate": {"panel": 67, "area": 49}
+    },
+    "source": "2025 FR p.109 L9978-9980: 'The committee approved the recommendation of the AAWS nominating committee for John W. to succeed Deb K.'; on the May 3, 2025 Class B slate (p.40 L3340). He was an AAWS nontrustee director 2021-2025 (Panel 67, Area 49)."
+  },
+  {
+    "year": 2025,
+    "op": "append",
+    "path": "newly_elected",
+    "value": {
+      "name": "Teddy B.-W.",
+      "position": "general service trustee (AA Grapevine)",
+      "position_id": "GST",
+      "class": "B",
+      "board": "Grapevine",
+      "succeeds": "Paz P.",
+      "city": "",
+      "past_delegate": {"panel": 69, "area": 6}
+    },
+    "source": "2025 FR p.109 L9981-9983: 'The committee approved the recommendation of the AAGV nominating committee for Teddy B-W. to succeed Paz P.'; on the May 3, 2025 Class B slate (p.40 L3285). AA Grapevine nontrustee director 2023-2025 (Panel 69, Area 6)."
+  },
+  {
+    "year": 2026,
+    "op": "patch_person",
+    "path": "nontrustee_directors",
+    "name": "Clinton M.",
+    "set": {"rotating": true, "moved_to": "GST", "note": "Left the AAWS nontrustee director seat at the May 2, 2026 annual meeting (Grace F. succeeds) and became AAWS trustee director / general service trustee (succeeding Carolyn W.)."},
+    "source": "2026 FR p.109 L10112-10118: 'That Grace F. serve as nontrustee director on the A.A. World Services, Inc. Corporate Board following the 76th General Service Conference, to succeed Clinton M.' and 'That Clinton M. serve as trustee director ... to succeed Carolyn W.'; Class B slate p.41 L3378 'Clinton (Clint) M.'."
+  },
+  {
+    "year": 2025,
+    "op": "patch_person",
+    "path": "aaws_directors",
+    "name": "Ken T.",
+    "set": {"role": "Regional Trustee", "printed_role": "general service trustee"},
+    "source": "2025 FR p.181 L20839 prints 'Ken T., general service trustee'; he is the Northeast regional trustee (2025 FR p.40 slate; 2023 FR p.152 L19858)."
+  }
+]

@@ -1,0 +1,2262 @@
+{
+ "meta": {
+  "about": "Conference-level facts from the 2017-2026 Final Reports (D1 data task, 2026-10-20). \"FRyy pP Lnnnn\" = report year, PDF page (the =====PAGE P===== marker; the printed page number is usually P-1) and line in the text extract.",
+  "checked": "Every value was checked against the report text; counts of Advisory/floor actions for 2017-2021 and 2023-2026 are counts of the printed lists (2022 is the stated total)."
+ },
+ "years": {
+  "2017": {
+   "year": 2017,
+   "ordinal": 67,
+   "theme": "Supporting Our Future",
+   "start": "2017-04-23",
+   "end": "2017-04-29",
+   "venue": "Hilton Westchester, Rye Brook, NY",
+   "format": "in person",
+   "members": {
+    "total": 133,
+    "delegates": 93,
+    "board": 25,
+    "staff": 15,
+    "ref": "FR17 p4 L247-258"
+   },
+   "agenda_items": {
+    "n": 108,
+    "approx": false,
+    "ref": "FR19 p14 L1185-1188 (2017 count quoted in the 2019 report)"
+   },
+   "advisory_actions": {
+    "n": 45,
+    "counted": true,
+    "ref": "FR17 p9-12 L731-1143 (numbered items)"
+   },
+   "floor_actions": {
+    "passed": 3,
+    "not_resulting": 5,
+    "ref": "FR17 p84 L10283"
+   },
+   "keynote": {
+    "name": "Bill N.",
+    "role": "general service trustee",
+    "rotating": true,
+    "ref": "FR17 p5 L275-278"
+   },
+   "workshop": null,
+   "headlines": [
+    {
+     "text": "Three trustees chosen from the hat after five ballots (Third Legacy Procedure).",
+     "ref": "FR17 p5 L315-323"
+    },
+    {
+     "text": "Suggested area contribution toward delegate expense raised from $1,600 to $1,800.",
+     "ref": "FR17 p10 L821-822 (Advisory Action 14)"
+    }
+   ],
+   "next": {
+    "theme": "A.A. — A Solution for All Generations",
+    "workshop": "Getting the A.A. Message Out…",
+    "topics": ["Inclusion", "Triangle of service", "Technology", "Attraction", "Group conscience"],
+    "ref": "FR17 p9 L745-762"
+   },
+   "refs": ["FR17 p4-5"],
+   "delegate_chair": {
+    "name": "Robert M.",
+    "area": 63,
+    "printed_name": "Bob M.",
+    "ref": "FR17 p5 L276"
+   }
+  },
+  "2018": {
+   "year": 2018,
+   "ordinal": 68,
+   "theme": "A.A. — A Solution for All Generations",
+   "start": "2018-04-22",
+   "end": "2018-04-28",
+   "venue": "Crowne Plaza Times Square, New York, NY",
+   "format": "in person",
+   "members": {
+    "total": 136,
+    "delegates": 93,
+    "board": 26,
+    "staff": 17,
+    "ref": "FR18 p4 L204-223"
+   },
+   "agenda_items": null,
+   "advisory_actions": {
+    "n": 56,
+    "counted": true,
+    "ref": "FR18 p45-49 L4556-5055"
+   },
+   "floor_actions": {
+    "passed": 2,
+    "not_resulting": 6,
+    "ref": "FR18 p56 L5737"
+   },
+   "keynote": {
+    "name": "Richard B.",
+    "role": "Eastern Canada regional trustee",
+    "rotating": true,
+    "ref": "FR18 p4 L226-229"
+   },
+   "workshop": "Getting the A.A. Message Out…",
+   "headlines": [
+    {
+     "text": "Background material sent in English, French and Spanish for the first time.",
+     "ref": "FR18 p5 L294-296"
+    },
+    {
+     "text": "Committee considerations printed in full in the Final Report from now on.",
+     "ref": "FR18 p5 L310-313"
+    },
+    {
+     "text": "Individual contribution limit raised from $3,000 to $5,000 a year.",
+     "ref": "FR18 p47 L4717-4718"
+    }
+   ],
+   "next": {
+    "theme": "Our Big Book — 80 Years, 71 Languages",
+    "workshop": "Clarity of Purpose — Addressing the Needs of Our Meetings",
+    "topics": ["Yesterday's World", "Today's World", "Tomorrow's World"],
+    "ref": "FR18 p45 L4574-4590"
+   },
+   "refs": ["FR18 p4-6"]
+  },
+  "2019": {
+   "year": 2019,
+   "ordinal": 69,
+   "theme": "Our Big Book — 80 Years, 71 Languages",
+   "start": "2019-05-19",
+   "end": "2019-05-25",
+   "venue": "Crowne Plaza Times Square, New York, NY",
+   "format": "in person",
+   "members": {
+    "total": 135,
+    "delegates": 93,
+    "board": 27,
+    "staff": 15,
+    "ref": "FR19 p4 L222-226"
+   },
+   "agenda_items": null,
+   "advisory_actions": {
+    "n": 34,
+    "counted": true,
+    "ref": "FR19 p33-35 L3185-3517"
+   },
+   "floor_actions": {
+    "passed": 3,
+    "not_resulting": 4
+   },
+   "keynote": {
+    "name": "Yoli F.",
+    "role": "Southwest regional trustee",
+    "rotating": true,
+    "ref": "FR19 p4 L241-243"
+   },
+   "workshop": "Clarity of Purpose — Addressing the Needs of Our Meetings",
+   "headlines": [
+    {
+     "text": "Conference moved to May 19-25 (planned for Apr 21-27) because of a hotel-contract error.",
+     "ref": "FR19 p70 L6750-6760"
+    },
+    {
+     "text": "Conference members visited the General Service Office.",
+     "ref": "FR19 p4-5"
+    }
+   ],
+   "next": {
+    "theme": "2020: A Clear Vision for You",
+    "workshop": "Attraction Through Action",
+    "topics": ["Recovery", "Unity", "Service"],
+    "ref": "FR19 p33 L3200-3215"
+   },
+   "refs": ["FR19 p4-5"]
+  },
+  "2020": {
+   "year": 2020,
+   "ordinal": 70,
+   "theme": "2020: A Clear Vision for You",
+   "start": "2020-05-16",
+   "end": "2020-05-19",
+   "venue": "Virtual (online)",
+   "format": "virtual",
+   "members": {
+    "total": 135,
+    "delegates": 93,
+    "board": 27,
+    "staff": 15,
+    "ref": "FR20 p5 L265-268"
+   },
+   "agenda_items": {
+    "n": 79,
+    "approx": false,
+    "note": "items on the proposed-items grid; 31 forwarded to 2021",
+    "ref": "FR20 p23 L2061; p60-61 L6019-6133"
+   },
+   "advisory_actions": {
+    "n": 16,
+    "counted": true,
+    "ref": "FR20 p52-54"
+   },
+   "floor_actions": {
+    "passed": null,
+    "not_resulting": null,
+    "note": "Floor actions referred to the trustees' General Service Conference Committee",
+    "ref": "FR20 p54 L5383-5440; p60 L6017-6018"
+   },
+   "keynote": {
+    "name": "Tom A.",
+    "role": "West Central regional trustee",
+    "rotating": true,
+    "ref": "FR20 p5 L254-256"
+   },
+   "workshop": null,
+   "headlines": [
+    {
+     "text": "First virtual Conference: four days, \"essential business\" only; items not reached forwarded to 2021.",
+     "ref": "FR20 p4 L204-221"
+    },
+    {
+     "text": "The 2020 International Convention in Detroit was cancelled (Mar 28, 2020).",
+     "ref": "FR20 p85 L8279"
+    },
+    {
+     "text": "No AAWS director slate was approved at the Conference: the floor motion to approve the original slate failed, and the floor actions on the original and committee slates were forwarded to the trustees. The General Service Board approved an eight-name slate with a vacancy (the committee's revised slate) on May 23, 2020.",
+     "ref": "FR20 p53 L5362-5368; p54 L5383-5427; p60 L5994-6003; FR21 p25 L2224-2230"
+    }
+   ],
+   "next": {
+    "theme": "A.A. in a Time of Change",
+    "workshop": "Inform — Communicate / Involve — Act / Inspire — Attract",
+    "topics": ["Spiritual principles in a changing world"],
+    "ref": "FR20 p52 L5149-5170"
+   },
+   "refs": ["FR20 p4-5"]
+  },
+  "2021": {
+   "year": 2021,
+   "ordinal": 71,
+   "theme": "A.A. in a Time of Change",
+   "start": "2021-04-18",
+   "end": "2021-04-24",
+   "venue": "Virtual (online)",
+   "format": "virtual",
+   "members": {
+    "total": 132,
+    "delegates": 93,
+    "board": 26,
+    "staff": 13,
+    "ref": "FR21 p4 L190; p5 L253-256"
+   },
+   "agenda_items": {
+    "n": 61,
+    "approx": false,
+    "note": "items on the grid",
+    "ref": "FR21 p28 L2578"
+   },
+   "advisory_actions": {
+    "n": 49,
+    "counted": true,
+    "ref": "FR21 p59-63 L5865-6392"
+   },
+   "floor_actions": {
+    "passed": 4,
+    "not_resulting": 2,
+    "ref": "FR21 p59 L5863-5906; p73 L7352-7368"
+   },
+   "keynote": {
+    "name": "Newton P.",
+    "role": "trustee-at-large/U.S.",
+    "rotating": true,
+    "ref": "FR21 p4 L218-219"
+   },
+   "workshop": "Inform — Communicate / Involve — Act / Inspire — Attract",
+   "headlines": [
+    {
+     "text": "Fifth edition of the Big Book authorized.",
+     "ref": "FR21 p60 L6013 (Advisory Action 16)"
+    },
+    {
+     "text": "Equitable Distribution of Workload (EDW) adopted for a three-year trial.",
+     "ref": "FR21 p61 L6152 (Advisory Action 31)"
+    },
+    {
+     "text": "Preamble wording changed to \"people\".",
+     "ref": "FR21 p6 L336-345"
+    }
+   ],
+   "next": {
+    "theme": "A.A. Comes of Age 2.0: Unified in Love and Service",
+    "workshop": "The Warranties — Our Promise…",
+    "topics": ["Any Lengths", "Beyond Fear", "Reach Anyone"],
+    "ref": "FR21 p60 L5920-5935"
+   },
+   "refs": ["FR21 p4-6"]
+  },
+  "2022": {
+   "year": 2022,
+   "ordinal": 72,
+   "theme": "A.A. Comes of Age 2.0: Unified in Love and Service",
+   "start": "2022-04-24",
+   "end": "2022-04-30",
+   "venue": "New York Marriott at the Brooklyn Bridge, Brooklyn, NY",
+   "format": "in person",
+   "members": {
+    "total": 133,
+    "delegates": 93,
+    "board": 26,
+    "staff": 14,
+    "ref": "FR22 p5 L269-271"
+   },
+   "agenda_items": null,
+   "advisory_actions": {
+    "n": 35,
+    "counted": false,
+    "stated": true,
+    "ref": "FR22 p5 L347-348"
+   },
+   "floor_actions": {
+    "passed": 2,
+    "not_resulting": 7,
+    "ref": "FR22 p92 L9249"
+   },
+   "keynote": {
+    "name": "Kathi F.",
+    "role": "Pacific regional trustee",
+    "rotating": true,
+    "ref": "FR22 p4 L198-200"
+   },
+   "workshop": "The Warranties — Our Promise…",
+   "headlines": [
+    {
+     "text": "First in-person Conference since 2019.",
+     "ref": "FR22 p4 L191-194"
+    },
+    {
+     "text": "First year of EDW. Two delegates withdrew beforehand over COVID concerns and their alternates were seated; at least 25 people were infected by the end of the week (nearly 50 soon after).",
+     "ref": "FR22 p4 L228-238; p5 L276-285; p79 L7843-7850"
+    }
+   ],
+   "next": {
+    "theme": "A.A.'s Three Legacies — Our Common Solution",
+    "workshop": "Practicing Our Twelve Traditions Across All Group Settings",
+    "topics": ["General Service — Our Mighty Purpose and Rhythm"],
+    "ref": "FR22 p78 L7736-7752"
+   },
+   "refs": ["FR22 p4-5"]
+  },
+  "2023": {
+   "year": 2023,
+   "ordinal": 73,
+   "theme": "A.A.'s Three Legacies — Our Common Solution",
+   "start": "2023-04-23",
+   "end": "2023-04-29",
+   "venue": "New York Marriott at the Brooklyn Bridge, Brooklyn, NY",
+   "format": "in person",
+   "members": {
+    "total": 133,
+    "delegates": 93,
+    "board": 25,
+    "staff": 15,
+    "ref": "FR23 p4 L189; p5 L255-257"
+   },
+   "agenda_items": {
+    "n": 86,
+    "approx": true,
+    "note": "more than 86",
+    "ref": "FR23 p4 L194"
+   },
+   "advisory_actions": {
+    "n": 34,
+    "counted": true,
+    "note": "34 bullets, 33 net (one floor action recommitted)",
+    "ref": "FR23 p36-40 L2933-3308"
+   },
+   "floor_actions": {
+    "passed": 1,
+    "recommitted": 1,
+    "not_resulting": 8,
+    "ref": "FR23 p36 L2933-2949; p49-50 L4307-4431"
+   },
+   "keynote": {
+    "name": "Francis G.",
+    "role": "Northeast regional trustee",
+    "rotating": true,
+    "ref": "FR23 p5 L231-233"
+   },
+   "workshop": "Practicing Our Twelve Traditions Across All Group Settings",
+   "headlines": [
+    {
+     "text": "The GSB chair resigned in January 2023 (Jimmy D. interim chair).",
+     "ref": "FR23 p5 L221-222"
+    },
+    {
+     "text": "Suggested area contribution toward delegate expense raised from $1,800 to $2,200.",
+     "ref": "FR23 p37 L3030-3032"
+    },
+    {
+     "text": "The Conference will take an inventory of itself in 2025.",
+     "ref": "FR23 p36 L2975"
+    }
+   ],
+   "next": {
+    "theme": "Connecting with Love, Unity and Service",
+    "workshop": "Connecting Home Groups to the Conference Throughout the Year",
+    "topics": ["Responsibility in Service"],
+    "ref": "FR23 p36 L2950-2972"
+   },
+   "refs": ["FR23 p4-5"]
+  },
+  "2024": {
+   "year": 2024,
+   "ordinal": 74,
+   "theme": "Connecting with Love, Unity and Service",
+   "start": "2024-04-14",
+   "end": "2024-04-20",
+   "venue": "New York Marriott at the Brooklyn Bridge, Brooklyn, NY",
+   "format": "in person",
+   "members": {
+    "total": 134,
+    "ref": "FR24 p4 L175-178"
+   },
+   "agenda_items": {
+    "n": 88,
+    "approx": true,
+    "note": "more than 88"
+   },
+   "advisory_actions": {
+    "n": 45,
+    "counted": true,
+    "ref": "FR24 p37-40 L3520-3950"
+   },
+   "floor_actions": {
+    "passed": 1,
+    "not_resulting": 3,
+    "recommitted_note": "floor actions #5-#15 recommitted",
+    "ref": "FR24 p52 L5195-5210"
+   },
+   "keynote": {
+    "name": "Irma V.",
+    "role": "Western Canada regional trustee",
+    "rotating": true,
+    "ref": "FR24 p4 L193-195"
+   },
+   "workshop": "Connecting Home Groups to the Conference Throughout the Year",
+   "headlines": [
+    {
+     "text": "Plain Language Big Book approved.",
+     "ref": "FR24 p39 L3681"
+    },
+    {
+     "text": "EDW adopted; the proposed agenda item (PAI) deadline set no earlier than Sept 30.",
+     "ref": "FR24 p39 L3698-3702"
+    },
+    {
+     "text": "Individual contribution limit raised from $5,000 to $7,500.",
+     "ref": "FR24 p38 L3632"
+    },
+    {
+     "text": "Scott H., past Class B trustee, elected GSB chair (a 22nd seat).",
+     "ref": "FR24 p101 L11002-11005"
+    },
+    {
+     "text": "From Panel 75, committee draws rebalanced toward an even mix of first- and second-year delegates.",
+     "ref": "FR24 p69 L7180-7187"
+    }
+   ],
+   "next": {
+    "theme": "Working Together, Increasing Trust",
+    "workshop": "New financial reality…",
+    "topics": ["Delegating", "Closing the Gap", "Financial Responsibility"],
+    "ref": "FR24 p37 L3525-3540"
+   },
+   "refs": ["FR24 p4-5"]
+  },
+  "2025": {
+   "year": 2025,
+   "ordinal": 75,
+   "theme": "Working Together, Increasing Trust",
+   "start": "2025-04-27",
+   "end": "2025-05-03",
+   "venue": "New York Hilton Midtown, New York, NY",
+   "format": "in person",
+   "members": {
+    "total": 137,
+    "ref": "FR25 p4 L168-170"
+   },
+   "agenda_items": null,
+   "advisory_actions": {
+    "n": 42,
+    "counted": true,
+    "ref": "FR25 p37-40 L3036-3420"
+   },
+   "floor_actions": {
+    "passed": 1,
+    "declined": 9,
+    "recommitted": 2,
+    "total": 12,
+    "stated": true
+   },
+   "keynote": {
+    "name": "Judith K.",
+    "role": "Class A trustee",
+    "rotating": true,
+    "ref": "FR25 p4 L186-187"
+   },
+   "workshop": "Conference Inventory sessions (19 questions, 15 groups) instead of a workshop",
+   "headlines": [
+    {
+     "text": "A censure floor action failed; the Conference closed at 11:47 p.m.",
+     "ref": "FR25 p5 L206-253"
+    },
+    {
+     "text": "Conference Inventory; an Inventory Implementation Committee was set up.",
+     "ref": "FR25 p37 L3059"
+    },
+    {
+     "text": "PAI deadline set at Sept 30.",
+     "ref": "FR25 p86 L7844-7851"
+    }
+   ],
+   "next": {
+    "theme": "Humility in Action",
+    "workshop": "Keeping Our Own House in Order",
+    "topics": ["Restoration and Discovering Grace, Unity and Fellowship", "Gossip vs. Facts: Examining the Health of Our Own Communications", "Finding Common Ground"],
+    "ref": "FR25 p37 L3046-3058; FR26 p4 L179-181"
+   },
+   "refs": ["FR25 p4-5"]
+  },
+  "2026": {
+   "year": 2026,
+   "ordinal": 76,
+   "theme": "Humility in Action",
+   "start": "2026-04-26",
+   "end": "2026-05-02",
+   "venue": "New York Hilton Midtown, New York, NY",
+   "format": "in person",
+   "members": {
+    "total": 136,
+    "ref": "FR26 p4 L140-142"
+   },
+   "agenda_items": {
+    "n": 70,
+    "approx": false,
+    "ref": "FR26 p4 L144"
+   },
+   "advisory_actions": {
+    "n": 23,
+    "counted": true,
+    "ref": "FR26 p39-41 L3171-3490"
+   },
+   "floor_actions": {
+    "passed": 3,
+    "not_resulting": 3,
+    "ref": "FR26 p42 L3538"
+   },
+   "keynote": {
+    "name": "Joyce S.",
+    "role": "Eastern Canada regional trustee",
+    "rotating": true,
+    "ref": "FR26 p4 L167-168"
+   },
+   "workshop": "Keeping Our Own House in Order (10 groups)",
+   "headlines": [
+    {
+     "text": "Big Book fifth edition approved — the first new edition since 2001.",
+     "ref": "FR26 p40 L3271; p5 L219-239"
+    },
+    {
+     "text": "Suggested area contribution toward delegate expense raised from $2,200 to $3,000.",
+     "ref": "FR26 p39 L3174-3176"
+    },
+    {
+     "text": "Final Report offered in print for purchase.",
+     "ref": "FR26 p39 L3178"
+    },
+    {
+     "text": "77th GSC committee chairs attend the October 2026 board weekend instead of January 2027.",
+     "ref": "FR26 p50 L4395-4399"
+    },
+    {
+     "text": "A proposed Conference digital committee got no action: still 13 committees for the Panel 77 draw.",
+     "ref": "FR26 p50 L4376-4380"
+    }
+   ],
+   "next": {
+    "theme": "Honoring Our Past, Embracing Our Future",
+    "presentation_theme": null,
+    "workshop": "Unexpected Spiritual Lessons",
+    "topics": ["The Spirit of Rotation: Cultivating Leadership", "Anonymity, Our Spiritual Compass", "Innovation Meets Tradition"],
+    "ref": "FR26 p39 L3190-3202"
+   },
+   "refs": ["FR26 p4-5"]
+  }
+ },
+ "future": [
+  {
+   "ordinal": 77,
+   "year": 2027,
+   "start": "2027-04-11",
+   "end": "2027-04-17",
+   "venue": "New York Marriott Marquis, New York, NY",
+   "theme": "Honoring Our Past, Embracing Our Future",
+   "workshop": "Unexpected Spiritual Lessons",
+   "topics": ["The Spirit of Rotation: Cultivating Leadership", "Anonymity, Our Spiritual Compass", "Innovation Meets Tradition"],
+   "delegate_chair": {
+    "name": "Tammy S.",
+    "area": 86
+   },
+   "status": "final",
+   "refs": ["FR25 p46 L3922-3927 (dates, venue)", "FR26 p39 L3190-3202 (theme, topics, workshop)", "FR26 p5 L251-253 (delegate chair)"]
+  },
+  {
+   "ordinal": 78,
+   "year": 2028,
+   "start": "2028-04-23",
+   "end": "2028-04-29",
+   "venue": "New York Marriott Marquis, New York, NY",
+   "status": "final",
+   "refs": ["FR25 p46 L3922-3928"]
+  },
+  {
+   "ordinal": 79,
+   "year": 2029,
+   "start": "2029-04-15",
+   "end": "2029-04-21",
+   "venue": "New York Marriott Marquis (Times Square), New York, NY",
+   "status": "final",
+   "refs": ["FR26 p49 L4314-4317"]
+  },
+  {
+   "ordinal": 80,
+   "year": 2030,
+   "start": "2030-04-28",
+   "end": "2030-05-04",
+   "venue": null,
+   "status": "preference",
+   "options": [
+    {
+     "start": "2030-04-28",
+     "end": "2030-05-04",
+     "preference": 1
+    },
+    {
+     "start": "2030-05-05",
+     "end": "2030-05-11",
+     "preference": 2
+    }
+   ],
+   "note": "Dates in order of preference; venue not yet chosen.",
+   "refs": ["FR26 p49 L4319-4326"]
+  }
+ ],
+ "regional_forums": {
+  "rule": {
+   "text": "Each region hosts a Regional Forum every two years: odd years Northeast, East Central, West Central and Southwest; even years Western Canada, Eastern Canada, Pacific and Southeast. Held in every year 2016-2027 (2020-2021 virtual or cancelled).",
+   "odd": ["NE", "EC", "WC", "SW"],
+   "even": ["WCAN", "ECAN", "PA", "SE"],
+   "refs": ["FR19 p86 L8426ff", "FR26 p99 L9164-9183"]
+  },
+  "list": [
+   {
+    "year": 2016,
+    "region": "SW",
+    "kind": "additional",
+    "month": "2016-06",
+    "city": "Denver, CO",
+    "status": "held",
+    "note": "the last \"Additional\" Regional Forum",
+    "ref": "FR17 p57 L7070-7080"
+   },
+   {
+    "year": 2016,
+    "region": "ECAN",
+    "month": "2016-07",
+    "city": "Thunder Bay, ON",
+    "status": "held",
+    "ref": "FR17 p30 L3078-3085"
+   },
+   {
+    "year": 2016,
+    "region": "WCAN",
+    "month": "2016-08",
+    "city": "Kamloops, BC",
+    "status": "held",
+    "note": "200th forum since 1975",
+    "ref": "FR17 p30 L3078-3085"
+   },
+   {
+    "year": 2016,
+    "region": "PA",
+    "month": "2016-09",
+    "city": "Waikoloa, HI",
+    "status": "held",
+    "ref": "FR17 p30 L3078-3085"
+   },
+   {
+    "year": 2016,
+    "region": "SE",
+    "month": "2016-12",
+    "city": "Orlando, FL",
+    "status": "held",
+    "ref": "FR17 p30 L3078-3085"
+   },
+   {
+    "year": 2017,
+    "region": "NE",
+    "month": "2017-06",
+    "city": "Mars, PA",
+    "status": "held",
+    "ref": "FR18 p38 L3680-3685"
+   },
+   {
+    "year": 2017,
+    "region": "WC",
+    "month": "2017-09",
+    "city": "Sioux Falls, SD",
+    "status": "held",
+    "ref": "FR18 p38 L3680-3685"
+   },
+   {
+    "year": 2017,
+    "region": "SW",
+    "month": "2017-10",
+    "city": "San Antonio, TX",
+    "status": "held",
+    "ref": "FR18 p38 L3680-3685"
+   },
+   {
+    "year": 2017,
+    "region": "EC",
+    "month": "2017-11",
+    "city": "Springfield, IL",
+    "status": "held",
+    "ref": "FR18 p38 L3680-3685"
+   },
+   {
+    "year": 2018,
+    "region": "WCAN",
+    "start": "2018-06-08",
+    "end": "2018-06-10",
+    "city": "Regina, SK",
+    "status": "held",
+    "ref": "FR18 p91 L9429-9430"
+   },
+   {
+    "year": 2018,
+    "region": "ECAN",
+    "start": "2018-07-20",
+    "end": "2018-07-22",
+    "city": "Victoriaville, QC",
+    "status": "held",
+    "ref": "FR18 p91 L9431"
+   },
+   {
+    "year": 2018,
+    "region": "PA",
+    "start": "2018-09-07",
+    "end": "2018-09-09",
+    "city": "San Jose, CA",
+    "status": "held",
+    "ref": "FR18 p91 L9432-9434"
+   },
+   {
+    "year": 2018,
+    "region": "SE",
+    "start": "2018-11-16",
+    "end": "2018-11-18",
+    "city": "Sterling, VA",
+    "status": "held",
+    "ref": "FR18 p91 L9435-9436"
+   },
+   {
+    "year": 2019,
+    "region": "NE",
+    "start": "2019-05-31",
+    "end": "2019-06-02",
+    "city": "Tarrytown, NY",
+    "status": "held",
+    "ref": "FR19 p86 L8428-8430 (list misprinted under a \"2018\" heading)"
+   },
+   {
+    "year": 2019,
+    "region": "EC",
+    "start": "2019-07-12",
+    "end": "2019-07-14",
+    "city": "Detroit, MI",
+    "status": "held",
+    "ref": "FR19 p86 L8431-8433"
+   },
+   {
+    "year": 2019,
+    "region": "PA",
+    "kind": "local",
+    "start": "2019-07-13",
+    "end": "2019-07-14",
+    "city": "Los Angeles, CA",
+    "area": 5,
+    "status": "held",
+    "note": "Local Forum hosted by Area 5",
+    "ref": "FR19 p86 L8424-8425"
+   },
+   {
+    "year": 2019,
+    "region": "WC",
+    "start": "2019-08-16",
+    "end": "2019-08-18",
+    "city": "Grand Forks, ND",
+    "status": "held",
+    "ref": "FR19 p86 L8434ff"
+   },
+   {
+    "year": 2019,
+    "region": "SW",
+    "start": "2019-10-11",
+    "end": "2019-10-13",
+    "city": "Houston, TX",
+    "status": "held",
+    "ref": "FR19 p86 L8434ff"
+   },
+   {
+    "year": 2020,
+    "region": "WCAN",
+    "city": "Calgary, AB",
+    "status": "cancelled",
+    "ref": "FR20 p39 L3672-3680"
+   },
+   {
+    "year": 2020,
+    "region": "PA",
+    "city": "Las Vegas, NV",
+    "status": "cancelled",
+    "ref": "FR20 p39 L3672-3680"
+   },
+   {
+    "year": 2020,
+    "region": "ECAN",
+    "start": "2020-11-13",
+    "end": "2020-11-15",
+    "city": "Ottawa, ON",
+    "status": "cancelled",
+    "ref": "FR20 p39 L3686-3687; FR21 p16 L1372-1373"
+   },
+   {
+    "year": 2020,
+    "region": "SE",
+    "start": "2020-12-04",
+    "end": "2020-12-06",
+    "city": "Biloxi, MS",
+    "status": "cancelled",
+    "ref": "FR20 p39 L3688-3690; FR21 p16 L1372-1373"
+   },
+   {
+    "year": 2020,
+    "region": null,
+    "kind": "special",
+    "start": "2020-12-05",
+    "end": "2020-12-05",
+    "city": "Virtual (Eastern U.S./Canada \"US/CAN\" Forum)",
+    "status": "virtual",
+    "note": "one-day forum for the whole East in place of the cancelled 2020 slate; over 4,100 members attended the two US/CANs",
+    "ref": "FR21 p16 L1371-1386; p41 L4005-4008; p101 L10040-10045"
+   },
+   {
+    "year": 2020,
+    "region": null,
+    "kind": "special",
+    "start": "2020-12-19",
+    "end": "2020-12-19",
+    "city": "Virtual (Western U.S./Canada \"US/CAN\" Forum)",
+    "status": "virtual",
+    "note": "one-day forum for the whole West in place of the cancelled 2020 slate",
+    "ref": "FR21 p16 L1371-1386; p41 L4005-4008; aa.org 2020 US/CAN West final report"
+   },
+   {
+    "year": 2021,
+    "region": "NE",
+    "start": "2021-06-04",
+    "end": "2021-06-06",
+    "city": "Virtual",
+    "status": "virtual",
+    "ref": "FR21 p42 L4033-4035"
+   },
+   {
+    "year": 2021,
+    "region": "WC",
+    "start": "2021-09-10",
+    "end": "2021-09-12",
+    "city": "Virtual",
+    "status": "virtual",
+    "ref": "FR21 p42 L4036-4038"
+   },
+   {
+    "year": 2021,
+    "region": "SW",
+    "start": "2021-10-08",
+    "end": "2021-10-10",
+    "city": "Virtual",
+    "status": "virtual",
+    "ref": "FR21 p42 L4039-4041"
+   },
+   {
+    "year": 2021,
+    "region": "EC",
+    "start": "2021-11-19",
+    "end": "2021-11-21",
+    "city": "Virtual",
+    "status": "virtual",
+    "ref": "FR21 p42 L4031-4040"
+   },
+   {
+    "year": 2022,
+    "region": "ECAN",
+    "start": "2022-05-13",
+    "end": "2022-05-15",
+    "city": "Charlottetown, PE",
+    "status": "held",
+    "ref": "FR22 p60 L5888-5889"
+   },
+   {
+    "year": 2022,
+    "region": "WCAN",
+    "start": "2022-06-03",
+    "end": "2022-06-05",
+    "city": "Winnipeg, MB",
+    "status": "held",
+    "ref": "FR22 p60 L5890-5891"
+   },
+   {
+    "year": 2022,
+    "region": null,
+    "kind": "special",
+    "start": "2022-07-16",
+    "end": "2022-07-16",
+    "city": "Virtual (North/South Special Forum)",
+    "status": "virtual",
+    "attendance": 532,
+    "note": "532 registered",
+    "ref": "FR23 p87 L8226"
+   },
+   {
+    "year": 2022,
+    "region": "PA",
+    "start": "2022-09-16",
+    "end": "2022-09-18",
+    "city": "Salt Lake City, UT",
+    "status": "held",
+    "ref": "FR22 p60 L5892-5893"
+   },
+   {
+    "year": 2022,
+    "region": "SE",
+    "start": "2022-12-02",
+    "end": "2022-12-04",
+    "city": "New Orleans, LA",
+    "status": "held",
+    "attendance": 406,
+    "first_timers": 276,
+    "ref": "FR22 p60 L5894; FR23 p87 L8294"
+   },
+   {
+    "year": 2023,
+    "region": "NE",
+    "start": "2023-06-02",
+    "end": "2023-06-04",
+    "city": "Burlington, MA",
+    "status": "held",
+    "ref": "FR23 p135 L17972"
+   },
+   {
+    "year": 2023,
+    "region": "WC",
+    "city": null,
+    "status": "held",
+    "note": "city not stated",
+    "ref": "FR24 p93 L10096-10098"
+   },
+   {
+    "year": 2023,
+    "region": "SW",
+    "city": "El Paso, TX",
+    "area": 66,
+    "status": "held",
+    "ref": "FR24 p136 L17680-17681"
+   },
+   {
+    "year": 2023,
+    "region": "EC",
+    "start": "2023-11-17",
+    "end": "2023-11-19",
+    "city": "Independence, OH",
+    "status": "held",
+    "ref": "FR23 p131 L17640-17641"
+   },
+   {
+    "year": 2024,
+    "region": "WCAN",
+    "start": "2024-05-10",
+    "end": "2024-05-12",
+    "city": "Vernon, BC",
+    "status": "held",
+    "ref": "FR24 p93 L10134-10135"
+   },
+   {
+    "year": 2024,
+    "region": "PA",
+    "start": "2024-07-12",
+    "end": "2024-07-14",
+    "city": "Las Vegas, NV",
+    "status": "held",
+    "ref": "FR24 p93 L10136-10137"
+   },
+   {
+    "year": 2024,
+    "region": "ECAN",
+    "start": "2024-08-23",
+    "end": "2024-08-25",
+    "city": "Ottawa, ON",
+    "status": "held",
+    "ref": "FR24 p93 L10138-10139"
+   },
+   {
+    "year": 2024,
+    "region": "SE",
+    "start": "2024-12-06",
+    "end": "2024-12-08",
+    "city": "Biloxi, MS",
+    "status": "held",
+    "ref": "FR24 p93 L10140-10141"
+   },
+   {
+    "year": 2025,
+    "region": "EC",
+    "start": "2025-08-22",
+    "end": "2025-08-24",
+    "city": "Indianapolis, IN",
+    "area": 23,
+    "status": "held",
+    "ref": "FR25 p102 L9281"
+   },
+   {
+    "year": 2025,
+    "region": "WC",
+    "start": "2025-09-19",
+    "end": "2025-09-21",
+    "city": "Omaha, NE",
+    "area": 41,
+    "status": "held",
+    "ref": "FR25 p102 L9282"
+   },
+   {
+    "year": 2025,
+    "region": "SW",
+    "start": "2025-11-14",
+    "end": "2025-11-16",
+    "city": "Albuquerque, NM",
+    "area": 46,
+    "status": "held",
+    "ref": "FR25 p102 L9283-9284"
+   },
+   {
+    "year": 2025,
+    "region": "NE",
+    "start": "2025-12-05",
+    "end": "2025-12-07",
+    "city": "Providence, RI",
+    "area": 61,
+    "status": "held",
+    "ref": "FR25 p102 L9285-9286"
+   },
+   {
+    "year": 2026,
+    "region": null,
+    "kind": "special",
+    "start": "2026-01-17",
+    "end": "2026-01-17",
+    "city": "Online (Special Forum for Deaf A.A. members)",
+    "status": "held",
+    "attendance": 389,
+    "ref": "FR25 p102 L9287-9290; FR26 p98"
+   },
+   {
+    "year": 2026,
+    "region": "WCAN",
+    "start": "2026-06-12",
+    "end": "2026-06-14",
+    "city": "Saskatoon, SK",
+    "area": 91,
+    "status": "scheduled",
+    "ref": "FR26 p99 L9168-9169 (printed \"Westen Canada\")"
+   },
+   {
+    "year": 2026,
+    "region": "ECAN",
+    "start": "2026-08-21",
+    "end": "2026-08-23",
+    "city": "Boucherville, QC",
+    "area": 87,
+    "status": "scheduled",
+    "ref": "FR26 p99 L9170-9171 (region not printed)"
+   },
+   {
+    "year": 2026,
+    "region": "SE",
+    "start": "2026-09-18",
+    "end": "2026-09-20",
+    "city": "Raleigh, NC",
+    "area": 51,
+    "status": "scheduled",
+    "ref": "FR26 p99 L9172-9173"
+   },
+   {
+    "year": 2026,
+    "region": "PA",
+    "start": "2026-12-04",
+    "end": "2026-12-06",
+    "city": "San Diego, CA",
+    "area": 8,
+    "status": "scheduled",
+    "note": "San Diego is Area 8; the report misprints it as Area 61",
+    "ref": "FR26 p99 L9174-9175"
+   },
+   {
+    "year": 2027,
+    "region": "NE",
+    "start": "2027-05-20",
+    "end": "2027-05-23",
+    "city": "Niagara Falls, NY",
+    "area": 50,
+    "status": "scheduled",
+    "ref": "FR26 p99 L9177-9178"
+   },
+   {
+    "year": 2027,
+    "region": "EC",
+    "start": "2027-06-25",
+    "end": "2027-06-27",
+    "city": "Green Bay, WI",
+    "area": 74,
+    "status": "scheduled",
+    "ref": "FR26 p99 L9179-9180"
+   },
+   {
+    "year": 2027,
+    "region": "WC",
+    "start": "2027-09-10",
+    "end": "2027-09-12",
+    "city": "Duluth, MN",
+    "area": 35,
+    "status": "scheduled",
+    "ref": "FR26 p99 L9181-9182"
+   },
+   {
+    "year": 2027,
+    "region": "SW",
+    "start": "2027-09-30",
+    "end": "2027-10-03",
+    "city": "Kansas City, MO",
+    "area": 39,
+    "status": "scheduled",
+    "ref": "FR26 p99 L9183"
+   }
+  ],
+  "attendance": [
+   {
+    "year": 2016,
+    "attendance": 1800,
+    "first_timers": 1000,
+    "approx": true,
+    "note": "more than",
+    "ref": "FR17 p30 L3078-3085"
+   },
+   {
+    "year": 2017,
+    "attendance": 1500,
+    "first_timers": 800,
+    "approx": true,
+    "note": "more than",
+    "ref": "FR18 p29 L2723-2725"
+   },
+   {
+    "year": 2019,
+    "attendance": 1565,
+    "first_timers": 821,
+    "ref": "FR20 p39 L3640-3645"
+   },
+   {
+    "year": 2020,
+    "attendance": 4000,
+    "approx": true,
+    "note": "two virtual forums",
+    "ref": "FR21 p16 L1385"
+   },
+   {
+    "year": 2023,
+    "attendance": 1208,
+    "first_timers": 827,
+    "ref": "FR24 p93 L10098-10099"
+   },
+   {
+    "year": 2024,
+    "attendance": 2056,
+    "first_timers": 1304,
+    "ref": "FR25 p101 L9219"
+   },
+   {
+    "year": 2025,
+    "attendance": 2004,
+    "first_timers": 925,
+    "livestream": 433,
+    "ref": "FR26 p98 L9067-9070"
+   }
+  ]
+ },
+ "international_conventions": {
+  "pattern": "Every five years over the July 4 weekend (U.S./Canada). Information goes out by mail in August and registration opens in September of the year before the Convention.",
+  "list": [
+   {
+    "year": 2015,
+    "city": "Atlanta, GA",
+    "status": "held",
+    "note": "80th anniversary",
+    "ref": "FR17 p51 L6447"
+   },
+   {
+    "year": 2020,
+    "city": "Detroit, MI",
+    "start": "2020-07-02",
+    "end": "2020-07-05",
+    "theme": "Love and Tolerance Is Our Code",
+    "status": "cancelled",
+    "note": "Registration opened Sept 9, 2019; about 30,000 had registered; cancelled Mar 28, 2020 and replaced by a virtual site in July.",
+    "ref": "FR17 p56 L6992-6995; FR20 p85 L8279; FR21 p101 L10023-10024"
+   },
+   {
+    "year": 2025,
+    "city": "Vancouver, BC",
+    "start": "2025-07-03",
+    "end": "2025-07-06",
+    "theme": "90 Years — Language of the Heart",
+    "status": "held",
+    "attendance": 33731,
+    "note": "About 2,000 on the virtual track; registration opened Sept 10, 2024 ($155 pre-registration). One page says \"approximately 35,000\" and another misdates it to 2026.",
+    "ref": "FR26 p95 L8882-8888; FR24 p88 L9584; FR25 p27 L2124"
+   },
+   {
+    "year": 2030,
+    "city": "St. Louis, MO",
+    "start": "2030-07-04",
+    "end": "2030-07-07",
+    "status": "planned",
+    "note": "Big Meetings in The Dome at America's Center; a call for theme suggestions later in 2026; Box 4-5-9 and Grapevine articles start in 2028.",
+    "ref": "FR26 p99 L9237-9248"
+   },
+   {
+    "year": 2035,
+    "city": "Indianapolis, IN",
+    "status": "planned",
+    "note": "Site approved by the GSB on Oct 30, 2023.",
+    "ref": "FR24 p87 L9515-9522"
+   },
+   {
+    "year": 2040,
+    "city": null,
+    "status": "planning",
+    "note": "Site-selection guidelines accepted.",
+    "ref": "FR24 p90 L9776-9779"
+   }
+  ]
+ },
+ "world_meetings": {
+  "pattern": "The World Service Meeting meets in even years (reported at the next Conference); REDELA (Meeting of the Americas) in odd years. U.S./Canada sends two delegates to the WSM.",
+  "list": [
+   {
+    "type": "WSM",
+    "n": 24,
+    "year": 2016,
+    "start": "2016-10-23",
+    "end": "2016-10-27",
+    "place": "Rye Brook, NY",
+    "theme": "One World, One A.A., One Language of the Heart",
+    "ref": "FR17 p23 L2352-2355"
+   },
+   {
+    "type": "REDELA",
+    "n": 20,
+    "year": 2017,
+    "start": "2017-10-01",
+    "end": "2017-10-06",
+    "place": "San José, Costa Rica",
+    "ref": "FR18 p9 L639; p88 L9117"
+   },
+   {
+    "type": "WSM",
+    "n": 25,
+    "year": 2018,
+    "start": "2018-10-07",
+    "end": "2018-10-11",
+    "place": "Durban, South Africa",
+    "theme": "Our Twelve Traditions: A.A.'s Future in the Modern World",
+    "note": "72 delegates",
+    "ref": "FR19 p83 L8090-8096"
+   },
+   {
+    "type": "REDELA",
+    "n": 21,
+    "year": 2019,
+    "start": "2019-09-29",
+    "end": "2019-10-03",
+    "place": "Buenos Aires, Argentina",
+    "ref": "FR20 p83 L8149"
+   },
+   {
+    "type": "WSM",
+    "n": 26,
+    "year": 2020,
+    "start": "2020-11-28",
+    "end": "2020-11-30",
+    "place": "Virtual (the first virtual WSM)",
+    "theme": "The Purpose of Our Service: Sobriety within Everyone's Reach",
+    "note": "The 2021 report (p. 5) misprints the date as November 2021",
+    "ref": "FR21 p39 L3677-3679"
+   },
+   {
+    "type": "REDELA",
+    "n": 22,
+    "year": 2021,
+    "month": "2021-10",
+    "place": "Guatemala (hybrid)",
+    "ref": "FR22 p56 L5508; p118 L11640"
+   },
+   {
+    "type": "WSM",
+    "n": 27,
+    "year": 2022,
+    "start": "2022-10-01",
+    "end": "2022-10-06",
+    "place": "Virtual (hosted by Japan)",
+    "theme": "Carrying the Message of A.A. in the Digital Age",
+    "ref": "FR23 p83 L7832"
+   },
+   {
+    "type": "REDELA",
+    "n": 23,
+    "year": 2023,
+    "month": "2023-10",
+    "place": "Colombia",
+    "ref": "FR24 p32 L3124"
+   },
+   {
+    "type": "WSM",
+    "n": 28,
+    "year": 2024,
+    "start": "2024-10-27",
+    "end": "2024-10-31",
+    "place": "New York, NY",
+    "theme": "The Three Legacies in the Digital Era…",
+    "note": "record 74 delegates from 49 countries",
+    "ref": "FR25 p67 L5899-5904; p96 L8741-8746"
+   },
+   {
+    "type": "REDELA",
+    "n": 24,
+    "year": 2025,
+    "month": "2025-10",
+    "place": "Santa Cruz de la Sierra, Bolivia",
+    "theme": "Our Great Responsibility",
+    "ref": "FR26 p32 L2616-2618"
+   },
+   {
+    "type": "WSM",
+    "n": 29,
+    "year": 2026,
+    "start": "2026-10-04",
+    "end": "2026-10-08",
+    "place": "Lisbon, Portugal",
+    "theme": "Guided by all 36 Principles",
+    "note": "delegate fee $2,000",
+    "ref": "FR25 p30 L2389, L2400; FR26 p93 L8670"
+   },
+   {
+    "type": "REDELA",
+    "n": 25,
+    "year": 2027,
+    "place": "Paraguay (Cuba alternate)",
+    "theme": "Love and Service Without Borders",
+    "status": "planned",
+    "ref": "FR26 p33 L2724-2728"
+   }
+  ]
+ },
+ "structure_changes": [
+  {
+   "when": "1998-2015",
+   "year": 2015,
+   "text": "Trustees' CPC and Treatment committees combined (1998); 'Special Needs-Accessibilities' added (2009); 'Special Needs' dropped (Nov 2015).",
+   "ref": "FR17 p44 L5505-5510"
+  },
+  {
+   "when": "2016",
+   "year": 2016,
+   "text": "\"Additional\" Regional Forums discontinued (the last was Southwest, Denver, June 2016).",
+   "ref": "FR17 p57 L7074"
+  },
+  {
+   "when": "2018-2019",
+   "year": 2019,
+   "text": "The Conference committee is printed as \"Conference Agenda\" until 2018 and \"Agenda\" from 2019.",
+   "ref": "years/2017-2019 printed_name"
+  },
+  {
+   "when": "2020",
+   "year": 2020,
+   "text": "Conference Committee on Grapevine becomes \"Grapevine and La Viña\"; trustees' \"International Conventions/Regional Forums\" wording.",
+   "ref": "FR21 p38 L3550-3553"
+  },
+  {
+   "when": "2020-2021",
+   "year": 2020,
+   "text": "Virtual Conferences (2020: four days, essential business only; 2021: full week online).",
+   "ref": "FR20 p4 L204-221; FR21 p4 L196-204"
+  },
+  {
+   "when": "2021-2024",
+   "year": 2024,
+   "text": "Equitable Distribution of Workload (EDW): three-year trial from 2021, adopted 2024.",
+   "ref": "FR21 p61 L6152; FR24 p39 L3698-3699"
+  },
+  {
+   "when": "2022",
+   "year": 2022,
+   "text": "Area 48 renamed from Hudson/Mohawk/Berkshire to Northeast New York. Proposals for virtual areas: no action.",
+   "ref": "FR24 p144 L18547; FR22 p41 L3730-3760"
+  },
+  {
+   "when": "Jan 2023",
+   "year": 2023,
+   "text": "GSB chair resigned; interim chairs Jimmy D. (to April 2023) and Mike L. (to April 2024).",
+   "ref": "FR23 p5 L221-222; FR24 p101 L11000-11001"
+  },
+  {
+   "when": "2024",
+   "year": 2024,
+   "text": "GSB vice-chairs and secretary chosen by Third Legacy Procedure; first Class B chair seat (Scott H.), so the board has 22 trustees.",
+   "ref": "FR24 p101 L11002-11007"
+  },
+  {
+   "when": "2024 (Panel 75)",
+   "year": 2024,
+   "text": "Committee draws rebalanced toward an even mix of first- and second-year delegates.",
+   "ref": "FR24 p69 L7180-7187"
+  },
+  {
+   "when": "2025",
+   "year": 2025,
+   "text": "Prioritized committee-selection criteria; PAI deadline Sept 30; workshops replaced by Conference Inventory sessions.",
+   "ref": "FR25 p48 L4058-4073; p86 L7846"
+  },
+  {
+   "when": "2026",
+   "year": 2026,
+   "text": "No action on a Conference digital committee (still 13 committees); Conference committee chairs move to the Q4 (Oct/Nov) board weekend; talks on linguistic and virtual areas continue.",
+   "ref": "FR26 p50 L4376-4380, L4395-4399; p44 L3745"
+  },
+  {
+   "when": "2017-2026",
+   "year": 2026,
+   "text": "No new areas and no regional boundary changes: 93 areas in every roster.",
+   "ref": "years/*.json"
+  }
+ ],
+ "finance": [
+  {
+   "report_year": 2017,
+   "data_year": 2016,
+   "contributions": 7934869,
+   "note_contrib": "+10.9%",
+   "publishing": {
+    "gross_sales": 13410000
+   },
+   "reserve": {
+    "amount": 14960000,
+    "months": 10.3
+   },
+   "ref": "FR17 p38 L4757, L4796; p39 L4991"
+  },
+  {
+   "report_year": 2018,
+   "data_year": 2017,
+   "contributions": 8409452,
+   "note_contrib": "record",
+   "publishing": {
+    "gross_sales": 13900000
+   },
+   "reserve": {
+    "amount": 14350000,
+    "months": 9.5
+   },
+   "ref": "FR18 p42 L4152; p43 L4269; p84 L8584"
+  },
+  {
+   "report_year": 2019,
+   "data_year": 2018,
+   "contributions": 8385009,
+   "publishing": {
+    "gross_sales": 14240000
+   },
+   "reserve": {
+    "amount": 15940000,
+    "months": 9.7
+   },
+   "ref": "FR19 p30 L2809; p31 L2969; p79 L7677"
+  },
+  {
+   "report_year": 2020,
+   "data_year": 2019,
+   "contributions": 8863480,
+   "publishing": {
+    "gross_profit": 9360000
+   },
+   "reserve": {
+    "amount": 16200000,
+    "months": 9.2
+   },
+   "ref": "FR20 p49 L4770, L4776; p50 L4829"
+  },
+  {
+   "report_year": 2021,
+   "data_year": 2020,
+   "contributions": 10256687,
+   "publishing": {
+    "gross_profit": 6580000
+   },
+   "reserve": {
+    "amount": 12400000,
+    "months": 7.9,
+    "note": "$4M drawn"
+   },
+   "ref": "FR21 p57 L5591-5615"
+  },
+  {
+   "report_year": 2022,
+   "data_year": 2021,
+   "contributions": 10780000,
+   "note_contrib": "record",
+   "publishing": {
+    "gross_profit": 6300000
+   },
+   "reserve": {
+    "amount": 12850000,
+    "months": 8.5,
+    "months_next_year": 7.84
+   },
+   "ref": "FR22 p76 L7510; p77 L7642-7667"
+  },
+  {
+   "report_year": 2023,
+   "data_year": 2022,
+   "contributions": 10550000,
+   "publishing": {
+    "gross_profit": 4890000
+   },
+   "reserve": {
+    "months": 8.38,
+    "months_next_year": 7.35,
+    "note": "9-12-month reserve policy adopted 2022"
+   },
+   "ref": "FR23 p20 L1494-1498; p21 L1639-1648"
+  },
+  {
+   "report_year": 2024,
+   "data_year": 2023,
+   "contributions": 10840000,
+   "publishing": {
+    "gross_profit": 6760000
+   },
+   "reserve": {
+    "amount": 12630000,
+    "months": 7.18
+   },
+   "ref": "FR24 p22 L2021-2022; p24 L2252-2261"
+  },
+  {
+   "report_year": 2025,
+   "data_year": 2024,
+   "contributions": 11249000,
+   "publishing": {
+    "gross_profit": 7640000
+   },
+   "reserve": {
+    "amount": 11910000,
+    "months": 6.56,
+    "months_next_year": 6.4
+   },
+   "ref": "FR25 p24 L1923-1928; p26 L2070-2079"
+  },
+  {
+   "report_year": 2026,
+   "data_year": 2025,
+   "contributions": 10579000,
+   "publishing": {
+    "gross_profit": 7456000
+   },
+   "reserve": {
+    "amount": 11022000,
+    "months": 6.17,
+    "months_next_year": 5.89,
+    "projected_end_2026_months": 4.79,
+    "note": "office retrofit drawdowns"
+   },
+   "ref": "FR26 p24 L1935-1940; p26 L2095-2107"
+  }
+ ],
+ "delegate_expense_contribution": [
+  {
+   "from_year": 2017,
+   "amount": 1800,
+   "previous": 1600,
+   "ref": "FR17 p10 L821-822"
+  },
+  {
+   "from_year": 2023,
+   "amount": 2200,
+   "previous": 1800,
+   "ref": "FR23 p37 L3030-3032"
+  },
+  {
+   "from_year": 2026,
+   "amount": 3000,
+   "previous": 2200,
+   "ref": "FR26 p39 L3174-3176",
+   "note": "approved at the 2026 Conference"
+  }
+ ],
+ "delegate_chairs": [
+  {
+   "conference_year": 2009,
+   "ordinal": 59,
+   "name": "Joe B.",
+   "area": 9,
+   "region": "PA",
+   "country": "US",
+   "chosen_at": "Delegates Only dinner (Tuesday), drawn from the hat",
+   "source": "2009 FR (historical) p.3 \"Joe B., delegate chairperson\"; p.5 signed \"Joe B., Mid-Southern California\"; delegate roster p.76 Area 9 Panel 58"
+  },
+  {
+   "conference_year": 2010,
+   "ordinal": 60,
+   "name": "Lowell L.",
+   "area": 59,
+   "region": "NE",
+   "country": "US",
+   "alternate": {
+    "name": "Betsy G.",
+    "area": 67,
+    "region": "SW",
+    "country": "US"
+   },
+   "source": "2009 FR p.4: \"Delegate chairperson of the 2010 General Service Conference will be Lowell L., Pennsylvania; alternate chairperson will be Betsy G., of SE Texas\"; roster p.77-78 (Area 59 Panel 59; Area 67 Panel 59)"
+  },
+  {
+   "conference_year": 2017,
+   "ordinal": 67,
+   "name": "Robert M.",
+   "area": 63,
+   "region": "WC",
+   "country": "US",
+   "chosen_at": "Delegates Only meeting (Tuesday), before committee chairs were elected",
+   "source": "FR17 p5 L276 \"Bob M. of South Dakota, delegate chair of the Conference\""
+  },
+  {
+   "conference_year": 2018,
+   "ordinal": 68,
+   "name": "Ben B.",
+   "area": 57,
+   "region": "SW",
+   "country": "US",
+   "chosen_at": "Delegates Only meeting (Tuesday), before committee chairs were elected",
+   "source": "FR17 p5 L312-315 (chosen at the Tuesday Delegates Only meeting); FR18 p4 L226-227",
+   "alternate": {
+    "name": "Joann L.",
+    "area": 6,
+    "region": "PA",
+    "country": "US"
+   }
+  },
+  {
+   "conference_year": 2019,
+   "ordinal": 69,
+   "name": "Anthony F.",
+   "area": 63,
+   "region": "WC",
+   "country": "US",
+   "chosen_at": "Delegates Only meeting (Tuesday), before committee chairs were elected",
+   "source": "FR18 p5 L314-317; FR19 p5 L318-320 (\"my name was picked out of a hat\")",
+   "alternate": {
+    "name": "Rebecca (Becky) P.",
+    "area": 78,
+    "region": "WCAN",
+    "country": "CA"
+   }
+  },
+  {
+   "conference_year": 2020,
+   "ordinal": 70,
+   "name": "Raymond (Ray) McC.",
+   "area": 91,
+   "region": "WCAN",
+   "country": "CA",
+   "chosen_at": "Delegates Only meeting (Tuesday), before committee chairs were elected",
+   "source": "FR20 p6 L327-329, p7 L402"
+  },
+  {
+   "conference_year": 2021,
+   "ordinal": 71,
+   "name": "Donald (Donny) M.",
+   "area": 80,
+   "region": "WCAN",
+   "country": "CA",
+   "chosen_at": "Delegates Only meeting (Tuesday), before committee chairs were elected",
+   "source": "FR21 p6 L363-365, L448"
+  },
+  {
+   "conference_year": 2022,
+   "ordinal": 72,
+   "name": "Pam K.",
+   "area": 39,
+   "region": "SW",
+   "country": "US",
+   "chosen_at": "delegates dinner after the committee chair elections",
+   "source": "FR22 p6 L478"
+  },
+  {
+   "conference_year": 2023,
+   "ordinal": 73,
+   "name": "Tami L.",
+   "area": 78,
+   "region": "WCAN",
+   "country": "CA",
+   "chosen_at": "delegates dinner after the committee chair elections",
+   "source": "FR23 p4 L203; p6 L314"
+  },
+  {
+   "conference_year": 2024,
+   "ordinal": 74,
+   "name": "Mary A.",
+   "area": 14,
+   "region": "SE",
+   "country": "US",
+   "chosen_at": "delegates dinner after the committee chair elections",
+   "source": "FR24 p4 L184-185"
+  },
+  {
+   "conference_year": 2025,
+   "ordinal": 75,
+   "name": "Karen O. C.",
+   "area": 78,
+   "region": "WCAN",
+   "country": "CA",
+   "chosen_at": "delegates dinner after the committee chair elections",
+   "source": "FR24 p5 L271-273 (\"Delegate Chair-elect Karen C.\"); FR25 p5 L270-274 (\"from another hat ... at the Delegates dinner\")"
+  },
+  {
+   "conference_year": 2026,
+   "ordinal": 76,
+   "name": "Jay T.",
+   "area": 27,
+   "region": "SE",
+   "country": "US",
+   "chosen_at": "delegates dinner after the committee chair elections",
+   "source": "FR26 p4 L160; p7 L402 \"Jay T., 76th General Service Conference Delegate Chair\" (Area 27 Louisiana)"
+  },
+  {
+   "conference_year": 2027,
+   "ordinal": 77,
+   "name": "Tammy S.",
+   "area": 86,
+   "region": "ECAN",
+   "country": "CA",
+   "chosen_at": "delegates dinner after the committee chair elections",
+   "source": "FR26 p5 L251-253 (\"introduced as the 77th General Service Conference delegate chairperson\")"
+  }
+ ],
+ "delegate_chair_rules": {
+  "text": "The Conference delegate chair for next year is chosen at this year's Conference from the first-year delegates, by lot (\"from the hat\"). Since about 2022 it happens at the delegates-only dinner after the committees have elected their chairs and alternates, from the delegates not yet chosen (2024 report p. 47: \"electing the General Service Conference Delegate chair from the remaining delegates (not yet selected for Committee or alt chair) remains a viable procedure\"). Before then it was drawn at the Tuesday Delegates Only meeting, before the committee elections, so the 2018 (Ben B., Grapevine alternate) and 2021 (Donny M., IC/RF alternate) delegate chairs were also committee alternates. Proposals to change the method (2023: one nominee per region, two by lot; 2025: committee nominees and a Third Legacy vote) were floor actions the Conference declined to consider — not Advisory Actions (2023 report p. 50; 2025 report p. 53). An alternate delegate chair is printed only for 2010, 2018 and 2019. The U.S./Canada alternation 2021-2027 is a pattern, not a rule.",
+  "refs": ["FR24 p47 L4608-4613", "FR23 p50 L4380-4394", "FR17 p5 L312-315", "FR25 p5 L270-274"]
+ },
+ "final_report_print": {
+  "note": "Print code on page 2 (month/year printed): the Final Report appears between August and October.",
+  "codes": {
+   "2017": "7/17",
+   "2018": "9/18",
+   "2019": "8/19",
+   "2020": "8/20",
+   "2021": "8/21",
+   "2022": "10/22",
+   "2023": "9/23",
+   "2024": "8/24",
+   "2025": "10/25",
+   "2026": "9/26"
+  },
+  "ref": "FR18-FR26 page 2"
+ },
+ "misprints": [
+  {
+   "ref": "FR21 p5 L312",
+   "text": "Says the 26th WSM was in \"November 2021\"; it met Nov 28-30, 2020 (p39 L3677)."
+  },
+  {
+   "ref": "FR26 p65 L5830-5831",
+   "text": "Dates the Vancouver International Convention \"July 3-6, 2026\"; it was 2025."
+  },
+  {
+   "ref": "FR26 p99 L9175",
+   "text": "\"Pacific in San Diego, CA, Area 61\": San Diego is Area 8 (Area 61 is Rhode Island). The same list prints \"Westen Canada\" and no region for Boucherville (Eastern Canada)."
+  },
+  {
+   "ref": "FR24 p157 L20256, L20294",
+   "text": "Swaps the labels of the two Texas delegates (Area 65 called \"Southeast Texas\", Area 67 \"Northeast Texas\")."
+  },
+  {
+   "ref": "FR18 p47 L4748 vs p90 L9342",
+   "text": "2030 Convention finalists differ inside the report (Indianapolis/St. Louis vs Houston/St. Louis)."
+  },
+  {
+   "ref": "FR26 p95 vs p9",
+   "text": "Vancouver attendance 33,731 vs \"approximately 35,000\"."
+  },
+  {
+   "ref": "FR19 p86 L8427",
+   "text": "The 2019 Regional Forums list is printed under a \"2018\" heading."
+  },
+  {
+   "ref": "FR22 p163 L20696",
+   "text": "Carolyn W. \"since 2017\" (elected April 2018) — fixed by a correction."
+  },
+  {
+   "ref": "FR25 p172 L19870",
+   "text": "Rotation star on Kerry M. (she stayed) — fixed by a correction."
+  },
+  {
+   "ref": "FR23-25 Robert L. bios",
+   "text": "\"Area 89, northeast Quebec\" for a Panel 48 delegate (Area 87 per the 2026 bio and panel parity) — fixed by a correction."
+  }
+ ],
+ "area_contributions": {
+  "note": "Groups and Other Entities Contribution Report: per area, active groups, groups that contributed, % contributing, total group contributions (USD) and average per contributing group, for the calendar year before the report. Parsed from the Final Report text; the 93 area rows plus \"Outside US and Canada\", \"Location Not Known\" (2023) or \"095 Outside the service structure\" (2024-2026) add up to the printed TOTAL GROUPS row.",
+  "cols": ["active_groups", "groups_contributed", "pct_contributed", "total", "average"],
+  "years": {
+   "2022": {
+    "report_year": 2023,
+    "ref": "FR23 p125-126 L16133-16753",
+    "total": [58455, 19572, 33.48, 6204547, 317.01],
+    "rows": {
+     "1": [471, 135, 28.66, 55343, 409.95],
+     "2": [136, 66, 48.53, 20282, 307.3],
+     "3": [1165, 444, 38.11, 203219, 457.7],
+     "4": [216, 92, 42.59, 33304, 362.0],
+     "5": [755, 203, 26.89, 59601, 293.6],
+     "6": [1817, 976, 53.71, 309180, 316.78],
+     "7": [919, 341, 37.11, 122693, 359.8],
+     "8": [634, 297, 46.85, 82601, 278.12],
+     "9": [2087, 571, 27.36, 184078, 322.38],
+     "10": [939, 364, 38.76, 118428, 325.35],
+     "11": [550, 404, 73.45, 124294, 307.66],
+     "12": [232, 112, 48.28, 47047, 420.07],
+     "13": [438, 95, 21.69, 28063, 295.4],
+     "14": [968, 368, 38.02, 128990, 350.52],
+     "15": [2042, 859, 42.07, 299607, 348.79],
+     "16": [664, 363, 54.67, 129282, 356.15],
+     "17": [279, 101, 36.2, 49184, 486.97],
+     "18": [270, 117, 43.33, 33287, 284.51],
+     "19": [935, 115, 12.3, 30413, 264.46],
+     "20": [1120, 321, 28.66, 77035, 239.98],
+     "21": [445, 90, 20.22, 21092, 234.36],
+     "22": [613, 164, 26.75, 29572, 180.32],
+     "23": [755, 228, 30.2, 42439, 186.14],
+     "24": [648, 245, 37.81, 71745, 292.84],
+     "25": [331, 97, 29.31, 30299, 312.36],
+     "26": [791, 222, 28.07, 67237, 302.87],
+     "27": [702, 136, 19.37, 39242, 288.54],
+     "28": [520, 199, 38.27, 39503, 198.51],
+     "29": [952, 260, 27.31, 66831, 257.04],
+     "30": [1412, 491, 34.77, 163130, 332.24],
+     "31": [317, 117, 36.91, 19942, 170.44],
+     "32": [699, 151, 21.6, 24470, 162.05],
+     "33": [946, 198, 20.93, 44201, 223.24],
+     "34": [686, 157, 22.89, 39188, 249.61],
+     "35": [504, 209, 41.47, 37266, 178.31],
+     "36": [909, 346, 38.06, 96837, 279.88],
+     "37": [256, 48, 18.75, 17612, 366.93],
+     "38": [262, 166, 63.36, 44538, 268.3],
+     "39": [245, 94, 38.37, 27033, 287.59],
+     "40": [283, 100, 35.34, 38612, 386.12],
+     "41": [644, 191, 29.66, 53347, 279.31],
+     "42": [629, 189, 30.05, 61368, 324.7],
+     "43": [597, 212, 35.51, 42318, 199.61],
+     "44": [1088, 392, 36.03, 136832, 349.06],
+     "45": [469, 204, 43.5, 79973, 392.02],
+     "46": [345, 135, 39.13, 39144, 289.95],
+     "47": [646, 177, 27.4, 42785, 241.73],
+     "48": [812, 197, 24.26, 47490, 241.07],
+     "49": [1481, 497, 33.56, 265366, 533.94],
+     "50": [335, 69, 20.6, 20265, 293.7],
+     "51": [1222, 472, 38.63, 200388, 424.55],
+     "52": [187, 68, 36.36, 20819, 306.17],
+     "53": [764, 148, 19.37, 25544, 172.59],
+     "54": [1331, 275, 20.66, 51887, 188.68],
+     "55": [262, 73, 27.86, 15521, 212.61],
+     "56": [530, 202, 38.11, 36226, 179.34],
+     "57": [462, 146, 31.6, 49156, 336.68],
+     "58": [1003, 398, 39.68, 131248, 329.77],
+     "59": [1695, 624, 36.81, 210843, 337.89],
+     "60": [831, 275, 33.09, 53551, 194.73],
+     "61": [246, 109, 44.31, 24438, 224.2],
+     "62": [430, 197, 45.81, 95148, 482.99],
+     "63": [161, 42, 26.09, 9744, 231.99],
+     "64": [646, 204, 31.58, 67903, 332.86],
+     "65": [343, 167, 48.69, 94270, 564.49],
+     "66": [271, 53, 19.56, 11276, 212.76],
+     "67": [696, 163, 23.42, 62610, 384.11],
+     "68": [627, 227, 36.2, 123128, 542.41],
+     "69": [392, 134, 34.18, 38360, 286.27],
+     "70": [285, 92, 32.28, 23077, 250.84],
+     "71": [1130, 456, 40.35, 143142, 313.91],
+     "72": [1141, 476, 41.72, 174258, 366.09],
+     "73": [240, 75, 31.25, 13442, 179.22],
+     "74": [653, 178, 27.26, 31936, 179.41],
+     "75": [977, 436, 44.63, 60351, 138.42],
+     "76": [102, 38, 37.25, 10738, 282.59],
+     "77": [92, 26, 28.26, 3727, 143.35],
+     "78": [468, 164, 35.04, 55187, 336.51],
+     "79": [525, 279, 53.14, 151032, 541.33],
+     "80": [87, 22, 25.29, 5397, 245.3],
+     "81": [187, 40, 21.39, 12004, 300.09],
+     "82": [194, 59, 30.41, 15426, 261.45],
+     "83": [610, 136, 22.3, 59229, 435.5],
+     "84": [129, 28, 21.71, 6440, 230.02],
+     "85": [60, 8, 13.33, 1832, 228.96],
+     "86": [621, 142, 22.87, 48900, 344.37],
+     "87": [447, 39, 8.72, 8337, 213.77],
+     "88": [137, 4, 2.92, 565, 141.32],
+     "89": [223, 2, 0.9, 191, 95.28],
+     "90": [281, 16, 5.69, 2938, 183.61],
+     "91": [250, 73, 29.2, 17526, 240.08],
+     "92": [490, 159, 32.45, 43427, 273.13],
+     "93": [1068, 306, 28.65, 103407, 337.93]
+    },
+    "other_rows": {
+     "Outside US and Canada": [null, 12, null, 3586, 298.82],
+     "Location Not Known": [null, 4, null, 783, 195.79]
+    }
+   },
+   "2023": {
+    "report_year": 2024,
+    "ref": "FR24 p130 L16190-16801",
+    "total": [57222, 18105, 31.64, 5950279, 328.65],
+    "rows": {
+     "1": [440, 134, 30.45, 55017, 410.57],
+     "2": [148, 57, 38.51, 16709, 293.13],
+     "3": [1219, 375, 30.76, 178560, 476.16],
+     "4": [224, 98, 43.75, 25979, 265.09],
+     "5": [782, 227, 29.03, 117549, 517.84],
+     "6": [1791, 687, 38.36, 258079, 375.66],
+     "7": [835, 340, 40.72, 116092, 341.45],
+     "8": [603, 275, 45.61, 79672, 289.71],
+     "9": [1934, 544, 28.13, 179869, 330.64],
+     "10": [925, 334, 36.11, 118933, 356.09],
+     "11": [556, 375, 67.45, 109124, 291.0],
+     "12": [243, 104, 42.8, 44178, 424.79],
+     "13": [437, 95, 21.74, 34092, 358.87],
+     "14": [944, 362, 38.35, 135725, 374.93],
+     "15": [2035, 692, 34.0, 266863, 385.64],
+     "16": [617, 347, 56.24, 129675, 373.7],
+     "17": [300, 108, 36.0, 43031, 398.44],
+     "18": [248, 86, 34.68, 34745, 404.01],
+     "19": [946, 118, 12.47, 32146, 272.42],
+     "20": [793, 258, 32.53, 60174, 233.23],
+     "21": [423, 96, 22.7, 23943, 249.4],
+     "22": [559, 150, 26.83, 29907, 199.38],
+     "23": [770, 184, 23.9, 35665, 193.83],
+     "24": [646, 222, 34.37, 65708, 295.98],
+     "25": [331, 91, 27.49, 29466, 323.8],
+     "26": [820, 211, 25.73, 67697, 320.84],
+     "27": [656, 106, 16.16, 39896, 376.38],
+     "28": [521, 163, 31.29, 32084, 196.84],
+     "29": [929, 259, 27.88, 70370, 271.7],
+     "30": [1443, 410, 28.41, 121176, 295.55],
+     "31": [309, 113, 36.57, 22053, 195.16],
+     "32": [696, 158, 22.7, 31695, 200.6],
+     "33": [936, 178, 19.02, 40967, 230.15],
+     "34": [380, 146, 38.42, 38153, 261.32],
+     "35": [458, 199, 43.45, 31628, 158.93],
+     "36": [854, 309, 36.18, 94500, 305.83],
+     "37": [259, 48, 18.53, 15308, 318.92],
+     "38": [282, 159, 56.38, 50662, 318.63],
+     "39": [229, 88, 38.43, 30028, 341.22],
+     "40": [290, 103, 35.52, 42103, 408.77],
+     "41": [613, 187, 30.51, 55476, 296.66],
+     "42": [634, 168, 26.5, 55060, 327.74],
+     "43": [495, 208, 42.02, 41013, 197.18],
+     "44": [1020, 361, 35.39, 151087, 418.52],
+     "45": [333, 186, 55.86, 76420, 410.86],
+     "46": [313, 129, 41.21, 33527, 259.9],
+     "47": [621, 178, 28.66, 42589, 239.26],
+     "48": [737, 209, 28.36, 49621, 237.42],
+     "49": [1421, 422, 29.7, 219476, 520.09],
+     "50": [305, 69, 22.62, 18834, 272.95],
+     "51": [1181, 438, 37.09, 173940, 397.12],
+     "52": [161, 60, 37.27, 22998, 383.31],
+     "53": [714, 142, 19.89, 24636, 173.49],
+     "54": [1325, 227, 17.13, 42486, 187.16],
+     "55": [279, 70, 25.09, 12982, 185.45],
+     "56": [498, 203, 40.76, 40331, 198.67],
+     "57": [437, 132, 30.21, 53986, 408.98],
+     "58": [991, 376, 37.94, 128517, 341.8],
+     "59": [1647, 584, 35.46, 196315, 336.16],
+     "60": [810, 225, 27.78, 45031, 200.14],
+     "61": [239, 96, 40.17, 22719, 236.65],
+     "62": [375, 199, 53.07, 99855, 501.78],
+     "63": [167, 46, 27.54, 11706, 254.48],
+     "64": [655, 201, 30.69, 63795, 317.39],
+     "65": [346, 150, 43.35, 65200, 434.67],
+     "66": [257, 40, 15.56, 10064, 251.61],
+     "67": [712, 191, 26.83, 61791, 323.51],
+     "68": [574, 169, 29.44, 77961, 461.31],
+     "69": [383, 131, 34.2, 42656, 325.62],
+     "70": [294, 91, 30.95, 22806, 250.62],
+     "71": [1000, 419, 41.9, 142446, 339.97],
+     "72": [1149, 467, 40.64, 163379, 349.85],
+     "73": [228, 68, 29.82, 13062, 192.09],
+     "74": [638, 194, 30.41, 34437, 177.51],
+     "75": [1006, 408, 40.56, 66840, 163.82],
+     "76": [87, 37, 42.53, 9211, 248.94],
+     "77": [97, 19, 19.59, 2502, 131.67],
+     "78": [456, 172, 37.72, 59680, 346.97],
+     "79": [549, 249, 45.36, 127327, 511.35],
+     "80": [88, 25, 28.41, 5934, 237.36],
+     "81": [77, 58, 75.32, 20801, 358.64],
+     "82": [186, 58, 31.18, 21287, 367.02],
+     "83": [534, 164, 30.71, 68006, 414.67],
+     "84": [127, 38, 29.92, 16613, 437.19],
+     "85": [60, 16, 26.67, 6818, 426.11],
+     "86": [603, 171, 28.36, 76580, 447.84],
+     "87": [370, 31, 8.38, 12859, 414.81],
+     "88": [121, 8, 6.61, 1482, 185.29],
+     "89": [187, 3, 1.6, 881, 293.67],
+     "90": [250, 12, 4.8, 1268, 105.65],
+     "91": [240, 77, 32.08, 23085, 299.8],
+     "92": [474, 149, 31.43, 40331, 270.68],
+     "93": [1043, 309, 29.63, 93539, 302.71]
+    },
+    "other_rows": {
+     "Outside the service structure": [1304, 56, 4.29, 29813, 532.38]
+    }
+   },
+   "2024": {
+    "report_year": 2025,
+    "ref": "FR25 p146-147 L16522-17137",
+    "total": [55050, 17840, 32.41, 7192917, 403.19],
+    "rows": {
+     "1": [394, 124, 31.47, 44981, 362.75],
+     "2": [152, 60, 39.47, 19891, 331.51],
+     "3": [1231, 362, 29.41, 162935, 450.1],
+     "4": [231, 96, 41.56, 37337, 388.93],
+     "5": [771, 190, 24.64, 85789, 451.52],
+     "6": [1689, 638, 37.77, 224298, 351.56],
+     "7": [871, 328, 37.66, 123937, 377.86],
+     "8": [595, 264, 44.37, 90986, 344.64],
+     "9": [2030, 513, 25.27, 179228, 349.37],
+     "10": [883, 351, 39.75, 150999, 430.2],
+     "11": [478, 395, 82.64, 141040, 357.06],
+     "12": [176, 110, 62.5, 51155, 465.04],
+     "13": [259, 75, 28.96, 28385, 378.47],
+     "14": [963, 364, 37.8, 146022, 401.16],
+     "15": [2029, 690, 34.01, 355958, 515.88],
+     "16": [573, 326, 56.89, 135663, 416.14],
+     "17": [175, 106, 60.57, 48549, 458.01],
+     "18": [253, 89, 35.18, 29912, 336.1],
+     "19": [956, 122, 12.76, 40808, 334.49],
+     "20": [792, 259, 32.7, 81049, 312.93],
+     "21": [411, 104, 25.3, 23000, 221.16],
+     "22": [505, 146, 28.91, 28130, 192.67],
+     "23": [746, 176, 23.59, 35663, 202.63],
+     "24": [604, 201, 33.28, 64705, 321.91],
+     "25": [329, 102, 31.0, 35480, 347.84],
+     "26": [791, 208, 26.3, 77948, 374.75],
+     "27": [654, 125, 19.11, 38672, 309.37],
+     "28": [505, 178, 35.25, 40760, 228.99],
+     "29": [884, 226, 25.57, 60398, 267.25],
+     "30": [1420, 408, 28.73, 156869, 384.48],
+     "31": [313, 118, 37.7, 22795, 193.18],
+     "32": [699, 171, 24.46, 37735, 220.67],
+     "33": [921, 165, 17.92, 43131, 261.4],
+     "34": [398, 151, 37.94, 41553, 275.18],
+     "35": [486, 190, 39.09, 34638, 182.31],
+     "36": [828, 286, 34.54, 95762, 334.83],
+     "37": [271, 54, 19.93, 20818, 385.52],
+     "38": [248, 137, 55.24, 42495, 310.18],
+     "39": [222, 88, 39.64, 29136, 331.1],
+     "40": [280, 101, 36.07, 57019, 564.54],
+     "41": [577, 173, 29.98, 49461, 285.9],
+     "42": [596, 158, 26.51, 63236, 400.23],
+     "43": [615, 213, 34.63, 59619, 279.9],
+     "44": [1029, 343, 33.33, 143922, 419.6],
+     "45": [277, 189, 68.23, 74263, 392.92],
+     "46": [304, 124, 40.79, 33252, 268.16],
+     "47": [510, 184, 36.08, 54909, 298.42],
+     "48": [708, 228, 32.2, 56476, 247.7],
+     "49": [1393, 413, 29.65, 219204, 530.76],
+     "50": [282, 68, 24.11, 20968, 308.35],
+     "51": [1048, 445, 42.46, 208536, 468.62],
+     "52": [149, 62, 41.61, 23329, 376.27],
+     "53": [428, 157, 36.68, 25668, 163.49],
+     "54": [1324, 198, 14.95, 40110, 202.58],
+     "55": [286, 71, 24.83, 18188, 256.18],
+     "56": [353, 185, 52.41, 38020, 205.52],
+     "57": [417, 123, 29.5, 37793, 307.26],
+     "58": [957, 382, 39.92, 127732, 334.38],
+     "59": [1671, 570, 34.11, 208970, 366.61],
+     "60": [738, 233, 31.57, 50129, 215.15],
+     "61": [245, 91, 37.14, 29470, 323.85],
+     "62": [417, 211, 50.6, 119194, 564.9],
+     "63": [167, 45, 26.95, 14086, 313.02],
+     "64": [636, 177, 27.83, 71436, 403.59],
+     "65": [341, 134, 39.3, 69124, 515.85],
+     "66": [261, 34, 13.03, 10500, 308.82],
+     "67": [680, 172, 25.29, 70724, 411.18],
+     "68": [583, 166, 28.47, 81227, 489.32],
+     "69": [302, 133, 44.04, 52344, 393.57],
+     "70": [288, 91, 31.6, 22433, 246.52],
+     "71": [961, 426, 44.33, 159829, 375.18],
+     "72": [1020, 479, 46.96, 196040, 409.27],
+     "73": [226, 76, 33.63, 14234, 187.29],
+     "74": [638, 205, 32.13, 39864, 194.46],
+     "75": [1024, 410, 40.04, 78815, 192.23],
+     "76": [87, 40, 45.98, 11086, 277.15],
+     "77": [97, 25, 25.77, 5631, 225.24],
+     "78": [440, 191, 43.41, 67884, 355.42],
+     "79": [485, 245, 50.52, 125221, 511.11],
+     "80": [98, 23, 23.47, 9547, 415.09],
+     "81": [84, 45, 53.57, 20071, 446.02],
+     "82": [180, 66, 36.67, 27181, 411.83],
+     "83": [509, 155, 30.45, 81756, 527.46],
+     "84": [129, 38, 29.46, 18846, 495.95],
+     "85": [54, 14, 25.93, 5873, 419.51],
+     "86": [620, 154, 24.84, 85966, 558.22],
+     "87": [346, 25, 7.23, 62384, 2495.36],
+     "88": [102, 11, 10.78, 7022, 638.35],
+     "89": [140, 7, 5.0, 30796, 4399.48],
+     "90": [247, 18, 7.29, 58194, 3233.0],
+     "91": [228, 70, 30.7, 24029, 343.27],
+     "92": [476, 157, 32.98, 48640, 309.81],
+     "93": [966, 289, 29.92, 89157, 308.5]
+    },
+    "other_rows": {
+     "Outside the service structure": [1295, 101, 7.8, 664898, 6583.15]
+    }
+   },
+   "2025": {
+    "report_year": 2026,
+    "ref": "FR26 p143 L16450-17061",
+    "total": [53703, 18312, 34.1, 6303951, 344.25],
+    "rows": {
+     "1": [427, 122, 28.57, 41103, 336.91],
+     "2": [147, 52, 35.37, 15063, 289.67],
+     "3": [1216, 320, 26.32, 144244, 450.76],
+     "4": [227, 104, 45.81, 43210, 415.49],
+     "5": [776, 171, 22.04, 97078, 567.71],
+     "6": [1683, 585, 34.76, 218139, 372.89],
+     "7": [724, 305, 42.13, 121064, 396.93],
+     "8": [599, 221, 36.89, 75152, 340.05],
+     "9": [1988, 426, 21.43, 128131, 300.78],
+     "10": [873, 325, 37.23, 139859, 430.33],
+     "11": [463, 368, 79.48, 115182, 313.0],
+     "12": [140, 115, 82.14, 53212, 462.71],
+     "13": [257, 66, 25.68, 30685, 464.92],
+     "14": [892, 330, 37.0, 124307, 376.69],
+     "15": [1902, 613, 32.23, 256921, 419.12],
+     "16": [549, 304, 55.37, 114035, 375.12],
+     "17": [199, 102, 51.26, 37005, 362.8],
+     "18": [201, 85, 42.29, 33003, 388.27],
+     "19": [959, 112, 11.68, 32091, 286.53],
+     "20": [792, 234, 29.55, 58865, 251.56],
+     "21": [378, 82, 21.69, 16971, 206.96],
+     "22": [489, 139, 28.43, 26017, 187.17],
+     "23": [751, 153, 20.37, 29727, 194.29],
+     "24": [600, 228, 38.0, 64399, 282.45],
+     "25": [311, 94, 30.23, 26018, 276.78],
+     "26": [728, 213, 29.26, 75787, 355.81],
+     "27": [650, 113, 17.38, 27456, 242.98],
+     "28": [484, 176, 36.36, 40308, 229.02],
+     "29": [400, 212, 53.0, 52590, 248.06],
+     "30": [1424, 392, 27.53, 125329, 319.72],
+     "31": [310, 112, 36.13, 18276, 163.18],
+     "32": [704, 157, 22.3, 27113, 172.69],
+     "33": [909, 162, 17.82, 37160, 229.38],
+     "34": [414, 132, 31.88, 39268, 297.49],
+     "35": [452, 211, 46.68, 38395, 181.97],
+     "36": [806, 244, 30.27, 87826, 359.94],
+     "37": [244, 52, 21.31, 17464, 335.85],
+     "38": [251, 165, 65.74, 58524, 354.69],
+     "39": [218, 83, 38.07, 28000, 337.35],
+     "40": [272, 101, 37.13, 51977, 514.62],
+     "41": [573, 158, 27.57, 39610, 250.7],
+     "42": [613, 141, 23.0, 50241, 356.32],
+     "43": [548, 210, 38.32, 51695, 246.17],
+     "44": [1064, 299, 28.1, 116298, 388.96],
+     "45": [252, 180, 71.43, 65589, 364.39],
+     "46": [278, 132, 47.48, 32721, 247.89],
+     "47": [509, 167, 32.81, 40577, 242.98],
+     "48": [688, 197, 28.63, 54879, 278.57],
+     "49": [1352, 355, 26.26, 194591, 548.14],
+     "50": [260, 59, 22.69, 16828, 285.22],
+     "51": [1015, 444, 43.74, 192886, 434.43],
+     "52": [153, 61, 39.87, 25423, 416.78],
+     "53": [434, 141, 32.49, 25848, 183.32],
+     "54": [1298, 186, 14.33, 34165, 183.68],
+     "55": [288, 60, 20.83, 16789, 279.82],
+     "56": [593, 160, 26.98, 33249, 207.81],
+     "57": [387, 118, 30.49, 37943, 321.55],
+     "58": [887, 365, 41.15, 109027, 298.7],
+     "59": [1672, 531, 31.76, 181599, 341.99],
+     "60": [689, 209, 30.33, 47154, 225.62],
+     "61": [223, 89, 39.91, 24678, 277.29],
+     "62": [371, 210, 56.6, 104408, 497.18],
+     "63": [159, 44, 27.67, 14658, 333.13],
+     "64": [551, 162, 29.4, 60751, 375.01],
+     "65": [295, 120, 40.68, 67431, 561.92],
+     "66": [263, 31, 11.79, 10279, 331.6],
+     "67": [642, 165, 25.7, 58873, 356.8],
+     "68": [508, 150, 29.53, 71258, 475.05],
+     "69": [238, 124, 52.1, 45176, 364.32],
+     "70": [286, 86, 30.07, 22486, 261.46],
+     "71": [952, 385, 40.44, 140350, 364.54],
+     "72": [905, 456, 50.39, 171000, 375.0],
+     "73": [216, 73, 33.8, 13860, 189.86],
+     "74": [623, 174, 27.93, 29800, 171.27],
+     "75": [1014, 395, 38.95, 69167, 175.11],
+     "76": [89, 38, 42.7, 13767, 362.3],
+     "77": [97, 45, 46.39, 6564, 145.87],
+     "78": [441, 173, 39.23, 58738, 339.53],
+     "79": [507, 224, 44.18, 102095, 455.78],
+     "80": [90, 25, 27.78, 7057, 282.27],
+     "81": [52, 41, 78.85, 24457, 596.5],
+     "82": [174, 53, 30.46, 23174, 437.25],
+     "83": [516, 133, 25.78, 54359, 408.71],
+     "84": [135, 37, 27.41, 15934, 430.66],
+     "85": [47, 14, 29.79, 3778, 269.85],
+     "86": [554, 132, 23.83, 67807, 513.69],
+     "87": [312, 37, 11.86, 24541, 663.28],
+     "88": [90, 5, 5.56, 10069, 2013.89],
+     "89": [168, 4, 2.38, 63411, 15852.78],
+     "90": [235, 18, 7.66, 59720, 3317.77],
+     "91": [226, 66, 29.2, 22532, 341.39],
+     "92": [480, 155, 32.29, 49360, 318.45],
+     "93": [474, 264, 55.7, 76045, 288.05]
+    },
+    "other_rows": {
+     "Outside the service structure": [2408, 1830, 76.0, 582299, 318.2]
+    }
+   }
+  }
+ }
+}

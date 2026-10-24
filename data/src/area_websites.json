@@ -1,0 +1,377 @@
+{
+ "source": "aa.org List of General Service Conference Area Web Sites (US/Canada), fetched 2026-10-19",
+ "areas": {
+  "1": {
+   "official_name": "Alabama/N.W. Florida",
+   "website": "http://www.aaarea1.org"
+  },
+  "2": {
+   "official_name": "Alaska",
+   "website": "http://www.area02alaska.org"
+  },
+  "3": {
+   "official_name": "Arizona",
+   "website": "http://www.area03.org"
+  },
+  "4": {
+   "official_name": "Arkansas",
+   "website": "http://www.arkansasaa.org"
+  },
+  "5": {
+   "official_name": "Southern California",
+   "website": "http://www.area05aa.org"
+  },
+  "6": {
+   "official_name": "Northern Coastal California",
+   "website": "http://www.cnca06.org"
+  },
+  "7": {
+   "official_name": "Northern Interior California",
+   "website": "http://www.cnia.org"
+  },
+  "8": {
+   "official_name": "San Diego/Imperial California",
+   "website": "http://www.area8aa.org"
+  },
+  "9": {
+   "official_name": "Mid-Southern California",
+   "website": "http://www.msca09aa.org"
+  },
+  "10": {
+   "official_name": "Colorado",
+   "website": "http://www.coloradoaa.org"
+  },
+  "11": {
+   "official_name": "Connecticut",
+   "website": "http://www.ct-aa.org"
+  },
+  "12": {
+   "official_name": "Delaware",
+   "website": "http://www.delawareaa.org"
+  },
+  "13": {
+   "official_name": "District of Columbia",
+   "website": "http://www.area13aa.org"
+  },
+  "14": {
+   "official_name": "North Florida",
+   "website": "http://www.aanorthflorida.org"
+  },
+  "15": {
+   "official_name": "So. Florida/Bahamas/US V.I./Antigua",
+   "website": "http://www.area15aa.org"
+  },
+  "16": {
+   "official_name": "Georgia",
+   "website": "http://www.aageorgia.org"
+  },
+  "17": {
+   "official_name": "Hawaii",
+   "website": "http://www.area17aa.org"
+  },
+  "18": {
+   "official_name": "Idaho",
+   "website": "http://www.idahoarea18aa.org"
+  },
+  "19": {
+   "official_name": "Chicago Illinois",
+   "website": "http://www.chicagoaa.org"
+  },
+  "20": {
+   "official_name": "Northern Illinois",
+   "website": "http://www.aa-nia.org"
+  },
+  "21": {
+   "official_name": "Southern Illinois",
+   "website": "http://area21aa.org/"
+  },
+  "22": {
+   "official_name": "Northern Indiana",
+   "website": "http://www.area22indiana.org"
+  },
+  "23": {
+   "official_name": "Southern Indiana",
+   "website": "http://www.area23aa.org"
+  },
+  "24": {
+   "official_name": "Iowa",
+   "website": "http://www.aa-iowa.org"
+  },
+  "25": {
+   "official_name": "Kansas",
+   "website": "https://ks-aa.org/"
+  },
+  "26": {
+   "official_name": "Kentucky",
+   "website": "http://www.area26.net"
+  },
+  "27": {
+   "official_name": "Louisiana",
+   "website": "http://www.aa-louisiana.org"
+  },
+  "28": {
+   "official_name": "Maine",
+   "website": "http://www.maineaa.org"
+  },
+  "29": {
+   "official_name": "Maryland",
+   "website": "http://www.marylandaa.org"
+  },
+  "30": {
+   "official_name": "Eastern Massachusetts",
+   "website": "http://www.aaemass.org"
+  },
+  "31": {
+   "official_name": "Western Massachusetts",
+   "website": "http://www.area31AA.org"
+  },
+  "32": {
+   "official_name": "Central Michigan",
+   "website": "http://www.cmia32.org"
+  },
+  "33": {
+   "official_name": "Southeastern Michigan",
+   "website": "http://www.aa-semi.org"
+  },
+  "34": {
+   "official_name": "Western Michigan",
+   "website": "http://area34aa.org"
+  },
+  "35": {
+   "official_name": "Northern Minnesota",
+   "website": "http://www.area35.org"
+  },
+  "36": {
+   "official_name": "Southern Minnesota",
+   "website": "http://www.area36.org"
+  },
+  "37": {
+   "official_name": "Mississippi",
+   "website": "http://www.aa-mississippi.org"
+  },
+  "38": {
+   "official_name": "Eastern Missouri",
+   "website": "http://www.eamo.org"
+  },
+  "39": {
+   "official_name": "Western Missouri",
+   "website": "http://www.wamo-aa.org"
+  },
+  "40": {
+   "official_name": "Montana",
+   "website": "http://www.aa-montana.org"
+  },
+  "41": {
+   "official_name": "Nebraska",
+   "website": "http://www.area41.org"
+  },
+  "42": {
+   "official_name": "Nevada",
+   "website": "http://www.nevadaarea42.org"
+  },
+  "43": {
+   "official_name": "New Hampshire",
+   "website": "http://www.nhaa.net"
+  },
+  "44": {
+   "official_name": "Northern New Jersey",
+   "website": "http://www.nnjaa.org"
+  },
+  "45": {
+   "official_name": "Southern New Jersey",
+   "website": "http://www.snjaa.org"
+  },
+  "46": {
+   "official_name": "New Mexico",
+   "website": "http://www.nm-aa.org"
+  },
+  "47": {
+   "official_name": "Central New York",
+   "website": "http://www.aacny.org"
+  },
+  "48": {
+   "official_name": "Northeast New York (NENY)",
+   "website": "https://nenyaa.org"
+  },
+  "49": {
+   "official_name": "Southeast New York",
+   "website": "https://aaseny.org/"
+  },
+  "50": {
+   "official_name": "Western New York",
+   "website": "http://www.area50wny.org"
+  },
+  "51": {
+   "official_name": "North Carolina",
+   "website": "http://www.aanorthcarolina.org"
+  },
+  "52": {
+   "official_name": "North Dakota",
+   "website": "http://www.aanorthdakota.org"
+  },
+  "53": {
+   "official_name": "Central & Southeast Ohio",
+   "website": "http://www.area53aa.org"
+  },
+  "54": {
+   "official_name": "Northeast Ohio",
+   "website": "http://www.area54.org"
+  },
+  "55": {
+   "official_name": "Northwest Ohio",
+   "website": "http://www.area55aa.org"
+  },
+  "56": {
+   "official_name": "Southwest Ohio",
+   "website": "http://www.aaarea56.org"
+  },
+  "57": {
+   "official_name": "Oklahoma",
+   "website": "http://www.aaoklahoma.org"
+  },
+  "58": {
+   "official_name": "Oregon",
+   "website": "http://www.aa-oregon.org"
+  },
+  "59": {
+   "official_name": "Eastern Pennsylvania",
+   "website": "https://area59aa.org/"
+  },
+  "60": {
+   "official_name": "Western Pennsylvania",
+   "website": "http://www.wpaarea60.org"
+  },
+  "61": {
+   "official_name": "Rhode Island",
+   "website": "https://aainri.com/"
+  },
+  "62": {
+   "official_name": "South Carolina",
+   "website": "http://www.area62.org"
+  },
+  "63": {
+   "official_name": "South Dakota",
+   "website": "http://www.area63aa.org"
+  },
+  "64": {
+   "official_name": "Tennessee",
+   "website": "http://www.area64assembly.org"
+  },
+  "65": {
+   "official_name": "Northeast Texas",
+   "website": "http://www.neta65.org"
+  },
+  "66": {
+   "official_name": "Northwest Texas",
+   "website": "http://www.nwta66.org"
+  },
+  "67": {
+   "official_name": "Southeast Texas",
+   "website": "http://www.aa-seta.org"
+  },
+  "68": {
+   "official_name": "Southwest Texas",
+   "website": "http://www.aa-swta.org"
+  },
+  "69": {
+   "official_name": "Utah",
+   "website": "http://www.aaofutah.org"
+  },
+  "70": {
+   "official_name": "Vermont",
+   "website": "http://www.aavt.org"
+  },
+  "71": {
+   "official_name": "Virginia",
+   "website": "http://www.aavirginia.org"
+  },
+  "72": {
+   "official_name": "Western Washington",
+   "website": "http://www.area72aa.org"
+  },
+  "73": {
+   "official_name": "West Virginia",
+   "website": "http://www.aawv.org"
+  },
+  "74": {
+   "official_name": "N. Wisconsin/Upper Peninsula Michigan",
+   "website": "http://www.area74.org"
+  },
+  "75": {
+   "official_name": "Southern Wisconsin",
+   "website": "http://www.area75.org"
+  },
+  "76": {
+   "official_name": "Wyoming",
+   "website": "https://www.WyomingAA.org"
+  },
+  "77": {
+   "official_name": "Puerto Rico",
+   "website": "http://www.pr-area77.org/"
+  },
+  "78": {
+   "official_name": "Alberta/N.W. Territories",
+   "website": "http://www.area78.org"
+  },
+  "79": {
+   "official_name": "British Columbia/Yukon",
+   "website": "https://bcyukonaa.org/"
+  },
+  "80": {
+   "official_name": "Manitoba",
+   "website": "http://www.aamanitoba.org"
+  },
+  "81": {
+   "official_name": "New Brunswick/Prince Edward Island",
+   "website": "http://www.area81aa.ca"
+  },
+  "82": {
+   "official_name": "Nova Scotia/Newfoundland/Labrador",
+   "website": "http://www.area82aa.org"
+  },
+  "83": {
+   "official_name": "Eastern Ontario",
+   "website": "http://www.area83aa.org"
+  },
+  "84": {
+   "official_name": "Northeast Ontario",
+   "website": "http://www.area84aa.org"
+  },
+  "85": {
+   "official_name": "Northwest Ontario",
+   "website": "http://www.aa-nwo-area85.org"
+  },
+  "86": {
+   "official_name": "Western Ontario",
+   "website": "http://www.area86aa.org"
+  },
+  "87": {
+   "official_name": "Southwest Quebec",
+   "website": "http://www.aa87.org"
+  },
+  "88": {
+   "official_name": "Southeast Quebec",
+   "website": "https://aaregion88.org"
+  },
+  "89": {
+   "official_name": "Northeast Quebec",
+   "website": "https://aa89.org/"
+  },
+  "90": {
+   "official_name": "Northwest Quebec",
+   "website": "https://aaregion90.org/"
+  },
+  "91": {
+   "official_name": "Saskatchewan",
+   "website": "http://www.aasask.org"
+  },
+  "92": {
+   "official_name": "Washington State East",
+   "website": "http://www.area92aa.org"
+  },
+  "93": {
+   "official_name": "Central California",
+   "website": "http://www.area93.org"
+  }
+ }
+}

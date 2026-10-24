@@ -1,0 +1,195 @@
+{
+ "meta": {
+  "source": "The A.A. Service Manual 2026-2028 (BM-31): Twelve Concepts essays (pages C-n) and the Current Conference Charter (Appendix K, pp. 124-125); printed pages",
+  "note": "Own words; quotes are short and verbatim. 'down' = ultimate or corrective authority over the level below (Concept X, p. C-34); 'up' = a check or right the level below keeps. A level's node is the org chart box id (or ids)."
+ },
+ "levels": [
+  {
+   "id": "groups",
+   "short": "Groups",
+   "label": "A.A. groups",
+   "node": "groups",
+   "page": "C-33"
+  },
+  {
+   "id": "conference",
+   "short": "Conference",
+   "label": "General Service Conference (delegates)",
+   "node": "gsc",
+   "page": "C-33"
+  },
+  {
+   "id": "trustees",
+   "short": "Trustees",
+   "label": "General Service Board (trustees)",
+   "node": "gsb",
+   "page": "C-33"
+  },
+  {
+   "id": "boards",
+   "short": "Corporate boards",
+   "label": "AAWS and AA Grapevine boards",
+   "node": [
+    "aaws-board",
+    "grapevine-board"
+   ],
+   "page": "C-33"
+  },
+  {
+   "id": "staff",
+   "short": "Staff",
+   "label": "GSO and Grapevine executives and staff",
+   "node": [
+    "gso",
+    "gvo"
+   ],
+   "page": "C-33"
+  }
+ ],
+ "arrows": [
+  {
+   "from": "groups",
+   "to": "conference",
+   "dir": "down",
+   "label": "Elect better delegates",
+   "text": "If the Conference does not work well, the groups’ remedy is to send better delegates: their area assemblies meet every two years to elect one.",
+   "page": "125, C-10, C-34",
+   "learn": "concept_x"
+  },
+  {
+   "from": "groups",
+   "to": "conference",
+   "dir": "down",
+   "label": "Withhold contributions",
+   "text": "World services run on the groups’ voluntary contributions, so dissatisfied groups can withhold funds. The Conference Charter has no legal force; it draws its strength from tradition and from “the power of the A.A. purse.”",
+   "page": "C-21, C-34",
+   "learn": "conference_and_trustees"
+  },
+  {
+   "from": "conference",
+   "to": "trustees",
+   "dir": "down",
+   "label": "Censure or reorganize the board",
+   "text": "If the trustees go badly astray, the Conference can censure them. A three-quarters vote of the members taking part may reorganize the board, request resignations and nominate new trustees, whatever the board’s legal rights.",
+   "page": "124–125, C-10",
+   "learn": "conference_charter"
+  },
+  {
+   "from": "conference",
+   "to": "trustees",
+   "dir": "down",
+   "label": "Reject trustee candidates",
+   "text": "The trustees name most new trustees themselves, subject to approval by the Conference or one of its committees. Concept VII let the Conference veto candidates but not elect them; today regional and at-large nominees are picked at the Conference itself.",
+   "page": "125–126, C-22, C-23",
+   "learn": "conference_and_trustees"
+  },
+  {
+   "from": "conference",
+   "to": "trustees",
+   "dir": "down",
+   "label": "Two-thirds vote binds the board",
+   "text": "By tradition, when two-thirds of the Conference members voting agree, the vote binds the trustees and the service corporations, provided the votes cast add up to a Conference quorum or more. Routine business and ordinary contracts stay with the boards.",
+   "page": "124",
+   "learn": "conference_charter"
+  },
+  {
+   "from": "trustees",
+   "to": "boards",
+   "dir": "down",
+   "label": "Elect new boards of directors",
+   "text": "The trustees own AAWS and AA Grapevine and elect all their directors, so they can put in new boards whenever they choose. If the services run badly, the trustees can choose better directors and better staff.",
+   "page": "64, C-10, C-35",
+   "learn": "operating_corps"
+  },
+  {
+   "from": "trustees",
+   "to": "boards",
+   "dir": "down",
+   "label": "Control budgets, withhold funds",
+   "text": "The trustees control the corporate budgets and can withhold operating funds. Their custodial oversight works through electing directors, approving budgets and changing the corporate bylaws.",
+   "page": "64, C-35",
+   "learn": "operating_corps"
+  },
+  {
+   "from": "boards",
+   "to": "staff",
+   "dir": "down",
+   "label": "Replace executives or staff",
+   "text": "The directors hold final authority over their officers, who in turn direct the staffs. A corporation that is unhappy with how its executives or staff do their work can replace some or all of them.",
+   "page": "C-33, C-34",
+   "learn": "concept_xi"
+  },
+  {
+   "from": "conference",
+   "to": "groups",
+   "dir": "up",
+   "label": "Delegates vote their conscience",
+   "text": "Delegates serve A.A. as a whole first and their areas second, so on final decisions they vote by their own judgment and conscience. An “instructed” delegate who cannot do so is just a messenger.",
+   "page": "124, C-9, C-11",
+   "learn": "right_of_decision"
+  },
+  {
+   "from": "conference",
+   "to": "groups",
+   "dir": "up",
+   "label": "Decides what goes to the groups",
+   "text": "Under the Right of Decision the Conference chooses which matters it settles itself and which it refers to the groups, their GSRs or committee members, for discussion, guidance or direction. This checks the groups’ urge to over-instruct delegates.",
+   "page": "C-11, C-34",
+   "learn": "right_of_decision"
+  },
+  {
+   "from": "trustees",
+   "to": "conference",
+   "dir": "up",
+   "label": "Narrow majorities do not bind",
+   "text": "A Conference vote binds the trustees only when it reaches two-thirds of a quorum, so on a narrow majority they may insist on more debate. In practice they seldom do, and often accept a simple majority when quick action is needed.",
+   "page": "C-17",
+   "learn": "right_of_appeal"
+  },
+  {
+   "from": "trustees",
+   "to": "conference",
+   "dir": "up",
+   "label": "Ask to reconsider, then veto",
+   "text": "The board keeps a legal veto over any Conference action, meant for rare cases such as an action that breaks either Charter or would seriously harm A.A. The trustees first ask the Conference to reconsider. In practice, Advisory Actions are rarely vetoed.",
+   "page": "44, C-22, C-23",
+   "learn": "conference_and_trustees"
+  },
+  {
+   "from": "trustees",
+   "to": "groups",
+   "dir": "up",
+   "label": "Appeal to the groups",
+   "text": "If the Conference refuses to reconsider such an action and the trustees use their veto, they could, if they judge it wise, put the question straight to the A.A. groups.",
+   "page": "C-23",
+   "learn": "conference_and_trustees"
+  },
+  {
+   "from": "trustees",
+   "to": "conference",
+   "dir": "up",
+   "label": "Minority report to the Conference",
+   "text": "Under Concept V, any minority (trustees, a corporate board, committee or staff) is encouraged to file a minority report when it thinks the majority is badly wrong, and should take it to the Conference on an issue grave enough to affect all of A.A.",
+   "page": "C-16",
+   "learn": "right_of_appeal"
+  },
+  {
+   "from": "boards",
+   "to": "trustees",
+   "dir": "up",
+   "label": "Authority to run the services",
+   "text": "The directors have operating authority matching their responsibility, protected by their corporate charters and the Right of Decision: they decide what to handle themselves and what to refer up. While things go well, the trustees should not interfere.",
+   "page": "C-11, C-35",
+   "learn": "right_of_decision"
+  },
+  {
+   "from": "staff",
+   "to": "trustees",
+   "dir": "up",
+   "label": "Petition the board directly",
+   "text": "Anyone in the service structure, paid or unpaid, may take a personal grievance straight to the General Service Board, with no fear of being punished for it. The right is seldom used, but its existence restrains those in authority.",
+   "page": "C-16, C-36",
+   "learn": "right_of_appeal"
+  }
+ ]
+}

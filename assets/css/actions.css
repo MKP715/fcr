@@ -1,0 +1,64 @@
+/* Advisory Actions page (view-actions.js). Class prefix aa-. Colours from the shared tokens in assets/app.css. */
+.aa-stats { margin-bottom: 4px; }
+.aa-page .page-head + .aa-stats { margin-top: 0; }
+
+/* pending follow-ups */
+.aa-pending { margin-top: 16px; border-left: 4px solid var(--bd-soft-ink, var(--warning)); }
+.aa-pending h2 { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; font-size: 1.2rem; }
+.aa-fu-group { margin-top: 14px; }
+.aa-fu-group h3, .aa-fu-group h4 { margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
+.aa-fu-list { list-style: none; margin: 0; padding: 0; }
+.aa-fu { padding: 7px 0; border-bottom: 1px solid var(--grid); }
+.aa-fu:last-child { border-bottom: 0; }
+.aa-fu-what { margin-bottom: 2px; }
+.aa-fu-sub { margin: 8px 0 0 0; }
+.aa-fu-sub .aa-fu-subh { margin: 6px 0 0; font-size: .92rem; font-weight: 650; color: var(--ink-2); display: flex; align-items: baseline; gap: 6px; }
+.aa-page .aa-live { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; margin: 0; }
+.aa-kind { font-weight: 600; color: var(--ink-2); }
+.aa-fu-req .aa-kind { color: var(--bd-soft-ink, var(--ink-2)); }
+.aa-out { margin-top: 3px; }
+.aa-due-chip { color: var(--bd-soft-ink, var(--ink-2)); border-color: currentColor; background: transparent; }
+/* status colours after the chip default (same specificity): a chip with a status takes its colour */
+.aa-st { background: transparent; border: 1px solid currentColor; }
+.aa-st-done { color: var(--good-ink, var(--good)); }
+.aa-st-progress { color: var(--bd-soft-ink, #a15c00); }
+.aa-st-not_done { color: var(--critical-ink, var(--critical)); }
+.aa-st-superseded, .aa-st-unclear { color: var(--ink-2); }
+.aa-st-update { color: var(--accent-ink); }
+.aa-recent { margin-top: 16px; }
+.aa-recent > summary { cursor: pointer; font-weight: 600; color: var(--ink-2); }
+
+/* browse */
+.aa-controls .aa-q { flex: 1 1 320px; }
+.aa-controls .aa-q input { flex: 1 1 auto; width: 100%; }
+.aa-controls select { max-width: min(100%, 360px); }
+.aa-count { margin: 4px 0 8px; }
+.aa-ygroup { margin-top: 14px; }
+.aa-yh { margin: 0 0 4px; padding-bottom: 4px; border-bottom: 2px solid var(--axis); display: flex; align-items: baseline; gap: 10px; }
+.aa-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(460px, 100%), 1fr)); gap: 0 24px; }
+.aa-row { padding: 8px 0; border-bottom: 1px solid var(--grid); min-width: 0; }
+.aa-row.floor { border-left: 3px solid var(--accent); padding-left: 8px; }
+.aa-row.noaction .aa-text { color: var(--ink-2); }
+/* the action a #/actions/item/<id> link points at */
+.aa-row.aa-hit { background: color-mix(in srgb, var(--accent-wash) 40%, transparent); box-shadow: inset 3px 0 0 var(--accent); padding: 8px 8px 8px 11px; border-radius: 0 var(--radius, 6px) var(--radius, 6px) 0; scroll-margin-top: calc(var(--topbar-h, 57px) + 56px); }
+.aa-row.aa-hit:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+.aa-na { background: transparent; color: var(--ink-2); border: 1px dashed currentColor; }
+.aa-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; color: var(--ink-2); }
+.aa-year { font-weight: 650; color: var(--ink); }
+.aa-text { margin: 2px 0; max-width: 110ch; }
+.aa-due { margin: 4px 0 2px; display: flex; flex-wrap: wrap; gap: 4px; }
+.aa-src a { color: var(--muted); }
+.aa-src a:hover { color: var(--accent-ink); }
+.aa-srcline { margin-top: 20px; }
+.aa-page .linkish { all: unset; cursor: pointer; color: var(--accent-ink); border-radius: 3px; }
+.aa-page .linkish:hover { text-decoration: underline; }
+.aa-page .linkish:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.aa-printnote { display: none; }
+@media print {
+  .aa-controls, .aa-page .rp-jump, #aa-more { display: none !important; }
+  .aa-recent { display: block; }
+  .aa-pending { break-inside: auto; }                     /* runs over many pages: keep each item whole instead */
+  .aa-fu, .aa-row { break-inside: avoid; }
+  .aa-fu-group > :is(h3, h4), .aa-fu-subh, .aa-yh { break-after: avoid; }
+  .aa-printnote { display: block; }
+}

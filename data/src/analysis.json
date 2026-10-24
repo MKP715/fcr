@@ -1,0 +1,2075 @@
+{
+ "computed_on": "2026-10-20",
+ "panels_analyzed": "68-76 (Final Reports 2017-2026)",
+ "summary": "Assignments are made by lot (Service Manual 2026-2028, p. 45), but the lot follows firm rules. It skips the committees the area held in its last three terms, refills each committee to its standard size (8 or 9 members), and takes at most one new member per region on a committee. Since the December 2020 draw (Panel 71) it also spreads every committee across as many regions as possible counting both panels, and keeps neighbouring areas apart, matching GSO's 2025 criteria ('wider regional representation across all committees'; 'limit adjacent areas from different regions'). Areas from the same state or province never shared a committee in 2017-2026 (10 pairs expected without that rule). The IC/RF seat rotates within each region (one per region, alternating regions by panel), and Archives takes four members from four different regions, mildly avoiding neighbours. Honest forward-chained test on Panels 71-76 (rule strengths chosen on earlier panels only): the committee actually drawn got 22.6% on average (1 in 11 = 9.1%), was the top pick 32.1% of the time and in the top three 68.8%. GSO's \"best of five rounds\" procedure, tested as a model, did not do better than these rules.",
+ "transition_chi2": {
+  "chi2": 119.5,
+  "df": 99,
+  "note": "committee-to-next-committee transitions vs. uniform over the other 10; consistent with chance, so there is no fixed rotation order"
+ },
+ "repeat_by_terms_back": {
+  "1": [
+   1,
+   417
+  ],
+  "2": [
+   9,
+   324
+  ],
+  "3": [
+   2,
+   231
+  ],
+  "4": [
+   15,
+   138
+  ]
+ },
+ "areas_without_any_repeat": [
+  60,
+  93
+ ],
+ "backtest": {
+  "method": "Each past panel re-drawn from the history before it (in-sample: the rules were found in these panels). 16 chains × 1000 draws per panel for every variant; top-1/top-3 split credit on ties; logLik = mean log p(actual), floored at 0.001. Panels ≤ 70 use excludeLast 1 (the December 2019 draw was the last made by hand and skipped only the previous committee).",
+  "draws_per_panel": 16000,
+  "defaults": {
+   "recent": {
+    "n": 279,
+    "meanP": 0.2378,
+    "logLik": -1.7142,
+    "top1": 0.3333,
+    "top3": 0.7025
+   },
+   "early": {
+    "n": 138,
+    "meanP": 0.1468,
+    "logLik": -2.2049,
+    "top1": 0.1667,
+    "top3": 0.5072
+   },
+   "all": {
+    "n": 417,
+    "meanP": 0.2077,
+    "logLik": -1.8766,
+    "top1": 0.2782,
+    "top3": 0.6379
+   },
+   "panels_recent": "71-76",
+   "panels_early": "68-70"
+  },
+  "previous_defaults": {
+   "settings": {
+    "excludeLast": 3,
+    "regionCap": 1,
+    "crossPanelRegion": false,
+    "capacity": "replace",
+    "recency": 0,
+    "spreadPenalty": 4,
+    "neighborPenalty": 2,
+    "sameStatePenalty": 0,
+    "icrfRotation": 0,
+    "archivesNeighbor": 0
+   },
+   "recent": {
+    "n": 279,
+    "meanP": 0.232,
+    "logLik": -1.7557,
+    "top1": 0.3154,
+    "top3": 0.6703
+   },
+   "early": {
+    "n": 138,
+    "meanP": 0.1432,
+    "logLik": -2.2406,
+    "top1": 0.1812,
+    "top3": 0.5145
+   },
+   "all": {
+    "n": 417,
+    "meanP": 0.2026,
+    "logLik": -1.9161,
+    "top1": 0.271,
+    "top3": 0.6187
+   }
+  },
+  "per_panel": [
+   {
+    "panel": 68,
+    "excludeLast": 1,
+    "seats": "target",
+    "n": 45,
+    "meanP": 0.1477,
+    "logLik": -2.2485,
+    "top1": 0.1778,
+    "top3": 0.5111
+   },
+   {
+    "panel": 69,
+    "excludeLast": 1,
+    "seats": "target",
+    "n": 48,
+    "meanP": 0.143,
+    "logLik": -2.1173,
+    "top1": 0.125,
+    "top3": 0.4583
+   },
+   {
+    "panel": 70,
+    "excludeLast": 1,
+    "seats": "target",
+    "n": 45,
+    "meanP": 0.1498,
+    "logLik": -2.2548,
+    "top1": 0.2,
+    "top3": 0.5556
+   },
+   {
+    "panel": 71,
+    "excludeLast": 3,
+    "seats": "target",
+    "n": 48,
+    "meanP": 0.189,
+    "logLik": -1.7632,
+    "top1": 0.2917,
+    "top3": 0.6875
+   },
+   {
+    "panel": 72,
+    "excludeLast": 3,
+    "seats": "target",
+    "n": 45,
+    "meanP": 0.2764,
+    "logLik": -1.7203,
+    "top1": 0.3333,
+    "top3": 0.7556
+   },
+   {
+    "panel": 73,
+    "excludeLast": 3,
+    "seats": "target",
+    "n": 48,
+    "meanP": 0.2448,
+    "logLik": -1.6244,
+    "top1": 0.3542,
+    "top3": 0.6875
+   },
+   {
+    "panel": 74,
+    "excludeLast": 3,
+    "seats": "target",
+    "n": 45,
+    "meanP": 0.2836,
+    "logLik": -1.5923,
+    "top1": 0.3333,
+    "top3": 0.6889
+   },
+   {
+    "panel": 75,
+    "excludeLast": 3,
+    "seats": "target",
+    "n": 48,
+    "meanP": 0.216,
+    "logLik": -1.7132,
+    "top1": 0.375,
+    "top3": 0.7083
+   },
+   {
+    "panel": 76,
+    "excludeLast": 3,
+    "seats": "target",
+    "n": 45,
+    "meanP": 0.2214,
+    "logLik": -1.8746,
+    "top1": 0.3111,
+    "top3": 0.6889
+   }
+  ],
+  "seat_counts_only": {
+   "top1": 0.1247,
+   "top3": 0.3141,
+   "meanP": 0.0935,
+   "logLik": -2.3853
+  },
+  "lot_with_rules": {
+   "baseline": 0.091,
+   "n": 417,
+   "meanP": 0.1248,
+   "logLik": -2.1636,
+   "top1": 0.1942,
+   "top3": 0.4436
+  },
+  "lot_with_all_rules": {
+   "panels": "68-76",
+   "n": 417,
+   "meanP": 0.2077,
+   "logLik": -1.8766,
+   "top1": 0.2782,
+   "top3": 0.6379
+  }
+ },
+ "model_defaults": {
+  "excludeLast": 3,
+  "regionCap": 1,
+  "capacity": "target",
+  "recency": 0,
+  "spreadPenalty": 4,
+  "neighborPenalty": 2,
+  "sameStatePenalty": 8,
+  "icrfRotation": 1.6,
+  "archivesNeighbor": 1
+ },
+ "archives_distinct_regions": [
+  11,
+  11
+ ],
+ "next_year_chairs_first_year": [
+  260,
+  260
+ ],
+ "neighbor_rule": {
+  "era_from_panel": 71,
+  "era_to_panel": 76,
+  "cross_panel": {
+   "same_region_neighbors": [
+    4,
+    51.1
+   ],
+   "cross_region_neighbors": [
+    3,
+    13.7
+   ],
+   "same_region_non_neighbors": [
+    92,
+    115.8
+   ],
+   "regions_covered": [
+    456,
+    389.5
+   ]
+  },
+  "within_panel_cross_region_neighbors": [
+   3,
+   7.9
+  ],
+  "max_regions_covered_per_panel": 77,
+  "panels_at_max": 4,
+  "early_era": {
+   "panels": "68-70",
+   "cross_region_neighbors": [
+    6,
+    7
+   ],
+   "same_region_neighbors": [
+    10,
+    23.6
+   ],
+   "regions_covered": [
+    226,
+    197.6
+   ]
+  },
+  "fit": {
+   "spreadPenalty": 4,
+   "neighborPenalty": 2,
+   "sameStatePenalty": 8,
+   "simulated_vs_observed": {
+    "same_region_neighbors": [
+     4,
+     3.7
+    ],
+    "cross_region_neighbors": [
+     3,
+     2.9
+    ],
+    "same_region_non_neighbors": [
+     92,
+     93.6
+    ],
+    "regions_covered": [
+     456,
+     457.8
+    ]
+   }
+  },
+  "backtest_recent": {
+   "seat_and_history_rules_only": {
+    "n": 279,
+    "meanP": 0.1341,
+    "logLik": -2.0967,
+    "top1": 0.1971,
+    "top3": 0.4803
+   },
+   "plus_region_spread": {
+    "n": 279,
+    "meanP": 0.2084,
+    "logLik": -1.835,
+    "top1": 0.3082,
+    "top3": 0.6308
+   },
+   "plus_both": {
+    "n": 279,
+    "meanP": 0.233,
+    "logLik": -1.7477,
+    "top1": 0.319,
+    "top3": 0.6738
+   },
+   "plus_same_state": {
+    "n": 279,
+    "meanP": 0.2378,
+    "logLik": -1.7142,
+    "top1": 0.3333,
+    "top3": 0.7025
+   }
+  },
+  "backtest_early": {
+   "seat_and_history_rules_only": {
+    "n": 138,
+    "meanP": 0.1059,
+    "logLik": -2.299,
+    "top1": 0.1884,
+    "top3": 0.3696
+   },
+   "plus_both": {
+    "n": 138,
+    "meanP": 0.1436,
+    "logLik": -2.2349,
+    "top1": 0.1957,
+    "top3": 0.5145
+   }
+  },
+  "method": "Observed counts vs simulated fair draws of the same panel under the seat/exclusion/one-per-region rules (expected). Neighbours = areas sharing a border (data/src/adjacency.json)."
+ },
+ "model_version": "2026-10-20.2",
+ "repeat_note": "8 of the 9 two-terms-back repeats come from the December 2019 draw (Panel 70), the last draw made by hand; since the Conference Committee Assignment app (December 2020, Panel 71) only 1 of 279 (2021 FR pp.27, 70).",
+ "ablation": {
+  "method": "Rules added one at a time (in-sample, same draws per variant). dLogLik = gain over the previous step; drop_one = all rules except one.",
+  "recent": [
+   {
+    "key": "seats",
+    "label": "Seat counts only",
+    "n": 279,
+    "meanP": 0.0933,
+    "logLik": -2.3877,
+    "top1": 0.1237,
+    "top3": 0.319,
+    "dLogLik": 0
+   },
+   {
+    "key": "exclude",
+    "label": "skip the last 3 committees",
+    "n": 279,
+    "meanP": 0.1266,
+    "logLik": -2.1359,
+    "top1": 0.147,
+    "top3": 0.4427,
+    "dLogLik": 0.2518
+   },
+   {
+    "key": "region",
+    "label": "one new member per region",
+    "n": 279,
+    "meanP": 0.1341,
+    "logLik": -2.0967,
+    "top1": 0.1971,
+    "top3": 0.4803,
+    "dLogLik": 0.0392
+   },
+   {
+    "key": "spread",
+    "label": "spread regions",
+    "n": 279,
+    "meanP": 0.2084,
+    "logLik": -1.835,
+    "top1": 0.3082,
+    "top3": 0.6308,
+    "dLogLik": 0.2617
+   },
+   {
+    "key": "neighbors",
+    "label": "neighbours apart",
+    "n": 279,
+    "meanP": 0.233,
+    "logLik": -1.7477,
+    "top1": 0.319,
+    "top3": 0.6738,
+    "dLogLik": 0.0873
+   },
+   {
+    "key": "state",
+    "label": "same state apart",
+    "n": 279,
+    "meanP": 0.2378,
+    "logLik": -1.7142,
+    "top1": 0.3333,
+    "top3": 0.7025,
+    "dLogLik": 0.0335
+   }
+  ],
+  "early": [
+   {
+    "key": "seats",
+    "label": "Seat counts only",
+    "n": 138,
+    "meanP": 0.0941,
+    "logLik": -2.3805,
+    "top1": 0.1268,
+    "top3": 0.3043,
+    "dLogLik": 0
+   },
+   {
+    "key": "exclude",
+    "label": "skip the last 3 committees",
+    "n": 138,
+    "meanP": 0.1032,
+    "logLik": -2.3174,
+    "top1": 0.1014,
+    "top3": 0.3333,
+    "dLogLik": 0.0631
+   },
+   {
+    "key": "region",
+    "label": "one new member per region",
+    "n": 138,
+    "meanP": 0.1059,
+    "logLik": -2.299,
+    "top1": 0.1884,
+    "top3": 0.3696,
+    "dLogLik": 0.0184
+   },
+   {
+    "key": "spread",
+    "label": "spread regions",
+    "n": 138,
+    "meanP": 0.139,
+    "logLik": -2.1359,
+    "top1": 0.1812,
+    "top3": 0.4565,
+    "dLogLik": 0.1631
+   },
+   {
+    "key": "neighbors",
+    "label": "neighbours apart",
+    "n": 138,
+    "meanP": 0.1436,
+    "logLik": -2.2349,
+    "top1": 0.1957,
+    "top3": 0.5145,
+    "dLogLik": -0.099
+   },
+   {
+    "key": "state",
+    "label": "same state apart",
+    "n": 138,
+    "meanP": 0.1468,
+    "logLik": -2.2049,
+    "top1": 0.1667,
+    "top3": 0.5072,
+    "dLogLik": 0.03
+   }
+  ],
+  "drop_one": [
+   {
+    "drop": "exclude",
+    "n": 279,
+    "meanP": 0.138,
+    "logLik": -2.0895,
+    "top1": 0.1685,
+    "top3": 0.4767,
+    "dLogLik": -0.3753
+   },
+   {
+    "drop": "region",
+    "n": 279,
+    "meanP": 0.2387,
+    "logLik": -1.7307,
+    "top1": 0.3047,
+    "top3": 0.7025,
+    "dLogLik": -0.0165
+   },
+   {
+    "drop": "spread",
+    "n": 279,
+    "meanP": 0.1712,
+    "logLik": -1.8915,
+    "top1": 0.2366,
+    "top3": 0.5842,
+    "dLogLik": -0.1773
+   },
+   {
+    "drop": "neighbors",
+    "n": 279,
+    "meanP": 0.2191,
+    "logLik": -1.7722,
+    "top1": 0.3011,
+    "top3": 0.6738,
+    "dLogLik": -0.058
+   },
+   {
+    "drop": "state",
+    "n": 279,
+    "meanP": 0.233,
+    "logLik": -1.7477,
+    "top1": 0.319,
+    "top3": 0.6738,
+    "dLogLik": -0.0335
+   },
+   {
+    "drop": "seats_target",
+    "n": 279,
+    "meanP": 0.2371,
+    "logLik": -1.7281,
+    "top1": 0.319,
+    "top3": 0.6935,
+    "dLogLik": -0.0139
+   }
+  ]
+ },
+ "same_state": {
+  "rule": "Areas of the same state or province (areas.json 'state' = main state; Areas 1, 48 and 74 span two) are kept off the same committee: cost 8 per same-state member, i.e. effectively never.",
+  "raw_rosters": {
+   "years": "2017-2026",
+   "same_state_pairs": 0
+  },
+  "observed_vs_expected_without_rule": {
+   "recent": [
+    0,
+    7.3
+   ],
+   "early": [
+    0,
+    2.98
+   ],
+   "panels_recent": "71-76",
+   "panels_early": "68-70"
+  },
+  "p_zero_poisson_all": 0.000034,
+  "backtest_recent": {
+   "without": {
+    "n": 279,
+    "meanP": 0.233,
+    "logLik": -1.7477,
+    "top1": 0.319,
+    "top3": 0.6738
+   },
+   "with": {
+    "n": 279,
+    "meanP": 0.2378,
+    "logLik": -1.7142,
+    "top1": 0.3333,
+    "top3": 0.7025
+   }
+  },
+  "panels_improved": [
+   9,
+   9
+  ],
+  "per_panel": [
+   {
+    "panel": 68,
+    "without": -2.2765,
+    "with": -2.2485
+   },
+   {
+    "panel": 69,
+    "without": -2.1453,
+    "with": -2.1173
+   },
+   {
+    "panel": 70,
+    "without": -2.2887,
+    "with": -2.2548
+   },
+   {
+    "panel": 71,
+    "without": -1.7893,
+    "with": -1.7632
+   },
+   {
+    "panel": 72,
+    "without": -1.7474,
+    "with": -1.7203
+   },
+   {
+    "panel": 73,
+    "without": -1.6562,
+    "with": -1.6244
+   },
+   {
+    "panel": 74,
+    "without": -1.6049,
+    "with": -1.5923
+   },
+   {
+    "panel": 75,
+    "without": -1.7469,
+    "with": -1.7132
+   },
+   {
+    "panel": 76,
+    "without": -1.945,
+    "with": -1.8746
+   }
+  ],
+  "note": "Not once in 2017-2026; the 2009 rosters had one same-state pair, so the wording is \"not once in ten years\", not \"never\". Within one panel two same-state areas are also same-region, so the one-per-region rule already separates new members; the rule bites on new members next to continuing ones.",
+  "sources": "R5-H01/H02 audit, reproduced by two verifiers (forward-chained logLik -1.809 → -1.788, top-3 68.1% → 69.2%)."
+ },
+ "icrf_rotation": {
+  "rule": "An area whose delegate sat on IC/RF in its last 3 terms is drawn for its region's IC/RF seat with weight e^-1.6 ≈ 0.2 (soft, so tiny pools such as Western Canada still fill).",
+  "slots": 36,
+  "forced_slots": 4,
+  "recent_holder_picks_unforced": [
+   3,
+   11.94
+  ],
+  "odd_panels_unforced": [
+   0,
+   4.74
+  ],
+  "beta_in_sample": 1.75,
+  "forward": {
+   "panels": "70-76",
+   "slots": 27,
+   "logLik_per_slot": {
+    "uniform": -1.585,
+    "rotation_refit": -1.395,
+    "rotation_default": -1.378
+   },
+   "meanP": {
+    "uniform": 0.229,
+    "rotation_refit": 0.289
+   },
+   "betas": [
+    {
+     "panel": 70,
+     "beta": 1.75
+    },
+    {
+     "panel": 71,
+     "beta": 1.25
+    },
+    {
+     "panel": 72,
+     "beta": 1.5
+    },
+    {
+     "panel": 73,
+     "beta": 1.25
+    },
+    {
+     "panel": 74,
+     "beta": 1.5
+    },
+    {
+     "panel": 75,
+     "beta": 1.75
+    },
+    {
+     "panel": 76,
+     "beta": 2
+    }
+   ]
+  },
+  "sources": "R1-H9 and R3-SEC-3 audits (both verified): 3 of 32 unforced picks were recent holders vs 11.9 expected; odd panels 0 of 14-16.",
+  "display_note": "2024-25 IC/RF had 7 members: the Panel 74 West Central seat was not filled (2026 FR pp.82-83)."
+ },
+ "archives_neighbor": {
+  "rule": "Archives: four new members from four different regions; each neighbour pair among them or with a continuing Archives member weighs e^-1 (mild).",
+  "since_panel_72": {
+   "panels": "72-76",
+   "observed_pairs": 0,
+   "expected_uniform": 5.03
+  },
+  "before": {
+   "panels": "67-71",
+   "observed_pairs": 5,
+   "expected_uniform": 5
+  },
+  "set_logLik_since_72": {
+   "lambda_0": -55.632,
+   "lambda_1": -52.205,
+   "lambda_2_5": -50.418
+  },
+  "note": "λ = 2.5 fits P72-76 best in-sample, but a verifier found it overfit (truly forward λ ≈ 0.2-0.8), so the model uses the mild λ = 1. Archives was one per region and replaced the outgoing regions until Panel 71."
+ },
+ "seats": {
+  "rule": "Seats = standard committee size − continuing members (\"target\"); standard size = the committee's most common size in loaded years before the draw (tie → earliest seen). Falls back to \"replace\" (= outgoing members) when the totals don't add up.",
+  "standard_sizes": {
+   "AGENDA": 8,
+   "CPC": 8,
+   "CORRECTIONS": 8,
+   "FINANCE": 8,
+   "GRAPEVINE": 9,
+   "LITERATURE": 9,
+   "POLICY": 9,
+   "PI": 9,
+   "REPORT": 8,
+   "TREATMENT": 8,
+   "TRUSTEES": 9
+  },
+  "target_matches": [
+   91,
+   99
+  ],
+  "replace_matches": [
+   83,
+   99
+  ],
+  "exact_panels": {
+   "target": [
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    76
+   ],
+   "replace": [
+    70,
+    71,
+    72,
+    73,
+    74
+   ]
+  },
+  "per_panel": [
+   {
+    "panel": 68,
+    "committees": 11,
+    "target_exact": 9,
+    "replace_exact": 9
+   },
+   {
+    "panel": 69,
+    "committees": 11,
+    "target_exact": 11,
+    "replace_exact": 9
+   },
+   {
+    "panel": 70,
+    "committees": 11,
+    "target_exact": 11,
+    "replace_exact": 11
+   },
+   {
+    "panel": 71,
+    "committees": 11,
+    "target_exact": 11,
+    "replace_exact": 11
+   },
+   {
+    "panel": 72,
+    "committees": 11,
+    "target_exact": 11,
+    "replace_exact": 11
+   },
+   {
+    "panel": 73,
+    "committees": 11,
+    "target_exact": 11,
+    "replace_exact": 11
+   },
+   {
+    "panel": 74,
+    "committees": 11,
+    "target_exact": 11,
+    "replace_exact": 11
+   },
+   {
+    "panel": 75,
+    "committees": 11,
+    "target_exact": 5,
+    "replace_exact": 5
+   },
+   {
+    "panel": 76,
+    "committees": 11,
+    "target_exact": 11,
+    "replace_exact": 5
+   }
+  ],
+  "backtest_recent": {
+   "target": {
+    "n": 279,
+    "meanP": 0.2378,
+    "logLik": -1.7142,
+    "top1": 0.3333,
+    "top3": 0.7025
+   },
+   "replace": {
+    "n": 279,
+    "meanP": 0.2371,
+    "logLik": -1.7281,
+    "top1": 0.319,
+    "top3": 0.6935
+   },
+   "balance": {
+    "n": 279,
+    "meanP": 0.2328,
+    "logLik": -1.7225,
+    "top1": 0.3118,
+    "top3": 0.681
+   }
+  },
+  "next_panel": {
+   "panel": 77,
+   "target": {
+    "AGENDA": 4,
+    "CPC": 4,
+    "CORRECTIONS": 4,
+    "FINANCE": 4,
+    "GRAPEVINE": 4,
+    "LITERATURE": 4,
+    "POLICY": 5,
+    "PI": 5,
+    "REPORT": 4,
+    "TREATMENT": 5,
+    "TRUSTEES": 5
+   },
+   "replace": {
+    "AGENDA": 4,
+    "CPC": 4,
+    "CORRECTIONS": 4,
+    "FINANCE": 4,
+    "GRAPEVINE": 4,
+    "LITERATURE": 4,
+    "POLICY": 5,
+    "PI": 5,
+    "REPORT": 4,
+    "TREATMENT": 5,
+    "TRUSTEES": 5
+   }
+  },
+  "note": "From Panel 75 GSO began rebalancing first- and second-year members on each committee (2024 FR p.68), which is why Panels 75 and 76 broke the replace rule. If GSO keeps rebalancing, Treatment/Accessibilities could get 4 new members instead of 5 (text only; modelling it was refuted in the audit)."
+ },
+ "forward_chained": {
+  "method": "For each test panel P = 71-76, the soft-rule strengths (spread 2/3/4/5/6, neighbour 0/1/2/3/4, same-state 0/8) are chosen by mean logLik on the panels before P only (68..P-1), then P is scored with a separate run. Seat counts are computed from data before each draw in every variant. previous_procedure = the old model (replace seats, no same-state rule) chosen the same way. app_era_window trains only on Panels 71..P-1 (it drifts to stronger penalties and scores worse); leave_one_out trains on every other panel.",
+  "new_procedure": {
+   "overall": {
+    "n": 279,
+    "meanP": 0.2262,
+    "logLik": -1.7418,
+    "top1": 0.3208,
+    "top3": 0.6882
+   },
+   "per_panel": [
+    {
+     "panel": 71,
+     "chosen": {
+      "spreadPenalty": 3,
+      "neighborPenalty": 0,
+      "sameStatePenalty": 8
+     },
+     "train_logLik": -2.0797,
+     "n": 48,
+     "meanP": 0.1668,
+     "logLik": -1.8496,
+     "top1": 0.2083,
+     "top3": 0.6458
+    },
+    {
+     "panel": 72,
+     "chosen": {
+      "spreadPenalty": 4,
+      "neighborPenalty": 0,
+      "sameStatePenalty": 8
+     },
+     "train_logLik": -2.017,
+     "n": 45,
+     "meanP": 0.247,
+     "logLik": -1.8525,
+     "top1": 0.2889,
+     "top3": 0.6444
+    },
+    {
+     "panel": 73,
+     "chosen": {
+      "spreadPenalty": 4,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 8
+     },
+     "train_logLik": -1.976,
+     "n": 48,
+     "meanP": 0.2327,
+     "logLik": -1.6703,
+     "top1": 0.375,
+     "top3": 0.7292
+    },
+    {
+     "panel": 74,
+     "chosen": {
+      "spreadPenalty": 4,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 8
+     },
+     "train_logLik": -1.9234,
+     "n": 45,
+     "meanP": 0.2822,
+     "logLik": -1.546,
+     "top1": 0.3556,
+     "top3": 0.7111
+    },
+    {
+     "panel": 75,
+     "chosen": {
+      "spreadPenalty": 4,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 8
+     },
+     "train_logLik": -1.871,
+     "n": 48,
+     "meanP": 0.2096,
+     "logLik": -1.718,
+     "top1": 0.375,
+     "top3": 0.7083
+    },
+    {
+     "panel": 76,
+     "chosen": {
+      "spreadPenalty": 4,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 8
+     },
+     "train_logLik": -1.8512,
+     "n": 45,
+     "meanP": 0.2234,
+     "logLik": -1.8135,
+     "top1": 0.3222,
+     "top3": 0.6889
+    }
+   ]
+  },
+  "previous_procedure": {
+   "overall": {
+    "n": 279,
+    "meanP": 0.2177,
+    "logLik": -1.8003,
+    "top1": 0.3154,
+    "top3": 0.6667
+   },
+   "per_panel": [
+    {
+     "panel": 71,
+     "chosen": {
+      "spreadPenalty": 3,
+      "neighborPenalty": 0,
+      "sameStatePenalty": 0,
+      "capacity": "replace"
+     },
+     "train_logLik": -2.1345,
+     "n": 48,
+     "meanP": 0.1579,
+     "logLik": -1.9144,
+     "top1": 0.1875,
+     "top3": 0.6042
+    },
+    {
+     "panel": 72,
+     "chosen": {
+      "spreadPenalty": 3,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 0,
+      "capacity": "replace"
+     },
+     "train_logLik": -2.0674,
+     "n": 45,
+     "meanP": 0.2374,
+     "logLik": -1.8295,
+     "top1": 0.3333,
+     "top3": 0.7111
+    },
+    {
+     "panel": 73,
+     "chosen": {
+      "spreadPenalty": 4,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 0,
+      "capacity": "replace"
+     },
+     "train_logLik": -2.0152,
+     "n": 48,
+     "meanP": 0.2237,
+     "logLik": -1.7144,
+     "top1": 0.3958,
+     "top3": 0.7083
+    },
+    {
+     "panel": 74,
+     "chosen": {
+      "spreadPenalty": 6,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 0,
+      "capacity": "replace"
+     },
+     "train_logLik": -1.9625,
+     "n": 45,
+     "meanP": 0.2802,
+     "logLik": -1.5901,
+     "top1": 0.4222,
+     "top3": 0.7111
+    },
+    {
+     "panel": 75,
+     "chosen": {
+      "spreadPenalty": 6,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 0,
+      "capacity": "replace"
+     },
+     "train_logLik": -1.9108,
+     "n": 48,
+     "meanP": 0.2038,
+     "logLik": -1.7902,
+     "top1": 0.3125,
+     "top3": 0.6667
+    },
+    {
+     "panel": 76,
+     "chosen": {
+      "spreadPenalty": 4,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 0,
+      "capacity": "replace"
+     },
+     "train_logLik": -1.8925,
+     "n": 45,
+     "meanP": 0.2077,
+     "logLik": -1.9617,
+     "top1": 0.2444,
+     "top3": 0.6
+    }
+   ]
+  },
+  "app_era_window": {
+   "new_procedure": {
+    "overall": {
+     "n": 279,
+     "meanP": 0.2381,
+     "logLik": -1.7743,
+     "top1": 0.3011,
+     "top3": 0.6989
+    },
+    "per_panel": [
+     {
+      "panel": 71,
+      "chosen": {
+       "spreadPenalty": 3,
+       "neighborPenalty": 0,
+       "sameStatePenalty": 8
+      },
+      "train_logLik": -2.0797,
+      "n": 48,
+      "meanP": 0.1668,
+      "logLik": -1.8496,
+      "top1": 0.2083,
+      "top3": 0.6458
+     },
+     {
+      "panel": 72,
+      "chosen": {
+       "spreadPenalty": 5,
+       "neighborPenalty": 2,
+       "sameStatePenalty": 8
+      },
+      "train_logLik": -1.75,
+      "n": 45,
+      "meanP": 0.2844,
+      "logLik": -1.7003,
+      "top1": 0.3111,
+      "top3": 0.7333
+     },
+     {
+      "panel": 73,
+      "chosen": {
+       "spreadPenalty": 5,
+       "neighborPenalty": 2,
+       "sameStatePenalty": 8
+      },
+      "train_logLik": -1.726,
+      "n": 48,
+      "meanP": 0.2451,
+      "logLik": -1.6314,
+      "top1": 0.3125,
+      "top3": 0.6875
+     },
+     {
+      "panel": 74,
+      "chosen": {
+       "spreadPenalty": 6,
+       "neighborPenalty": 4,
+       "sameStatePenalty": 8
+      },
+      "train_logLik": -1.6857,
+      "n": 45,
+      "meanP": 0.2918,
+      "logLik": -1.6931,
+      "top1": 0.3111,
+      "top3": 0.7333
+     },
+     {
+      "panel": 75,
+      "chosen": {
+       "spreadPenalty": 6,
+       "neighborPenalty": 2,
+       "sameStatePenalty": 8
+      },
+      "train_logLik": -1.6657,
+      "n": 48,
+      "meanP": 0.2191,
+      "logLik": -1.7469,
+      "top1": 0.3542,
+      "top3": 0.7083
+     },
+     {
+      "panel": 76,
+      "chosen": {
+       "spreadPenalty": 6,
+       "neighborPenalty": 2,
+       "sameStatePenalty": 8
+      },
+      "train_logLik": -1.6823,
+      "n": 45,
+      "meanP": 0.227,
+      "logLik": -2.031,
+      "top1": 0.3111,
+      "top3": 0.6889
+     }
+    ]
+   },
+   "previous_procedure": {
+    "overall": {
+     "n": 279,
+     "meanP": 0.2339,
+     "logLik": -1.8225,
+     "top1": 0.3047,
+     "top3": 0.6595
+    },
+    "per_panel": [
+     {
+      "panel": 71,
+      "chosen": {
+       "spreadPenalty": 3,
+       "neighborPenalty": 0,
+       "sameStatePenalty": 0,
+       "capacity": "replace"
+      },
+      "train_logLik": -2.1345,
+      "n": 48,
+      "meanP": 0.1579,
+      "logLik": -1.9144,
+      "top1": 0.1875,
+      "top3": 0.6042
+     },
+     {
+      "panel": 72,
+      "chosen": {
+       "spreadPenalty": 6,
+       "neighborPenalty": 3,
+       "sameStatePenalty": 0,
+       "capacity": "replace"
+      },
+      "train_logLik": -1.773,
+      "n": 45,
+      "meanP": 0.284,
+      "logLik": -1.7187,
+      "top1": 0.2889,
+      "top3": 0.6889
+     },
+     {
+      "panel": 73,
+      "chosen": {
+       "spreadPenalty": 5,
+       "neighborPenalty": 3,
+       "sameStatePenalty": 0,
+       "capacity": "replace"
+      },
+      "train_logLik": -1.7465,
+      "n": 48,
+      "meanP": 0.2478,
+      "logLik": -1.6326,
+      "top1": 0.4167,
+      "top3": 0.7083
+     },
+     {
+      "panel": 74,
+      "chosen": {
+       "spreadPenalty": 6,
+       "neighborPenalty": 4,
+       "sameStatePenalty": 0,
+       "capacity": "replace"
+      },
+      "train_logLik": -1.7069,
+      "n": 45,
+      "meanP": 0.2942,
+      "logLik": -1.6965,
+      "top1": 0.3778,
+      "top3": 0.7111
+     },
+     {
+      "panel": 75,
+      "chosen": {
+       "spreadPenalty": 6,
+       "neighborPenalty": 2,
+       "sameStatePenalty": 0,
+       "capacity": "replace"
+      },
+      "train_logLik": -1.6824,
+      "n": 48,
+      "meanP": 0.2109,
+      "logLik": -1.7838,
+      "top1": 0.2917,
+      "top3": 0.6667
+     },
+     {
+      "panel": 76,
+      "chosen": {
+       "spreadPenalty": 6,
+       "neighborPenalty": 2,
+       "sameStatePenalty": 0,
+       "capacity": "replace"
+      },
+      "train_logLik": -1.7032,
+      "n": 45,
+      "meanP": 0.2142,
+      "logLik": -2.1978,
+      "top1": 0.2667,
+      "top3": 0.5778
+     }
+    ]
+   }
+  },
+  "leave_one_out": {
+   "overall": {
+    "n": 279,
+    "meanP": 0.2252,
+    "logLik": -1.7219,
+    "top1": 0.3369,
+    "top3": 0.7133
+   },
+   "per_panel": [
+    {
+     "panel": 71,
+     "chosen": {
+      "spreadPenalty": 3,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 8
+     },
+     "train_logLik": -1.8538,
+     "n": 48,
+     "meanP": 0.18,
+     "logLik": -1.7793,
+     "top1": 0.2604,
+     "top3": 0.7083
+    },
+    {
+     "panel": 72,
+     "chosen": {
+      "spreadPenalty": 3,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 8
+     },
+     "train_logLik": -1.852,
+     "n": 45,
+     "meanP": 0.2464,
+     "logLik": -1.7892,
+     "top1": 0.3333,
+     "top3": 0.7556
+    },
+    {
+     "panel": 73,
+     "chosen": {
+      "spreadPenalty": 3,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 8
+     },
+     "train_logLik": -1.8669,
+     "n": 48,
+     "meanP": 0.2285,
+     "logLik": -1.6786,
+     "top1": 0.3542,
+     "top3": 0.75
+    },
+    {
+     "panel": 74,
+     "chosen": {
+      "spreadPenalty": 3,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 8
+     },
+     "train_logLik": -1.8802,
+     "n": 45,
+     "meanP": 0.2747,
+     "logLik": -1.5564,
+     "top1": 0.4222,
+     "top3": 0.6889
+    },
+    {
+     "panel": 75,
+     "chosen": {
+      "spreadPenalty": 3,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 8
+     },
+     "train_logLik": -1.8623,
+     "n": 48,
+     "meanP": 0.2025,
+     "logLik": -1.7142,
+     "top1": 0.3333,
+     "top3": 0.6875
+    },
+    {
+     "panel": 76,
+     "chosen": {
+      "spreadPenalty": 4,
+      "neighborPenalty": 1,
+      "sameStatePenalty": 8
+     },
+     "train_logLik": -1.8512,
+     "n": 45,
+     "meanP": 0.2234,
+     "logLik": -1.8135,
+     "top1": 0.3222,
+     "top3": 0.6889
+    }
+   ]
+  },
+  "in_sample_defaults": {
+   "n": 279,
+   "meanP": 0.2378,
+   "logLik": -1.7142,
+   "top1": 0.3333,
+   "top3": 0.7025
+  },
+  "icrf": {
+   "panels": "70-76",
+   "slots": 27,
+   "logLik_per_slot": {
+    "uniform": -1.585,
+    "rotation_refit": -1.395,
+    "rotation_default": -1.378
+   },
+   "meanP": {
+    "uniform": 0.229,
+    "rotation_refit": 0.289
+   },
+   "betas": [
+    {
+     "panel": 70,
+     "beta": 1.75
+    },
+    {
+     "panel": 71,
+     "beta": 1.25
+    },
+    {
+     "panel": 72,
+     "beta": 1.5
+    },
+    {
+     "panel": 73,
+     "beta": 1.25
+    },
+    {
+     "panel": 74,
+     "beta": 1.5
+    },
+    {
+     "panel": 75,
+     "beta": 1.75
+    },
+    {
+     "panel": 76,
+     "beta": 2
+    }
+   ]
+  }
+ },
+ "calibration": {
+  "method": "Every area × committee cell of Panels 71-76: predicted probability vs whether it happened. forward = honest forward-chained predictions (soft-rule strengths chosen on earlier panels only); in_sample = fixed defaults.",
+  "forward": {
+   "bins": [
+    {
+     "from": 0,
+     "to": 0.05,
+     "cells": 555,
+     "said": 0.016,
+     "happened": 12,
+     "happened_rate": 0.022
+    },
+    {
+     "from": 0.05,
+     "to": 0.1,
+     "cells": 311,
+     "said": 0.075,
+     "happened": 16,
+     "happened_rate": 0.051
+    },
+    {
+     "from": 0.1,
+     "to": 0.15,
+     "cells": 489,
+     "said": 0.126,
+     "happened": 59,
+     "happened_rate": 0.121
+    },
+    {
+     "from": 0.15,
+     "to": 0.2,
+     "cells": 366,
+     "said": 0.175,
+     "happened": 71,
+     "happened_rate": 0.194
+    },
+    {
+     "from": 0.2,
+     "to": 0.3,
+     "cells": 306,
+     "said": 0.243,
+     "happened": 66,
+     "happened_rate": 0.216
+    },
+    {
+     "from": 0.3,
+     "to": 0.4,
+     "cells": 73,
+     "said": 0.346,
+     "happened": 31,
+     "happened_rate": 0.425
+    },
+    {
+     "from": 0.4,
+     "to": 0.6,
+     "cells": 20,
+     "said": 0.457,
+     "happened": 9,
+     "happened_rate": 0.45
+    },
+    {
+     "from": 0.6,
+     "to": 1,
+     "cells": 15,
+     "said": 0.847,
+     "happened": 12,
+     "happened_rate": 0.8
+    }
+   ],
+   "impossible": {
+    "cells": 934,
+    "happened": 3
+   },
+   "brier": 0.0705
+  },
+  "in_sample": {
+   "bins": [
+    {
+     "from": 0,
+     "to": 0.05,
+     "cells": 681,
+     "said": 0.014,
+     "happened": 13,
+     "happened_rate": 0.019
+    },
+    {
+     "from": 0.05,
+     "to": 0.1,
+     "cells": 232,
+     "said": 0.077,
+     "happened": 17,
+     "happened_rate": 0.073
+    },
+    {
+     "from": 0.1,
+     "to": 0.15,
+     "cells": 381,
+     "said": 0.126,
+     "happened": 50,
+     "happened_rate": 0.131
+    },
+    {
+     "from": 0.15,
+     "to": 0.2,
+     "cells": 339,
+     "said": 0.172,
+     "happened": 59,
+     "happened_rate": 0.174
+    },
+    {
+     "from": 0.2,
+     "to": 0.3,
+     "cells": 326,
+     "said": 0.242,
+     "happened": 78,
+     "happened_rate": 0.239
+    },
+    {
+     "from": 0.3,
+     "to": 0.4,
+     "cells": 108,
+     "said": 0.339,
+     "happened": 32,
+     "happened_rate": 0.296
+    },
+    {
+     "from": 0.4,
+     "to": 0.6,
+     "cells": 35,
+     "said": 0.472,
+     "happened": 15,
+     "happened_rate": 0.429
+    },
+    {
+     "from": 0.6,
+     "to": 1,
+     "cells": 15,
+     "said": 0.884,
+     "happened": 12,
+     "happened_rate": 0.8
+    }
+   ],
+   "impossible": {
+    "cells": 952,
+    "happened": 3
+   },
+   "brier": 0.0703
+  }
+ },
+ "best_of_k": {
+  "question": "GSO's 2023 report (p.64, Panel 73): \"five selection rounds were performed and the round with the broadest distribution was selected\". Does a best-of-K lot (K fair rounds under the hard rules, keep the broadest) explain the draws better than the soft penalties?",
+  "method": "Hard rules only (seats, skip last 3, one per region) → K independent rounds → keep the best by \"broadest\" (most regions per committee counting both panels; ties: fewest neighbour/same-state pairs) or \"fewest_pairs\" (fewest same-region, neighbour and same-state pairs). Forward-chained: criterion and K chosen on earlier panels only.",
+  "in_sample_recent": [
+   {
+    "criterion": "broadest",
+    "K": 1,
+    "n": 279,
+    "meanP": 0.1343,
+    "logLik": -2.0944,
+    "top1": 0.2186,
+    "top3": 0.4552
+   },
+   {
+    "criterion": "broadest",
+    "K": 3,
+    "n": 279,
+    "meanP": 0.1439,
+    "logLik": -2.0308,
+    "top1": 0.2509,
+    "top3": 0.5556
+   },
+   {
+    "criterion": "broadest",
+    "K": 5,
+    "n": 279,
+    "meanP": 0.148,
+    "logLik": -2.0071,
+    "top1": 0.2581,
+    "top3": 0.5771
+   },
+   {
+    "criterion": "broadest",
+    "K": 10,
+    "n": 279,
+    "meanP": 0.1526,
+    "logLik": -1.9832,
+    "top1": 0.2849,
+    "top3": 0.6075
+   },
+   {
+    "criterion": "fewest_pairs",
+    "K": 1,
+    "n": 279,
+    "meanP": 0.1343,
+    "logLik": -2.0944,
+    "top1": 0.2186,
+    "top3": 0.4552
+   },
+   {
+    "criterion": "fewest_pairs",
+    "K": 3,
+    "n": 279,
+    "meanP": 0.1439,
+    "logLik": -2.0281,
+    "top1": 0.2652,
+    "top3": 0.5681
+   },
+   {
+    "criterion": "fewest_pairs",
+    "K": 5,
+    "n": 279,
+    "meanP": 0.148,
+    "logLik": -2.0029,
+    "top1": 0.2903,
+    "top3": 0.6022
+   },
+   {
+    "criterion": "fewest_pairs",
+    "K": 10,
+    "n": 279,
+    "meanP": 0.1529,
+    "logLik": -1.975,
+    "top1": 0.3047,
+    "top3": 0.6219
+   }
+  ],
+  "forward": {
+   "overall": {
+    "n": 279,
+    "meanP": 0.1529,
+    "logLik": -1.9766,
+    "top1": 0.2975,
+    "top3": 0.6254
+   },
+   "per_panel": [
+    {
+     "panel": 71,
+     "chosen": {
+      "criterion": "fewest_pairs",
+      "K": 10
+     },
+     "n": 48,
+     "meanP": 0.1331,
+     "logLik": -2.0448,
+     "top1": 0.2292,
+     "top3": 0.5208
+    },
+    {
+     "panel": 72,
+     "chosen": {
+      "criterion": "broadest",
+      "K": 10
+     },
+     "n": 45,
+     "meanP": 0.1531,
+     "logLik": -2.1318,
+     "top1": 0.2667,
+     "top3": 0.6
+    },
+    {
+     "panel": 73,
+     "chosen": {
+      "criterion": "fewest_pairs",
+      "K": 10
+     },
+     "n": 48,
+     "meanP": 0.1564,
+     "logLik": -1.9799,
+     "top1": 0.3542,
+     "top3": 0.6875
+    },
+    {
+     "panel": 74,
+     "chosen": {
+      "criterion": "fewest_pairs",
+      "K": 10
+     },
+     "n": 45,
+     "meanP": 0.1724,
+     "logLik": -1.8364,
+     "top1": 0.4,
+     "top3": 0.6556
+    },
+    {
+     "panel": 75,
+     "chosen": {
+      "criterion": "fewest_pairs",
+      "K": 10
+     },
+     "n": 48,
+     "meanP": 0.1473,
+     "logLik": -1.9579,
+     "top1": 0.2708,
+     "top3": 0.6458
+    },
+    {
+     "panel": 76,
+     "chosen": {
+      "criterion": "fewest_pairs",
+      "K": 10
+     },
+     "n": 45,
+     "meanP": 0.1563,
+     "logLik": -1.9053,
+     "top1": 0.2667,
+     "top3": 0.6444
+    }
+   ]
+  },
+  "soft_penalties_forward": {
+   "n": 279,
+   "meanP": 0.2262,
+   "logLik": -1.7418,
+   "top1": 0.3208,
+   "top3": 0.6882
+  },
+  "adopted": false,
+  "verdict": "Not adopted: forward-chained best-of-K logLik -1.9766 (top-3 62.5%) vs the soft penalties -1.7418 (top-3 68.8%). Keeping the best of a few rounds does spread regions, but not as strongly or as selectively as the draws show."
+ },
+ "rejected_rules": [
+  {
+   "rule": "Skip only the last 2 committees",
+   "logLik": -1.8012,
+   "top3": 0.6738,
+   "dLogLik": -0.087,
+   "evidence": "K3 beats K2 in all 5 app-era panels with 3-back data (R1-H1)."
+  },
+  {
+   "rule": "Skip the last 4 committees",
+   "logLik": -1.9376,
+   "top3": 0.6774,
+   "dLogLik": -0.2234,
+   "evidence": "K3 beats K4 in P74-76 (R1-H1)."
+  },
+  {
+   "rule": "4-term \"grid\" window (avoid committees held since 2017)",
+   "evidence": "R1-H4, refuted by a verifier: P76 avoidance is not significant under nearly as good nulls (sp2: P=0.04; sp1: 0.11). Pre-registered check below: the default expects about 12 Panel 77 areas on their Panel 67/69 committee."
+  },
+  {
+   "rule": "Favour committees never held / long unheld (recency)",
+   "logLik": -1.7105,
+   "top3": 0.7025,
+   "dLogLik": 0.0037,
+   "evidence": "Never-held count 115 vs 113.4 expected; forward-chained P74-76 logLik -1.774 → -1.780 to -1.787 (R1-H5, R5-H20)."
+  },
+  {
+   "rule": "Two-hop neighbours / distance apart",
+   "evidence": "Two-hop 144 vs 145.3, within 600 km 114 vs 110, total spread 3,379 vs 3,369 thousand km; a two-hop penalty lowers logLik -1.748 → -1.794 (R5-H03-H09)."
+  },
+  {
+   "rule": "Consecutive area numbers apart",
+   "evidence": "16 vs 27.3 (p 0.038, Holm 1); does not replicate in Panels 68-70 (R5-H05/H06)."
+  },
+  {
+   "rule": "U.S./Canada mix, francophone areas",
+   "evidence": "Committees without a Canadian 4 vs 4.1; Quebec/francophone pairs 0 vs 0.15-0.23 (no power) (R5-H10-H15)."
+  },
+  {
+   "rule": "Seat inheritance (new member from the outgoing member's region / neighbour / state)",
+   "evidence": "Region 209 vs 205.9, neighbour 83 vs 74.7, state 15 vs 18.0 (R5-H16-H19); refilling the outgoing region is already produced by the spread rule."
+  },
+  {
+   "rule": "Mechanical order (area number, name, initials)",
+   "evidence": "All p ≥ 0.19 (R5-H24-H28, H32)."
+  },
+  {
+   "rule": "Fixed rotation order between committees",
+   "evidence": "Transitions are flat (χ² 119.5 on 99 df); transition weights lower forward logLik -1.938 → -1.942 to -1.971 (R1-H11)."
+  },
+  {
+   "rule": "Trustee-election partner regions together (inconclusive)",
+   "evidence": "+9 pairs (z 3.5) in P71-76, mostly EC & SE; not in P68-70 (z 0.36); a bonus gains +0.009 logLik but costs 2.5 points of top-1 (R5-H13)."
+  },
+  {
+   "rule": "Region cap 2 (soft cap) instead of 1",
+   "logLik": -1.731,
+   "top3": 0.6846,
+   "dLogLik": -0.0168,
+   "evidence": "4 exceptions since P74 (see region_cap_exceptions), but relaxing the cap predicts worse (R5-RCAP: -1.744 vs -1.726)."
+  },
+  {
+   "rule": "Balance committee totals instead of standard sizes",
+   "logLik": -1.7225,
+   "top3": 0.681,
+   "dLogLik": -0.0083,
+   "evidence": "Reproduces a panel's seats with probability ≈ 0.002 (R2-S3)."
+  }
+ ],
+ "small_region_cap": {
+  "rule_text": "July 2020 trustees' decision (2021 FR p.26): Southwest, West Central, Eastern Canada and Western Canada have no more than one delegate on a committee, counting both panels.",
+  "by_year": [
+   {
+    "year": 2017,
+    "doubles": 2,
+    "cases": [
+     {
+      "committee": "CPC",
+      "region": "SW",
+      "areas": [
+       38,
+       66
+      ]
+     },
+     {
+      "committee": "TRUSTEES",
+      "region": "SW",
+      "areas": [
+       25,
+       67
+      ]
+     }
+    ]
+   },
+   {
+    "year": 2018,
+    "doubles": 1,
+    "cases": [
+     {
+      "committee": "POLICY",
+      "region": "WC",
+      "areas": [
+       24,
+       35
+      ]
+     }
+    ]
+   },
+   {
+    "year": 2019,
+    "doubles": 0,
+    "cases": []
+   },
+   {
+    "year": 2020,
+    "doubles": 0,
+    "cases": []
+   },
+   {
+    "year": 2021,
+    "doubles": 0,
+    "cases": []
+   },
+   {
+    "year": 2022,
+    "doubles": 0,
+    "cases": []
+   },
+   {
+    "year": 2023,
+    "doubles": 0,
+    "cases": []
+   },
+   {
+    "year": 2024,
+    "doubles": 0,
+    "cases": []
+   },
+   {
+    "year": 2025,
+    "doubles": 2,
+    "cases": [
+     {
+      "committee": "REPORT",
+      "region": "ECAN",
+      "areas": [
+       83,
+       88
+      ]
+     },
+     {
+      "committee": "TREATMENT",
+      "region": "SW",
+      "areas": [
+       57,
+       68
+      ]
+     }
+    ]
+   },
+   {
+    "year": 2026,
+    "doubles": 4,
+    "cases": [
+     {
+      "committee": "CPC",
+      "region": "SW",
+      "areas": [
+       38,
+       66
+      ]
+     },
+     {
+      "committee": "CORRECTIONS",
+      "region": "ECAN",
+      "areas": [
+       85,
+       87
+      ]
+     },
+     {
+      "committee": "LITERATURE",
+      "region": "WC",
+      "areas": [
+       36,
+       76
+      ]
+     },
+     {
+      "committee": "REPORT",
+      "region": "ECAN",
+      "areas": [
+       83,
+       88
+      ]
+     }
+    ]
+   }
+  ],
+  "note": "Held every year 2019-2024; broke twice in 2025 and four times in 2026 (the rebalancing years). Text only: the model's spread rule treats all regions alike."
+ },
+ "region_cap_exceptions": {
+  "cases": [
+   {
+    "panel": 74,
+    "committee": "CORRECTIONS",
+    "areas": [
+     43,
+     50
+    ]
+   },
+   {
+    "panel": 75,
+    "committee": "POLICY",
+    "areas": [
+     19,
+     53
+    ]
+   },
+   {
+    "panel": 75,
+    "committee": "REPORT",
+    "areas": [
+     83,
+     88
+    ]
+   },
+   {
+    "panel": 76,
+    "committee": "GRAPEVINE",
+    "areas": [
+     62,
+     64
+    ]
+   }
+  ],
+  "note": "Within a new panel the one-per-region rule held in every draw up to Panel 73; since then 4 committees got two new members from one region. The model keeps the cap at 1 (a soft cap of 2 predicts worse)."
+ },
+ "watch_list": {
+  "panel": 77,
+  "draw": "December 2026",
+  "registered_on": "2026-10-20",
+  "model_version": "2026-10-20.2",
+  "settings": {
+   "excludeLast": 3,
+   "regionCap": 1,
+   "crossPanelRegion": false,
+   "capacity": "target",
+   "recency": 0,
+   "spreadPenalty": 4,
+   "neighborPenalty": 2,
+   "sameStatePenalty": 8,
+   "icrfRotation": 1.6,
+   "archivesNeighbor": 1
+  },
+  "checks": [
+   {
+    "id": "same_state",
+    "what": "New members sitting on a committee with a same-state/province member (both panels)",
+    "expected": {
+     "mean": 0,
+     "sd": 0.03,
+     "p05": 0,
+     "p95": 0,
+     "p_zero": 0.999
+    },
+    "confirms": "the same-state rule if 0 (a draw without it expects 1.2 per panel)"
+   },
+   {
+    "id": "four_back",
+    "what": "Areas drawn onto the committee they held 4 terms back (Panel 69)",
+    "expected": {
+     "mean": 7.71,
+     "sd": 2.61,
+     "p05": 4,
+     "p95": 12,
+     "p_zero": 0
+    },
+    "confirms": "nothing new if near the expectation; far fewer would suggest a 4-term window"
+   },
+   {
+    "id": "grid_67_69",
+    "what": "Areas drawn onto their Panel 67 or Panel 69 committee (R1 \"grid\" hypothesis)",
+    "expected": {
+     "mean": 12.82,
+     "sd": 2.87,
+     "p05": 8,
+     "p95": 18,
+     "p_zero": 0,
+     "p_le_6": 0.011
+    },
+    "confirms": "6 or fewer would support the rejected 4-term \"grid\" rule (the default expects about 12)"
+   },
+   {
+    "id": "icrf_recent_holders",
+    "what": "IC/RF seats going to an area that held IC/RF in its last 3 terms",
+    "expected": {
+     "mean": 0.58,
+     "uniform_lot": 1.78,
+     "seats": 4
+    },
+    "confirms": "the IC/RF rotation rule if 0 (a plain lot expects 1.78)"
+   },
+   {
+    "id": "archives_neighbours",
+    "what": "Neighbour pairs among the new Archives members and with continuing ones",
+    "expected": {
+     "mean": 0.43,
+     "uniform_lot": 0.92
+    },
+    "confirms": "the mild Archives neighbour rule if 0"
+   },
+   {
+    "id": "small_region_doubles",
+    "what": "Committees with two members from Southwest, West Central, Eastern Canada or Western Canada (2027 rosters, both panels)",
+    "expected": {
+     "mean": 0.48,
+     "sd": 0.66,
+     "p05": 0,
+     "p95": 2,
+     "p_zero": 0.601
+    },
+    "confirms": "a return to the July 2020 small-region cap if 0; the 2025-26 loosening if 2 or more"
+   },
+   {
+    "id": "region_cap",
+    "what": "Committees with two new members from one region",
+    "expected": {
+     "mean": 0,
+     "sd": 0,
+     "p05": 0,
+     "p95": 0,
+     "p_zero": 1
+    },
+    "confirms": "the hard cap if 0 (4 exceptions in Panels 74-76)"
+   },
+   {
+    "id": "cross_region_neighbours",
+    "what": "New members next to a neighbouring area across a region line (both panels)",
+    "expected": {
+     "mean": 0.78,
+     "sd": 0.86,
+     "p05": 0,
+     "p95": 2,
+     "p_zero": 0.448
+    },
+    "confirms": "the neighbour rule if near the expectation"
+   },
+   {
+    "id": "seats",
+    "what": "New seats per committee",
+    "expected": {
+     "AGENDA": 4,
+     "CPC": 4,
+     "CORRECTIONS": 4,
+     "FINANCE": 4,
+     "GRAPEVINE": 4,
+     "LITERATURE": 4,
+     "POLICY": 5,
+     "PI": 5,
+     "REPORT": 4,
+     "TREATMENT": 5,
+     "TRUSTEES": 5
+    },
+    "confirms": "standard sizes; Treatment/Accessibilities 4 instead of 5 would mean GSO kept rebalancing"
+   }
+  ]
+ },
+ "rejected_rules_note": "Rules tested and rejected. logLik/top3/dLogLik (where given) = in-sample on Panels 71-76 vs the defaults (-1.7142); differences under 0.01 are within noise, and the out-of-sample tests in the cited audits decide."
+}

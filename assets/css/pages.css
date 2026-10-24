@@ -1,0 +1,205 @@
+/* pages styles (tokens live in assets/app.css): Today, Delegates & Map, Area profile, Person (assets/js/views.js).
+   Class prefix pg-. The map pin inks are chosen per region colour for >= 4.5:1 contrast in each theme. */
+:root {
+  --pg-ink-dark: #0b0b0b;
+  --pg-pin1: #256abf; --pg-pin1-ink: #fff;   /* East Central: #2a78d6 passes with neither ink, so its pins use the next blue step */
+  --pg-pin2-ink: var(--pg-ink-dark); --pg-pin3-ink: var(--pg-ink-dark); --pg-pin4-ink: var(--pg-ink-dark); --pg-pin5-ink: var(--pg-ink-dark);
+  --pg-pin6-ink: #fff; --pg-pin7-ink: #fff; --pg-pin8-ink: var(--pg-ink-dark);
+  --pg-warn-ink: #8a5a00;
+  --pg-mine: color-mix(in srgb, var(--accent) 10%, var(--surface));
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --pg-pin1: var(--r1); --pg-pin1-ink: var(--pg-ink-dark); --pg-pin6-ink: #fff; --pg-pin7-ink: var(--pg-ink-dark);
+    --pg-warn-ink: #f0b44c;
+    --pg-mine: color-mix(in srgb, var(--accent) 18%, var(--surface));
+  }
+}
+:root[data-theme="dark"] {
+  --pg-pin1: var(--r1); --pg-pin1-ink: var(--pg-ink-dark); --pg-pin6-ink: #fff; --pg-pin7-ink: var(--pg-ink-dark);
+  --pg-warn-ink: #f0b44c;
+  --pg-mine: color-mix(in srgb, var(--accent) 18%, var(--surface));
+}
+
+/* ---------- shared ---------- */
+.pg .grid > .card + .card, .pg .grid > .card + div, .pg .grid > div + .card { margin-top: 0; }
+.pg .pg-pair, .pg-area > .card { margin-top: 16px; }
+.pg-plabel { margin: 0 0 6px; }
+.pg a.btn { display: inline-flex; align-items: center; gap: 6px; font: inherit; border: 1px solid var(--axis); background: var(--surface); color: var(--ink);
+  border-radius: 8px; padding: 6px 12px; min-height: 36px; text-decoration: none; }
+.pg a.btn:hover { background: var(--surface-2); }
+.pg-center { text-align: center; }
+.pg-warn { color: var(--pg-warn-ink); }
+.pg-sub { font-size: .8rem; color: var(--muted); margin-bottom: 4px; }
+.pg-line { margin: 6px 0 0; }
+.pg-chips { display: inline-flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+.pg-nw { white-space: nowrap; }
+.pg-short, .pg .pg-mshow { display: none; }
+.pg-list { margin: 0; padding-left: 18px; }
+.pg-list li + li { margin-top: 4px; }
+.pg .badge.pg-x { text-decoration: line-through; }
+.pg-ab { text-decoration: underline dotted; text-underline-offset: 3px; cursor: help; }   /* an abbreviation with its full name as a tip */
+.pg-odd, .pg-tie { white-space: normal; }
+.pg-tie strong + strong { margin-left: 0; }
+.pg-tiemark { color: var(--accent-ink); font-weight: 700; cursor: help; }
+table.t tr.pg-mine > td { background: var(--pg-mine); }
+.pg-linkbtn { all: unset; color: var(--accent-ink); cursor: pointer; }
+.pg-linkbtn:hover { text-decoration: underline; }
+.pg-linkbtn:focus-visible { outline: 2px solid var(--accent); }
+
+/* ---------- Today ---------- */
+.pg-conf { display: flex; flex-direction: column; gap: 6px; border-top: 4px solid var(--accent); }
+.pg-kicker { font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 650; }
+.pg-conf-t { font-size: 1.35rem; margin: 0; }
+.pg-conf-when { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; font-size: 1.02rem; }
+.pg-cd { font-size: .78rem; font-weight: 650; padding: 1px 9px; border-radius: 999px; border: 1px solid var(--axis); color: var(--ink-2); white-space: nowrap; }
+.pg-cd.now { background: var(--accent-fill); color: #fff; border-color: transparent; }
+.pg-conf-theme em { font-style: italic; }
+.pg-conf-links { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 2px; }
+.pg-more { margin-top: 6px; font-size: .88rem; }
+.pg-more summary { font-weight: 600; font-size: .86rem; }
+.pg-coming h3 { margin-bottom: 4px; }
+.pg-stats { margin-top: 16px; }
+.pg-statlink { color: var(--ink); text-decoration: none; transition: border-color .15s; }
+.pg-statlink:hover { text-decoration: none; border-color: var(--accent); }
+.pg-statlink .l { color: var(--ink-2); }
+.pg-myarea { margin-top: 16px; }
+.pg-myarea-g { margin-top: 12px; }
+.pg-dl + .pg-dl { margin-top: 8px; }
+.pg-dchair { margin: 0 0 10px; }
+.pg-seats-y + .pg-seats-y { margin-top: 10px; }
+.pg-seats-y .pg-chips { margin-top: 4px; }
+.pg .chip.pg-seat { color: var(--ink-2); white-space: normal; text-align: left; }
+.pg .chip.pg-seat:hover { text-decoration: none; border-color: var(--accent); color: var(--ink); }
+.pg .chip.pg-seat.soft { border-style: dashed; background: transparent; }
+.pg .chip.pg-seat.mine { border-color: var(--accent); background: var(--accent-wash); color: var(--ink); }
+
+/* ---------- Delegates & Map ---------- */
+#map, .pg-map { position: relative; z-index: 0; isolation: isolate; }   /* Leaflet's panes (z 400-1000) stay under the sticky tabs */
+.pg-del-ctl input[type="search"] { min-width: 240px; flex: 1 1 240px; max-width: 360px; }
+.pg-toggle { font: inherit; font-size: .85rem; border: 1px solid var(--axis); background: var(--surface); color: var(--ink-2); border-radius: 999px; padding: 6px 12px; cursor: pointer; min-height: 34px; }
+.pg-toggle[aria-pressed="true"] { background: var(--accent-wash); color: var(--ink); border-color: var(--accent); font-weight: 600; }
+.pg-toggle[aria-pressed="true"]::before { content: "✓ "; }
+.pg-legend { gap: 6px; }
+.pg-legend button { border: 1px solid var(--grid); background: var(--surface); padding: 4px 10px; min-height: 30px; }
+.pg-legend button:hover { border-color: var(--axis); color: var(--ink); }
+.pg-legend button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-wash); color: var(--ink); font-weight: 600; }
+.pg-pin-wrap { display: flex; align-items: center; justify-content: center; }
+.area-pin.pg-pin { flex: none; transition: width .12s, height .12s; }
+.area-pin.pg-pin.r1 { background: var(--pg-pin1); color: var(--pg-pin1-ink); }
+.area-pin.pg-pin.r2 { background: var(--r2); color: var(--pg-pin2-ink); }
+.area-pin.pg-pin.r3 { background: var(--r3); color: var(--pg-pin3-ink); }
+.area-pin.pg-pin.r4 { background: var(--r4); color: var(--pg-pin4-ink); }
+.area-pin.pg-pin.r5 { background: var(--r5); color: var(--pg-pin5-ink); }
+.area-pin.pg-pin.r6 { background: var(--r6); color: var(--pg-pin6-ink); }
+.area-pin.pg-pin.r7 { background: var(--r7); color: var(--pg-pin7-ink); }
+.area-pin.pg-pin.r8 { background: var(--r8); color: var(--pg-pin8-ink); }
+.area-pin.pg-pin.mine { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--ink); }
+.pg-z2 .area-pin.pg-pin { width: 20px; height: 20px; font-size: 9.5px; border-width: 1.5px; }
+.pg-z1 .area-pin.pg-pin { width: 11px; height: 11px; font-size: 0; border-width: 1px; }
+.pg-z1 .area-pin.pg-pin.mine { width: 14px; height: 14px; }
+.pg-map-hint { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1000; pointer-events: none;
+  background: color-mix(in srgb, var(--ink) 82%, transparent); color: var(--page); font-size: .82rem; padding: 6px 12px; border-radius: 999px; white-space: nowrap; }
+.pg-pop .pg-map-hint { visibility: hidden; }   /* an open popup (views.js initMap adds .pg-pop) is not covered by the hint */
+.leaflet-bar.pg-inset { display: flex; flex-direction: column; }
+.pg-inset button { font: 650 11px/1 var(--font); width: 34px; height: 30px; border: 0; border-bottom: 1px solid var(--axis); background: var(--surface); color: var(--ink); cursor: pointer; }
+.pg-inset button:last-child { border-bottom: 0; }
+.pg-inset button:hover { background: var(--surface-2); }
+.pg-dtable { margin-top: 16px; }
+.pg-deltab th { white-space: nowrap; }
+.pg-deltab .pg-chips .chip { white-space: nowrap; }
+.pg-likely { color: var(--ink-2); }
+.pg-likely:hover { color: var(--accent-ink); }
+.pg-muted { color: var(--muted); }
+/* Leaflet in dark mode */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .leaflet-bar a, :root:not([data-theme="light"]) .leaflet-popup-content-wrapper, :root:not([data-theme="light"]) .leaflet-popup-tip { background: var(--surface); color: var(--ink); border-color: var(--axis); }
+  :root:not([data-theme="light"]) .leaflet-bar a:hover { background: var(--surface-2); }
+  :root:not([data-theme="light"]) .leaflet-bar { border-color: var(--axis); }
+  :root:not([data-theme="light"]) .leaflet-control-attribution { background: color-mix(in srgb, var(--surface) 85%, transparent) !important; color: var(--muted); }
+  :root:not([data-theme="light"]) .leaflet-control-attribution a, :root:not([data-theme="light"]) .leaflet-popup-content a { color: var(--accent-ink); }
+  :root:not([data-theme="light"]) .leaflet-container a.leaflet-popup-close-button { color: var(--muted); }
+}
+:root[data-theme="dark"] .leaflet-bar a, :root[data-theme="dark"] .leaflet-popup-content-wrapper, :root[data-theme="dark"] .leaflet-popup-tip { background: var(--surface); color: var(--ink); border-color: var(--axis); }
+:root[data-theme="dark"] .leaflet-bar a:hover { background: var(--surface-2); }
+:root[data-theme="dark"] .leaflet-bar { border-color: var(--axis); }
+:root[data-theme="dark"] .leaflet-control-attribution { background: color-mix(in srgb, var(--surface) 85%, transparent) !important; color: var(--muted); }
+:root[data-theme="dark"] .leaflet-control-attribution a, :root[data-theme="dark"] .leaflet-popup-content a { color: var(--accent-ink); }
+:root[data-theme="dark"] .leaflet-container a.leaflet-popup-close-button { color: var(--muted); }
+
+/* ---------- Area ---------- */
+.pg-big { font-size: 1.02rem; margin-bottom: 2px; }
+.pg-odds td:first-child { width: 46%; }
+.pg-odds td.n { width: 56px; }
+.pg-odds tr.pg-out td { color: var(--muted); }
+.pg-roles { color: var(--ink-2); margin-top: 3px; }
+.pg-nbtab td:last-child { min-width: 220px; }
+
+/* ---------- Person ---------- */
+.pg-jump { display: flex; flex-wrap: wrap; gap: 6px; margin: -4px 0 14px; }
+.pg-jump .chip { cursor: pointer; font: inherit; font-size: .82rem; white-space: normal; text-align: left; }
+.pg-pcard { scroll-margin-top: calc(var(--topbar-h, 57px) + 56px); }
+.pg-pcard + .pg-pcard { margin-top: 16px; }
+.pg-pname { font-size: 1.2rem; margin: 0; }
+
+.pg-maybe { border-left: 3px solid var(--warning); padding: 4px 10px; background: var(--surface-2); border-radius: 4px; }
+.pg-sech { font-size: .78rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 16px 0 6px; display: block; }
+ul.pg-roles { list-style: none; margin: 0; padding: 0; }
+ul.pg-roles > li { padding: 8px 0 8px 14px; border-left: 2px solid var(--grid); }
+ul.pg-roles > li.pg-noline { border-left-color: transparent; padding-top: 0; }
+.pg-rl { line-height: 1.4; }
+.pg-rd { font-size: .86rem; color: var(--ink-2); margin-top: 3px; }
+.pg-tc { margin-top: 6px; max-width: 760px; }
+.pg-tc th { white-space: nowrap; }
+.pg-status { cursor: help; }
+.pg-tc .chip { margin: 1px 4px 1px 0; white-space: normal; }
+.pg .chip.pg-bio { border-style: dashed; }
+.pg-empty { max-width: 760px; }
+.pg-sug { margin: 0 0 12px; padding-left: 18px; }
+.pg-sug li + li { margin-top: 4px; }
+
+/* ---------- phones ---------- */
+@media (max-width: 640px) {
+  .pg .pg-long { display: none; }
+  .pg .pg-short, .pg span.pg-mshow { display: inline; }
+  .pg div.pg-mshow { display: block; margin-top: 2px; }
+  .pg .pg-hide-m { display: none; }
+  .pg-board .kv { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .pg-chairs td { white-space: normal; }
+  .pg input, .pg select { font-size: 16px; }
+  .pg .g4.pg-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .pg .pg-stats .card.stat { padding: 12px; }
+  .pg .pg-stats .stat .v { font-size: 1.35rem; }
+  .pg .pg-stats .stat .l { font-size: .78rem; }
+  .pg-conf-t { font-size: 1.15rem; }
+  .pg-chairs td .small { font-size: .82rem; }
+  .pg-del-ctl input[type="search"] { max-width: none; flex-basis: 100%; min-width: 0; }
+  .pg-toggle, .pg-legend button { min-height: 40px; }
+  .pg-legend button { padding: 6px 10px; }
+  .pg-inset button { width: 40px; height: 40px; font-size: 12px; }
+  .leaflet-touch .leaflet-bar a { width: 40px; height: 40px; line-height: 40px; }
+  .pg-deltab td { padding: 6px 6px; }
+  .pg-deltab td:first-child { white-space: nowrap; }
+  /* break-word keeps single words whole (Connecticut, Saskatchewan) and lets the column take the room it needs */
+  .pg-ashort { white-space: normal; max-width: 84px; line-height: 1.25; overflow-wrap: break-word; }
+  /* a popup open on a phone spans the map: hide the corner controls so its × and title can be tapped (views.js initMap) */
+  .pg-pop .leaflet-top { visibility: hidden; }
+  .pg-nbtab td:last-child { min-width: 180px; }
+  .pg a.btn { min-height: 40px; }
+  ul.pg-roles > li { padding-left: 10px; }
+}
+
+/* narrow phones (360-382 px): tighter side padding keeps whole area names and the table within the width */
+@media (max-width: 382px) {
+  table.t.pg-deltab th, table.t.pg-deltab td { padding-left: 4px; padding-right: 4px; }   /* beats table.t.compact (app.css) */
+}
+/* very narrow phones: the four columns can't hold whole long words; breaking them beats scrolling sideways */
+@media (max-width: 350px) {
+  .pg-ashort { overflow-wrap: anywhere; }
+}
+
+@media print { .pg-map, #map, .pg-legend, .pg-toggle { display: none !important; } }
+
+/* ---------- quiz modes: the cue under a "Which Concept?" question (assets/js/view-quiz.js) ---------- */
+.quiz-q .qz-cue { display: block; margin-top: 10px; padding: 10px 14px; border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0;
+  background: var(--surface-2); color: var(--ink); font-size: 1.02rem; font-weight: 400; line-height: 1.45; overflow-wrap: break-word; }

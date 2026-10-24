@@ -1,0 +1,578 @@
+{
+ "meta": {
+  "about": "Follow-ups that are not Advisory Actions: requests in the Final Reports (Conference committee reports, plus the board's, trustees' committees' and G.S.O. reports) dated for later (progress reports, drafts, items recommitted to a committee, other dated plans) and recommendations committed to the General Service Board (no date given), and what became of Advisory Action follow-ups once they fell due. Own-words summaries; refs \"FRyy pP Lx-y\" = report year, PDF page, line in the Drive text extract.",
+  "sources": "2024-2026 Final Conference Reports (Drive, _GSC Explorer Data/text/reports); M-39 index in advisory_actions.json",
+  "checked": "Extracted 2026-10-21 by five range extractors, each adversarially verified, plus a completeness sweep of every 2027+/77th/brought-back mention in the 2024-2026 reports (workflow wf_a03fe14b-6c4). Excluded on purpose: items already in the Advisory Actions, recurring work with no date, facts shown elsewhere (Conference, Convention, Forum, REDELA/WSM dates; trustee rotations; budgets), recommendations not adopted, things already done."
+ },
+ "requests": [
+  {
+   "id": "r26-01",
+   "from_year": 2026,
+   "ref": "FR26 p42 L3557-3582",
+   "committee": "FINANCE",
+   "by": "the Conference",
+   "who": "Conference Committee on Finance",
+   "kind": "recommitted",
+   "text": "Proposed rewrite of the cost-per-group Q&A in “Self-Support: Where Money and Spirituality Mix” (F-3), giving 2025 estimates of GSO's cost per group and average group contributions.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-02",
+   "from_year": 2026,
+   "ref": "FR26 p42 L3588-3590",
+   "committee": null,
+   "by": "the Conference",
+   "who": "General Service Board",
+   "kind": "committed",
+   "text": "Keep every Conference committee informed of all proposed agenda items as they arrive, through a quarterly PAI Status Grid."
+  },
+  {
+   "id": "r26-03",
+   "from_year": 2026,
+   "ref": "FR26 p42 L3592-3596",
+   "committee": null,
+   "by": "the Conference",
+   "who": "General Service Board",
+   "kind": "committed",
+   "text": "Conference members should tell the Fellowship more clearly that the PAI cut-off covers only the next Conference and that submissions are welcome all year."
+  },
+  {
+   "id": "r26-04",
+   "from_year": 2026,
+   "ref": "FR26 p42 L3598-3604",
+   "committee": null,
+   "by": "the Conference",
+   "who": "General Service Board",
+   "kind": "committed",
+   "text": "Swap the October feedback call for a joint trustees'/Conference committee meeting where everyone votes on PAI dispositions for the next Conference, with background shared beforehand."
+  },
+  {
+   "id": "r26-05",
+   "from_year": 2026,
+   "ref": "FR26 p42 L3606-3608",
+   "committee": null,
+   "by": "the Conference",
+   "who": "General Service Board",
+   "kind": "committed",
+   "text": "Run the PAI Status Grid as an ongoing, curated list; an item stays on it until policy or the Joint Committee disposes of it."
+  },
+  {
+   "id": "r26-06",
+   "from_year": 2026,
+   "ref": "FR26 p42 L3610-3612",
+   "committee": null,
+   "by": "the Conference",
+   "who": "General Service Board",
+   "kind": "committed",
+   "text": "Circulate working committee agendas ahead of the Joint Committee meeting so members see ongoing projects and annual review items."
+  },
+  {
+   "id": "r26-07",
+   "from_year": 2026,
+   "ref": "FR26 p42 L3614-3617",
+   "committee": null,
+   "by": "the Conference",
+   "who": "General Service Board",
+   "kind": "committed",
+   "text": "Have the Conference affirm that its committees may raise items not on their agenda, or put off an item to a later Conference."
+  },
+  {
+   "id": "r26-08",
+   "from_year": 2026,
+   "ref": "FR26 p42 L3619-3623",
+   "committee": null,
+   "by": "the Conference",
+   "who": "General Service Board",
+   "kind": "committed",
+   "text": "Hold a sharing session where trustees, directors, delegates and Staff discuss what each role does, building a common understanding of each one's scope and authority."
+  },
+  {
+   "id": "r26-09",
+   "from_year": 2026,
+   "ref": "FR26 p43 L3630-3654",
+   "committee": "AGENDA",
+   "by": "Conference Committee on Agenda",
+   "who": "G.S.O. and trustees' General Service Conference Committee",
+   "kind": "other",
+   "text": "Ideas for planning the 77th Conference: an earlier, possibly two-hour virtual Remote Communities pre-Conference meeting with moderators named ahead; better-defined virtual sharing-session topics; better-organized resource files.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-10",
+   "from_year": 2026,
+   "ref": "FR26 p44 L3771-3780",
+   "committee": "CPC",
+   "by": "Conference Committee on Cooperation with the Professional Community",
+   "who": "trustees' CPC/Treatment/Accessibilities Committee",
+   "kind": "draft",
+   "text": "Progress report or draft of the pamphlet for mental health professionals, building on the outline and project plan reviewed in 2026 (one suggestion: add a link to the Cochrane Study).",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-11",
+   "from_year": 2026,
+   "ref": "FR26 p45 L3865-3873",
+   "committee": "CORRECTIONS",
+   "by": "Conference Committee on Corrections",
+   "who": "trustees' Literature Committee",
+   "kind": "draft",
+   "text": "Progress report or draft of the pamphlet for transgender alcoholics in A.A., after writing workshops and a call for stories seeking broad representation of gender-diverse members.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-12",
+   "from_year": 2026,
+   "ref": "FR26 p45 L3916-3927",
+   "committee": "FINANCE",
+   "by": "Conference Committee on Finance",
+   "who": "General manager, trustees' General Service Conference Committee and G.S.O. Meeting, Events and Travel Services (METS) team",
+   "kind": "report",
+   "text": "Progress report on cheaper ways to hold the General Service Conference, including a hybrid online plus in-person (New York City) format, with estimated savings for each option.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-13",
+   "from_year": 2026,
+   "ref": "FR26 p46 L4020-4036",
+   "committee": "GRAPEVINE",
+   "by": "Conference Committee on Grapevine and La Viña",
+   "who": "AA Grapevine board",
+   "kind": "report",
+   "text": "Progress report to the 77th Conference on a reworked Grapevine product survey closer to the 2025 Advisory Action and memo, with two or more methods and low-cost delivery (e.g., Meeting Guide app).",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-14",
+   "from_year": 2026,
+   "ref": "FR26 p46 L4034-4038",
+   "committee": "GRAPEVINE",
+   "by": "Conference Committee on Grapevine and La Viña",
+   "who": "AA Grapevine board",
+   "kind": "report",
+   "text": "Final report on the Fellowship survey asking whether Grapevine and La Viña products are relevant, useful and financially viable; deadline pushed from 2027 to the 78th Conference.",
+   "due": {
+    "year": 2028
+   }
+  },
+  {
+   "id": "r26-15",
+   "from_year": 2026,
+   "ref": "FR26 p46 L4040-4048",
+   "committee": "GRAPEVINE",
+   "by": "Conference Committee on Grapevine and La Viña",
+   "who": "AA Grapevine board, with the General Service Board",
+   "kind": "other",
+   "text": "Explore further ways to sustain Grapevine services that earn no revenue; more suggestions are invited at the 77th Conference Grapevine and La Viña committee.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-16",
+   "from_year": 2026,
+   "ref": "FR26 p47 L4053-4066",
+   "committee": "ICRF",
+   "by": "Conference Committee on International Conventions/Regional Forums",
+   "who": "trustees' International Conventions/Regional Forums Committee (flag subcommittee)",
+   "kind": "report",
+   "text": "Progress report on adding sovereign-state flags to the International Convention flag ceremony; areas may be asked, through delegates, for Fellowship feedback, with the ceremony's history and purpose supplied.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-17",
+   "from_year": 2026,
+   "ref": "FR26 p48 L4179-4184",
+   "committee": "LITERATURE",
+   "by": "Conference Committee on Literature",
+   "who": "trustees' Literature Committee",
+   "kind": "draft",
+   "text": "A revised draft or progress report on updating the book Living Sober; the committee wants the revision work to continue along its present lines.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-18",
+   "from_year": 2026,
+   "ref": "FR26 p48 L4186-4205",
+   "committee": "LITERATURE",
+   "by": "Conference Committee on Literature",
+   "who": "trustees' Literature Committee",
+   "kind": "report",
+   "text": "Progress report on publishing the fourth-edition Big Book stories dropped from the fifth edition: costs, sales and break-even, revised Experience, Strength and Hope versus a new book, and a new title.",
+   "due": {
+    "year": 2028
+   }
+  },
+  {
+   "id": "r26-19",
+   "from_year": 2026,
+   "ref": "FR26 p48 L4207-4230",
+   "committee": "LITERATURE",
+   "by": "Conference Committee on Literature",
+   "who": "trustees' Literature Committee",
+   "kind": "draft",
+   "text": "Manuscript or progress report on the fourth edition of Alcohólicos Anónimos (Spanish Big Book); suggested more status updates to the Fellowship and inviting the working group chair to the 2027 Conference.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-20",
+   "from_year": 2026,
+   "ref": "FR26 p48 L4232-4236",
+   "committee": "LITERATURE",
+   "by": "Conference Committee on Literature",
+   "who": "trustees' Literature Committee subcommittee",
+   "kind": "report",
+   "text": "Progress report from the subcommittee studying which tools Spanish-speaking members need in order to use the Big Book.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-21",
+   "from_year": 2026,
+   "ref": "FR26 p48 L4238-4264",
+   "committee": "LITERATURE",
+   "by": "Conference Committee on Literature",
+   "who": "trustees' Literature Committee",
+   "kind": "report",
+   "text": "Progress report on a Plain Language Big Book amendment process; suggested counting proposed substantive and editorial changes, page cross-references to Alcoholics Anonymous, and matching the large-print Big Book's size.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-22",
+   "from_year": 2026,
+   "ref": "FR26 p49 L4266-4270",
+   "committee": "LITERATURE",
+   "by": "Conference Committee on Literature",
+   "who": "trustees' Literature Committee",
+   "kind": "draft",
+   "text": "Progress report or draft manuscript of the planned pamphlet “A.A. for the Asian and Asian American Alcoholic” (working title).",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-23",
+   "from_year": 2026,
+   "ref": "FR26 p50 L4394-4401",
+   "committee": null,
+   "by": "General Service Board",
+   "who": "77th Conference committee chairs and General Service Board",
+   "kind": "other",
+   "text": "Chairs of the 77th Conference's committees join the October 2026 (fourth-quarter) board weekend instead of January 2027, giving them more time to comment on proposed agenda items under trustee review.",
+   "due": {
+    "year": 2026,
+    "month": 10
+   }
+  },
+  {
+   "id": "r26-24",
+   "from_year": 2026,
+   "ref": "FR26 p50 L4453-4458",
+   "committee": "PI",
+   "by": "Conference Committee on Public Information",
+   "who": "trustees' Public Information Committee",
+   "kind": "report",
+   "text": "Progress report on setting up panels of past Spanish- and French-speaking delegates who would review public service announcements in their own languages.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-25",
+   "from_year": 2026,
+   "ref": "FR26 p50 L4460-4490",
+   "committee": "PI",
+   "by": "Conference Committee on Public Information",
+   "who": "trustees' Public Information Committee",
+   "kind": "report",
+   "text": "Progress report on Our Primary Purpose, the GSO podcast, with season-three ideas such as French and Spanish content, archival material, Class A trustee talks and service-structure episodes.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-26",
+   "from_year": 2026,
+   "ref": "FR26 p51 L4492-4512",
+   "committee": "PI",
+   "by": "Conference Committee on Public Information",
+   "who": "trustees' Public Information Committee",
+   "kind": "report",
+   "text": "Report on the AAWS YouTube account, after suggestions for more shorts, user-generated and Young People videos, member stories, archival clips and topics like spirituality and non-affiliation.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-27",
+   "from_year": 2026,
+   "ref": "FR26 p51 L4514-4523",
+   "committee": "PI",
+   "by": "Conference Committee on Public Information",
+   "who": "trustees' Public Information Committee",
+   "kind": "report",
+   "text": "Report on GSO's A.A. website (aa.org), including the planned search improvements and the new Young People landing page.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-28",
+   "from_year": 2026,
+   "ref": "FR26 p51 L4525-4530",
+   "committee": "PI",
+   "by": "Conference Committee on Public Information",
+   "who": "trustees' Public Information Committee",
+   "kind": "report",
+   "text": "Analytics report on any new AAWS social media accounts opened under the AAWS Social Media Policy.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-29",
+   "from_year": 2026,
+   "ref": "FR26 p51 L4532-4551",
+   "committee": "PI",
+   "by": "Conference Committee on Public Information",
+   "who": "trustees' Public Information Committee",
+   "kind": "report",
+   "text": "Progress report on the Meeting Guide app, including the trustees' PI Committee's study of push notifications; suggestions included more outreach to professionals and a Quarterly Financial Report page with a contribute button.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-30",
+   "from_year": 2026,
+   "ref": "FR26 p51 L4553-4558",
+   "committee": "PI",
+   "by": "Conference Committee on Public Information",
+   "who": "trustees' Public Information Committee",
+   "kind": "report",
+   "text": "Report on AAWS's Online Business Profiles; the committee also suggested letting local service members know when Staff replies mention them.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-31",
+   "from_year": 2026,
+   "ref": "FR26 p51 L4560-4563",
+   "committee": "PI",
+   "by": "Conference Committee on Public Information",
+   "who": "trustees' Public Information Committee",
+   "kind": "report",
+   "text": "Another report on A.A.'s Google Ads, following the 2025 report the committee accepted.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-32",
+   "from_year": 2026,
+   "ref": "FR26 p53 L4775-4782",
+   "committee": "TRUSTEES",
+   "by": "Conference Committee on Trustees",
+   "who": "trustees' Literature Committee",
+   "kind": "draft",
+   "text": "Progress report or draft of the revised pamphlet “Do You Think You're Different?” (P-13) for the 2027 Conference; the 2021–2022 workload plan assigned it to the Trustees committee.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-33",
+   "from_year": 2026,
+   "ref": "FR26 p53 L4784-4789",
+   "committee": "TRUSTEES",
+   "by": "Conference Committee on Trustees",
+   "who": "General Service Board ad hoc committee",
+   "kind": "report",
+   "text": "Extra to the censure-motion report: include a grid or diagram showing every route by which a motion to censure or reorganize can arrive and be handled, plus proposed changes.",
+   "due": {
+    "year": 2027
+   }
+  },
+  {
+   "id": "r26-34",
+   "from_year": 2026,
+   "ref": "FR26 p97 L9018-9024",
+   "committee": "ICRF",
+   "by": "trustees' IC/RF Committee",
+   "who": "G.S.O.",
+   "kind": "other",
+   "text": "Bidding to host the 2040 International Convention opens in 2027 (noted while the trustees' committee took no action on a proposal for blackout dates).",
+   "due": {
+    "year": 2027,
+    "during": true
+   }
+  },
+  {
+   "id": "r26-35",
+   "from_year": 2026,
+   "ref": "FR26 p99 L9245-9248",
+   "committee": "ICRF",
+   "by": "G.S.O. (International Convention staff report)",
+   "who": "G.S.O. and AA Grapevine",
+   "kind": "other",
+   "text": "From 2028, G.S.O. plans articles about the 2030 St. Louis International Convention in Box 4-5-9, Grapevine, the Meeting Guide app and aa.org.",
+   "due": {
+    "year": 2028,
+    "during": true
+   }
+  },
+  {
+   "id": "r24-01",
+   "from_year": 2024,
+   "ref": "FR24 p44 L4352-4370",
+   "committee": "ICRF",
+   "by": "Conference Committee on International Conventions/Regional Forums",
+   "who": "trustees' International Conventions/Regional Forums Committee",
+   "kind": "deadline",
+   "text": "Trustees’ IC/RF Committee to explore ideas for a new A.A. declaration to be adopted at the 2030 International Convention, reviewing the history of the 1965 “I Am Responsible” and 1970 Unity declarations.",
+   "due": {
+    "year": 2030,
+    "month": 7
+   }
+  }
+ ],
+ "outcomes": [
+  {
+   "action": "p763",
+   "due_year": 2026,
+   "status": "done",
+   "text": "The 76th Conference (April 26-May 2, 2026) met under the “Humility in Action” theme, which framed the opening remarks, keynote and sharing.",
+   "ref": "FR26 p4 L138-142"
+  },
+  {
+   "action": "p764",
+   "due_year": 2026,
+   "status": "done",
+   "text": "Three delegates gave the planned Sunday talks: restoration and grace with unity, “Gossip vs. Facts” on communication health, and finding common ground.",
+   "ref": "FR26 p4 L178-181"
+  },
+  {
+   "action": "p768",
+   "due_year": 2026,
+   "status": "done",
+   "text": "The Sunday workshop on “Keeping Our Own House in Order” was held in ten small breakout groups, sharing on Step Ten as applied to general service.",
+   "ref": "FR26 p5 L208-211; p37 L3083-3084"
+  },
+  {
+   "action": "p769",
+   "due_year": 2026,
+   "status": "done",
+   "text": "The Inventory Implementation Committee reported as a Conference committee; its 2031 five-year inventory cycle failed, and its PAI-process proposals were committed to the General Service Board.",
+   "ref": "FR26 p41 L3504-3514; p42 L3583-3623"
+  },
+  {
+   "action": "p1109",
+   "due_year": 2026,
+   "status": "progress",
+   "text": "C.P.C. committee reviewed an outline and project plan for the mental health professionals pamphlet, offered suggestions (e.g., adding a link to the Cochrane study) and wants a progress report or draft in 2027.",
+   "ref": "FR26 p44 L3771-3780",
+   "next_due": 2027
+  },
+  {
+   "action": "p1110",
+   "due_year": 2026,
+   "status": "done",
+   "text": "The C.P.C. committee accepted the AAWS LinkedIn page report; trustees had learned in February 2026 that Premium's hiring and job-search features did not serve the visibility goal.",
+   "ref": "FR26 p44 L3754-3769; p72 L6495-6507"
+  },
+  {
+   "action": "p1713",
+   "due_year": 2026,
+   "status": "done",
+   "text": "The committee accepted AA Grapevine's new five-year plan, judging it aligned with Grapevine and La Viña purposes, and expects annual updates on performance metrics.",
+   "ref": "FR26 p46 L3979-3985",
+   "next_due": 2027
+  },
+  {
+   "action": "p1715",
+   "due_year": 2026,
+   "status": "progress",
+   "text": "Progress was reviewed but the committee asked for a revised plan closer to the 2025 action, with two or more methods and low-cost delivery; progress due 2027, final report 2028.",
+   "ref": "FR26 p46 L4020-4038",
+   "next_due": 2027
+  },
+  {
+   "action": "p3127",
+   "due_year": 2026,
+   "status": "progress",
+   "text": "The Literature committee discussed revised draft chapters of Living Sober, told the trustees to keep revising the same way, and wants a revised draft or progress report in 2027.",
+   "ref": "FR26 p48 L4179-4184",
+   "next_due": 2027
+  },
+  {
+   "action": "p4268",
+   "due_year": 2026,
+   "status": "done",
+   "text": "The revised “Understanding Anonymity” (P-47), now covering social media, was approved and retitled “Anonymity — Our Spiritual Foundation”; a cover QR code and 2024 survey footnote were requested.",
+   "ref": "FR26 p40 L3293-3295"
+  },
+  {
+   "action": "p4269",
+   "due_year": 2026,
+   "status": "done",
+   "text": "Trustees' PI subcommittees sent a draft survey and implementation report; the Conference chose a pilot (up to $10,000) using the 2022 questionnaire instead of a full random-sample survey.",
+   "ref": "FR26 p50 L4423-4431"
+  },
+  {
+   "action": "p4819",
+   "due_year": 2026,
+   "status": "progress",
+   "text": "Report and Charter reviewed the board ad hoc committee's progress report, flagged overlapping categories and no formal definition of “founders,” and sent the topic to trustees' Literature for input.",
+   "ref": "FR26 p52 L4608-4631"
+  },
+  {
+   "request": "r24-01",
+   "due_year": 2030,
+   "status": "update",
+   "ref": "FR25 p45 L3818-3826; FR26 p97 L8977-8987",
+   "text": "Since 2025 the declaration centres on the Third Legacy of service and members’ part in the group conscience; the subcommittee was still working on it in 2026."
+  },
+  {
+   "action": "p2270",
+   "due_year": 2030,
+   "status": "update",
+   "ref": "FR26 p99 L9237-9248",
+   "text": "St. Louis was chosen; the Convention is set for July 4–7, 2030."
+  },
+  {
+   "action": "p2275",
+   "due_year": 2035,
+   "status": "update",
+   "ref": "FR24 p87 L9515-9522",
+   "text": "The General Service Board chose Indianapolis on October 30, 2023."
+  },
+  {
+   "action": "p1715",
+   "due_year": 2027,
+   "status": "superseded",
+   "ref": "FR26 p46 L4032-4038",
+   "text": "The 2026 committee moved the final survey report to the 78th Conference (2028); a progress report on a revised survey plan comes in 2027."
+  }
+ ]
+}

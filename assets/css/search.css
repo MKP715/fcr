@@ -1,0 +1,29 @@
+/* Global search dropdown (rendered by assets/js/app.js; colour tokens live in assets/app.css). */
+.search-results { overscroll-behavior: contain; }
+.search-results .sr-group + .sr-group { border-top: 1px solid var(--grid); }
+.search-results .sr-gh { position: sticky; top: 0; z-index: 1; display: flex; gap: 8px; align-items: baseline; padding: 6px 12px 4px;
+  font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted);
+  background: var(--surface); border-bottom: 1px solid var(--grid); }
+.search-results .sr { display: flex; align-items: flex-start; gap: 10px; padding: 8px 12px; border-bottom: 1px solid var(--grid);
+  color: var(--ink); cursor: pointer; text-decoration: none; }
+.search-results .sr-group > .sr:last-child { border-bottom: 0; }
+.search-results .sr-main { display: block; flex: 1 1 auto; min-width: 0; }
+.search-results .sr .t { display: block; font-weight: 600; overflow-wrap: anywhere; }
+.search-results .sr .d { display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  font-size: .82rem; color: var(--ink-2); overflow-wrap: anywhere; }
+.search-results .sr-chip { flex: none; margin-top: 2px; max-width: 10em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  padding: 1px 8px; border-radius: 999px; font-size: .72rem; line-height: 1.5; color: var(--ink-2); background: var(--surface-2); border: 1px solid var(--grid); }
+.search-results .sr.active { background: var(--surface-2); box-shadow: inset 3px 0 0 var(--accent); }
+.search-results .sr mark { background: var(--accent-wash); color: inherit; border-radius: 2px; padding: 0 1px; }
+.search-results .sr .d mark { background: transparent; color: var(--ink); font-weight: 600; padding: 0; }
+.search-results .sr-more { color: var(--accent-ink); font-size: .85rem; font-weight: 600; }
+.search-results .sr-empty { padding: 12px 14px; font-size: .88rem; color: var(--ink-2); }
+.search-results .sr-empty strong { color: var(--ink); }
+.gs-live { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+/* The router focuses the page heading after navigation (for screen readers); no ring for that programmatic focus. */
+#main h1[tabindex="-1"]:focus, #main h1[tabindex="-1"]:focus-visible { outline: none; }
+@media (max-width: 640px) {
+  #gsearch { font-size: 16px; }   /* iOS zooms into inputs under 16px */
+  .search-results .sr { min-height: 44px; padding: 10px 12px; }
+  .search-results .sr-chip { max-width: 7.5em; }
+}

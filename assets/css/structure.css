@@ -1,0 +1,209 @@
+/* Structure page (view-structure.js): org chart, details panel, Conference ↔ trustees' committee pairs.
+   Class prefix sx-. Colours come from the shared tokens in assets/app.css (region slots for the node kinds). */
+.sx-page { --sx-base: var(--r3); --sx-conf: var(--r1); --sx-board: var(--r7); --sx-corp: var(--r2); }
+.sx-page .linkish { all: unset; cursor: pointer; color: var(--accent-ink); border-radius: 3px; }
+.sx-page .linkish:hover { text-decoration: underline; }
+.sx-page .linkish:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.sx-page .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.sx-page .page-head + .rp-jump { margin-bottom: 4px; }
+.k-base { --k: var(--sx-base); } .k-conf { --k: var(--sx-conf); } .k-board { --k: var(--sx-board); } .k-corp { --k: var(--sx-corp); }
+
+/* ---------- chart + details panel ---------- */
+.sx-layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 16px; align-items: start; }
+@media (min-width: 1600px) { .sx-layout { grid-template-columns: minmax(0, 1fr) 400px; } }
+.sx-chart-card { padding: 12px; min-width: 0; }
+.sx-tools { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 10px; }
+.sx-legend { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; color: var(--ink-2); }
+.sx-li { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }   /* a swatch never wraps away from its label */
+.sx-key { display: inline-block; width: 12px; height: 12px; border-radius: 3px; background: var(--k, var(--muted)); flex: none; vertical-align: -1px; }
+.sx-key-pair { width: 20px; height: 0; border-radius: 0; background: none; border-top: 2px dashed var(--accent); vertical-align: 3px; }
+.sx-key-vacant { background: transparent; border: 1.5px dashed var(--ink-2); }
+.sx-key-open { background: var(--bd-soft-ink); }
+.sx-key-paid { background: color-mix(in srgb, var(--good) 30%, var(--surface)); border: 1px solid var(--good-ink); }
+.sx-key-em { background: var(--surface-2); border: 1.5px dotted var(--ink-2); }
+.sx-frame { overflow: auto; border: 1px solid var(--grid); border-radius: 8px; background: var(--page); padding: 12px 8px; }
+.sx-sizer { position: relative; margin: 0 auto; }
+.sx-canvas { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.sx-edges, .sx-links { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+.sx-edges path { fill: none; stroke: var(--control); stroke-width: 1.5; }   /* >= 3:1 on the page in both themes */
+.sx-links { z-index: 0; }   /* under the boxes: a line crossing another box passes behind it */
+.sx-links path { fill: none; stroke: var(--accent); stroke-width: 2; stroke-dasharray: 6 4; }
+.sx-links path.halo { stroke: var(--page); stroke-width: 6; stroke-dasharray: none; opacity: .85; }
+.sx-hint { margin: 8px 2px 0; }
+
+.sx-node { position: absolute; z-index: 1; display: flex; flex-direction: column; gap: 1px; text-align: left; font: inherit; cursor: pointer;
+  padding: 6px 8px 6px 11px; background: var(--surface); color: var(--ink); border: 1px solid var(--grid); border-left: 4px solid var(--k, var(--muted));
+  border-radius: 7px; box-shadow: var(--shadow); line-height: 1.25; }
+.sx-node.has-kids { padding-bottom: 13px; }   /* room for the fold handle on the bottom edge */
+.sx-node:hover { border-color: var(--axis); border-left-color: var(--k, var(--muted)); background: var(--surface-2); }
+.sx-node .sx-t { font-weight: 650; font-size: .84rem; overflow-wrap: break-word; }
+.sx-node .sx-t .dot { width: 8px; height: 8px; vertical-align: 1px; }
+.sx-node .sx-s { font-size: .74rem; color: var(--ink-2); overflow-wrap: break-word; }
+.sx-node.mine { background: color-mix(in srgb, var(--warning) 16%, var(--surface)); }
+.sx-node.sel { outline: 2px solid var(--accent); outline-offset: 1px; background: color-mix(in srgb, var(--accent-wash) 45%, var(--surface)); }
+.sx-node.pair { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--accent); }
+/* trustee seats: an empty seat is a dashed box; a seat whose term ends at the next Conference is marked in amber */
+.sx-node.vacant { border-style: dashed; border-left-style: dashed; background: transparent; box-shadow: none; }
+.sx-node.vacant .sx-t { font-style: italic; color: var(--ink-2); }
+.sx-node.opening { border-left-color: var(--bd-soft-ink); }
+.sx-node.opening .sx-s { color: var(--bd-soft-ink); font-weight: 600; }
+.sx-node.has-vacant .sx-s { color: var(--critical-ink); }
+/* paid employees (green tint) and trustees emeriti (muted, dotted); a board member who is also a trustee carries the class
+   'linked' but no style of its own (the dashed line to the trustee seat shows the link) */
+.sx-node.paid { background: color-mix(in srgb, var(--good) 12%, var(--surface)); }
+.sx-node.paid:hover { background: color-mix(in srgb, var(--good) 18%, var(--surface-2)); }
+.sx-node.emeritus { border-style: dotted; border-left-style: solid; background: var(--surface-2); box-shadow: none; }
+.sx-node.emeritus .sx-t { color: var(--ink-2); }
+.sx-paid-t { color: var(--good-ink); font-weight: 600; }
+.sx-node.paid.sel, .sx-node.emeritus.sel { background: color-mix(in srgb, var(--accent-wash) 45%, var(--surface)); }   /* selection wins over the tint */
+.sx-node:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sx-tog { position: absolute; z-index: 3; transform: translate(-50%, -50%); min-width: 24px; height: 22px; padding: 0 5px; border-radius: 999px;
+  border: 1px solid var(--control); background: var(--surface); color: var(--ink-2); font: 600 .7rem/1 var(--font); cursor: pointer; }
+.sx-tog:hover { background: var(--surface-2); color: var(--ink); }
+.sx-tog::before { content: ""; position: absolute; inset: -5px -5px 0 -5px; }   /* a larger hit area, never over the box below */
+.sx-tog[aria-expanded="false"] { background: var(--accent-wash); color: var(--ink); border-color: transparent; }
+@media (max-width: 640px), (pointer: coarse) {
+  .sx-tog { min-width: 28px; height: 24px; font-size: .74rem; }
+  .sx-tog::before { inset: -8px -8px 0 -8px; }   /* a finger-sized hit area */
+}
+
+.sx-panel { position: sticky; top: calc(var(--stick-top, 100px) + 12px); max-height: calc(100vh - var(--stick-top, 100px) - 24px); overflow: auto; padding: 14px 16px; }
+.sx-panel h3 { margin: 4px 0 2px; display: block; }
+.sx-panel h4 { margin: 12px 0 4px; font-size: .9rem; }
+.sx-panel p { font-size: .9rem; }
+.sx-p-h { display: flex; align-items: center; gap: 8px; }
+.sx-p-h .sx-close { margin-left: auto; width: 40px; height: 40px; font-size: 14px; }
+.sx-crumbs { margin: 4px 0 8px; color: var(--muted); }
+.sx-how { margin: 6px 0 8px; padding-left: 18px; }
+.sx-how li + li { margin-top: 4px; }
+.sx-mini { border-collapse: collapse; width: 100%; font-size: .85rem; margin: 6px 0 8px; }
+.sx-mini caption { text-align: left; padding-bottom: 4px; }
+.sx-mini th, .sx-mini td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--grid); font-weight: 400; vertical-align: top; }
+.sx-mini td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.sx-mini tr.sx-tot > * { font-weight: 650; border-bottom: 0; border-top: 2px solid var(--axis); }
+
+/* member lists (panel and cards) */
+.sx-ml { list-style: none; margin: 4px 0 8px; padding: 0; font-size: .88rem; }
+.sx-ml li { padding: 3px 0; border-bottom: 1px solid var(--grid); }
+.sx-ml li:last-child { border-bottom: 0; }
+.sx-ml li.sx-mine { background: color-mix(in srgb, var(--warning) 14%, transparent); }
+.sx-ml .badge { font-size: .66rem; vertical-align: 1px; }
+.sx-ph { font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 650; margin-top: 8px; }
+
+/* ---------- pairs table ---------- */
+.sx-note { max-width: 860px; }
+table.t.sx-pt { table-layout: fixed; border-collapse: separate; border-spacing: 0; min-width: 820px; }
+table.t.sx-pt col.sx-c-cc { width: 21%; } table.t.sx-pt col.sx-c-tc { width: 25%; } table.t.sx-pt col.sx-c-ch { width: 16%; }
+table.t.sx-pt col.sx-c-n { width: 90px; } table.t.sx-pt col.sx-c-arr { width: 40px; }
+table.t.sx-pt th, table.t.sx-pt td { border-bottom: 1px solid var(--grid); border-right: 1px solid var(--grid); vertical-align: middle; overflow-wrap: break-word; }
+table.t.sx-pt tr > :last-child { border-right: 0; }
+table.t.sx-pt thead th { background: var(--surface-2); color: var(--ink-2); text-transform: none; letter-spacing: 0; font-size: .8rem; border-bottom: 2px solid var(--axis); vertical-align: bottom; }
+table.t.sx-pt tbody th { font-weight: 600; text-transform: none; letter-spacing: 0; font-size: .9rem; color: var(--ink); }
+table.t.sx-pt tbody th, table.t.sx-pt td.sx-tc { border-left: 4px solid var(--k); }
+table.t.sx-pt tbody th { --k: var(--sx-conf); } table.t.sx-pt td.sx-tc { --k: var(--sx-board); font-weight: 600; }
+table.t.sx-pt .sx-arr { text-align: center; color: var(--accent-ink); font-size: 1.05rem; padding-left: 0; padding-right: 0; }
+table.t.sx-pt td.sx-none { color: var(--muted); font-style: italic; font-size: .85rem; }
+table.t.sx-pt tr.sx-grp th { background: var(--surface-2); color: var(--ink-2); font-size: .72rem; text-transform: uppercase; letter-spacing: .04em; font-weight: 650;
+  border-left: 0; border-right: 0; padding: 8px 10px 6px; }
+table.t.sx-pt tbody tr.sx-grp:hover { background: none; }
+table.t.sx-pt tbody:last-child tr:last-child > * { border-bottom: 0; }
+.sx-pt-wrap { margin-bottom: 8px; }
+
+/* ---------- side-by-side cards ---------- */
+.sx-cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(min(560px, 100%), 1fr)); }
+.sx-cards.one { grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); }
+.sx-cards > .card + .card { margin-top: 0; }
+.sx-h3 { margin: 24px 0 10px; }
+.sx-pc { padding: 14px; }
+.sx-pc h3 { display: block; font-size: 1rem; margin-bottom: 10px; }
+.sx-pc .sx-arr-t { color: var(--accent-ink); margin: 0 2px; }
+.sx-pc.hit { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sx-pc:focus { outline: none; }
+.sx-pc.hit:focus { outline: 2px solid var(--accent); }
+.sx-pc-cols { display: grid; grid-template-columns: minmax(0, 1fr) 22px minmax(0, 1fr); gap: 8px; align-items: start; }
+.sx-pc.one .sx-pc-cols { grid-template-columns: minmax(0, 1fr); }
+.sx-pc-arr { align-self: center; text-align: center; color: var(--accent-ink); font-size: 1.1rem; }
+.sx-side { border-left: 4px solid var(--k); padding-left: 10px; min-width: 0; }
+.sx-sub + .sx-sub { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--grid); }
+.sx-sub h4 { margin: 0 0 2px; font-size: .9rem; }
+
+/* up to 1180px the chart takes the full width and the details open as a sheet at the bottom of the window
+   (a drawer on the right up to 1180px, the full width on phones); without a selection the panel sits under the chart */
+@media screen and (max-width: 1180px) {
+  .sx-layout { grid-template-columns: minmax(0, 1fr); }
+  .sx-panel { position: static; max-height: none; }
+  .sx-panel.open { position: fixed; z-index: 35; right: 12px; left: auto; bottom: 12px; top: auto; width: min(440px, calc(100vw - 24px));
+    max-height: 58vh; overflow: auto; box-shadow: 0 -4px 24px var(--edge-shadow); border-color: var(--axis); }
+}
+@media screen and (max-width: 760px) {
+  .sx-tools .sx-legend { width: 100%; }
+  .sx-frame { padding: 10px 6px; }
+  .sx-panel.open { left: 8px; right: 8px; bottom: 8px; width: auto; }
+  .sx-pc-cols { grid-template-columns: minmax(0, 1fr); }
+  .sx-pc-arr { transform: rotate(90deg); justify-self: start; margin-left: 8px; }
+}
+/* phones: the pairs table keeps only the two committees (chairs and counts are in the cards below) */
+@media screen and (max-width: 640px) {
+  table.t.sx-pt { min-width: 0; table-layout: auto; }
+  table.t.sx-pt .sx-ch, table.t.sx-pt .sx-n, table.t.sx-pt col { display: none; }
+}
+@media print {
+  .sx-tools, .sx-hint, .sx-tog, .sx-panel { display: none !important; }
+  .sx-layout { grid-template-columns: minmax(0, 1fr); }
+  .sx-frame { overflow: hidden; }   /* the canvas's untransformed box must not widen the printed page */
+  table.t.sx-pt { table-layout: auto; }   /* app.css drops the min-width in print; columns size to their text */
+}
+
+/* ---------- who can correct whom (toolbar toggle): arrows over the chart, or a vertical list ----------
+   Down arrows (authority to correct) in the critical ink, up arrows (checks kept) in the good ink; both have a text
+   glyph (↓ ↑) and a side of the boxes of their own, so colour is never the only cue. */
+.sx-page { --sx-dn: var(--critical-ink); --sx-up: var(--good-ink); }
+.sx-li-cc { display: none; }
+.cc-on .sx-li-cc { display: inline-flex; }
+.sx-key-dn, .sx-key-up { width: 20px; height: 0; border-radius: 0; background: none; border-top: 3px solid var(--sx-dn); vertical-align: 3px; }
+.sx-key-up { border-top-color: var(--sx-up); }
+.cc-on .sx-node.dim { opacity: .4; }
+.cc-on .sx-node.dim:hover, .cc-on .sx-node.dim:focus-visible, .cc-on .sx-node.dim.sel { opacity: 1; }
+.cc-on .sx-edges { opacity: .55; }
+.sx-node.cc-end { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--sx-dn); }
+.sx-node.cc-end.cc-up { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--sx-up); }
+.sx-cc-svg { position: absolute; left: 0; top: 0; z-index: 2; overflow: visible; pointer-events: none; }
+.sx-cc-svg path { fill: none; stroke-width: 2; stroke-linejoin: round; }
+.sx-cc-svg path.halo { stroke: var(--page); stroke-width: 6; opacity: .9; }
+.sx-cc-svg .dn path:not(.halo) { stroke: var(--sx-dn); } .sx-cc-svg .dn polygon, .sx-cc-svg .dn circle { fill: var(--sx-dn); }
+.sx-cc-svg .up path:not(.halo) { stroke: var(--sx-up); } .sx-cc-svg .up polygon, .sx-cc-svg .up circle { fill: var(--sx-up); }
+.sx-cc-svg.picked g:not(.on) { opacity: .3; }
+.sx-cc-svg g.on path:not(.halo) { stroke-width: 3.5; }
+.sx-ccg { position: absolute; z-index: 4; display: flex; flex-direction: column; gap: 4px; width: max-content; max-width: 196px; }
+.sx-ccl { font: 600 .74rem/1.25 var(--font); text-align: left; cursor: pointer; padding: 3px 7px 3px 6px; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--k2); border-left-width: 4px; border-radius: 6px; box-shadow: var(--shadow); }
+.sx-ccl.dn { --k2: var(--sx-dn); } .sx-ccl.up { --k2: var(--sx-up); }
+.sx-ccl:hover { background: var(--surface-2); }
+.sx-ccl.on { background: color-mix(in srgb, var(--k2) 14%, var(--surface)); box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--k2); }
+.sx-ccl:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.sx-cca { margin-right: 4px; color: var(--k2); font-weight: 700; }
+.sx-cc-nav { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-top: 12px; padding-top: 8px; border-top: 1px solid var(--grid); }
+.sx-cc-nav > :last-child { text-align: right; }
+/* the vertical list: the levels as rungs, each arrow in the gap above the lower of its two levels */
+.sx-ladder { display: none; margin: 0 0 12px; padding: 10px 12px; border: 1px solid var(--grid); border-radius: 8px; background: var(--surface); }
+.cc-on.cc-list .sx-ladder { display: block; }
+.sx-ladder h3 { display: block; margin: 0 0 4px; font-size: 1rem; }
+.sx-ladder > p { margin: 0 0 8px; }
+.sx-lad { list-style: none; margin: 0; padding: 0; }
+.sx-lad-lv { font-weight: 650; font-size: .9rem; padding: 6px 10px; border-left: 4px solid var(--k, var(--muted)); background: var(--surface-2); border-radius: 6px; }
+.sx-lad-lv .small { font-weight: 400; }
+.sx-lad-gap > ul { list-style: none; display: grid; gap: 6px; margin: 0 0 0 14px; padding: 8px 0 8px 14px; border-left: 2px solid var(--axis); }
+.sx-lad-gap li { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; min-width: 0; }
+.sx-lad-x { display: none; flex-basis: 100%; color: var(--ink-2); }
+@media (max-width: 640px), (pointer: coarse) {
+  .sx-ladder .sx-ccl { min-height: 36px; font-size: .8rem; }
+}
+@media print {
+  .cc-on .sx-ladder { display: block !important; break-inside: auto; }
+  .sx-lad-x { display: block; }
+  .sx-lad-pick { display: none; }
+  .sx-lad-gap li { break-inside: avoid; }
+  .sx-ccl { box-shadow: none; }
+  .sx-cc-svg, .sx-ccg { display: none !important; }
+  .cc-on .sx-node.dim, .cc-on .sx-edges { opacity: 1; }
+}

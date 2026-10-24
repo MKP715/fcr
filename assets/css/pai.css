@@ -1,0 +1,309 @@
+/* Proposed Agenda Items page (view-pai.js). Class prefix pai-. Colours only from the shared tokens in assets/app.css:
+   one series (and "this cycle") = --accent; exact copies = --s2, the lighter step of the same blue (light) / the dimmer one
+   (dark); context (last cycle, earlier years) = gray: --axis in light, --muted in dark (where --axis all but vanishes on
+   the surface). Text is always in ink tokens, never in a series colour. Marks: bars <= 20px, 4px rounded data end, square
+   baseline, 2px surface gap between touching segments, hairline solid grid. */
+.pai-page { --pai-a: var(--accent); --pai-b: var(--s2); --pai-c: var(--axis); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .pai-page { --pai-c: var(--muted); } }
+:root[data-theme="dark"] .pai-page { --pai-c: var(--muted); }
+
+.pai-sr, .pai-page .pai-live { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; margin: 0; padding: 0; }
+.pai-page h2.section-title { scroll-margin-top: calc(var(--stick-top, 100px) + 12px); }
+/* keyboard focus (Tab / Shift+Tab) never parks a control under the sticky top bar and tabs. Not html{scroll-padding-top}:
+   that would double the offset of every scrollIntoView and anchor jump. [tabindex="0"] only: tabindex=-1 sections keep app.css's. */
+.pai-page :is(a[href], button, summary, input, select, [tabindex="0"]) { scroll-margin-top: calc(var(--stick-top, 100px) + 12px); }
+.pai-sec { margin-top: 8px; }
+.pai-h3 { margin: 22px 0 8px; font-size: 1.06rem; }
+.pai-page .callout { max-width: 110ch; }
+.pai-page button.chip { font: inherit; font-size: .78rem; cursor: pointer; text-align: left; }
+.pai-page button.chip:hover { border-color: var(--axis); color: var(--ink); }
+
+/* ---------- where things stand: the stepper ---------- */
+.pai-now { margin: 4px 0 16px; }
+.pai-now h2 { font-size: 1.2rem; margin: 0 0 10px; }
+.pai-steps-wrap { overflow-x: auto; }
+.pai-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--n), minmax(92px, 1fr)); min-width: calc(var(--n) * 92px); }
+.pai-step { position: relative; min-width: 0; }
+.pai-step::before, .pai-step::after { content: ""; position: absolute; top: 12px; height: 2px; background: var(--axis); }
+.pai-step::before { left: 0; right: 50%; }
+.pai-step::after { left: 50%; right: 0; }
+.pai-step:first-child::before, .pai-step:last-child::after { display: none; }
+.pai-step.done::before, .pai-step.done::after, .pai-step.now::before { background: var(--accent); }
+.pai-step a { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1px;
+  min-height: 32px; padding: 28px 4px 6px; border-radius: 8px; color: var(--ink); }
+.pai-step a:hover { text-decoration: none; background: var(--surface-2); }
+.pai-step a:focus-visible { outline-offset: -2px; }
+.pai-dot { position: absolute; top: 6px; left: 50%; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: var(--surface); border: 2px solid var(--control); }
+.pai-step.done .pai-dot { background: var(--accent); border-color: var(--accent); }
+.pai-step.next .pai-dot { border-color: var(--accent); }
+.pai-step.now .pai-dot { top: 4px; width: 18px; height: 18px; margin-left: -9px; border: 4px solid var(--accent); box-shadow: 0 0 0 3px var(--accent-wash); }
+.pai-st-t { font-size: .82rem; font-weight: 650; line-height: 1.2; }
+.pai-st-s { font-size: .72rem; line-height: 1.2; color: var(--muted); }
+.pai-st-d { margin-top: 2px; font-size: .74rem; line-height: 1.25; color: var(--ink-2); }
+.pai-step.done .pai-st-t { color: var(--ink-2); font-weight: 600; }
+.pai-st-now { display: inline-block; padding: 0 5px; border-radius: 4px; background: var(--accent-fill); color: #fff; font-size: .66rem; font-weight: 700; vertical-align: 1px; }
+.pai-today { margin: 12px 0 6px; }
+.pai-asof { margin: 0 0 6px; padding-left: 8px; border-left: 3px solid var(--warning); color: var(--ink-2); }
+.pai-now > p.small.muted { margin: 0; }
+
+/* ---------- stat tiles: 5 in a row, 3 + 2 on tablets, 2 + 2 + 1 on phones ---------- */
+.grid.g4.pai-kpis { grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0 0 8px; }
+@media (max-width: 1100px) {
+  .grid.g4.pai-kpis { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .grid.g4.pai-kpis > * { grid-column: span 2; }
+  .grid.g4.pai-kpis > :nth-child(n+4) { grid-column: span 3; }
+}
+@media (max-width: 640px) {
+  .grid.g4.pai-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid.g4.pai-kpis > *, .grid.g4.pai-kpis > :nth-child(n+4) { grid-column: auto; }
+  .grid.g4.pai-kpis > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
+/* ---------- what stands out ---------- */
+.pai-obs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(440px, 100%), 1fr)); gap: 12px 24px; }
+.pai-obs li { padding: 2px 0 2px 12px; border-left: 3px solid var(--axis); color: var(--ink-2); font-size: .9rem; line-height: 1.45; min-width: 0; overflow-wrap: break-word; }
+.pai-obs li > strong { display: block; margin-bottom: 2px; color: var(--ink); font-size: .95rem; font-weight: 650; }
+.pai-page details.pai-obs-more { margin-top: 12px; padding: 0; border: 0; background: none; }
+.pai-obs-more > summary { margin-bottom: 10px; font-size: .9rem; color: var(--accent-ink); }
+
+/* ---------- trends: chart cards ---------- */
+.pai-trends { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.pai-trends > .card + .card { margin-top: 0; }
+.pai-c-themes { grid-row: span 2; }
+.pai-c-wide { grid-column: 1 / -1; }
+@media (max-width: 1100px) { .pai-trends { grid-template-columns: minmax(0, 1fr); } .pai-c-themes { grid-row: auto; } }
+.pai-chart { min-width: 0; }
+.pai-page .pai-chart h3 { display: block; margin: 0 0 4px; }
+.pai-chart > p { margin: 0 0 8px; }
+.pai-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 4px 0 10px; font-size: .8rem; color: var(--ink-2); }
+.pai-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.pai-sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; }
+.pai-sw.a { background: var(--pai-a); }
+.pai-sw.b { background: var(--pai-b); }
+.pai-sw.c { background: var(--pai-c); }
+.pai-tbl { margin-top: 10px; border: 0; padding: 0; background: none; }
+.pai-tbl > summary { font-size: .84rem; font-weight: 600; color: var(--accent-ink); }
+.pai-tbl .table-wrap { margin-top: 6px; }
+.pai-subh { margin: 14px 0 4px; font-size: .9rem; }
+
+/* horizontal bars: label | bar + value at the tip (the bar scale leaves --room for the value) */
+.pai-hbars { --lab: 14em; --room: 7.5em; }
+.pai-sbars { --lab: 15em; --room: 6.5em; }
+.pai-gbars { --lab: 12em; --room: 9em; }
+.pai-fam + .pai-fam { margin-top: 10px; }
+.pai-famh { margin: 0 0 2px; font-size: .74rem; font-weight: 650; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.pai-hrow, .pai-grow { display: grid; grid-template-columns: var(--lab) minmax(0, 1fr); align-items: center; gap: 0 10px;
+  width: calc(100% + 12px); margin: 0 -6px; padding: 4px 6px; border-radius: 6px; }
+button.pai-hrow { font: inherit; color: inherit; background: none; border: 0; text-align: left; cursor: pointer; }
+button.pai-hrow:hover { background: var(--surface-2); }
+button.pai-hrow:focus-visible { outline-offset: -2px; }
+.pai-hlab { min-width: 0; font-size: .84rem; line-height: 1.25; color: var(--ink); overflow-wrap: break-word; }
+.pai-hlab small { display: block; font-size: .74rem; color: var(--muted); }
+.pai-hlab a { color: var(--ink); text-decoration: underline dotted var(--control); text-underline-offset: 3px; }   /* chart text stays in ink */
+.pai-hlab a:hover { color: var(--accent-ink); }
+.pai-track { display: flex; align-items: center; min-width: 0; height: 20px; }
+.pai-seg { flex: none; height: 14px; width: calc((100% - var(--room)) * var(--w)); background: var(--pai-a); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.pai-seg.b { background: var(--pai-b); margin-left: 2px; }
+.pai-seg.c { background: var(--pai-c); }
+.pai-seg.end { border-radius: 0 4px 4px 0; }
+/* plain bar charts: the whole track is the hover / focus target (a larger hit area than the mark; zero values included) */
+.pai-track[data-tip] { border-radius: 3px; cursor: default; }
+.pai-track[data-tip]:hover { background: color-mix(in srgb, var(--surface-2) 70%, transparent); }
+.pai-track[tabindex]:focus-visible { outline-offset: 1px; }
+.pai-val { flex: none; padding-left: 6px; font-size: .78rem; color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pai-pair { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.pai-gbars .pai-track { height: 14px; }   /* taller than its 10px mark: the track is the hit area */
+.pai-gbars .pai-seg { height: 10px; }
+.pai-gbars .pai-grow { padding: 5px 6px; }
+
+/* columns: y gridlines (hairline), x month ticks, markers for the June grid and the deadline */
+.pai-cols { --yw: 28px; position: relative; margin-top: 4px; }
+.pai-plot { position: relative; height: 170px; margin: 20px 0 0 var(--yw); border-bottom: 1px solid var(--axis); }
+.pai-gl { position: absolute; left: 0; right: 0; bottom: calc(var(--y) * 100%); border-top: 1px solid var(--grid); }
+.pai-gl b { position: absolute; right: calc(100% + 5px); top: -.65em; font-size: .7rem; font-weight: 400; line-height: 1.2; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pai-bars { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); grid-template-rows: 100%; }
+.pai-slot { position: relative; display: flex; align-items: flex-end; justify-content: center; height: 100%; min-width: 0; border-radius: 3px; }
+.pai-slot[tabindex]:hover { background: color-mix(in srgb, var(--surface-2) 70%, transparent); }
+.pai-slot:focus-visible { outline-offset: -1px; }
+.pai-col { width: min(16px, calc(100% - 2px)); height: calc(var(--h) * 100%); border-radius: 4px 4px 0 0; background: var(--pai-a); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.pai-col.ctx { background: var(--pai-c); }
+.pai-cap { position: absolute; left: 50%; bottom: calc(var(--h) * 100% + 2px); transform: translateX(-50%); font-size: .72rem; line-height: 1.1; color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pai-mark { position: absolute; top: -8px; bottom: -22px; left: calc(var(--x) * 100%); border-left: 1px solid var(--ink-2); pointer-events: none; }
+.pai-mark.end { left: auto; right: 0; top: 100%; bottom: -22px; }   /* the plot's right edge is the deadline: only a tick down to its label */
+.pai-xaxis, .pai-annots { position: relative; height: 18px; margin-left: var(--yw); }
+.pai-tick { position: absolute; top: 0; height: 4px; left: calc(var(--x) * 100%); border-left: 1px solid var(--axis); }
+.pai-xl { position: absolute; top: 3px; left: calc(var(--x) * 100%); transform: translateX(-50%); font-size: .72rem; color: var(--muted); white-space: nowrap; }
+.pai-annots { margin-top: 4px; }
+.pai-annot { position: absolute; top: 0; left: calc(var(--x) * 100%); transform: translateX(-50%); padding: 0 4px; background: var(--surface); font-size: .74rem; color: var(--ink-2); white-space: nowrap; }
+.pai-annot.end { left: auto; right: 0; transform: none; padding-right: 0; }
+/* per-Conference totals: every value labelled on its cap, so no y axis; empty years say so */
+.pai-ycols { --yw: 0px; }
+.pai-ycols .pai-plot { height: 150px; }
+.pai-ycols .pai-col { width: min(20px, calc(100% - 6px)); }
+.pai-gaplab { margin-bottom: 4px; writing-mode: vertical-rl; transform: rotate(180deg); font-size: .68rem; line-height: 1.1; color: var(--muted); white-space: nowrap; }
+.pai-yaxis { display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); margin-top: 3px; text-align: center; font-size: .74rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.pai-yl.cur { color: var(--ink); font-weight: 650; }
+.pai-short { display: none; }
+
+/* areas named in the grid; clusters */
+.pai-areas { list-style: none; margin: 0; padding: 0; }
+.pai-areas li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; padding: 5px 0; border-bottom: 1px solid var(--grid); font-size: .88rem; }
+.pai-areas li:last-child { border-bottom: 0; }
+.pai-areas li.pai-mine { margin: 0 -6px; padding-left: 6px; padding-right: 6px; border-radius: 6px; background: color-mix(in srgb, var(--accent-wash) 45%, transparent); }
+.pai-areas li.pai-mine .muted { color: var(--ink-2); }
+.pai-page .badge.pai-myr { background: var(--accent-wash); color: var(--ink); border-color: transparent; }
+.pai-nums { display: inline-flex; flex-wrap: wrap; gap: 2px 8px; }
+.pai-nums a { font-variant-numeric: tabular-nums; }
+.pai-cl td:first-child { min-width: 220px; }
+.pai-cl td:last-child { min-width: 180px; }
+
+/* ---------- themes explained ---------- */
+.pai-tfam + .pai-tfam { margin-top: 10px; }
+.pai-tfam .pai-h3 { margin-top: 18px; }
+.pai-page details.pai-theme { padding: 0; }
+.pai-page .pai-theme + .pai-theme { margin-top: 8px; }
+.pai-theme > summary { padding: 11px 16px; }
+.pai-th-name { font-size: 1rem; }
+.pai-th-n { font-weight: 400; }
+.pai-theme[open] > summary { border-bottom: 1px solid var(--grid); }
+.pai-th-body { padding: 6px 16px 14px; }
+.pai-th-body > p { margin: 6px 0; }
+.pai-th-body .pai-lede { font-size: .98rem; }
+.pai-th-body h5 { margin: 14px 0 4px; font-size: .9rem; font-weight: 650; line-height: 1.25; }   /* app.css styles h1–h4 only */
+.pai-th-body ul, .pai-th-body ol { margin: 0; padding-left: 20px; }
+.pai-th-body li + li { margin-top: 5px; }
+.pai-th-body li { max-width: 110ch; }
+.pai-aa { list-style: none; margin: 4px 0 0; padding: 0 !important; }
+.pai-aa li { padding-left: 10px; border-left: 2px solid var(--grid); color: var(--ink-2); }
+.pai-aa li + li { margin-top: 3px; }
+.pai-th-body .pai-nums { margin: 4px 0 6px; }
+.pai-learn { margin-top: 12px; }
+.pai-theme:focus-visible { outline-offset: 1px; }
+
+/* ---------- all proposals ---------- */
+.pai-controls .pai-q { flex: 1 1 300px; }
+.pai-controls .pai-q input { flex: 1 1 auto; width: 100%; }
+.pai-controls select { width: auto; max-width: 17em; }   /* a fixed cap: a % cap does not limit the label's own width */
+.pai-gnote { margin: 6px 0 0; max-width: 110ch; }
+.pai-count { margin: 4px 0 8px; }
+.pai-group { margin-top: 14px; }
+.pai-gh { display: flex; align-items: baseline; gap: 10px; margin: 0 0 4px; padding-bottom: 4px; border-bottom: 2px solid var(--axis); font-size: 1rem; }
+.pai-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(520px, 100%), 1fr)); gap: 0 24px; }
+.pai-row { min-width: 0; padding: 10px 0; border-bottom: 1px solid var(--grid); overflow-wrap: break-word; }
+.pai-row.pai-hit { padding-left: 10px; padding-right: 8px; border-radius: 6px; background: color-mix(in srgb, var(--accent-wash) 40%, transparent); box-shadow: inset 3px 0 0 var(--accent); }
+/* the deep-linked row opens its details: it takes the full row of the two-column list, so its neighbour does not stretch
+   (not :has(details[open]): that would reflow a row in column 2 out from under the reader's click) */
+.pai-row.pai-hit { grid-column: 1 / -1; }
+.pai-row.pai-hit > * { max-width: 110ch; }
+.pai-row:focus-visible { outline-offset: 1px; }
+.pai-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 6px; color: var(--ink-2); }
+.pai-num { font-weight: 650; font-variant-numeric: tabular-nums; }
+.pai-title { margin: 3px 0 2px; font-size: 1rem; }
+.pai-row.pai-off .pai-title { color: var(--ink-2); }
+.pai-sum { margin: 0 0 6px; }
+.pai-outc { margin: -2px 0 6px; }
+.pai-chips { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0; }
+.pai-fchip.main { border-color: var(--axis); color: var(--ink); }
+.pai-from, .pai-same, .pai-guess { margin-top: 3px; color: var(--ink-2); }
+.pai-gtag { display: inline-block; margin-right: 4px; padding: 0 6px; border: 1px dashed var(--control); border-radius: 4px; font-size: .68rem; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); cursor: help; }
+.pai-page .badge.pai-st { background: transparent; border: 1px solid currentColor; color: var(--ink-2); }
+.pai-page .badge.pai-st-deferred { color: var(--accent-ink); }
+.pai-page details.pai-more { margin-top: 6px; padding: 0; border: 0; background: none; }
+.pai-more > summary { font-size: .84rem; font-weight: 600; color: var(--accent-ink); }
+.pai-more h5 { margin: 8px 0 2px; font-size: .8rem; font-weight: 650; color: var(--ink-2); }
+.pai-more p { margin: 0 0 4px; font-size: .9rem; }
+.pai-more .pai-aa, .pai-resp { font-size: .86rem; }
+.pai-resp { margin: 0; padding-left: 18px; }
+.pai-src { margin: 8px 0 0; }
+.pai-printnote { display: none; }
+.pai-srcline { margin-top: 24px; }
+
+/* ---------- last cycle; how a proposal travels ---------- */
+.pai-fw td:nth-child(2) { min-width: 200px; }
+.pai-fw td:nth-child(4) { min-width: 320px; }
+.pai-notes { margin: 0; padding-left: 20px; }
+.pai-notes li { max-width: 110ch; }
+.pai-notes li + li { margin-top: 6px; }
+.pai-page details.pai-moren, .pai-page details.pai-facts { margin-top: 10px; }
+.pai-facts ul { margin: 6px 0 4px; padding-left: 20px; }
+.pai-facts li + li { margin-top: 5px; }
+.pai-facts li, .pai-facts p { max-width: 110ch; }
+.pai-links { margin: 0 0 12px; }
+.pai-proc { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 16px 28px; align-items: start; }
+@media (max-width: 1000px) { .pai-proc { grid-template-columns: minmax(0, 1fr); } }
+.pai-steplist { margin: 0; padding-left: 24px; }
+.pai-steplist li + li { margin-top: 8px; }
+.pai-steplist p { margin: 2px 0 0; font-size: .92rem; color: var(--ink-2); }
+.pai-proc-side > .card + .card { margin-top: 16px; }
+.pai-statuses dl { margin: 0; }
+.pai-statuses dt { margin-top: 10px; font-weight: 650; }
+.pai-statuses dt:first-child { margin-top: 0; }
+.pai-statuses dd { margin: 2px 0 0; font-size: .88rem; color: var(--ink-2); }
+
+/* ---------- phones ---------- */
+@media (max-width: 640px) {
+  /* the stepper runs down the page: dot and line on the left */
+  .pai-steps { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+  .pai-step::before, .pai-step::after { left: 15px; right: auto; width: 2px; height: auto; }
+  .pai-step::before { top: 0; bottom: 50%; }
+  .pai-step::after { top: 50%; bottom: 0; }
+  .pai-step a { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 0 8px; text-align: left; min-height: 40px; padding: 6px 6px 6px 36px; }
+  .pai-dot, .pai-step.now .pai-dot { top: 50%; left: 16px; margin-top: -7px; }
+  .pai-step.now .pai-dot { margin-top: -9px; margin-left: -9px; }
+  .pai-st-d { flex-basis: 100%; margin-top: 0; }
+  /* bars: the label above the bar, so the bar gets the full width */
+  .pai-hbars, .pai-sbars, .pai-gbars { --room: 7.5em; }
+  .pai-gbars { --room: 9em; }
+  .pai-hrow, .pai-grow { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .pai-cols { --yw: 24px; }
+  .pai-ycols { --yw: 0px; }
+  .pai-long { display: none; }
+  .pai-short { display: inline; }
+  .pai-controls label { flex: 1 1 100%; }
+  .pai-controls label.pai-lab { display: grid; grid-template-columns: 4.2em minmax(0, 1fr); }   /* the controls line up */
+  .pai-controls label > select { max-width: none; width: 100%; }
+  .pai-cl td:first-child { min-width: 160px; }
+  /* last cycle's forwarded items: one block per item instead of a wide table */
+  .pai-fw-wrap table.t.pai-fw thead { display: none; }
+  .pai-fw-wrap table.t.pai-fw, .pai-fw tbody, .pai-fw tr, .pai-fw td { display: block; width: 100%; min-width: 0 !important; }
+  .pai-fw tr { padding: 8px 0; border-bottom: 1px solid var(--grid); }
+  .pai-fw-wrap table.t.pai-fw td { padding: 2px 10px; border: 0; text-align: left; }
+  .pai-fw td:first-child::before { content: "Item "; color: var(--muted); }
+  .pai-fw td:nth-child(2) { font-weight: 600; }
+  .pai-fw td:nth-child(3)::before { content: "Heard by: "; color: var(--muted); }
+  .pai-proc .pai-steplist { padding-left: 20px; }
+  .pai-cap.opt { display: none; }   /* too narrow for a second label beside the tallest column */
+  .pai-th-n { display: block; padding-left: 1.1em; }
+  /* clusters: one block per group */
+  .pai-cl thead { display: none; }
+  .pai-page table.t.pai-cl, .pai-cl tbody { display: block; width: 100%; }
+  .pai-cl tr { display: flex; flex-wrap: wrap; gap: 0 10px; padding: 8px 10px; border-bottom: 1px solid var(--grid); }
+  .pai-page table.t.pai-cl td { display: block; padding: 0; border: 0; min-width: 0 !important; text-align: left; }
+  .pai-cl td:first-child, .pai-cl td:last-child { flex-basis: 100%; }
+  .pai-cl td[data-s] { color: var(--ink-2); font-size: .84rem; }
+  .pai-cl td[data-s]::after { content: " " attr(data-s); }
+}
+@media (max-width: 640px), (pointer: coarse) {
+  /* 32px tap targets; board labels (tooltip spans) match the committee links so the bar rows keep one rhythm */
+  .pai-nums a, .pai-meta .pai-num, .pai-hlab a, .pai-hlab > span[data-tip], .pai-areas li > a, .pai-from a { display: inline-flex; align-items: center; min-height: 32px; }
+  .pai-page button.chip { min-height: 32px; }
+  .pai-tbl > summary, .pai-more > summary { min-height: 40px; }
+}
+
+/* ---------- print: charts and the stepper keep their colours; no controls, no table twins ---------- */
+@media print {
+  .pai-controls, .pai-page .rp-jump, #pai-more, .pai-tbl, .pai-show, .pai-live { display: none !important; }
+  .pai-dot, .pai-st-now, .pai-sw, .pai-step::before, .pai-step::after { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .pai-steps-wrap { overflow: visible !important; }
+  .pai-steps { min-width: 0; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); }
+  .pai-st-t { font-size: 7pt; } .pai-st-s, .pai-st-d { font-size: 6.5pt; }
+  .pai-trends { grid-template-columns: minmax(0, 1fr); }
+  .pai-c-themes { grid-row: auto; }
+  .pai-proc { grid-template-columns: minmax(0, 1fr); }
+  .pai-obs { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .pai-page .pai-theme, .pai-c-themes, .pai-now { break-inside: auto; }
+  .pai-row, .pai-obs li, .pai-steplist li, .pai-grow, .pai-hrow { break-inside: avoid; }
+  .pai-gh, .pai-famh, .pai-h3, .pai-th-body h5 { break-after: avoid; }
+  .pai-row.pai-hit { background: none; box-shadow: none; padding-left: 0; }
+  .pai-printnote { display: block; }
+}

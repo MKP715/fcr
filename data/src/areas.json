@@ -1,0 +1,1060 @@
+{
+ "regions": [
+  {
+   "id": "EC",
+   "name": "East Central"
+  },
+  {
+   "id": "NE",
+   "name": "Northeast"
+  },
+  {
+   "id": "SE",
+   "name": "Southeast"
+  },
+  {
+   "id": "WC",
+   "name": "West Central"
+  },
+  {
+   "id": "SW",
+   "name": "Southwest"
+  },
+  {
+   "id": "PA",
+   "name": "Pacific"
+  },
+  {
+   "id": "ECAN",
+   "name": "Eastern Canada"
+  },
+  {
+   "id": "WCAN",
+   "name": "Western Canada"
+  }
+ ],
+ "areas": [
+  {
+   "n": 1,
+   "name": "Alabama/Northwest Florida",
+   "short": "AL/NW FL",
+   "state": "AL",
+   "lat": 32.6,
+   "lng": -86.7,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 2,
+   "name": "Alaska",
+   "short": "Alaska",
+   "state": "AK",
+   "lat": 62.0,
+   "lng": -149.8,
+   "region": "PA",
+   "country": "US"
+  },
+  {
+   "n": 3,
+   "name": "Arizona",
+   "short": "Arizona",
+   "state": "AZ",
+   "lat": 34.2,
+   "lng": -111.7,
+   "region": "PA",
+   "country": "US"
+  },
+  {
+   "n": 4,
+   "name": "Arkansas",
+   "short": "Arkansas",
+   "state": "AR",
+   "lat": 34.8,
+   "lng": -92.4,
+   "region": "SW",
+   "country": "US"
+  },
+  {
+   "n": 5,
+   "name": "Southern California",
+   "short": "So. California",
+   "state": "CA",
+   "lat": 34.15,
+   "lng": -118.4,
+   "region": "PA",
+   "country": "US"
+  },
+  {
+   "n": 6,
+   "name": "Northern Coastal California",
+   "short": "N. Coastal CA",
+   "state": "CA",
+   "lat": 38.0,
+   "lng": -122.6,
+   "region": "PA",
+   "country": "US",
+   "aka": [
+    "CNCA"
+   ],
+   "aka_source": "website cnca06.org; panel_elects.json \"Northern Coastal California (CNCA)\""
+  },
+  {
+   "n": 7,
+   "name": "Northern Interior California",
+   "short": "N. Interior CA",
+   "state": "CA",
+   "lat": 39.5,
+   "lng": -121.3,
+   "region": "PA",
+   "country": "US",
+   "aka": [
+    "CNIA"
+   ],
+   "aka_source": "website cnia.org"
+  },
+  {
+   "n": 8,
+   "name": "San Diego/Imperial California",
+   "short": "San Diego/Imperial",
+   "state": "CA",
+   "lat": 32.85,
+   "lng": -116.5,
+   "region": "PA",
+   "country": "US"
+  },
+  {
+   "n": 9,
+   "name": "Mid-Southern California",
+   "short": "Mid-So. California",
+   "state": "CA",
+   "lat": 33.85,
+   "lng": -117.3,
+   "region": "PA",
+   "country": "US",
+   "aka": [
+    "MSCA"
+   ],
+   "aka_source": "website msca09aa.org"
+  },
+  {
+   "n": 10,
+   "name": "Colorado",
+   "short": "Colorado",
+   "state": "CO",
+   "lat": 39.0,
+   "lng": -105.5,
+   "region": "SW",
+   "country": "US"
+  },
+  {
+   "n": 11,
+   "name": "Connecticut",
+   "short": "Connecticut",
+   "state": "CT",
+   "lat": 41.6,
+   "lng": -72.7,
+   "region": "NE",
+   "country": "US"
+  },
+  {
+   "n": 12,
+   "name": "Delaware",
+   "short": "Delaware",
+   "state": "DE",
+   "lat": 39.0,
+   "lng": -75.5,
+   "region": "NE",
+   "country": "US"
+  },
+  {
+   "n": 13,
+   "name": "District of Columbia",
+   "short": "D.C.",
+   "state": "DC",
+   "lat": 38.9,
+   "lng": -77.0,
+   "region": "NE",
+   "country": "US",
+   "aka": [
+    "WAGSA"
+   ],
+   "aka_source": "panel_elects.json \"District of Columbia (WAGSA)\""
+  },
+  {
+   "n": 14,
+   "name": "North Florida",
+   "short": "North Florida",
+   "state": "FL",
+   "lat": 29.8,
+   "lng": -82.6,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 15,
+   "name": "South Florida/Bahamas/Virgin Islands/Antigua/St. Maarten/Cayman Islands",
+   "short": "So. Florida/Bahamas/VI",
+   "state": "FL",
+   "lat": 26.4,
+   "lng": -80.6,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 16,
+   "name": "Georgia",
+   "short": "Georgia",
+   "state": "GA",
+   "lat": 32.7,
+   "lng": -83.4,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 17,
+   "name": "Hawaii",
+   "short": "Hawaii",
+   "state": "HI",
+   "lat": 20.8,
+   "lng": -157.0,
+   "region": "PA",
+   "country": "US"
+  },
+  {
+   "n": 18,
+   "name": "Idaho",
+   "short": "Idaho",
+   "state": "ID",
+   "lat": 44.3,
+   "lng": -114.6,
+   "region": "PA",
+   "country": "US"
+  },
+  {
+   "n": 19,
+   "name": "Chicago, Illinois",
+   "short": "Chicago",
+   "state": "IL",
+   "lat": 41.85,
+   "lng": -87.75,
+   "region": "EC",
+   "country": "US"
+  },
+  {
+   "n": 20,
+   "name": "Northern Illinois",
+   "short": "N. Illinois",
+   "state": "IL",
+   "lat": 41.9,
+   "lng": -89.2,
+   "region": "EC",
+   "country": "US",
+   "aka": [
+    "NIA"
+   ],
+   "aka_source": "website aa-nia.org"
+  },
+  {
+   "n": 21,
+   "name": "Southern Illinois",
+   "short": "S. Illinois",
+   "state": "IL",
+   "lat": 39.2,
+   "lng": -89.4,
+   "region": "EC",
+   "country": "US"
+  },
+  {
+   "n": 22,
+   "name": "Northern Indiana",
+   "short": "N. Indiana",
+   "state": "IN",
+   "lat": 41.2,
+   "lng": -86.2,
+   "region": "EC",
+   "country": "US"
+  },
+  {
+   "n": 23,
+   "name": "Southern Indiana",
+   "short": "S. Indiana",
+   "state": "IN",
+   "lat": 39.2,
+   "lng": -86.4,
+   "region": "EC",
+   "country": "US"
+  },
+  {
+   "n": 24,
+   "name": "Iowa",
+   "short": "Iowa",
+   "state": "IA",
+   "lat": 42.0,
+   "lng": -93.5,
+   "region": "WC",
+   "country": "US"
+  },
+  {
+   "n": 25,
+   "name": "Kansas",
+   "short": "Kansas",
+   "state": "KS",
+   "lat": 38.5,
+   "lng": -98.4,
+   "region": "SW",
+   "country": "US"
+  },
+  {
+   "n": 26,
+   "name": "Kentucky",
+   "short": "Kentucky",
+   "state": "KY",
+   "lat": 37.5,
+   "lng": -85.3,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 27,
+   "name": "Louisiana",
+   "short": "Louisiana",
+   "state": "LA",
+   "lat": 31.0,
+   "lng": -92.0,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 28,
+   "name": "Maine",
+   "short": "Maine",
+   "state": "ME",
+   "lat": 45.3,
+   "lng": -69.2,
+   "region": "NE",
+   "country": "US"
+  },
+  {
+   "n": 29,
+   "name": "Maryland",
+   "short": "Maryland",
+   "state": "MD",
+   "lat": 39.3,
+   "lng": -76.9,
+   "region": "NE",
+   "country": "US"
+  },
+  {
+   "n": 30,
+   "name": "Eastern Massachusetts",
+   "short": "E. Massachusetts",
+   "state": "MA",
+   "lat": 42.3,
+   "lng": -71.3,
+   "region": "NE",
+   "country": "US",
+   "aka": [
+    "EMass"
+   ],
+   "aka_source": "website aaemass.org"
+  },
+  {
+   "n": 31,
+   "name": "Western Massachusetts",
+   "short": "W. Massachusetts",
+   "state": "MA",
+   "lat": 42.35,
+   "lng": -72.7,
+   "region": "NE",
+   "country": "US"
+  },
+  {
+   "n": 32,
+   "name": "Central Michigan",
+   "short": "Central Michigan",
+   "state": "MI",
+   "lat": 43.0,
+   "lng": -84.7,
+   "region": "EC",
+   "country": "US",
+   "aka": [
+    "CMIA"
+   ],
+   "aka_source": "website cmia32.org"
+  },
+  {
+   "n": 33,
+   "name": "Southeast Michigan",
+   "short": "SE Michigan",
+   "state": "MI",
+   "lat": 42.5,
+   "lng": -83.3,
+   "region": "EC",
+   "country": "US",
+   "aka": [
+    "SEMI"
+   ],
+   "aka_source": "website aa-semi.org"
+  },
+  {
+   "n": 34,
+   "name": "Western Michigan",
+   "short": "W. Michigan",
+   "state": "MI",
+   "lat": 44.0,
+   "lng": -85.7,
+   "region": "EC",
+   "country": "US"
+  },
+  {
+   "n": 35,
+   "name": "Northern Minnesota",
+   "short": "N. Minnesota",
+   "state": "MN",
+   "lat": 46.9,
+   "lng": -94.4,
+   "region": "WC",
+   "country": "US"
+  },
+  {
+   "n": 36,
+   "name": "Southern Minnesota",
+   "short": "S. Minnesota",
+   "state": "MN",
+   "lat": 44.5,
+   "lng": -93.9,
+   "region": "WC",
+   "country": "US"
+  },
+  {
+   "n": 37,
+   "name": "Mississippi",
+   "short": "Mississippi",
+   "state": "MS",
+   "lat": 32.7,
+   "lng": -89.7,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 38,
+   "name": "Eastern Missouri",
+   "short": "E. Missouri",
+   "state": "MO",
+   "lat": 38.5,
+   "lng": -90.9,
+   "region": "SW",
+   "country": "US",
+   "aka": [
+    "EAMO"
+   ],
+   "aka_source": "website eamo.org; panel_elects.json \"Eastern Missouri (EAMO)\""
+  },
+  {
+   "n": 39,
+   "name": "Western Missouri",
+   "short": "W. Missouri",
+   "state": "MO",
+   "lat": 38.6,
+   "lng": -93.6,
+   "region": "SW",
+   "country": "US",
+   "aka": [
+    "WAMO"
+   ],
+   "aka_source": "website wamo-aa.org"
+  },
+  {
+   "n": 40,
+   "name": "Montana",
+   "short": "Montana",
+   "state": "MT",
+   "lat": 46.9,
+   "lng": -110.4,
+   "region": "WC",
+   "country": "US"
+  },
+  {
+   "n": 41,
+   "name": "Nebraska",
+   "short": "Nebraska",
+   "state": "NE",
+   "lat": 41.5,
+   "lng": -99.8,
+   "region": "WC",
+   "country": "US"
+  },
+  {
+   "n": 42,
+   "name": "Nevada",
+   "short": "Nevada",
+   "state": "NV",
+   "lat": 39.3,
+   "lng": -116.6,
+   "region": "PA",
+   "country": "US"
+  },
+  {
+   "n": 43,
+   "name": "New Hampshire",
+   "short": "New Hampshire",
+   "state": "NH",
+   "lat": 43.7,
+   "lng": -71.6,
+   "region": "NE",
+   "country": "US"
+  },
+  {
+   "n": 44,
+   "name": "Northern New Jersey",
+   "short": "N. New Jersey",
+   "state": "NJ",
+   "lat": 40.9,
+   "lng": -74.5,
+   "region": "NE",
+   "country": "US",
+   "aka": [
+    "NNJ"
+   ],
+   "aka_source": "website nnjaa.org"
+  },
+  {
+   "n": 45,
+   "name": "Southern New Jersey",
+   "short": "S. New Jersey",
+   "state": "NJ",
+   "lat": 39.7,
+   "lng": -74.8,
+   "region": "NE",
+   "country": "US",
+   "aka": [
+    "SNJ"
+   ],
+   "aka_source": "website snjaa.org"
+  },
+  {
+   "n": 46,
+   "name": "New Mexico",
+   "short": "New Mexico",
+   "state": "NM",
+   "lat": 34.4,
+   "lng": -106.1,
+   "region": "SW",
+   "country": "US"
+  },
+  {
+   "n": 47,
+   "name": "Central New York",
+   "short": "Central NY",
+   "state": "NY",
+   "lat": 42.9,
+   "lng": -76.0,
+   "region": "NE",
+   "country": "US",
+   "aka": [
+    "CNY"
+   ],
+   "aka_source": "website aacny.org"
+  },
+  {
+   "n": 48,
+   "name": "Northeast New York (Hudson/Mohawk/Berkshire)",
+   "short": "NE New York",
+   "state": "NY",
+   "lat": 43.6,
+   "lng": -74.2,
+   "region": "NE",
+   "country": "US",
+   "aka": [
+    "NENY"
+   ],
+   "aka_source": "official name \"Northeast New York (NENY)\"; website nenyaa.org"
+  },
+  {
+   "n": 49,
+   "name": "Southeast New York",
+   "short": "SE New York",
+   "state": "NY",
+   "lat": 41.0,
+   "lng": -73.9,
+   "region": "NE",
+   "country": "US",
+   "aka": [
+    "SENY"
+   ],
+   "aka_source": "website aaseny.org; panel_elects.json \"Southeast New York (SENY)\""
+  },
+  {
+   "n": 50,
+   "name": "Western New York",
+   "short": "W. New York",
+   "state": "NY",
+   "lat": 42.9,
+   "lng": -78.4,
+   "region": "NE",
+   "country": "US",
+   "aka": [
+    "WNY"
+   ],
+   "aka_source": "website area50wny.org"
+  },
+  {
+   "n": 51,
+   "name": "North Carolina (incl. Bermuda)",
+   "short": "North Carolina",
+   "state": "NC",
+   "lat": 35.6,
+   "lng": -79.4,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 52,
+   "name": "North Dakota",
+   "short": "North Dakota",
+   "state": "ND",
+   "lat": 47.5,
+   "lng": -100.5,
+   "region": "WC",
+   "country": "US"
+  },
+  {
+   "n": 53,
+   "name": "Central & Southeast Ohio",
+   "short": "Central/SE Ohio",
+   "state": "OH",
+   "lat": 39.8,
+   "lng": -82.4,
+   "region": "EC",
+   "country": "US"
+  },
+  {
+   "n": 54,
+   "name": "Northeast Ohio",
+   "short": "NE Ohio",
+   "state": "OH",
+   "lat": 41.3,
+   "lng": -81.3,
+   "region": "EC",
+   "country": "US"
+  },
+  {
+   "n": 55,
+   "name": "Northwest Ohio",
+   "short": "NW Ohio",
+   "state": "OH",
+   "lat": 41.2,
+   "lng": -83.9,
+   "region": "EC",
+   "country": "US"
+  },
+  {
+   "n": 56,
+   "name": "Southwest Ohio",
+   "short": "SW Ohio",
+   "state": "OH",
+   "lat": 39.4,
+   "lng": -84.3,
+   "region": "EC",
+   "country": "US"
+  },
+  {
+   "n": 57,
+   "name": "Oklahoma",
+   "short": "Oklahoma",
+   "state": "OK",
+   "lat": 35.5,
+   "lng": -97.5,
+   "region": "SW",
+   "country": "US"
+  },
+  {
+   "n": 58,
+   "name": "Oregon",
+   "short": "Oregon",
+   "state": "OR",
+   "lat": 44.0,
+   "lng": -120.5,
+   "region": "PA",
+   "country": "US"
+  },
+  {
+   "n": 59,
+   "name": "Eastern Pennsylvania",
+   "short": "E. Pennsylvania",
+   "state": "PA",
+   "lat": 40.5,
+   "lng": -75.9,
+   "region": "NE",
+   "country": "US"
+  },
+  {
+   "n": 60,
+   "name": "Western Pennsylvania",
+   "short": "W. Pennsylvania",
+   "state": "PA",
+   "lat": 40.7,
+   "lng": -79.6,
+   "region": "NE",
+   "country": "US",
+   "aka": [
+    "WPA"
+   ],
+   "aka_source": "website wpaarea60.org"
+  },
+  {
+   "n": 61,
+   "name": "Rhode Island",
+   "short": "Rhode Island",
+   "state": "RI",
+   "lat": 41.7,
+   "lng": -71.5,
+   "region": "NE",
+   "country": "US"
+  },
+  {
+   "n": 62,
+   "name": "South Carolina",
+   "short": "South Carolina",
+   "state": "SC",
+   "lat": 33.9,
+   "lng": -80.9,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 63,
+   "name": "South Dakota",
+   "short": "South Dakota",
+   "state": "SD",
+   "lat": 44.4,
+   "lng": -100.2,
+   "region": "WC",
+   "country": "US"
+  },
+  {
+   "n": 64,
+   "name": "Tennessee",
+   "short": "Tennessee",
+   "state": "TN",
+   "lat": 35.8,
+   "lng": -86.4,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 65,
+   "name": "Northeast Texas",
+   "short": "NE Texas",
+   "state": "TX",
+   "lat": 32.9,
+   "lng": -96.5,
+   "region": "SW",
+   "country": "US",
+   "aka": [
+    "NETA"
+   ],
+   "aka_source": "website neta65.org; panel_elects.json \"Northeast Texas (NETA 65)\""
+  },
+  {
+   "n": 66,
+   "name": "Northwest Texas",
+   "short": "NW Texas",
+   "state": "TX",
+   "lat": 33.8,
+   "lng": -101.6,
+   "region": "SW",
+   "country": "US",
+   "aka": [
+    "NWTA"
+   ],
+   "aka_source": "website nwta66.org"
+  },
+  {
+   "n": 67,
+   "name": "Southeast Texas",
+   "short": "SE Texas",
+   "state": "TX",
+   "lat": 30.0,
+   "lng": -95.3,
+   "region": "SW",
+   "country": "US",
+   "aka": [
+    "SETA"
+   ],
+   "aka_source": "website aa-seta.org; panel_elects.json \"Southeast Texas (SETA)\""
+  },
+  {
+   "n": 68,
+   "name": "Southwest Texas",
+   "short": "SW Texas",
+   "state": "TX",
+   "lat": 29.4,
+   "lng": -99.0,
+   "region": "SW",
+   "country": "US",
+   "aka": [
+    "SWTA"
+   ],
+   "aka_source": "website aa-swta.org"
+  },
+  {
+   "n": 69,
+   "name": "Utah",
+   "short": "Utah",
+   "state": "UT",
+   "lat": 39.3,
+   "lng": -111.7,
+   "region": "PA",
+   "country": "US"
+  },
+  {
+   "n": 70,
+   "name": "Vermont",
+   "short": "Vermont",
+   "state": "VT",
+   "lat": 44.0,
+   "lng": -72.7,
+   "region": "NE",
+   "country": "US"
+  },
+  {
+   "n": 71,
+   "name": "Virginia (incl. Guantanamo, Cuba)",
+   "short": "Virginia",
+   "state": "VA",
+   "lat": 37.5,
+   "lng": -78.8,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 72,
+   "name": "Western Washington",
+   "short": "W. Washington",
+   "state": "WA",
+   "lat": 47.5,
+   "lng": -122.4,
+   "region": "PA",
+   "country": "US"
+  },
+  {
+   "n": 73,
+   "name": "West Virginia",
+   "short": "West Virginia",
+   "state": "WV",
+   "lat": 38.6,
+   "lng": -80.6,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 74,
+   "name": "Northern Wisconsin/Upper Peninsula Michigan",
+   "short": "N. WI/Upper Pen. MI",
+   "state": "WI",
+   "lat": 46.1,
+   "lng": -88.6,
+   "region": "EC",
+   "country": "US"
+  },
+  {
+   "n": 75,
+   "name": "Southern Wisconsin",
+   "short": "S. Wisconsin",
+   "state": "WI",
+   "lat": 43.2,
+   "lng": -89.4,
+   "region": "EC",
+   "country": "US"
+  },
+  {
+   "n": 76,
+   "name": "Wyoming",
+   "short": "Wyoming",
+   "state": "WY",
+   "lat": 43.0,
+   "lng": -107.5,
+   "region": "WC",
+   "country": "US"
+  },
+  {
+   "n": 77,
+   "name": "Puerto Rico",
+   "short": "Puerto Rico",
+   "state": "PR",
+   "lat": 18.22,
+   "lng": -66.5,
+   "region": "SE",
+   "country": "US"
+  },
+  {
+   "n": 78,
+   "name": "Alberta/Northwest Territories",
+   "short": "Alberta/NWT",
+   "state": "AB",
+   "lat": 54.0,
+   "lng": -114.5,
+   "region": "WCAN",
+   "country": "CA"
+  },
+  {
+   "n": 79,
+   "name": "British Columbia/Yukon",
+   "short": "BC/Yukon",
+   "state": "BC",
+   "lat": 53.7,
+   "lng": -124.0,
+   "region": "WCAN",
+   "country": "CA"
+  },
+  {
+   "n": 80,
+   "name": "Manitoba",
+   "short": "Manitoba",
+   "state": "MB",
+   "lat": 51.5,
+   "lng": -97.5,
+   "region": "WCAN",
+   "country": "CA"
+  },
+  {
+   "n": 81,
+   "name": "New Brunswick/Prince Edward Island",
+   "short": "NB/PEI",
+   "state": "NB",
+   "lat": 46.6,
+   "lng": -66.3,
+   "region": "ECAN",
+   "country": "CA"
+  },
+  {
+   "n": 82,
+   "name": "Nova Scotia/Newfoundland/Labrador",
+   "short": "NS/NL",
+   "state": "NS",
+   "lat": 45.1,
+   "lng": -62.6,
+   "region": "ECAN",
+   "country": "CA"
+  },
+  {
+   "n": 83,
+   "name": "Eastern Ontario",
+   "short": "E. Ontario",
+   "state": "ON",
+   "lat": 44.9,
+   "lng": -76.6,
+   "region": "ECAN",
+   "country": "CA"
+  },
+  {
+   "n": 84,
+   "name": "Northeast Ontario",
+   "short": "NE Ontario",
+   "state": "ON",
+   "lat": 47.5,
+   "lng": -81.0,
+   "region": "ECAN",
+   "country": "CA"
+  },
+  {
+   "n": 85,
+   "name": "Northwest Ontario",
+   "short": "NW Ontario",
+   "state": "ON",
+   "lat": 49.4,
+   "lng": -89.5,
+   "region": "ECAN",
+   "country": "CA",
+   "aka": [
+    "NWO"
+   ],
+   "aka_source": "website aa-nwo-area85.org"
+  },
+  {
+   "n": 86,
+   "name": "Western Ontario",
+   "short": "W. Ontario",
+   "state": "ON",
+   "lat": 43.2,
+   "lng": -80.6,
+   "region": "ECAN",
+   "country": "CA"
+  },
+  {
+   "n": 87,
+   "name": "Southwest Quebec",
+   "short": "SW Quebec",
+   "state": "QC",
+   "lat": 45.5,
+   "lng": -73.7,
+   "region": "ECAN",
+   "country": "CA"
+  },
+  {
+   "n": 88,
+   "name": "Southeast Quebec",
+   "short": "SE Quebec",
+   "state": "QC",
+   "lat": 45.6,
+   "lng": -71.6,
+   "region": "ECAN",
+   "country": "CA"
+  },
+  {
+   "n": 89,
+   "name": "Northeast Quebec",
+   "short": "NE Quebec",
+   "state": "QC",
+   "lat": 48.2,
+   "lng": -71.2,
+   "region": "ECAN",
+   "country": "CA",
+   "aka": [
+    "Nord-Est du Québec"
+   ],
+   "aka_source": "panel_elects.json \"Northeast Quebec (Nord-Est du Québec)\""
+  },
+  {
+   "n": 90,
+   "name": "Northwest Quebec",
+   "short": "NW Quebec",
+   "state": "QC",
+   "lat": 47.8,
+   "lng": -77.6,
+   "region": "ECAN",
+   "country": "CA"
+  },
+  {
+   "n": 91,
+   "name": "Saskatchewan",
+   "short": "Saskatchewan",
+   "state": "SK",
+   "lat": 52.5,
+   "lng": -106.0,
+   "region": "WCAN",
+   "country": "CA"
+  },
+  {
+   "n": 92,
+   "name": "Eastern Washington",
+   "short": "E. Washington",
+   "state": "WA",
+   "lat": 47.4,
+   "lng": -118.4,
+   "region": "PA",
+   "country": "US"
+  },
+  {
+   "n": 93,
+   "name": "Central California",
+   "short": "Central California",
+   "state": "CA",
+   "lat": 35.3,
+   "lng": -119.6,
+   "region": "PA",
+   "country": "US"
+  }
+ ]
+}

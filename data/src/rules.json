@@ -1,0 +1,680 @@
+{
+ "source": "The A.A. Service Manual 2026-2028 (BM-31), GSB/AAWS/Grapevine bylaws (Appendices O-Q), and Final Conference Reports 2023-2026. Quotes are short excerpts for personal study; page numbers are printed pages.",
+ "rules": [
+  {
+   "topic": "committee_assignment",
+   "summary": "Each new delegate is assigned to one primary Conference committee and keeps it for both years. The Service Manual says the assignment is made 'by lot' each December by the GSO Conference coordinator and the chair of the trustees' Committee on the General Service Conference, filling the seats of the outgoing delegates (p. 45). Recent Final Reports add the practice. Since the December 2020 draw (Panel 71) a custom software app is used, run by the trustees' committee chair and vice-chair with the Conference coordinator; Policy/Admissions found it gave 'absolute randomization' (2021 FR pp. 26, 69). In July 2020 the trustees' committee asked that the four smaller regions (Southwest, West Central, Eastern Canada, Western Canada) have no more than one delegate on a committee (2021 FR p. 26); the rosters kept that at every Conference 2019-2024, and it was broken on 2 committees in 2025 and 4 in 2026, after the rebalancing. For Panel 73 (December 2022) five selection rounds were run and the round with the broadest distribution was kept; the same report raised the tendency of some areas to get the same committees and proposed constraints by area, region, panel and committee (2023 FR p. 64). From Panel 75 the draw was rebalanced toward an even mix of first- and second-year delegates on each committee (2024 FR p. 68), and 'broadest committee participation by areas' was built into the software (2025 FR pp. 84-85). In 2025 a prioritized list was adopted: (1) every area should have the chance to be selected for any committee; (2) keep a more even rotation on the remaining committees; (3) aim for wider regional representation on every committee; (4) limit adjacent areas from different regions (2025 FR p. 47; applied to Panel 76, 2026 FR p. 82). In 2026 a grid of all 2017-2026 assignments was built, and using open-source AI for the draw was discussed but not enacted (2026 FR p. 82). So the documents do support skipping an area's recent committees, and the rosters agree: since Panel 71 an area has almost never been drawn onto a committee it held in its last three terms (0 of 279 one term back, 1 of 279 two terms back). A pure random draw across 11 committees would give many repeats. The 2025 Conference Inventory still reported a perception that some areas repeat the same assignment.",
+   "quotes": [
+    {
+     "text": "Each delegate is assigned to an individual Conference committee, the same one for both years of the term. There are also two secondary committees that some delegates will be assigned to. (The two secondary committees are Archives and International Conventions/Regional Forums.)",
+     "source": "Service Manual BM-31 2026-2028, Ch. 7 Conference Committees, 'Selection of Committee Members'",
+     "page": "45 (PDF 56)"
+    },
+    {
+     "text": "Committee assignments are determined by lot. This selection is typically held in December of each year by the Conference coordinator and the chair of the trustees’ Committee on the General Service Conference, to replace outgoing delegates on each committee.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 7",
+     "page": "45 (PDF 56)"
+    },
+    {
+     "text": "First year delegate assignment to Conference committees: The committee heard from the Conference Coordinator about the selection criteria for assigning delegates to Conference committees, and the custom software developed for this purpose. Delegate assignments to conference committees were completed by the chair, vice-chair, and conference coordinator with the support of the software developer. Rebalancing first-year and second-year delegates on Conference committees: In response to a consideration from the 2023 Conference Committee on Corrections, the committee adopted a plan that balances the assignment of new delegates to a Conference committee to allow for a more even rotation of panels on each committee and will commence with Panel 75 delegates.",
+     "source": "2024 Final Conference Report, trustees' General Service Conference Committee report",
+     "page": "68"
+    },
+    {
+     "text": "The committee suggested prioritization efforts in the following order: That areas have the opportunity to be selected for any committee; Continue the process for a more even rotation on remaining committees; Striving to have wider regional representation across all committees; Limit adjacent areas from different regions",
+     "source": "2025 Final Conference Report, Conference Committee on Policy/Admissions considerations",
+     "page": "47"
+    },
+    {
+     "text": "First year delegate assignment to Conference committees — The committee reviewed and accepted a list of prioritized selection criteria from the 2025 Conference Committee on Policy and Admissions to better inform the Conference committee delegate selection process. Conference committee assignments continued to rebalance the rotation of certain Conference committees toward an even inclusion of first- and second-year delegates. ... A documentation grid was created to display the rotation history of committee assignments from 2017 to 2026.",
+     "source": "2026 Final Conference Report (Confidential), trustees' General Service Conference Committee report",
+     "page": "82"
+    },
+    {
+     "text": "Committee Imbalances: There appear to be imbalances in the assignment of delegates to a committee, with some areas seeming to repeat the same assignment year after year",
+     "source": "2025 Final Conference Report, Conference Inventory summary",
+     "page": "33"
+    },
+    {
+     "text": "the committee requested scheduling the delegate chair orientation prior to December when the assignment of new delegates to Conference committees occurs",
+     "source": "2024 Final Conference Report, trustees' GSC Committee report",
+     "page": "71"
+    },
+    {
+     "text": "the Southwest, West Central, Eastern Canada and Western Canada regions should have no more than one delegate represented on a committee.",
+     "source": "2021 Final Conference Report, trustees' General Service Conference Committee (July 2020 meeting)",
+     "page": "26"
+    },
+    {
+     "text": "The committee agreed the app provided absolute randomization while saving time and reducing human error.",
+     "source": "2021 Final Conference Report, Conference Committee on Policy and Admissions",
+     "page": "69"
+    },
+    {
+     "text": "five selection rounds were performed and the round with the broadest distribution was selected (Round 3).",
+     "source": "2023 Final Conference Report, trustees' General Service Conference Committee",
+     "page": "64"
+    },
+    {
+     "text": "ensure that broadest committee participation by areas was implemented.",
+     "source": "2025 Final Conference Report, trustees' General Service Conference Committee",
+     "page": "84-85"
+    }
+   ]
+  },
+  {
+   "topic": "secondary_committees",
+   "summary": "There are two secondary committees, Archives and International Conventions/Regional Forums (IC/RF). Some delegates serve on one of them in addition to their primary committee (no delegate has held both). Members are chosen by lot. Each meets during Conference week at a dinner meeting with its trustees' committee, and each may take direct action (p. 48). IC/RF is 'composed of eight delegates chosen by lot, one from each region' (p. 48). That is the norm, but in 2024 and 2025 it had only 7 members: no West Central Panel 74 delegate was assigned. The trustees' committee notes that needing all eight regions makes IC/RF hard to rotate (2026 FR pp. 82-83). Since Panel 69 the odd panels have supplied the Northeast, East Central, Pacific and Eastern Canada members and the even panels the Southeast, Southwest, West Central and Western Canada members. The manual gives no size for Archives; in every 2017-2026 roster it has 8 members, 4 from each panel, one per region until Panel 71. Secondary committees elect their chairs after the primary committees, and a primary chair is never also a secondary chair or alternate. Under a 2025 Advisory Action the IC/RF chair and alternate are elected from the first-year panel.",
+   "quotes": [
+    {
+     "text": "Two committees have been formed to consider matters of importance that do not require the length of time devoted to the other standing committee agenda items. Some delegates serve on one of these secondary committees in addition to their primary assignment. Delegate members are chosen by lot. These committees meet during the Conference in a dinner meeting with their corresponding trustees’ committee.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 7 'Secondary Committees'",
+     "page": "48 (PDF 59)"
+    },
+    {
+     "text": "Composed of eight delegates chosen by lot, one from each region.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 7, International Conventions/Regional Forums",
+     "page": "48"
+    },
+    {
+     "text": "* Secondary committee ** No corresponding Conference committee.",
+     "source": "SMF-116 The General Service Conference Structure (Rev. 11/21) - legend marking Archives* and International Conventions/A.A. Regional Forums* as secondary",
+     "page": "1"
+    },
+    {
+     "text": "The new chairperson and alternate chairperson are elected by written ballot at the final committee meeting during the Conference session from the first-year panel members and take office immediately following the Conference.",
+     "source": "2025 Final Conference Report, Advisory Action (IC/RF Composition, Scope and Procedure)",
+     "page": "37"
+    }
+   ]
+  },
+  {
+   "topic": "delegate_term",
+   "summary": "A delegate serves one term of two consecutive years and attends two Conferences. The manual strongly recommends a single term. An alternate who attended one Conference in the delegate's place may later be elected to a full term. Half the areas elect in one year and half the next (odd and even panels). Election assemblies are usually held in the fall. The area reports results to GSO by December 1, and those elected usually take office January 1. A past delegate may stand for trustee one year after their last Conference. Past delegates are not eligible to be appointed committee members (ACMs) until one year after rotation, and the trustees' nominating procedures apply the same wait to nontrustee director applications: 'A General Service Conference delegate is not eligible to apply until one year after their last Conference' (2021 FR p. 49).",
+   "quotes": [
+    {
+     "text": "A delegate serves one term of two consecutive years. It is strongly recommended that a delegate serve a single term. (An alternate delegate may, after attending one Conference in place of the delegate, be elected to serve a full term.) Half the delegates are elected in one year and half the next (See Appendix M, p. 130, Conference Panels). This ensures that at any Conference, there is a core of experienced delegates alongside first-year delegates.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 5 The Delegate, 'Term of Office'",
+     "page": "35 (PDF 46)"
+    },
+    {
+     "text": "In an election year, this assembly is usually scheduled in the fall, with plenty of time for the newly elected delegate and area officers to prepare to take office in the new panel.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 3, 'Election Assemblies'",
+     "page": "20"
+    },
+    {
+     "text": "The chairperson directs the secretary to send a report of the assembly ... to the Conference secretary at GSO by December 1. All those elected usually take office January 1.",
+     "source": "Service Manual BM-31 2026-2028, Appendix D Sample Format — Election Assembly",
+     "page": "110"
+    },
+    {
+     "text": "Unless otherwise directed by the Conference, these terms of office shall all be concurrent and of two years’ duration each. In approximately half the areas, assembly elections will be held in the even years; the remaining assemblies will elect in the odd years, thus creating rotating panels of the Conference",
+     "source": "Service Manual BM-31, Appendix K Current Conference Charter, para. 8",
+     "page": "125"
+    },
+    {
+     "text": "May an area delegate stand for trustee at the conclusion of their rotation? Yes, but not immediately. An area delegate may stand for a trustee position one year after their last Conference.",
+     "source": "Service Manual BM-31, Ch. 8 FAQ 3",
+     "page": "63"
+    }
+   ]
+  },
+  {
+   "topic": "chair_election",
+   "summary": "Each committee elects its chair and alternate chair by plurality at its last meeting during Conference week (p. 45). Primary committees elect first; a primary-committee chair has never also been elected chair or alternate of Archives or IC/RF (0 of 40 since 2018), while a primary alternate often is (15 of 40). Chairs take office when the Conference ends and serve through the next year's Conference. The manual has them attend the January General Service Board weekend (p. 45). The board has since decided that the 77th Conference's committee chairs attend the October 2026 (Q4) board weekend 'as opposed to the January (Q1) 2027 weekend', to give them more time on proposed agenda items (2026 FR p. 49). The Service Manual does not say which panel chairs come from, but every one of the 260 chairs and alternates in the 2017-2026 reports was a first-year member of the committee, and a 2025 Advisory Action wrote 'from the first-year panel members' into the IC/RF procedure; so a chair serves as chair in their second year. Separately, each Conference has one Delegate Chair (delegate chairperson): Jay T. (Area 27) chaired the 76th and Tammy S. (Area 86) is Delegate Chair for the 77th. It is drawn by lot ('from another hat', 2025 FR p. 4) during Conference week at the delegates-only meeting or dinner. Since about 2022 the draw comes after the committee elections and uses the delegates not already selected as committee chair or alternate (2024 FR p. 46). Before then it was drawn at the Tuesday delegates-only meeting, before the committees voted, so in 2018 and 2021 the Delegate Chair was also a committee alternate. Guidelines on the role were added to the 2025 Conference Manual (2025 FR p. 85). Proposals in 2023 and 2025 to change the process were floor actions the Conference declined to consider (2023 FR p. 49; 2025 FR p. 53); they are not Advisory Actions. The U.S. and Canada have alternated since 2021, a pattern no document describes. Note the wording: in trustees' reports 'delegate chairs' (plural) means the Conference committee chairs, not the Delegate Chair.",
+   "quotes": [
+    {
+     "text": "Committee chairs and alternate chairs are elected by plurality at the committee’s last meeting during Conference week. The new chairs take office as soon as the Conference ends, and serve through the end of the next year’s Conference. In addition to attending the Conference, committee chairs are expected to attend the General Service Board weekend held in New York at the end of January to facilitate communication between the committee they are serving on and their corresponding trustee and board counterparts.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 7 'Electing Committee Chairs'",
+     "page": "45 (PDF 56)"
+    },
+    {
+     "text": "The new chairperson and alternate chairperson are elected by written ballot at the final committee meeting during the Conference session from the first-year panel members and take office immediately following the Conference.",
+     "source": "2025 Final Conference Report, Advisory Action adding language to IC/RF CSP (confirmed inserted, 2026 FR p.95)",
+     "page": "37"
+    },
+    {
+     "text": "The committee also noted that while the process for electing the General Service Conference Delegate chair from the remaining delegates (not yet selected for Committee or alt chair) remains a viable procedure, a more effective, improved, communication would be useful in outlining the current roles and responsibilities.",
+     "source": "2024 Final Conference Report, Conference Committee on Policy/Admissions considerations",
+     "page": "46"
+    },
+    {
+     "text": "My name came from the hat to be Panel 74, Area 78 Delegate, and then again from another hat to be the Delegate Chair to the 75th Conference!",
+     "source": "2025 Final Conference Report, Delegate Chair greeting (Karen O. C.)",
+     "page": "4"
+    },
+    {
+     "text": "The trustees’ General Service Conference Committee discussed the EDW Subcommittee recommendation that delegate chairpersons be invited to attend the October board weekend instead of the January board weekend, effective October 2026, and made a recommendation to the General Service Board.",
+     "source": "2026 Final Conference Report, trustees' GSC Committee report (the GSB's decision is recorded in the Policy/Admissions report, p. 49)",
+     "page": "85"
+    },
+    {
+     "text": "the committee noted the General Service Board decision that the 77th General Service Conference committee chairs will be attending the October 2026 (Q4) Board Weekend as opposed to the January (Q1) 2027 weekend.",
+     "source": "2026 Final Conference Report, Conference Committee on Policy and Admissions",
+     "page": "49"
+    },
+    {
+     "text": "At the Delegates Only meeting Tuesday evening, Ben B., Oklahoma, was selected as the delegate chair for the 68th Conference",
+     "source": "2017 Final Conference Report, opening summary",
+     "page": "4"
+    }
+   ]
+  },
+  {
+   "topic": "committee_size_composition",
+   "summary": "There are 13 standing Conference committees: 11 primary and 2 secondary. The primary committees are Agenda; Cooperation with the Professional Community; Corrections; Finance; Grapevine and La Viña; Literature; Policy/Admissions; Public Information; Report and Charter; Treatment and Accessibilities; and Trustees. The secondary committees are Archives and International Conventions/Regional Forums. Each committee follows a Composition, Scope and Procedure (CSP) document, which is not public. Normally a committee has 4 or 5 first-year and 4 or 5 second-year delegates. In the 2023-2026 rosters each primary committee had about 7-9 delegates, totaling 93. A GSO staff member serves as nonvoting secretary. Policy/Admissions and Report and Charter have no corresponding trustees' committee. Grapevine meets jointly with the Grapevine Corporate Board. The trustees' Nominating Committee corresponds to the Conference Trustees Committee, and the trustees' General Service Conference committee corresponds to Agenda.",
+   "quotes": [
+    {
+     "text": "Most questions suggested for the Conference agenda are assigned to one of the 13 standing committees, where items can be discussed in small groups before being considered by the full Conference body.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 7",
+     "page": "45"
+    },
+    {
+     "text": "Each Conference committee follows a Composition, Scope and Procedure document. Normally, a committee is made up of four or five first-year delegates and four or five second-year delegates.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 7 'Selection of Committee Members'",
+     "page": "45"
+    },
+    {
+     "text": "A.A. staff members serve as nonvoting secretaries of each committee.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 7",
+     "page": "45"
+    },
+    {
+     "text": "Trustees — Corresponding Trustees’ Committee: Nominating Committee • Review all résumés of nominees for the General Service Board and corporate directors. • Present the slates of nominees to the Conference for disapproval, if any. • Participate as part of the voting body that nominates regional and at-large trustees during the week of the Conference.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 7",
+     "page": "48"
+    }
+   ]
+  },
+  {
+   "topic": "trustee_classes_terms",
+   "summary": "The General Service Board normally has 21 trustees. 7 are Class A (nonalcoholic), who serve two consecutive three-year terms; the board may allow a third on the chair's recommendation. 14 are Class B (alcoholic), who serve four successive one-year terms. Class B trustees are 8 regional trustees (6 U.S., 2 Canada), 4 general service trustees (2 AAWS, 2 Grapevine) and 2 trustees-at-large (1 U.S., 1 Canada). All trustees are elected or re-elected at the annual meeting of members, held the Saturday after the Conference. A proposed trustee cannot be elected if a majority of Conference delegates disapprove. If the GSB chair is serving beyond their trustee term, the board grows to 22 (8 Class A or 15 Class B). In 2026 Scott H., a former trustee-at-large/Canada, is chair, giving 15 Class B.",
+   "quotes": [
+    {
+     "text": "CLASS A (7 NONALCOHOLICS) Can serve TWO consecutive THREE-year terms; CLASS B (14 ALCOHOLICS) Can serve FOUR consecutive ONE-year terms",
+     "source": "Service Manual BM-31 2026-2028, Ch. 8 'Composition' table",
+     "page": "51"
+    },
+    {
+     "text": "8 REGIONAL TRUSTEES — SIX from U.S., TWO from Canada, FOUR successive ONE-year terms; 4 GENERAL SERVICE TRUSTEES — TWO from AAWS, TWO from Grapevine, FOUR successive ONE-year terms; 2 TRUSTEES-AT-LARGE — ONE from U.S., ONE from Canada, FOUR successive ONE-year terms",
+     "source": "Service Manual BM-31 2026-2028, Ch. 8 'Three Categories of Alcoholic Class B Trustees' table",
+     "page": "53"
+    },
+    {
+     "text": "Class B member trustees shall be ineligible to serve for more than four successive annual terms",
+     "source": "Service Manual BM-31, Appendix O Bylaws of the General Service Board",
+     "page": "137"
+    },
+    {
+     "text": "If a majority of the Conference delegates disapprove the election of such proposed member trustee, such person shall not be eligible as a member trustee",
+     "source": "Service Manual BM-31, Appendix O GSB Bylaws",
+     "page": "138"
+    },
+    {
+     "text": "In the event of a Class B candidate being selected as Chair, the General Service Board will be increased to 22 total members (15 Class B and 7 Class A members) for the duration of their term",
+     "source": "Service Manual BM-31, Ch. 8 'Chair, General Service Board'",
+     "page": "58"
+    }
+   ]
+  },
+  {
+   "topic": "regional_trustee_election_rotation",
+   "summary": "There are eight regional trustees, each serving four one-year terms on a fixed calendar that pairs two regions per year. The Service Manual table gives: Eastern Canada and Pacific in 2026, 2030, 2034, 2038; Northeast and Southwest in 2027, 2031, 2035, 2039; Western Canada and West Central in 2028, 2032, 2036, 2040; Southeast and East Central in 2029, 2033, 2037, 2041. Final Report bios confirm the pattern: SW elected 2019 (Jimmy D.) and 2023 (Teresa J.); NE 2023 (Ken T.); WC 2020 (Mike L.) and 2024 (Charlie H.); WCan 2020 (Irma V.) and 2024 (Gail P.); EC 2021 (Cathi C.) and 2025 (Sherry S.); SE 2021 (Tom H.) and 2025 (Susan V.); ECan 2022 (Joyce S.) and 2026 (Jeff S.); Pacific 2022 (Reilly K.) and 2026 (Candice C.). Process: GSO notifies the region in a May mailing and in Box 4-5-9. Each area may nominate a candidate, usually by Third Legacy, with resumes due January 1. At the Conference a nominating session co-chaired by the trustees' Nominating Committee chair and the Conference Trustees Committee chair votes by Third Legacy. Voters are the region's delegates plus an equal number drawn half from the Conference Committee on Trustees and half from the trustees' Nominating Committee. Regional trustees normally serve on the AAWS or Grapevine board in their 2nd and 3rd years. A vacancy may be filled at the next GSC or left open, with coverage by the trustee-at-large or an adjacent regional trustee. The 'equal number of voters' is partly drawn at random before the Conference by the trustees' GSC Committee (e.g. 2023 Northeast: four trustee voters and two delegate voters; 2023 FR p. 65). Trustee elections are electronic since 2021, with the 'hat' still used at the fourth or fifth ballot (2021 FR p. 50).",
+   "quotes": [
+    {
+     "text": "The timing of an opening on the board for a regional trustee follows a precise calendar that is set over a decade out. The current schedule of elections, reflecting when terms for current trustees expire, are shown here. Delegates and area officers in regions scheduled to select a regional trustee candidate will be informed by GSO in a May mailing. GSO notifies all A.A. groups in the region of the opening in an issue of the newsletter Box 4-5-9.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 8 'Openings for New Regional Trustees'",
+     "page": "54 (PDF 65)"
+    },
+    {
+     "text": "REGION / ELECTION YEARS: Northeast 2027, 2031, 2035, 2039; Western Canada 2028, 2032, 2036, 2040; Southeast 2029, 2033, 2037, 2041; Eastern Canada 2026, 2030, 2034, 2038; Southwest 2027, 2031, 2035, 2039; West Central 2028, 2032, 2036, 2040; East Central 2029, 2033, 2037, 2041; Pacific 2026, 2030, 2034, 2038",
+     "source": "Service Manual BM-31 2026-2028, Ch. 8 table (verified by rendering the page image)",
+     "page": "54"
+    },
+    {
+     "text": "Voting members of the nominating session are: — Delegates from the region — An equal number of voters: one-half from the Conference Committee on Trustees and one-half from the trustees’ Nominating Committee • The session follows the Third Legacy Procedure",
+     "source": "Service Manual BM-31 2026-2028, Ch. 8 'Selection Process'",
+     "page": "55"
+    },
+    {
+     "text": "Candidates for alcoholic regional trustee are, however, first selected by the areas in the region. Then, at the General Service Conference, voters consisting of delegates from the region involved, plus an equal number of voters — one-half to come from the Conference Committee on Trustees and one-half to come from the trustees’ Nominating Committee — make a selection of a nominee by two-thirds written ballot or by lot. This nominee is then elected to the General Service Board, the trustees being obligated by tradition to do so.",
+     "source": "Service Manual BM-31, Appendix K Current Conference Charter, para. 10",
+     "page": "125"
+    },
+    {
+     "text": "regional trustees serve on the board of directors of either AAWS, Inc. or AA Grapevine, Inc. for two years, normally in their second and third years of service as trustee.",
+     "source": "Service Manual BM-31, Ch. 8",
+     "page": "54"
+    },
+    {
+     "text": "Resumes are submitted electronically or by mail postmarked by the January 1 deadline.",
+     "source": "Service Manual BM-31, Ch. 8 'Submitting Nominees for the Board'",
+     "page": "55"
+    }
+   ]
+  },
+  {
+   "topic": "trustee_at_large",
+   "summary": "There are two trustees-at-large, one U.S. and one Canada, each serving four one-year terms. Their terms are staggered, but the Service Manual gives no year table. Final Report bios show TAL/Canada elected 2015 (Scott H.), May 2019 (Trish L.) and April 2023 (Robert L.), so the next are 2027 and 2031. TAL/U.S. was elected April 2021 (Marita R.) and 2025 (Jennifer B.), so the next are 2029 and 2033. Any area in the country may submit a candidate. At the Conference each region's delegates caucus to cut the list to one candidate per U.S. region (6 maximum) or two per Canadian region (4 maximum). The final Third Legacy vote is by all delegates from that country plus the trustees' Nominating Committee. No area should submit the same person for both regional trustee and TAL at the same Conference. TALs are the U.S./Canada delegates to the World Service Meeting and the Meeting of the Americas (REDELA) and sit on the trustees' International Committee.",
+   "quotes": [
+    {
+     "text": "A maximum of six candidates for trustee-at-large U.S. or four for trustee-at-large Canada will be presented to the voting members of the Conference for election as each position becomes available (their terms are staggered to ensure there is a trustee-at-large with experience in the position).",
+     "source": "Service Manual BM-31 2026-2028, Ch. 8 'Selection of Trustees-at-Large'",
+     "page": "57"
+    },
+    {
+     "text": "There are two trustees-at-large on the board — one from the U.S. and one from Canada. Term of Service: Each trustee-at-large serves four successive one-year terms.",
+     "source": "Service Manual BM-31, Ch. 8",
+     "page": "57"
+    },
+    {
+     "text": "Voting members of the Conference will be all delegates from the nominating country (U.S. or Canada) and all members of the trustees’ Nominating Committee.",
+     "source": "Service Manual BM-31, Appendix K Current Conference Charter, para. 10",
+     "page": "126"
+    },
+    {
+     "text": "Robert L. (Quebec, Canada) was elected trustee-at-large/Canada in April 2023.",
+     "source": "2023 Final Conference Report, Conference Members",
+     "page": "151"
+    },
+    {
+     "text": "Jennifer B. (Santa Rosa, CA) was elected trustee-at-large/U.S. in 2025.",
+     "source": "2025 Final Conference Report, Conference Members",
+     "page": "178"
+    },
+    {
+     "text": "Marita Hagen R. (Mesquite, NV) was elected trustee-at-large/U.S. in April 2021.",
+     "source": "2023 Final Conference Report",
+     "page": "150"
+    }
+   ]
+  },
+  {
+   "topic": "general_service_trustee",
+   "summary": "There are four general service trustees, two from the AAWS board and two from the Grapevine board, serving up to four one-year terms. They are chosen from current or past nontrustee directors with at least one year on that corporate board. The corporate board submits one resume to the trustees' Nominating Committee, which forwards it to the GSB, which places it on the slate presented to the Conference for disapproval. Seven years' sobriety is suggested. The manual publishes no fixed calendar. Openings derived from Final Report bios: AAWS seats filled in 2025 (John W.) and 2026 (Clint M., succeeding Carolyn W.); Grapevine seats filled in 2023 (David S., inferred) and 2025 (Teddy B.-W.). Expected openings are therefore about 2027 (GV), 2029 (AAWS and GV) and 2030 (AAWS). This is an inference.",
+   "quotes": [
+    {
+     "text": "Number: There are four general service trustees — two from the AAWS board and two from the Grapevine board. Term of Service: General service trustees serve up to four successive one-year terms. Identifying Possible Candidates: General service trustees are chosen from among current or past nontrustee directors of the two corporate boards",
+     "source": "Service Manual BM-31 2026-2028, Ch. 8",
+     "page": "56"
+    },
+    {
+     "text": "The résumé of one qualified candidate who has served for at least one year on the AAWS or Grapevine boards is submitted to the trustees’ Nominating Committee.",
+     "source": "Service Manual BM-31, Ch. 8",
+     "page": "56"
+    },
+    {
+     "text": "During the Conference, a proposed slate of trustees is presented to the Conference, and this becomes the final slate unless a majority of the Conference members votes to disapprove any one or all proposed trustees listed.",
+     "source": "Service Manual BM-31, Ch. 8",
+     "page": "56"
+    }
+   ]
+  },
+  {
+   "topic": "class_a_trustee",
+   "summary": "There are seven Class A (nonalcoholic) trustees, chosen for professional expertise and familiarity with A.A. They may appear in public for A.A. because they need not keep anonymity. Terms are two consecutive three-year terms, confirmed annually; a third may be allowed on the GSB chair's recommendation. The GSB nominates them after a search; the trustees' Nominating Committee narrows the list and candidates meet the board. The name then goes on the slate presented to the Conference for disapproval. The board has had 7 Class A and 14 Class B trustees since 1966; in 1951 there were 8 Class A and 7 Class B. In 2026 Tim M. was newly elected.",
+   "quotes": [
+    {
+     "text": "Class A trustees serve two consecutive three-year terms. The chair of the General Service Board may recommend to the trustees that a Class A member trustee be permitted to serve for a third successive three-year term.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 8 'Term of Service'",
+     "page": "52"
+    },
+    {
+     "text": "Class A member trustees shall be ineligible to serve for more than two successive three-year terms, to be confirmed annually",
+     "source": "Service Manual BM-31, Appendix O GSB Bylaws",
+     "page": "137"
+    },
+    {
+     "text": "The Nominating Committee then recommends the election of one person for each vacancy to the General Service Board, and, after approval by the board, the candidate is included on the slate, which is presented to the Conference for disapproval, if any.",
+     "source": "Service Manual BM-31, Ch. 8 'Nomination Procedure'",
+     "page": "53"
+    },
+    {
+     "text": "So the Fellowship took a second major step in 1966 and reorganized its board into the current configuration of seven nonalcoholics and fourteen alcoholic members.",
+     "source": "Service Manual BM-31, Ch. 8",
+     "page": "52"
+    }
+   ]
+  },
+  {
+   "topic": "nontrustee_directors",
+   "summary": "There are six nontrustee directors, three on the AAWS board and three on the Grapevine board. Each may serve up to four successive one-year terms. Directors are elected yearly by the GSB trustees at the annual meeting of members. AAWS has 9 directors: 2 general service trustees, 2 regional trustees, 3 nontrustee directors, the GSO staff coordinator and the GSO general manager, who is president. Grapevine has 9: 2 general service trustees, 2 regional trustees, 1 Class A trustee, 3 nontrustee directors and the publisher, who is president. Vacancies are announced in Box 4-5-9 and by mailing. The corporate board's nominating committee interviews candidates and forwards a nominee to the trustees' Nominating Committee and the GSB. Nontrustee directors are the pool from which general service trustees are chosen. They also serve on most trustees' committees and are voting Conference members.",
+   "quotes": [
+    {
+     "text": "Per the AAWS and AA Grapevine bylaws, a nontrustee director can serve up to four successive one-year terms.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 9 'Nontrustee Directors for AAWS & Grapevine'",
+     "page": "68"
+    },
+    {
+     "text": "No person who is not a Member of the Corporation … shall be elected to more than four consecutive full terms as a Director",
+     "source": "Service Manual BM-31, Appendix P Bylaws of AAWS, Art. III Sec. 1",
+     "page": "146"
+    },
+    {
+     "text": "Currently, AAWS has nine directors in total: 2 GENERAL SERVICE TRUSTEES, 2 REGIONAL TRUSTEES, 3 NONTRUSTEE DIRECTORS, 1 STAFF COORDINATOR, GSO, 1 GENERAL MANAGER, GSO",
+     "source": "Service Manual BM-31, Ch. 9",
+     "page": "66"
+    },
+    {
+     "text": "Currently, AA Grapevine has nine directors in total: 2 GENERAL SERVICE TRUSTEES, 2 REGIONAL TRUSTEES, 1 CLASS A TRUSTEE, 3 NONTRUSTEE DIRECTORS, 1 PUBLISHER",
+     "source": "Service Manual BM-31, Ch. 9",
+     "page": "67"
+    },
+    {
+     "text": "Nontrustee director — An A.A. member who serves as a director on one of the corporate boards (AAWS, Inc. or AA Grapevine, Inc.) who is not a trustee. They also serve as members of most standing committees of the General Service Board. Each corporate board has three nontrustee directors.",
+     "source": "Service Manual BM-31, Glossary",
+     "page": "93"
+    }
+   ]
+  },
+  {
+   "topic": "gsb_officers",
+   "summary": "At its 2nd quarterly meeting, held the Saturday after the Conference, the board elects a chair, first vice-chair, second vice-chair, secretary and treasurer. The chair appoints the assistant treasurer and assistant secretary, subject to board approval. The officer slate is also presented to the Conference for disapproval. The chair may be Class A or Class B, serves no more than four successive annual terms, and cannot be a GSB employee. The chair term is in addition to any trustee term. The chair co-chairs the Conference, appoints trustees' committee members subject to GSB approval, and is ex officio on all trustees' committees. The treasurer chairs the trustees' Finance and Budgetary Committee. Past chairs are usually named trustees emeriti, who do not vote. 2026 slate: Chair Scott H.; 1st VC David S.; 2nd VC Ken T.; Treasurer Kerry M. (Class A); Secretary Kelly P. (Class A); Asst. Treasurer Paul K. and Asst. Secretary Racy J. (GSO employees). The two vice-chairs and the secretary are marked 'Elected by Third Legacy Procedure': since 2024 the board elects them that way (2024 FR p. 100; 2026 FR p. 108), while the chair and treasurer come from the Nominating Committee's slate. The treasurer must be a Class A trustee; a 2026 proposal to drop that requirement got no action (2026 FR p. 109). The officers printed at the front of a Final Report are the slate elected after the previous Conference.",
+   "quotes": [
+    {
+     "text": "elect a chair, a first vice-chair, a second vice-chair, a secretary, and a treasurer",
+     "source": "Service Manual BM-31, Appendix O GSB Bylaws 'Officers'",
+     "page": "139"
+    },
+    {
+     "text": "The term of the chair shall hereafter be not more than four (4) successive annual terms.",
+     "source": "Service Manual BM-31, Appendix O GSB Bylaws 'Officers'",
+     "page": "139"
+    },
+    {
+     "text": "The chair of the General Service Board, who may be a Class A or Class B trustee, serves a four-year term in that position. That four-year term is over and above the term they may have served as a Class A trustee (up to six years) or as a Class B trustee (up to four years).",
+     "source": "Service Manual BM-31, Ch. 8",
+     "page": "58"
+    },
+    {
+     "text": "The trustees’ Nominating Committee also recommends a slate of trustees to serve as officers of the General Service Board. The proposed slate is determined by the board prior to the Conference and presented to the Conference in the same manner as the slate of trustees.",
+     "source": "Service Manual BM-31, Ch. 8",
+     "page": "56"
+    },
+    {
+     "text": "The treasurer of the General Service Board serves as chair.",
+     "source": "Service Manual BM-31, Ch. 8, trustees' Finance and Budgetary Committee",
+     "page": "59"
+    },
+    {
+     "text": "It is noted that the GSB used the Third Legacy Procedure to elect the first vice-chairperson, second vice-chairperson and secretary board officers for 2026.",
+     "source": "2026 Final Conference Report, trustees' Nominating Committee",
+     "page": "108"
+    },
+    {
+     "text": "The committee considered a PAI to remove the requirement that the General Service Board (GSB) treasurer be a Class A trustee and took no action.",
+     "source": "2026 Final Conference Report, trustees' Nominating Committee",
+     "page": "109"
+    }
+   ]
+  },
+  {
+   "topic": "gso_staff_rotation",
+   "summary": "GSO has thirteen Staff Member assignments ('desks') held by a rotating group of A.A.-member professionals: the 2026-2028 manual lists all thirteen, Self-Support and Finance included (pp. 70-73), though its p. 70 sentence still says twelve. The thirteenth was created in September 2025, when the staff last rotated assignments (2026 FR p. 66), and the 2026 report lists 13 staff members. AAWS, with GSB approval, uses a two-year rotation of assignments for most staff members; Bill W.'s original text said assignments changed yearly. The change was made by the AAWS Board in March 1965 and changed only the timing, not the principle. Rotation can be limited where special skills are needed, such as office management and Grapevine. In the Final Reports most staff changed desks between the 2018 and 2019 reports and again in September 2025, with partial changes in between, so the next general rotation could come around 2027 (an inference, not a published date). About 15 A.A. staff from GSO and Grapevine/La Viña are voting Conference members. Staff serve as nonvoting secretaries of Conference and trustees' committees, so a committee's secretary can change when staff rotate. One assignment is the Conference coordinator, who runs the December committee draw with the trustees' GSC committee chair and vice-chair.",
+   "quotes": [
+    {
+     "text": "Twelve GSO Staff Member Assignments are filled by a rotating group of professionals who are also members of the A.A. Fellowship. With the help of Staff Assistants, Staff Members provide services specific to their Staff Member Assignment, or Desk.",
+     "source": "Service Manual BM-31 2026-2028, Ch. 10 A.A. World Services",
+     "page": "70"
+    },
+    {
+     "text": "In order to meet the changing conditions since the writing of this section, AAWS, Inc., with the approval of the General Service Board, has implemented a two-year rotation of assignments for most staff members.",
+     "source": "Service Manual BM-31, Twelve Concepts, Concept XI footnote 8",
+     "page": "C-45"
+    },
+    {
+     "text": "Reason for change: GSO Staff assignment changed from a one-year term to a two-year term per discussion by the AAWS Board in March 1965. Rotation of Staff was not a change in the principle of rotation, only timing.",
+     "source": "Service Manual BM-31, Twelve Concepts edit note (E8)",
+     "page": "C-77"
+    },
+    {
+     "text": "Because of certain unusual skills required, rotation among Grapevine staff members is more difficult.",
+     "source": "Service Manual BM-31, Concept XI",
+     "page": "C-71"
+    },
+    {
+     "text": "Coinciding with the GSO Staff assignment rotation in September 2025, we were pleased to introduce an additional assignment: Self Support/Finance.",
+     "source": "2026 Final Conference Report, Staff Services report",
+     "page": "66"
+    }
+   ]
+  },
+  {
+   "topic": "conference_composition",
+   "summary": "There are about 135 voting members: 93 area delegates (at least two-thirds of the body), 21 or 22 GSB trustees, 6 nontrustee directors of AAWS and Grapevine, and about 15 A.A. staff of GSO, Grapevine and La Viña. Each member has one vote even when serving in more than one capacity. The quorum is two-thirds of registered members. Advisory Actions need substantial unanimity, meaning two-thirds of members voting provided a quorum votes. A three-quarters vote may reorganize the GSB. The Conference meets yearly, usually in April in New York. Trustees emeriti attend but do not vote.",
+   "quotes": [
+    {
+     "text": "Each year, there are approximately 135 voting members of the General Service Conference ... • 93 area delegates (who make up at least two-thirds of the Conference body) • 21 or 22 trustees of the General Service Board • 6 nontrustee directors from AAWS and Grapevine • 15 A.A. Staff at the General Service Office (AAWS, Grapevine and La Viña)",
+     "source": "Service Manual BM-31 2026-2028, Ch. 6 'Conference Membership'",
+     "page": "41"
+    },
+    {
+     "text": "Each Conference member has one vote, even if they attend in more than one capacity",
+     "source": "Service Manual BM-31, Ch. 6",
+     "page": "41"
+    },
+    {
+     "text": "Composition: The Conference (U.S. and Canada) shall be composed of area delegates, the trustees of the General Service Board, directors of A.A. World Services and AA Grapevine, and staff members of the Grapevine and General Service Office.",
+     "source": "Service Manual BM-31, Appendix K Current Conference Charter, para. 2",
+     "page": "124"
+    },
+    {
+     "text": "A quorum shall consist of two-thirds of all the Conference members registered.",
+     "source": "Service Manual BM-31, Appendix K Current Conference Charter, para. 4",
+     "page": "124"
+    }
+   ]
+  },
+  {
+   "topic": "panel_numbering",
+   "summary": "A panel is the group of delegates who first serve at a given Conference, numbered by that Conference: Panel N first serves at the Nth GSC, held in year 1950+N. The first Conference was 1951, an odd year and Panel 1, with 37 delegates; Panel 2 added 38 delegates in 1952. There are now 93 areas: 48 elect odd panels and 45 elect even panels. Appendix M's odd/even list matches the 2026 roster (Panel 75 is odd, 48 areas; Panel 76 is even, 45 areas) with no mismatches. Odd-panel areas: 1, 4, 5, 6, 10, 11, 13, 14, 15, 17, 19, 21, 22, 24, 27, 30, 32, 33, 36, 38, 39, 40, 42, 44, 47, 49, 51, 52, 53, 54, 57, 59, 60, 65, 67, 69, 71, 72, 73, 75, 79, 82, 83, 85, 88, 89, 91, 93. All others are even. In 2026, Panel 75 delegates are in their second year and rotate out after the 2026 Conference. Panel 76 delegates are in their first year and serve the 2027 Conference. Panel 77 is elected in fall 2026 by the odd areas and first serves in 2027. Panel 78 is elected in fall 2027 by the even areas.",
+   "quotes": [
+    {
+     "text": "A panel is a numerical designation that refers to a group of delegates elected to begin serving at the General Service Conference in a particular year. The Conference started in 1951 (an odd year, Panel 1) and included 37 delegates. The following year (an even year, Panel 2) there were 38 delegates added. ... Each panel is numbered for the Conference at which the area’s delegate will first serve. For example, delegates attending the 63rd General Service Conference as their first Conference are Panel 63 delegates.",
+     "source": "Service Manual BM-31 2026-2028, Appendix M Conference Panels",
+     "page": "130"
+    },
+    {
+     "text": "Panel — Refers to a group of delegates elected to begin serving at the General Service Conference in a particular year. Each panel is numbered for the Conference at which the area’s delegate will first serve.",
+     "source": "Service Manual BM-31, Glossary",
+     "page": "93"
+    },
+    {
+     "text": "The 76th Conference includes Panel 75 (delegates now serving for their second year) and Panel 76 (new delegates).",
+     "source": "2026 Final Conference Report (Confidential), 'Area Delegates'",
+     "page": "178"
+    }
+   ]
+  },
+  {
+   "topic": "other",
+   "summary": "Related procedures. (1) Third Legacy Procedure: the first candidate to reach two-thirds wins. Candidates under one-fifth are dropped after ballot 2 and under one-third after ballot 3; after ballot 4 the lowest is dropped. A fifth ballot needs a majority motion; if it is not held or fails, the top two candidates 'go to the hat.' It is used for delegates and for regional and at-large trustees. (2) Changing an area's region: two-thirds of GSRs present must agree, then two-thirds of the delegates of each region involved, then the Conference approves; the change takes effect at the end of that Conference. (3) Regional Forums are held in each region every two years: Northeast, East Central, West Central and Southwest in odd years (2027: Southwest September 30-October 3, Kansas City); Western Canada, Eastern Canada, Southeast and Pacific in even years (2026 FR p. 98). (4) Appointed committee members serve one-year terms, up to four years; past delegates are eligible one year after rotation. (5) A 2025 advisory change to the IC/RF CSP confirms the 'first-year panel' rule for chairs. (6) Source discrepancy, resolved: Robert L. (TAL/Canada) is listed as a Panel 48 delegate for Area 89 NE Quebec in the 2023-2025 Final Reports but Area 87 SW Quebec in the 2026 report. Panel 48 is an even panel and Area 87 elects in even years (Area 89 in odd), so Area 87 is right.",
+   "quotes": [
+    {
+     "text": "After the fourth ballot, if no candidate has two-thirds of the total vote, the candidate with the smallest total is automatically withdrawn, except that the top two candidates remain. ... If this motion is defeated, balloting is over and the choice is made by lot — “going to the hat” — immediately.",
+     "source": "Service Manual BM-31 2026-2028, Appendix G Third Legacy Procedure",
+     "page": "115"
+    },
+    {
+     "text": "Approval by two-thirds of the delegates from each region involved is required before the proposal is presented to the General Service Conference for action. A change of region will become effective at the end of the Conference, at which it may be approved.",
+     "source": "Service Manual BM-31, Appendix F 'Requesting a Change of Region'",
+     "page": "114"
+    },
+    {
+     "text": "Region — A grouping of several areas from which a regional trustee comes to the board of trustees. There are six regions in the U.S., two in Canada.",
+     "source": "Service Manual BM-31, Glossary",
+     "page": "93"
+    },
+    {
+     "text": "Appointed committee members serve for one year, but the term may be extended depending on committee projects (maximum four years). ... (Candidates who are past Conference delegates are not eligible until one year after rotation.)",
+     "source": "Service Manual BM-31, Ch. 8 'Appointed Committee Members (ACMs)'",
+     "page": "61"
+    }
+   ]
+  }
+ ],
+ "regional_trustee_schedule": [
+  {
+   "position": "Pacific regional trustee",
+   "election_years": [
+    2022,
+    2026,
+    2030,
+    2034,
+    2038
+   ],
+   "note": "2026-2038 from the Service Manual 2026-2028 table on p. 54. 2022 (Reilly K.) and 2026 (Candice C., Area 18) are confirmed by Final Report bios."
+  },
+  {
+   "position": "Eastern Canada regional trustee",
+   "election_years": [
+    2022,
+    2026,
+    2030,
+    2034,
+    2038
+   ],
+   "note": "2026-2038 from Service Manual p. 54. 2022 (Joyce S.) and 2026 (Jeff S., Area 86) are confirmed by Final Reports."
+  },
+  {
+   "position": "Northeast regional trustee",
+   "election_years": [
+    2023,
+    2027,
+    2031,
+    2035,
+    2039
+   ],
+   "note": "2027-2039 from Service Manual p. 54. 2023 (Ken T.) is confirmed by Final Reports."
+  },
+  {
+   "position": "Southwest regional trustee",
+   "election_years": [
+    2019,
+    2023,
+    2027,
+    2031,
+    2035,
+    2039
+   ],
+   "note": "2027-2039 from Service Manual p. 54. 2019 (Jimmy D.) and 2023 (Teresa J.) are confirmed by Final Reports."
+  },
+  {
+   "position": "West Central regional trustee",
+   "election_years": [
+    2020,
+    2024,
+    2028,
+    2032,
+    2036,
+    2040
+   ],
+   "note": "2028-2040 from Service Manual p. 54. 2020 (Mike L.) and 2024 (Charlie H.) are confirmed by Final Reports."
+  },
+  {
+   "position": "Western Canada regional trustee",
+   "election_years": [
+    2020,
+    2024,
+    2028,
+    2032,
+    2036,
+    2040
+   ],
+   "note": "2028-2040 from Service Manual p. 54. 2020 (Irma V.) and 2024 (Gail P.) are confirmed by Final Reports."
+  },
+  {
+   "position": "East Central regional trustee",
+   "election_years": [
+    2021,
+    2025,
+    2029,
+    2033,
+    2037,
+    2041
+   ],
+   "note": "2029-2041 from Service Manual p. 54. 2021 (Cathi C.) and 2025 (Sherry S.) are confirmed by Final Reports."
+  },
+  {
+   "position": "Southeast regional trustee",
+   "election_years": [
+    2021,
+    2025,
+    2029,
+    2033,
+    2037,
+    2041
+   ],
+   "note": "2029-2041 from Service Manual p. 54. 2021 (Tom H.) and 2025 (Susan V., May 2025) are confirmed by Final Reports."
+  },
+  {
+   "position": "Trustee-at-large/Canada",
+   "election_years": [
+    2015,
+    2019,
+    2023,
+    2027,
+    2031,
+    2035
+   ],
+   "note": "Derived, not published: the Service Manual says only that TAL terms are staggered, with four one-year terms. History from Final Report bios: Scott H. 2015, Trish L. May 2019, Robert L. April 2023."
+  },
+  {
+   "position": "Trustee-at-large/U.S.",
+   "election_years": [
+    2021,
+    2025,
+    2029,
+    2033,
+    2037
+   ],
+   "note": "Derived, not published. History: Marita R. April 2021, Jennifer B. 2025."
+  },
+  {
+   "position": "General service trustees (2 AAWS + 2 Grapevine)",
+   "election_years": [
+    2021,
+    2022,
+    2023,
+    2025,
+    2026,
+    2027,
+    2029,
+    2030
+   ],
+   "note": "No published calendar; derived from Final Report bios and slates and therefore uncertain. Elected 2021: Deborah K. (AAWS) and Paz P. (GV). 2022: Carolyn W. (AAWS). 2023: David S. (GV, inferred from his listing as a Class B trustee in the 2023 FR). 2025: John W. (AAWS) and Teddy B.-W. (GV). 2026: Clint M. (AAWS, succeeding Carolyn W.). Expected future openings, assuming full four-year service: 2027 (GV), 2029 (AAWS and GV), 2030 (AAWS)."
+  }
+ ],
+ "docs": [
+  {
+   "title": "The A.A. Service Manual combined with Twelve Concepts for World Service (BM-31), 2026-2028 Edition, Revised and Updated",
+   "url": "https://aaws.widen.net/content/wbktsxdemg/pdf/bm-31_aa_service_manual_online.pdf?v=4cc37dc3-e008-4952-9045-7ca2b58263e4",
+   "edition": "2026-2028 Edition, Revised and Updated; 'Revised: September 2026'; (c) AAWS 2026; online digital edition linked from htt"
+  },
+  {
+   "title": "SMF-118 Regional Map of US and Canada (Service Material from the GSO, 11/2021)",
+   "url": "https://www.aa.org/sites/default/files/literature/smf-118_RegionalMapUSCAN_EN_1121.pdf",
+   "edition": "11/2021, 1 page. Graphic map only: it shows the 8 regions at state/province level and does not list areas by number. Tex"
+  },
+  {
+   "title": "SMF-146 Area Map of US and Canada (Service Material from the GSO, 11/2021)",
+   "url": "https://aaws.widen.net/content/atqygtpg54/pdf/smf-146_area_map_of_us_and_canada.pdf?v=f2f9b05e-ec44-41d9-91d5-9cc81f872913",
+   "edition": "11/2021, 1 page. Graphic map of area numbers, linked from https://www.aa.org/area-map-us-canada. It is the same as Servi"
+  },
+  {
+   "title": "aa.org - List of General Service Conference Area Web Sites (US/Canada): 93 areas with official names, numbers and websites",
+   "url": "https://www.aa.org/list-of-general-service-conference-area-web-sites-uscanada",
+   "edition": "Web page fetched 2026-10-19. The page has no region column. Its names and URLs are transcribed into areas_reference.json"
+  }
+ ],
+ "term_years": {
+  "CLASS_A": 6,
+  "REG": 4,
+  "TAL_US": 4,
+  "TAL_CANADA": 4,
+  "GST": 4,
+  "GSB_CHAIR": 4,
+  "DIR_AAWS": 4,
+  "DIR_GRAPEVINE": 4
+ }
+}

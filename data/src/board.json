@@ -1,0 +1,2512 @@
+{
+ "meta": {
+  "about": "Board facts from the 2017-2026 Final Reports (D1 data task, 2026-10-20). Slates are the ones presented at Conference Y for the annual meeting of the members of the GSB / AAWS / AA Grapevine right after it (usually the closing Saturday). Names are first name + last initial; \"employee\" = GSO/Grapevine employee (*); \"nonalcoholic\" = †. \"FRyy pP Lnnnn\" = report year, PDF page (text marker), line.",
+  "officer_lag": "Report Y prints the officers elected after Conference Y-1; use slates[] for who holds office after a given annual meeting."
+ },
+ "annual_meetings": [
+  {
+   "year": 2017,
+   "date": "2017-04-29",
+   "approx": true,
+   "printed": "April 2017",
+   "ref": "FR17 p12 L1030-1142 (Advisory Actions 40-44)"
+  },
+  {
+   "year": 2018,
+   "date": "2018-04-28",
+   "approx": true,
+   "printed": "April 2018",
+   "ref": "FR18 p49 L4973-5074 (Advisory Actions 53-56)"
+  },
+  {
+   "year": 2019,
+   "date": "2019-05-25",
+   "approx": true,
+   "printed": "May 2019",
+   "ref": "FR19 p35 L3427-3535 (Advisory Actions 31-34)"
+  },
+  {
+   "year": 2020,
+   "date": "2020-05",
+   "approx": true,
+   "printed": "May 2020",
+   "ref": "FR20 p53 L5276-5361 (Advisory Actions 14-16); AAWS slate p54 L5405-5427, p60 L5994-6003; floor motion p53 L5362-5368; GSB approval FR21 p25 L2224-2230"
+  },
+  {
+   "year": 2021,
+   "date": "2021-04-24",
+   "approx": false,
+   "printed": null,
+   "ref": "FR21 p63 L6301-6412 (Advisory Actions 46-49)"
+  },
+  {
+   "year": 2022,
+   "date": "2022-04-30",
+   "approx": false,
+   "printed": null,
+   "ref": "FR22 p81 L8124-8235 (Advisory Actions 30-33)"
+  },
+  {
+   "year": 2023,
+   "date": "2023-04-29",
+   "approx": false,
+   "printed": null,
+   "ref": "FR23 p39 L3181-3303"
+  },
+  {
+   "year": 2024,
+   "date": "2024-04-20",
+   "approx": false,
+   "printed": null,
+   "ref": "FR24 p40 L3817-3945"
+  },
+  {
+   "year": 2025,
+   "date": "2025-05-03",
+   "approx": false,
+   "printed": null,
+   "ref": "FR25 p40 L3275-3418"
+  },
+  {
+   "year": 2026,
+   "date": "2026-05-02",
+   "approx": false,
+   "printed": null,
+   "ref": "FR26 p40-41 L3336-3459"
+  }
+ ],
+ "slates": [
+  {
+   "conference_year": 2017,
+   "meeting_date": "2017-04-29",
+   "date_approx": true,
+   "printed_date": "April 2017",
+   "ref": "FR17 p12 L1030-1142 (Advisory Actions 40-44)",
+   "gsb_trustees": {
+    "A": [
+     {
+      "name": "Leslie B."
+     },
+     {
+      "name": "Peter L."
+     },
+     {
+      "name": "Christine C."
+     },
+     {
+      "name": "Nancy M."
+     },
+     {
+      "name": "Michele G."
+     },
+     {
+      "name": "David M."
+     },
+     {
+      "name": "Ivan L."
+     }
+    ],
+    "B": [
+     {
+      "name": "Thomas A."
+     },
+     {
+      "name": "Scott H."
+     },
+     {
+      "name": "Cathy B."
+     },
+     {
+      "name": "David N."
+     },
+     {
+      "name": "Richard B."
+     },
+     {
+      "name": "Newton P."
+     },
+     {
+      "name": "Carole B."
+     },
+     {
+      "name": "Richard P."
+     },
+     {
+      "name": "Joel C."
+     },
+     {
+      "name": "Ginger R. B."
+     },
+     {
+      "name": "Mark E."
+     },
+     {
+      "name": "Cate W."
+     },
+     {
+      "name": "Yolanda F."
+     }
+    ],
+    "vacancies": 1,
+    "counts": {
+     "A": 7,
+     "B": 13
+    }
+   },
+   "gsb_officers": [
+    {
+     "title": "Chair",
+     "name": "Michele G."
+    },
+    {
+     "title": "First Vice-Chair",
+     "name": "Joel C."
+    },
+    {
+     "title": "Second Vice-Chair",
+     "name": "Scott H."
+    },
+    {
+     "title": "Treasurer",
+     "name": "David M."
+    },
+    {
+     "title": "Secretary",
+     "name": "Yolanda F."
+    },
+    {
+     "title": "Assistant Treasurer",
+     "name": "Bob S.",
+     "employee": true
+    },
+    {
+     "title": "Assistant Secretary",
+     "name": "Eva S.",
+     "employee": true
+    }
+   ],
+   "aaws_directors": [
+    {
+     "name": "Tom A."
+    },
+    {
+     "name": "David N."
+    },
+    {
+     "name": "Deborah A."
+    },
+    {
+     "name": "Richard P."
+    },
+    {
+     "name": "Richard B."
+    },
+    {
+     "name": "Eva S.",
+     "employee": true
+    },
+    {
+     "name": "Beau B."
+    },
+    {
+     "name": "Greg T.",
+     "employee": true
+    },
+    {
+     "name": "Homer M."
+    }
+   ],
+   "grapevine_directors": [
+    {
+     "name": "Carole B."
+    },
+    {
+     "name": "Ami B.",
+     "employee": true
+    },
+    {
+     "name": "Josh E."
+    },
+    {
+     "name": "Yolanda F."
+    },
+    {
+     "name": "Tommi H."
+    },
+    {
+     "name": "Ivan L.",
+     "nonalcoholic": true
+    },
+    {
+     "name": "Paz P."
+    },
+    {
+     "name": "Ginger R. B."
+    },
+    {
+     "name": "Cate W."
+    }
+   ],
+   "notes": "The AAWS slate prints \"Eva P.\" (L1113); the GSO staff coordinator Eva S. is meant (2018 slate L5048 \"Eva S.*\")."
+  },
+  {
+   "conference_year": 2018,
+   "meeting_date": "2018-04-28",
+   "date_approx": true,
+   "printed_date": "April 2018",
+   "ref": "FR18 p49 L4973-5074 (Advisory Actions 53-56)",
+   "gsb_trustees": {
+    "A": [
+     {
+      "name": "Leslie B."
+     },
+     {
+      "name": "Peter L."
+     },
+     {
+      "name": "Christine C."
+     },
+     {
+      "name": "Nancy M."
+     },
+     {
+      "name": "Michele G."
+     },
+     {
+      "name": "David M."
+     },
+     {
+      "name": "Ivan L."
+     }
+    ],
+    "B": [
+     {
+      "name": "Thomas A."
+     },
+     {
+      "name": "Scott H."
+     },
+     {
+      "name": "Cathy B."
+     },
+     {
+      "name": "Jan L."
+     },
+     {
+      "name": "Carole B."
+     },
+     {
+      "name": "David N."
+     },
+     {
+      "name": "Beau B."
+     },
+     {
+      "name": "Newton P."
+     },
+     {
+      "name": "Mark E."
+     },
+     {
+      "name": "Richard P."
+     },
+     {
+      "name": "Yolanda F."
+     },
+     {
+      "name": "Ginger R. B."
+     },
+     {
+      "name": "Kathryn F."
+     },
+     {
+      "name": "Cate W."
+     }
+    ],
+    "counts": {
+     "A": 7,
+     "B": 14
+    }
+   },
+   "gsb_officers": [
+    {
+     "title": "Chair",
+     "name": "Michele G."
+    },
+    {
+     "title": "First Vice-Chair",
+     "name": "Leslie B."
+    },
+    {
+     "title": "Second Vice-Chair",
+     "name": "Carole B."
+    },
+    {
+     "title": "Treasurer",
+     "name": "David M."
+    },
+    {
+     "title": "Secretary",
+     "name": "Thomas A."
+    },
+    {
+     "title": "Assistant Treasurer",
+     "name": "Bob S.",
+     "employee": true
+    },
+    {
+     "title": "Assistant Secretary",
+     "name": "Eva S.",
+     "employee": true
+    }
+   ],
+   "aaws_directors": [
+    {
+     "name": "Tom A."
+    },
+    {
+     "name": "David N."
+    },
+    {
+     "name": "Deborah A."
+    },
+    {
+     "name": "Eva S.",
+     "employee": true
+    },
+    {
+     "name": "Cathy B."
+    },
+    {
+     "name": "Greg T.",
+     "employee": true
+    },
+    {
+     "name": "Beau B."
+    },
+    {
+     "name": "Carolyn W."
+    }
+   ],
+   "grapevine_directors": [
+    {
+     "name": "Carole B."
+    },
+    {
+     "name": "Tommi H."
+    },
+    {
+     "name": "Ami B.",
+     "employee": true
+    },
+    {
+     "name": "Nancy M.",
+     "nonalcoholic": true
+    },
+    {
+     "name": "Josh E."
+    },
+    {
+     "name": "Ginger R. B."
+    },
+    {
+     "name": "Mark E."
+    },
+    {
+     "name": "Cate W."
+    },
+    {
+     "name": "Ino F."
+    }
+   ],
+   "notes": "\"*Will be replaced at G.S.O. rotation in 2018\" (L5074) on the staff coordinator seats."
+  },
+  {
+   "conference_year": 2019,
+   "meeting_date": "2019-05-25",
+   "date_approx": true,
+   "printed_date": "May 2019",
+   "ref": "FR19 p35 L3427-3535 (Advisory Actions 31-34)",
+   "gsb_trustees": {
+    "A": [
+     {
+      "name": "Leslie B."
+     },
+     {
+      "name": "Peter L."
+     },
+     {
+      "name": "Christine C."
+     },
+     {
+      "name": "Michele G."
+     },
+     {
+      "name": "Nancy M."
+     },
+     {
+      "name": "Judith Ann K."
+     },
+     {
+      "name": "Al M."
+     }
+    ],
+    "B": [
+     {
+      "name": "Thomas A."
+     },
+     {
+      "name": "Francis G."
+     },
+     {
+      "name": "Cathy B."
+     },
+     {
+      "name": "Patricia LaN."
+     },
+     {
+      "name": "Carole B."
+     },
+     {
+      "name": "Jan L."
+     },
+     {
+      "name": "Beau B."
+     },
+     {
+      "name": "David N."
+     },
+     {
+      "name": "James (Jimmy) D."
+     },
+     {
+      "name": "Newton P."
+     },
+     {
+      "name": "Mark E."
+     },
+     {
+      "name": "Ginger R. B."
+     },
+     {
+      "name": "Kathi F."
+     },
+     {
+      "name": "Cate W."
+     }
+    ],
+    "counts": {
+     "A": 7,
+     "B": 14
+    }
+   },
+   "gsb_officers": [
+    {
+     "title": "Chair",
+     "name": "Michele G."
+    },
+    {
+     "title": "First Vice-Chair",
+     "name": "Nancy M."
+    },
+    {
+     "title": "Second Vice-Chair",
+     "name": "Newton P."
+    },
+    {
+     "title": "Treasurer",
+     "name": "Leslie B."
+    },
+    {
+     "title": "Secretary",
+     "name": "Ginger R. B."
+    },
+    {
+     "title": "Assistant Treasurer",
+     "name": "Bob S.",
+     "employee": true
+    },
+    {
+     "title": "Assistant Secretary",
+     "name": "Mary C.",
+     "employee": true
+    }
+   ],
+   "aaws_directors": [
+    {
+     "name": "Beau B."
+    },
+    {
+     "name": "Homer M."
+    },
+    {
+     "name": "Cathy B."
+    },
+    {
+     "name": "David N."
+    },
+    {
+     "name": "Mary C.",
+     "employee": true
+    },
+    {
+     "name": "Gregory T.",
+     "employee": true
+    },
+    {
+     "name": "Deborah K."
+    },
+    {
+     "name": "Carolyn W."
+    },
+    {
+     "name": "Jan L."
+    }
+   ],
+   "grapevine_directors": [
+    {
+     "name": "Carole B."
+    },
+    {
+     "name": "Tommi H."
+    },
+    {
+     "name": "Josh E."
+    },
+    {
+     "name": "Nancy M.",
+     "nonalcoholic": true
+    },
+    {
+     "name": "Mark E."
+    },
+    {
+     "name": "Ginger R. B."
+    },
+    {
+     "name": "Ino F."
+    },
+    {
+     "name": "Albin Z.",
+     "employee": true
+    },
+    {
+     "name": "Kathi F."
+    }
+   ]
+  },
+  {
+   "conference_year": 2020,
+   "meeting_date": "2020-05",
+   "date_approx": true,
+   "printed_date": "May 2020",
+   "ref": "FR20 p53 L5276-5361 (Advisory Actions 14-16); AAWS slate p54 L5405-5427, p60 L5994-6003; floor motion p53 L5362-5368; GSB approval FR21 p25 L2224-2230",
+   "gsb_trustees": {
+    "A": [
+     {
+      "name": "Leslie B."
+     },
+     {
+      "name": "Nancy M."
+     },
+     {
+      "name": "Christine C."
+     },
+     {
+      "name": "Judith Ann K."
+     },
+     {
+      "name": "Michele G."
+     },
+     {
+      "name": "Al M."
+     },
+     {
+      "name": "Peter L."
+     }
+    ],
+    "B": [
+     {
+      "name": "Cathy B."
+     },
+     {
+      "name": "Trish LaN."
+     },
+     {
+      "name": "Beau B."
+     },
+     {
+      "name": "Jan L."
+     },
+     {
+      "name": "Jimmy D."
+     },
+     {
+      "name": "Mike L."
+     },
+     {
+      "name": "Josh E."
+     },
+     {
+      "name": "David N."
+     },
+     {
+      "name": "Mark E."
+     },
+     {
+      "name": "Newton P."
+     },
+     {
+      "name": "Kathi F."
+     },
+     {
+      "name": "Ginger R. B."
+     },
+     {
+      "name": "Francis G."
+     },
+     {
+      "name": "Irma V. de B-N"
+     }
+    ],
+    "counts": {
+     "A": 7,
+     "B": 14
+    }
+   },
+   "gsb_officers": [
+    {
+     "title": "Chair",
+     "name": "Michele G."
+    },
+    {
+     "title": "First Vice-Chair",
+     "name": "Christine C."
+    },
+    {
+     "title": "Second Vice-Chair",
+     "name": "David N."
+    },
+    {
+     "title": "Treasurer",
+     "name": "Leslie B."
+    },
+    {
+     "title": "Secretary",
+     "name": "Mark E."
+    },
+    {
+     "title": "Assistant Secretary",
+     "name": "Mary C.",
+     "employee": true
+    }
+   ],
+   "aaws_directors": [
+    {
+     "name": "Beau B."
+    },
+    {
+     "name": "David N."
+    },
+    {
+     "name": "Mary C.",
+     "employee": true
+    },
+    {
+     "name": "Greg T.",
+     "employee": true
+    },
+    {
+     "name": "Jimmy D."
+    },
+    {
+     "name": "Carolyn W."
+    },
+    {
+     "name": "Deborah K."
+    },
+    {
+     "name": "Jan L."
+    }
+   ],
+   "grapevine_directors": [
+    {
+     "name": "Josh E."
+    },
+    {
+     "name": "Francis G."
+    },
+    {
+     "name": "Ino F."
+    },
+    {
+     "name": "Tommi H."
+    },
+    {
+     "name": "Kathi F."
+    },
+    {
+     "name": "Nancy M.",
+     "nonalcoholic": true
+    },
+    {
+     "name": "Cindy F."
+    },
+    {
+     "name": "Ginger R. B."
+    },
+    {
+     "name": "Albin Z.",
+     "employee": true
+    }
+   ],
+   "notes": "Assistant treasurer printed as \"G.S.O. Chief Financial Officer*\" (no name). No AAWS slate was approved at the 2020 Conference. A floor motion to approve the original slate (which included the newly proposed director John W., elected in 2021) did not pass (FR20 p53 L5362-5368). The Conference Committee on Trustees recommended a revised slate that omitted him as ineligible for procedural reasons (FR20 p60 L5994-6003). The floor actions on both slates were forwarded to the trustees' Committee on the General Service Conference (FR20 p54 L5383-5427), which took no action. On May 23, 2020 the General Service Board approved these eight names plus a vacancy (FR21 p25 L2224-2230)."
+  },
+  {
+   "conference_year": 2021,
+   "meeting_date": "2021-04-24",
+   "ref": "FR21 p63 L6301-6412 (Advisory Actions 46-49)",
+   "gsb_trustees": {
+    "A": [
+     {
+      "name": "Molly A. A."
+     },
+     {
+      "name": "Al M."
+     },
+     {
+      "name": "Christine C."
+     },
+     {
+      "name": "Linda C."
+     },
+     {
+      "name": "Nancy M."
+     },
+     {
+      "name": "Judith Ann K."
+     },
+     {
+      "name": "Kevin P."
+     }
+    ],
+    "B": [
+     {
+      "name": "Beau B."
+     },
+     {
+      "name": "Deborah K."
+     },
+     {
+      "name": "Cathi C."
+     },
+     {
+      "name": "Trish L."
+     },
+     {
+      "name": "Jimmy D."
+     },
+     {
+      "name": "Jan L."
+     },
+     {
+      "name": "Josh E."
+     },
+     {
+      "name": "Mike L."
+     },
+     {
+      "name": "Kathi F."
+     },
+     {
+      "name": "Paz P."
+     },
+     {
+      "name": "Francis G."
+     },
+     {
+      "name": "Marita R."
+     },
+     {
+      "name": "Tom H."
+     },
+     {
+      "name": "Irma V."
+     }
+    ],
+    "counts": {
+     "A": 7,
+     "B": 14
+    }
+   },
+   "gsb_officers": [
+    {
+     "title": "Chair",
+     "name": "Linda C."
+    },
+    {
+     "title": "First Vice-Chair",
+     "name": "Trish L."
+    },
+    {
+     "title": "Second Vice-Chair",
+     "name": "Jan L."
+    },
+    {
+     "title": "Treasurer",
+     "name": "Kevin P."
+    },
+    {
+     "title": "Secretary",
+     "name": "Francis G."
+    },
+    {
+     "title": "Assistant Treasurer",
+     "name": "Paul K.",
+     "employee": true
+    },
+    {
+     "title": "Assistant Secretary",
+     "name": "Jeff W.",
+     "employee": true
+    }
+   ],
+   "aaws_directors": [
+    {
+     "name": "Beau B."
+    },
+    {
+     "name": "Irma V."
+    },
+    {
+     "name": "Jimmy D."
+    },
+    {
+     "name": "Carolyn W."
+    },
+    {
+     "name": "Vera F."
+    },
+    {
+     "name": "John W."
+    },
+    {
+     "name": "Deborah K."
+    },
+    {
+     "name": "Jeff W.",
+     "employee": true
+    }
+   ],
+   "grapevine_directors": [
+    {
+     "name": "Josh E."
+    },
+    {
+     "name": "Coree H."
+    },
+    {
+     "name": "Ino F."
+    },
+    {
+     "name": "Mike L."
+    },
+    {
+     "name": "Cindy F."
+    },
+    {
+     "name": "Nancy M.",
+     "nonalcoholic": true
+    },
+    {
+     "name": "Francis G."
+    },
+    {
+     "name": "Paz P."
+    }
+   ],
+   "notes": "The AAWS slate lists \"General Manager*\" and the Grapevine slate \"AAGV Publisher*\" without names (both posts were being filled)."
+  },
+  {
+   "conference_year": 2022,
+   "meeting_date": "2022-04-30",
+   "ref": "FR22 p81 L8124-8235 (Advisory Actions 30-33)",
+   "gsb_trustees": {
+    "A": [
+     {
+      "name": "Molly A. A."
+     },
+     {
+      "name": "Linda C."
+     },
+     {
+      "name": "Judith Ann K."
+     },
+     {
+      "name": "Kerry M."
+     },
+     {
+      "name": "Al M."
+     },
+     {
+      "name": "Andie M."
+     },
+     {
+      "name": "Kevin P."
+     }
+    ],
+    "B": [
+     {
+      "name": "Cathi C."
+     },
+     {
+      "name": "Jimmy D."
+     },
+     {
+      "name": "Josh E."
+     },
+     {
+      "name": "Francis G."
+     },
+     {
+      "name": "Tom H."
+     },
+     {
+      "name": "Reilly K."
+     },
+     {
+      "name": "Deborah K."
+     },
+     {
+      "name": "Trish L."
+     },
+     {
+      "name": "Mike L."
+     },
+     {
+      "name": "Paz P."
+     },
+     {
+      "name": "Marita R."
+     },
+     {
+      "name": "Joyce S."
+     },
+     {
+      "name": "Irma V."
+     },
+     {
+      "name": "Carolyn W."
+     }
+    ],
+    "counts": {
+     "A": 7,
+     "B": 14
+    }
+   },
+   "gsb_officers": [
+    {
+     "title": "Chair",
+     "name": "Linda C."
+    },
+    {
+     "title": "First Vice-Chair",
+     "name": "Jimmy D."
+    },
+    {
+     "title": "Second Vice-Chair",
+     "name": "Francis G."
+    },
+    {
+     "title": "Treasurer",
+     "name": "Kevin P."
+    },
+    {
+     "title": "Secretary",
+     "name": "Cathi C."
+    },
+    {
+     "title": "Assistant Treasurer",
+     "name": "Paul K.",
+     "employee": true
+    },
+    {
+     "title": "Assistant Secretary",
+     "name": "Jeff W.",
+     "employee": true
+    }
+   ],
+   "aaws_directors": [
+    {
+     "name": "Cathi C."
+    },
+    {
+     "name": "Carolyn W."
+    },
+    {
+     "name": "Vera F."
+    },
+    {
+     "name": "John W."
+    },
+    {
+     "name": "Deborah K."
+    },
+    {
+     "name": "Robert (Bob) W.",
+     "employee": true
+    },
+    {
+     "name": "Clinton M."
+    },
+    {
+     "name": "Jeff W.",
+     "employee": true
+    },
+    {
+     "name": "Irma V."
+    }
+   ],
+   "grapevine_directors": [
+    {
+     "name": "Molly A. A.",
+     "nonalcoholic": true
+    },
+    {
+     "name": "Coree H."
+    },
+    {
+     "name": "Chris C.",
+     "employee": true
+    },
+    {
+     "name": "Mike L."
+    },
+    {
+     "name": "Josh E."
+    },
+    {
+     "name": "Paz P."
+    },
+    {
+     "name": "Cindy F."
+    },
+    {
+     "name": "David S."
+    },
+    {
+     "name": "Tom H."
+    }
+   ]
+  },
+  {
+   "conference_year": 2023,
+   "meeting_date": "2023-04-29",
+   "ref": "FR23 p39 L3181-3303",
+   "gsb_trustees": {
+    "A": [
+     {
+      "name": "Judith Ann K."
+     },
+     {
+      "name": "Kerry M."
+     },
+     {
+      "name": "Al M."
+     },
+     {
+      "name": "Andie M."
+     },
+     {
+      "name": "Molly O."
+     },
+     {
+      "name": "Kevin P."
+     }
+    ],
+    "B": [
+     {
+      "name": "Cathi C."
+     },
+     {
+      "name": "Tom H."
+     },
+     {
+      "name": "Teresa J."
+     },
+     {
+      "name": "Reilly K."
+     },
+     {
+      "name": "Deborah K."
+     },
+     {
+      "name": "Robert L."
+     },
+     {
+      "name": "Mike L."
+     },
+     {
+      "name": "Paz P."
+     },
+     {
+      "name": "Marita R."
+     },
+     {
+      "name": "Joyce S."
+     },
+     {
+      "name": "David S."
+     },
+     {
+      "name": "Ken T."
+     },
+     {
+      "name": "Irma V."
+     },
+     {
+      "name": "Carolyn W."
+     }
+    ],
+    "vacancies": 1,
+    "counts": {
+     "A": 6,
+     "B": 14
+    }
+   },
+   "gsb_officers": [
+    {
+     "title": "Chair",
+     "name": "(vacant)"
+    },
+    {
+     "title": "First Vice-Chair",
+     "name": "Mike L."
+    },
+    {
+     "title": "Second Vice-Chair",
+     "name": "Judith Ann K."
+    },
+    {
+     "title": "Treasurer",
+     "name": "Kevin P."
+    },
+    {
+     "title": "Secretary",
+     "name": "Irma V."
+    },
+    {
+     "title": "Assistant Treasurer",
+     "name": "Paul K.",
+     "employee": true
+    },
+    {
+     "title": "Assistant Secretary",
+     "name": "Jeff W.",
+     "employee": true
+    }
+   ],
+   "aaws_directors": [
+    {
+     "name": "Cathi C."
+    },
+    {
+     "name": "Carolyn W."
+    },
+    {
+     "name": "Vera F."
+    },
+    {
+     "name": "John W."
+    },
+    {
+     "name": "Reilly K."
+    },
+    {
+     "name": "Robert (Bob) W.",
+     "employee": true
+    },
+    {
+     "name": "Deborah K."
+    },
+    {
+     "name": "Jeff W.",
+     "employee": true
+    },
+    {
+     "name": "Clinton M."
+    }
+   ],
+   "grapevine_directors": [
+    {
+     "name": "Teddy B.-W."
+    },
+    {
+     "name": "Molly O.",
+     "nonalcoholic": true
+    },
+    {
+     "name": "Morgan B."
+    },
+    {
+     "name": "Paz P."
+    },
+    {
+     "name": "Chris C.",
+     "employee": true
+    },
+    {
+     "name": "Joyce S."
+    },
+    {
+     "name": "Cindy F."
+    },
+    {
+     "name": "David S."
+    },
+    {
+     "name": "Tom H."
+    }
+   ],
+   "notes": "Chair vacant after the January 2023 resignation; Mike L. served as interim chair until April 2024 (2024 officers list)."
+  },
+  {
+   "conference_year": 2024,
+   "meeting_date": "2024-04-20",
+   "ref": "FR24 p40 L3817-3945",
+   "gsb_trustees": {
+    "A": [
+     {
+      "name": "Judith Ann K."
+     },
+     {
+      "name": "Dawn K."
+     },
+     {
+      "name": "Kerry M."
+     },
+     {
+      "name": "Al M."
+     },
+     {
+      "name": "Andie M."
+     },
+     {
+      "name": "Molly O."
+     },
+     {
+      "name": "Kevin P."
+     }
+    ],
+    "B": [
+     {
+      "name": "Cathi C."
+     },
+     {
+      "name": "Charles H."
+     },
+     {
+      "name": "Tom H."
+     },
+     {
+      "name": "Scott H."
+     },
+     {
+      "name": "Teresa J."
+     },
+     {
+      "name": "Reilly K."
+     },
+     {
+      "name": "Deborah K."
+     },
+     {
+      "name": "Robert L."
+     },
+     {
+      "name": "Gail P."
+     },
+     {
+      "name": "Paz P."
+     },
+     {
+      "name": "Marita R."
+     },
+     {
+      "name": "Joyce S."
+     },
+     {
+      "name": "David S."
+     },
+     {
+      "name": "Ken T."
+     },
+     {
+      "name": "Carolyn W."
+     }
+    ],
+    "counts": {
+     "A": 7,
+     "B": 15
+    }
+   },
+   "gsb_officers": [
+    {
+     "title": "Chair",
+     "name": "Scott H."
+    },
+    {
+     "title": "First Vice-Chair",
+     "name": "Deborah K.",
+     "third_legacy": true
+    },
+    {
+     "title": "Second Vice-Chair",
+     "name": "David S.",
+     "third_legacy": true
+    },
+    {
+     "title": "Treasurer",
+     "name": "Kevin P."
+    },
+    {
+     "title": "Secretary",
+     "name": "Teresa J.",
+     "third_legacy": true
+    },
+    {
+     "title": "Assistant Treasurer",
+     "name": "Paul K.",
+     "employee": true
+    },
+    {
+     "title": "Assistant Secretary",
+     "name": "Racy J.",
+     "employee": true
+    }
+   ],
+   "aaws_directors": [
+    {
+     "name": "Vera F."
+    },
+    {
+     "name": "Ken T."
+    },
+    {
+     "name": "Racy J.",
+     "employee": true
+    },
+    {
+     "name": "Carolyn W."
+    },
+    {
+     "name": "Reilly K."
+    },
+    {
+     "name": "John W."
+    },
+    {
+     "name": "Deborah K."
+    },
+    {
+     "name": "Robert (Bob) W.",
+     "employee": true
+    },
+    {
+     "name": "Clinton M."
+    }
+   ],
+   "grapevine_directors": [
+    {
+     "name": "Teddy B.-W."
+    },
+    {
+     "name": "Molly O.",
+     "nonalcoholic": true
+    },
+    {
+     "name": "Morgan B."
+    },
+    {
+     "name": "Paz P."
+    },
+    {
+     "name": "Chris C.",
+     "employee": true
+    },
+    {
+     "name": "Joyce S."
+    },
+    {
+     "name": "Teresa J."
+    },
+    {
+     "name": "David S."
+    },
+    {
+     "name": "Nikki O."
+    }
+   ],
+   "notes": "First Class B chair seat (Scott H., past trustee-at-large/Canada), so 15 Class B trustees (FR24 p101 L11002-11005). Vice-chairs and secretary elected by Third Legacy Procedure. The 2025 printed officers box leaves out the Second Vice-Chair (David S.)."
+  },
+  {
+   "conference_year": 2025,
+   "meeting_date": "2025-05-03",
+   "ref": "FR25 p40 L3275-3418",
+   "gsb_trustees": {
+    "A": [
+     {
+      "name": "Tom I."
+     },
+     {
+      "name": "Dawn K."
+     },
+     {
+      "name": "Kerry M."
+     },
+     {
+      "name": "Molly O."
+     },
+     {
+      "name": "Kelly P."
+     },
+     {
+      "name": "Veronica R."
+     }
+    ],
+    "B": [
+     {
+      "name": "Teddy B.-W."
+     },
+     {
+      "name": "Jennifer B."
+     },
+     {
+      "name": "Charles H."
+     },
+     {
+      "name": "Scott H."
+     },
+     {
+      "name": "Teresa J."
+     },
+     {
+      "name": "Reilly K."
+     },
+     {
+      "name": "Robert L."
+     },
+     {
+      "name": "Gail P."
+     },
+     {
+      "name": "Joyce S."
+     },
+     {
+      "name": "Cheryl S."
+     },
+     {
+      "name": "David S."
+     },
+     {
+      "name": "Ken T."
+     },
+     {
+      "name": "Susan V."
+     },
+     {
+      "name": "Carolyn W."
+     },
+     {
+      "name": "John W."
+     }
+    ],
+    "counts": {
+     "A": 6,
+     "B": 15
+    }
+   },
+   "gsb_officers": [
+    {
+     "title": "Chair",
+     "name": "Scott H."
+    },
+    {
+     "title": "First Vice-Chair",
+     "name": "Kerry M.",
+     "third_legacy": true
+    },
+    {
+     "title": "Second Vice-Chair",
+     "name": "Teresa J.",
+     "third_legacy": true
+    },
+    {
+     "title": "Treasurer",
+     "name": "Terrance B."
+    },
+    {
+     "title": "Secretary",
+     "name": "Carolyn W.",
+     "third_legacy": true
+    },
+    {
+     "title": "Assistant Treasurer",
+     "name": "Paul K.",
+     "employee": true
+    },
+    {
+     "title": "Assistant Secretary",
+     "name": "Racy J.",
+     "employee": true
+    }
+   ],
+   "aaws_directors": [
+    {
+     "name": "Julie C."
+    },
+    {
+     "name": "Ken T."
+    },
+    {
+     "name": "Charles H."
+    },
+    {
+     "name": "Carolyn W."
+    },
+    {
+     "name": "Matthew K."
+    },
+    {
+     "name": "John W."
+    },
+    {
+     "name": "Racy J.",
+     "employee": true
+    },
+    {
+     "name": "Robert (Bob) W.",
+     "employee": true
+    },
+    {
+     "name": "Clinton M."
+    }
+   ],
+   "grapevine_directors": [
+    {
+     "name": "Teddy B.-W."
+    },
+    {
+     "name": "Molly O.",
+     "nonalcoholic": true
+    },
+    {
+     "name": "Chris C.",
+     "employee": true
+    },
+    {
+     "name": "Gail P."
+    },
+    {
+     "name": "Teresa J."
+    },
+    {
+     "name": "Joyce S."
+    },
+    {
+     "name": "Fredy M."
+    },
+    {
+     "name": "David S."
+    },
+    {
+     "name": "Nikki O."
+    }
+   ],
+   "notes": "Treasurer printed \"Terrance B., FACHE, Trustee Emeriti\" (interim; a trustee emeritus and past Class A chair, not a seated trustee). Only six Class A names on the trustee slate."
+  },
+  {
+   "conference_year": 2026,
+   "meeting_date": "2026-05-02",
+   "ref": "FR26 p40-41 L3336-3459",
+   "gsb_trustees": {
+    "A": [
+     {
+      "name": "Tom I."
+     },
+     {
+      "name": "Kerry M."
+     },
+     {
+      "name": "Molly O."
+     },
+     {
+      "name": "Dawn K."
+     },
+     {
+      "name": "Kelly P."
+     },
+     {
+      "name": "Timothy (Tim) M."
+     },
+     {
+      "name": "Veronica R."
+     }
+    ],
+    "B": [
+     {
+      "name": "Teddy B.-W."
+     },
+     {
+      "name": "Gail P."
+     },
+     {
+      "name": "Jennifer B."
+     },
+     {
+      "name": "David S."
+     },
+     {
+      "name": "Charles (Charlie) H."
+     },
+     {
+      "name": "Kenneth (Ken) T."
+     },
+     {
+      "name": "Scott H."
+     },
+     {
+      "name": "Susan V."
+     },
+     {
+      "name": "Teresa J."
+     },
+     {
+      "name": "John W."
+     },
+     {
+      "name": "Robert L."
+     },
+     {
+      "name": "Candice C."
+     },
+     {
+      "name": "Clinton (Clint) M."
+     },
+     {
+      "name": "Jeff S."
+     },
+     {
+      "name": "Cheryl (Sherry) S."
+     }
+    ],
+    "counts": {
+     "A": 7,
+     "B": 15
+    }
+   },
+   "gsb_officers": [
+    {
+     "title": "Chair",
+     "name": "Scott H."
+    },
+    {
+     "title": "First Vice-Chair",
+     "name": "David S.",
+     "third_legacy": true
+    },
+    {
+     "title": "Second Vice-Chair",
+     "name": "Kenneth (Ken) T.",
+     "third_legacy": true
+    },
+    {
+     "title": "Treasurer",
+     "name": "Kerry M."
+    },
+    {
+     "title": "Secretary",
+     "name": "Kelly P.",
+     "third_legacy": true
+    },
+    {
+     "title": "Assistant Treasurer",
+     "name": "Paul K.",
+     "employee": true
+    },
+    {
+     "title": "Assistant Secretary",
+     "name": "Racy J.",
+     "employee": true
+    }
+   ],
+   "aaws_directors": [
+    {
+     "name": "Julie C."
+    },
+    {
+     "name": "Clinton (Clint) M."
+    },
+    {
+     "name": "Grace F."
+    },
+    {
+     "name": "Susan V."
+    },
+    {
+     "name": "Charles (Charlie) H."
+    },
+    {
+     "name": "John W."
+    },
+    {
+     "name": "Racy J.",
+     "employee": true
+    },
+    {
+     "name": "Robert (Bob) W.",
+     "employee": true
+    },
+    {
+     "name": "Matthew (Matt) K."
+    }
+   ],
+   "grapevine_directors": [
+    {
+     "name": "Teddy B.-W."
+    },
+    {
+     "name": "Nikki O."
+    },
+    {
+     "name": "Christopher (Chris) C.",
+     "employee": true
+    },
+    {
+     "name": "Gail P."
+    },
+    {
+     "name": "Fredy M."
+    },
+    {
+     "name": "Cheryl (Sherry) S."
+    },
+    {
+     "name": "Veronica R.",
+     "nonalcoholic": true
+    },
+    {
+     "name": "David S."
+    },
+    {
+     "name": "Daniel S."
+    }
+   ],
+   "notes": "The AAWS and Grapevine board chairs elected after the annual meeting are not printed in the 2026 report."
+  }
+ ],
+ "board_assignments": [
+  {
+   "year": 2022,
+   "person": "Cathi C.",
+   "board": "AAWS",
+   "role": "trustee_director",
+   "term_years": 2,
+   "succeeds": "Jimmy D.",
+   "ref": "FR22 p67 L6645-6648"
+  },
+  {
+   "year": 2022,
+   "person": "Clinton M.",
+   "board": "AAWS",
+   "role": "nontrustee_director",
+   "ref": "FR22 p67 L6649-6650"
+  },
+  {
+   "year": 2022,
+   "person": "Tom H.",
+   "board": "Grapevine",
+   "role": "trustee_director",
+   "term_years": 2,
+   "succeeds": "Francis G.",
+   "ref": "FR22 p67 L6654-6657"
+  },
+  {
+   "year": 2022,
+   "person": "Molly A. A.",
+   "board": "Grapevine",
+   "role": "class_a_director",
+   "succeeds": "Nancy M.",
+   "ref": "FR22 p67 L6658-6660"
+  },
+  {
+   "year": 2022,
+   "person": "David S.",
+   "board": "Grapevine",
+   "role": "nontrustee_director",
+   "ref": "FR22 p67 L6661-6662"
+  },
+  {
+   "year": 2023,
+   "person": "Reilly K.",
+   "board": "AAWS",
+   "role": "trustee_director",
+   "term_years": 2,
+   "succeeds": "Irma V.",
+   "ref": "FR23 p94 L8931-8933"
+  },
+  {
+   "year": 2023,
+   "person": "Joyce S.",
+   "board": "Grapevine",
+   "role": "trustee_director",
+   "term_years": 2,
+   "succeeds": "Mike L.",
+   "ref": "FR23 p94 L8937-8940"
+  },
+  {
+   "year": 2023,
+   "person": "David S.",
+   "board": "Grapevine",
+   "role": "general_service_trustee",
+   "ref": "FR23 p152 L19801-19857"
+  },
+  {
+   "year": 2024,
+   "person": "Ken T.",
+   "board": "AAWS",
+   "role": "trustee_director",
+   "term_years": 2,
+   "succeeds": "Cathi C.",
+   "ref": "FR24 p101 L11013-11016"
+  },
+  {
+   "year": 2024,
+   "person": "Teresa J.",
+   "board": "Grapevine",
+   "role": "trustee_director",
+   "term_years": 2,
+   "succeeds": "Tom H.",
+   "ref": "FR24 p101 L11020-11023"
+  },
+  {
+   "year": 2024,
+   "person": "Nikki O.",
+   "board": "Grapevine",
+   "role": "nontrustee_director",
+   "succeeds": "Cindy F.",
+   "ref": "FR24 p101 L11024-11025"
+  },
+  {
+   "year": 2025,
+   "person": "John W.",
+   "board": "AAWS",
+   "role": "general_service_trustee",
+   "succeeds": "Deb K.",
+   "ref": "FR25 p109 L9978-9980"
+  },
+  {
+   "year": 2025,
+   "person": "Teddy B.-W.",
+   "board": "Grapevine",
+   "role": "general_service_trustee",
+   "succeeds": "Paz P.",
+   "ref": "FR25 p109 L9981-9983"
+  },
+  {
+   "year": 2025,
+   "person": "Charlie H.",
+   "board": "AAWS",
+   "role": "trustee_director",
+   "term_years": 2,
+   "succeeds": "Reilly K.",
+   "ref": "FR25 p109 L9999-10001"
+  },
+  {
+   "year": 2025,
+   "person": "Matt K.",
+   "board": "AAWS",
+   "role": "nontrustee_director",
+   "succeeds": "Vera F.",
+   "ref": "FR25 p109 L10002-10004"
+  },
+  {
+   "year": 2025,
+   "person": "Julie C.",
+   "board": "AAWS",
+   "role": "nontrustee_director",
+   "succeeds": "John W.",
+   "ref": "FR25 p109 L10002-10004"
+  },
+  {
+   "year": 2025,
+   "person": "Gail P.",
+   "board": "Grapevine",
+   "role": "trustee_director",
+   "term_years": 2,
+   "succeeds": "Joyce S.",
+   "ref": "FR25 p109 L10008-10011"
+  },
+  {
+   "year": 2025,
+   "person": "Fredy M.",
+   "board": "Grapevine",
+   "role": "nontrustee_director",
+   "succeeds": "Teddy B.-W.",
+   "ref": "FR25 p109 L10012-10013"
+  },
+  {
+   "year": 2026,
+   "person": "Susan V.",
+   "board": "AAWS",
+   "role": "trustee_director",
+   "term_years": 2,
+   "succeeds": "Ken T.",
+   "ref": "FR26 p109 L10107-10110"
+  },
+  {
+   "year": 2026,
+   "person": "Grace F.",
+   "board": "AAWS",
+   "role": "nontrustee_director",
+   "succeeds": "Clinton M.",
+   "ref": "FR26 p109 L10112-10114"
+  },
+  {
+   "year": 2026,
+   "person": "Clinton M.",
+   "board": "AAWS",
+   "role": "general_service_trustee",
+   "succeeds": "Carolyn W.",
+   "ref": "FR26 p109 L10116-10118"
+  },
+  {
+   "year": 2026,
+   "person": "Cheryl (Sherry) S.",
+   "board": "Grapevine",
+   "role": "trustee_director",
+   "term_years": 2,
+   "succeeds": "Teresa J.",
+   "ref": "FR26 p109 L10123-10126"
+  },
+  {
+   "year": 2026,
+   "person": "Daniel S.",
+   "board": "Grapevine",
+   "role": "nontrustee_director",
+   "succeeds": "(vacancy)",
+   "ref": "FR26 p109 L10128-10130"
+  },
+  {
+   "year": 2026,
+   "person": "Veronica R.",
+   "board": "Grapevine",
+   "role": "class_a_director",
+   "succeeds": "Molly O.",
+   "ref": "FR26 p109 L10132-10135"
+  }
+ ],
+ "gsb_chairs": [
+  {
+   "name": "Terrance (Terry) M. B.",
+   "class": "A",
+   "from": null,
+   "to": 2017,
+   "note": "Class A trustee from 2008; chair when the data begin, rotating at the close of the 2017 Conference.",
+   "ref": "FR17 p5 L273, L345-347"
+  },
+  {
+   "name": "Michele G.",
+   "class": "A",
+   "from": 2017,
+   "to": 2021,
+   "chair_since": 2017,
+   "note": "Selected as a past Class A trustee (Class A 2010-2016); the four-year chair term is over and above the Class A term.",
+   "ref": "FR17 p60 L7432-7435; 2021 rotation"
+  },
+  {
+   "name": "Linda C.",
+   "class": "A",
+   "from": 2021,
+   "to": 2023,
+   "chair_since": 2021,
+   "served_thru": "Jan. 2023",
+   "note": "Elected Class A trustee and chair in April 2021; resigned January 2023.",
+   "ref": "FR21 newly elected; FR23 p5 L221-222"
+  },
+  {
+   "name": "Jimmy D.",
+   "class": "B",
+   "from": 2023,
+   "to": 2023,
+   "interim": true,
+   "note": "Interim chair (Southwest regional trustee, first vice-chair) Jan-Apr 2023.",
+   "ref": "FR23 p94 L8925-8927"
+  },
+  {
+   "name": "Mike L.",
+   "class": "B",
+   "from": 2023,
+   "to": 2024,
+   "interim": true,
+   "note": "Interim chair (West Central regional trustee) Apr 2023-Apr 2024.",
+   "ref": "FR24 officers; FR24 p101 L11000-11001"
+  },
+  {
+   "name": "Scott H.",
+   "class": "B",
+   "from": 2024,
+   "to": 2028,
+   "chair_since": 2024,
+   "extra_seat": true,
+   "note": "Past Class B trustee (trustee-at-large/Canada 2015-2019); a Class B chair adds a 22nd seat until the term ends.",
+   "ref": "FR24 p101 L11002-11005; Service Manual 2026-2028 p.58"
+  }
+ ],
+ "trustees_emeriti": {
+  "all": ["Elaine M.", "Gary G.", "Leonard B.", "Michele G.", "Terry B.", "Ward E."],
+  "attending": [
+   {
+    "year": 2020,
+    "names": ["Terry B.", "Ward E.", "Gary G.", "Elaine M."],
+    "ref": "FR20 p105 L11248-11252"
+   },
+   {
+    "year": 2021,
+    "names": ["Terry B.", "Leonard B.", "Ward E.", "Gary G.", "Elaine M."],
+    "ref": "FR21 p136 L19072-19077"
+   },
+   {
+    "year": 2022,
+    "names": ["Ward E.", "Michele G."],
+    "ref": "FR22 p167 L21200-21202"
+   },
+   {
+    "year": 2024,
+    "names": ["Terry B.", "Leonard B.", "Gary G."],
+    "ref": "FR24 p156 L20167-20170"
+   },
+   {
+    "year": 2025,
+    "names": ["Terry B.", "Ward E.", "Michele G."],
+    "note": "printed \"Michelle G.\"",
+    "ref": "FR25 p181 L20825-20828"
+   },
+   {
+    "year": 2026,
+    "names": ["Michele G."],
+    "ref": "FR26 p176 L21543-21544"
+   }
+  ],
+  "notes": [
+   {
+    "year": 2017,
+    "text": "Elaine M. (nonalcoholic Class A trustee) reinstated as a trustee emerita.",
+    "ref": "FR17 p61 L7610-7613"
+   },
+   {
+    "year": 2022,
+    "text": "The GSB appointed the newly rotated chair (Michele G.) a trustee emerita.",
+    "ref": "FR22 p68 L6778-6784"
+   },
+   {
+    "year": 2023,
+    "text": "The trustees' Nominating Committee recommended that the GSB cease appointing trustees emeriti; current emeriti keep the title.",
+    "ref": "FR23 p95 L9093-9102"
+   },
+   {
+    "year": 2025,
+    "text": "Terry B., a trustee emeritus, served as interim GSB treasurer (2025-26).",
+    "ref": "FR25 p40 L3358-3359"
+   }
+  ]
+ },
+ "general_managers": [
+  {
+   "name": "Phyllis H.",
+   "from": null,
+   "to": null,
+   "seen": [2009],
+   "note": "GSO general manager at the 2009 Conference.",
+   "ref": "2009 FR p.3"
+  },
+  {
+   "name": "Gregory (Greg) T.",
+   "from": "2016",
+   "to": "2021-02-01",
+   "note": "Five years as general manager after three as AAWS publishing director.",
+   "ref": "FR21 p19 L1653-1657"
+  },
+  {
+   "name": "Stephanie L.",
+   "from": "2021-02",
+   "to": "2021-06",
+   "interim": true,
+   "ref": "FR21 p13 L1070-1073"
+  },
+  {
+   "name": "Robert (Bob) W.",
+   "from": "2021-06-01",
+   "to": null,
+   "note": "Former trustee-at-large/U.S. (2013-2017); no term limit (employee).",
+   "ref": "FR22 p19 L1585-1586"
+  }
+ ],
+ "staff_services_directors": [
+  {
+   "name": "Albin Z.",
+   "years": [2017, 2018],
+   "title": "director of administration and staff services",
+   "note": "former general service trustee; later Grapevine publisher (2019-2020)",
+   "ref": "FR17 p27 L2790-2792; p31 L3189-3190"
+  },
+  {
+   "name": "Doug R.",
+   "years": [2019],
+   "title": "interim director of Staff Services",
+   "ref": "FR19 p127 L17721"
+  },
+  {
+   "name": "Sandra W.",
+   "years": [2021, 2022, 2023, 2024, 2025, 2026],
+   "title": "director of Staff Services",
+   "ref": "FR21 p13 L1066-1067"
+  }
+ ],
+ "staff_coordinators": {
+  "list": [
+   {
+    "name": "Eva S.",
+    "years": [2017, 2018],
+    "ref": "year files gso_staff"
+   },
+   {
+    "name": "Mary C.",
+    "years": [2019, 2020],
+    "ref": "year files gso_staff"
+   },
+   {
+    "name": "Jeff W.",
+    "years": [2021, 2022, 2023],
+    "ref": "FR21 p13 L1067-1068 (\"the newly rotated staff coordinator, Jeff W.\")"
+   },
+   {
+    "name": "Racy J.",
+    "years": [2024, 2025, 2026],
+    "note": "also GSB assistant secretary, AAWS director and Southwest regional correspondent",
+    "ref": "year files gso_staff; FR26 p41 L3409"
+   }
+  ],
+  "note": "The staff coordinator was also GSB assistant secretary and an AAWS director in every year 2017-2026."
+ },
+ "conference_coordinators": [
+  {
+   "name": "Doug R.",
+   "years": [2009],
+   "ref": "2009 FR p.3 (\"Doug R., G.S.O. staff, was the Conference coordinator\")"
+  },
+  {
+   "name": "Rick W.",
+   "years": [2017, 2018],
+   "ref": "year files gso_staff"
+  },
+  {
+   "name": "Patrick C.",
+   "years": [2019, 2020, 2021],
+   "ref": "year files gso_staff"
+  },
+  {
+   "name": "Steve S.",
+   "years": [2022],
+   "ref": "year files gso_staff"
+  },
+  {
+   "name": "Diana L.",
+   "years": [2023, 2024, 2025],
+   "ref": "year files gso_staff"
+  },
+  {
+   "name": "Rainer L.",
+   "years": [2026],
+   "from": "2025-09",
+   "note": "Conference coordinator since the September 2025 rotation; runs the December committee draw with the trustees' Conference Committee chair.",
+   "ref": "FR26 p7 L409-410"
+  }
+ ],
+ "desk_rotations": {
+  "events": [
+   {
+    "when": "2018",
+    "text": "Office-wide rotation of GSO Staff assignments in 2018: 10 of 11 continuing staff changed desks between the 2018 and 2019 reports.",
+    "ref": "FR18 p49 L5074 (\"Will be replaced at G.S.O. rotation in 2018\"); year files 2018-2019"
+   },
+   {
+    "when": "2020-2021",
+    "text": "Partial changes: 3 of 8 continuing staff changed desks; new staff coordinator (Jeff W.) and director of Staff Services (Sandra W.).",
+    "ref": "FR21 p13 L1066-1068"
+   },
+   {
+    "when": "2021-2022",
+    "text": "Partial changes: 5 of 10 continuing staff changed desks.",
+    "ref": "year files 2021-2022"
+   },
+   {
+    "when": "2022-08-23",
+    "text": "The Nominating desk changed hands on Aug 23, 2022.",
+    "ref": "FR23 p95 L9111-9112"
+   },
+   {
+    "when": "2023-2024",
+    "text": "Partial changes: 5 of 10 continuing staff changed desks; Racy J. became staff coordinator.",
+    "ref": "year files 2023-2024"
+   },
+   {
+    "when": "2025-09",
+    "text": "Office-wide rotation in September 2025: 10 of 12 continuing staff changed desks and a new Self-Support/Finance assignment was added.",
+    "ref": "FR26 p67 L6015-6018; p34 L2759-2761"
+   }
+  ],
+  "note": "Most desk stints last about two Final Reports (18 lasted 1, 19 lasted 2, 8 lasted 3 in 2017-2026). The next office-wide change is plausible in late summer 2027 or 2028, but the timing is not fixed."
+ },
+ "rotation_schedules": [
+  {
+   "source_year": 2022,
+   "ref": "FR22 p68 L6699-6735",
+   "by_year": {
+    "2022": {
+     "total": 5,
+     "class_a": 2,
+     "regional": 2,
+     "gst": 1
+    },
+    "2023": {
+     "total": 3,
+     "regional": 2,
+     "tal": 1
+    },
+    "2024": {
+     "total": 3,
+     "regional": 2,
+     "gst": 1
+    },
+    "2025": {
+     "total": 8,
+     "class_a": 3,
+     "regional": 2,
+     "tal": 1,
+     "gst": 2,
+     "note": "Class A count includes the chair of the Board"
+    }
+   }
+  },
+  {
+   "source_year": 2023,
+   "ref": "FR23 p94 L8981-9009",
+   "by_year": {
+    "2023": {
+     "total": 3,
+     "regional": 2,
+     "tal": 1
+    },
+    "2024": {
+     "total": 3,
+     "regional": 2,
+     "gst": 1
+    },
+    "2025": {
+     "total": 7,
+     "class_a": 2,
+     "regional": 2,
+     "tal": 1,
+     "gst": 2
+    },
+    "2026": {
+     "total": 3,
+     "regional": 2,
+     "gst": 1
+    }
+   }
+  },
+  {
+   "source_year": 2024,
+   "ref": "FR24 p101 L11054-11089",
+   "by_year": {
+    "2024": {
+     "total": 2,
+     "regional": 2
+    },
+    "2025": {
+     "total": 7,
+     "class_a": 2,
+     "regional": 2,
+     "tal": 1,
+     "gst": 2
+    },
+    "2026": {
+     "total": 3,
+     "regional": 2,
+     "gst": 1
+    },
+    "2027": {
+     "total": 5,
+     "class_a": 2,
+     "regional": 2,
+     "tal": 1
+    }
+   }
+  },
+  {
+   "source_year": 2025,
+   "ref": "FR25 p110 L10084-10125",
+   "by_year": {
+    "2025": {
+     "total": 8,
+     "class_a": 3,
+     "regional": 2,
+     "tal": 1,
+     "gst": 2
+    },
+    "2026": {
+     "total": 3,
+     "regional": 2,
+     "gst": 1
+    },
+    "2027": {
+     "total": 6,
+     "class_a": 2,
+     "regional": 2,
+     "tal": 1,
+     "gst": 1
+    },
+    "2028": {
+     "total": 4,
+     "class_a": 1,
+     "regional": 2,
+     "chair": 1
+    }
+   }
+  },
+  {
+   "source_year": 2026,
+   "ref": "FR26 p109 L10147-10161",
+   "by_year": {
+    "2027": {
+     "total": 5,
+     "class_a": 1,
+     "regional": 2,
+     "regions": ["SW", "NE"],
+     "tal": 1,
+     "gst": 1
+    }
+   }
+  }
+ ],
+ "seat_rules": {
+  "REG": {
+   "label": "Regional trustee",
+   "term": "4 one-year terms",
+   "nominated_by": "Each area of the region may nominate one candidate (two or more areas may share one), usually chosen by its assembly with the Third Legacy Procedure; résumés are due January 1, and the trustees' Nominating Committee checks eligibility before the Conference. At the Conference a nominating session selects one nominee by Third Legacy Procedure. Its voters are the region's delegates plus an equal number drawn half from the Conference Committee on Trustees and half from the trustees' Nominating Committee. The nominee joins the trustee slate, which stands unless a majority of Conference members disapproves.",
+   "deadline": {
+    "month_day": "01-01",
+    "text": "Résumés due Jan 1 of the election year (postmarked or electronic); GSO announces the openings in a May mailing and Box 4-5-9 the year before.",
+    "fixed": true
+   },
+   "ref": "Service Manual 2026-2028 pp. 54-56, 138 (text L2749, L2788-2790); aa.org notice (June 2, 2026)"
+  },
+  "TAL_US": {
+   "label": "Trustee-at-large/U.S.",
+   "term": "4 one-year terms",
+   "nominated_by": "U.S. areas send résumés; elected at the Conference (Third Legacy Procedure).",
+   "deadline": {
+    "month_day": "01-01",
+    "text": "Résumés due Jan 1 of the election year (postmarked or electronic); all U.S. areas are notified of the vacancy. Next U.S. elections: 2029, 2033.",
+    "fixed": false
+   },
+   "next_elections": [2029, 2033],
+   "ref": "Service Manual 2026-2028 p.55 (text L2789-2790, the Jan 1 deadline), p.57 (text L2887-2888); aa.org notice (June 2, 2026)"
+  },
+  "TAL_CANADA": {
+   "label": "Trustee-at-large/Canada",
+   "term": "4 one-year terms",
+   "nominated_by": "Canadian areas send résumés; elected at the Conference (Third Legacy Procedure).",
+   "deadline": {
+    "month_day": "01-01",
+    "text": "Résumés due Jan 1 of the election year (postmarked or electronic); all Canadian areas are notified of the vacancy. Next Canada elections: 2027, 2031.",
+    "fixed": false
+   },
+   "next_elections": [2027, 2031],
+   "ref": "Service Manual 2026-2028 p.55 (text L2789-2790, the Jan 1 deadline), p.57 (text L2887-2888); aa.org notice (June 2, 2026): résumés for the April 2027 election due Jan 1, 2027"
+  },
+  "GST": {
+   "label": "General service trustee",
+   "term": "4 one-year terms",
+   "nominated_by": "The corporate board (AAWS or AA Grapevine) proposes one of its current or past nontrustee directors; the trustees' Nominating Committee and the GSB elect.",
+   "deadline": null,
+   "pattern": "10 of 10 with known history came from the same board; 7 moved up in the year their director term ended, 2 mid-term (Grapevine 2023, 2025), 1 a past director.",
+   "ref": "R6-H7 (2017-2026 rosters); FR25 p109 L9978-9983"
+  },
+  "CLASS_A": {
+   "label": "Class A (nonalcoholic) trustee",
+   "term": "up to two 3-year terms (6 years); the GSB chair serves 4 years over and above",
+   "nominated_by": "The trustees' Nominating Committee searches (an aa.org call) and interviews candidates; elected by the GSB at the annual meeting.",
+   "deadline": {
+    "text": "Not fixed: e.g. letter Nov 6, 2023 with a Dec 14, 2023 deadline (2024 seat); later calls about June with an Aug 31 deadline.",
+    "fixed": false
+   },
+   "ref": "Service Manual 2026-2028 (text L2686-2688); FR26 p108 L10081-10088"
+  },
+  "GSB_CHAIR": {
+   "label": "General Service Board chair",
+   "term": "4 years (Class A or Class B; a Class B chair adds a 22nd seat)",
+   "nominated_by": "The trustees' Nominating Committee; elected by the GSB.",
+   "ref": "Service Manual 2026-2028 p. 58; GSB bylaws (Appendix O) pp. 137, 139-140"
+  },
+  "DIR_AAWS": {
+   "label": "AAWS nontrustee director",
+   "term": "up to 4 years",
+   "nominated_by": "The AAWS board (call via Box 4-5-9 and a mailing); past delegates may apply one year after their last Conference.",
+   "deadline": {
+    "text": "Varies: e.g. notice May 6, 2025 with a Jul 1, 2025 deadline.",
+    "fixed": false
+   },
+   "ref": "Service Manual 2026-2028 (text L3358)"
+  },
+  "DIR_GRAPEVINE": {
+   "label": "AA Grapevine nontrustee director",
+   "term": "up to 4 years",
+   "nominated_by": "The AA Grapevine board.",
+   "deadline": {
+    "text": "Varies: e.g. Sept 15, 2023; Nov 12, 2025.",
+    "fixed": false
+   },
+   "ref": "R6-H13"
+  }
+ },
+ "patterns": [
+  {
+   "id": "treasurer_class_a",
+   "text": "The GSB treasurer is a Class A trustee: in 2026 the trustees’ Nominating Committee took no action on a proposal to remove that requirement. The 2025-26 interim treasurer was a trustee emeritus.",
+   "ref": "FR26 p110 L10237-10241; R6-H10"
+  },
+  {
+   "id": "regional_on_corporate_boards",
+   "text": "Regional trustees serve on a corporate board in their 2nd and 3rd years (16 of 18), and each year's pair of new regional trustees splits one AAWS + one Grapevine (9 of 9 cohorts 2017-2025).",
+   "ref": "R6-H8"
+  },
+  {
+   "id": "board_chair_alternation",
+   "text": "The AAWS and Grapevine board chairs alternate each year between a regional trustee (in trustee year 3) and a general service trustee, always of opposite types on the two boards (10 of 10 years).",
+   "ref": "R6-H9; AAWS: GST 2017, REG 2018 … REG 2026; Grapevine: REG 2017 … GST 2026"
+  },
+  {
+   "id": "gst_from_directors",
+   "text": "A general service trustee opening is filled by a current or past nontrustee director of the same corporate board; when none of its director terms ends that year, a mid-term director moves up and an extra director seat opens.",
+   "ref": "R6-H7"
+  },
+  {
+   "id": "printed_officers_lag",
+   "text": "The officers printed at the front of report Y are the slate elected at the annual meeting after Conference Y-1 (41 of 45 slots 2018-2026).",
+   "ref": "R6-H5"
+  }
+ ]
+}

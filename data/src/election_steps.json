@@ -1,0 +1,144 @@
+{
+ "meta": {
+  "about": "Steps of a regional trustee election, for the tracker on the Openings page (assets/js/views3.js). Texts are own-words summaries; page = printed page of the Service Manual. when: rel 'year_before' (month = that whole month, or from/to 'MM-DD') | no rel + month_day (a day of the election year) | 'before_conference' (from 'MM-DD' to the day before the Conference opens) | 'conference' (weekday = 0-6, Sunday = 0: the first such day on or after the opening day, at most the closing day; or offset = days after the opening day; to_end = from that day through the closing day; neither = the whole week) | 'annual_meeting' (board.json annual_meetings, else the Saturday on or after the close). A step whose when does not resolve is left out. approx marks a dating pattern, not a rule.",
+  "source": "The A.A. Service Manual 2026-2028 (BM-31), printed pages 54-57, 115 and 137-140 (GSB bylaws, Appendix O)",
+  "as_of": "2026-10-21"
+ },
+ "regional_trustee": [
+  {
+   "id": "mailing",
+   "title": "GSO announces the opening",
+   "text": "In May of the year before the election, GSO informs the delegates and area officers of the regions due to elect, and notifies every group in those regions through Box 4-5-9.",
+   "page": "54",
+   "when": {
+    "rel": "year_before",
+    "month": 5
+   },
+   "more": [
+    {
+     "text": "The election calendar is set more than a decade ahead; each region elects every fourth year.",
+     "page": "54"
+    }
+   ]
+  },
+  {
+   "id": "area_choice",
+   "title": "Areas choose a candidate",
+   "text": "Each area in the region may nominate one candidate, and two or more areas may back the same person. Areas usually invite assembly members to stand, often ask for a service history, and most vote by Third Legacy Procedure.",
+   "page": "55",
+   "when": {
+    "rel": "year_before",
+    "from": "06-01",
+    "to": "12-31",
+    "approx": true
+   },
+   "date_note": {
+    "text": "the manual sets no window for the area's choice, only the January 1 résumé deadline that follows it.",
+    "source": "Service Manual p. 55"
+   },
+   "more": [
+    {
+     "text": "Areas are asked to review the General Service Board bylaws and the trustee's qualifications and duties before they choose.",
+     "page": "55"
+    },
+    {
+     "text": "Ten years of continuous sobriety is suggested, not required. Leadership experience counts; business or professional experience helps, but other strengths are welcome too.",
+     "page": "54"
+    }
+   ]
+  },
+  {
+   "id": "resume",
+   "title": "Name to GSO, résumé by January 1",
+   "text": "The delegate sends the candidate's name and contact details to the secretary of the trustees' Nominating Committee, who sends the candidate a link for a signed résumé of professional and A.A. service, due electronically or postmarked by January 1.",
+   "page": "55",
+   "when": {
+    "month_day": "01-01"
+   },
+   "more": [
+    {
+     "text": "A résumé that arrives after January 1 is returned to the delegate and not considered. If a nominee withdraws after the deadline, the area may not send another.",
+     "page": "55"
+    }
+   ]
+  },
+  {
+   "id": "eligibility",
+   "title": "Nominating Committee checks eligibility",
+   "text": "Before the Conference, the trustees' Nominating Committee reviews every nominee's eligibility.",
+   "page": "55",
+   "when": {
+    "rel": "before_conference",
+    "from": "01-02"
+   }
+  },
+  {
+   "id": "session",
+   "title": "Nominating session at the Conference",
+   "text": "During Conference week a nominating session picks one nominee by Third Legacy Procedure. The chairs of the trustees' Nominating Committee and the Conference Committee on Trustees co-chair it, in a roped-off section that every Conference member may watch.",
+   "page": "55",
+   "when": {
+    "rel": "conference",
+    "weekday": 3,
+    "approx": true
+   },
+   "date_note": {
+    "text": "the Wednesday of Conference week, when recent Conferences held their trustee elections; the manual sets no day.",
+    "source": "2022 and 2025 Final Reports, Conference week summary"
+   },
+   "more": [
+    {
+     "text": "Voters: the region's delegates plus an equal number of others, half from the Conference Committee on Trustees and half from the trustees' Nominating Committee.",
+     "page": "55"
+    },
+    {
+     "text": "Third Legacy: the first candidate with two-thirds of the vote is elected. Low scorers are withdrawn after ballots two to four; if no one reaches two-thirds, the choice is made by lot (the hat).",
+     "page": "115"
+    }
+   ]
+  },
+  {
+   "id": "slate",
+   "title": "Slate before the Conference",
+   "text": "The nominee joins the slate of trustees presented to the Conference. It stands unless a majority of Conference members votes to disapprove one or all of the names.",
+   "page": "56",
+   "when": {
+    "rel": "conference",
+    "weekday": 3,
+    "to_end": true,
+    "approx": true
+   }
+  },
+  {
+   "id": "annual_meeting",
+   "title": "Annual meeting elects",
+   "text": "The trustees, as members of the General Service Board, elect the new trustee at their annual meeting, held during the board meeting on the Saturday right after the Conference closes. The new trustee serves four successive one-year terms.",
+   "page": "54, 137, 140",
+   "when": {
+    "rel": "annual_meeting"
+   },
+   "more": [
+    {
+     "text": "In the second and third years a regional trustee normally also serves on the AAWS or AA Grapevine board.",
+     "page": "54"
+    },
+    {
+     "text": "The trustees' Nominating Committee consults the AAWS and AA Grapevine boards about the regional trustees who will serve on them.",
+     "page": "56"
+    }
+   ]
+  }
+ ],
+ "regional_trustee_notes": [
+  {
+   "id": "tal",
+   "text": "A trustee-at-large elected at the same Conference follows other steps: any area in the country may nominate, each region's delegates narrow the list in a caucus, and the country's delegates vote with the Nominating Committee. Areas should not name one person for both seats.",
+   "page": "57"
+  },
+  {
+   "id": "vacancy",
+   "text": "If the seat falls vacant before September 1 of the trustee's first year, the region nominates a successor at the next Conference. A later vacancy, up to August 31 of the third year, is filled or left open as the region's delegates choose.",
+   "page": "138-139"
+  }
+ ]
+}

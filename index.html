@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>GSC Service Explorer</title>
+<meta name="description" content="Personal learning tool for the U.S./Canada A.A. General Service Conference structure: delegates, areas, regions, Conference committees, trustees, staff and rotation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 29 3 5h26z' fill='none' stroke='%232a78d6' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/app.css">
+<link rel="stylesheet" href="assets/css/predict.css">
+<link rel="stylesheet" href="assets/css/calendar.css">
+<link rel="stylesheet" href="assets/css/board.css">
+<link rel="stylesheet" href="assets/css/learn.css">
+<link rel="stylesheet" href="assets/css/search.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<link rel="stylesheet" href="assets/css/structure.css">
+<link rel="stylesheet" href="assets/css/actions.css">
+<link rel="stylesheet" href="assets/css/pai.css">
+<script>window.__errs=[];addEventListener('error',function(e){window.__errs.push((e.message||'error')+' @'+String(e.filename||'').split('/').pop()+':'+e.lineno);});</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="brand">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 29 3 5h26z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+    <div>
+      <div class="brand-title">GSC Service Explorer</div>
+      <div class="brand-sub" id="asof"></div>
+    </div>
+  </div>
+  <div class="search-wrap">
+    <input id="gsearch" type="search" placeholder="Search delegates, areas, trustees, staff…" autocomplete="off" aria-label="Search everything">
+    <div id="gsearch-results" class="search-results" hidden></div>
+  </div>
+  <button id="theme-toggle" class="icon-btn" title="Toggle light/dark" aria-label="Toggle light or dark theme">◐</button>
+</header>
+<nav class="tabs" id="tabs" aria-label="Sections">
+  <a href="#/today">Today</a>
+  <a href="#/calendar">Calendar</a>
+  <a href="#/delegates">Delegates &amp; Map</a>
+  <a href="#/committees">Committees</a>
+  <a href="#/actions">Advisory Actions</a>
+  <a href="#/agenda">Agenda Items</a>
+  <a href="#/grid">Rotation Grid</a>
+  <a href="#/predict">Predict</a>
+  <a href="#/board">Trustees &amp; Boards</a>
+  <a href="#/staff">GSO Staff</a>
+  <a href="#/timeline">Openings</a>
+  <a href="#/structure">Structure</a>
+  <a href="#/learn">Learn</a>
+  <a href="#/quiz">Quiz</a>
+  <a href="#/reports">Reports</a>
+</nav>
+<main id="main" tabindex="-1"></main>
+<footer class="foot">
+  Personal study aid built from the published <em>Final Report</em> of each General Service Conference.
+  Names follow the anonymity-protected format (first name, last initial). Not an official A.A. publication.
+</footer>
+<div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="data/fcr-data.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/predict.js"></script>
+<script src="assets/js/views.js"></script>
+<script src="assets/js/views2.js"></script>
+<script src="assets/js/views3.js"></script>
+<script src="assets/js/view-predict.js"></script>
+<script src="assets/js/view-learn.js"></script>
+<script src="assets/js/view-quiz.js"></script>
+<script src="assets/js/view-calendar.js"></script>
+<script src="assets/js/view-structure.js"></script>
+<script src="assets/js/view-actions.js"></script>
+<script src="assets/js/view-pai.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

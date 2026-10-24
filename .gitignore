@@ -1,0 +1,12 @@
+# Report PDFs live in Google Drive (Literature_Archive/Final Conference Reports), never in this repo.
+*.pdf
+*.indd
+# local scratch
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
+work/
+CLAUDE.md
+RESUME.md

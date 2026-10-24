@@ -1,0 +1,2921 @@
+{
+ "year": 2023,
+ "ordinal": 73,
+ "theme": "A.A.’s Three Legacies — Our Common Solution",
+ "dates": "April 23-29, 2023",
+ "location": "New York Marriott at the Brooklyn Bridge, Brooklyn, NY",
+ "source": {
+  "file": "2023 - 73rd GSC Final Report - A.A.’s Three Legacies — Our Common Solution (Anonymity-Protected).pdf",
+  "edition": "anonymity",
+  "pages": 157
+ },
+ "delegates": [
+  {
+   "area": 1,
+   "area_name": "Alabama/Northwest Florida",
+   "panel": 73,
+   "name": "Tomy G.",
+   "city": "Pike Road, AL",
+   "status": "delegate"
+  },
+  {
+   "area": 2,
+   "area_name": "Alaska",
+   "panel": 72,
+   "name": "Tandy W.",
+   "city": "Anchorage, AK",
+   "status": "delegate"
+  },
+  {
+   "area": 3,
+   "area_name": "Arizona",
+   "panel": 72,
+   "name": "Kathleen (Kathy) R.",
+   "city": "Tucson, AZ",
+   "status": "delegate"
+  },
+  {
+   "area": 4,
+   "area_name": "Arkansas",
+   "panel": 73,
+   "name": "Jeannie M.",
+   "city": "Bentonville, AR",
+   "status": "delegate"
+  },
+  {
+   "area": 5,
+   "area_name": "Southern California",
+   "panel": 73,
+   "name": "Douglas S.",
+   "city": "Downey, CA",
+   "status": "delegate"
+  },
+  {
+   "area": 6,
+   "area_name": "Northern Coastal California",
+   "panel": 73,
+   "name": "Eric L.",
+   "city": "Saratoga, CA",
+   "status": "delegate"
+  },
+  {
+   "area": 7,
+   "area_name": "Northern Interior California",
+   "panel": 72,
+   "name": "Jennifer (Jenn) D.",
+   "city": "Magalia, CA",
+   "status": "delegate"
+  },
+  {
+   "area": 8,
+   "area_name": "San Diego/Imperial California",
+   "panel": 72,
+   "name": "Montrell (Monty) C.",
+   "city": "San Diego, CA",
+   "status": "delegate"
+  },
+  {
+   "area": 9,
+   "area_name": "Mid-Southern California",
+   "panel": 72,
+   "name": "Mitchell B.",
+   "city": "Costa Mesa, CA",
+   "status": "delegate"
+  },
+  {
+   "area": 10,
+   "area_name": "Colorado",
+   "panel": 73,
+   "name": "Sarah M.",
+   "city": "Boulder, CO",
+   "status": "delegate"
+  },
+  {
+   "area": 11,
+   "area_name": "Connecticut",
+   "panel": 73,
+   "name": "Mary E.-K.",
+   "city": "Colchester, CT",
+   "status": "delegate"
+  },
+  {
+   "area": 12,
+   "area_name": "Delaware",
+   "panel": 72,
+   "name": "Sally T.",
+   "city": "Wilmington, DE",
+   "status": "delegate"
+  },
+  {
+   "area": 13,
+   "area_name": "District of Columbia",
+   "panel": 73,
+   "name": "Lynette D.",
+   "city": "Washington, DC",
+   "status": "delegate"
+  },
+  {
+   "area": 14,
+   "area_name": "North Florida",
+   "panel": 73,
+   "name": "Mary A.",
+   "city": "Indian Harbour Beach, FL",
+   "status": "delegate"
+  },
+  {
+   "area": 15,
+   "area_name": "South Florida/Bahamas/Virgin Islands/Antigua",
+   "panel": 73,
+   "name": "Cary W.",
+   "city": "Sebring, FL",
+   "status": "delegate"
+  },
+  {
+   "area": 16,
+   "area_name": "Georgia",
+   "panel": 72,
+   "name": "Tracy M.",
+   "city": "Warner Robins, GA",
+   "status": "delegate"
+  },
+  {
+   "area": 17,
+   "area_name": "Hawaii",
+   "panel": 73,
+   "name": "Thomas G.",
+   "city": "Kailua, HI",
+   "status": "delegate"
+  },
+  {
+   "area": 18,
+   "area_name": "Idaho",
+   "panel": 72,
+   "name": "Candice C.",
+   "city": "Pocatello, ID",
+   "status": "delegate"
+  },
+  {
+   "area": 19,
+   "area_name": "Chicago, Illinois",
+   "panel": 73,
+   "name": "Tom F.",
+   "city": "Oak Lawn, IL",
+   "status": "delegate"
+  },
+  {
+   "area": 20,
+   "area_name": "Northern Illinois",
+   "panel": 72,
+   "name": "Chris D.",
+   "city": "Elgin, IL",
+   "status": "delegate"
+  },
+  {
+   "area": 21,
+   "area_name": "Southern Illinois",
+   "panel": 73,
+   "name": "Tom H.",
+   "city": "Makanda, IL",
+   "status": "delegate"
+  },
+  {
+   "area": 22,
+   "area_name": "Northern Indiana",
+   "panel": 73,
+   "name": "Mike M.",
+   "city": "Schererville, IN",
+   "status": "delegate"
+  },
+  {
+   "area": 23,
+   "area_name": "Southern Indiana",
+   "panel": 72,
+   "name": "Janet F.",
+   "city": "Evansville, IN",
+   "status": "delegate"
+  },
+  {
+   "area": 24,
+   "area_name": "Iowa",
+   "panel": 73,
+   "name": "Julie S.",
+   "city": "Cedar Rapids, IA",
+   "status": "delegate"
+  },
+  {
+   "area": 25,
+   "area_name": "Kansas",
+   "panel": 72,
+   "name": "Darin H.",
+   "city": "Shawnee, KS",
+   "status": "delegate"
+  },
+  {
+   "area": 26,
+   "area_name": "Kentucky",
+   "panel": 72,
+   "name": "Jennifer S.",
+   "city": "Bardstown, IN",
+   "status": "delegate",
+   "printed_name": "Jennifer J.",
+   "note": "Area Delegates list prints \"Jennifer J., Bardstown, IN\"; the 2023 Corrections committee roster, the 2022 Area Delegates list and her 2022 Area highlight all print \"Jennifer S.\" (Bardstown, KY). Name reconciled to Jennifer S.; city kept as printed."
+  },
+  {
+   "area": 27,
+   "area_name": "Louisiana",
+   "panel": 73,
+   "name": "Molly E.",
+   "city": "New Orleans, LA",
+   "status": "delegate"
+  },
+  {
+   "area": 28,
+   "area_name": "Maine",
+   "panel": 72,
+   "name": "Peter B.",
+   "city": "Deer Isle, ME",
+   "status": "delegate"
+  },
+  {
+   "area": 29,
+   "area_name": "Maryland",
+   "panel": 72,
+   "name": "Kurt W.",
+   "city": "Perry Hall, MD",
+   "status": "delegate"
+  },
+  {
+   "area": 30,
+   "area_name": "Eastern Massachusetts",
+   "panel": 73,
+   "name": "Suzanne S.",
+   "city": "Dedham, MA",
+   "status": "delegate"
+  },
+  {
+   "area": 31,
+   "area_name": "Western Massachusetts",
+   "panel": 72,
+   "name": "Michael (Mike) B.",
+   "city": "Chicopee, MA",
+   "status": "delegate"
+  },
+  {
+   "area": 32,
+   "area_name": "Central Michigan",
+   "panel": 73,
+   "name": "Kate L.",
+   "city": "Jackson, MI",
+   "status": "delegate"
+  },
+  {
+   "area": 33,
+   "area_name": "Southeast Michigan",
+   "panel": 73,
+   "name": "Jan V.",
+   "city": "West Bloomfield, MI",
+   "status": "delegate"
+  },
+  {
+   "area": 34,
+   "area_name": "Western Michigan",
+   "panel": 72,
+   "name": "James (Jim) H.",
+   "city": "Belmont, MI",
+   "status": "delegate"
+  },
+  {
+   "area": 35,
+   "area_name": "Northern Minnesota",
+   "panel": 72,
+   "name": "Steve L.",
+   "city": "Biwabik, ND",
+   "status": "delegate"
+  },
+  {
+   "area": 36,
+   "area_name": "Southern Minnesota",
+   "panel": 73,
+   "name": "Meg H.",
+   "city": "St. Paul, MN",
+   "status": "delegate"
+  },
+  {
+   "area": 37,
+   "area_name": "Mississippi",
+   "panel": 72,
+   "name": "Charles T.",
+   "city": "Braxton, MS",
+   "status": "delegate"
+  },
+  {
+   "area": 38,
+   "area_name": "Eastern Missouri",
+   "panel": 73,
+   "name": "Rebecca H.",
+   "city": "St. Peters, MO",
+   "status": "delegate"
+  },
+  {
+   "area": 39,
+   "area_name": "Western Missouri",
+   "panel": 73,
+   "name": "Debbie H.",
+   "city": "Lee’s Summit, MO",
+   "status": "delegate"
+  },
+  {
+   "area": 40,
+   "area_name": "Montana",
+   "panel": 73,
+   "name": "Kacie N.",
+   "city": "Kalispell, MT",
+   "status": "delegate"
+  },
+  {
+   "area": 41,
+   "area_name": "Nebraska",
+   "panel": 72,
+   "name": "Cara G.",
+   "city": "Lincoln, NE",
+   "status": "delegate"
+  },
+  {
+   "area": 42,
+   "area_name": "Nevada",
+   "panel": 73,
+   "name": "Jake S.",
+   "city": "Henderson, NV",
+   "status": "delegate"
+  },
+  {
+   "area": 43,
+   "area_name": "New Hampshire",
+   "panel": 72,
+   "name": "Grace F.",
+   "city": "Jaffrey, NH",
+   "status": "delegate"
+  },
+  {
+   "area": 44,
+   "area_name": "Northern New Jersey",
+   "panel": 73,
+   "name": "Marcheta B.",
+   "city": "Plainfield, NJ",
+   "status": "delegate"
+  },
+  {
+   "area": 45,
+   "area_name": "Southern New Jersey",
+   "panel": 72,
+   "name": "Kenneth (Ken) T.",
+   "city": "Little Egg Harbor, NJ",
+   "status": "delegate"
+  },
+  {
+   "area": 46,
+   "area_name": "New Mexico",
+   "panel": 72,
+   "name": "Eloy M.",
+   "city": "Los Lunas, NM",
+   "status": "delegate"
+  },
+  {
+   "area": 47,
+   "area_name": "Central New York",
+   "panel": 73,
+   "name": "Christopher M.",
+   "city": "Fairport, NY",
+   "status": "delegate"
+  },
+  {
+   "area": 48,
+   "area_name": "Northeastern NY",
+   "panel": 72,
+   "name": "Tammie E.",
+   "city": "New York Mills, NY",
+   "status": "delegate"
+  },
+  {
+   "area": 49,
+   "area_name": "Southeast New York",
+   "panel": 73,
+   "name": "Jo Ann M.",
+   "city": "Jamaica, NY",
+   "status": "delegate"
+  },
+  {
+   "area": 50,
+   "area_name": "Western New York",
+   "panel": 72,
+   "name": "Denise M.",
+   "city": "Buffalo, NY",
+   "status": "delegate"
+  },
+  {
+   "area": 51,
+   "area_name": "North Carolina",
+   "panel": 73,
+   "name": "Julie R.",
+   "city": "Raleigh, NC",
+   "status": "delegate"
+  },
+  {
+   "area": 52,
+   "area_name": "North Dakota",
+   "panel": 73,
+   "name": "Rachel M.",
+   "city": "West Fargo, ND",
+   "status": "delegate"
+  },
+  {
+   "area": 53,
+   "area_name": "Central & Southeast Ohio",
+   "panel": 73,
+   "name": "Ed A.",
+   "city": "Columbus, OH",
+   "status": "delegate"
+  },
+  {
+   "area": 54,
+   "area_name": "Northeast Ohio",
+   "panel": 73,
+   "name": "Tim H.",
+   "city": "Jefferson, OH",
+   "status": "delegate"
+  },
+  {
+   "area": 55,
+   "area_name": "Northwest Ohio",
+   "panel": 72,
+   "name": "Cheryl (Sherry) S.",
+   "city": "Curtice, OH",
+   "status": "delegate"
+  },
+  {
+   "area": 56,
+   "area_name": "Southwest Ohio",
+   "panel": 72,
+   "name": "Andrea H.",
+   "city": "Montezuma, OH",
+   "status": "delegate"
+  },
+  {
+   "area": 57,
+   "area_name": "Oklahoma",
+   "panel": 73,
+   "name": "Ryan F.",
+   "city": "Coweta, OK",
+   "status": "delegate"
+  },
+  {
+   "area": 58,
+   "area_name": "Oregon",
+   "panel": 72,
+   "name": "Amber N.",
+   "city": "Milwaukie, OR",
+   "status": "delegate"
+  },
+  {
+   "area": 59,
+   "area_name": "Eastern Pennsylvania",
+   "panel": 73,
+   "name": "Pete B.",
+   "city": "Birdsboro, PA",
+   "status": "delegate"
+  },
+  {
+   "area": 60,
+   "area_name": "Western Pennsylvania",
+   "panel": 73,
+   "name": "Jon C.",
+   "city": "Canonsburg, PA",
+   "status": "delegate"
+  },
+  {
+   "area": 61,
+   "area_name": "Rhode Island",
+   "panel": 72,
+   "name": "Alison H.",
+   "city": "Warwick, RI",
+   "status": "delegate"
+  },
+  {
+   "area": 62,
+   "area_name": "South Carolina",
+   "panel": 72,
+   "name": "Jack M.",
+   "city": "Anderson, SC",
+   "status": "delegate"
+  },
+  {
+   "area": 63,
+   "area_name": "South Dakota",
+   "panel": 72,
+   "name": "Katie B.",
+   "city": "Aberdeen, SD",
+   "status": "delegate"
+  },
+  {
+   "area": 64,
+   "area_name": "Tennessee",
+   "panel": 72,
+   "name": "Shannon C.",
+   "city": "Nashville, TN",
+   "status": "delegate"
+  },
+  {
+   "area": 65,
+   "area_name": "Northeast Texas",
+   "panel": 73,
+   "name": "Rick W.",
+   "city": "Euless, TX",
+   "status": "delegate"
+  },
+  {
+   "area": 66,
+   "area_name": "Northwest Texas",
+   "panel": 72,
+   "name": "Shellia D.",
+   "city": "Amarillo, TX",
+   "status": "delegate"
+  },
+  {
+   "area": 67,
+   "area_name": "Southeast Texas",
+   "panel": 73,
+   "name": "Rick M.",
+   "city": "Lake Jackson, TX",
+   "status": "delegate"
+  },
+  {
+   "area": 68,
+   "area_name": "Southwest Texas",
+   "panel": 72,
+   "name": "Barbara R.",
+   "city": "Austin, TX",
+   "status": "delegate"
+  },
+  {
+   "area": 69,
+   "area_name": "Utah",
+   "panel": 73,
+   "name": "Dave R.",
+   "city": "Fillmore, UT",
+   "status": "delegate"
+  },
+  {
+   "area": 70,
+   "area_name": "Vermont",
+   "panel": 72,
+   "name": "Michael K.",
+   "city": "Bennington, VT",
+   "status": "delegate"
+  },
+  {
+   "area": 71,
+   "area_name": "Virginia",
+   "panel": 73,
+   "name": "John P.",
+   "city": "Midlothian, VA",
+   "status": "delegate"
+  },
+  {
+   "area": 72,
+   "area_name": "Western Washington",
+   "panel": 73,
+   "name": "Crystal S.",
+   "city": "Sumner, WA",
+   "status": "delegate"
+  },
+  {
+   "area": 73,
+   "area_name": "West Virginia",
+   "panel": 73,
+   "name": "Paul H.",
+   "city": "Shenandoah Junction, WV",
+   "status": "delegate"
+  },
+  {
+   "area": 74,
+   "area_name": "N. Wisconsin/Upper Penn. Michigan",
+   "panel": 72,
+   "name": "Bryon B.",
+   "city": "Fall Creek, WI",
+   "status": "delegate"
+  },
+  {
+   "area": 75,
+   "area_name": "Southern Wisconsin",
+   "panel": 73,
+   "name": "Peter W.",
+   "city": "Kansasville, WI",
+   "status": "delegate"
+  },
+  {
+   "area": 76,
+   "area_name": "Wyoming",
+   "panel": 72,
+   "name": "Mary M.",
+   "city": "Cheyenne, WY",
+   "status": "delegate"
+  },
+  {
+   "area": 77,
+   "area_name": "Puerto Rico",
+   "panel": 72,
+   "name": "Pablo R.",
+   "city": "Bajadero, PR",
+   "status": "delegate"
+  },
+  {
+   "area": 78,
+   "area_name": "Alberta/NWT",
+   "panel": 72,
+   "name": "Tami L.",
+   "city": "Okotoks, AB",
+   "status": "delegate"
+  },
+  {
+   "area": 79,
+   "area_name": "British Columbia/Yukon",
+   "panel": 73,
+   "name": "Rio D.",
+   "city": "Prince George, BC",
+   "status": "delegate"
+  },
+  {
+   "area": 80,
+   "area_name": "Manitoba",
+   "panel": 72,
+   "name": "Richard M.",
+   "city": "Winnipeg, MB",
+   "status": "delegate"
+  },
+  {
+   "area": 81,
+   "area_name": "New Brunswick/Prince Edward Island",
+   "panel": 72,
+   "name": "Fred A.",
+   "city": "Summerside, NB",
+   "status": "delegate"
+  },
+  {
+   "area": 82,
+   "area_name": "Nova Scotia/Newfoundland/Labrador",
+   "panel": 73,
+   "name": "Gerry W.",
+   "city": "Outer Cove, NS",
+   "status": "delegate"
+  },
+  {
+   "area": 83,
+   "area_name": "Eastern Ontario",
+   "panel": 73,
+   "name": "James O.",
+   "city": "Toronto, ON",
+   "status": "delegate"
+  },
+  {
+   "area": 84,
+   "area_name": "Northeast Ontario",
+   "panel": 72,
+   "name": "William (Bill) F.",
+   "city": "North Bay, ON",
+   "status": "delegate"
+  },
+  {
+   "area": 85,
+   "area_name": "Northwest Ontario",
+   "panel": 73,
+   "name": "Judy C.",
+   "city": "Thunder Bay, ON",
+   "status": "delegate"
+  },
+  {
+   "area": 86,
+   "area_name": "Western Ontario",
+   "panel": 72,
+   "name": "Jeffrey (Jeff) S.",
+   "city": "Hamilton, ON",
+   "status": "delegate"
+  },
+  {
+   "area": 87,
+   "area_name": "Southwest Québec",
+   "panel": 72,
+   "name": "Claude G.",
+   "city": "Béthanie, QC",
+   "status": "delegate"
+  },
+  {
+   "area": 88,
+   "area_name": "Southeast Québec",
+   "panel": 73,
+   "name": "Céline L.",
+   "city": "Drummondville, QC",
+   "status": "delegate"
+  },
+  {
+   "area": 89,
+   "area_name": "Northeast Québec",
+   "panel": 73,
+   "name": "Jocelyne C.",
+   "city": "Levis, QC",
+   "status": "alternate",
+   "elected_delegate": "Giséle V.",
+   "note": "Jocelyne C., alternate Area Chair of Area 89, was seated as a Conference member (pre-Conference Policy/Admissions recommendation) because neither Giséle V., Panel 73 delegate, nor the alternate delegate could attend. She is the person printed in the Area Delegates list."
+  },
+  {
+   "area": 90,
+   "area_name": "Northwest Québec",
+   "panel": 72,
+   "name": "Normand P.",
+   "city": "Joliette, QC",
+   "status": "delegate"
+  },
+  {
+   "area": 91,
+   "area_name": "Saskatchewan",
+   "panel": 73,
+   "name": "Lori R.",
+   "city": "Saskatoon, SK",
+   "status": "delegate"
+  },
+  {
+   "area": 92,
+   "area_name": "Washington East",
+   "panel": 72,
+   "name": "Ben N.",
+   "city": "Hauser, ID",
+   "status": "delegate"
+  },
+  {
+   "area": 93,
+   "area_name": "Central California",
+   "panel": 73,
+   "name": "Pablo H.",
+   "city": "Bakersfield, CA",
+   "status": "delegate"
+  }
+ ],
+ "conference_committees": [
+  {
+   "committee": "AGENDA",
+   "printed_name": "Agenda",
+   "secondary": false,
+   "secretary": "Diana L.",
+   "members": [
+    {
+     "name": "Bryon B.",
+     "area": 74,
+     "panel": 72,
+     "role": "alt_chair"
+    },
+    {
+     "name": "Mitchell B.",
+     "area": 9,
+     "panel": 72,
+     "role": "chair"
+    },
+    {
+     "name": "Sally T.",
+     "area": 12,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Marcheta B.",
+     "area": 44,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Rebecca H.",
+     "area": 38,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "John P.",
+     "area": 71,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Dave R.",
+     "area": 69,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Gisele V.",
+     "area": 89,
+     "panel": 73,
+     "role": "member",
+     "note": "printed in roster as Panel 73 delegate Gisele V.; Area 89 was represented at the Conference by Jocelyne C. (alternate Area Chair), see delegates",
+     "seated_substitute": "Jocelyne C."
+    }
+   ]
+  },
+  {
+   "committee": "CPC",
+   "printed_name": "Cooperation with the Professional Community",
+   "secondary": false,
+   "secretary": "Michael R.",
+   "members": [
+    {
+     "name": "Shannon C.",
+     "area": 64,
+     "panel": 72,
+     "role": "chair"
+    },
+    {
+     "name": "Claude G.",
+     "area": 87,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Alison H.",
+     "area": 61,
+     "panel": 72,
+     "role": "alt_chair"
+    },
+    {
+     "name": "Thomas G.",
+     "area": 17,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Paul H.",
+     "area": 73,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Kate L.",
+     "area": 32,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Rick M.",
+     "area": 67,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Julie S.",
+     "area": 24,
+     "panel": 73,
+     "role": "member"
+    }
+   ]
+  },
+  {
+   "committee": "CORRECTIONS",
+   "printed_name": "Corrections",
+   "secondary": false,
+   "secretary": "Eileen A.",
+   "members": [
+    {
+     "name": "Candice C.",
+     "area": 18,
+     "panel": 72,
+     "role": "alt_chair"
+    },
+    {
+     "name": "Shellia D.",
+     "area": 66,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Cara G.",
+     "area": 41,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Jennifer S.",
+     "area": 26,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Kurt W.",
+     "area": 29,
+     "panel": 72,
+     "role": "chair"
+    },
+    {
+     "name": "Tim H.",
+     "area": 54,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Eric L.",
+     "area": 6,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Gerry W.",
+     "area": 82,
+     "panel": 73,
+     "role": "member"
+    }
+   ]
+  },
+  {
+   "committee": "FINANCE",
+   "printed_name": "Finance",
+   "secondary": false,
+   "secretary": "Zenaida (Zenny) M.",
+   "members": [
+    {
+     "name": "Peter B.",
+     "area": 28,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Chris D.",
+     "area": 20,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Jeffrey (Jeff) S.",
+     "area": 86,
+     "panel": 72,
+     "role": "chair",
+     "printed_name": "Jeff S."
+    },
+    {
+     "name": "Charles T.",
+     "area": 37,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Tandy W.",
+     "area": 2,
+     "panel": 72,
+     "role": "alt_chair"
+    },
+    {
+     "name": "Rachel M.",
+     "area": 52,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Sarah M.",
+     "area": 10,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Suzanne S.",
+     "area": 30,
+     "panel": 73,
+     "role": "member"
+    }
+   ],
+   "secretary_note": "nonalcoholic GSO employee (printed with full surname; reduced)"
+  },
+  {
+   "committee": "GRAPEVINE",
+   "printed_name": "Grapevine/La Viña",
+   "secondary": false,
+   "secretary": "Jon W.",
+   "members": [
+    {
+     "name": "Katie B.",
+     "area": 63,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Tammie E.",
+     "area": 48,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Amber N.",
+     "area": 58,
+     "panel": 72,
+     "role": "alt_chair"
+    },
+    {
+     "name": "Normand P.",
+     "area": 90,
+     "panel": 72,
+     "role": "chair"
+    },
+    {
+     "name": "Pablo R.",
+     "area": 77,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Tom H.",
+     "area": 21,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Julie R.",
+     "area": 51,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Lori R.",
+     "area": 91,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Rick W.",
+     "area": 65,
+     "panel": 73,
+     "role": "member"
+    }
+   ]
+  },
+  {
+   "committee": "LITERATURE",
+   "printed_name": "Literature",
+   "secondary": false,
+   "secretary": "Irene D.",
+   "members": [
+    {
+     "name": "Jennifer (Jenn) D.",
+     "area": 7,
+     "panel": 72,
+     "role": "chair",
+     "printed_name": "Jenn D."
+    },
+    {
+     "name": "Janet F.",
+     "area": 23,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Michael K.",
+     "area": 70,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Steve L.",
+     "area": 35,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Eloy M.",
+     "area": 46,
+     "panel": 72,
+     "role": "alt_chair"
+    },
+    {
+     "name": "Pete B.",
+     "area": 59,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "James O.",
+     "area": 83,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Crystal S.",
+     "area": 72,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Tomy G.",
+     "area": 1,
+     "panel": 73,
+     "role": "member",
+     "inferred": true,
+     "note": "not printed in the 2023 roster; inferred from 2024 chairs table (Literature chair) and the 2024 Final Report Literature roster"
+    }
+   ]
+  },
+  {
+   "committee": "POLICY",
+   "printed_name": "Policy and Admissions",
+   "secondary": false,
+   "secretary": "Jeff W.",
+   "members": [
+    {
+     "name": "Michael (Mike) B.",
+     "area": 31,
+     "panel": 72,
+     "role": "member",
+     "printed_name": "Mike B."
+    },
+    {
+     "name": "Montrell (Monty) C.",
+     "area": 8,
+     "panel": 72,
+     "role": "member",
+     "printed_name": "Monty C."
+    },
+    {
+     "name": "Andrea H.",
+     "area": 56,
+     "panel": 72,
+     "role": "chair"
+    },
+    {
+     "name": "Barbara R.",
+     "area": 68,
+     "panel": 72,
+     "role": "alt_chair"
+    },
+    {
+     "name": "Molly E.",
+     "area": 27,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Céline L.",
+     "area": 88,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Jo Ann M.",
+     "area": 49,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Kacie N.",
+     "area": 40,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Peter W.",
+     "area": 75,
+     "panel": 73,
+     "role": "member"
+    }
+   ]
+  },
+  {
+   "committee": "PI",
+   "printed_name": "Public Information",
+   "secondary": false,
+   "secretary": "Patrick C.",
+   "members": [
+    {
+     "name": "Fred A.",
+     "area": 81,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Mary M.",
+     "area": 76,
+     "panel": 72,
+     "role": "chair"
+    },
+    {
+     "name": "Richard M.",
+     "area": 80,
+     "panel": 72,
+     "role": "alt_chair"
+    },
+    {
+     "name": "Ben N.",
+     "area": 92,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Mary A.",
+     "area": 14,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Jeannie M.",
+     "area": 4,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Christopher M.",
+     "area": 47,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Jake S.",
+     "area": 42,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Jan V.",
+     "area": 33,
+     "panel": 73,
+     "role": "member"
+    }
+   ]
+  },
+  {
+   "committee": "REPORT",
+   "printed_name": "Report and Charter",
+   "secondary": false,
+   "secretary": "Karina C.",
+   "members": [
+    {
+     "name": "Tami L.",
+     "area": 78,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Jack M.",
+     "area": 62,
+     "panel": 72,
+     "role": "alt_chair"
+    },
+    {
+     "name": "Denise M.",
+     "area": 50,
+     "panel": 72,
+     "role": "chair"
+    },
+    {
+     "name": "Mary E.-K.",
+     "area": 11,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Ryan F.",
+     "area": 57,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Pablo H.",
+     "area": 93,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Meg H.",
+     "area": 36,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Mike M.",
+     "area": 22,
+     "panel": 73,
+     "role": "member"
+    }
+   ]
+  },
+  {
+   "committee": "TREATMENT",
+   "printed_name": "Treatment and Accessibilities",
+   "secondary": false,
+   "secretary": "Misha Q.",
+   "members": [
+    {
+     "name": "Grace F.",
+     "area": 43,
+     "panel": 72,
+     "role": "chair"
+    },
+    {
+     "name": "Darin H.",
+     "area": 25,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Tracy M.",
+     "area": 16,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Cheryl (Sherry) S.",
+     "area": 55,
+     "panel": 72,
+     "role": "alt_chair",
+     "printed_name": "Sherry S."
+    },
+    {
+     "name": "Judy C.",
+     "area": 85,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Jon C.",
+     "area": 60,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Tom F.",
+     "area": 19,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Douglas S.",
+     "area": 5,
+     "panel": 73,
+     "role": "member"
+    }
+   ]
+  },
+  {
+   "committee": "TRUSTEES",
+   "printed_name": "Trustees",
+   "secondary": false,
+   "secretary": "James H.",
+   "members": [
+    {
+     "name": "William (Bill) F.",
+     "area": 84,
+     "panel": 72,
+     "role": "member",
+     "printed_name": "Bill F."
+    },
+    {
+     "name": "James (Jim) H.",
+     "area": 34,
+     "panel": 72,
+     "role": "member",
+     "printed_name": "Jim H."
+    },
+    {
+     "name": "Kathleen (Kathy) R.",
+     "area": 3,
+     "panel": 72,
+     "role": "alt_chair",
+     "printed_name": "Kathy R."
+    },
+    {
+     "name": "Kenneth (Ken) T.",
+     "area": 45,
+     "panel": 72,
+     "role": "chair",
+     "printed_name": "Ken T."
+    },
+    {
+     "name": "Ed A.",
+     "area": 53,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Lynette D.",
+     "area": 13,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Rio D.",
+     "area": 79,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Debbie H.",
+     "area": 39,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Cary W.",
+     "area": 15,
+     "panel": 73,
+     "role": "member"
+    }
+   ]
+  },
+  {
+   "committee": "ARCHIVES",
+   "printed_name": "Archives",
+   "secondary": true,
+   "secretary": "Michelle M.",
+   "members": [
+    {
+     "name": "Chris D.",
+     "area": 20,
+     "panel": 72,
+     "role": "chair"
+    },
+    {
+     "name": "Shellia D.",
+     "area": 66,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Cara G.",
+     "area": 41,
+     "panel": 72,
+     "role": "alt_chair"
+    },
+    {
+     "name": "Denise M.",
+     "area": 50,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Pablo H.",
+     "area": 93,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Kate L.",
+     "area": 32,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "James O.",
+     "area": 83,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Julie R.",
+     "area": 51,
+     "panel": 73,
+     "role": "member"
+    }
+   ],
+   "secretary_note": "nonalcoholic GSO employee (printed with full surname; reduced)"
+  },
+  {
+   "committee": "ICRF",
+   "printed_name": "International Conventions/Regional Forums",
+   "secondary": true,
+   "secretary": "James H.",
+   "members": [
+    {
+     "name": "Shannon C.",
+     "area": 64,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Darin H.",
+     "area": 25,
+     "panel": 72,
+     "role": "chair"
+    },
+    {
+     "name": "Mary M.",
+     "area": 76,
+     "panel": 72,
+     "role": "member"
+    },
+    {
+     "name": "Richard M.",
+     "area": 80,
+     "panel": 72,
+     "role": "alt_chair"
+    },
+    {
+     "name": "Ed A.",
+     "area": 53,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Jon C.",
+     "area": 60,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Céline L.",
+     "area": 88,
+     "panel": 73,
+     "role": "member"
+    },
+    {
+     "name": "Crystal S.",
+     "area": 72,
+     "panel": 73,
+     "role": "member"
+    }
+   ],
+   "secretaries": [
+    "James H.",
+    "Sandra W."
+   ]
+  }
+ ],
+ "next_year_chairs": [
+  {
+   "committee": "AGENDA",
+   "chair": {
+    "name": "Rebecca H.",
+    "area": 38
+   },
+   "alternate": {
+    "name": "John P.",
+    "area": 71
+   },
+   "note": "chair printed as \"Becca H.\" in the table; Area Delegates list spelling used"
+  },
+  {
+   "committee": "CPC",
+   "chair": {
+    "name": "Julie S.",
+    "area": 24
+   },
+   "alternate": {
+    "name": "Kate L.",
+    "area": 32
+   }
+  },
+  {
+   "committee": "CORRECTIONS",
+   "chair": {
+    "name": "Eric L.",
+    "area": 6
+   },
+   "alternate": {
+    "name": "Gerry W.",
+    "area": 82
+   }
+  },
+  {
+   "committee": "FINANCE",
+   "chair": {
+    "name": "Suzanne S.",
+    "area": 30
+   },
+   "alternate": {
+    "name": "Rachel M.",
+    "area": 52
+   }
+  },
+  {
+   "committee": "GRAPEVINE",
+   "chair": {
+    "name": "Rick W.",
+    "area": 65
+   },
+   "alternate": {
+    "name": "Julie R.",
+    "area": 51
+   }
+  },
+  {
+   "committee": "LITERATURE",
+   "chair": {
+    "name": "Tomy G.",
+    "area": 1
+   },
+   "alternate": {
+    "name": "Pete B.",
+    "area": 59
+   }
+  },
+  {
+   "committee": "POLICY",
+   "chair": {
+    "name": "Jo Ann M.",
+    "area": 49
+   },
+   "alternate": {
+    "name": "Molly E.",
+    "area": 27
+   }
+  },
+  {
+   "committee": "PI",
+   "chair": {
+    "name": "Christopher M.",
+    "area": 47
+   },
+   "alternate": {
+    "name": "Jeannie M.",
+    "area": 4
+   }
+  },
+  {
+   "committee": "REPORT",
+   "chair": {
+    "name": "Mary E.-K.",
+    "area": 11
+   },
+   "alternate": {
+    "name": "Ryan F.",
+    "area": 57
+   }
+  },
+  {
+   "committee": "TREATMENT",
+   "chair": {
+    "name": "Jon C.",
+    "area": 60
+   },
+   "alternate": {
+    "name": "Judy C.",
+    "area": 85
+   }
+  },
+  {
+   "committee": "TRUSTEES",
+   "chair": {
+    "name": "Rio D.",
+    "area": 79
+   },
+   "alternate": {
+    "name": "Ed A.",
+    "area": 53
+   }
+  },
+  {
+   "committee": "ARCHIVES",
+   "chair": {
+    "name": "Pablo H.",
+    "area": 93
+   },
+   "alternate": {
+    "name": "Kate L.",
+    "area": 32
+   },
+   "secondary": true
+  },
+  {
+   "committee": "ICRF",
+   "chair": {
+    "name": "Ed A.",
+    "area": 53
+   },
+   "alternate": {
+    "name": "Crystal S.",
+    "area": 72
+   },
+   "secondary": true
+  }
+ ],
+ "trustees_committees": [
+  {
+   "committee": "Archives",
+   "slug": "archives",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Cathi C.",
+     "type": "chair"
+    },
+    {
+     "name": "Josh E.",
+     "type": "member",
+     "note": "thru Feb. 2023 (resigned)"
+    },
+    {
+     "name": "Vera F.",
+     "type": "member"
+    },
+    {
+     "name": "Tom H.",
+     "type": "member"
+    },
+    {
+     "name": "Andie M.",
+     "type": "member"
+    },
+    {
+     "name": "Paz P.",
+     "type": "member"
+    }
+   ],
+   "secretary": "Michelle M."
+  },
+  {
+   "committee": "Audit",
+   "slug": "audit",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Kevin P.",
+     "type": "chair"
+    },
+    {
+     "name": "Cathi C.",
+     "type": "member"
+    },
+    {
+     "name": "Francis G.",
+     "type": "member"
+    },
+    {
+     "name": "Judith Ann K.",
+     "type": "member"
+    },
+    {
+     "name": "Paz P.",
+     "type": "member"
+    },
+    {
+     "name": "Marita R.",
+     "type": "member"
+    }
+   ],
+   "secretary": "Paul K."
+  },
+  {
+   "committee": "Compensation",
+   "slug": "compensation",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Francis G.",
+     "type": "chair"
+    },
+    {
+     "name": "Josh E.",
+     "type": "member",
+     "note": "thru Feb. 2023 (resigned)"
+    },
+    {
+     "name": "Judith Ann K.",
+     "type": "member"
+    },
+    {
+     "name": "Paz P.",
+     "type": "member"
+    },
+    {
+     "name": "Carolyn W.",
+     "type": "member"
+    }
+   ],
+   "secretary": "Paul K."
+  },
+  {
+   "committee": "Conference",
+   "slug": "conference",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Jimmy D.",
+     "type": "chair"
+    },
+    {
+     "name": "Vera F.",
+     "type": "member"
+    },
+    {
+     "name": "Francis G.",
+     "type": "member"
+    },
+    {
+     "name": "Mike L.",
+     "type": "member"
+    },
+    {
+     "name": "Kerry M.",
+     "type": "member"
+    },
+    {
+     "name": "Marita R.",
+     "type": "member"
+    },
+    {
+     "name": "Carolyn W.",
+     "type": "member"
+    }
+   ],
+   "secretary": "Diana L."
+  },
+  {
+   "committee": "Cooperation with the Professional Community/Treatment and Accessibilities",
+   "slug": "cpc-treatment-accessibilities",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Molly O.",
+     "type": "chair"
+    },
+    {
+     "name": "Coree H.",
+     "type": "member"
+    },
+    {
+     "name": "Clinton M.",
+     "type": "member"
+    },
+    {
+     "name": "Kerry M.",
+     "type": "member"
+    },
+    {
+     "name": "David S.",
+     "type": "member"
+    },
+    {
+     "name": "John W.",
+     "type": "member"
+    },
+    {
+     "name": "Gerry C.",
+     "type": "consultant"
+    },
+    {
+     "name": "Tom P.",
+     "type": "consultant"
+    }
+   ],
+   "secretary": "Michael R.",
+   "co_secretary": "Misha Q.",
+   "secretary_note": "roster prints Michael R. as secretary; the Treatment/Accessibilities staff report says Misha Q. serves as co-secretary of this committee"
+  },
+  {
+   "committee": "Corrections",
+   "slug": "corrections",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Al M.",
+     "type": "chair"
+    },
+    {
+     "name": "Coree H.",
+     "type": "member"
+    },
+    {
+     "name": "Andie M.",
+     "type": "member"
+    },
+    {
+     "name": "Clinton M.",
+     "type": "member"
+    },
+    {
+     "name": "Joyce S.",
+     "type": "member"
+    }
+   ],
+   "secretary": "Eileen A."
+  },
+  {
+   "committee": "Finance & Budgetary",
+   "slug": "finance-budgetary",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Kevin P.",
+     "type": "chair"
+    },
+    {
+     "name": "Jimmy D.",
+     "type": "member"
+    },
+    {
+     "name": "Francis G.",
+     "type": "member"
+    },
+    {
+     "name": "Judith Ann K.",
+     "type": "member"
+    },
+    {
+     "name": "Deborah K.",
+     "type": "member"
+    },
+    {
+     "name": "Mike L.",
+     "type": "member"
+    },
+    {
+     "name": "Paz P.",
+     "type": "member"
+    }
+   ],
+   "secretary": "Zenaida (Zenny) M."
+  },
+  {
+   "committee": "International",
+   "slug": "international",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Trish L.",
+     "type": "chair"
+    },
+    {
+     "name": "Reilly K.",
+     "type": "member"
+    },
+    {
+     "name": "Deborah K.",
+     "type": "member"
+    },
+    {
+     "name": "Marita R.",
+     "type": "member"
+    },
+    {
+     "name": "Joyce S.",
+     "type": "member"
+    },
+    {
+     "name": "Carolyn W.",
+     "type": "member"
+    }
+   ],
+   "secretary": "Racy J."
+  },
+  {
+   "committee": "International Conventions/Regional Forums",
+   "slug": "icrf",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Irma V.",
+     "type": "chair"
+    },
+    {
+     "name": "Cathi C.",
+     "type": "member"
+    },
+    {
+     "name": "Cindy F.",
+     "type": "member"
+    },
+    {
+     "name": "Paz P.",
+     "type": "member"
+    },
+    {
+     "name": "Kevin P.",
+     "type": "member"
+    },
+    {
+     "name": "Carolyn W.",
+     "type": "member"
+    }
+   ],
+   "secretary": "Sandra W.",
+   "secretaries": [
+    "Sandra W.",
+    "James H."
+   ],
+   "secretary_note": "Sandra W., interim secretary — International Conventions; James H., secretary — Regional Forums"
+  },
+  {
+   "committee": "Literature",
+   "slug": "literature",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Marita R.",
+     "type": "chair"
+    },
+    {
+     "name": "Cathi C.",
+     "type": "member"
+    },
+    {
+     "name": "Jimmy D.",
+     "type": "member"
+    },
+    {
+     "name": "Vera F.",
+     "type": "member"
+    },
+    {
+     "name": "Cindy F.",
+     "type": "member"
+    },
+    {
+     "name": "Reilly K.",
+     "type": "member"
+    },
+    {
+     "name": "Clinton M.",
+     "type": "member"
+    },
+    {
+     "name": "John W.",
+     "type": "member"
+    },
+    {
+     "name": "Amalia C.",
+     "type": "appointed"
+    }
+   ],
+   "secretary": "Irene D."
+  },
+  {
+   "committee": "Nominating",
+   "slug": "nominating",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Josh E.",
+     "type": "chair",
+     "note": "thru Feb. 2023 (resigned)"
+    },
+    {
+     "name": "Tom H.",
+     "type": "member"
+    },
+    {
+     "name": "Judith Ann K.",
+     "type": "member"
+    },
+    {
+     "name": "Trish L.",
+     "type": "member"
+    },
+    {
+     "name": "Irma V.",
+     "type": "member"
+    }
+   ],
+   "secretary": "James H."
+  },
+  {
+   "committee": "Public Information",
+   "slug": "public-information",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Tom H.",
+     "type": "chair"
+    },
+    {
+     "name": "Reilly K.",
+     "type": "member"
+    },
+    {
+     "name": "Al M.",
+     "type": "member"
+    },
+    {
+     "name": "Molly O.",
+     "type": "member"
+    },
+    {
+     "name": "David S.",
+     "type": "member"
+    },
+    {
+     "name": "Morgan B.",
+     "type": "appointed"
+    },
+    {
+     "name": "Kirk H.",
+     "type": "appointed"
+    }
+   ],
+   "secretary": "Patrick C."
+  },
+  {
+   "committee": "GSB Sharing Session",
+   "slug": "gsb-sharing-session",
+   "secondary": false,
+   "members": [
+    {
+     "name": "Josh E.",
+     "type": "chair",
+     "note": "thru Feb. 2023 (resigned)"
+    }
+   ],
+   "secretary": "Jeff W."
+  }
+ ],
+ "gsb_officers": [
+  {
+   "title": "Chair",
+   "name": "Linda C.",
+   "note": "thru Jan. 2023 (resigned); J.D. suffix dropped"
+  },
+  {
+   "title": "Interim Chair",
+   "name": "Jimmy D.",
+   "note": "not in the officers box; Nominating report: \"the office of Chair of the General Service Board is vacant, currently filled on an interim basis by Jimmy D., Southwest Regional Trustee and First Vice-Chairperson\"; signs the GSB report \"Interim Chair - General Service Board\" (Delegates Bid Farewell calls him \"Acting GSB Chair\")"
+  },
+  {
+   "title": "First Vice-Chair",
+   "name": "Jimmy D."
+  },
+  {
+   "title": "Second Vice-Chair",
+   "name": "Francis G."
+  },
+  {
+   "title": "Treasurer",
+   "name": "Kevin P."
+  },
+  {
+   "title": "Secretary",
+   "name": "Cathi C."
+  },
+  {
+   "title": "Assistant Treasurer",
+   "name": "Paul K.",
+   "note": "GSO Chief Financial Officer (nonalcoholic)"
+  },
+  {
+   "title": "Assistant Secretary",
+   "name": "Jeff W.",
+   "note": "GSO staff coordinator"
+  }
+ ],
+ "trustees": [
+  {
+   "name": "Linda C.",
+   "class": "A",
+   "position": "Class A trustee (GSB chair)",
+   "position_id": "CLASS_A",
+   "city": "Plainfield, IN",
+   "elected_year": null,
+   "rotating": false,
+   "past_delegate": null,
+   "board_roles": [
+    "GSB chair (thru Jan. 2023)"
+   ],
+   "trustee_committees": [],
+   "served_thru": "Jan. 2023",
+   "note": "listed \"(thru Jan. 2023)\" only; resigned as GSB chair in January 2023. 2021/2022 Final Reports say she was elected GSB chair following the 71st (2021) Conference."
+  },
+  {
+   "name": "Judith Ann K.",
+   "class": "A",
+   "position": "Class A trustee",
+   "position_id": "CLASS_A",
+   "city": "Richfield, OH",
+   "elected_year": 2019,
+   "rotating": false,
+   "past_delegate": null,
+   "board_roles": [],
+   "trustee_committees": [
+    "Audit",
+    "Compensation",
+    "Finance and Budgetary",
+    "Nominating"
+   ],
+   "title_dropped": "Sr. (CSA, FACHE)"
+  },
+  {
+   "name": "Kerry M.",
+   "class": "A",
+   "position": "Class A trustee",
+   "position_id": "CLASS_A",
+   "city": "Minneapolis, MN",
+   "elected_year": 2022,
+   "rotating": false,
+   "past_delegate": null,
+   "board_roles": [],
+   "trustee_committees": [
+    "Conference",
+    "CPC/Treatment and Accessibilities"
+   ],
+   "title_dropped": "Hon."
+  },
+  {
+   "name": "Al M.",
+   "class": "A",
+   "position": "Class A trustee",
+   "position_id": "CLASS_A",
+   "city": "Cary, NC",
+   "elected_year": 2019,
+   "rotating": false,
+   "past_delegate": null,
+   "board_roles": [],
+   "trustee_committees": [
+    "Corrections (chair)",
+    "Public Information"
+   ],
+   "title_dropped": "III, MD, FAAFP, FASAM"
+  },
+  {
+   "name": "Andie M.",
+   "class": "A",
+   "position": "Class A trustee",
+   "position_id": "CLASS_A",
+   "city": "Washington, D.C.",
+   "elected_year": 2022,
+   "rotating": false,
+   "past_delegate": null,
+   "board_roles": [],
+   "trustee_committees": [
+    "Archives",
+    "Corrections"
+   ],
+   "nickname_of": "Anadora"
+  },
+  {
+   "name": "Molly O.",
+   "class": "A",
+   "position": "Class A trustee",
+   "position_id": "CLASS_A",
+   "city": "Williamsville, NY",
+   "elected_year": 2021,
+   "rotating": false,
+   "past_delegate": null,
+   "board_roles": [
+    "Grapevine director"
+   ],
+   "trustee_committees": [
+    "CPC/Treatment and Accessibilities (chair)",
+    "Public Information"
+   ]
+  },
+  {
+   "name": "Kevin P.",
+   "class": "A",
+   "position": "Class A trustee",
+   "position_id": "CLASS_A",
+   "city": "St. Louis, MO",
+   "elected_year": 2021,
+   "rotating": false,
+   "past_delegate": null,
+   "board_roles": [
+    "GSB treasurer"
+   ],
+   "trustee_committees": [
+    "Audit (chair)",
+    "Finance and Budgetary (chair)",
+    "ICRF"
+   ],
+   "title_dropped": "MBA, CFA, CPA"
+  },
+  {
+   "name": "Cathi C.",
+   "class": "B",
+   "position": "East Central regional trustee",
+   "position_id": "REG_EAST_CENTRAL",
+   "city": "Indianapolis, IN",
+   "elected_year": 2021,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 64,
+    "area": 23
+   },
+   "board_roles": [
+    "GSB secretary",
+    "AAWS director"
+   ],
+   "trustee_committees": [
+    "Archives (chair)",
+    "Audit",
+    "ICRF",
+    "Literature"
+   ],
+   "note": "past_delegate area 23 inferred: bio says Panel 64 delegate who \"has stayed active in area service since rotating ... as Area 23 archivist\""
+  },
+  {
+   "name": "Jimmy D.",
+   "class": "B",
+   "position": "Southwest regional trustee",
+   "position_id": "REG_SOUTHWEST",
+   "city": "Dallas, TX",
+   "elected_year": 2019,
+   "rotating": true,
+   "past_delegate": {
+    "panel": 59,
+    "area": null
+   },
+   "board_roles": [
+    "GSB first vice-chair",
+    "Interim GSB chair"
+   ],
+   "trustee_committees": [
+    "Conference (chair)",
+    "Finance and Budgetary",
+    "Literature"
+   ],
+   "printed_name": "James (Jimmy) D.",
+   "note": "interim GSB chair after the January 2023 resignation of the GSB chair (Nominating report; signs the GSB report \"Interim Chair\"; \"Acting GSB Chair\" in the Delegates Bid Farewell narrative); past-delegate area not stated"
+  },
+  {
+   "name": "Josh E.",
+   "class": "B",
+   "position": "General service trustee",
+   "position_id": "GST",
+   "city": "Durham, NC",
+   "elected_year": 2020,
+   "rotating": false,
+   "past_delegate": null,
+   "board_roles": [
+    "Grapevine director (resigned)"
+   ],
+   "trustee_committees": [
+    "Archives",
+    "Compensation",
+    "Nominating (chair)",
+    "GSB Sharing Session (chair)"
+   ],
+   "served_thru": "Feb. 2023",
+   "elected_year_source": "2022 Final Report (\"elected General Service Trustee in April of 2020\")",
+   "note": "listed \"(thru Feb. 2023)\" only; position from AA Grapevine directors list (\"general service trustee (resigned)\")"
+  },
+  {
+   "name": "Francis G.",
+   "class": "B",
+   "position": "Northeast regional trustee",
+   "position_id": "REG_NORTHEAST",
+   "city": "Chelmsford, MA",
+   "elected_year": 2019,
+   "rotating": true,
+   "past_delegate": {
+    "panel": 57,
+    "area": null
+   },
+   "board_roles": [
+    "GSB second vice-chair"
+   ],
+   "trustee_committees": [
+    "Audit",
+    "Compensation (chair)",
+    "Conference",
+    "Finance and Budgetary"
+   ],
+   "printed_name": "Francis H. G.",
+   "elected_year_source": "2019-2021 Final Reports (\"elected Northeast regional trustee in May 2019\"); the 2023 bio says only \"serves as\"",
+   "note": "past-delegate area not stated"
+  },
+  {
+   "name": "Tom H.",
+   "class": "B",
+   "position": "Southeast regional trustee",
+   "position_id": "REG_SOUTHEAST",
+   "city": "Marietta, GA",
+   "elected_year": 2021,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 62,
+    "area": null
+   },
+   "board_roles": [
+    "Grapevine director"
+   ],
+   "trustee_committees": [
+    "Archives",
+    "Nominating",
+    "Public Information (chair)"
+   ],
+   "note": "past-delegate area not stated"
+  },
+  {
+   "name": "Reilly K.",
+   "class": "B",
+   "position": "Pacific regional trustee",
+   "position_id": "REG_PACIFIC",
+   "city": "Winston, OR",
+   "elected_year": 2022,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 66,
+    "area": 58
+   },
+   "board_roles": [],
+   "trustee_committees": [
+    "International",
+    "Literature",
+    "Public Information"
+   ]
+  },
+  {
+   "name": "Deborah K.",
+   "class": "B",
+   "position": "General service trustee",
+   "position_id": "GST",
+   "city": "Durham, NC",
+   "elected_year": 2021,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 59,
+    "area": 51
+   },
+   "board_roles": [
+    "AAWS chair"
+   ],
+   "trustee_committees": [
+    "Finance and Budgetary",
+    "International"
+   ]
+  },
+  {
+   "name": "Trish L.",
+   "class": "B",
+   "position": "Trustee-at-large/Canada",
+   "position_id": "TAL_CANADA",
+   "city": "Vancouver, BC",
+   "elected_year": 2019,
+   "rotating": true,
+   "past_delegate": {
+    "panel": 57,
+    "area": null
+   },
+   "board_roles": [],
+   "trustee_committees": [
+    "International (chair)",
+    "Nominating"
+   ],
+   "printed_name": "Patricia (Trish) L.",
+   "note": "past-delegate area not stated"
+  },
+  {
+   "name": "Mike L.",
+   "class": "B",
+   "position": "West Central regional trustee",
+   "position_id": "REG_WEST_CENTRAL",
+   "city": "Omaha, NE",
+   "elected_year": 2020,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 53,
+    "area": 24
+   },
+   "board_roles": [
+    "Grapevine chair"
+   ],
+   "trustee_committees": [
+    "Conference",
+    "Finance and Budgetary"
+   ]
+  },
+  {
+   "name": "Paz P.",
+   "class": "B",
+   "position": "General service trustee",
+   "position_id": "GST",
+   "city": "Tucson, AZ",
+   "elected_year": 2021,
+   "rotating": false,
+   "past_delegate": null,
+   "board_roles": [
+    "Grapevine director"
+   ],
+   "trustee_committees": [
+    "Archives",
+    "Audit",
+    "Compensation",
+    "Finance and Budgetary",
+    "ICRF"
+   ]
+  },
+  {
+   "name": "Marita R.",
+   "class": "B",
+   "position": "Trustee-at-large/U.S.",
+   "position_id": "TAL_US",
+   "city": "Mesquite, NV",
+   "elected_year": 2021,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 49,
+    "area": null
+   },
+   "board_roles": [],
+   "trustee_committees": [
+    "Audit",
+    "Conference",
+    "International",
+    "Literature (chair)"
+   ],
+   "printed_name": "Marita Hagen R.",
+   "note": "past-delegate area not stated"
+  },
+  {
+   "name": "Joyce S.",
+   "class": "B",
+   "position": "Eastern Canada regional trustee",
+   "position_id": "REG_EASTERN_CANADA",
+   "city": "Toronto, Ontario",
+   "elected_year": 2022,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 65,
+    "area": null
+   },
+   "board_roles": [],
+   "trustee_committees": [
+    "Corrections",
+    "International"
+   ],
+   "note": "past-delegate area not stated"
+  },
+  {
+   "name": "Irma V.",
+   "class": "B",
+   "position": "Western Canada regional trustee",
+   "position_id": "REG_WESTERN_CANADA",
+   "city": "Esterhazy, SK",
+   "elected_year": 2020,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 59,
+    "area": null
+   },
+   "board_roles": [
+    "AAWS director"
+   ],
+   "trustee_committees": [
+    "ICRF (chair)",
+    "Nominating"
+   ],
+   "note": "past-delegate area not stated"
+  },
+  {
+   "name": "Carolyn W.",
+   "class": "B",
+   "position": "General service trustee",
+   "position_id": "GST",
+   "city": "Surrey, BC",
+   "elected_year": 2022,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 63,
+    "area": 79
+   },
+   "board_roles": [
+    "AAWS director"
+   ],
+   "trustee_committees": [
+    "Compensation",
+    "Conference",
+    "International",
+    "ICRF"
+   ],
+   "note": "AAWS nontrustee director 2018-2022 before election as general service trustee"
+  }
+ ],
+ "nontrustee_directors": [
+  {
+   "name": "Vera F.",
+   "board": "AAWS",
+   "city": "Bend, OR",
+   "elected_year": 2021,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 68,
+    "area": 58
+   },
+   "trustee_committees": [
+    "Archives",
+    "Conference",
+    "Literature"
+   ]
+  },
+  {
+   "name": "Cindy F.",
+   "board": "Grapevine",
+   "city": "Fairfax, VA",
+   "elected_year": 2020,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 61,
+    "area": null
+   },
+   "trustee_committees": [
+    "ICRF",
+    "Literature"
+   ],
+   "note": "past-delegate area not stated"
+  },
+  {
+   "name": "Coree H.",
+   "board": "Grapevine",
+   "city": "Portland, OR",
+   "elected_year": 2021,
+   "rotating": false,
+   "past_delegate": null,
+   "trustee_committees": [
+    "CPC/Treatment and Accessibilities",
+    "Corrections"
+   ],
+   "note": "not marked rotating, but the Nominating report notes \"a search is underway for an AA Grapevine director to fill the vacancy left by Coree H.\" and Coree H. is not on the post-Conference AAGV slate (Teddy B.-W. and Morgan B. elected)"
+  },
+  {
+   "name": "Clinton M.",
+   "board": "AAWS",
+   "city": "Ottawa, Ontario",
+   "elected_year": 2022,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 64,
+    "area": 80
+   },
+   "trustee_committees": [
+    "CPC/Treatment and Accessibilities",
+    "Corrections",
+    "Literature"
+   ]
+  },
+  {
+   "name": "David S.",
+   "board": "Grapevine",
+   "city": "East Chatham, NY",
+   "elected_year": 2022,
+   "rotating": false,
+   "past_delegate": null,
+   "trustee_committees": [
+    "CPC/Treatment and Accessibilities",
+    "Public Information"
+   ],
+   "note": "\"served as Grapevine director from April 2022-2023\"; elected general service trustee by the GSB following the 2023 Conference (see newly_elected)"
+  },
+  {
+   "name": "John W.",
+   "board": "AAWS",
+   "city": "New York, NY",
+   "elected_year": 2021,
+   "rotating": false,
+   "past_delegate": {
+    "panel": 67,
+    "area": 49
+   },
+   "trustee_committees": [
+    "CPC/Treatment and Accessibilities",
+    "Literature"
+   ]
+  }
+ ],
+ "newly_elected": [
+  {
+   "name": "Teresa J.",
+   "position": "Southwest regional trustee",
+   "position_id": "REG_SOUTHWEST",
+   "class": "B",
+   "city": "Albuquerque, New Mexico",
+   "past_delegate": {
+    "panel": 68,
+    "area": null
+   },
+   "note": "past-delegate area not stated"
+  },
+  {
+   "name": "Robert L.",
+   "position": "Trustee-at-large/Canada",
+   "position_id": "TAL_CANADA",
+   "class": "B",
+   "city": "Quebec, Canada",
+   "past_delegate": {
+    "panel": 48,
+    "area": 89
+   }
+  },
+  {
+   "name": "David S.",
+   "position": "General service trustee",
+   "position_id": "GST",
+   "class": "B",
+   "city": "East Chatham, NY",
+   "past_delegate": null,
+   "note": "listed under \"Class B Trustees elected by the General Service Board following the 2023 Conference\" as \"(see above)\" with no position; general service trustee per the Trustees slate (Class B) / AA Grapevine board slate and the 2024 Final Report (\"David S., general service trustee\"); replaces general service trustee Josh E. (resigned Feb. 2023)"
+  },
+  {
+   "name": "Ken T.",
+   "position": "Northeast regional trustee",
+   "position_id": "REG_NORTHEAST",
+   "class": "B",
+   "city": "Pepperell, MA",
+   "past_delegate": {
+    "panel": 63,
+    "area": 30
+   },
+   "note": "not the same person as Area 45 Panel 72 delegate Kenneth (Ken) T."
+  },
+  {
+   "name": "Teddy B.-W.",
+   "position": "AA Grapevine nontrustee director",
+   "position_id": "DIR_GRAPEVINE",
+   "class": null,
+   "city": "Oakland, CA",
+   "past_delegate": {
+    "panel": 69,
+    "area": 6
+   }
+  },
+  {
+   "name": "Morgan B.",
+   "position": "AA Grapevine nontrustee director",
+   "position_id": "DIR_GRAPEVINE",
+   "class": null,
+   "city": "New Orleans, LA",
+   "past_delegate": null,
+   "note": "appointed committee member on the trustees' Public Information Committee 2021-April 2023"
+  }
+ ],
+ "aaws_directors": [
+  {
+   "name": "Deborah K.",
+   "role": "Chair, General Service Trustee"
+  },
+  {
+   "name": "Cathi C.",
+   "role": "Regional Trustee"
+  },
+  {
+   "name": "Vera F.",
+   "role": "Director"
+  },
+  {
+   "name": "Clinton M.",
+   "role": "Director"
+  },
+  {
+   "name": "Irma V.",
+   "role": "Regional Trustee"
+  },
+  {
+   "name": "Carolyn W.",
+   "role": "General Service Trustee"
+  },
+  {
+   "name": "John W.",
+   "role": "Director"
+  },
+  {
+   "name": "Bob W.",
+   "role": "GSO General Manager",
+   "printed_name": "Robert W."
+  },
+  {
+   "name": "Jeff W.",
+   "role": "GSO Staff Member"
+  }
+ ],
+ "grapevine_directors": [
+  {
+   "name": "Mike L.",
+   "role": "Chair, Regional Trustee"
+  },
+  {
+   "name": "Chris C.",
+   "role": "AAGV Publisher"
+  },
+  {
+   "name": "Josh E.",
+   "role": "General Service Trustee (resigned)"
+  },
+  {
+   "name": "Cindy F.",
+   "role": "Director"
+  },
+  {
+   "name": "Tom H.",
+   "role": "Regional Trustee"
+  },
+  {
+   "name": "Coree H.",
+   "role": "Director"
+  },
+  {
+   "name": "Molly O.",
+   "role": "Class A Trustee"
+  },
+  {
+   "name": "Paz P.",
+   "role": "General Service Trustee"
+  },
+  {
+   "name": "David S.",
+   "role": "Director"
+  }
+ ],
+ "gso_staff": [
+  {
+   "name": "Eileen A.",
+   "assignments": [
+    "Corrections"
+   ],
+   "title": ""
+  },
+  {
+   "name": "Karina C.",
+   "assignments": [
+    "Group Services",
+    "Report and Charter"
+   ],
+   "title": ""
+  },
+  {
+   "name": "Patrick C.",
+   "assignments": [
+    "Public Information"
+   ],
+   "title": "",
+   "note": "rotates onto the 2025 International Convention assignment in September 2023"
+  },
+  {
+   "name": "Irene D.",
+   "assignments": [
+    "Literature"
+   ],
+   "title": ""
+  },
+  {
+   "name": "James H.",
+   "assignments": [
+    "Nominating",
+    "Trustees",
+    "Regional Forums"
+   ],
+   "title": ""
+  },
+  {
+   "name": "Racy J.",
+   "assignments": [
+    "International"
+   ],
+   "title": ""
+  },
+  {
+   "name": "Diana L.",
+   "assignments": [
+    "Conference",
+    "Agenda"
+   ],
+   "title": "Conference Coordinator"
+  },
+  {
+   "name": "Misha Q.",
+   "assignments": [
+    "Treatment/Accessibilities",
+    "Remote Communities"
+   ],
+   "title": ""
+  },
+  {
+   "name": "Michael R.",
+   "assignments": [
+    "Cooperation with the Professional Community"
+   ],
+   "title": ""
+  },
+  {
+   "name": "Sandra W.",
+   "assignments": [
+    "International Conventions (interim)"
+   ],
+   "title": "Director of Staff Services"
+  },
+  {
+   "name": "Jeff W.",
+   "assignments": [
+    "Staff Coordinator",
+    "Policy/Admissions",
+    "GSB Sharing Session"
+   ],
+   "title": "Staff Coordinator"
+  }
+ ],
+ "grapevine_staff": [
+  {
+   "name": "Paola M.",
+   "title": "Editor, La Viña"
+  },
+  {
+   "name": "Jon W.",
+   "title": "Senior Editor"
+  },
+  {
+   "name": "Chris C.",
+   "title": "AA Grapevine Publisher",
+   "note": "not in the printed GRAPEVINE STAFF list; listed as \"AAGV publisher\" among AA Grapevine directors and counted among the 15 GSO/Grapevine/La Viña staff Conference members"
+  }
+ ],
+ "general_manager": "Bob W.",
+ "staff_director": "Sandra W.",
+ "conference_chair": {
+  "name": "Tami L.",
+  "area": 78
+ },
+ "farewell_count": null,
+ "notes": "Source: 2023 (73rd) GSC Final Report, Anonymity-Protected Digital Edition (157 PDF pages). Rosters: Conference Committees PDF p.147 (printed 146), 2024 chairs table + Trustees' Committees + GSB officers p.148, Conference Members (trustees, nontrustee directors, newly elected) pp.149-152, Area Delegates pp.153-154, nonvoting attendees / AAWS & AAGV directors / GSO & Grapevine staff p.155, Delegates Bid Farewell p.156. Delegate chair Tami L. (Area 78, Panel 72) from the opening narrative and Greetings; general manager Robert (Bob) W.; Sandra W. is Director of Staff Services.\nNAMES: every person is first name + last initial. Class A trustees and nonalcoholic GSO employees are printed with full surnames in this edition and were reduced to first name + initial (Linda C., Judith Ann K., Kerry M., Al M., Andie M. [bio: Anadora \"Andie\"], Molly O., Kevin P.; GSO employees Paul K. (CFO), Zenaida (Zenny) M. (Controller), Michelle M. (Archivist)); titles (Sr., Hon.) and professional suffixes dropped; no full surnames are stored anywhere in this file. Trustees use the short form printed in the committee/officer lists (Jimmy D., Francis G., Trish L., Marita R.); the longer bio forms (James (Jimmy) D., Francis H. G., Patricia (Trish) L., Marita Hagen R.) are kept in \"printed_name\". Delegates use the Area Delegates list spelling everywhere (e.g. Kathleen (Kathy) R., Michael (Mike) B., Cheryl (Sherry) S., William (Bill) F., Jeffrey (Jeff) S., Kenneth (Ken) T.; committee-roster short forms kept as \"printed_name\" on committee members); next-year Agenda chair printed \"Becca H.\" is recorded as Rebecca H. The general manager is recorded as \"Bob W.\" (printed \"Robert W.\" in the AAWS directors list, \"Robert (Bob) W.\" in the department report).\nDELEGATES: 93 areas, 45 Panel 72 (second year, rotating) and 48 Panel 73 (first year). Area 26: the Area Delegates list misprints \"Jennifer J., Bardstown, IN\"; the 2023 Corrections roster, the 2022 delegates list and 2022 Area highlight give Jennifer S. (Bardstown, KY) - name reconciled to Jennifer S. (printed_name kept), city kept as printed. Area 35 city printed \"Biwabik, ND\" kept as printed. Area 89: status \"alternate\" - Jocelyne C., alternate AREA CHAIR (not the alternate delegate), was seated because neither the Panel 73 delegate Giséle V. nor the alternate delegate could attend (pre-Conference Policy/Admissions recommendation); the Agenda committee roster still prints \"Gisele V. - Area 89\" and is kept as printed (member has seated_substitute \"Jocelyne C.\"), which produces the validator WARNING \"AGENDA: area 89 member name 'Gisele V.' vs delegate 'Jocelyne C.'\" - explained, not an error.\nCONFERENCE COMMITTEES: 11 primary + 2 secondary (Archives, International Conventions/Regional Forums, footnote 1 = secondary assignment). Every primary committee has exactly one * chair and one ** alternate chair, and Archives/ICRF also have one of each. Area 1 delegate Tomy G. (Panel 73) is missing from every printed committee list; he is the 2024 Literature chair in the 2024 chairs table and appears on the 2024 Final Report's Literature roster (Panel 73) together with the same three Panel 73 Literature members as 2023 (Pete B., James O., Crystal S.), so he was added to LITERATURE as a member with \"inferred\": true. A stray \"J\" printed after \"Area 7, Northern Interior CA\" (and after \"International Conventions\" in the trustees' ICRF secretary line) is a typesetting artifact and was ignored. Tami L. (delegate chair) is listed on Report and Charter without a mark. Finance secretary printed as \"Zenny\" + surname (nonalcoholic) and Archives secretary Michelle + surname (nonalcoholic), both reduced. ICRF printed \"Secretaries: James H., Sandra W.\" -> secretary James H. plus \"secretaries\" list. No trustees/directors appear inside the Conference committee lists.\nTRUSTEES' COMMITTEES: the asterisk on the \"2023 Trustees' Committees*\" heading refers to the ex-officio footnote (GSB chair/interim chair on all committees; GSO general manager on all but Audit, Compensation, Nominating) - NOT a secondary assignment, so secondary=false for all; the \"secondary committee assignment\" footnote that the text extraction places nearby belongs to the 2024 chairs table (Archives*, ICRF*). Josh E. appears \"(thru Feb. 2023)\" on Archives, Compensation, Nominating (chair) and GSB Sharing Session (chair) - kept with type as printed and a note. ** = Appointed Committee Member (Amalia C. on Literature; Morgan B., Kirk H. on PI); *** = consultant (Gerry C., Tom P. on CPC/T&A). CPC/T&A: roster secretary Michael R.; staff report names Misha Q. co-secretary (co_secretary). ICRF: Sandra W. interim secretary (International Conventions), James H. secretary (Regional Forums). Finance & Budgetary secretary Zenaida (Zenny) M. (Controller); Audit/Compensation secretary Paul K. (CFO).\nTRUSTEES: 21 listed = 7 Class A (incl. Linda C., GSB chair, \"thru Jan. 2023\") + 14 Class B (incl. Josh E., general service trustee, \"thru Feb. 2023\"; both resigned - see narrative p.3-4). Rotating (*): Jimmy D. (Southwest), Francis G. (Northeast), Trish L. (Trustee-at-large/Canada). trustee_committees are derived from the Trustees' Committees roster; bios differ in places (Molly O.'s bio also lists Archives; Kevin P.'s bio lists International; Cathi C.'s bio lists Finance; Deborah K.'s bio lists Audit and \"consultant on the Compensation Committee\"; Mike L.'s bio says \"consultant on the Audit and Compensation Committees\"; Judith Ann K. bio matches) - roster used. elected_year taken from the 2023 bios except: Francis G. 2019 (2023 bio says only \"serves as\"; from 2019-2021 Final Reports), Josh E. 2020 (2022 Final Report), Linda C. null (elected GSB chair following the 2021 Conference per 2021/2022 reports, not as a trustee election year). past_delegate area recorded only when stated (Reilly K. 58, Deborah K. 51, Mike L. 24 as printed, Carolyn W. 79); Cathi C. area 23 inferred from \"Area 23 archivist\" after rotating; others' areas not stated -> null. board_roles: GSB officers from the officers box, AAWS/AAGV membership from the directors lists (p.155); Jimmy D. also \"Interim GSB chair\" (Nominating report: chair office vacant, \"currently filled on an interim basis by Jimmy D.\"; he signs the GSB report \"Interim Chair\"; the farewell narrative says \"Acting GSB Chair\"). gsb_officers includes an extra \"Interim Chair\" entry for Jimmy D. (not in the printed officers box) with a note. Class A seat vacant on the post-Conference slate.\nNONTRUSTEE DIRECTORS: Vera F., Clinton M., John W. (AAWS); Cindy F., Coree H., David S. (Grapevine). No director is marked rotating; David S. \"served as Grapevine director from April 2022-2023\" and was elected general service trustee following the Conference; Coree H. is also leaving the AAGV board (Nominating report: search underway \"to fill the vacancy left by Coree H.\"; not on the post-Conference AAGV slate) - rotating kept false as printed, with a note.\nNEWLY ELECTED (by the GSB following the 2023 Conference): Class B trustees Teresa J. (Southwest), Robert L. (Trustee-at-large/Canada), David S. (printed \"(see above)\" with no position - general service trustee per the 2023 Trustees/AAGV slates and the 2024 report), Ken T. (Northeast; not the Area 45 delegate Kenneth (Ken) T.); AA Grapevine nontrustee directors Teddy B.-W., Morgan B. (class null for directors).\nSTAFF: GSO staff list (11) with assignments from the Conference/trustees' committee secretary lines and the Staff Reports (Conference, CPC, Treatment/Accessibilities & Remote Communities, Corrections, Group Services, International, International Convention, Literature, Nominating, Public Information, Staff Coordinator). Grapevine staff: Paola M. (La Viña editor), Jon W. (senior editor; Conference Grapevine/La Viña secretary) plus Chris C. (AAGV publisher, from the AAGV directors list; he is among the \"15 GSO, Grapevine and La Viña staff members\" = 11 GSO staff + GM + 3 GV/LV). Nonvoting resource attendees (GSO department employees) are not recorded.\nfarewell_count: not stated as a number (the farewell narrative says \"farewells from the Panel 72 departing delegates\"); 45 Panel 72 delegates are in the list -> null per schema.\nConference: April 23-29, 2023, New York Marriott at the Brooklyn Bridge, Brooklyn, NY; 133 Conference members (93 delegates, 25 trustees and directors, 15 staff)."
+}

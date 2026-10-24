@@ -1,0 +1,888 @@
+{
+ "meta": {
+  "about": "Generated quiz decks on the Quiz page (assets/js/view-quiz.js): \"Which Concept?\" matches an own-words cue to one of the Twelve Concepts; \"Which committee does this?\" matches a duty to a Conference committee (FCR.COMMITTEES id) or a trustees' committee (FCR.TRUSTEES_COMMITTEES key, or a key in trustees_extra).",
+  "source": "The A.A. Service Manual 2026-2028 (BM-31): Twelve Concepts short and long forms and essays (pp. C-IV to C-59); Conference committees pp. 46-48; General Service Board committees pp. 58-60. Printed page numbers.",
+  "rules": "Own words, page-cited. A cue never contains its Concept's number or title words; a duty never names its committee and starts with a verb (the question reads \"Which ... committee <duty>?\"). \"also\": answers that fit too, never offered as wrong options. \"bank\": the duty repeats a learn.json bank question, so the merged All and Service Manual decks skip it."
+ },
+ "concepts": [
+  {
+   "n": 1,
+   "title": "Ultimate Authority",
+   "node": "concept_authority",
+   "page": "C-IV"
+  },
+  {
+   "n": 2,
+   "title": "Delegated Authority",
+   "node": "concept_authority",
+   "page": "C-IV"
+  },
+  {
+   "n": 3,
+   "title": "Right of Decision",
+   "node": "right_of_decision",
+   "page": "C-IV"
+  },
+  {
+   "n": 4,
+   "title": "Right of Participation",
+   "node": "right_of_participation",
+   "page": "C-IV"
+  },
+  {
+   "n": 5,
+   "title": "Rights of Appeal and Petition",
+   "node": "right_of_appeal",
+   "page": "C-IV"
+  },
+  {
+   "n": 6,
+   "title": "Trustees' Chief Initiative",
+   "node": "conference_and_trustees",
+   "page": "C-IV"
+  },
+  {
+   "n": 7,
+   "title": "Legal and Traditional Rights",
+   "node": "conference_and_trustees",
+   "page": "C-IV"
+  },
+  {
+   "n": 8,
+   "title": "Trustees as Planners and Custodians",
+   "node": "conference_and_trustees",
+   "page": "C-IV"
+  },
+  {
+   "n": 9,
+   "title": "Good Service Leadership",
+   "node": "service_leadership",
+   "page": "C-IV"
+  },
+  {
+   "n": 10,
+   "title": "Authority Equals Responsibility",
+   "node": "concept_x",
+   "page": "C-IV"
+  },
+  {
+   "n": 11,
+   "title": "The Board's Helpers",
+   "node": "concept_xi",
+   "page": "C-IV"
+  },
+  {
+   "n": 12,
+   "title": "General Warranties",
+   "node": "warranties",
+   "page": "C-IV"
+  }
+ ],
+ "concept_cues": [
+  {
+   "concept": 1,
+   "cue": "The last word on A.A.'s world services always rests with the group conscience of the whole Fellowship.",
+   "page": "C-IV"
+  },
+  {
+   "concept": 1,
+   "cue": "News in 1948 of Dr. Bob's fatal illness showed that the co-founders were almost the only link between the groups and a little-known board.",
+   "page": "C-4",
+   "also": [
+    2,
+    9
+   ]
+  },
+  {
+   "concept": 1,
+   "cue": "The first Conference, in 1951, was a test of whether Tradition Two could work for A.A. as a whole, trustees and founders included.",
+   "page": "C-4",
+   "also": [
+    2
+   ]
+  },
+  {
+   "concept": 1,
+   "cue": "Bill W. contrasts A.A. with nations whose group conscience is giving way to apathy and power-seeking, and trusts A.A.'s democracy of service to hold.",
+   "page": "C-5"
+  },
+  {
+   "concept": 2,
+   "cue": "For nearly every practical purpose, the Conference speaks and acts as the whole Society's conscience in its world affairs.",
+   "page": "C-IV"
+  },
+  {
+   "concept": 2,
+   "cue": "Scattered groups cannot run world services themselves, so they entrust operating power to chosen servants who can speak and act for them.",
+   "page": "C-6"
+  },
+  {
+   "concept": 2,
+   "cue": "The groups gave the Conference full charge of world services, except for changing the Traditions or the Charter's General Warranties.",
+   "page": "C-V",
+   "also": [
+    12
+   ]
+  },
+  {
+   "concept": 2,
+   "cue": "In 1937 the Akron and New York groups first entrusted Dr. Bob and Bill W. with creating services to carry the message worldwide.",
+   "page": "C-6"
+  },
+  {
+   "concept": 2,
+   "cue": "Step by step, the trustees of the Alcoholic Foundation took over money matters, the book, public relations and then the Grapevine.",
+   "page": "C-6, C-7"
+  },
+  {
+   "concept": 3,
+   "cue": "Each service body may choose which matters to settle on its own and which to report, consult on, or send up for direction.",
+   "page": "C-9"
+  },
+  {
+   "concept": 3,
+   "cue": "Delegates are world servants of A.A. first and area representatives second, so on a final vote they follow their own judgment and conscience.",
+   "page": "C-11"
+  },
+  {
+   "concept": 3,
+   "cue": "An 'instructed' delegate who cannot vote their own conscience on a final vote is no trusted servant, only a messenger.",
+   "page": "C-9",
+   "also": [
+    4
+   ]
+  },
+  {
+   "concept": 3,
+   "cue": "This latitude must never become an excuse for skipping reports, overstepping defined limits or failing to consult those entitled to be consulted.",
+   "page": "C-11"
+  },
+  {
+   "concept": 3,
+   "cue": "It rests on mutual trust: we trust God, A.A. and each other, so we trust our leaders in service as well.",
+   "page": "C-11"
+  },
+  {
+   "concept": 4,
+   "cue": "Each class of world servants should get a vote in reasonable proportion to the responsibility it carries.",
+   "page": "C-IV"
+  },
+  {
+   "concept": 4,
+   "cue": "This is why trustees, the AAWS and Grapevine directors and their staffs are voting members of the Conference.",
+   "page": "C-12"
+  },
+  {
+   "concept": 4,
+   "cue": "Paid staff cannot become trustees, but they are invited to board meetings and may join the debate without a vote.",
+   "page": "C-13"
+  },
+  {
+   "concept": 4,
+   "cue": "A trustee-treasurer once tore up the office paychecks; no one of us should hold absolute power over money and people.",
+   "page": "C-14"
+  },
+  {
+   "concept": 4,
+   "cue": "Just as there are no second-class A.A.s, there should be no second-class world service workers.",
+   "page": "C-15"
+  },
+  {
+   "concept": 5,
+   "cue": "Minorities in staffs, committees and boards are urged to file minority reports when they believe a majority is seriously wrong.",
+   "page": "C-16"
+  },
+  {
+   "concept": 5,
+   "cue": "Any worker, paid or unpaid, may take a personal grievance straight to the General Service Board without fear of reprisal.",
+   "page": "C-16"
+  },
+  {
+   "concept": 5,
+   "cue": "A minority that is fully heard is the best guard against a majority that is misinformed, hasty or angry.",
+   "page": "C-16"
+  },
+  {
+   "concept": 5,
+   "cue": "Bill W. cites de Tocqueville's warning that democracy's greatest danger is the tyranny of apathetic, self-seeking or angry majorities.",
+   "page": "C-18"
+  },
+  {
+   "concept": 6,
+   "cue": "The Conference keeps the final word on large matters of policy and finance, but in most of them the General Service Board takes the lead and does the active work.",
+   "page": "C-V, C-19"
+  },
+  {
+   "concept": 6,
+   "cue": "In Bill W.'s business picture, the groups are the stockholders, the delegates their proxies, and the board a holding company.",
+   "page": "C-20",
+   "also": [
+    8
+   ]
+  },
+  {
+   "concept": 6,
+   "cue": "The General Service Board acts as A.A.'s banker, the active guardian of its Traditions and the steward of its worldwide public relations.",
+   "page": "C-20",
+   "also": [
+    8
+   ]
+  },
+  {
+   "concept": 6,
+   "cue": "So the board can act freely when the Conference is not meeting, the Conference grants it wide administrative latitude.",
+   "page": "C-19"
+  },
+  {
+   "concept": 7,
+   "cue": "The board's Charter and Bylaws hold up in court; the Conference Charter does not, and relies on custom and the A.A. purse.",
+   "page": "C-IV, C-21"
+  },
+  {
+   "concept": 7,
+   "cue": "In a showdown the delegates could cut off the groups' money, so the Conference's practical power nearly always outweighs the board's.",
+   "page": "C-21"
+  },
+  {
+   "concept": 7,
+   "cue": "Like a U.S. President who seldom vetoes a bill, the trustees hold a veto over Conference actions but rarely use it.",
+   "page": "C-22, C-23"
+  },
+  {
+   "concept": 7,
+   "cue": "The trustees may cut a Conference-approved budget during the year, but should not substantially exceed it without consulting.",
+   "page": "C-23"
+  },
+  {
+   "concept": 8,
+   "cue": "The board itself handles the large questions of policy and finance, but not the day-to-day running of AAWS and the Grapevine.",
+   "page": "C-IV, C-24"
+  },
+  {
+   "concept": 8,
+   "cue": "The General Service Board oversees the active service corporations mainly through its power to elect all of their directors.",
+   "page": "C-IV"
+  },
+  {
+   "concept": 8,
+   "cue": "Each service corporation should have its own charter, working capital, executive, employees, offices and equipment.",
+   "page": "C-24"
+  },
+  {
+   "concept": 8,
+   "cue": "The board must never become an operating company: its chair, usually nonalcoholic and unpaid, cannot be a full-time executive.",
+   "page": "C-25",
+   "also": [
+    11
+   ]
+  },
+  {
+   "concept": 8,
+   "cue": "Keep money and executive power spread out; never concentrate them in a single service entity.",
+   "page": "C-25, C-26",
+   "also": [
+    11
+   ]
+  },
+  {
+   "concept": 9,
+   "cue": "The founders' former role at the head of A.A.'s world affairs must pass to the board of trustees.",
+   "page": "C-IV, C-27"
+  },
+  {
+   "concept": 9,
+   "cue": "Groups should choose GSRs with care, since only GSRs name the committee members and, finally, the delegates.",
+   "page": "C-27"
+  },
+  {
+   "concept": 9,
+   "cue": "A 'politico' tries to give people what they want; a statesman knows when not to.",
+   "page": "C-29"
+  },
+  {
+   "concept": 9,
+   "cue": "Vision, the ability to estimate the future soundly, is the very essence of prudence.",
+   "page": "C-30, C-31"
+  },
+  {
+   "concept": 9,
+   "cue": "Opposition for its own sake never works; when asked, always give your reasons, and sound ones.",
+   "page": "C-30"
+  },
+  {
+   "concept": 10,
+   "cue": "Every service job should come with matching power to do it, its scope set by custom, resolution, job description or charter.",
+   "page": "C-VI, C-33"
+  },
+  {
+   "concept": 10,
+   "cue": "Double-headed business or policy management is to be avoided at all costs.",
+   "page": "C-36",
+   "also": [
+    11
+   ]
+  },
+  {
+   "concept": 10,
+   "cue": "Where two committees share a question, name a senior jurisdiction, hear the junior one, and make clear where final settlement lies.",
+   "page": "C-36"
+  },
+  {
+   "concept": 10,
+   "cue": "Final power to correct or reorganize should almost never be used in full, only when delegated work has gone wrong.",
+   "page": "C-34"
+  },
+  {
+   "concept": 11,
+   "cue": "The trustees should always have the ablest standing committees, corporate directors, executives, staff and consultants.",
+   "page": "C-IV"
+  },
+  {
+   "concept": 11,
+   "cue": "People tend to recommend associates a little less able than themselves, so those who nominate must guard against it.",
+   "page": "C-38"
+  },
+  {
+   "concept": 11,
+   "cue": "Paid workers should be paid in reasonable relation to what similar work earns in the business world.",
+   "page": "C-44"
+  },
+  {
+   "concept": 11,
+   "cue": "Staff members rotate through the assignments on equal pay, so no single departure can cripple the office.",
+   "page": "C-45"
+  },
+  {
+   "concept": 11,
+   "cue": "No committee can run an active service day to day; its executive direction must head up in one person.",
+   "page": "C-43",
+   "also": [
+    8,
+    10
+   ]
+  },
+  {
+   "concept": 12,
+   "cue": "The Conference must never become a seat of dangerous wealth or power.",
+   "page": "C-IV"
+  },
+  {
+   "concept": 12,
+   "cue": "Important matters are settled by discussion, vote and, whenever possible, substantial unanimity.",
+   "page": "C-IV"
+  },
+  {
+   "concept": 12,
+   "cue": "No Conference action may ever punish a person or stir up public controversy.",
+   "page": "C-IV, C-54"
+  },
+  {
+   "concept": 12,
+   "cue": "Changing this part of the Conference Charter takes the written consent of three-quarters of the listed groups that vote, with six months allowed.",
+   "page": "C-48"
+  },
+  {
+   "concept": 12,
+   "cue": "The Conference may serve A.A. but must never perform acts of government, and must stay democratic in thought and action.",
+   "page": "C-IV, C-58"
+  },
+  {
+   "concept": 12,
+   "cue": "Many members call it 'The A.A. Service Bill of Rights'.",
+   "page": "C-53"
+  }
+ ],
+ "trustees_extra": [
+  {
+   "key": "COMPLIANCE",
+   "title": "Compliance",
+   "page": "60"
+  },
+  {
+   "key": "RETIREMENT",
+   "title": "Employees' Retirement",
+   "page": "60"
+  }
+ ],
+ "committee_scopes": [
+  {
+   "side": "conference",
+   "committee": "AGENDA",
+   "duty": "Reviews and approves the format and content of the week's schedule for the annual Conference.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "AGENDA",
+   "duty": "Weighs proposed themes, workshops and presentation or discussion topics for the Conference, plus its evaluation questionnaire.",
+   "page": "46",
+   "bank": true
+  },
+  {
+   "side": "conference",
+   "committee": "CPC",
+   "duty": "Suggests policies and activities that carry the message by sharing information about A.A. with people who deal with alcoholics in their work.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "CPC",
+   "duty": "Helps members and outside organizations see how A.A. can work alongside others without affiliating.",
+   "page": "46",
+   "bank": true
+  },
+  {
+   "side": "conference",
+   "committee": "CORRECTIONS",
+   "duty": "Reviews A.A. efforts to bridge the gap for alcoholics leaving jail or prison.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "CORRECTIONS",
+   "duty": "Supports members who carry the message to alcoholics behind the walls.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "CORRECTIONS",
+   "duty": "Reviews every aspect of service to A.A. groups inside jails and prisons.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "CORRECTIONS",
+   "duty": "Recommends needed updates to the material used to carry the message into jails and prisons.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "CORRECTIONS",
+   "duty": "Clarifies what A.A. can and cannot do, within the Traditions, for alcoholics in custody and after release.",
+   "page": "46",
+   "bank": true
+  },
+  {
+   "side": "conference",
+   "committee": "FINANCE",
+   "duty": "Reviews the budgets and the income-and-expense reports of A.A. World Services and AA Grapevine.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "FINANCE",
+   "duty": "Reviews or starts Conference recommendations that involve money.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "FINANCE",
+   "duty": "Keeps abreast of the Fellowship's needs, including yearly budgets and the income that service work requires.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "GRAPEVINE",
+   "duty": "Reviews how the Fellowship's two magazines are developed and circulated, and seeks suggestions on their material and format.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "GRAPEVINE",
+   "duty": "Helps clarify policy questions about A.A.'s international journals.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "GRAPEVINE",
+   "duty": "Reaches Spanish-speaking alcoholics through the Fellowship's bimonthly Spanish-language magazine.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "GRAPEVINE",
+   "duty": "Develops material related to the magazines and considers topics for future books drawn from them.",
+   "page": "46"
+  },
+  {
+   "side": "conference",
+   "committee": "LITERATURE",
+   "duty": "Focuses on recovery material, leaving service material for a particular field, such as prison work, to that field's committee.",
+   "page": "47"
+  },
+  {
+   "side": "conference",
+   "committee": "LITERATURE",
+   "duty": "Reviews proposals for new and revised pamphlets and books, and recommends new pamphlets, books or audiovisual items.",
+   "page": "47"
+  },
+  {
+   "side": "conference",
+   "committee": "LITERATURE",
+   "duty": "Reviews new formats of existing items, including digital and audiovisual ones.",
+   "page": "47"
+  },
+  {
+   "side": "conference",
+   "committee": "POLICY",
+   "duty": "Examines the general principles under which the Conference itself operates.",
+   "page": "47",
+   "also": [
+    "REPORT"
+   ]
+  },
+  {
+   "side": "conference",
+   "committee": "POLICY",
+   "duty": "Decides on requests from other countries' boards and GSOs to attend the annual Conference as observers.",
+   "page": "47"
+  },
+  {
+   "side": "conference",
+   "committee": "POLICY",
+   "duty": "Reviews requests to temporarily replace a delegate who is unable to attend the Conference.",
+   "page": "47",
+   "bank": true
+  },
+  {
+   "side": "conference",
+   "committee": "POLICY",
+   "duty": "Reviews proposals to change or expand the Conference, such as requests for new delegate areas, and steps that affect its cost.",
+   "page": "47",
+   "bank": true
+  },
+  {
+   "side": "conference",
+   "committee": "PI",
+   "duty": "Builds understanding of A.A., and heads off misunderstanding, through print, broadcast and online media and outreach meetings.",
+   "page": "47"
+  },
+  {
+   "side": "conference",
+   "committee": "PI",
+   "duty": "Reviews outreach pamphlets and PSAs.",
+   "page": "47"
+  },
+  {
+   "side": "conference",
+   "committee": "PI",
+   "duty": "Reaches out to young people and students about A.A.",
+   "page": "47"
+  },
+  {
+   "side": "conference",
+   "committee": "PI",
+   "duty": "Reviews the membership survey data and how the survey is done.",
+   "page": "47",
+   "bank": true
+  },
+  {
+   "side": "conference",
+   "committee": "PI",
+   "duty": "Communicates with people who work in the media, and evaluates digital and social media efforts to carry the message.",
+   "page": "47"
+  },
+  {
+   "side": "conference",
+   "committee": "REPORT",
+   "duty": "Reviews The A.A. Service Manual, discusses suggestions and recommends changes.",
+   "page": "47",
+   "bank": true
+  },
+  {
+   "side": "conference",
+   "committee": "REPORT",
+   "duty": "Checks each year's draft of the Conference's published record for accuracy.",
+   "page": "47"
+  },
+  {
+   "side": "conference",
+   "committee": "REPORT",
+   "duty": "Reviews and recommends any needed changes to the document that defines the Conference itself.",
+   "page": "47",
+   "also": [
+    "POLICY"
+   ]
+  },
+  {
+   "side": "conference",
+   "committee": "TREATMENT",
+   "duty": "Supports members and groups who carry the message into rehabilitation facilities.",
+   "page": "47"
+  },
+  {
+   "side": "conference",
+   "committee": "TREATMENT",
+   "duty": "Reviews A.A. efforts to bridge the gap from rehab to A.A.",
+   "page": "47"
+  },
+  {
+   "side": "conference",
+   "committee": "TREATMENT",
+   "duty": "Supports efforts to bring the message to people who face barriers to it, including those in underserved or remote communities.",
+   "page": "47",
+   "bank": true
+  },
+  {
+   "side": "conference",
+   "committee": "TREATMENT",
+   "duty": "Reviews service to A.A. meetings in rehab and other institutions outside the prison system.",
+   "page": "47"
+  },
+  {
+   "side": "conference",
+   "committee": "TRUSTEES",
+   "duty": "Reviews the résumés of all nominees for the General Service Board and the corporate boards.",
+   "page": "48"
+  },
+  {
+   "side": "conference",
+   "committee": "TRUSTEES",
+   "duty": "Presents the slates of board nominees to the Conference for disapproval, if any.",
+   "page": "48"
+  },
+  {
+   "side": "conference",
+   "committee": "TRUSTEES",
+   "duty": "Is part of the voting body that nominates regional and at-large board members during Conference week.",
+   "page": "48"
+  },
+  {
+   "side": "conference",
+   "committee": "ARCHIVES",
+   "duty": "Considers matters of practice and policy about A.A.'s historical records.",
+   "page": "48"
+  },
+  {
+   "side": "conference",
+   "committee": "ARCHIVES",
+   "duty": "Is a secondary committee on A.A.'s historical records that may take direct action at its dinner meeting.",
+   "page": "48"
+  },
+  {
+   "side": "conference",
+   "committee": "ICRF",
+   "duty": "Has eight delegate members drawn by lot, one from each region.",
+   "page": "48",
+   "bank": true
+  },
+  {
+   "side": "conference",
+   "committee": "ICRF",
+   "duty": "Considers and develops plans for the coming worldwide A.A. gatherings held every five years.",
+   "page": "48, 39"
+  },
+  {
+   "side": "conference",
+   "committee": "ICRF",
+   "duty": "Offers input on carrying out the regional, special and local sharing sessions that keep the board and GSO staff in touch with members.",
+   "page": "48, 62"
+  },
+  {
+   "side": "trustees",
+   "committee": "ARCHIVES",
+   "duty": "Makes sure, with expert guidance from GSO, that A.A.'s historical collection is preserved, organized and used to the highest professional and ethical standards.",
+   "page": "58"
+  },
+  {
+   "side": "trustees",
+   "committee": "ARCHIVES",
+   "duty": "Reviews research and access requests for A.A.'s historical collection.",
+   "page": "58"
+  },
+  {
+   "side": "trustees",
+   "committee": "CPCTA",
+   "duty": "Seeks mutual understanding with people concerned with alcoholism in their work, so A.A. is accepted in hospitals and rehab centers.",
+   "page": "58"
+  },
+  {
+   "side": "trustees",
+   "committee": "CPCTA",
+   "duty": "Considers resources for alcoholics in rehab and for those who carry the message to them.",
+   "page": "58"
+  },
+  {
+   "side": "trustees",
+   "committee": "CPCTA",
+   "duty": "Seeks to widen the reach of the message in remote places where language, culture or geography are barriers.",
+   "page": "58"
+  },
+  {
+   "side": "trustees",
+   "committee": "CORRECTIONS",
+   "duty": "Develops programs and materials that support carrying the message to alcoholics in jails and prisons.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "CORRECTIONS",
+   "duty": "Seeks ways to develop and expand pre-release contacts and services.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "CORRECTIONS",
+   "duty": "Seeks to expand, across the U.S. and Canada, the service that lets incarcerated alcoholics write to A.A. members on the outside.",
+   "page": "59, 71"
+  },
+  {
+   "side": "trustees",
+   "committee": "FINANCE",
+   "duty": "Oversees all AAWS and Grapevine money matters, the General Fund, the Reserve Fund and the Postretirement Medical Fund.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "FINANCE",
+   "duty": "Is chaired by the treasurer of the General Service Board.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "CONFERENCE",
+   "duty": "Works on the procedures, agenda and theme of the annual meeting of delegates, trustees, directors and staff.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "CONFERENCE",
+   "duty": "Considers how the workload is spread among the delegates' committees.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "CONFERENCE",
+   "duty": "Considers innovations for better communication among the members of the annual meeting.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "INTERNATIONAL",
+   "duty": "Suggests ways to carry the message to alcoholics abroad, especially in countries with no service structure yet.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "INTERNATIONAL",
+   "duty": "Shares experience, supports translating A.A. literature into other languages and encourages wider regional or zonal meetings.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "INTERNATIONAL",
+   "duty": "Is the main link between A.A. in other countries and the U.S./Canada General Service Board.",
+   "page": "59",
+   "bank": true
+  },
+  {
+   "side": "trustees",
+   "committee": "ICRF",
+   "duty": "Plans the worldwide gatherings held every five years and all the regional, local and special sharing sessions.",
+   "page": "59, 39, 62"
+  },
+  {
+   "side": "trustees",
+   "committee": "ICRF",
+   "duty": "Assesses how well the worldwide gatherings and sharing sessions work, and suggests changes to serve the Fellowship better.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "LITERATURE",
+   "duty": "Responds to requests to explore new items, and reviews existing ones for revision or discontinuance.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "LITERATURE",
+   "duty": "Develops new and revised Conference-approved pamphlets and books.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "LITERATURE",
+   "duty": "Oversees the yearly updates to The A.A. Service Manual recommended by the Conference.",
+   "page": "59"
+  },
+  {
+   "side": "trustees",
+   "committee": "NOMINATING",
+   "duty": "Reviews the procedures for selecting candidates.",
+   "page": "60"
+  },
+  {
+   "side": "trustees",
+   "committee": "NOMINATING",
+   "duty": "Reviews for approval all nontrustee director candidates of AAWS and AA Grapevine, and the general service trustees put forward by the two corporate boards.",
+   "page": "60",
+   "bank": true
+  },
+  {
+   "side": "trustees",
+   "committee": "NOMINATING",
+   "duty": "Takes part in the Conference sessions that select regional trustees and trustees-at-large.",
+   "page": "60"
+  },
+  {
+   "side": "trustees",
+   "committee": "PI",
+   "duty": "Oversees the development of the board's policies and projects for telling the world about A.A.",
+   "page": "60"
+  },
+  {
+   "side": "trustees",
+   "committee": "PI",
+   "duty": "Carries out pending Conference Advisory Actions on media outreach.",
+   "page": "60"
+  },
+  {
+   "side": "trustees",
+   "committee": "PI",
+   "duty": "Builds wider understanding of A.A. through the media, outreach meetings, talks to civic groups, films and broadcast announcements.",
+   "page": "60"
+  },
+  {
+   "side": "trustees",
+   "committee": "AUDIT",
+   "duty": "Meets at least once a year with the independent accountants who examine the books of the GSB, AAWS and AA Grapevine, to discuss internal controls.",
+   "page": "60"
+  },
+  {
+   "side": "trustees",
+   "committee": "AUDIT",
+   "duty": "Recommends each year which independent accounting firm the board should engage.",
+   "page": "60"
+  },
+  {
+   "side": "trustees",
+   "committee": "COMPENSATION",
+   "duty": "Meets yearly with outside consultants to check that the affiliates' pay practices, including executive pay, are appropriate.",
+   "page": "60"
+  },
+  {
+   "side": "trustees",
+   "committee": "COMPENSATION",
+   "duty": "Covers pay philosophy and the yearly salary-increase process, though the affiliates' own boards make the actual pay decisions.",
+   "page": "60"
+  },
+  {
+   "side": "trustees",
+   "committee": "COMPLIANCE",
+   "duty": "Reviews and upholds the processes in the board's Code of Conduct and Confidentiality Policy.",
+   "page": "60"
+  },
+  {
+   "side": "trustees",
+   "committee": "COMPLIANCE",
+   "duty": "Is made up of five randomly selected returning trustees, including an alternate, supported by the GSO staff coordinator.",
+   "page": "60"
+  },
+  {
+   "side": "trustees",
+   "committee": "RETIREMENT",
+   "duty": "Administers the staff pension plan and sets its investment policy with the board's investment advisors.",
+   "page": "60"
+  }
+ ]
+}

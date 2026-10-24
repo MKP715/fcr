@@ -1,0 +1,294 @@
+{
+ "meta": {
+  "about": "Learn timelines (assets/js/view-learn.js). 'founding': how authority passed from the founders to the groups, 1935-1962 (Learn > founding_era); 'founding_chain': the same story in four steps; 'delegate_term': a delegate's two-year term (Learn > delegate), with 'you are here' markers for the panels in play.",
+  "source": "The A.A. Service Manual combined with Twelve Concepts for World Service, 2026-2028 edition (BM-31), printed page numbers; own words. A 'source' names a Final Report where the manual is silent.",
+  "delegate_term_dates": "'from'/'to' = '<year offset>/<MM-DD | start | end>[+-days]'. The offset counts from the year the panel takes office (Panel P: P + 1950); start/end are that year's Conference dates (FCR.conferenceDates). A step without 'from' never carries a marker. 'calendar' = a calendar.json rule id (its next occurrence is linked).",
+  "checked": "2026-10-21: every date, number and page checked against the Service Manual text."
+ },
+ "founding_chain": [
+  {
+   "year": "1937",
+   "label": "The Akron and New York groups authorize the founders",
+   "page": "C-6"
+  },
+  {
+   "year": "1938–1945",
+   "label": "The founders delegate, step by step, to the trustees",
+   "page": "C-6, C-7"
+  },
+  {
+   "year": "1951",
+   "label": "The Conference links the trustees to the groups",
+   "page": "C-4, C-28"
+  },
+  {
+   "year": "1955",
+   "label": "The groups take final authority; the Conference is their voice",
+   "page": "C-3, C-6"
+  }
+ ],
+ "founding": [
+  {
+   "year": 1935,
+   "date": "May",
+   "text": "Dr. Bob and Bill W. meet for the first time. In A.A.'s early years the two co-founders take on its overall leadership themselves.",
+   "page": "2"
+  },
+  {
+   "year": 1937,
+   "text": "Adding up two years' work at Dr. Bob's Akron home, the founders see that wholesale recovery is possible. The Akron and New York groups authorize them to create overall services to carry the message worldwide.",
+   "page": "97, C-6",
+   "node": "concept_authority"
+  },
+  {
+   "year": 1938,
+   "text": "Bill W. looks for trusted nonalcoholic friends, and the Alcoholic Foundation is formed: a small trusteeship of A.A. members and nonalcoholics. At first its trustees handle money matters only.",
+   "page": "C-6",
+   "node": "gsb"
+  },
+  {
+   "year": 1939,
+   "date": "April",
+   "text": "The book Alcoholics Anonymous appears. It was financed by selling shares in a new company, Works Publishing, because A.A. ought to own and publish its own literature.",
+   "page": "98–99"
+  },
+  {
+   "year": 1940,
+   "text": "A year after publication the stock of Works Publishing is turned over to the trustees, so the book is held in trust for the whole Fellowship. The trustees take over managing the office; on money, Bill W. becomes an adviser only.",
+   "page": "100, C-7",
+   "node": "aaws"
+  },
+  {
+   "year": 1941,
+   "date": "March 1",
+   "text": "A Saturday Evening Post article brings 6,000 pleas for help, and membership grows from 2,000 to 8,000 that year. The groups begin sending contributions to the Foundation, completing the trustees' control of world service money.",
+   "page": "101, C-7",
+   "node": "gso_self_support"
+  },
+  {
+   "year": 1944,
+   "date": "June",
+   "text": "Six volunteers found the Grapevine, first mailed to A.A.s in the armed forces. The trustees later take charge of it, as they did of public relations; Bill W. stays on as an adviser.",
+   "page": "80, C-7",
+   "node": "grapevine_inc"
+  },
+  {
+   "year": 1945,
+   "text": "Tradition Two (\"our leaders are but trusted servants; they do not govern\") is written, and the trustees authorize its publication. It begins to be clear that final authority must never rest with a self-appointing, little-known board.",
+   "page": "C-4, C-7"
+  },
+  {
+   "year": 1946,
+   "date": "May",
+   "text": "The Traditions are first published, in their long form, in the Grapevine. Bill W. travels and speaks about them, at first to a mixed reception.",
+   "page": "102",
+   "node": "traditions"
+  },
+  {
+   "year": 1948,
+   "text": "News that Dr. Bob is fatally ill shows that the two founders are almost the only link between the little-known trustees and the groups. Only a representative conference could take their place.",
+   "page": "C-4"
+  },
+  {
+   "year": 1950,
+   "text": "Several thousand members at the Cleveland Convention declare the Twelve Traditions the platform for A.A.'s unity.",
+   "page": "102"
+  },
+  {
+   "year": 1950,
+   "text": "Spurred by Dr. Bob's illness, the trustees authorize him and Bill W. to devise a plan for a General Service Conference. Dr. Bob dies the same year.",
+   "page": "103–104",
+   "node": "conference_charter"
+  },
+  {
+   "year": 1951,
+   "date": "April",
+   "text": "The first General Service Conference meets in New York as an experiment: 37 Panel One delegates inspect the office and finances and advise the trustees. The board had worked since 1938 with no Conference behind it.",
+   "page": "104, 130, C-4, C-28",
+   "node": "conference"
+  },
+  {
+   "year": 1951,
+   "text": "Bill W. writes \"A.A.'s Legacy of Service\" (now Appendix A) and his first draft of the Third Legacy Manual, from which today's Service Manual grew.",
+   "page": "2, 96",
+   "node": "legacy_of_service"
+  },
+  {
+   "year": 1952,
+   "text": "Panel Two is seated, adding 38 delegates. From then on one panel is elected and one retires each year, so the Conference rotates while keeping continuity.",
+   "page": "104, 130",
+   "node": "panels"
+  },
+  {
+   "year": 1954,
+   "text": "The Alcoholic Foundation is renamed the General Service Board of Alcoholics Anonymous. \"Foundation\" suggested charity and big money, and A.A. would now pay its own way.",
+   "page": "105, C-3",
+   "node": "gsb"
+  },
+  {
+   "year": 1955,
+   "date": "July 3",
+   "text": "At the 20th Anniversary Convention in St. Louis the groups take final responsibility for world services. By resolution the Conference becomes guardian of the Traditions and the co-founders' permanent successor, and the groups confirm its charter.",
+   "page": "128, C-3, C-6",
+   "node": "resolution_1955"
+  },
+  {
+   "year": 1957,
+   "date": "April 22",
+   "text": "The General Service Board adopts new bylaws, after the Conference has considered them, to fit its new name and scope.",
+   "page": "134",
+   "node": "gsb_bylaws"
+  },
+  {
+   "year": 1962,
+   "date": "April 26",
+   "text": "The 12th Conference adopts Bill W.'s Twelve Concepts for World Service, which record the \"why\" of the structure. Bill counted them among chores left over from St. Louis as he prepared to withdraw from world service.",
+   "page": "C-I, C-1, C-28",
+   "node": "concepts"
+  }
+ ],
+ "delegate_term": [
+  {
+   "id": "elected",
+   "title": "Elected by the area assembly",
+   "when": "Fall of the year before",
+   "text": "The area's election assembly, held every two years and usually in the fall, elects the delegate, usually by Third Legacy Procedure and often with the area officers, leaving time to prepare for the new panel.",
+   "page": "20, 110",
+   "calendar": "fall-election-assemblies",
+   "from": "-1/09-12",
+   "to": "-1/11-30"
+  },
+  {
+   "id": "dashboard",
+   "title": "On GSO's mailing list and the Conference dashboard",
+   "when": "Right after the election",
+   "text": "Immediately upon election the delegate is put on GSO's mailing list for Conference materials and gets a password to the Conference dashboard, where GSO posts Conference information and messages.",
+   "page": "33",
+   "calendar": "delegate-elect-handoff",
+   "from": "-1/10-01",
+   "to": "-1/12-31"
+  },
+  {
+   "id": "report",
+   "title": "Election report to GSO",
+   "when": "By December 1",
+   "text": "In the manual's sample election-assembly format, the area secretary sends the Conference secretary at GSO a report of the assembly, with the names of those elected, by December 1.",
+   "page": "110",
+   "calendar": "election-results-due",
+   "from": "-1/11-15",
+   "to": "-1/12-01"
+  },
+  {
+   "id": "draw",
+   "title": "Committee drawn by lot",
+   "when": "December",
+   "text": "The Conference coordinator and the chair of the trustees' Committee on the General Service Conference fill the outgoing delegates' committee seats by lot, typically in December. The delegate keeps that committee for both years.",
+   "page": "45",
+   "calendar": "committee-draw",
+   "from": "-1/12-01",
+   "to": "-1/12-31"
+  },
+  {
+   "id": "office",
+   "title": "Takes office",
+   "when": "January 1",
+   "text": "Those elected usually take office January 1, for one term of two consecutive years; a single term is strongly recommended. The outgoing panel has rotated off.",
+   "page": "110, 35",
+   "calendar": "panel-takes-office",
+   "from": "0/01-01",
+   "to": "0/02-14"
+  },
+  {
+   "id": "background",
+   "title": "Background material arrives",
+   "when": "Weeks before the Conference",
+   "text": "Background on every agenda item comes digitally or by mail well before the Conference, in English, French and Spanish. Much of it arrives through the dashboard; organizing it eases the months before the Conference.",
+   "page": "45, 35",
+   "calendar": "background-posted",
+   "from": "0/02-15",
+   "to": "0/02-25"
+  },
+  {
+   "id": "precon",
+   "title": "Pre-Conference sessions",
+   "when": "Before the Conference",
+   "text": "Areas, districts and groups study the agenda in pre-Conference sessions and give the delegate their group conscience. Past delegates, regional trustees, GSO staff and a service sponsor help a new delegate prepare.",
+   "page": "33, 35",
+   "calendar": "pre-conference-sessions",
+   "from": "0/02-20",
+   "to": "0/start-1"
+  },
+  {
+   "id": "regional",
+   "title": "Regional delegates' meeting",
+   "when": "Before the Conference (many regions)",
+   "text": "Several regions hold an annual meeting of past and current delegates and their alternates, some a full weekend. Its main purpose is to help new delegates prepare for the Conference.",
+   "page": "30",
+   "calendar": "swrda",
+   "calendar_label": "Southwest: SWRDA"
+  },
+  {
+   "id": "conference",
+   "title": "The first Conference",
+   "when": "Usually April, in New York",
+   "text": "A full week, often 9 a.m. to 9 p.m. or later. Each committee meets twice early in the week, and at its last meeting elects next year's chair and alternate. Delegates serve primarily as world servants of A.A. as a whole.",
+   "page": "36, 45, 39",
+   "calendar": "conference",
+   "from": "0/start",
+   "to": "0/end"
+  },
+  {
+   "id": "reportback",
+   "title": "Report-backs",
+   "when": "The weeks and months after",
+   "text": "Reporting back to groups, districts and the area is a vital part of the job: at assemblies and district meetings, on group visits, or in print and anonymity-protected digital form. Areas are asked to cover the travel.",
+   "page": "37, 36",
+   "calendar": "report-back-season",
+   "from": "0/end+1",
+   "to": "0/end+120"
+  },
+  {
+   "id": "between",
+   "title": "Between Conferences",
+   "when": "The rest of year one",
+   "text": "Conference work goes on all year: at least two virtual all-Conference sharing sessions between Conferences, and next year's committee chairs meet their trustees' committee at a board weekend (January in the manual; October 2026 for the 77th Conference's chairs).",
+   "page": "33, 45",
+   "source": "2026 Final Report, pp. 11, 42, 49",
+   "calendar": "gsb-q4",
+   "calendar_label": "Fall board weekend",
+   "from": "0/end+121",
+   "to": "0/12-31"
+  },
+  {
+   "id": "year_two",
+   "title": "Year two: the second Conference",
+   "when": "Year two",
+   "text": "The same committee, now as an experienced member. Committee chairs come from first-year members and serve until the end of the next Conference, so a delegate elected chair leads the committee in year two. Then a second round of report-backs.",
+   "page": "45",
+   "source": "2017–2026 Final Report rosters; 2025 Final Report, p. 37",
+   "calendar": "conference",
+   "from": "1/01-01",
+   "to": "1/09-30"
+  },
+  {
+   "id": "brief",
+   "title": "Brief the delegate-elect",
+   "when": "Late in year two",
+   "text": "Late in year two the delegate works with the newly elected delegate to pass along a basic knowledge of Conference proceedings.",
+   "page": "34",
+   "calendar": "delegate-elect-handoff",
+   "from": "1/10-01",
+   "to": "1/12-31"
+  },
+  {
+   "id": "rotate",
+   "title": "Rotates off",
+   "when": "December 31 of year two",
+   "text": "The term ends and the next panel takes office. Rotation keeps a delegate from succeeding themselves or returning later as delegate. A past delegate may stand for trustee one year after their last Conference, and serve as an ACM one year after rotation.",
+   "page": "30, 61, 63",
+   "calendar": "panel-takes-office",
+   "from": "2/01-01",
+   "to": "2/end"
+  }
+ ]
+}

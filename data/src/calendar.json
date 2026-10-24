@@ -1,0 +1,2583 @@
+{
+ "as_of": "2026-10-20",
+ "about": "What to expect when in the U.S./Canada service year: recurring rules expanded by assets/js/view-calendar.js plus dated events (an explicit event replaces the rule occurrence it names in \"rule\"). Shape documented in view-calendar.js.",
+ "sources": {
+  "service_manual": "The A.A. Service Manual combined with Twelve Concepts for World Service, 2026-2028 edition (BM-31); printed page numbers",
+  "final_reports": "General Service Conference Final Reports 2017-2026; printed page numbers",
+  "aa_board_calendar": "https://www.aa.org/aa-board-calendars (read 2026-10-20)",
+  "aa_forums": "https://www.aa.org/regional-local-and-special-forums (read 2026-10-20)",
+  "neta65": "https://neta65.org/ events and NETA Area Handbook (rev. Nov 2024)",
+  "research": "Calendar audit C1/C2/C3 with verification passes, 2026-10-20 (corrections applied)"
+ },
+ "categories": [
+  {
+   "id": "conference",
+   "label": "Conference"
+  },
+  {
+   "id": "committee",
+   "label": "Committees"
+  },
+  {
+   "id": "board",
+   "label": "Board"
+  },
+  {
+   "id": "deadline",
+   "label": "Deadlines"
+  },
+  {
+   "id": "election",
+   "label": "Elections & rotation"
+  },
+  {
+   "id": "forum",
+   "label": "Forums & region"
+  },
+  {
+   "id": "area",
+   "label": "Area events"
+  },
+  {
+   "id": "publication",
+   "label": "Publications & news"
+  },
+  {
+   "id": "convention",
+   "label": "Conventions"
+  },
+  {
+   "id": "world",
+   "label": "World"
+  },
+  {
+   "id": "observance",
+   "label": "Observances"
+  }
+ ],
+ "trustee_rotation": {
+  "note": "Regional trustees serve four one-year terms; each region elects every four years (Service Manual p.54). Trustees-at-large: U.S. and Canada staggered (four-year terms).",
+  "regions_by_year_mod4": {
+   "2": [
+    "ECAN",
+    "PA"
+   ],
+   "3": [
+    "NE",
+    "SW"
+   ],
+   "0": [
+    "WCAN",
+    "WC"
+   ],
+   "1": [
+    "SE",
+    "EC"
+   ]
+  },
+  "tal": {
+   "U.S.": 2025,
+   "Canada": 2027
+  }
+ },
+ "conference_dates": {
+  "2017": {
+   "start": "2017-04-23",
+   "end": "2017-04-29",
+   "place": "Hilton Westchester, Rye Brook, NY",
+   "source": "2017 Final Report (cover)"
+  },
+  "2018": {
+   "start": "2018-04-22",
+   "end": "2018-04-28",
+   "place": "Crowne Plaza Times Square, New York",
+   "source": "2018 Final Report (cover)"
+  },
+  "2019": {
+   "start": "2019-05-19",
+   "end": "2019-05-25",
+   "place": "Crowne Plaza Times Square, New York",
+   "source": "2019 Final Report (cover)"
+  },
+  "2020": {
+   "start": "2020-05-16",
+   "end": "2020-05-19",
+   "place": "Virtual"
+  },
+  "2021": {
+   "start": "2021-04-18",
+   "end": "2021-04-24",
+   "place": "Virtual"
+  },
+  "2022": {
+   "start": "2022-04-24",
+   "end": "2022-04-30",
+   "place": "New York Marriott at the Brooklyn Bridge",
+   "source": "2022 Final Report (cover)"
+  },
+  "2023": {
+   "start": "2023-04-23",
+   "end": "2023-04-29",
+   "place": "New York Marriott at the Brooklyn Bridge",
+   "source": "2023 Final Report (cover)"
+  },
+  "2024": {
+   "start": "2024-04-14",
+   "end": "2024-04-20",
+   "place": "New York Marriott at the Brooklyn Bridge",
+   "source": "2024 Final Report (cover)"
+  },
+  "2025": {
+   "start": "2025-04-27",
+   "end": "2025-05-03",
+   "place": "New York Hilton Midtown",
+   "source": "2025 Final Report (cover)"
+  },
+  "2026": {
+   "start": "2026-04-26",
+   "end": "2026-05-02",
+   "place": "New York Hilton Midtown",
+   "source": "2026 Final Report (cover)"
+  },
+  "2027": {
+   "start": "2027-04-11",
+   "end": "2027-04-17",
+   "place": "New York Marriott Marquis",
+   "source": "2025 Final Report p.45, p.85; aa.org event page"
+  },
+  "2028": {
+   "start": "2028-04-23",
+   "end": "2028-04-29",
+   "place": "New York Marriott Marquis",
+   "source": "2025 Final Report p.45, p.85; aa.org board calendar"
+  },
+  "2029": {
+   "start": "2029-04-15",
+   "end": "2029-04-21",
+   "place": "New York Marriott Marquis",
+   "source": "2026 Final Report p.48, p.84"
+  },
+  "2030": {
+   "start": "2030-04-28",
+   "end": "2030-05-04",
+   "approx": true,
+   "note": "first choice; alternative May 5-11, 2030",
+   "source": "2026 Final Report p.48 (date preferences)"
+  }
+ },
+ "rules": [
+  {
+   "id": "panel-takes-office",
+   "title": "Panel {P} delegates take office; Panel {P-2} has rotated off",
+   "category": "election",
+   "scope": "all",
+   "rule": {
+    "type": "fixed",
+    "month": 1,
+    "day": 1
+   },
+   "years": "all",
+   "why": "Delegates elected at the fall assemblies (and usually the area officers elected with them) start their two-year term. Panel P serves Jan 1 of P+1950 to Dec 31 of P+1951, so the outgoing panel served until Dec 31. GSR and DCM terms often line up with the panel.",
+   "what_to_do": "Until today the incoming delegate is a delegate-elect; GSO does not publish an incoming panel before rotation. New GSRs: this is a good moment to start with the Service Manual. In many areas new GSRs and DCMs (and alternate DCMs) also start two-year terms with the panel (pp. 8, 16). If not done yet: the group sends the district, area, intergroup/central office and GSO the new GSR's information (p. 12); read A.A.'s Legacy of Service (Appendix A) and the manual (p. 9); find a service sponsor (pp. 10, 17). A new DCM's first task is usually the first district meeting (p. 17).",
+   "source": "Service Manual 2026-2028 p.110 (“All those elected usually take office January 1”); p.8 (GSR/DCM terms); 2024 Final Report p.71 (delegates serve until Dec 31; incoming panel not published before rotation); pp. 9, 10, 12, 16, 17 (new GSRs and DCMs)",
+   "confidence": "high",
+   "approx": false
+  },
+  {
+   "id": "fall-election-assemblies",
+   "title": "Election assemblies: half the areas elect Panel {P+1} delegates",
+   "category": "election",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "09-12",
+    "to": "11-30"
+   },
+   "years": "all",
+   "why": "About half the areas elect each fall by Third Legacy Procedure. In even years the odd-panel areas (including Area 65) elect; in odd years the even-panel areas. This creates the rotating panels and keeps continuity at the Conference.",
+   "what_to_do": "Results go to GSO by Dec 1 and feed the December committee draw. Watch area websites for delegate-elects.",
+   "source": "Service Manual 2026-2028 p.20 (“usually scheduled in the fall”), p.110, p.121, p.124-125, Appendix M p.130 (Area 65 elects odd panels)",
+   "confidence": "high",
+   "approx": true
+  },
+  {
+   "id": "election-results-due",
+   "title": "Area election results due at GSO",
+   "category": "deadline",
+   "scope": "all",
+   "rule": {
+    "type": "fixed",
+    "month": 12,
+    "day": 1
+   },
+   "years": "all",
+   "why": "The sample election-assembly format asks the area secretary to send the names of the delegate, officers, committee members and GSRs present to the Conference secretary at GSO by December 1 (a suggested date: the formats are examples).",
+   "what_to_do": "After this date GSO knows the new panel and the committee draw can follow.",
+   "source": "Service Manual 2026-2028 Appendix D, election assembly step 14, p.110",
+   "confidence": "high",
+   "approx": false
+  },
+  {
+   "id": "delegate-elect-handoff",
+   "title": "Delegates-elect (Panel {P+1}) get Conference dashboard access; outgoing delegates brief them",
+   "category": "election",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "10-01",
+    "to": "12-31"
+   },
+   "years": "all",
+   "why": "On election each delegate goes on GSO's Conference mailing list and gets a dashboard password. Late in year two, outgoing delegates pass along a basic knowledge of Conference proceedings and send GSO the new area officers' contact details.",
+   "what_to_do": "",
+   "source": "Service Manual 2026-2028 p.32, p.33, p.34",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "committee-draw",
+   "title": "Conference committees drawn by lot for Panel {P+1}",
+   "category": "committee",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "12-01",
+    "to": "12-31",
+    "label": "date not published"
+   },
+   "years": "all",
+   "why": "The Conference coordinator and the chair of the trustees’ Committee on the General Service Conference assign the first-year delegates by lot to the seats of the outgoing panel, with custom software and prioritized criteria. A delegate keeps the committee for both years; some also get Archives or IC/RF.",
+   "what_to_do": "Compare the real draw with the Predict page. Delegates usually hear in December or January.",
+   "source": "Service Manual 2026-2028 p.45 (“typically held in December of each year”), p.48; 2024 Final Report p.71",
+   "confidence": "high",
+   "approx": true
+  },
+  {
+   "id": "trustee-resume-deadline",
+   "title": "Résumés due: {RT} candidates",
+   "category": "deadline",
+   "scope": "all",
+   "rule": {
+    "type": "fixed",
+    "month": 1,
+    "day": 1
+   },
+   "years": "all",
+   "why": "Regional trustee and trustee-at-large candidates must have their résumés at GSO (electronic or postmarked) by January 1 before the April Conference that elects them. Late résumés are returned; an area whose nominee withdraws after the deadline may not submit another.",
+   "what_to_do": "Areas pick candidates at their fall assemblies; the delegate sends the name to the trustees’ Nominating Committee.",
+   "source": "Service Manual 2026-2028 p.54 (election-year table), p.55",
+   "confidence": "high",
+   "approx": false
+  },
+  {
+   "id": "trustee-elections",
+   "title": "Trustee nominees chosen at the Conference: {RT}",
+   "category": "election",
+   "scope": "all",
+   "rule": {
+    "type": "relative_to_conference",
+    "anchor": "start",
+    "offset": 3,
+    "days": 1
+   },
+   "years": "all",
+   "why": "Nominating sessions during Conference week (recently on the Wednesday afternoon) pick one nominee per opening by Third Legacy Procedure. For a regional trustee the voters are the region’s delegates plus an equal number drawn half from the Conference Committee on Trustees and half from the trustees’ Nominating Committee. The trustee and officer slates are presented for disapproval, if any.",
+   "what_to_do": "The region’s delegates vote, so ask your delegate about the candidates beforehand.",
+   "source": "Service Manual 2026-2028 p.50, p.55-58; 2023 Final Report p.65 (random selection of extra voters); Wednesday elections: 2019 Final Report p.4, 2022 Final Report p.5, 2025 Final Report p.4",
+   "confidence": "high",
+   "approx": true
+  },
+  {
+   "id": "tal-caucus",
+   "title": "Trustee-at-large regional caucuses (regional lunch)",
+   "category": "election",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "Conference week, before the trustee-at-large nominating session (trustee-at-large election years only)"
+   },
+   "years": {
+    "every": 2,
+    "from": 2027
+   },
+   "why": "Before the trustee-at-large nominating session, each region's delegates caucus, generally at a regional lunch, and cut the list to one name per U.S. region or two per Canadian region (at most 6 U.S. or 4 Canada candidates). Canada elects in 2027 and 2031, the U.S. in 2029 and 2033 (staggered seats). In U.S. years the Southwest delegates, Area 65's included, choose the region's one name. The manual gives no day.",
+   "source": "Service Manual 2026-2028 p.57",
+   "confidence": "medium",
+   "what_to_do": ""
+  },
+  {
+   "id": "trustee-openings-notice",
+   "title": "Next year’s trustee openings announced ({RT+1})",
+   "category": "election",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "05-20",
+    "to": "06-15"
+   },
+   "years": "all",
+   "why": "GSO tells delegates and area officers in the regions due to elect at the next Conference (a May mailing), posts the notice on aa.org (June 11, 2025; June 2, 2026) and runs it in Box 4-5-9. The Class A (nonalcoholic) trustee notice comes out about the same time (May 22, 2025; June 1, 2026).",
+   "what_to_do": "If your region elects next year, areas choose candidates at their fall assemblies.",
+   "source": "Service Manual 2026-2028 p.54; aa.org news and announcements (June 11, 2025; June 2, 2026)",
+   "confidence": "high",
+   "approx": true,
+   "url": "https://www.aa.org/news-and-announcements"
+  },
+  {
+   "id": "class-a-deadline",
+   "title": "Class A (nonalcoholic) trustee résumés due (when a seat opens)",
+   "category": "deadline",
+   "scope": "all",
+   "rule": {
+    "type": "fixed",
+    "month": 8,
+    "day": 31
+   },
+   "years": [2024, 2025, 2026, 2027, 2029, 2030, 2031],
+   "why": "When a Class A seat opens at the next Conference, résumés are due August 31 (2024, 2025 and 2026). Finalists are interviewed at the winter board weekend and elected at the annual meeting after the Conference. The date applies only when aa.org announces a Class A opening (notices May 22, 2025 and June 1, 2026). Expected Aug 31, 2027 for Kerry M.'s seat at the 78th GSC (not yet announced). Listed only in years before a seat is due to rotate (2028, 2030, 2031 and 2032 Conferences); no seat rotates after the 79th GSC, so 2028 applies only if a vacancy arises or Tim M. does not serve a second term.",
+   "what_to_do": "Members may suggest professionals who are friends of A.A. Check aa.org that a Class A seat is open this cycle.",
+   "source": "Procedure No. 4 (aa.org Class A submission reminder, Aug 2025); aa.org notices May 22, 2025 and June 1, 2026; 2026 Final Report p.107",
+   "confidence": "medium",
+   "approx": true,
+   "url": "https://www.aa.org/news-and-announcements"
+  },
+  {
+   "id": "gso-staff-rotation",
+   "title": "GSO staff desk rotation (expected)",
+   "category": "election",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "08-20",
+    "to": "09-30"
+   },
+   "years": "odd",
+   "why": "Most GSO staff change assignments about every two years, so the staff secretary of a Conference committee may change. Recent rotations: Aug 23, 2022 and September 2025 (when a Self-Support/Finance desk was added). The cadence is not strict.",
+   "what_to_do": "Check the Staff page after the next Final Report.",
+   "source": "Service Manual 2026-2028 p.C-71; 2023 Final Report p.94; 2026 Final Report p.66",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "gsb-q1",
+   "title": "General Service Board weekend (1st quarterly)",
+   "category": "board",
+   "scope": "all",
+   "rule": {
+    "type": "fifth_monday_after_quarter",
+    "quarter_end_month": 12,
+    "start_offset": -3
+   },
+   "years": "all",
+   "why": "Trustees’ committees meet and the board holds a General Sharing Session. The year’s AAWS and Grapevine budgets come to this first meeting after January 1; Class A finalists are interviewed; the board approves the workload plan, and the final Conference agenda follows.",
+   "what_to_do": "Watch for the final agenda and then the background material.",
+   "source": "GSB bylaws, Service Manual 2026-2028 p.140 (“fifth Monday following the close of a calendar quarter”); p.151, p.160 (budgets); p.61 (General Sharing Session); 2024 Final Report p.70",
+   "confidence": "medium",
+   "approx": true,
+   "projected": true
+  },
+  {
+   "id": "gsb-annual-meeting",
+   "title": "Board annual meeting: new trustees elected; closing breakfast",
+   "category": "board",
+   "scope": "all",
+   "rule": {
+    "type": "relative_to_conference",
+    "anchor": "end",
+    "offset": 0,
+    "days": 1
+   },
+   "years": "all",
+   "why": "The 2nd quarterly board meeting is the Saturday right after the Conference closes. It adjourns for the annual meeting of members, which elects the trustees (including those chosen in Conference week) and receives the annual report; the board then elects its officers. AAWS and Grapevine elect their directors at their own annual meetings, and rotating trustees say farewell at the closing breakfast.",
+   "what_to_do": "Trustee and director rosters change on this date, not in the summer.",
+   "source": "Service Manual 2026-2028 p.40 (closing breakfast), p.137, p.139-140, p.144, p.153",
+   "confidence": "high",
+   "approx": false
+  },
+  {
+   "id": "gsb-q3",
+   "title": "General Service Board weekend (3rd quarterly)",
+   "category": "board",
+   "scope": "all",
+   "rule": {
+    "type": "fifth_monday_after_quarter",
+    "quarter_end_month": 6,
+    "start_offset": -3
+   },
+   "years": "all",
+   "why": "The board approves the chair’s appointments to trustees’ committees, so new trustees and appointed committee members start here; trustees’ committees review mid-year reforecasts and begin work on the Conference’s Advisory Actions.",
+   "what_to_do": "A proposal status grid follows within about 3 weeks; the Quarterly Report 2-4 months later.",
+   "source": "GSB bylaws, Service Manual 2026-2028 p.140; 2021 Final Report p.49; 2026 Final Report p.97, p.108",
+   "confidence": "medium",
+   "approx": true,
+   "projected": true
+  },
+  {
+   "id": "gsb-q4",
+   "title": "General Service Board weekend (4th quarterly)",
+   "category": "board",
+   "scope": "all",
+   "rule": {
+    "type": "fifth_monday_after_quarter",
+    "quarter_end_month": 9,
+    "start_offset": -3
+   },
+   "years": "all",
+   "why": "Trustees’ committees decide which proposed agenda items go to the next Conference. From October 2026 the incoming Conference’s committee chairs attend this weekend instead of the January one (the Service Manual still says January).",
+   "what_to_do": "Watch for the preliminary Conference agenda in November.",
+   "source": "GSB bylaws, Service Manual 2026-2028 p.140; 2026 Final Report p.49, p.72, p.85; 2024 Final Report p.70",
+   "confidence": "medium",
+   "approx": true,
+   "projected": true
+  },
+  {
+   "id": "corporate-boards-before-gsb",
+   "title": "AAWS and Grapevine board meetings (week before each quarterly GSB meeting)",
+   "category": "board",
+   "scope": "all",
+   "rule": {
+    "type": "after_rule",
+    "rule": [
+     "gsb-q1",
+     "gsb-q3",
+     "gsb-q4"
+    ],
+    "anchor": "start",
+    "offset": -1,
+    "days": 1
+   },
+   "years": "all",
+   "why": "The AAWS and Grapevine bylaws put a regular board meeting in the week before each quarterly GSB meeting (AAWS often meets the Thursday before). AAWS meets up to eight times a year; Grapevine quarterly plus four planning meetings.",
+   "what_to_do": "Literature prices and publishing news usually follow; see AAWS Highlights and the Quarterly Report.",
+   "source": "Service Manual 2026-2028 p.66-67, p.147, p.155",
+   "confidence": "medium",
+   "approx": true,
+   "projected": true
+  },
+  {
+   "id": "corporate-boards-before-gsb-q2",
+   "title": "AAWS and Grapevine regular board meetings (week before the post-Conference board meeting)",
+   "category": "board",
+   "scope": "all",
+   "rule": {
+    "type": "relative_to_conference",
+    "anchor": "end",
+    "offset": -6,
+    "days": 6
+   },
+   "years": "all",
+   "why": "Both corporate bylaws require a regular board meeting in the week before every quarterly GSB meeting, including the 2nd quarterly meeting held the Saturday after the Conference.",
+   "what_to_do": "Check aa.org's board calendar for the actual day. Each board may postpone, defer or omit a regular meeting by majority agreement (pp. 147, 155), so this may not happen every year.",
+   "source": "Service Manual 2026-2028 p.140, p.147, p.155",
+   "confidence": "low",
+   "approx": true
+  },
+  {
+   "id": "pai-deadline",
+   "title": "Proposed agenda item deadline for the {GSC+1} Conference",
+   "category": "deadline",
+   "scope": "all",
+   "rule": {
+    "type": "fixed",
+    "month": 9,
+    "day": 30,
+    "time": "11:59 pm"
+   },
+   "years": {
+    "every": 1,
+    "from": 2024
+   },
+   "why": "Proposals received by September 30, 11:59 pm go to the next April’s Conference; later ones roll over to the Conference after that. (Under the workload pilot it was Sept 15; a 2024 Advisory Action moved it to no earlier than Sept 30, and the trustees chose Sept 30.)",
+   "what_to_do": "In Area 65 a proposal has to clear the September Fall Assembly first, so start with your group and district in the summer.",
+   "source": "2024 Final Report p.38 (Advisory Action); 2025 Final Report p.85; aa.org proposed agenda item page (“on or before September 30, 2026, 11:59 pm”)",
+   "confidence": "high",
+   "approx": false,
+   "url": "https://www.aa.org/proposed-agenda-item-information"
+  },
+  {
+   "id": "october-feedback-call",
+   "title": "October feedback calls on proposed agenda items",
+   "category": "committee",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "10-01",
+    "to": "10-25"
+   },
+   "years": "all",
+   "why": "After the Sept 30 cutoff, trustees’ committee chairs hear their Conference committees on the proposals before the trustees decide at the fall board weekend; the trustees’ GSC Committee chair meets Agenda, Policy/Admissions and Report and Charter. It replaced the pre-January committee call in the Service Manual (p.49).",
+   "what_to_do": "First-year delegates take part once their committee is drawn.",
+   "source": "2025 Final Report p.85; 2023 Final Report p.66; 2026 Final Report p.41; Service Manual 2026-2028 p.49, p.63",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "preliminary-agenda",
+   "title": "Preliminary agenda for the {GSC+1} Conference",
+   "category": "conference",
+   "scope": "all",
+   "rule": {
+    "type": "after_rule",
+    "rule": "gsb-q4",
+    "anchor": "end",
+    "offset": 3,
+    "days": 25
+   },
+   "years": "all",
+   "why": "The list of proposals forwarded, ongoing and standing items, released “as of November” after the fall board weekend.",
+   "what_to_do": "Ask your delegate or area for it: it is the first look at next April’s topics.",
+   "source": "2024 Final Report p.70 (Conference communications plan); 75th GSC preliminary agenda (“as of November 2024”)",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "pai-status-grid",
+   "title": "Proposal status grid sent to Conference members",
+   "category": "committee",
+   "scope": "all",
+   "rule": {
+    "type": "after_rule",
+    "rule": [
+     "gsb-q1",
+     "gsb-q3",
+     "gsb-q4"
+    ],
+    "anchor": "end",
+    "offset": 3,
+    "days": 18
+   },
+   "years": "all",
+   "why": "Under a 2025 Advisory Action GSO sends Conference members a grid of every proposal and its status after each board weekend: Aug 20, 2025, Nov 22, 2025 and Feb 6, 2026.",
+   "what_to_do": "Delegates often share it at area committee meetings.",
+   "source": "2026 Final Report p.84",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "final-agenda",
+   "title": "Final agenda for the {GSC} Conference",
+   "category": "conference",
+   "scope": "all",
+   "rule": {
+    "type": "after_rule",
+    "rule": "gsb-q1",
+    "anchor": "end",
+    "offset": 3,
+    "days": 18
+   },
+   "years": "all",
+   "why": "The final list of agenda items, with the committee workload distribution, comes out “as of February” after the winter board weekend.",
+   "what_to_do": "Area 65 districts start preparing for the March mock committees.",
+   "source": "2024 Final Report p.70; 76th GSC final agenda list (“as of February 2026”)",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "background-posted",
+   "title": "Background material for the {GSC} Conference reaches members",
+   "category": "conference",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "02-15",
+    "to": "02-25"
+   },
+   "years": "all",
+   "why": "Background on every agenda item goes out in English, French and Spanish at the same time: Feb 17-21, 2023; Feb 16-23, 2024; Feb 20-24, 2025; Feb 17-20, 2026 (even for the early Apr 14, 2024 Conference). A list of proposals not forwarded follows 1-2 weeks later.",
+   "what_to_do": "GSRs and districts study it before the Spring Assembly mock committees.",
+   "source": "Service Manual 2026-2028 p.45; 2022 Final Report p.78 (simultaneous release); 2024 Final Report p.70; 2025 Final Report p.85; 2026 Final Report p.83",
+   "confidence": "high",
+   "approx": true
+  },
+  {
+   "id": "pre-conference-sessions",
+   "title": "Pre-Conference sessions on the {GSC} agenda",
+   "category": "conference",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "02-20",
+    "to": "04-10",
+    "label": "between background material and the Conference"
+   },
+   "years": "all",
+   "why": "Areas, districts and groups study the Conference agenda and tell the delegate their group conscience before the Conference.",
+   "what_to_do": "Read the background on your delegate's committee and bring your group's conscience to the district or area session.",
+   "source": "Service Manual 2026-2028 p.22, p.33; background timing: 2026 Final Report p.83",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "conference-manual",
+   "title": "Conference Manual and pre-Conference video meetings",
+   "category": "conference",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "03-12",
+    "to": "04-05"
+   },
+   "years": "all",
+   "why": "The Conference Manual reaches members; joint trustees’/Conference committee meetings and other sessions now meet by video before Conference week (2024 Manual Mar 14-23).",
+   "what_to_do": "A sign of how much Conference work happens before the delegate travels.",
+   "source": "2024 Final Report p.38, p.70; 2026 Final Report p.42",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "pa-precon-video",
+   "title": "Policy/Admissions pre-Conference video meeting",
+   "category": "conference",
+   "scope": "all",
+   "rule": {
+    "type": "relative_to_conference",
+    "anchor": "start",
+    "offset": -14,
+    "days": 10
+   },
+   "years": "all",
+   "why": "About 1-2 weeks before the Conference, Policy/Admissions meets by video to admit observers and seat temporary replacements (an alternate when a delegate cannot attend): Apr 9, 2024 and Apr 13, 2025.",
+   "what_to_do": "If your delegate cannot go, this is where the alternate is seated.",
+   "source": "2024 Final Report p.38 (Advisory Action); 2023 Final Report Advisory Actions",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "conference",
+   "title": "The {GSC} General Service Conference",
+   "category": "conference",
+   "scope": "all",
+   "rule": {
+    "type": "conference"
+   },
+   "years": "all",
+   "why": "The Conference meets for one week, usually in April, in New York. Committees meet jointly with their trustees’ committees early in the week, then deliberate; the last days are floor discussion and votes (Advisory Actions need two-thirds). A delegates-only meeting is often held before opening day.",
+   "what_to_do": "Follow your delegate’s reports; the area’s sense from the spring mock committees goes with them.",
+   "source": "Service Manual 2026-2028 p.40, p.45, p.63, p.92, p.97, p.104; 2025 Final Report p.45, p.85; 2026 Final Report p.48",
+   "confidence": "high",
+   "approx": false
+  },
+  {
+   "id": "chairs-elected",
+   "title": "Committees elect {Y+1} chairs from first-year members (Panel {P})",
+   "category": "committee",
+   "scope": "all",
+   "rule": {
+    "type": "relative_to_conference",
+    "anchor": "start",
+    "offset": 3,
+    "days": 2
+   },
+   "years": "all",
+   "why": "Each committee elects next year’s chair and alternate chair by plurality at its last meeting, always from its first-year members (260 of 260 since 2017); primary committees first, then Archives and IC/RF. Next year’s Delegate Chair is drawn from the hat at the delegates-only dinner among first-year delegates not elected chair or alternate.",
+   "what_to_do": "A first-year delegate has about a 1 in 4 or 5 chance of chairing their committee next year.",
+   "source": "Service Manual 2026-2028 p.45; 2024 Final Report p.46; 2025 Final Report p.4; 2026 Final Report p.4",
+   "confidence": "high",
+   "approx": true
+  },
+  {
+   "id": "chairs-orientation",
+   "title": "Conference committee chairs’ orientation",
+   "category": "committee",
+   "scope": "all",
+   "rule": {
+    "type": "relative_to_conference",
+    "anchor": "end",
+    "offset": 18,
+    "days": 21
+   },
+   "years": "all",
+   "why": "An orientation for the newly elected committee chairs shortly after the Conference (May 28, 2025); the trustees’ committee asked for it to be early.",
+   "what_to_do": "For first-year delegates just elected chair or alternate.",
+   "source": "2026 Final Report p.83; 2024 Final Report p.71; 2025 Final Report p.9",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "final-report",
+   "title": "{GSC} Conference Final Report posted",
+   "category": "publication",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "08-01",
+    "to": "10-15"
+   },
+   "years": "all",
+   "why": "The complete record of the Conference with rosters of delegates, committees, trustees and staff. The 76th GSC report was posted Sept 4, 2026; print codes show July-October in 2017-2026. A 2026 Advisory Action had AAWS offer the 2026 report in print for purchase; if sales do not cover production costs, there will be no print version for the 2027 Conference.",
+   "what_to_do": "This app’s main source: load the new year when it appears.",
+   "source": "Service Manual 2026-2028 p.43 (“summer”); aa.org news (Sept 4, 2026); report print codes 2017-2026; 2026 Final Report p.38",
+   "confidence": "high",
+   "approx": true,
+   "url": "https://www.aa.org/news-and-announcements"
+  },
+  {
+   "id": "report-back-season",
+   "title": "Delegates' Conference report-backs",
+   "category": "conference",
+   "scope": "all",
+   "rule": {
+    "type": "after_rule",
+    "rule": "conference",
+    "anchor": "end",
+    "offset": 1,
+    "days": 120,
+    "label": "the weeks and months after the Conference"
+   },
+   "years": "all",
+   "why": "Reporting back to groups, districts and the area is a vital part of every delegate's job. Delegates report at assemblies and district meetings, visit groups where they can, and may offer reports to intergroup/central offices. Areas are asked to cover the delegate's report-back travel.",
+   "what_to_do": "Ask your DCM when the delegate reports in your district, and ask for a printed or digital copy to pass on to your group.",
+   "source": "Service Manual 2026-2028 p.36 (expenses), p.37 (Reporting Back)",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "box459",
+   "title": "Box 4-5-9 {label} issue",
+   "category": "publication",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "windows": [
+     {
+      "from": "03-01",
+      "to": "03-25",
+      "label": "Winter"
+     },
+     {
+      "from": "05-25",
+      "to": "06-30",
+      "label": "Spring"
+     },
+     {
+      "from": "08-10",
+      "to": "10-10",
+      "label": "Summer (Conference)"
+     },
+     {
+      "from": "11-20",
+      "to": "12-20",
+      "label": "Fall"
+     }
+    ]
+   },
+   "years": "all",
+   "why": "GSO’s quarterly news bulletin, online only since 2024, posted later than its season name (Winter Mar 6, 2026; Spring Jun 24, 2026; Summer Aug 18, 2026; Fall Dec 11, 2025). The summer issue carries the Conference summary; trustee openings and forum news appear here.",
+   "what_to_do": "The standard source for GSR reports.",
+   "source": "Service Manual 2026-2028 p.11, p.76, p.91; aa.org news and announcements (posting dates 2025-2026)",
+   "confidence": "medium",
+   "approx": true,
+   "url": "https://www.aa.org/newsletters"
+  },
+  {
+   "id": "anonymity-letter",
+   "title": "Annual Anonymity Letter to the Media",
+   "category": "publication",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "01-15",
+    "to": "02-28"
+   },
+   "years": "all",
+   "why": "The Public Information desk sends the annual anonymity letter to more than 30,000 media outlets (January in 2021-2023, February in 2024-2026).",
+   "what_to_do": "Local PI committees often re-use it.",
+   "source": "Service Manual 2026-2028 p.72; 2021 Final Report p.54; 2024 Final Report p.107; 2026 Final Report p.115",
+   "confidence": "high",
+   "approx": true
+  },
+  {
+   "id": "service-manual-edition",
+   "title": "New edition of The A.A. Service Manual",
+   "category": "publication",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "09-01",
+    "to": "12-31"
+   },
+   "years": "even",
+   "why": "Updated every two years with Conference actions (the 2026-2028 edition is marked “Revised: September 2026”; the 2024-2026 edition was in print Dec 20, 2024).",
+   "what_to_do": "Page numbers in this app follow the 2026-2028 printing; the next edition will shift them.",
+   "source": "Service Manual 2026-2028 p.II, p.71; aa.org news (Dec 20, 2024; Feb 13, 2025)",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "wsm",
+   "title": "World Service Meeting",
+   "category": "world",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "10-01",
+    "to": "10-31"
+   },
+   "years": "even",
+   "why": "Delegates from general service structures worldwide meet every two years, alternating New York and another country; the two trustees-at-large represent U.S./Canada. It shares experience and sets no policy.",
+   "what_to_do": "Its final report is posted on aa.org around the following February.",
+   "source": "Service Manual 2026-2028 p.57, p.62, p.72, p.124; 2025 Final Report p.28-29",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "redela",
+   "title": "REDELA (Meeting of the Americas)",
+   "category": "world",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "09-25",
+    "to": "10-31"
+   },
+   "years": "odd",
+   "why": "The zonal meeting of the Americas in the years without a WSM, usually late September or early October; the trustees-at-large attend.",
+   "what_to_do": "Reported by the trustees-at-large in the next Final Report.",
+   "source": "Service Manual 2026-2028 p.57, p.62; 2021 Final Report p.101; 2026 Final Report p.31-32",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "international-convention",
+   "title": "A.A. International Convention",
+   "category": "convention",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "06-20",
+    "to": "07-10"
+   },
+   "years": {
+    "every": 5,
+    "from": 2025
+   },
+   "why": "Every five years, on a June or July weekend; about 50,000 expected (Vancouver 2025: 33,731). Registration opens about 10 months ahead.",
+   "what_to_do": "Plan travel early; hotel blocks fill fast.",
+   "source": "Service Manual 2026-2028 p.39, p.72; 2026 Final Report p.95-96",
+   "confidence": "high",
+   "approx": true
+  },
+  {
+   "id": "regional-forums-even",
+   "title": "Regional Forums: Western Canada, Eastern Canada, Pacific, Southeast",
+   "category": "forum",
+   "scope": "regions",
+   "rule": {
+    "type": "month_window",
+    "from": "05-01",
+    "to": "12-10",
+    "label": "dates not posted yet"
+   },
+   "years": "even",
+   "why": "Each region has a Forum every two years. Even years: Western Canada, Eastern Canada, Pacific and Southeast (every even year since 2016). Forums are free weekends of sharing with trustees, directors and GSO/Grapevine staff.",
+   "what_to_do": "Any member may attend any region’s Forum; dates appear on aa.org about a year ahead.",
+   "source": "Service Manual 2026-2028 p.62, p.73, p.93; 2026 Final Report p.98",
+   "confidence": "high",
+   "approx": true,
+   "url": "https://www.aa.org/regional-local-and-special-forums"
+  },
+  {
+   "id": "regional-forums-odd",
+   "title": "Regional Forums: Northeast, East Central, West Central, Southwest",
+   "category": "forum",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "05-01",
+    "to": "12-10",
+    "label": "dates not posted yet"
+   },
+   "years": "odd",
+   "why": "Odd years: Northeast, East Central, West Central and Southwest (every odd year since 2017).",
+   "what_to_do": "The Southwest Forum is Area 65’s own; dates appear on aa.org about a year ahead.",
+   "source": "Service Manual 2026-2028 p.62, p.73, p.93; 2026 Final Report p.98",
+   "confidence": "high",
+   "approx": true,
+   "url": "https://www.aa.org/regional-local-and-special-forums"
+  },
+  {
+   "id": "sw-forum",
+   "title": "Southwest Regional Forum",
+   "category": "forum",
+   "scope": "southwest",
+   "rule": {
+    "type": "month_window",
+    "from": "09-15",
+    "to": "11-20"
+   },
+   "years": "odd",
+   "why": "The board’s visit to the Southwest region in odd years: San Antonio 2017, Houston 2019, virtual 2021, El Paso 2023, Albuquerque 2025, Kansas City 2027. Free; the Southwest regional trustee moderates.",
+   "what_to_do": "The best chance to meet trustees and GSO staff without going to New York.",
+   "source": "2026 Final Report p.98; 2025 Final Report p.102; earlier Final Reports (IC/RF reports)",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "swrda",
+   "title": "Southwest Regional Delegates Assembly (SWRDA), Oklahoma City",
+   "category": "forum",
+   "scope": "southwest",
+   "rule": {
+    "type": "nth_weekday",
+    "month": 3,
+    "weekday": 5,
+    "n": 2,
+    "days": 3
+   },
+   "years": "all",
+   "why": "An annual meeting of past delegates, past regional trustees, the Southwest trustee and the serving delegates and alternates, run by the region (hosted by Area 57). It works as a mock Conference to prepare the delegates (Mar 13-15, 2026; Mar 12-14, 2027).",
+   "what_to_do": "The new delegate’s first regional gathering, about a month before their first Conference.",
+   "source": "2021 Final Report p.89 (“Every March, Area 57 hosts …”); NETA Area Handbook p.12-13; Area 68 service calendar (2026-2027 dates)",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "swraasa",
+   "title": "Southwest Regional A.A. Service Assembly (SWRAASA)",
+   "category": "forum",
+   "scope": "southwest",
+   "rule": {
+    "type": "nth_weekday",
+    "month": 10,
+    "weekday": 6,
+    "n": 2,
+    "offset": -1,
+    "days": 3
+   },
+   "years": "even",
+   "why": "The region’s own service weekend in even years, the second weekend of October (Friday-Sunday around the second Saturday), rotating among the 11 Southwest areas (Tulsa Oct 7-9, 2022; Richardson 2024, Area 65; Baytown 2026, Area 67; 2028 Area 66). The Southwest alternate delegates carry its business.",
+   "what_to_do": "Workshops open to all members; delegates and the trustee usually present.",
+   "source": "2017 Final Report p.74; 2021 Final Report p.89; 2025 Final Report p.158; nwta66.org SWRAASA page",
+   "confidence": "high",
+   "approx": true
+  },
+  {
+   "id": "founders-day",
+   "title": "Founders’ Day, Akron",
+   "category": "observance",
+   "scope": "all",
+   "rule": {
+    "type": "weekend_nearest",
+    "month": 6,
+    "day": 10
+   },
+   "years": "all",
+   "why": "A.A.’s anniversary weekend in Akron, the weekend closest to June 10 (Dr. Bob’s last drink, 1935), hosted by Akron Intergroup (June 6-8, 2025; June 12-14, 2026).",
+   "what_to_do": "Many groups and areas mark it locally.",
+   "source": "2023 Final Report p.130 (“On the closest weekend to June 10th …”); 2017 Final Report p.76",
+   "confidence": "high",
+   "approx": true
+  },
+  {
+   "id": "st-louis-resolution",
+   "title": "Anniversary of the 1955 St. Louis Resolution",
+   "category": "observance",
+   "scope": "all",
+   "rule": {
+    "type": "fixed",
+    "month": 7,
+    "day": 3
+   },
+   "years": "all",
+   "why": "On July 3, 1955, at the Twentieth Anniversary Convention in St. Louis, A.A. adopted the Resolution that made the General Service Conference guardian of the Traditions and sole successor to the co-founders (Appendix L).",
+   "what_to_do": "A good day to reread Appendices K and L (the Conference Charter and the Resolution).",
+   "source": "Service Manual 2026-2028 pp. 128-129",
+   "confidence": "high"
+  },
+  {
+   "id": "gratitude-month",
+   "title": "Gratitude Month",
+   "category": "observance",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "11-01",
+    "to": "11-30"
+   },
+   "years": "all",
+   "why": "The general manager sends an annual Gratitude Month message in November; many areas and districts hold gratitude dinners, and year-end Seventh Tradition giving peaks.",
+   "what_to_do": "A natural time for group Seventh Tradition and Birthday Plan discussions.",
+   "source": "2024 Final Report p.16; 2018 Final Report p.70; 2023 Final Report p.130",
+   "confidence": "high",
+   "approx": false
+  },
+  {
+   "id": "naaaw",
+   "title": "National A.A. Archives Workshop",
+   "category": "convention",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "09-08",
+    "to": "10-04"
+   },
+   "years": "all",
+   "why": "An annual Fellowship workshop (not run by GSO) that the GSO archivist attends; late September or mid-September (Sep 29-Oct 3, 2021 San Antonio; Sep 26-29, 2024 Des Moines; Sep 10-13, 2026 Tacoma).",
+   "what_to_do": "For area archives committees and Archives delegates.",
+   "source": "2017 Final Report p.29; 2019 Final Report p.25; host-area event listings 2024 and 2026",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "national-corrections-conference",
+   "title": "National Corrections Conference",
+   "category": "convention",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "11-01",
+    "to": "11-20"
+   },
+   "years": "all",
+   "why": "A Fellowship-run corrections service conference held each fall since 2017, usually in November, attended by GSO and Grapevine/La Viña staff.",
+   "what_to_do": "For corrections committees.",
+   "source": "2017 Final Report p.28, p.46; 2018 Final Report p.65; 2026 Final Report p.21",
+   "confidence": "medium",
+   "approx": true
+  },
+  {
+   "id": "ic-co-seminar",
+   "title": "Intergroup/Central Office seminar",
+   "category": "convention",
+   "scope": "all",
+   "rule": {
+    "type": "month_window",
+    "from": "09-15",
+    "to": "11-10"
+   },
+   "years": "all",
+   "why": "An annual seminar of intergroup and central office managers, attended by AAWS and Grapevine board members and staff (Nov 2016, Oct 2017, Sept/Oct 2018; San Antonio, Nov 6-8, 2026). The Service Manual calls it the Intergroup/Central Office/AAWS (ICOAA) Seminar: the first, in 1986, discussed literature distribution, pricing and discounts and ways to work together, and seminars are now held each year (p. 167).",
+   "what_to_do": "Matters for the Dallas and Fort Worth intergroups.",
+   "source": "Service Manual 2026-2028 p.167; 2017 Final Report p.29, p.52; 2018 Final Report p.37",
+   "confidence": "low",
+   "approx": true
+  },
+  {
+   "id": "a65-orientations",
+   "title": "NETA 65 GSR/DCM orientations (three Sundays)",
+   "category": "area",
+   "scope": "area65",
+   "rule": {
+    "type": "month_window",
+    "from": "01-10",
+    "to": "01-31"
+   },
+   "years": "all",
+   "why": "Three identical orientations each January (central, west and east sites) on the whole structure from the group to the Conference, right after the new panel takes office.",
+   "what_to_do": "The best on-ramp for a new GSR or anyone learning the structure.",
+   "source": "NETA Area Handbook (rev. Nov 2024) p.15-16; 2019 Final Report p.62; 2025 Final Report p.157",
+   "confidence": "high",
+   "approx": true,
+   "url": "https://neta65.org/"
+  },
+  {
+   "id": "a65-winter-acm",
+   "title": "NETA 65 Winter Area Committee Meeting",
+   "category": "area",
+   "scope": "area65",
+   "rule": {
+    "type": "month_window",
+    "from": "02-10",
+    "to": "02-25",
+    "label": "a Sunday in mid/late February"
+   },
+   "years": "all",
+   "why": "One of four area committee meetings a year (Feb 12, 2023; Feb 18, 2024; Feb 16, 2025; Feb 22, 2026). DCMs, officers and committee chairs vote.",
+   "what_to_do": "The new panel’s first area business meeting, before the pre-Conference Spring Assembly.",
+   "source": "neta65.org past events (2023-2026); 2019 Final Report p.62; NETA Area Handbook (rev. Nov 2024)",
+   "confidence": "medium",
+   "approx": true,
+   "url": "https://neta65.org/"
+  },
+  {
+   "id": "a65-delegate-precon",
+   "title": "Delegate’s Corner pre-Conference sessions (agenda review, mock-committee training)",
+   "category": "area",
+   "scope": "area65",
+   "rule": {
+    "type": "month_window",
+    "from": "02-20",
+    "to": "03-12"
+   },
+   "years": "all",
+   "why": "Online sessions before the Spring Assembly: a review of the final agenda items and training for mock-committee chairs and scribes (Feb 24, Mar 7 and Mar 10 in 2026). Expect them earlier when the Conference is early.",
+   "what_to_do": "Where members learn the year’s agenda items before the area takes its sense on them.",
+   "source": "NETA UpWord Fall 2026 p.21; NETA Area Handbook (rev. Nov 2024) p.13",
+   "confidence": "medium",
+   "approx": true,
+   "url": "https://neta65.org/"
+  },
+  {
+   "id": "a65-spring-assembly",
+   "title": "NETA 65 Spring Assembly: pre-Conference mock committees",
+   "category": "area",
+   "scope": "area65",
+   "rule": {
+    "type": "month_window",
+    "from": "03-10",
+    "to": "03-24",
+    "label": "a Fri–Sun in mid-March"
+   },
+   "years": "all",
+   "why": "Members split into mock committees on the final agenda items and report back, giving the delegate the area’s conscience (“informed, not instructed”). Mar 17-19, 2023; Mar 14-16, 2025; Mar 20-22, 2026.",
+   "what_to_do": "The main chance for a GSR to bring the group’s input to the delegate. Register early for a mock-committee seat.",
+   "source": "2019 Final Report p.62; 2021 Final Report p.92; 2025 Final Report p.157; neta65.org past events",
+   "confidence": "medium",
+   "approx": true,
+   "url": "https://neta65.org/"
+  },
+  {
+   "id": "a65-spring-acm",
+   "title": "NETA 65 Spring Area Committee Meeting",
+   "category": "area",
+   "scope": "area65",
+   "rule": {
+    "type": "after_rule",
+    "rule": "conference",
+    "anchor": "start",
+    "offset": -21,
+    "days": 15,
+    "label": "a Sunday 1–3 weeks before the Conference"
+   },
+   "years": "all",
+   "why": "Quarterly area business on a Sunday one to three weeks before the Conference (Apr 7, 2024, GSC Apr 14; Apr 6, 2025, GSC Apr 27; Apr 12, 2026, GSC Apr 26). The 77th Conference opens Apr 11, 2027, so expect it by early April.",
+   "what_to_do": "The last area business meeting near the Conference.",
+   "source": "neta65.org past events (2024-2026); 2025 Final Report p.45 (2027 Conference dates)",
+   "confidence": "medium",
+   "approx": true,
+   "url": "https://neta65.org/"
+  },
+  {
+   "id": "a65-summer-assembly",
+   "title": "NETA 65 Summer Assembly: delegate’s Conference report-back",
+   "category": "area",
+   "scope": "area65",
+   "rule": {
+    "type": "month_window",
+    "from": "06-12",
+    "to": "06-30",
+    "label": "a Fri–Sun in mid/late June"
+   },
+   "years": "all",
+   "why": "The delegate reports on the Conference just held (Jun 23-25, 2023; Jun 14-16, 2024; Jun 27-29, 2025; Jun 26-28, 2026). Districts hold their own report-backs through the summer.",
+   "what_to_do": "Hear what the Conference decided and carry it back to your group.",
+   "source": "Service Manual 2026-2028 p.5, p.37 (report-backs); 2019 Final Report p.62; neta65.org past events",
+   "confidence": "medium",
+   "approx": true,
+   "url": "https://neta65.org/"
+  },
+  {
+   "id": "a65-summer-acm",
+   "title": "NETA 65 Summer Area Committee Meeting",
+   "category": "area",
+   "scope": "area65",
+   "rule": {
+    "type": "month_window",
+    "from": "07-10",
+    "to": "07-21",
+    "label": "a Sunday in mid-July"
+   },
+   "years": "all",
+   "why": "Quarterly business (Jul 16, 2023; Jul 14, 2024; Jul 13, 2025; Jul 19, 2026). Draft proposed agenda items for the Fall Assembly appear around now.",
+   "what_to_do": "Watch for the proposals the area will vote on in September.",
+   "source": "neta65.org past events; NETA Area Handbook (rev. Nov 2024) p.15",
+   "confidence": "medium",
+   "approx": true,
+   "url": "https://neta65.org/"
+  },
+  {
+   "id": "a65-fall-assembly",
+   "title": "NETA 65 Fall Assembly (area votes on proposed agenda items)",
+   "category": "area",
+   "scope": "area65",
+   "rule": {
+    "type": "nth_weekday",
+    "month": 9,
+    "weekday": 5,
+    "n": 3,
+    "days": 3
+   },
+   "years": "all",
+   "why": "Held as close as possible to the third weekend of September (Sep 15-17, 2023; Sep 20-22, 2024; one day Sep 20, 2025; Sep 18-20, 2026). In even years it is the Assembly & Convention with the elections; it is the last area body before the Sept 30 proposal deadline.",
+   "what_to_do": "Get your group’s conscience on the July drafts first.",
+   "source": "NETA Area Handbook (rev. Nov 2024) p.6, p.21 (“as close as possible to the third weekend in September”); neta65.org past events",
+   "confidence": "high",
+   "approx": true,
+   "url": "https://neta65.org/"
+  },
+  {
+   "id": "a65-fall-acm",
+   "title": "NETA 65 Fall Area Committee Meeting (draft area budget)",
+   "category": "area",
+   "scope": "area65",
+   "rule": {
+    "type": "month_window",
+    "from": "10-10",
+    "to": "10-21",
+    "label": "a Sunday in mid-October"
+   },
+   "years": "all",
+   "why": "The draft annual area budget is reviewed (Oct 20, 2024; Oct 12, 2025; Oct 18, 2026).",
+   "what_to_do": "Area finances and next year’s budget.",
+   "source": "NETA Area Handbook (rev. Nov 2024) p.6; neta65.org past events",
+   "confidence": "medium",
+   "approx": true,
+   "url": "https://neta65.org/"
+  },
+  {
+   "id": "a65-town-hall",
+   "title": "NETA delegate’s Conference Connect town hall (online, 7-8 pm)",
+   "category": "area",
+   "scope": "area65",
+   "rule": {
+    "type": "nth_weekday",
+    "months": [
+     2,
+     5,
+     8,
+     11
+    ],
+    "weekday": 2,
+    "n": 2,
+    "days": 1
+   },
+   "years": "all",
+   "why": "Quarterly online town halls on the second Tuesday of Feb, May, Aug and Nov in 2026. Whether the Panel 77 delegate keeps the series in 2027 is not known.",
+   "what_to_do": "An easy way to ask the delegate about the Conference.",
+   "source": "neta65.org event pages (2026); alternate delegate’s report, Sept 20, 2026",
+   "confidence": "medium",
+   "approx": true,
+   "url": "https://neta65.org/"
+  },
+  {
+   "id": "a65-upword",
+   "title": "NETA 65 UpWord newsletter ({label} issue)",
+   "category": "publication",
+   "scope": "area65",
+   "rule": {
+    "type": "month_window",
+    "windows": [
+     {
+      "from": "02-01",
+      "to": "02-28",
+      "label": "February"
+     },
+     {
+      "from": "05-01",
+      "to": "05-31",
+      "label": "May"
+     },
+     {
+      "from": "08-01",
+      "to": "08-31",
+      "label": "August"
+     },
+     {
+      "from": "12-01",
+      "to": "12-20",
+      "label": "December"
+     }
+    ]
+   },
+   "years": "all",
+   "why": "The area newsletter (English and Spanish), quarterly, with area, regional and state dates and the Delegate’s Corner schedule.",
+   "what_to_do": "The best single source for NETA dates.",
+   "source": "NETA Area Handbook (rev. Nov 2024) p.22; neta65.org newsletter page",
+   "confidence": "high",
+   "approx": true,
+   "url": "https://neta65.org/area-business/newsletter/"
+  },
+  {
+   "id": "tx-state-convention",
+   "title": "Texas State Convention",
+   "category": "convention",
+   "scope": "southwest",
+   "rule": {
+    "type": "month_window",
+    "from": "06-01",
+    "to": "08-20",
+    "label": "date varies"
+   },
+   "years": "all",
+   "why": "Brings the four Texas areas (65-68) together; the Texas delegates speak (Aug 15-17, 2025; Jul 24-26, 2026; Jun 4-6, 2027). Each area’s immediate past delegate serves on its committee.",
+   "what_to_do": "Check txaaconvention.org for the date and city.",
+   "source": "txaaconvention.org; NETA Area Handbook (rev. Nov 2024) p.13",
+   "confidence": "medium",
+   "approx": true,
+   "url": "https://txaaconvention.org/"
+  },
+  {
+   "id": "tx-hispanic-assembly",
+   "title": "Texas Hispanic State Assembly (Asamblea Hispana del Estado de Texas)",
+   "category": "area",
+   "scope": "southwest",
+   "rule": {
+    "type": "month_window",
+    "from": "05-15",
+    "to": "05-31",
+    "label": "one data point"
+   },
+   "years": "all",
+   "why": "A Spanish-language service assembly that NETA 65 lists on its calendar (62nd: May 23-25, 2025, Dallas). Only one year was found.",
+   "what_to_do": "Watch the NETA calendar for the next one.",
+   "source": "neta65.org event page (2025)",
+   "confidence": "low",
+   "approx": true,
+   "url": "https://neta65.org/"
+  },
+  {
+   "id": "birthday-plan",
+   "title": "Birthday Plan contribution",
+   "category": "observance",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "Each member’s A.A. birthday"
+   },
+   "years": "all",
+   "why": "Members give to the General Service Board an amount they choose for each year of sobriety.",
+   "what_to_do": "",
+   "source": "Service Manual 2026-2028 p.88",
+   "confidence": "high"
+  },
+  {
+   "id": "sharing-sessions",
+   "title": "All-Conference virtual sharing sessions",
+   "category": "conference",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "At least twice between Conferences"
+   },
+   "years": "all",
+   "why": "All Conference members meet by video between Conferences; the GSB chair and the Delegate Chair set dates and topics (three in 2025-26: workload, financial sustainability, how the Conference operates).",
+   "what_to_do": "",
+   "source": "2023 Final Report p.37 (Advisory Action); 2026 Final Report p.11",
+   "confidence": "medium"
+  },
+  {
+   "id": "board-sharing",
+   "title": "Trustees’ committees and General Sharing Session",
+   "category": "board",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "Every quarterly board weekend"
+   },
+   "years": "all",
+   "why": "All trustees’ committees meet and a General Sharing Session is held at each board weekend; trustees’ committee chairs then call their Conference committee chairs.",
+   "what_to_do": "",
+   "source": "Service Manual 2026-2028 p.61, p.63",
+   "confidence": "high"
+  },
+  {
+   "id": "advisory-actions",
+   "title": "Advisory Actions carried out and reported",
+   "category": "board",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "After each Conference, all year"
+   },
+   "years": "all",
+   "why": "The board affirms the Advisory Actions and refers them to trustees’ committees, GSO or Grapevine, then reports progress in its quarterly reports.",
+   "what_to_do": "",
+   "source": "Service Manual 2026-2028 p.5, p.43",
+   "confidence": "high"
+  },
+  {
+   "id": "fiscal-year",
+   "title": "Fiscal year and audit",
+   "category": "board",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "January 1 – December 31"
+   },
+   "years": "all",
+   "why": "GSB, AAWS and Grapevine fiscal years are the calendar year; budgets come to the first board meeting after Jan 1, the auditor is recommended each year and the annual report goes to the annual meeting after the Conference.",
+   "what_to_do": "",
+   "source": "Service Manual 2026-2028 p.60, p.67, p.140, p.151, p.160",
+   "confidence": "high"
+  },
+  {
+   "id": "director-searches",
+   "title": "AAWS and Grapevine nontrustee director searches",
+   "category": "election",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "When a seat opens"
+   },
+   "years": "all",
+   "why": "Notices are posted on aa.org (AAWS May 6, 2025 with résumés due July 1; Grapevine Jan and Jul 2025); delegates are eligible one year after their last Conference. None was posted for 2027 as of Oct 20, 2026.",
+   "what_to_do": "",
+   "source": "aa.org notices 2025; 2026 Final Report p.12",
+   "confidence": "medium"
+  },
+  {
+   "id": "vacancy-cutoff",
+   "title": "Regional trustee vacancy: the September 1 cutoff",
+   "category": "election",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "Only if a regional trustee seat falls vacant"
+   },
+   "years": "all",
+   "why": "If the seat falls vacant before September 1 of the trustee’s first year, the region nominates a replacement at the next Conference.",
+   "what_to_do": "",
+   "source": "Service Manual 2026-2028 p.139",
+   "confidence": "high"
+  },
+  {
+   "id": "past-delegate-eligibility",
+   "title": "Past delegates become eligible for trustee and appointed service",
+   "category": "election",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "One year after a delegate’s last Conference"
+   },
+   "years": "all",
+   "why": "A past delegate can stand for trustee, nontrustee director or appointed committee member one year after rotation.",
+   "what_to_do": "",
+   "source": "Service Manual 2026-2028 p.61, p.63",
+   "confidence": "high"
+  },
+  {
+   "id": "region-change",
+   "title": "An approved change of region takes effect",
+   "category": "conference",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "At the end of the approving Conference"
+   },
+   "years": "all",
+   "why": "When the Conference approves an area’s move to another region, it takes effect when that Conference ends.",
+   "what_to_do": "",
+   "source": "Service Manual 2026-2028 p.114",
+   "confidence": "high"
+  },
+  {
+   "id": "periodicals",
+   "title": "Grapevine (monthly), La Viña and LIM (every two months)",
+   "category": "publication",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "All year"
+   },
+   "years": "all",
+   "why": "The Fellowship’s periodicals; the Grapevine and La Viña workbooks are updated each year and their editorial advisory boards meet up to five times a year.",
+   "what_to_do": "",
+   "source": "Service Manual 2026-2028 p.77, p.80, p.83, p.93",
+   "confidence": "high"
+  },
+  {
+   "id": "about-aa-sfbtw",
+   "title": "About A.A. and Sharing from Behind the Walls",
+   "category": "publication",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "1-3 and 3 issues a year"
+   },
+   "years": "all",
+   "why": "About A.A. (for professionals): one to three issues a year (only Winter 2026 so far in 2026). Sharing from Behind the Walls: three issues a year (current: Summer 2026).",
+   "what_to_do": "",
+   "source": "Service Manual 2026-2028 p.71, p.77; aa.org pages read Oct 20, 2026",
+   "confidence": "medium"
+  },
+  {
+   "id": "gso-open-meeting",
+   "title": "Open A.A. meeting at GSO, New York",
+   "category": "observance",
+   "scope": "all",
+   "rule": {
+    "type": "undated",
+    "when": "Every Friday, 11:00 a.m."
+   },
+   "years": "all",
+   "why": "An open A.A. meeting is held at the General Service Office each Friday.",
+   "what_to_do": "",
+   "source": "Service Manual 2026-2028 p.87",
+   "confidence": "medium"
+  }
+ ],
+ "events": [
+  {
+   "id": "box459-summer-2026",
+   "title": "Box 4-5-9 Summer 2026 issue (76th Conference summary)",
+   "category": "publication",
+   "scope": "all",
+   "start": "2026-08-18",
+   "end": "2026-08-18",
+   "why": "Led with the 76th Conference summary; also the forum list, the 2030 Convention theme call and the 2027 trustee openings.",
+   "what_to_do": "",
+   "source": "aa.org news and announcements; Box 4-5-9 Summer 2026",
+   "confidence": "high",
+   "rule": "box459",
+   "status": "held",
+   "url": "https://www.aa.org/newsletters",
+   "approx": false
+  },
+  {
+   "id": "class-a-deadline-2026",
+   "title": "Class A (nonalcoholic) trustee résumés due",
+   "category": "deadline",
+   "scope": "all",
+   "start": "2026-08-31",
+   "end": "2026-08-31",
+   "why": "Announced for one Class A seat opening after the 77th Conference.",
+   "what_to_do": "",
+   "source": "aa.org notice (June 1, 2026)",
+   "confidence": "high",
+   "rule": "class-a-deadline",
+   "status": "held",
+   "url": "https://www.aa.org/news-and-announcements",
+   "approx": false
+  },
+  {
+   "id": "fcr-2026",
+   "title": "76th Conference Final Report posted",
+   "category": "publication",
+   "scope": "all",
+   "start": "2026-09-04",
+   "end": "2026-09-04",
+   "why": "Posted on aa.org in English, Spanish and French; a print version is for sale.",
+   "what_to_do": "",
+   "source": "aa.org news and announcements (Sept 4, 2026)",
+   "confidence": "high",
+   "rule": "final-report",
+   "status": "held",
+   "url": "https://www.aa.org/2026-general-service-conference-final-report",
+   "approx": false
+  },
+  {
+   "id": "sm-2026-2028",
+   "title": "Service Manual 2026-2028 edition",
+   "category": "publication",
+   "scope": "all",
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "why": "The current edition is marked “Revised: September 2026”; this app’s page numbers follow it.",
+   "what_to_do": "",
+   "source": "Service Manual 2026-2028 p.II",
+   "confidence": "high",
+   "approx": true,
+   "rule": "service-manual-edition",
+   "status": "held"
+  },
+  {
+   "id": "naaaw-2026",
+   "title": "28th National A.A. Archives Workshop",
+   "category": "convention",
+   "scope": "all",
+   "start": "2026-09-10",
+   "end": "2026-09-13",
+   "why": "Held at the Washington State History Museum; Area 72 (Western Washington) hosted.",
+   "what_to_do": "",
+   "source": "host-area event listing (June 2026 flyer); aasfmarin.org event listing (read Oct 20, 2026)",
+   "confidence": "high",
+   "rule": "naaaw",
+   "status": "held",
+   "place": "Tacoma, WA (host Area 72)",
+   "approx": false
+  },
+  {
+   "id": "wsm29-2026",
+   "title": "29th World Service Meeting, Lisbon",
+   "category": "world",
+   "scope": "all",
+   "start": "2026-10-04",
+   "end": "2026-10-08",
+   "why": "Theme “Guided by all 36 principles.” The two trustees-at-large are the U.S./Canada delegates. By the New York/abroad alternation (U.S./Canada hosted the 28th in 2024 and hosts every four years), the 30th WSM in October 2028 should be in New York.",
+   "what_to_do": "Watch aa.org for the 29th WSM Final Report (usually about February).",
+   "source": "2026 Final Report p.92, p.94; 28th WSM Final Report (site selection); Service Manual 2026-2028 p.62",
+   "confidence": "high",
+   "place": "Lisbon, Portugal",
+   "rule": "wsm",
+   "status": "held",
+   "approx": false
+  },
+  {
+   "id": "ic2030-theme-deadline",
+   "title": "2030 International Convention: theme suggestions close",
+   "category": "deadline",
+   "scope": "all",
+   "start": "2026-10-09",
+   "end": "2026-10-09",
+   "why": "246 ideas had come in by July 24, 2026. A final list goes to the trustees’ IC/RF Committee at the fall 2026 board weekend, which picks the theme at the Jan 29-Feb 1, 2027 weekend.",
+   "what_to_do": "Passed; watch for the theme after the winter 2027 board weekend.",
+   "source": "Box 4-5-9 Summer 2026 p.5; GSB Quarterly Report, 3rd quarter 2026 p.5",
+   "confidence": "high",
+   "status": "held",
+   "url": "https://www.aa.org/newsletters",
+   "approx": false
+  },
+  {
+   "id": "swraasa-2026",
+   "title": "SWRAASA 2026 (host Area 67), Baytown",
+   "category": "forum",
+   "scope": "southwest",
+   "start": "2026-10-09",
+   "end": "2026-10-11",
+   "why": "The Southwest region’s service assembly: trustee’s report and panel, “Meet the Delegates”, an alternate delegates’ share and the SWRAASA business meeting. The 2028 host is Area 66.",
+   "what_to_do": "",
+   "source": "2025 Final Report p.158; SWRAASA 2026 program; NETA 65 spring 2026 area committee agenda",
+   "confidence": "high",
+   "place": "Baytown, TX (Houston area)",
+   "area": 67,
+   "rule": "swraasa",
+   "status": "held",
+   "approx": false
+  },
+  {
+   "id": "a65-fall-acm-2026",
+   "title": "NETA 65 Fall Area Committee Meeting (draft area budget)",
+   "category": "area",
+   "scope": "area65",
+   "start": "2026-10-18",
+   "end": "2026-10-18",
+   "why": "The draft 2027 area budget is reviewed.",
+   "what_to_do": "",
+   "source": "neta65.org event page (2026 Fall ACM)",
+   "confidence": "high",
+   "place": "Plano, TX (hybrid)",
+   "rule": "a65-fall-acm",
+   "status": "held",
+   "url": "https://neta65.org/",
+   "approx": false
+  },
+  {
+   "id": "gso-contributions-platform",
+   "title": "GSO’s new online contributions platform goes live",
+   "category": "publication",
+   "scope": "all",
+   "start": "2026-10-21",
+   "end": "2026-10-21",
+   "why": "Adds online giving on behalf of an area or district, Canadian-dollar gifts and more payment methods; recurring gifts start as monthly only.",
+   "what_to_do": "Group, district and area treasurers who give online need to switch to the new platform.",
+   "source": "aa.org news and announcements (Sept 21 and Oct 14, 2026)",
+   "confidence": "high",
+   "url": "https://www.aa.org/news-and-announcements",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "sw-sm-study-2026",
+   "title": "Southwest Region Service Manual study (online, Thursdays 6:30 pm CT)",
+   "category": "forum",
+   "scope": "southwest",
+   "start": "2026-10-22",
+   "end": "2026-10-22",
+   "why": "A region-wide online study of the 2026-2028 Service Manual, listed by Areas 66 and 4.",
+   "what_to_do": "A free way to learn the structure this app models with other Southwest members.",
+   "source": "nwta66.org event page; arkansasaa.org assembly information",
+   "confidence": "medium",
+   "dates": [
+    "2026-10-22",
+    "2026-11-05",
+    "2026-11-19",
+    "2026-12-03",
+    "2026-12-17"
+   ],
+   "url": "https://nwta66.org/",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "aaws-board-2026-10",
+   "title": "AAWS board meeting",
+   "category": "board",
+   "scope": "all",
+   "start": "2026-10-29",
+   "end": "2026-10-29",
+   "why": "The AAWS bylaws put a regular board meeting in the week before each quarterly GSB meeting.",
+   "what_to_do": "Decisions are summarized in AAWS Highlights and the Quarterly Report.",
+   "source": "aa.org board calendar; Service Manual 2026-2028 p.147",
+   "confidence": "high",
+   "rule": "corporate-boards-before-gsb",
+   "place": "GSO, New York",
+   "url": "https://www.aa.org/aa-board-calendars",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "gsb-q4-2026",
+   "title": "General Service Board weekend (fall 2026)",
+   "category": "board",
+   "scope": "all",
+   "start": "2026-10-30",
+   "end": "2026-11-02",
+   "why": "Trustees’ committees decide which proposals received by Sept 30 go to the 77th Conference. New this year: the 2027 Conference committee chairs (Panel 76) attend this October weekend instead of the January one. The final 2030 Convention theme list and the regional trustee candidate interviews are also on this weekend.",
+   "what_to_do": "Watch for the preliminary 77th Conference agenda in November, and the proposal status grid about three weeks later.",
+   "source": "aa.org board calendar; 2026 Final Report p.49, p.85; GSB Quarterly Report, 3rd quarter 2026 p.5, p.7; GSB bylaws (Service Manual p.140)",
+   "confidence": "high",
+   "rule": "gsb-q4",
+   "place": "Hotel TBD (aa.org)",
+   "url": "https://www.aa.org/aa-board-calendars",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a10-winter-assembly-2026",
+   "title": "Area 10 (Colorado) Winter Assembly: SW trustee nominee and Panel 77 elections",
+   "category": "area",
+   "scope": "area",
+   "start": "2026-11-06",
+   "end": "2026-11-08",
+   "why": "Area 10 elects its Southwest regional trustee nominee and its Panel 77 delegate (Sat Nov 7).",
+   "what_to_do": "",
+   "source": "coloradoaa.org assemblies page and draft agenda",
+   "confidence": "high",
+   "area": 10,
+   "place": "Greenwood Village, CO",
+   "url": "https://coloradoaa.org/assemblies/",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a66-fall-assembly-2026",
+   "title": "Area 66 (Northwest Texas) Fall Assembly: Class B trustee nomination",
+   "category": "area",
+   "scope": "area",
+   "start": "2026-11-07",
+   "end": "2026-11-08",
+   "why": "Another possible Southwest regional trustee candidate; SWRAASA 2028 planning.",
+   "what_to_do": "",
+   "source": "nwta66.org assembly agenda (Nov 7-8, 2026)",
+   "confidence": "high",
+   "area": 66,
+   "place": "Post, TX",
+   "url": "https://nwta66.org/",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a65-town-hall-2026-11",
+   "title": "NETA delegate’s Conference Connect town hall (online, 7-8 pm)",
+   "category": "area",
+   "scope": "area65",
+   "start": "2026-11-10",
+   "end": "2026-11-10",
+   "why": "The Panel 75 delegate’s quarterly online town hall.",
+   "what_to_do": "Ask questions about the Conference.",
+   "source": "neta65.org event page; alternate delegate’s report, Sept 20, 2026",
+   "confidence": "high",
+   "rule": "a65-town-hall",
+   "url": "https://neta65.org/",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a67-orientation-2026",
+   "title": "Area 67 (Southeast Texas) post-election orientation day",
+   "category": "area",
+   "scope": "area",
+   "start": "2026-11-14",
+   "end": "2026-11-14",
+   "why": "About six weeks after SETA’s Oct 3, 2026 Panel 77 election.",
+   "what_to_do": "",
+   "source": "aa-seta.org home page and agenda",
+   "confidence": "high",
+   "area": 67,
+   "place": "Houston, TX",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "election-results-2026",
+   "title": "Area election results due at GSO (Panel 77 areas, including Area 65)",
+   "category": "deadline",
+   "scope": "all",
+   "start": "2026-12-01",
+   "end": "2026-12-01",
+   "why": "The odd-panel areas that elected Panel 77 this fall send their results to the Conference secretary. Area 65 elected on Sat Sept 19, 2026; Brandy H. is Area 65’s Panel 77 delegate-elect (user-provided).",
+   "what_to_do": "After this, GSO’s lists should show the Panel 77 delegates; watch neta65.org for the Panel 77 officers.",
+   "source": "Service Manual 2026-2028 p.110; NETA 65 Fall 2026 assembly agenda",
+   "confidence": "high",
+   "rule": "election-results-due",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "pacific-rf-2026",
+   "title": "Pacific Regional Forum, San Diego",
+   "category": "forum",
+   "scope": "PA",
+   "start": "2026-12-04",
+   "end": "2026-12-06",
+   "why": "The last Forum of 2026. Free registration opened Oct 2; interpretation by an AI tool (bring a phone and earbuds). The 2026 Final Report prints “Area 61”, but the host is Area 8 (San Diego/Imperial).",
+   "what_to_do": "Any member may attend any region’s Forum.",
+   "source": "aa.org Pacific Forum flyer; aa.org forums page; 2026 Final Report p.98, p.153",
+   "confidence": "high",
+   "place": "San Diego, CA (host Area 8)",
+   "rule": "regional-forums-even",
+   "url": "https://www.aa.org/regional-local-and-special-forums",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "wcan-rf-2026",
+   "title": "Western Canada Regional Forum, Saskatoon",
+   "category": "forum",
+   "scope": "WCAN",
+   "start": "2026-06-12",
+   "end": "2026-06-14",
+   "why": "",
+   "what_to_do": "",
+   "source": "2026 Final Report p.98",
+   "confidence": "high",
+   "place": "Saskatoon, SK (Area 91)",
+   "rule": "regional-forums-even",
+   "status": "held",
+   "approx": false
+  },
+  {
+   "id": "ecan-rf-2026",
+   "title": "Eastern Canada Regional Forum, Boucherville",
+   "category": "forum",
+   "scope": "ECAN",
+   "start": "2026-08-21",
+   "end": "2026-08-23",
+   "why": "",
+   "what_to_do": "",
+   "source": "2026 Final Report p.98",
+   "confidence": "high",
+   "place": "Boucherville, QC (Area 87)",
+   "rule": "regional-forums-even",
+   "status": "held",
+   "approx": false
+  },
+  {
+   "id": "se-rf-2026",
+   "title": "Southeast Regional Forum, Raleigh",
+   "category": "forum",
+   "scope": "SE",
+   "start": "2026-09-18",
+   "end": "2026-09-20",
+   "why": "",
+   "what_to_do": "",
+   "source": "2026 Final Report p.98",
+   "confidence": "high",
+   "place": "Raleigh, NC (Area 51)",
+   "rule": "regional-forums-even",
+   "status": "held",
+   "approx": false
+  },
+  {
+   "id": "panel77-draw",
+   "title": "Panel 77 committees drawn by lot (Area 65: Brandy H.)",
+   "category": "committee",
+   "scope": "all",
+   "start": "2026-12-01",
+   "end": "2026-12-31",
+   "why": "Panel 77 first-year delegates fill the seats left by Panel 75; secondary committees (Archives, IC/RF) are drawn too. Under the model’s defaults Area 65’s last three committees (Trustees, Grapevine, Finance) are unlikely.",
+   "what_to_do": "Compare the result with the Predict page when the delegate hears (December or January).",
+   "source": "Service Manual 2026-2028 p.45, p.48",
+   "confidence": "high",
+   "approx": true,
+   "label": "date not published",
+   "rule": "committee-draw",
+   "url": "#/predict",
+   "status": "scheduled"
+  },
+  {
+   "id": "aaws-dec-2026",
+   "title": "AAWS strategic planning (Dec 10) and board meeting (Dec 11)",
+   "category": "board",
+   "scope": "all",
+   "start": "2026-12-10",
+   "end": "2026-12-11",
+   "why": "Results appear in AAWS Highlights and the Quarterly Report (Big Book fifth edition, apps).",
+   "what_to_do": "",
+   "source": "aa.org board calendar",
+   "confidence": "high",
+   "place": "Virtual",
+   "url": "https://www.aa.org/aa-board-calendars",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "panel77-takes-office",
+   "title": "Panel 77 takes office; Panel 75 has rotated off",
+   "category": "election",
+   "scope": "all",
+   "start": "2027-01-01",
+   "end": "2027-01-01",
+   "why": "Panel 77 serves Jan 1, 2027 to Dec 31, 2028 (Conferences in 2027 and 2028). In Area 65 Brandy H. becomes delegate and the Panel 77 NETA officers take office; the Panel 75 delegate becomes immediate past delegate.",
+   "what_to_do": "The suggested area contribution toward delegate expense is now $3,000 (2026 Advisory Action).",
+   "source": "Service Manual 2026-2028 p.110; NETA Area Handbook p.6, p.13; 2026 Final Report p.38",
+   "confidence": "high",
+   "rule": "panel-takes-office",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "resumes-2027",
+   "title": "Résumés due: Northeast and Southwest regional trustees, trustee-at-large/Canada",
+   "category": "deadline",
+   "scope": "southwest",
+   "start": "2027-01-01",
+   "end": "2027-01-01",
+   "why": "The new Southwest regional trustee succeeds Teresa J.; Northeast succeeds Ken T.; trustee-at-large/Canada succeeds Robert L. Areas 65, 38, 10 and 66 selected or scheduled Southwest candidates this fall. Ten years’ continuous sobriety is desirable but not required.",
+   "what_to_do": "Late résumés are returned; an area whose nominee withdraws after the deadline may not submit another. The next Southwest election is 2031.",
+   "source": "aa.org notice (June 2, 2026); Service Manual 2026-2028 p.54-55; area assembly agendas (fall 2026)",
+   "confidence": "high",
+   "rule": "trustee-resume-deadline",
+   "url": "https://www.aa.org/node/9896",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a67-convention-2027",
+   "title": "64th SETA Convention (Area 67)",
+   "category": "convention",
+   "scope": "area",
+   "start": "2027-01-08",
+   "end": "2027-01-10",
+   "why": "",
+   "what_to_do": "",
+   "source": "aa-seta.org home page; setaconvention.org",
+   "confidence": "high",
+   "area": 67,
+   "place": "League City, TX",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a66-mini-forum-2027",
+   "title": "Area 66 (Northwest Texas) January mini-forum",
+   "category": "area",
+   "scope": "area",
+   "start": "2027-01-16",
+   "end": "2027-01-17",
+   "why": "",
+   "what_to_do": "",
+   "source": "Area 66 2026-2027 assembly schedule (nwta66.org)",
+   "confidence": "high",
+   "area": 66,
+   "place": "Midland, TX",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a65-orientation-central-2027",
+   "title": "NETA 65 GSR/DCM orientation (Central), 1-5:30 pm, hybrid",
+   "category": "area",
+   "scope": "area65",
+   "start": "2027-01-17",
+   "end": "2027-01-17",
+   "why": "One of three identical January orientations on the whole structure.",
+   "what_to_do": "Location and agenda to be posted on neta65.org.",
+   "source": "neta65.org event pages",
+   "confidence": "high",
+   "rule": "a65-orientations",
+   "url": "https://neta65.org/",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a65-orientation-west-2027",
+   "title": "NETA 65 GSR/DCM orientation (West), 1-5:30 pm, hybrid",
+   "category": "area",
+   "scope": "area65",
+   "start": "2027-01-24",
+   "end": "2027-01-24",
+   "why": "One of three identical January orientations on the whole structure.",
+   "what_to_do": "Location and agenda to be posted on neta65.org.",
+   "source": "neta65.org event pages",
+   "confidence": "high",
+   "rule": "a65-orientations",
+   "url": "https://neta65.org/",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a65-orientation-east-2027",
+   "title": "NETA 65 GSR/DCM orientation (East), 1-5:30 pm, hybrid",
+   "category": "area",
+   "scope": "area65",
+   "start": "2027-01-31",
+   "end": "2027-01-31",
+   "why": "One of three identical January orientations on the whole structure.",
+   "what_to_do": "Location and agenda to be posted on neta65.org.",
+   "source": "neta65.org event pages",
+   "confidence": "high",
+   "rule": "a65-orientations",
+   "url": "https://neta65.org/",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a68-winter-workshop-2027",
+   "title": "Area 68 (Southwest Texas) Winter Workshop",
+   "category": "area",
+   "scope": "area",
+   "start": "2027-01-22",
+   "end": "2027-01-24",
+   "why": "",
+   "what_to_do": "",
+   "source": "aa-swta.org event page; Area 68 Panel 76 calendar",
+   "confidence": "high",
+   "area": 68,
+   "place": "Kerrville, TX",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "gsb-q1-2027",
+   "title": "General Service Board weekend (winter 2027)",
+   "category": "board",
+   "scope": "all",
+   "start": "2027-01-29",
+   "end": "2027-02-01",
+   "why": "The board approves the workload plan and the final 77th Conference agenda; the trustees’ IC/RF Committee picks the 2030 Convention theme. The 2027 committee chairs already came in October.",
+   "what_to_do": "Watch for the final agenda and the 2030 theme.",
+   "source": "aa.org board calendar; GSB Quarterly Report, 3rd quarter 2026 p.5; 2026 Final Report p.49",
+   "confidence": "high",
+   "rule": "gsb-q1",
+   "place": "Hotel TBD (aa.org)",
+   "url": "https://www.aa.org/aa-board-calendars",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "bigbook-5th",
+   "title": "Big Book fifth edition expected",
+   "category": "publication",
+   "scope": "all",
+   "start": "2027-02-01",
+   "end": "2027-02-14",
+   "why": "The 76th Conference approved the fifth edition of Alcoholics Anonymous; AAWS expects books in early February 2027, hardcover list price $20. Many groups are holding larger literature orders until then.",
+   "what_to_do": "",
+   "source": "GSB Quarterly Report, 3rd quarter 2026 p.7, p.9; 2026 Final Report p.39",
+   "confidence": "medium",
+   "approx": true,
+   "label": "early February",
+   "status": "scheduled"
+  },
+  {
+   "id": "gv-board-2027",
+   "title": "AA Grapevine board planning meeting",
+   "category": "board",
+   "scope": "all",
+   "start": "2027-03-06",
+   "end": "2027-03-06",
+   "why": "The four “planning committee of the whole” meetings for 2027; the Grapevine board also meets in the week before each GSB quarterly meeting.",
+   "what_to_do": "",
+   "source": "GSB Quarterly Report, 3rd quarter 2026 p.15; Service Manual 2026-2028 p.67, p.155",
+   "confidence": "high",
+   "dates": [
+    "2027-03-06",
+    "2027-06-12",
+    "2027-09-18",
+    "2027-12-04"
+   ],
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "swrda-2027",
+   "title": "SWRDA, Oklahoma City",
+   "category": "forum",
+   "scope": "southwest",
+   "start": "2027-03-12",
+   "end": "2027-03-14",
+   "why": "The new Panel 77 delegates’ first regional gathering, a mock Conference about a month before their first Conference.",
+   "what_to_do": "Area 65’s delegate and alternate attend (NETA Handbook).",
+   "source": "Area 68 Panel 76 service calendar; NETA Area Handbook p.12-13",
+   "confidence": "medium",
+   "rule": "swrda",
+   "place": "Oklahoma City, OK",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a68-pre-gsc-2027",
+   "title": "Area 68 pre-Conference assembly",
+   "category": "area",
+   "scope": "area",
+   "start": "2027-04-02",
+   "end": "2027-04-04",
+   "why": "",
+   "what_to_do": "",
+   "source": "Area 68 Panel 76 service calendar",
+   "confidence": "high",
+   "area": 68,
+   "place": "South Padre Island, TX",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a66-spring-2027",
+   "title": "Area 66 Spring Assembly: mock committees",
+   "category": "area",
+   "scope": "area",
+   "start": "2027-04-03",
+   "end": "2027-04-04",
+   "why": "Moved from March to April 3-4.",
+   "what_to_do": "",
+   "source": "Area 66 2026-2027 schedule; Area 66 Nov 2026 agenda",
+   "confidence": "high",
+   "area": 66,
+   "place": "El Paso, TX",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "gsc77",
+   "title": "77th General Service Conference, New York",
+   "category": "conference",
+   "scope": "all",
+   "start": "2027-04-11",
+   "end": "2027-04-17",
+   "why": "Theme “Honoring Our Past, Embracing Our Future”; presentations on rotation, anonymity and innovation; workshop “Unexpected Spiritual Lessons”. Brandy H.’s first Conference (Panel 77) and Panel 76’s second. The Plain Language Big Book proposals were deferred to this Conference.",
+   "what_to_do": "The area’s March mock committees prepare the delegate; the report-back comes at the June Summer Assembly.",
+   "source": "2025 Final Report p.45, p.85; 2026 Final Report p.19, p.38; aa.org event page",
+   "confidence": "high",
+   "rule": "conference",
+   "place": "New York Marriott Marquis",
+   "url": "https://www.aa.org/event/2027-general-service-conference",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "sw-trustee-2027",
+   "title": "Southwest regional trustee nominee chosen (Area 65’s delegate votes)",
+   "category": "election",
+   "scope": "southwest",
+   "start": "2027-04-14",
+   "end": "2027-04-14",
+   "why": "A nominating session picks the successor to Teresa J. by Third Legacy Procedure; voters are the 11 Southwest delegates plus an equal number drawn half from the Conference Committee on Trustees and half from the trustees’ Nominating Committee. The Northeast trustee and trustee-at-large/Canada (chosen by the Canadian delegates and the Nominating Committee from up to four candidates) are picked the same week.",
+   "what_to_do": "The new trustee is elected at the annual meeting on Apr 17 and moderates the Sept 2027 Southwest Forum.",
+   "source": "Service Manual 2026-2028 p.55-58; 2026 Final Report p.108; aa.org notice (June 2, 2026); Wednesday of Conference week as in 2019, 2022 and 2025 (Final Reports p.4-5)",
+   "confidence": "high",
+   "approx": true,
+   "rule": "trustee-elections",
+   "status": "scheduled"
+  },
+  {
+   "id": "ne-rf-2027",
+   "title": "Northeast Regional Forum, Niagara Falls",
+   "category": "forum",
+   "scope": "NE",
+   "start": "2027-05-21",
+   "end": "2027-05-23",
+   "why": "aa.org lists May 21-23; the 2026 Final Report says May 20-23 (Thursday arrival).",
+   "what_to_do": "",
+   "source": "aa.org forums page; 2026 Final Report p.98",
+   "confidence": "high",
+   "place": "Niagara Falls, NY (Area 50)",
+   "rule": "regional-forums-odd",
+   "url": "https://www.aa.org/regional-local-and-special-forums",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "openings-2028",
+   "title": "2028 trustee openings announced (expected)",
+   "category": "election",
+   "scope": "all",
+   "start": "2027-05-25",
+   "end": "2027-06-15",
+   "why": "Expected for the 78th Conference: the West Central and Western Canada regional trustees (Charlie H. and Gail P., elected 2024), probably a Class A trustee (Kerry M., elected 2022) and a new GSB chair. Inferred from the rotation, not yet announced.",
+   "what_to_do": "Watch aa.org and Box 4-5-9 from late May.",
+   "source": "aa.org posting dates 2025-2026; Service Manual 2026-2028 p.54; GSB Quarterly Report, 3rd quarter 2026 p.6",
+   "confidence": "medium",
+   "approx": true,
+   "rule": "trustee-openings-notice",
+   "status": "scheduled"
+  },
+  {
+   "id": "tx-convention-2027",
+   "title": "80th Texas State Convention, Midland-Odessa",
+   "category": "convention",
+   "scope": "southwest",
+   "start": "2027-06-04",
+   "end": "2027-06-06",
+   "why": "Theme “Place the Outcome in God’s Hands”. Venue not yet listed.",
+   "what_to_do": "",
+   "source": "txaaconvention.org save-the-date",
+   "confidence": "high",
+   "place": "Midland-Odessa, TX",
+   "rule": "tx-state-convention",
+   "url": "https://txaaconvention.org/",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "ec-rf-2027",
+   "title": "East Central Regional Forum, Green Bay",
+   "category": "forum",
+   "scope": "EC",
+   "start": "2027-06-25",
+   "end": "2027-06-27",
+   "why": "",
+   "what_to_do": "",
+   "source": "aa.org forums page; 2026 Final Report p.98",
+   "confidence": "high",
+   "place": "Green Bay, WI (Area 74)",
+   "rule": "regional-forums-odd",
+   "url": "https://www.aa.org/regional-local-and-special-forums",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a66-summer-2027",
+   "title": "Area 66 Summer Assembly: delegate report-back",
+   "category": "area",
+   "scope": "area",
+   "start": "2027-07-17",
+   "end": "2027-07-18",
+   "why": "",
+   "what_to_do": "",
+   "source": "Area 66 2026-2027 schedule",
+   "confidence": "high",
+   "area": 66,
+   "place": "Lubbock, TX",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "gsb-q3-2027",
+   "title": "General Service Board weekend (summer 2027, projected)",
+   "category": "board",
+   "scope": "all",
+   "start": "2027-07-30",
+   "end": "2027-08-02",
+   "why": "Not on aa.org’s board calendar yet. The bylaw rule (fifth Monday after June 30) gives Mon Aug 2; it matched the 2026 and listed 2027 weekends, but the listed 2028 weekends run a week later.",
+   "what_to_do": "Check aa.org for the confirmed date.",
+   "source": "GSB bylaws (Service Manual p.140); aa.org board calendar (read Oct 20, 2026)",
+   "confidence": "low",
+   "approx": true,
+   "rule": "gsb-q3",
+   "url": "https://www.aa.org/aa-board-calendars",
+   "status": "scheduled"
+  },
+  {
+   "id": "sw-rf-registration-2027",
+   "title": "Southwest Forum registration expected to open",
+   "category": "forum",
+   "scope": "southwest",
+   "start": "2027-07-15",
+   "end": "2027-08-31",
+   "why": "Registration is free and usually opens 2-3 months before a Forum (the 2023 Southwest Forum opened June 30 for a Sept 29 start).",
+   "what_to_do": "Sign up for aa.org’s Forum notifications and book the hotel before the cut-off.",
+   "source": "aa.org regional forum registration page; host Area 39 site; 2023 Final Report p.86",
+   "confidence": "medium",
+   "approx": true,
+   "url": "https://www.aa.org/regional-forum-registration-planning",
+   "status": "scheduled"
+  },
+  {
+   "id": "wc-rf-2027",
+   "title": "West Central Regional Forum, Duluth",
+   "category": "forum",
+   "scope": "WC",
+   "start": "2027-09-10",
+   "end": "2027-09-12",
+   "why": "",
+   "what_to_do": "",
+   "source": "aa.org forums page; 2026 Final Report p.98",
+   "confidence": "high",
+   "place": "Duluth, MN (Area 35)",
+   "rule": "regional-forums-odd",
+   "url": "https://www.aa.org/regional-local-and-special-forums",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "sw-rf-2027",
+   "title": "Southwest Regional Forum, Kansas City (Area 65’s region)",
+   "category": "forum",
+   "scope": "southwest",
+   "start": "2027-09-30",
+   "end": "2027-10-03",
+   "why": "aa.org and the 2026 Final Report list Sep 30-Oct 3; the host Area 39 flyer gives the program as Fri Oct 1-Sun Oct 3, with hotel arrival Thu Sep 30. Free, but registration is required; group rate $145 a night. The new Southwest trustee moderates.",
+   "what_to_do": "Meet the new Southwest trustee, GSO staff and the region’s delegates, including Panel 77.",
+   "source": "aa.org event page and forums page; 2026 Final Report p.98; host-area flyer",
+   "confidence": "high",
+   "place": "Kansas City, MO (host Area 39)",
+   "rule": "sw-forum",
+   "url": "https://www.aa.org/event/2027-southwest-regional-forum",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "redela-25-2027",
+   "title": "25th REDELA, Paraguay",
+   "category": "world",
+   "scope": "all",
+   "start": "2027-09-25",
+   "end": "2027-10-31",
+   "why": "Theme “Love and Service Without Borders.” Dates not published; REDELA is usually late September or October.",
+   "what_to_do": "",
+   "source": "2026 Final Report p.31-33",
+   "confidence": "medium",
+   "approx": true,
+   "place": "Paraguay (alternate: Cuba)",
+   "rule": "redela",
+   "status": "scheduled"
+  },
+  {
+   "id": "gsb-q4-2027",
+   "title": "General Service Board weekend (fall 2027)",
+   "category": "board",
+   "scope": "all",
+   "start": "2027-10-29",
+   "end": "2027-11-01",
+   "why": "Trustees’ committees review the proposals for the 78th Conference. The trustees’ Nominating Committee must have chosen the candidate for the next GSB chair (rotating in 2028) by this meeting. Panel 77’s 2028 committee chairs are expected here under the October change.",
+   "what_to_do": "Watch for the GSB chair nominee and the preliminary 78th Conference agenda.",
+   "source": "aa.org board calendar; GSB Quarterly Report, 3rd quarter 2026 p.6; 2026 Final Report p.85",
+   "confidence": "high",
+   "rule": "gsb-q4",
+   "url": "https://www.aa.org/aa-board-calendars",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a68-p78-elections-2027",
+   "title": "Area 68 Fall Conference & Assembly (Panel 78 elections expected)",
+   "category": "election",
+   "scope": "area",
+   "start": "2027-10-01",
+   "end": "2027-11-30",
+   "why": "",
+   "what_to_do": "",
+   "source": "Area 68 Panel 76 calendar",
+   "confidence": "low",
+   "approx": true,
+   "area": 68,
+   "place": "Austin, TX",
+   "label": "date TBD",
+   "status": "scheduled"
+  },
+  {
+   "id": "a66-p78-elections-2027",
+   "title": "Area 66 Fall Assembly: Panel 78 elections",
+   "category": "election",
+   "scope": "area",
+   "start": "2027-11-06",
+   "end": "2027-11-07",
+   "why": "",
+   "what_to_do": "",
+   "source": "Area 66 2026-2027 schedule; nwta66.org assemblies page",
+   "confidence": "high",
+   "area": 66,
+   "place": "San Angelo, TX",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "gsb-q1-2028",
+   "title": "General Service Board weekend (winter 2028)",
+   "category": "board",
+   "scope": "all",
+   "start": "2028-02-04",
+   "end": "2028-02-07",
+   "why": "Listed a week later than the bylaw rule (Jan 31). Final 78th Conference agenda and the last workload-distribution plan.",
+   "what_to_do": "",
+   "source": "aa.org board calendar",
+   "confidence": "high",
+   "rule": "gsb-q1",
+   "url": "https://www.aa.org/aa-board-calendars",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "gsc78",
+   "title": "78th General Service Conference, New York",
+   "category": "conference",
+   "scope": "all",
+   "start": "2028-04-23",
+   "end": "2028-04-29",
+   "why": "Panel 77’s second and last Conference (Brandy H.) and Panel 78’s first. Expected elections: West Central and Western Canada regional trustees, probably a Class A trustee, and a new GSB chair.",
+   "what_to_do": "",
+   "source": "2025 Final Report p.45, p.85; aa.org board calendar (hotel listed as TBD)",
+   "confidence": "high",
+   "rule": "conference",
+   "place": "New York Marriott Marquis",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "edw-ends",
+   "title": "Equitable Distribution of Workload ends after this Conference",
+   "category": "conference",
+   "scope": "all",
+   "start": "2028-04-29",
+   "end": "2028-04-29",
+   "why": "The process that moved some agenda items to other committees to balance workloads (trial from 2021, permanent 2024) is discontinued after the 78th Conference by a 2026 Advisory Action.",
+   "what_to_do": "",
+   "source": "2026 Final Report p.39",
+   "confidence": "high",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "gsb-q3-2028",
+   "title": "General Service Board weekend (summer 2028)",
+   "category": "board",
+   "scope": "all",
+   "start": "2028-08-04",
+   "end": "2028-08-07",
+   "why": "",
+   "what_to_do": "",
+   "source": "aa.org board calendar",
+   "confidence": "high",
+   "rule": "gsb-q3",
+   "url": "https://www.aa.org/aa-board-calendars",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "a65-p79-elections",
+   "title": "NETA 65 Fall Assembly & Convention: Panel 79 elections",
+   "category": "election",
+   "scope": "area65",
+   "start": "2028-09-15",
+   "end": "2028-09-17",
+   "why": "Area 65 elects its delegate, alternate and officers for Jan 1, 2029 to Dec 31, 2030 (third Friday-Sunday of September; not yet posted).",
+   "what_to_do": "The assembly is free; the Convention portion has a fee.",
+   "source": "NETA Area Handbook p.4, p.6, p.21",
+   "confidence": "medium",
+   "approx": true,
+   "rule": "a65-fall-assembly",
+   "status": "scheduled"
+  },
+  {
+   "id": "swraasa-2028",
+   "title": "SWRAASA 2028 (host Area 66)",
+   "category": "forum",
+   "scope": "southwest",
+   "start": "2028-10-13",
+   "end": "2028-10-15",
+   "why": "“Held every 2 years, alternating among 11 areas spread over 7 states” (save-the-date flyer).",
+   "what_to_do": "",
+   "source": "nwta66.org event page and flyer",
+   "confidence": "high",
+   "area": 66,
+   "rule": "swraasa",
+   "place": "Northwest Texas (city TBA)",
+   "url": "https://nwta66.org/",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "wsm30-2028",
+   "title": "30th World Service Meeting (expected New York)",
+   "category": "world",
+   "scope": "all",
+   "start": "2028-10-01",
+   "end": "2028-10-31",
+   "why": "By the alternation the 30th WSM should be in New York, hosted by the GSB. Dates not published.",
+   "what_to_do": "",
+   "source": "2026 Final Report p.92; aa.org (WSM alternates New York and abroad)",
+   "confidence": "low",
+   "approx": true,
+   "rule": "wsm",
+   "status": "scheduled"
+  },
+  {
+   "id": "gsb-q4-2028",
+   "title": "General Service Board weekend (fall 2028)",
+   "category": "board",
+   "scope": "all",
+   "start": "2028-11-04",
+   "end": "2028-11-06",
+   "why": "Listed a week later than the bylaw rule. Proposals for the 79th Conference (Apr 15-21, 2029).",
+   "what_to_do": "",
+   "source": "aa.org board calendar",
+   "confidence": "high",
+   "rule": "gsb-q4",
+   "url": "https://www.aa.org/aa-board-calendars",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "ic2030-registration",
+   "title": "2030 International Convention registration expected to open",
+   "category": "convention",
+   "scope": "all",
+   "start": "2029-09-01",
+   "end": "2029-09-30",
+   "why": "Registration opened Sept 10, 2024 for Vancouver 2025 and Sept 9, 2019 for Detroit 2020; Box 4-5-9 and Grapevine articles start in 2028.",
+   "what_to_do": "",
+   "source": "2025 Final Report p.27; 2020 Final Report p.38; 2026 Final Report p.98",
+   "confidence": "medium",
+   "approx": true,
+   "status": "scheduled"
+  },
+  {
+   "id": "ic2030",
+   "title": "International Convention, St. Louis (A.A.’s 95th anniversary)",
+   "category": "convention",
+   "scope": "all",
+   "start": "2030-07-04",
+   "end": "2030-07-07",
+   "why": "Big Meetings in The Dome at America’s Center; Al-Anon invited. Indianapolis follows in 2035 (the centennial).",
+   "what_to_do": "",
+   "source": "aa.org International Convention page; 2026 Final Report p.95, p.98",
+   "confidence": "high",
+   "rule": "international-convention",
+   "place": "St. Louis, MO",
+   "url": "https://www.aa.org/international-convention",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "txscypaa-2026",
+   "title": "TXSCYPAA 45 (Texas young people’s conference), Austin",
+   "category": "convention",
+   "scope": "southwest",
+   "start": "2026-10-30",
+   "end": "2026-11-01",
+   "why": "The Texas State Conference of Young People in A.A.; listed among the state events in the NETA alternate delegate’s Sept 2026 report.",
+   "what_to_do": "Open to all members; registration on the conference website.",
+   "source": "txscypaa.org (read Oct 20, 2026); NETA alternate delegate’s report, Sept 20, 2026",
+   "confidence": "high",
+   "place": "Austin, TX",
+   "url": "https://www.txscypaa.org/",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "icoaa-2026",
+   "title": "Intergroup/Central Office seminar (ICOAA), San Antonio",
+   "category": "convention",
+   "scope": "all",
+   "start": "2026-11-06",
+   "end": "2026-11-08",
+   "why": "The annual seminar of intergroup and central office managers; AAWS and Grapevine board members and staff usually attend.",
+   "what_to_do": "Matters for the Dallas and Fort Worth intergroups.",
+   "source": "icoaa.org (“San Antonio Seminar 2026”); Area 68 Panel 76 service calendar (Nov 6-8)",
+   "confidence": "medium",
+   "place": "San Antonio, TX",
+   "rule": "ic-co-seminar",
+   "url": "https://icoaa.org/san-antonio-seminar-2026/",
+   "approx": false,
+   "status": "scheduled"
+  },
+  {
+   "id": "ncc-2026",
+   "title": "9th National Corrections Conference, Salt Lake City",
+   "category": "convention",
+   "scope": "all",
+   "start": "2026-11-13",
+   "end": "2026-11-15",
+   "why": "A Fellowship-run corrections service conference; GSO and Grapevine/La Viña staff usually attend.",
+   "what_to_do": "For corrections committees; listed in the NETA alternate delegate’s Sept 2026 report.",
+   "source": "nationalcorrectionsconference.org (read Oct 20, 2026); NETA alternate delegate’s report, Sept 20, 2026",
+   "confidence": "high",
+   "place": "Salt Lake City, UT",
+   "rule": "national-corrections-conference",
+   "url": "https://www.nationalcorrectionsconference.org/",
+   "approx": false,
+   "status": "scheduled"
+  }
+ ]
+}

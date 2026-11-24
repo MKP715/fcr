@@ -1,0 +1,1904 @@
+{
+ "meta": {
+  "about": "Board Weekends: the General Service Board’s quarterly weekends (AAWS and Grapevine board meetings, trustees’ committees, sharing sessions and the board’s own meeting), newest first. One card per report in the packet GSO sends Conference members, in our own words, with the minutes’ view merged in.",
+  "note": "Own-words summaries only: the packet stays in Drive. Page numbers are PDF pages of the packet. People appear only as “First L.” and only when needed. Proposal counts come from the status grid that followed the weekend."
+ },
+ "meetings": [
+  {
+   "id": "2026-11-02",
+   "season": "fall",
+   "quarter": 4,
+   "year": 2026,
+   "title": "Fall 2026 board weekend",
+   "formal": "Fourth quarterly meeting of the General Service Board",
+   "start": "2026-10-29",
+   "end": "2026-11-02",
+   "board_meeting": "2026-11-02",
+   "place": "New York (The Westin New York at Times Square)",
+   "calendar_id": "gsb-q4-2026",
+   "source": {
+    "title": "Fourth Quarterly Meeting of the General Service Board: board & committee reports, November 2, 2026 (minutes pending approval)",
+    "short": "Q4 2026 board reports",
+    "pages": 80,
+    "drive_url": "https://drive.google.com/file/d/1-bqgNNwXL_GGNzaYIW1dx4YV-mQLjUcB/view",
+    "minutes_status": "pending approval",
+    "audience": "Conference members",
+    "page_note": "Page numbers are PDF pages of the packet.",
+    "slips": [
+     "The minutes are headed “third quarterly meeting” and their closing line has the “first” adjourning; the cover and the Nov 2 date make it the fourth (pp. 1, 2, 9).",
+     "The Literature Committee’s interim meeting is Nov 21 in the minutes and Nov 23 in the committee’s own report (pp. 7, 72).",
+     "The summer board meeting is dated Aug 2 in the minutes but Aug 3 in the Finance report (pp. 2, 44).",
+     "The Grapevine report heads its list of Oct 29 board actions “July 30th, 2026,” though the list approves the September financial statements (p. 32).",
+     "The minutes count 100 proposals for the trustees’ General Service Conference Committee and 46 Literature proposals with no action; the committee reports and the Nov 6 grid show 96 and 47 (pp. 6, 7). The Literature gap is probably #153, background for #96 (p. 68)."
+    ]
+   },
+   "pai_cycle": 77,
+   "overview": [
+    {
+     "text": "From Thursday, Oct 29 to Monday, Nov 2, 2026, the AAWS and Grapevine boards, the trustees’ committees and a General Sharing Session met in New York, and the General Service Board closed the weekend with its quarterly meeting.",
+     "page": 2
+    },
+    {
+     "text": "By a board decision noted in the 2026 Final Report, the incoming chairs of the 2027 Conference committees and the delegate chair came to the fall weekend rather than January’s, each sitting in on the matching trustees’ committee.",
+     "page": 2
+    },
+    {
+     "text": "By the Nov 6 grid, 67 of the 221 proposals go to the 77th Conference as 13 agenda entries (56 in 3 general topics); 123 got no action, 20 are still open and 11 were withdrawn, superseded or removed. Trustees’ committees added 3 more entries.",
+     "page": 9
+    },
+    {
+     "text": "The board approved three committee recommendations: a new investment account for the Reserve Fund, the AAWS and Grapevine tax returns, and clearer duties for its International Committee.",
+     "page": 5
+    },
+    {
+     "text": "Contributions ran ahead of budget while literature sales lagged; the Reserve Fund stood at about 4.9 months of operating expenses.",
+     "page": 5
+    }
+   ],
+   "attendance": {
+    "trustees_present": 22,
+    "trustees_total": 22,
+    "guests": "33 invited guests, among them the 2027 Conference committee chairs and the delegate chair, plus the recording secretary.",
+    "page": 2
+   },
+   "reports": [
+    {
+     "id": "gsb",
+     "name": "General Service Board (quarterly meeting)",
+     "kind": "minutes",
+     "tc": null,
+     "body": "GSB",
+     "met": "2026-11-02",
+     "summary": "The board’s quarterly business meeting closed the weekend on Monday, Nov 2. It heard the corporate and committee reports, accepted most of them by motion, approved three committee recommendations and ended with a short executive session. The packet’s minutes were still pending the board’s approval.",
+     "accepted": "Communications report (the summary of letters received) accepted as presented; the minutes themselves go to the next quarterly meeting for approval.",
+     "accepted_page": 3,
+     "highlights": [
+      {
+       "text": "All 22 trustees attended, with 33 invited guests and the board’s recording secretary.",
+       "page": 2
+      },
+      {
+       "text": "The chair welcomed the 2027 Conference committee chairs; the delegate chair (Panel 76, Area 86) spoke first, on how relationships and trust make room for frank talk about hard questions.",
+       "page": 2
+      },
+      {
+       "text": "The agenda was approved after a missing Public Information background paper was added to the meeting book.",
+       "page": 2
+      },
+      {
+       "text": "Letters this quarter were mostly about changes to A.A. literature; others raised the purchase of the Everything A.A. app, contribution policies, communication and La Vigne, a French-language magazine made locally.",
+       "page": 3
+      },
+      {
+       "text": "The chair thanked trustees, directors, appointed committee members and staff, and said the Conference committee chairs had enriched the board’s discussions.",
+       "page": 3
+      },
+      {
+       "text": "The open session ended at 11:05 a.m. with the Declaration of Unity; after a recess the board sat in executive session from 11:25 to 11:50 and adjourned at 11:52.",
+       "page": 9
+      }
+     ],
+     "recommendations": [],
+     "numbers": [],
+     "next": [
+      {
+       "date": "2027-02-01",
+       "approx": false,
+       "text": "Next quarterly board meeting, closing the winter board weekend (Jan 29–Feb 1).",
+       "page": 61,
+       "calendar_id": "gsb-q1-2027"
+      }
+     ],
+     "pai": null,
+     "followups": [
+      {
+       "request": "r26-23",
+       "text": "Done as planned: the chairs of the 2027 Conference committees and the delegate chair were the board’s guests, each sat in on the matching trustees’ committee, and the delegate chair opened the board meeting.",
+       "page": 2
+      }
+     ]
+    },
+    {
+     "id": "aaws",
+     "name": "A.A. World Services (AAWS) board",
+     "kind": "board",
+     "tc": null,
+     "body": "AAWS",
+     "met": "2026-10-29",
+     "summary": "AAWS reported on its first meeting cycle under a new committee format, strategic planning, a leaner 2027 budget process, the Everything A.A. app it now owns and the new online contribution platform. It took no action on all 17 proposals sent to it.",
+     "accepted": "Accepted as presented.",
+     "accepted_page": 4,
+     "highlights": [
+      {
+       "text": "Four of its six committees met online before the Oct 29 board meeting, then reported back briefly in person; the chair asked that the format stay flexible. The report says that meeting’s highlights would follow later; only its actions on proposals are printed.",
+       "page": 10
+      },
+      {
+       "text": "Last year’s budget went through six drafts. For 2027 AAWS wants fewer meetings, a clearer timetable and a better first draft, with the budget settled in January.",
+       "page": 11
+      },
+      {
+       "text": "App subscription income, reported since May 2026 after AAWS acquired the app, is on track with projections.",
+       "page": 11
+      },
+      {
+       "text": "Most-viewed app sections: Daily Reflections, the Big Book, literature and pamphlets, prayers, the Twelve and Twelve, audio, meetings and journals. Everything else, the workshop recordings included, drew under 1%.",
+       "page": 11
+      },
+      {
+       "text": "Users sent 453 support tickets in September; more of them asked to remove the Joe and Charlie workshop recordings than to keep them.",
+       "page": 12
+      },
+      {
+       "text": "The minutes say a December app update will take out those recordings and add As Bill Sees It.",
+       "page": 4
+      },
+      {
+       "text": "First week of the contribution platform (to Oct 26): 489 givers, 42 in Canadian dollars and 49 recurring gifts; 36% paid the processing fee themselves.",
+       "page": 12
+      },
+      {
+       "text": "All 17 proposals got no action, each with a stated reason, mostly that the matter is AAWS or GSO business. Three ideas were passed on inside: to Publishing, a GSO staff desk and a board committee.",
+       "page": 15
+      }
+     ],
+     "recommendations": [
+      {
+       "text": "Retire AAWS’s policy on GSO’s YouTube channels.",
+       "outcome": "No vote printed",
+       "status": "no_vote",
+       "board": "AAWS",
+       "page": 13
+      },
+      {
+       "text": "Send the Form 990 to the trustees’ Finance Committee, and the International Literature Fund and World Service Meeting Fund reports to the trustees’ International Committee.",
+       "outcome": "No vote printed",
+       "status": "no_vote",
+       "board": "AAWS",
+       "page": 13
+      },
+      {
+       "text": "Approve a revised finance responsibility chart and the revised policy for sorting AAWS policies into governance and operational ones; label six policies under it, approving revised asset, access and personal-device policies along the way.",
+       "outcome": "No vote printed",
+       "status": "no_vote",
+       "board": "AAWS",
+       "page": 13
+      },
+      {
+       "text": "Add As Bill Sees It (PDF) to the app, but not to aa.org.",
+       "outcome": "No vote printed; the minutes say the December app update adds it",
+       "status": "no_vote",
+       "board": "AAWS",
+       "page": 14
+      },
+      {
+       "text": "Update the fourth edition on aa.org and in the app to match the 2026 Advisory Action that removed a racially insensitive word.",
+       "outcome": "No vote printed",
+       "status": "no_vote",
+       "board": "AAWS",
+       "page": 14
+      },
+      {
+       "text": "Keep the fifth edition off the free side of aa.org for now; once it is published, offer it on the app’s subscription side.",
+       "outcome": "No vote printed",
+       "status": "no_vote",
+       "board": "AAWS",
+       "page": 14
+      }
+     ],
+     "numbers": [
+      {
+       "label": "Everything A.A. app subscription revenue since May 2026",
+       "value": "$95,194.48",
+       "as_of": "Oct 28, 2026",
+       "page": 12
+      },
+      {
+       "label": "App support tickets in September",
+       "value": "453",
+       "as_of": "Sept 2026",
+       "page": 12
+      },
+      {
+       "label": "Online contributors in the platform’s first week",
+       "value": "489",
+       "as_of": "Oct 26, 2026",
+       "page": 12
+      },
+      {
+       "label": "… of them giving in Canadian dollars",
+       "value": "42",
+       "as_of": "Oct 26, 2026",
+       "page": 12
+      },
+      {
+       "label": "Recurring contributions set up",
+       "value": "49",
+       "as_of": "Oct 26, 2026",
+       "page": 12
+      },
+      {
+       "label": "Contributions made with the new payment options",
+       "value": "27.8%",
+       "as_of": "first week",
+       "page": 12
+      },
+      {
+       "label": "Proposals assigned to the AAWS board",
+       "value": "17",
+       "as_of": "Oct 29, 2026",
+       "page": 15
+      }
+     ],
+     "next": [
+      {
+       "date": "2026-12",
+       "approx": true,
+       "text": "Late November or early December: the AAWS Finance Committee reviews a preliminary 2027 budget, then works with the trustees’ Finance Committee.",
+       "page": 11
+      },
+      {
+       "date": "2026-12",
+       "approx": true,
+       "text": "Next Everything A.A. app update (early December).",
+       "page": 12,
+       "calendar_id": "aa-app-update-2026-12"
+      },
+      {
+       "date": "2027-01-06",
+       "approx": false,
+       "text": "AAWS Finance Committee meets all directors (7 p.m. Eastern) to refine the 2027 budget.",
+       "page": 11,
+       "calendar_id": "aaws-budget-2027-01-06"
+      },
+      {
+       "date": "2027-01",
+       "approx": true,
+       "text": "January AAWS board meeting: the 2027 budget comes up for final approval.",
+       "page": 11
+      }
+     ],
+     "pai": {
+      "assigned": 17,
+      "considered": 17,
+      "forwarded": 0,
+      "no_action": 17,
+      "other": 0,
+      "page": 15,
+      "note": "The minutes (p. 4) add only that none of the 17 went to the Conference."
+     },
+     "followups": [
+      {
+       "request": "r26-26",
+       "text": "Before the Oct 29 board meeting an AAWS committee recommended retiring the policy on GSO’s YouTube channels; no vote on it is printed.",
+       "page": 13
+      }
+     ]
+    },
+    {
+     "id": "aaws-jun-jul",
+     "name": "AAWS board and GSO: June–July 2026 highlights (attached)",
+     "kind": "board",
+     "tc": null,
+     "body": null,
+     "met": null,
+     "summary": "Attached to the AAWS report: what the AAWS board did at its June and July meetings, committee by committee, and department news from the General Service Office. They cover first-half finances, the Reserve Fund, the fifth-edition Big Book, prices, apps and data accuracy.",
+     "accepted": null,
+     "highlights": [
+      {
+       "text": "First half of 2026: revenue slightly above budget and expenses about 5% under it, so the surplus beat the budget; office retrofit costs are counted separately.",
+       "page": 19
+      },
+      {
+       "text": "The Reserve Fund covered 4.97 months of budgeted GSO, Grapevine and La Viña costs, expected to slip to about 4.79 once the full retrofit draw is taken.",
+       "page": 20
+      },
+      {
+       "text": "The audio edition of the Plain Language Big Book was finished in June, early and well under budget, and went on sale in July.",
+       "page": 20
+      },
+      {
+       "text": "The fifth-edition Big Book, approved by the 2026 Conference, was still in production, expected by the end of 2026 with a dust jacket.",
+       "page": 20
+      },
+      {
+       "text": "Season 2 of the GSO podcast was done and recording of Season 3 had begun.",
+       "page": 21
+      },
+      {
+       "text": "A Data Integrity Working Group, chaired by an AAWS director, will study how group and membership numbers are reported.",
+       "page": 23
+      },
+      {
+       "text": "With all staff now on one floor, GSO departments reported better communication; Language Services is cutting its translation backlog.",
+       "page": 24
+      },
+      {
+       "text": "Four task forces are acting on the findings of the GSO office inventory.",
+       "page": 25
+      }
+     ],
+     "recommendations": [
+      {
+       "text": "Publish the fifth edition with a jacket, at a $20 list price for the hardcover.",
+       "outcome": "Approved by the AAWS board in July 2026",
+       "status": "approved",
+       "board": "AAWS",
+       "page": 21
+      },
+      {
+       "text": "Set a $5 list price for the printed 2026 Final Conference Report.",
+       "outcome": "Approved by the AAWS board in July 2026",
+       "status": "approved",
+       "board": "AAWS",
+       "page": 21
+      },
+      {
+       "text": "Pay $8,110 from the International Literature Fund for a Haitian Creole translation project.",
+       "outcome": "Approved by the AAWS board in July 2026",
+       "status": "approved",
+       "board": "AAWS",
+       "page": 20
+      },
+      {
+       "text": "Adopt the 2026 reforecast budget, with literature sales revenue set at $16,301,682.",
+       "outcome": "Approved by the AAWS board in July 2026",
+       "status": "approved",
+       "board": "AAWS",
+       "page": 20
+      }
+     ],
+     "numbers": [
+      {
+       "label": "AAWS operating surplus before depreciation, six months",
+       "value": "$767,650",
+       "as_of": "June 30, 2026",
+       "page": 19
+      },
+      {
+       "label": "Reserve Fund balance",
+       "value": "$9.311M",
+       "as_of": "June/July 2026 report",
+       "page": 20
+      },
+      {
+       "label": "List price of the fifth-edition hardcover (B-1)",
+       "value": "$20",
+       "as_of": "July 2026",
+       "page": 21
+      }
+     ],
+     "next": [],
+     "pai": null,
+     "followups": [
+      {
+       "request": "r26-25",
+       "text": "Season 2 of the GSO podcast is finished and Season 3 is being recorded; the first- and second-quarter podcast reports went to the trustees’ PI Committee.",
+       "page": 21
+      },
+      {
+       "request": "r26-26",
+       "text": "First- and second-quarter 2026 YouTube reports went to the trustees’ PI Committee.",
+       "page": 21
+      },
+      {
+       "request": "r26-27",
+       "text": "Quarterly aa.org reports went to the trustees’ PI Committee; AAWS’s website policy is still under review.",
+       "page": 21
+      },
+      {
+       "request": "r26-29",
+       "text": "A first-quarter and an amended second-quarter Meeting Guide app report went to the trustees’ PI Committee.",
+       "page": 21
+      },
+      {
+       "request": "r26-30",
+       "text": "First- and second-quarter reports on AAWS’s online business profiles went to the trustees’ PI Committee.",
+       "page": 21
+      },
+      {
+       "request": "r26-31",
+       "text": "A first-quarter and an amended second-quarter Google Ads report went to the trustees’ PI Committee.",
+       "page": 21
+      }
+     ]
+    },
+    {
+     "id": "grapevine",
+     "name": "AA Grapevine board",
+     "kind": "board",
+     "tc": null,
+     "body": "GV",
+     "met": "2026-10-29",
+     "summary": "Grapevine subscriptions are up on a year ago while La Viña’s are down; prices rise on Jan 1, 2027, and podcasts and apps keep growing. The board took no action on five proposals and held six on the Preamble for a December interim meeting.",
+     "accepted": "Accepted as presented.",
+     "accepted_page": 3,
+     "highlights": [
+      {
+       "text": "September 2026: Grapevine had 60,176 subscriptions, 1,475 more than a year earlier but 860 below the reforecast; La Viña had 6,662, down 1,373 on the year.",
+       "page": 26
+      },
+      {
+       "text": "From Jan 1, 2027 every Grapevine and La Viña book costs $2.00 more, and a year of Grapevine in print costs $39.00.",
+       "page": 27
+      },
+      {
+       "text": "Through September Grapevine was $277,108 in the red, less than the $299,768 loss a year earlier; a General Service Board contribution of $321,985 covered La Viña.",
+       "page": 28
+      },
+      {
+       "text": "Carry the Message gave 936 subscriptions, worth $32,120, to alcoholics from January to September 2026.",
+       "page": 26
+      },
+      {
+       "text": "La Viña’s first online open meeting was set for Nov 5 and its new podcast for Nov 9; the Grapevine Variety Hour podcast has passed 1.6 million downloads.",
+       "page": 27
+      },
+      {
+       "text": "After Conference committee feedback the board dropped a $20,000 survey consultant; an informal survey will run about 90 days, and trustees asked that results be labeled non-scientific.",
+       "page": 30
+      },
+      {
+       "text": "The board’s nominating committee interviewed candidates for its general service trustee opening in September and October; regional trustee interviews were set for Oct 31 and Nov 1.",
+       "page": 29
+      },
+      {
+       "text": "Grapevine and La Viña plan to move all international print subscribers to digital, with three extra issues free or a refund, by about March 2027.",
+       "page": 26
+      }
+     ],
+     "recommendations": [
+      {
+       "text": "Pool Carry the Message gifts of up to $5,000 in a fund drawn down as subscriptions are given.",
+       "outcome": "Tabled until legal and auditor advice",
+       "status": "tabled",
+       "board": "GV",
+       "page": 30
+      },
+      {
+       "text": "Replace the paid survey with an informal Grapevine and La Viña survey.",
+       "outcome": "Revised plan due in December, approval in January",
+       "status": "in_progress",
+       "board": "GV",
+       "page": 30
+      },
+      {
+       "text": "Four licenses abroad for Grapevine books (Brazil, Russia, Poland, Lithuania).",
+       "outcome": "Approved by the Grapevine board",
+       "status": "approved",
+       "board": "GV",
+       "page": 30
+      }
+     ],
+     "numbers": [
+      {
+       "label": "Grapevine subscriptions, total",
+       "value": "60,176",
+       "as_of": "Sept 2026",
+       "page": 26
+      },
+      {
+       "label": "Grapevine app subscriptions",
+       "value": "9,209",
+       "as_of": "Sept 2026",
+       "page": 26
+      },
+      {
+       "label": "La Viña subscriptions, total",
+       "value": "6,662",
+       "as_of": "Sept 2026",
+       "page": 26
+      },
+      {
+       "label": "Yearly Grapevine print subscription from Jan 1, 2027",
+       "value": "$39.00",
+       "as_of": null,
+       "page": 27
+      },
+      {
+       "label": "Yearly La Viña print subscription from Jan 1, 2027",
+       "value": "$19.50",
+       "as_of": null,
+       "page": 27
+      },
+      {
+       "label": "Grapevine net income (loss), year to date",
+       "value": "($277,108)",
+       "as_of": "Sept 2026",
+       "page": 28
+      },
+      {
+       "label": "General Service Board contribution covering La Viña, year to date",
+       "value": "$321,985",
+       "as_of": "Sept 2026",
+       "page": 28
+      },
+      {
+       "label": "Variety Hour podcast downloads",
+       "value": "1,610,541",
+       "as_of": "Oct 23, 2026",
+       "page": 27
+      }
+     ],
+     "next": [
+      {
+       "date": "2026-12",
+       "approx": true,
+       "text": "Interim board meeting on the six Preamble proposals (#18, #20, #56, #59, #205 and #206); no exact date is given.",
+       "page": 3,
+       "calendar_id": "gv-interim-2026-12"
+      },
+      {
+       "date": "2026-12-12",
+       "approx": false,
+       "text": "Grapevine planning meeting, 10 a.m., online.",
+       "page": 32,
+       "calendar_id": "gv-planning-2026-12"
+      },
+      {
+       "date": "2027-01-01",
+       "approx": false,
+       "text": "New Grapevine and La Viña book and subscription prices take effect.",
+       "page": 27,
+       "calendar_id": "gv-prices-2027"
+      },
+      {
+       "date": "2027-01",
+       "approx": true,
+       "text": "The board expects to approve the revised survey.",
+       "page": 30
+      },
+      {
+       "date": "2027-01",
+       "approx": true,
+       "text": "Work starts on a way for intergroups and central offices to sell subscriptions for a 10% commission.",
+       "page": 27
+      }
+     ],
+     "pai": {
+      "assigned": 11,
+      "considered": 11,
+      "forwarded": 0,
+      "no_action": 5,
+      "other": 6,
+      "page": 3,
+      "note": "Six Preamble proposals were held for a December interim meeting. The report’s own table marks one of them (#56) as declined; the minutes and the Nov 6 grid keep it open."
+     },
+     "followups": [
+      {
+       "request": "r26-13",
+       "text": "The $20,000 consultant was dropped for an informal survey on how the magazines help recovery, which products members use and why some do not subscribe; a revised plan comes in December.",
+       "page": 30
+      },
+      {
+       "request": null,
+       "text": "Five-year plan: a print-and-paper consultant is looking for cheaper printing and mailing, and in January work starts on a system for local offices to sell subscriptions.",
+       "page": 27
+      }
+     ]
+    },
+    {
+     "id": "archives",
+     "name": "Trustees’ Archives Committee",
+     "kind": "trustees_committee",
+     "tc": "ARCHIVES",
+     "body": null,
+     "met": "2026-10-31",
+     "summary": "With the 2027 Conference Archives chair as a guest, the committee approved a revised collection policy, raised the suggested contribution for printed photos, heard progress on saving audio recordings and named a subcommittee on classified records. It had no proposals and no recommendations.",
+     "accepted": "Accepted as presented.",
+     "accepted_page": 4,
+     "highlights": [
+      {
+       "text": "Printing costs went up, so the suggested contribution for a printed archival photo rose from $2.75 to $5.00.",
+       "page": 33
+      },
+      {
+       "text": "The revised GSO Archives Collection Policy adds a mission and purpose statement and brings the rules for acquiring material up to current professional practice.",
+       "page": 33
+      },
+      {
+       "text": "Audio preservation: the vendor moving recordings off CDs (Phase 3) has all the material and should finish by June 2027; the paused Phase 2 resumes in January.",
+       "page": 33
+      },
+      {
+       "text": "A two-member subcommittee will look at the Archives’ classified holdings, part of a review of a records policy the minutes say has not been updated in several years.",
+       "page": 33
+      },
+      {
+       "text": "Of three requests to use archival material, two were approved and one, about a person who has died, was refused.",
+       "page": 4
+      },
+      {
+       "text": "The committee reviewed a first version of the Archives’ 2027 preliminary budget.",
+       "page": 33
+      }
+     ],
+     "recommendations": [],
+     "numbers": [
+      {
+       "label": "Suggested contribution per printed archival photo (was $2.75)",
+       "value": "$5.00",
+       "as_of": "Oct 31, 2026",
+       "page": 33
+      }
+     ],
+     "next": [
+      {
+       "date": "2027-01",
+       "approx": true,
+       "text": "Phase 2 of the audio preservation project restarts; an updated report comes to the winter meeting.",
+       "page": 33
+      },
+      {
+       "date": "2027-06",
+       "approx": true,
+       "text": "Phase 3 (recordings moved off CDs) is due back from the vendor.",
+       "page": 33
+      }
+     ],
+     "pai": null,
+     "followups": []
+    },
+    {
+     "id": "cpc-ta",
+     "name": "Trustees’ CPC/Treatment and Accessibilities Committee",
+     "kind": "trustees_committee",
+     "tc": "CPCTA",
+     "body": "TCPC",
+     "met": "2026-10-31",
+     "summary": "With the 2027 Conference chairs for CPC and for Treatment and Accessibilities as guests, the committee set out to put Class A trustees forward as speakers at professional conferences, reviewed the draft pamphlet for mental health professionals and narrowed a subcommittee’s task.",
+     "accepted": "Accepted as presented.",
+     "accepted_page": 5,
+     "highlights": [
+      {
+       "text": "A first set of short videos by Class A (nonalcoholic) trustees is up on the AAWS YouTube and LinkedIn pages; more videos and participation guidelines are planned.",
+       "page": 35
+      },
+      {
+       "text": "For 2027 the committee will focus on getting Class A trustees onto professional conference programs, suggesting that $10,000 move from the exhibits budget to their travel.",
+       "page": 35
+      },
+      {
+       "text": "The draft pamphlet for mental health professionals follows the Conference committee’s guidance; editorial notes go back to Publishing.",
+       "page": 36
+      },
+      {
+       "text": "No action on reprinting “Three Talks to Medical Societies” (#177): it would cost money, and other ways of working with doctors may serve better.",
+       "page": 36
+      },
+      {
+       "text": "The Welcoming Language Subcommittee will now design a way to check CPC and Treatment/Accessibilities materials for wording that could put off newcomers or offend professionals, testing it on up to three pieces.",
+       "page": 37
+      },
+      {
+       "text": "A draft Military Audio Project service card needs a clearer message (it offers stories, not only audio) and a picture that suits both U.S. and Canadian service members.",
+       "page": 37
+      }
+     ],
+     "recommendations": [],
+     "numbers": [
+      {
+       "label": "Moved in the 2027 CPC budget from exhibits to Class A speakers’ travel (proposed)",
+       "value": "$10,000",
+       "as_of": "Oct 31, 2026",
+       "page": 35
+      }
+     ],
+     "next": [
+      {
+       "date": "2027-01-29",
+       "end": "2027-02-01",
+       "approx": false,
+       "text": "Updates on the CPC presentation, other ways to work with medical professionals, the welcoming-language process and the military service card.",
+       "page": 36,
+       "calendar_id": "gsb-q1-2027"
+      },
+      {
+       "date": "2028-01",
+       "approx": true,
+       "text": "Class A participation guidelines come back for approval at the first-quarter 2028 meeting, as the report prints it.",
+       "page": 36
+      }
+     ],
+     "pai": {
+      "assigned": 1,
+      "considered": 1,
+      "forwarded": 0,
+      "no_action": 1,
+      "other": 0,
+      "page": 36,
+      "note": "Proposal #12, which the trustees’ PI Committee sent here on Nov 1, came after this meeting and was still open on the Nov 6 grid."
+     },
+     "followups": [
+      {
+       "request": "r26-10",
+       "text": "The latest draft of the pamphlet for mental health professionals was found in line with the Conference committee’s guidance; editorial notes went to Publishing.",
+       "page": 36
+      }
+     ]
+    },
+    {
+     "id": "corrections",
+     "name": "Trustees’ Corrections Committee",
+     "kind": "trustees_committee",
+     "tc": "CORRECTIONS",
+     "body": "TCORR",
+     "met": "2026-11-01",
+     "summary": "With the 2027 Conference Corrections chair as a guest, the committee heard that digital A.A. content now reaches 1,763 U.S. facilities and that staff had fixed a shipping problem; it forwarded its one proposal and asked about a printed handbook for groups inside.",
+     "accepted": "Accepted as presented.",
+     "accepted_page": 5,
+     "highlights": [
+      {
+       "text": "One digital partner added 73 facilities, for 1,763 in the United States; another partner shares A.A. content in federal and provincial facilities in Canada.",
+       "page": 38
+      },
+      {
+       "text": "The Corrections Correspondence Service is short of men on the outside: usually 50 to 150 men inside are waiting for a match.",
+       "page": 38
+      },
+      {
+       "text": "Orders for facilities that take literature only from the publisher will be flagged and shipped under the AAWS corporate name.",
+       "page": 38
+      },
+      {
+       "text": "Members in custody should have the same material as members outside, service and Grapevine material included; the committee asked for more work on this.",
+       "page": 38
+      },
+      {
+       "text": "Proposal #144, merging two corrections pieces into one pamphlet with guidance on speaking inside, goes to the 77th Conference.",
+       "page": 38
+      },
+      {
+       "text": "Members who carry the message inside asked for a printed handbook for groups in facilities; staff will report on print options in early 2027.",
+       "page": 39
+      }
+     ],
+     "recommendations": [],
+     "numbers": [
+      {
+       "label": "U.S. correctional facilities with digital A.A. content",
+       "value": "1,763",
+       "as_of": "Nov 1, 2026",
+       "page": 38
+      },
+      {
+       "label": "Men inside typically waiting for a correspondent",
+       "value": "50–150",
+       "as_of": "Nov 1, 2026",
+       "page": 38
+      }
+     ],
+     "next": [
+      {
+       "date": "2027-01-29",
+       "end": "2027-02-01",
+       "approx": false,
+       "text": "Staff feasibility report on print options for a correctional facility group handbook.",
+       "page": 39,
+       "calendar_id": "gsb-q1-2027"
+      },
+      {
+       "date": "2027-04-11",
+       "end": "2027-04-17",
+       "approx": false,
+       "text": "The 77th Conference takes up proposal #144.",
+       "page": 38,
+       "calendar_id": "gsc77"
+      }
+     ],
+     "pai": {
+      "assigned": 1,
+      "considered": 1,
+      "forwarded": 1,
+      "no_action": 0,
+      "other": 0,
+      "page": 38
+     },
+     "followups": []
+    },
+    {
+     "id": "finance",
+     "name": "Trustees’ Finance and Budgetary Committee",
+     "kind": "trustees_committee",
+     "tc": "FINANCE",
+     "body": "TF",
+     "met": "2026-11-01",
+     "summary": "The committee forwarded two of its seven proposals (a three-month Reserve Fund minimum and a policy on disclosing major acquisitions), saw the new contributions portal, reviewed nine-month results and sent the board two recommendations, both approved.",
+     "accepted": "Accepted as amended; both recommendations approved by substantial unanimity.",
+     "accepted_page": 5,
+     "highlights": [
+      {
+       "text": "Contributions ran 6% above the year-to-date reforecast budget, while gross literature sales were 10% below it.",
+       "page": 44
+      },
+      {
+       "text": "Literature sales peaked in February after the price rise and fell through August, mostly because fewer Big Books sold, likely as buyers wait for the fifth edition.",
+       "page": 42
+      },
+      {
+       "text": "GSO’s nine-month surplus before depreciation was $1,042,609 against a budgeted $178,432, mainly because the World Service Meeting, this weekend and the Pacific Forum were still to be spent; the CFO expects operating cash to stay positive through 2026 if revenue holds.",
+       "page": 42
+      },
+      {
+       "text": "Cash was tight: on Sept 28 GSO had $439,424 on hand against $1,369,628 of bills due within 90 days, and its main printer agreed to a longer payment schedule.",
+       "page": 43
+      },
+      {
+       "text": "The Reserve Fund stood at $9,234,275 on Sept 30, about 4.9 months of GSO, Grapevine and La Viña operating expenses; no more retrofit draws are expected.",
+       "page": 43
+      },
+      {
+       "text": "Three Reserve Fund proposals (#133; #179 and #181 on p. 41) got no action: such rules could keep the board from meeting its legal duties, the 77th Conference will hold Reserve Fund sharing sessions, and a similar proposal was going forward.",
+       "page": 40
+      },
+      {
+       "text": "The committee approved, with amendments, the Composition, Scope and Procedure of its new Self-Support Subcommittee.",
+       "page": 48
+      },
+      {
+       "text": "Grapevine’s 2026 cash had help: $200,000 from the Reserve Fund, and up to $200,000 from its subscription liability fund, approved by the trustees’ Finance Committee on Aug 2 and paid half in August, half in October.",
+       "page": 47
+      }
+     ],
+     "recommendations": [
+      {
+       "text": "Open a JPMorgan Chase investment account so the Reserve Fund can be invested more widely, for example in U.S. Treasury securities.",
+       "outcome": "Approved by substantial unanimity",
+       "status": "approved",
+       "board": "GSB",
+       "page": 5
+      },
+      {
+       "text": "Approve the AAWS and Grapevine IRS Form 990 returns.",
+       "outcome": "Approved by substantial unanimity",
+       "status": "approved",
+       "board": "GSB",
+       "page": 5
+      }
+     ],
+     "numbers": [
+      {
+       "label": "Reserve Fund balance",
+       "value": "$9,234,275",
+       "as_of": "Sept 30, 2026",
+       "page": 43
+      },
+      {
+       "label": "Reserve Fund in months of operating expenses",
+       "value": "4.9 months",
+       "as_of": "Sept 30, 2026",
+       "page": 43
+      },
+      {
+       "label": "Contributions compared with the year-to-date reforecast budget",
+       "value": "6% more",
+       "as_of": "Sept 30, 2026",
+       "page": 44
+      },
+      {
+       "label": "Gross literature sales compared with the year-to-date reforecast budget",
+       "value": "10% less",
+       "as_of": "Sept 30, 2026",
+       "page": 44
+      },
+      {
+       "label": "Big Book sales so far this year, compared with 2025",
+       "value": "down by 63,901 copies (11%)",
+       "as_of": "Sept 30, 2026",
+       "page": 42
+      },
+      {
+       "label": "GSO operating surplus before depreciation, nine months",
+       "value": "$1,042,609",
+       "as_of": "Sept 30, 2026",
+       "page": 42
+      },
+      {
+       "label": "GSO short-term cash deficit (cash on hand minus 90-day bills)",
+       "value": "$930,204",
+       "as_of": "Sept 28, 2026",
+       "page": 43
+      }
+     ],
+     "next": [
+      {
+       "date": "2027-01-11",
+       "end": "2027-01-15",
+       "approx": true,
+       "text": "Preliminary 2027 budget talks, for GSO and the board and for Grapevine and La Viña, in the week of Jan 11.",
+       "page": 44,
+       "calendar_id": "budgets-2027-jan"
+      },
+      {
+       "date": "2027-04-11",
+       "end": "2027-04-17",
+       "approx": false,
+       "text": "A Reserve Fund sharing session during the 77th Conference.",
+       "page": 40,
+       "calendar_id": "gsc77"
+      }
+     ],
+     "pai": {
+      "assigned": 7,
+      "considered": 7,
+      "forwarded": 2,
+      "no_action": 5,
+      "other": 0,
+      "page": 40
+     },
+     "followups": []
+    },
+    {
+     "id": "conference",
+     "name": "Trustees’ General Service Conference Committee",
+     "kind": "trustees_committee",
+     "tc": "CONFERENCE",
+     "body": "TGSC",
+     "met": "2026-11-01",
+     "summary": "With three Conference committee chairs and the delegate chair as guests, the committee chose Slido for voting at the 77th Conference, set online pre-work for secondary committees as a trial and sent five subjects on to the Conference.",
+     "accepted": "The minutes record no vote on this report.",
+     "accepted_page": 6,
+     "highlights": [
+      {
+       "text": "Voting at the 77th Conference moves to Slido, offered as a trial after members were surveyed on the last Conference’s voting test; the minutes put the saving at $10,000.",
+       "page": 50
+      },
+      {
+       "text": "Also a trial: secondary committees meet online before Conference week for preliminary work, so they need no second meeting that week. Recommendations are still settled at the Conference.",
+       "page": 50
+      },
+      {
+       "text": "Going on: the group-definition passage and the simple-majority footnote, plus three general topics: the Charter and the first 164 pages, how recommendations and floor actions are made, and an online area.",
+       "page": 54
+      },
+      {
+       "text": "27 proposals on new ways to change core literature, or a freeze on the founders’ writings, got no action while the trustees’ Literature Committee defines and classifies A.A. literature.",
+       "page": 52
+      },
+      {
+       "text": "The workload subcommittee’s plan for spreading agenda items among the Conference committees is expected at the winter board meeting.",
+       "page": 50
+      },
+      {
+       "text": "The committee also went over accessibility arrangements so that every member of the 77th Conference can take full part.",
+       "page": 6
+      },
+      {
+       "text": "The hold on contract talks for the 80th Conference (2030) was lifted while other Conference formats are still studied.",
+       "page": 6
+      }
+     ],
+     "recommendations": [],
+     "numbers": [
+      {
+       "label": "Estimated saving from voting on Slido",
+       "value": "$10,000",
+       "as_of": null,
+       "page": 6
+      },
+      {
+       "label": "Proposals considered, as the minutes count them",
+       "value": "100",
+       "as_of": null,
+       "page": 6
+      },
+      {
+       "label": "Categories they were sorted into",
+       "value": "16",
+       "as_of": null,
+       "page": 6
+      },
+      {
+       "label": "Subjects forwarded to the 77th Conference",
+       "value": "five",
+       "as_of": null,
+       "page": 6
+      }
+     ],
+     "next": [
+      {
+       "date": "2027-01-29",
+       "end": "2027-02-01",
+       "approx": false,
+       "text": "The workload distribution plan for the 77th Conference, and news on the 80th Conference site and dates.",
+       "page": 50,
+       "calendar_id": "gsb-q1-2027"
+      },
+      {
+       "date": "2027-04-11",
+       "end": "2027-04-17",
+       "approx": false,
+       "text": "At the 77th Conference: Slido voting, and secondary committees’ online preliminary meetings beforehand (a trial).",
+       "page": 50,
+       "calendar_id": "gsc77"
+      }
+     ],
+     "pai": {
+      "assigned": 96,
+      "considered": 96,
+      "forwarded": 59,
+      "no_action": 37,
+      "other": 0,
+      "page": 6,
+      "note": "The minutes say 100 proposals in 16 categories; the report and the Nov 6 grid name 96. Of the ones going on, most sit inside three general topics. Not counted: #74, referred to this committee by the trustees’ PI Committee on Nov 1 (p. 78)."
+     },
+     "followups": [
+      {
+       "request": "r26-12",
+       "text": "No report on cheaper formats yet. Declining a proposal for an online Conference every other year (#194), the committee said that work goes on and savings are sought in planning and budgets.",
+       "page": 53
+      }
+     ]
+    },
+    {
+     "id": "international",
+     "name": "Trustees’ International Committee",
+     "kind": "trustees_committee",
+     "tc": "INTERNATIONAL",
+     "body": null,
+     "met": "2026-10-31",
+     "summary": "The committee asked the board to spell out its own duties more clearly (approved), cut its 2027 travel budget, heard the trustees-at-large on the 29th World Service Meeting and put four new ideas off to the winter meeting.",
+     "accepted": "The minutes record no vote on the report; its one recommendation was approved.",
+     "accepted_page": 6,
+     "highlights": [
+      {
+       "text": "The preliminary 2027 international budget fell from $98,300 to $70,300 by cutting travel, meals and lodging.",
+       "page": 56
+      },
+      {
+       "text": "At the 29th World Service Meeting, delegates met in small groups on three topics: hearing online groups, public information, and whether outside institutions steer A.A.",
+       "page": 56
+      },
+      {
+       "text": "Ideas from other countries included posters in bars, AI-made videos with invented characters so no real person is shown, and meetings at music festivals.",
+       "page": 56
+      },
+      {
+       "text": "Travel approved for late 2026: the U.S. trustee-at-large and the international coordinator to the East Africa Convention in Uganda, the general manager to the East and Central Africa Service Meeting.",
+       "page": 57
+      },
+      {
+       "text": "A refreshed A.A. Around the World webpage, a current international data map, Class A trustees’ role abroad and what trustees-at-large report all come back at the winter meeting.",
+       "page": 58
+      },
+      {
+       "text": "The minutes add that the committee went over its 2025–2026 inventory and ways to raise members’ engagement.",
+       "page": 6
+      }
+     ],
+     "recommendations": [
+      {
+       "text": "Revise and renumber five items of the committee’s Composition, Scope and Procedure to make its oversight and reporting duties clearer.",
+       "outcome": "Approved by substantial unanimity",
+       "status": "approved",
+       "board": "GSB",
+       "page": 6
+      }
+     ],
+     "numbers": [
+      {
+       "label": "Preliminary 2027 international budget (cut from $98,300)",
+       "value": "$70,300",
+       "as_of": "Oct 31, 2026",
+       "page": 56
+      }
+     ],
+     "next": [
+      {
+       "date": "2026-11-27",
+       "end": "2026-11-29",
+       "approx": false,
+       "text": "East and Central Africa Service Meeting; the general manager attends.",
+       "page": 57
+      },
+      {
+       "date": "2027-01-29",
+       "end": "2027-02-01",
+       "approx": false,
+       "text": "Staff updates on the webpage, the data map, Class A trustees’ role abroad and trustee-at-large reporting.",
+       "page": 58,
+       "calendar_id": "gsb-q1-2027"
+      }
+     ],
+     "pai": null,
+     "followups": []
+    },
+    {
+     "id": "icrf",
+     "name": "Trustees’ International Conventions/Regional Forums Committee",
+     "kind": "trustees_committee",
+     "tc": "ICRF",
+     "body": "TICRF",
+     "met": "2026-10-31",
+     "summary": "With the 2027 Conference IC/RF chair as a guest, the committee shaped a shorter online Regional Forum, kept flags in the Convention ceremony, moved toward a 2030 theme and declaration, and forwarded one of its three proposals.",
+     "accepted": "Accepted by the board.",
+     "accepted_page": 6,
+     "highlights": [
+      {
+       "text": "A five-hour online Forum would serve members of online-only groups and remote communities and anyone who cannot get to an in-person Forum; staff bring options in early 2027.",
+       "page": 59
+      },
+      {
+       "text": "Evaluations of the 2026 Western Canada, Eastern Canada and Southeast Forums showed first-timers leaving with a better grasp of the structure and new enthusiasm for service.",
+       "page": 60
+      },
+      {
+       "text": "No action on a special online Forum for online groups (#156) or a Forum registration fee (#190); the cost of live interpretation will be looked at again in the Forums budget.",
+       "page": 60
+      },
+      {
+       "text": "The flag subcommittee weighed a ceremony without flags and chose to keep them; it is still studying sovereign-state flags.",
+       "page": 60
+      },
+      {
+       "text": "A board vote to approve a proposed 2030 declaration failed because one trustee wanted wording changes; that trustee now accepts the text, so it returns in early 2027.",
+       "page": 60
+      },
+      {
+       "text": "Over 400 theme ideas for the 2030 Convention came in; the committee will choose one to recommend, in executive session, for the board to approve on Feb 1, 2027.",
+       "page": 60
+      },
+      {
+       "text": "Proposal #198, the Lord’s Prayer as a closing option at the Convention’s Big Meetings, goes to the 77th Conference.",
+       "page": 61
+      }
+     ],
+     "recommendations": [],
+     "numbers": [
+      {
+       "label": "2030 Convention theme suggestions received",
+       "value": "over 400",
+       "as_of": "Oct 31, 2026",
+       "page": 60
+      },
+      {
+       "label": "Planned length of the online Forum",
+       "value": "five hours",
+       "as_of": null,
+       "page": 59
+      }
+     ],
+     "next": [
+      {
+       "date": "2026-12-04",
+       "approx": false,
+       "text": "Committee members send staff their top five 2030 theme choices.",
+       "page": 60
+      },
+      {
+       "date": "2027-02-01",
+       "approx": false,
+       "text": "The board is asked to approve the 2030 Convention theme the committee recommends.",
+       "page": 61,
+       "calendar_id": "gsb-q1-2027"
+      }
+     ],
+     "pai": {
+      "assigned": 3,
+      "considered": 3,
+      "forwarded": 1,
+      "no_action": 2,
+      "other": 0,
+      "page": 6
+     },
+     "followups": [
+      {
+       "request": "r26-16",
+       "text": "The flag subcommittee chose to keep flags and will report on sovereign-state flags at the winter meeting; asking areas for feedback is not mentioned.",
+       "page": 60
+      },
+      {
+       "request": "r24-01",
+       "text": "A draft 2030 declaration exists; after a failed board vote and one trustee’s change of mind, it returns to the committee at the winter meeting.",
+       "page": 60
+      }
+     ]
+    },
+    {
+     "id": "literature",
+     "name": "Trustees’ Literature Committee",
+     "kind": "trustees_committee",
+     "tc": "LITERATURE",
+     "body": "TL",
+     "met": "2026-10-31",
+     "summary": "The committee took up 49 of its 61 proposals. Two go on to the 77th Conference, together with the revised P-13 draft; the rest got no action, many handed to subcommittees. The other 12 were left for an interim meeting in late November.",
+     "accepted": "Accepted by the board.",
+     "accepted_page": 7,
+     "highlights": [
+      {
+       "text": "Going on: an update of “The A.A. Group” (P-16), prompted by requests about online groups, new stories for the French-language Big Book, and the revised P-13 draft agreed at a Sept 23 interim meeting.",
+       "page": 73
+      },
+      {
+       "text": "Requests to reverse the 76th Conference’s removal of a racially insensitive term from the Big Book got no action: that Conference had discussed it at length and reached a group conscience.",
+       "page": 64
+      },
+      {
+       "text": "Proposals to change, annotate or protect the founders’ writings got no action while a process for weighing such changes is worked out; a few went to the Founders’ Writing Subcommittee.",
+       "page": 64
+      },
+      {
+       "text": "Plain Language Big Book wording fixes went to its revision subcommittee; bigger asks, such as merging it with the Big Book, wait until the process for changing that book is finished.",
+       "page": 62
+      },
+      {
+       "text": "Seven requests, among them a new story, a footnote, a new appendix and removing, restoring or renumbering passages, got no action: the committee saw no sign of a widely expressed need.",
+       "page": 64
+      },
+      {
+       "text": "The 44 editorial changes the revision subcommittee suggested for the Plain Language Big Book went to AAWS Publishing, which makes those it finds warranted and returns a draft.",
+       "page": 7
+      },
+      {
+       "text": "A new ad hoc committee will look for ways to handle the committee’s growing workload.",
+       "page": 72
+      },
+      {
+       "text": "GSO Archives will look into the history of “hundreds” versus “thousands” on Big Book page 51 for the winter meeting.",
+       "page": 63
+      }
+     ],
+     "recommendations": [],
+     "numbers": [
+      {
+       "label": "Proposals assigned",
+       "value": "61",
+       "as_of": null,
+       "page": 7
+      },
+      {
+       "label": "Proposals considered on Oct 31",
+       "value": "49",
+       "as_of": null,
+       "page": 7
+      },
+      {
+       "label": "Proposals left for the interim meeting",
+       "value": "12",
+       "as_of": null,
+       "page": 7
+      },
+      {
+       "label": "Plain Language Big Book editorial changes sent to Publishing",
+       "value": "44",
+       "as_of": null,
+       "page": 7
+      }
+     ],
+     "next": [
+      {
+       "date": "2026-11-21",
+       "end": "2026-11-23",
+       "approx": true,
+       "text": "Interim meeting on the last 12 proposals; the minutes say Nov 21 and the committee’s report Nov 23, so the packet gives both dates.",
+       "page": 72,
+       "calendar_id": "tl-interim-2026-11"
+      },
+      {
+       "date": "2027-01-29",
+       "end": "2027-02-01",
+       "approx": false,
+       "text": "GSO Archives reports on the history of the page 51 wording (#21).",
+       "page": 63,
+       "calendar_id": "gsb-q1-2027"
+      },
+      {
+       "date": "2027-04-11",
+       "end": "2027-04-17",
+       "approx": false,
+       "text": "The 77th Conference takes up P-16, the French Big Book stories and P-13.",
+       "page": 73,
+       "calendar_id": "gsc77"
+      }
+     ],
+     "pai": {
+      "assigned": 61,
+      "considered": 49,
+      "forwarded": 2,
+      "no_action": 47,
+      "other": 12,
+      "page": 7,
+      "note": "Twelve not reached went to the interim meeting. The minutes count 46 with no action, likely leaving out #153, background for #96; the report and grid count 47. The minutes say 14 went to subcommittees; the report sends 12 there and #21 to GSO Archives."
+     },
+     "followups": [
+      {
+       "request": "r26-21",
+       "text": "Editorial suggestions went to Publishing, which returns a draft manuscript; bigger changes wait because the process for changing the Plain Language Big Book is not finished.",
+       "page": 72
+      },
+      {
+       "request": "r26-32",
+       "text": "The revised P-13 draft goes to the 77th Conference with one small edit, as agreed at a Sept 23 interim meeting.",
+       "page": 73
+      },
+      {
+       "request": "r26-20",
+       "text": "A request for a Twelve Step study workbook for Spanish-speaking members (#182) went to the Spanish plain-language tools subcommittee.",
+       "page": 69
+      },
+      {
+       "request": null,
+       "text": "On defining the founders’ writings: a process for weighing changes to them is under way, and several proposals went to the Founders’ Writing Subcommittee.",
+       "page": 64
+      }
+     ]
+    },
+    {
+     "id": "nominating",
+     "name": "Trustees’ Nominating Committee",
+     "kind": "trustees_committee",
+     "tc": "NOMINATING",
+     "body": "TN",
+     "met": "2026-10-31",
+     "summary": "With the 2027 Conference Trustees chair as a guest, the committee received draft revisions of its 14 procedures, weighed the future of trustee emeriti, looked for more trustee and director candidates, prepared the next board chair search and picked two Class A finalists.",
+     "accepted": "Accepted as presented; its recommendation got no separate vote.",
+     "accepted_page": 7,
+     "highlights": [
+      {
+       "text": "The Class A trustee search drew 19 applications; eight candidates had online interviews, and two finalists will be interviewed at the January board weekend.",
+       "page": 7
+      },
+      {
+       "text": "A subcommittee drafted revisions to all 14 nominating procedures, separating editorial fixes from real changes; the committee reviews each one in January and sends the real changes to the board as recommendations.",
+       "page": 74
+      },
+      {
+       "text": "Regional trustees were interviewed during the weekend so the committee can recommend whether each serves on the AAWS or the Grapevine board; it decides at an interim meeting.",
+       "page": 74
+      },
+      {
+       "text": "A subcommittee reports in January on whether to end the trustee emeriti program; to widen the pool of nontrustee directors, the AAWS and Grapevine nominating committees may be asked to recruit together.",
+       "page": 75
+      },
+      {
+       "text": "For the next board chair search, the committee is asking whether sitting trustees may apply, perhaps announcing the opening before the Conference.",
+       "page": 76
+      },
+      {
+       "text": "The board’s ad hoc committee on censure and reorganization reported on its progress, with a report due in January; the meeting noted that conduct expectations may need to cover all Conference members, not only the board.",
+       "page": 75
+      },
+      {
+       "text": "An anonymized board skills matrix, grouped by rotation year, will go to the 2027 Conference Trustees committee and to the voters in trustee elections.",
+       "page": 76
+      },
+      {
+       "text": "Proposal #67 goes to the 77th Conference (p. 76): put the 2022 board reorganization procedure in the Service Manual appendixes, with a Concept III footnote. No action on #17 (a one-year wait after earlier service) or #58 (no process exists for censuring a Conference).",
+       "page": 75
+      }
+     ],
+     "recommendations": [
+      {
+       "text": "That the board consider an ad hoc committee on ways to attract more general service trustee applicants, partly by growing the pool of nontrustee directors.",
+       "outcome": "No separate vote; report accepted as presented",
+       "status": "no_vote",
+       "board": "GSB",
+       "page": 7
+      }
+     ],
+     "numbers": [
+      {
+       "label": "Class A trustee applications",
+       "value": "Nineteen",
+       "as_of": "Nov 2, 2026",
+       "page": 7
+      },
+      {
+       "label": "Class A candidates interviewed online",
+       "value": "eight",
+       "as_of": "Nov 2, 2026",
+       "page": 7
+      },
+      {
+       "label": "Nominating procedures with draft revisions",
+       "value": "14",
+       "as_of": "Oct 31, 2026",
+       "page": 74
+      }
+     ],
+     "next": [
+      {
+       "date": "2027-01-29",
+       "end": "2027-02-01",
+       "approx": false,
+       "text": "Two Class A finalists interviewed; revised procedures, the emeriti and censure reports, and whether sitting trustees may seek the chair.",
+       "page": 76,
+       "calendar_id": "gsb-q1-2027"
+      }
+     ],
+     "pai": {
+      "assigned": 3,
+      "considered": 3,
+      "forwarded": 1,
+      "no_action": 2,
+      "other": 0,
+      "page": 7
+     },
+     "followups": [
+      {
+       "request": "r26-33",
+       "text": "The ad hoc committee on censure and reorganization reported progress, with a report due in early 2027; the requested diagram of routes is not mentioned.",
+       "page": 75
+      }
+     ]
+    },
+    {
+     "id": "public-information",
+     "name": "Trustees’ Public Information Committee",
+     "kind": "trustees_committee",
+     "tc": "PI",
+     "body": "TPI",
+     "met": "2026-11-01",
+     "summary": "With the 2027 Conference PI chair as a guest, the committee reviewed the media reports, approved a plan for a pilot membership survey and handled six proposals: one forwarded, three no action, two sent to other trustees’ committees.",
+     "accepted": "Accepted as presented.",
+     "accepted_page": 8,
+     "highlights": [
+      {
+       "text": "Besides proposal #121, the 2027 Conference PI committee gets two items from the trustees: a review of a 2015 Advisory Action on audio and video for aa.org, and whether to retire the “Party” PSA.",
+       "page": 8
+      },
+      {
+       "text": "Proposal #12 (an updated “Hope” video) went to the trustees’ CPC/Treatment and Accessibilities Committee and proposal #74 (group and member estimates in the Final Report) to the trustees’ General Service Conference Committee; neither had been decided by the Nov 6 grid.",
+       "page": 78
+      },
+      {
+       "text": "Pilot membership survey: the committee approved the plan and asked staff to post a call for groups in the Meeting Guide app soon, with a Jan 31, 2027 deadline.",
+       "page": 78
+      },
+      {
+       "text": "Full media analytics will now go in the Conference Manual rather than the background papers, and AAWS will report them twice a year.",
+       "page": 77
+      },
+      {
+       "text": "The staff report mentioned a new aa.org page for young people, “Young and Sober.”",
+       "page": 77
+      },
+      {
+       "text": "The scope subcommittee will focus on guidance for all of A.A.’s public communications, from AAWS and Grapevine alike.",
+       "page": 77
+      }
+     ],
+     "recommendations": [],
+     "numbers": [
+      {
+       "label": "Proposals reviewed",
+       "value": "six",
+       "as_of": "Nov 1, 2026",
+       "page": 7
+      }
+     ],
+     "next": [
+      {
+       "date": "2027-01-31",
+       "approx": false,
+       "text": "Deadline for groups to sign up for the pilot membership survey.",
+       "page": 78,
+       "calendar_id": "membership-survey-pilot-2027"
+      },
+      {
+       "date": "2027-04-11",
+       "end": "2027-04-17",
+       "approx": false,
+       "text": "The 77th Conference PI committee takes up proposal #121, the “Party” PSA and the 2015 audio/video action.",
+       "page": 80,
+       "calendar_id": "gsc77"
+      }
+     ],
+     "pai": {
+      "assigned": 6,
+      "considered": 6,
+      "forwarded": 1,
+      "no_action": 3,
+      "other": 2,
+      "page": 8,
+      "note": "Two referred: #12 to the trustees’ CPC/Treatment and Accessibilities Committee, #74 to the trustees’ General Service Conference Committee. The committee also added two items of its own."
+     },
+     "followups": [
+      {
+       "request": "r26-27",
+       "text": "The staff report mentioned a new aa.org page for young people, “Young and Sober”; the report does not say it is the page the 2026 Conference heard about.",
+       "page": 77
+      },
+      {
+       "request": null,
+       "text": "For the PI media reports as a whole: full analytics now go in the Conference Manual, and AAWS reports twice a year, the next report due in January 2027.",
+       "page": 77
+      }
+     ]
+    },
+    {
+     "id": "sharing-session",
+     "name": "General Sharing Session",
+     "kind": "session",
+     "tc": "SHARING",
+     "body": null,
+     "met": "2026-10-31",
+     "summary": "The weekend’s General Sharing Session on Oct 31 had the theme “Trust and Unity.” Those taking part spoke openly about service that keeps both the hand and the heart of A.A. reaching the alcoholic who still suffers.",
+     "accepted": "Written report accepted as presented.",
+     "accepted_page": 8,
+     "highlights": [
+      {
+       "text": "Theme: “Trust and Unity.”",
+       "page": 8
+      },
+      {
+       "text": "The sharing was described as open, honest and heartfelt.",
+       "page": 8
+      },
+      {
+       "text": "Its chair presented the session’s written report at the board meeting on Nov 2.",
+       "page": 8
+      }
+     ],
+     "recommendations": [],
+     "numbers": [],
+     "next": [],
+     "pai": null,
+     "followups": []
+    },
+    {
+     "id": "audit",
+     "name": "Audit Committee",
+     "kind": "trustees_committee",
+     "tc": "AUDIT",
+     "body": null,
+     "met": "2026-10-13",
+     "summary": "Meeting with the auditors in early October, the Audit Committee approved its April minutes and accepted four completed audits of the retirement plans, including restated audits for 2023 and 2024.",
+     "accepted": "Accepted as presented.",
+     "accepted_page": 8,
+     "highlights": [
+      {
+       "text": "The four: restated audits for 2023 and 2024, and 2025 audits of the 403(b) plan and of the defined contribution plan.",
+       "page": 8
+      },
+      {
+       "text": "The Finance committee heard that the restatements concern the 2023 and 2024 defined contribution plan audits.",
+       "page": 48
+      },
+      {
+       "text": "A written report of the October meeting is still to be prepared.",
+       "page": 8
+      }
+     ],
+     "recommendations": [],
+     "numbers": [
+      {
+       "label": "Retirement-plan audit reports accepted",
+       "value": "four",
+       "as_of": "Oct 2026",
+       "page": 8
+      }
+     ],
+     "next": [],
+     "pai": null,
+     "followups": []
+    },
+    {
+     "id": "retirement",
+     "name": "Employee Retirement Committee (AAWS and AA Grapevine)",
+     "kind": "other",
+     "tc": null,
+     "body": null,
+     "met": "2026-10-23",
+     "summary": "Opening the 2026–2027 board year on Oct 23, the committee elected its officers and reviewed plan documents and consultant updates. The plans are in good health: the pension plan is well overfunded.",
+     "accepted": "Accepted as presented.",
+     "accepted_page": 8,
+     "highlights": [
+      {
+       "text": "No employer contributions are expected for the next 10 years under current actuarial assumptions.",
+       "page": 8
+      },
+      {
+       "text": "An ad hoc group will study separate committees for each of the three retirement plans and report at the next meeting.",
+       "page": 8
+      },
+      {
+       "text": "Ongoing priorities: watching investments, regulatory compliance, checks on who receives retiree benefits, and vendor reviews.",
+       "page": 8
+      }
+     ],
+     "recommendations": [],
+     "numbers": [
+      {
+       "label": "Years with no employer contributions projected",
+       "value": "10",
+       "as_of": "Oct 2026",
+       "page": 8
+      }
+     ],
+     "next": [],
+     "pai": null,
+     "followups": []
+    },
+    {
+     "id": "planning-sharing",
+     "name": "Trustees’ Planning and Sharing Session",
+     "kind": "session",
+     "tc": null,
+     "body": "GSB",
+     "met": null,
+     "summary": "The board’s planning and sharing session took up mail on the Everything A.A. app, the Final Conference Report, Conference actions and contributions, plus progress on strategic planning and process improvements. None of the four proposals the board considered went on to the Conference.",
+     "accepted": "Accepted as presented.",
+     "accepted_page": 9,
+     "highlights": [
+      {
+       "text": "Of the 221 proposals submitted, the board itself took up four and sent none to the Conference; two subjects stay under its discussion (they are not named).",
+       "page": 9
+      },
+      {
+       "text": "A resiliency session worked on communication, smoother workflows, and trust and respect.",
+       "page": 9
+      },
+      {
+       "text": "The chair stressed unity, respectful disagreement, the minority opinion and full participation as the way to an informed group conscience.",
+       "page": 9
+      },
+      {
+       "text": "The board also heard from its committees, the corporate boards and senior management.",
+       "page": 9
+      }
+     ],
+     "recommendations": [],
+     "numbers": [
+      {
+       "label": "Proposals submitted for the 77th Conference",
+       "value": "221",
+       "as_of": null,
+       "page": 9
+      }
+     ],
+     "next": [],
+     "pai": {
+      "assigned": 4,
+      "considered": 4,
+      "forwarded": 0,
+      "no_action": 4,
+      "other": 0,
+      "page": 9,
+      "note": "The Nov 6 grid lists all four (#16, #75, #104 and #147) as no action."
+     },
+     "followups": []
+    }
+   ],
+   "coming_up": [
+    {
+     "date": "2026-11-21",
+     "end": "2026-11-23",
+     "approx": true,
+     "text": "Trustees’ Literature Committee interim meeting on its last 12 proposals (the minutes say Nov 21, the committee’s report Nov 23).",
+     "page": 72,
+     "calendar_id": "tl-interim-2026-11"
+    },
+    {
+     "date": "2026-11-27",
+     "end": "2026-11-29",
+     "approx": false,
+     "text": "East and Central Africa Service Meeting; GSO’s general manager attends.",
+     "page": 57
+    },
+    {
+     "date": "2026-12",
+     "approx": true,
+     "text": "Late November or early December: AAWS’s Finance Committee reviews a preliminary 2027 budget, then works with the trustees’ Finance Committee.",
+     "page": 11
+    },
+    {
+     "date": "2026-12",
+     "approx": true,
+     "text": "Everything A.A. app update: As Bill Sees It added, the Joe and Charlie recordings removed.",
+     "page": 4,
+     "calendar_id": "aa-app-update-2026-12"
+    },
+    {
+     "date": "2026-12",
+     "approx": true,
+     "text": "Grapevine board interim meeting on six related proposals (on the Nov 6 grid, all about the Preamble’s wording).",
+     "page": 3,
+     "calendar_id": "gv-interim-2026-12"
+    },
+    {
+     "date": "2026-12",
+     "approx": true,
+     "text": "A revised Grapevine and La Viña survey plan and draft questionnaire come to the Grapevine board.",
+     "page": 30
+    },
+    {
+     "date": "2026-12-04",
+     "approx": false,
+     "text": "Members of the trustees’ International Conventions/Regional Forums Committee send staff their top five 2030 Convention themes.",
+     "page": 60
+    },
+    {
+     "date": "2026-12-12",
+     "approx": false,
+     "text": "AA Grapevine planning meeting, online.",
+     "page": 32,
+     "calendar_id": "gv-planning-2026-12"
+    },
+    {
+     "date": "2027-01",
+     "approx": true,
+     "text": "Phase 2 of the Archives audio preservation project restarts.",
+     "page": 33
+    },
+    {
+     "date": "2027-01",
+     "approx": true,
+     "text": "Grapevine starts building a way for intergroups and central offices to sell subscriptions.",
+     "page": 27
+    },
+    {
+     "date": "2027-01-01",
+     "approx": false,
+     "text": "Grapevine and La Viña book and subscription prices go up.",
+     "page": 27,
+     "calendar_id": "gv-prices-2027"
+    },
+    {
+     "date": "2027-01-06",
+     "approx": false,
+     "text": "AAWS Finance Committee and all AAWS directors refine the 2027 budget; the January AAWS board meeting gives final approval.",
+     "page": 11,
+     "calendar_id": "aaws-budget-2027-01-06"
+    },
+    {
+     "date": "2027-01-11",
+     "end": "2027-01-15",
+     "approx": true,
+     "text": "Preliminary 2027 budgets discussed (GSO and the board; Grapevine and La Viña).",
+     "page": 44,
+     "calendar_id": "budgets-2027-jan"
+    },
+    {
+     "date": "2027-01-29",
+     "end": "2027-02-01",
+     "approx": false,
+     "text": "Winter board weekend: two Class A finalists interviewed, the workload plan for the 77th Conference, 80th Conference site news, the 2030 Convention theme and declaration, Nominating reports and first-quarter follow-ups.",
+     "page": 7,
+     "calendar_id": "gsb-q1-2027"
+    },
+    {
+     "date": "2027-01-31",
+     "approx": false,
+     "text": "Deadline for groups to sign up for the pilot membership survey.",
+     "page": 78,
+     "calendar_id": "membership-survey-pilot-2027"
+    },
+    {
+     "date": "2027-04-11",
+     "end": "2027-04-17",
+     "approx": false,
+     "text": "77th Conference: Slido voting, secondary committees’ online pre-work, a Reserve Fund sharing session, and the forwarded proposals.",
+     "page": 50,
+     "calendar_id": "gsc77"
+    },
+    {
+     "date": "2027-06",
+     "approx": true,
+     "text": "Archives audio preservation Phase 3 (recordings moved off CDs) due back from the vendor.",
+     "page": 33
+    }
+   ],
+   "numbers": [
+    {
+     "label": "Reserve Fund balance",
+     "value": "$9,234,275",
+     "as_of": "Sept 30, 2026",
+     "page": 43,
+     "report": "finance"
+    },
+    {
+     "label": "Reserve Fund in months of operating expenses",
+     "value": "4.9 months",
+     "as_of": "Sept 30, 2026",
+     "page": 43,
+     "report": "finance"
+    },
+    {
+     "label": "Contributions compared with the year-to-date reforecast budget",
+     "value": "6% more",
+     "as_of": "Sept 30, 2026",
+     "page": 44,
+     "report": "finance"
+    },
+    {
+     "label": "Gross literature sales compared with the year-to-date reforecast budget",
+     "value": "10% less",
+     "as_of": "Sept 30, 2026",
+     "page": 44,
+     "report": "finance"
+    },
+    {
+     "label": "Big Book sales so far this year, compared with 2025",
+     "value": "down by 63,901 copies (11%)",
+     "as_of": "Sept 30, 2026",
+     "page": 42,
+     "report": "finance"
+    },
+    {
+     "label": "GSO short-term cash deficit (cash on hand minus 90-day bills)",
+     "value": "$930,204",
+     "as_of": "Sept 28, 2026",
+     "page": 43,
+     "report": "finance"
+    },
+    {
+     "label": "Grapevine subscriptions",
+     "value": "60,176",
+     "as_of": "Sept 2026",
+     "page": 26,
+     "report": "grapevine"
+    },
+    {
+     "label": "La Viña subscriptions",
+     "value": "6,662",
+     "as_of": "Sept 2026",
+     "page": 26,
+     "report": "grapevine"
+    },
+    {
+     "label": "Everything A.A. app subscription revenue since May 2026",
+     "value": "$95,194.48",
+     "as_of": "Oct 28, 2026",
+     "page": 12,
+     "report": "aaws"
+    },
+    {
+     "label": "Online contributors in the new platform’s first week",
+     "value": "489",
+     "as_of": "Oct 26, 2026",
+     "page": 12,
+     "report": "aaws"
+    },
+    {
+     "label": "U.S. correctional facilities with digital A.A. content",
+     "value": "1,763",
+     "as_of": "Nov 1, 2026",
+     "page": 38,
+     "report": "corrections"
+    },
+    {
+     "label": "Proposals submitted for the 77th Conference",
+     "value": "221",
+     "as_of": null,
+     "page": 9,
+     "report": "planning-sharing"
+    },
+    {
+     "label": "Class A trustee applications",
+     "value": "Nineteen",
+     "as_of": "Nov 2, 2026",
+     "page": 7,
+     "report": "nominating"
+    },
+    {
+     "label": "Estimated saving from voting on Slido",
+     "value": "$10,000",
+     "as_of": null,
+     "page": 6,
+     "report": "conference"
+    }
+   ]
+  }
+ ]
+}

@@ -415,20 +415,23 @@
     }
     out.officers.sort((a, b) => TITLE_ORDER.indexOf(a.title) - TITLE_ORDER.indexOf(b.title));
     out.byTitle = {}; out.officers.forEach((o) => { out.byTitle[o.title] = o.name; });
-    out.boardChairs = { aaws: boardChair('aaws', out.conferenceYear), grapevine: boardChair('grapevine', out.conferenceYear) };
+    out.boardChairs = { aaws: boardChair('aaws', out.conferenceYear, d), grapevine: boardChair('grapevine', out.conferenceYear, d) };
     return out;
   };
-  /** Corporate-board chair for the year after annual meeting Y: printed in report Y+1 if loaded, else the alternation
-      pattern (regional trustee in year 3 <-> general service trustee, 10 of 10 years) as a labelled guess. */
-  function boardChair(which, Y) {
+  /** Corporate-board chair for the year after annual meeting Y: printed in report Y+1 if loaded, else named in a later
+      board report (board.json slate `chairs`, from the day after its as_of date, the packet's board meeting: status 'reported'), else the alternation pattern
+      (regional trustee in year 3 <-> general service trustee, 10 of 10 years) as a labelled guess. */
+  function boardChair(which, Y, d) {
     const key = which === 'aaws' ? 'aaws_directors' : 'grapevine_directors';
     const chairIn = (yr) => ((FCR.Y(yr) || {})[key] || []).find((d) => /chair/i.test(d.role || ''));
     const pr = chairIn(Y + 1);
     if (pr) return { name: pr.name, status: 'printed', period: `${Y}–${String(Y + 1).slice(2)}`, ref: `${Y + 1} report` };
+    const s = slates.find((x) => x.conference_year === Y);
+    const rep = s && s.chairs && s.chairs[which];
+    if (rep && rep.name && (!s.chairs.as_of || !d || isoDate(s.chairs.as_of, 0) < dayStart(d))) return { name: rep.name, status: 'reported', period: `${Y}–${String(Y + 1).slice(2)}`, ref: rep.ref || null };
     const prev = chairIn(Y);
     const prevType = prev ? (/general service/i.test(prev.role) ? 'GST' : /regional/i.test(prev.role) ? 'REG' : null) : null;
     const type = prevType === 'GST' ? 'REG' : prevType === 'REG' ? 'GST' : null;
-    const s = slates.find((x) => x.conference_year === Y);
     const members = s ? (s[key] || []).map((p) => p.name) : [];
     const pos = FCR.positionHistory().filter((p) => p.isCurrent && members.some((m) => FCR.sameName(m, p.name)));
     const cands = pos.filter((p) => (type === 'GST' ? p.pid === 'GST' : type === 'REG' ? p.pid.startsWith('REG_') && Y - p.start === 2 : false)).map((p) => p.name);
@@ -774,7 +777,12 @@
   // Slates (board.json): GSB officers and corporate-board members elected at each annual meeting.
   slates.forEach((s) => {
     (s.gsb_officers || []).forEach((o) => { if (!o.name || /^\(/.test(o.name)) return; const ti = normTitle(o.title); put(`of|${boardKey(o.name)}|${ti}`, { name: o.name, kind: 'officer', title: ti, role: `GSB ${ti}`, employee: !!o.employee, href: '#/board/' + Math.min(FCR.latestYear, s.conference_year + 1) }, s.conference_year); });
-    [['aaws_directors', 'aaws_board', 'AAWS'], ['grapevine_directors', 'grapevine_board', 'AA Grapevine']].forEach(([k, kind, lbl]) => (s[k] || []).forEach((d) => put(boardListKey(kind, d.name, s.conference_year), { name: d.name, kind, board: lbl === 'AAWS' ? 'AAWS' : 'Grapevine', role: `${lbl} board`, employee: !!d.employee, href: '#/board/' + Math.min(FCR.latestYear, s.conference_year + 1), chairYears: [] }, s.conference_year)));
+    // a chair named in a later board report (slate `chairs`, as boardChair reads it) counts from the day after its as_of date
+    [['aaws_directors', 'aaws_board', 'AAWS', 'aaws'], ['grapevine_directors', 'grapevine_board', 'AA Grapevine', 'grapevine']].forEach(([k, kind, lbl, ck]) => (s[k] || []).forEach((d) => {
+      const e = put(boardListKey(kind, d.name, s.conference_year), { name: d.name, kind, board: lbl === 'AAWS' ? 'AAWS' : 'Grapevine', role: `${lbl} board`, employee: !!d.employee, href: '#/board/' + Math.min(FCR.latestYear, s.conference_year + 1), chairYears: [] }, s.conference_year);
+      const ch = s.chairs && s.chairs[ck];
+      if (ch && ch.name && FCR.sameName(ch.name, d.name) && (!s.chairs.as_of || isoDate(s.chairs.as_of, 0) < dayStart(FCR.today())) && !e.chairYears.includes(s.conference_year)) e.chairYears.push(s.conference_year);
+    }));
   });
   // Printed officers of the first report = the slate of the year before (no slate data for it).
   if (FCR.years.length) (FCR.Y(FCR.years[0]).gsb_officers || []).forEach((o) => { const ti = normTitle(o.title); put(`of|${boardKey(o.name)}|${ti}`, { name: o.name, kind: 'officer', title: ti, role: `GSB ${ti}`, href: '#/board/' + FCR.years[0] }, FCR.years[0] - 1); });

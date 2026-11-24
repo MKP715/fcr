@@ -1,8 +1,8 @@
 {
  "meta": {
-  "about": "Follow-ups that are not Advisory Actions: requests in the Final Reports (Conference committee reports, plus the board's, trustees' committees' and G.S.O. reports) dated for later (progress reports, drafts, items recommitted to a committee, other dated plans) and recommendations committed to the General Service Board (no date given), and what became of Advisory Action follow-ups once they fell due. Own-words summaries; refs \"FRyy pP Lx-y\" = report year, PDF page, line in the Drive text extract.",
-  "sources": "2024-2026 Final Conference Reports (Drive, _GSC Explorer Data/text/reports); M-39 index in advisory_actions.json",
-  "checked": "Extracted 2026-10-21 by five range extractors, each adversarially verified, plus a completeness sweep of every 2027+/77th/brought-back mention in the 2024-2026 reports (workflow wf_a03fe14b-6c4). Excluded on purpose: items already in the Advisory Actions, recurring work with no date, facts shown elsewhere (Conference, Convention, Forum, REDELA/WSM dates; trustee rotations; budgets), recommendations not adopted, things already done."
+  "about": "Follow-ups that are not Advisory Actions: requests in the Final Reports (Conference committee reports, plus the board's, trustees' committees' and G.S.O. reports) dated for later (progress reports, drafts, items recommitted to a committee, other dated plans) and recommendations committed to the General Service Board (no date given), and what became of Advisory Action follow-ups once they fell due. Own-words summaries; refs \"FRyy pP Lx-y\" = report year, PDF page, line in the Drive text extract. progress[] on a request (and action_progress[] for an Advisory Action follow-up): dated news before it falls due {date, status done|progress|update, text (own words, <= 45 words), cite \"Q4 2026 board reports p. N\" (PDF page of the fall 2026 board & committee reports) or \"Nov 6, 2026 PAI status grid p. N\", also? [more pages]}.",
+  "sources": "2024-2026 Final Conference Reports (Drive, _GSC Explorer Data/text/reports); M-39 index in advisory_actions.json; Q4 2026 board reports (board & committee reports of the General Service Board meeting of Nov 2, 2026, minutes pending approval; Drive) and the Nov 6, 2026 PAI status grid (Drive)",
+  "checked": "Extracted 2026-10-21 by five range extractors, each adversarially verified, plus a completeness sweep of every 2027+/77th/brought-back mention in the 2024-2026 reports (workflow wf_a03fe14b-6c4). Excluded on purpose: items already in the Advisory Actions, recurring work with no date, facts shown elsewhere (Conference, Convention, Forum, REDELA/WSM dates; trustee rotations; budgets), recommendations not adopted, things already done. Progress notes from the fall 2026 board weekend added 2026-11-23, each checked against its packet or grid page; requests with nothing in the packet have none."
  },
  "requests": [
   {
@@ -26,7 +26,20 @@
    "by": "the Conference",
    "who": "General Service Board",
    "kind": "committed",
-   "text": "Keep every Conference committee informed of all proposed agenda items as they arrive, through a quarterly PAI Status Grid."
+   "text": "Keep every Conference committee informed of all proposed agenda items as they arrive, through a quarterly PAI Status Grid.",
+   "progress": [
+    {
+     "date": "2026-11-06",
+     "status": "progress",
+     "text": "GSO's 77th-cycle grids so far: June 5, 2026 (8 items), Oct 1 (all 221 as received) and Nov 6 (after the fall weekend). The later two give all 221 a status and the 210 active ones a reviewing body; three held 2025 proposals have neither.",
+     "cite": "Nov 6, 2026 PAI status grid p. 1",
+     "also": [
+      34,
+      35,
+      36
+     ]
+    }
+   ]
   },
   {
    "id": "r26-03",
@@ -56,7 +69,15 @@
    "by": "the Conference",
    "who": "General Service Board",
    "kind": "committed",
-   "text": "Run the PAI Status Grid as an ongoing, curated list; an item stays on it until policy or the Joint Committee disposes of it."
+   "text": "Run the PAI Status Grid as an ongoing, curated list; an item stays on it until policy or the Joint Committee disposes of it.",
+   "progress": [
+    {
+     "date": "2026-11-06",
+     "status": "update",
+     "text": "The Nov 6 grid carries items across cycles: three 2025 proposals to reconsider, discontinue or replace the Plain Language Big Book are still listed, held for the 77th Conference.",
+     "cite": "Nov 6, 2026 PAI status grid p. 36"
+    }
+   ]
   },
   {
    "id": "r26-06",
@@ -112,7 +133,19 @@
    "text": "Progress report or draft of the pamphlet for mental health professionals, building on the outline and project plan reviewed in 2026 (one suggestion: add a link to the Cochrane Study).",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "progress",
+     "text": "On Oct 31 the trustees' CPC/Treatment and Accessibilities Committee found the draft true to the Conference committee's guidance and sent editorial notes back to Publishing. It wants the Conference committee to discuss further the terms the draft uses for readers outside A.A.",
+     "cite": "Q4 2026 board reports p. 36",
+     "also": [
+      35,
+      4
+     ]
+    }
+   ]
   },
   {
    "id": "r26-11",
@@ -138,7 +171,20 @@
    "text": "Progress report on cheaper ways to hold the General Service Conference, including a hybrid online plus in-person (New York City) format, with estimated savings for each option.",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "progress",
+     "text": "No report yet. Related steps: the trustees' Conference Committee resumed contract talks for the 80th Conference (2030) while other formats are still explored, chose Slido for voting (an estimated $10,000 saving) and, declining an online Conference every other year (PAI 194), said cost-saving work continues.",
+     "cite": "Q4 2026 board reports p. 53",
+     "also": [
+      5,
+      6,
+      50
+     ]
+    }
+   ]
   },
   {
    "id": "r26-13",
@@ -151,7 +197,15 @@
    "text": "Progress report to the 77th Conference on a reworked Grapevine product survey closer to the 2025 Advisory Action and memo, with two or more methods and low-cost delivery (e.g., Meeting Guide app).",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "progress",
+     "text": "After the Conference committee's feedback the Grapevine board dropped the $20,000 consultant. The survey will be informal, not scientific, open about 90 days on its own web page and every Grapevine outlet. A revised plan and draft questionnaire come in December, for approval in January.",
+     "cite": "Q4 2026 board reports p. 30"
+    }
+   ]
   },
   {
    "id": "r26-14",
@@ -190,7 +244,15 @@
    "text": "Progress report on adding sovereign-state flags to the International Convention flag ceremony; areas may be asked, through delegates, for Fellowship feedback, with the ceremony's history and purpose supplied.",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "progress",
+     "text": "The flag subcommittee weighed a Convention ceremony with and without flags and chose to keep flags. It is still discussing sovereign-state flags and reports at the winter 2027 weekend. The report does not mention asking areas for feedback through their delegates.",
+     "cite": "Q4 2026 board reports p. 60"
+    }
+   ]
   },
   {
    "id": "r26-17",
@@ -242,7 +304,18 @@
    "text": "Progress report from the subcommittee studying which tools Spanish-speaking members need in order to use the Big Book.",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "update",
+     "text": "The trustees' Literature Committee took no action on PAI 182 (a Twelve Step study guide for Spanish-speaking members) but passed the idea to its Spanish plain language tools subcommittee. No other progress on that subcommittee's study is reported.",
+     "cite": "Q4 2026 board reports p. 69",
+     "also": [
+      70
+     ]
+    }
+   ]
   },
   {
    "id": "r26-21",
@@ -255,7 +328,19 @@
    "text": "Progress report on a Plain Language Big Book amendment process; suggested counting proposed substantive and editorial changes, page cross-references to Alcoholics Anonymous, and matching the large-print Big Book's size.",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "progress",
+     "text": "The revision subcommittee's editorial suggestions (44, per the minutes) went to AAWS Publishing, which makes those it finds warranted and returns a draft to the trustees' committee. Bigger requests, such as a side-by-side study edition, got no action: the process for weighing changes is unfinished.",
+     "cite": "Q4 2026 board reports p. 72",
+     "also": [
+      7,
+      64
+     ]
+    }
+   ]
   },
   {
    "id": "r26-22",
@@ -282,7 +367,22 @@
    "due": {
     "year": 2026,
     "month": 10
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "done",
+     "text": "The 13 chairs of the 2027 Conference committees and the delegate chair were the board's guests. Each sat in on the matching trustees' committee (the Grapevine and La Viña chair at the Grapevine board); the delegate chair spoke first at the Nov 2 meeting.",
+     "cite": "Q4 2026 board reports p. 2",
+     "also": [
+      3,
+      26,
+      50,
+      74,
+      77
+     ]
+    }
+   ]
   },
   {
    "id": "r26-24",
@@ -308,7 +408,15 @@
    "text": "Progress report on Our Primary Purpose, the GSO podcast, with season-three ideas such as French and Spanish content, archival material, Class A trustee talks and service-structure episodes.",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "progress",
+     "text": "From the June/July AAWS highlights in the packet: season 2 of the GSO podcast is done and season 3 is being recorded; the first- and second-quarter 2026 podcast reports went to the trustees' PI Committee.",
+     "cite": "Q4 2026 board reports p. 21"
+    }
+   ]
   },
   {
    "id": "r26-26",
@@ -321,7 +429,18 @@
    "text": "Report on the AAWS YouTube account, after suggestions for more shorts, user-generated and Young People videos, member stories, archival clips and topics like spirituality and non-affiliation.",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "update",
+     "text": "In June and July 2026 AAWS sent the first- and second-quarter YouTube reports to the trustees' PI Committee. This fall the AAWS Communications and Language Services Committee recommended retiring AAWS's policy on GSO's YouTube channels; the packet records no board vote on it.",
+     "cite": "Q4 2026 board reports p. 13",
+     "also": [
+      21
+     ]
+    }
+   ]
   },
   {
    "id": "r26-27",
@@ -334,7 +453,18 @@
    "text": "Report on GSO's A.A. website (aa.org), including the planned search improvements and the new Young People landing page.",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "progress",
+     "text": "On Nov 1 the trustees' PI Committee heard of a new aa.org landing page for young people, “Young and Sober” (likely the one the 2026 committee was told about). Website reports keep going to that committee; AAWS was still reviewing its website policy this summer.",
+     "cite": "Q4 2026 board reports p. 77",
+     "also": [
+      21
+     ]
+    }
+   ]
   },
   {
    "id": "r26-28",
@@ -360,7 +490,18 @@
    "text": "Progress report on the Meeting Guide app, including the trustees' PI Committee's study of push notifications; suggestions included more outreach to professionals and a Quarterly Financial Report page with a contribute button.",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "progress",
+     "text": "In June and July 2026 AAWS sent a first-quarter and an amended second-quarter Meeting Guide app report to the trustees' PI Committee. At the fall weekend that committee asked staff to post the pilot membership survey's call for groups on the app soon.",
+     "cite": "Q4 2026 board reports p. 21",
+     "also": [
+      78
+     ]
+    }
+   ]
   },
   {
    "id": "r26-30",
@@ -373,7 +514,15 @@
    "text": "Report on AAWS's Online Business Profiles; the committee also suggested letting local service members know when Staff replies mention them.",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "progress",
+     "text": "In June and July 2026 AAWS sent first- and second-quarter reports on its online business profiles to the trustees' PI Committee.",
+     "cite": "Q4 2026 board reports p. 21"
+    }
+   ]
   },
   {
    "id": "r26-31",
@@ -386,7 +535,15 @@
    "text": "Another report on A.A.'s Google Ads, following the 2025 report the committee accepted.",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "progress",
+     "text": "In June and July 2026 AAWS sent a first-quarter and an amended second-quarter Google Ads report to the trustees' PI Committee.",
+     "cite": "Q4 2026 board reports p. 21"
+    }
+   ]
   },
   {
    "id": "r26-32",
@@ -399,7 +556,15 @@
    "text": "Progress report or draft of the revised pamphlet “Do You Think You're Different?” (P-13) for the 2027 Conference; the 2021–2022 workload plan assigned it to the Trustees committee.",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "progress",
+     "text": "The revised P-13 draft goes to the 77th Conference: the trustees' Literature Committee agreed at a Sept 23, 2026 interim meeting to send it, with one small edit removing wording it thought could divide readers.",
+     "cite": "Q4 2026 board reports p. 73"
+    }
+   ]
   },
   {
    "id": "r26-33",
@@ -412,7 +577,18 @@
    "text": "Extra to the censure-motion report: include a grid or diagram showing every route by which a motion to censure or reorganize can arrive and be handled, plus proposed changes.",
    "due": {
     "year": 2027
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "progress",
+     "text": "The board's ad hoc committee on censure and reorganization reported substantial progress, with its final report expected at the winter 2027 weekend. It also asked whether conduct expectations should cover all Conference members, not only the board. The requested grid or diagram is not mentioned.",
+     "cite": "Q4 2026 board reports p. 75",
+     "also": [
+      7
+     ]
+    }
+   ]
   },
   {
    "id": "r26-34",
@@ -454,7 +630,18 @@
    "due": {
     "year": 2030,
     "month": 7
-   }
+   },
+   "progress": [
+    {
+     "date": "2026-11-02",
+     "status": "update",
+     "text": "A draft 2030 declaration exists. A board vote to approve it failed because one trustee wanted wording changes; that trustee now accepts the text, so it returns to the IC/RF Committee at the winter 2027 weekend.",
+     "cite": "Q4 2026 board reports p. 60",
+     "also": [
+      6
+     ]
+    }
+   ]
   }
  ],
  "outcomes": [
@@ -573,6 +760,52 @@
    "status": "superseded",
    "ref": "FR26 p46 L4032-4038",
    "text": "The 2026 committee moved the final survey report to the 78th Conference (2028); a progress report on a revised survey plan comes in 2027."
+  }
+ ],
+ "action_progress": [
+  {
+   "action": "p4276",
+   "date": "2026-11-02",
+   "status": "progress",
+   "text": "Pilot membership survey: on Nov 1 the trustees' PI Committee approved its subcommittee's plan and asked staff to post a call for groups in the Meeting Guide app, open until Jan 31, 2027; it expected a progress report at the winter board weekend.",
+   "cite": "Q4 2026 board reports p. 78",
+   "also": [
+    8
+   ]
+  },
+  {
+   "action": "p5635",
+   "date": "2026-11-02",
+   "status": "progress",
+   "text": "The ad hoc committee on censure and reorganization processes reported substantial progress; its final report is expected at the winter 2027 board weekend.",
+   "cite": "Q4 2026 board reports p. 7",
+   "also": [
+    75
+   ]
+  },
+  {
+   "action": "p4820",
+   "date": "2026-11-02",
+   "status": "update",
+   "text": "In July 2026 AAWS set a $5 list price for the printed 2026 Final Conference Report; the packet gives no sales figures yet.",
+   "cite": "Q4 2026 board reports p. 21"
+  },
+  {
+   "action": "p3128",
+   "date": "2026-11-06",
+   "status": "update",
+   "text": "The three 2025 Plain Language Big Book proposals held for the 77th Conference are listed on the Nov 6 grid with no reviewing body or status yet; the fall board and committee reports do not mention them.",
+   "cite": "Nov 6, 2026 PAI status grid p. 36"
+  },
+  {
+   "action": "p1713",
+   "date": "2026-11-02",
+   "status": "update",
+   "text": "Grapevine board's five-year plan updates this fall: a print-and-paper consultant seeking cheaper printing and mailing, a pooled Carry the Message fund (tabled for legal and auditor advice), a system built from January for local-office subscription sales at a 10% commission, and new app features.",
+   "cite": "Q4 2026 board reports p. 27",
+   "also": [
+    30
+   ]
   }
  ]
 }

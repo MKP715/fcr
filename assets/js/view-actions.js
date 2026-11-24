@@ -6,7 +6,11 @@
    actions:[{id, year, sec, page, text (a summary in our own words), floor?, noaction? (recorded but not adopted),
    cross? (the committee tag M-39 prints after the item), tags?, due?:[{year, month? | during?, what}]}]}; plus
    data/src/followups.json → FCR.RAW.followups: {requests (dated asks in the Final Reports — committee, board, trustees'
-   and G.S.O. reports — that are not Advisory Actions; 'committed' ones may have no date), outcomes (what became of one)}.
+   and G.S.O. reports — that are not Advisory Actions; 'committed' ones may have no date; progress?: [{date, status
+   done|progress|update, text, cite, also?}] noted before it falls due), outcomes (what became of one), action_progress
+   ([{action, date, status, text, cite, also?}]: the same for an Advisory Action's follow-up)}. A progress note shows from its
+   date on, under its follow-up ("Reported at the fall 2026 board weekend: …", linking #/weekends/<id> when board_meetings.json
+   has that weekend).
    The repo is public, so it keeps no original wording; every row links to its page of the PDF on aa.org.
    Top of the page: everything dated after today (Advisory Action follow-ups and committee requests) so none is missed,
    then the ones that fell due at the last Conference and what became of them. Below: browse and search every action.
@@ -57,6 +61,32 @@
   // a follow-up may carry an 'update' (news before it falls due) and later its result: the last known non-'update' wins
   const pickOut = (list, cyc) => { const k = list.filter((o) => outKnown(o, cyc)); const f = k.filter((o) => o.status !== 'update'); return (f.length ? f[f.length - 1] : k[k.length - 1]) || null; };
   const stopAfter = (s) => (/[.!?”"]$/.test(String(s || '').trim()) ? '' : '.');
+  // progress noted before a follow-up falls due (followups.json requests[].progress and action_progress: {date, status,
+  // text, cite, also?}), shown from its date on (?today= previews; a board weekend's from the day after it); a board
+  // weekend's notes say they were reported there and link that weekend's page
+  const ACT_PROG = FU.action_progress || [];
+  const BMS = ((FCR.RAW && FCR.RAW.boardMeetings) || {}).meetings || [];
+  const PSTATUS = { done: 'done', update: 'update' };   // 'progress' is what the label already says
+  const isoDay = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+  // a note dated inside a board weekend (its board meeting day included) shows from the day after that weekend, as the
+  // rest of the app counts a weekend as reported (end < today)
+  const seenProg = (list) => { const t = isoDay(FCR.today()); return (list || []).filter((p) => {
+    if (!p || !p.date || p.date > t) return false;
+    const m = BMS.find((x) => x.board_meeting === p.date || (x.start <= p.date && p.date <= x.end));
+    return !m || !m.end || m.end < t;
+  }); };
+  const lcFirst = (s) => String(s || '').replace(/^\S/, (c) => c.toLowerCase());
+  function progHTML(list) {
+    return seenProg(list).map((p) => {
+      const m = BMS.find((x) => x.board_meeting === p.date || (x.start <= p.date && p.date <= x.end));
+      // a weekend's packet also carries the AAWS and Grapevine highlights of the months before it (June/July 2026):
+      // "reported at" is true of every note it holds, "progress at" only of what happened that weekend
+      const at = m ? `Reported at the <a href="#/weekends/${encodeURIComponent(m.id)}">${esc(lcFirst(m.title || 'board weekend'))}</a>`
+        : /status grid/i.test(p.cite || '') ? `Progress in GSO’s <a href="#/agenda">${esc(UI.fmtDate(p.date, 'short'))} status grid</a>` : `Progress, ${esc(UI.fmtDate(p.date, 'short'))}`;
+      const also = (p.also || []).length ? `; also p${p.also.length > 1 ? 'p' : ''}. ${p.also.slice().sort((a, b) => a - b).map((n) => esc(n)).join(', ')}` : '';
+      return `<div class="aa-out aa-prog small"><strong>${at}:</strong> ${PSTATUS[p.status] ? `<span class="badge aa-st aa-st-${esc(p.status)}">${esc(PSTATUS[p.status])}</span> ` : ''}${esc(p.text)}${stopAfter(p.text)} <span class="muted">(${esc(p.cite || '')}${also})</span></div>`;
+    }).join('');
+  }
 
   /** "at the 77th Conference (Apr 11–17, 2027)" / "by January 2027" / "during 2035" (a year, not its Conference). */
   function dueLabel(y, m, during) {
@@ -125,16 +155,24 @@
       return g;
     };
     const outHTML = (o) => (o ? `<div class="aa-out small"><span class="badge aa-st aa-st-${esc(o.status)}">${esc(STATUS[o.status] || o.status)}</span> ${esc(o.text)}${stopAfter(o.text)} <span class="muted">(${esc(frRef(o.ref))})</span></div>` : '');
+    // an Advisory Action's progress notes go under its first follow-up row only (an action can have several due dates)
+    const actShown = new Set();
+    const actProg = (id) => { if (actShown.has(id)) return ''; actShown.add(id); return progHTML(ACT_PROG.filter((p) => p.action === id)); };
     const fuRow = (x) => {
       const o = outcomeOf(x);
       if (x.a) {
         return `<li class="aa-fu"><div class="aa-fu-what"><strong>${esc(ucfirst(x.d.what))}${stopAfter(x.d.what)}</strong></div>
-          <div class="small ink2"><span class="aa-kind">Advisory Action</span> of the ${x.a.year} Conference · ${esc(secOf(x.a.sec).name)}${x.a.noaction ? ' (not adopted)' : ''}: ${esc(x.a.text)}${stopAfter(x.a.text)} <a href="${esc(pageUrl(x.a.page))}" target="_blank" rel="noopener">M-39 p. ${x.a.page} ↗</a></div>${outHTML(o)}</li>`;
+          <div class="small ink2"><span class="aa-kind">Advisory Action</span> of the ${x.a.year} Conference · ${esc(secOf(x.a.sec).name)}${x.a.noaction ? ' (not adopted)' : ''}: ${esc(x.a.text)}${stopAfter(x.a.text)} <a href="${esc(pageUrl(x.a.page))}" target="_blank" rel="noopener">M-39 p. ${x.a.page} ↗</a></div>${outHTML(o)}${actProg(x.a.id)}</li>`;
       }
       const r = x.r, rep = reportOf(r.from_year);
       return `<li class="aa-fu aa-fu-req"><div class="aa-fu-what"><strong>${esc(r.text)}${stopAfter(r.text)}</strong></div>
-        <div class="small ink2"><span class="aa-kind" data-tip="From a Final Report (a Conference committee report, or the board’s, trustees’ committees’ or G.S.O. reports); not an Advisory Action" tabindex="0">${esc(KIND[r.kind] || 'Request')}</span> · ${ASKED[r.kind] || ''}${esc(r.by || 'committee report')}, ${r.from_year}${r.who && r.kind !== 'committed' ? ` · ${WHO[r.kind] || ''}${esc(r.who)}` : ''} · ${esc(frRef(r.ref))}${rep && rep.drive_url ? ` <a href="${esc(rep.drive_url)}" target="_blank" rel="noopener">Open PDF ↗</a>` : ''}</div>${outHTML(o)}</li>`;
+        <div class="small ink2"><span class="aa-kind" data-tip="From a Final Report (a Conference committee report, or the board’s, trustees’ committees’ or G.S.O. reports); not an Advisory Action" tabindex="0">${esc(KIND[r.kind] || 'Request')}</span> · ${ASKED[r.kind] || ''}${esc(r.by || 'committee report')}, ${r.from_year}${r.who && r.kind !== 'committed' ? ` · ${WHO[r.kind] || ''}${esc(r.who)}` : ''} · ${esc(frRef(r.ref))}${rep && rep.drive_url ? ` <a href="${esc(rep.drive_url)}" target="_blank" rel="noopener">Open PDF ↗</a>` : ''}</div>${outHTML(o)}${progHTML(r.progress)}</li>`;
     };
+    // a board-report cite shown on the page: say once what its page numbers are
+    // (the first packet actually cited, whichever weekend's it is)
+    const bmShorts = BMS.map((m) => (m.source || {}).short).filter(Boolean);
+    const bmShort = bmShorts.find((sh) => REQ.concat(ACT_PROG).some((z) => seenProg(z.progress || (z.action ? [z] : [])).some((p) => String(p.cite || '').includes(sh)))) || '';
+    const pktCited = !!bmShort;
     // a long group is split by the Conference committee that will receive the item (sub-heading one level down)
     const groupHTML = (G, H, title) => {
       const HS = 'h' + (+H.slice(1) + 1);
@@ -147,7 +185,8 @@
     const undatedHTML = undated.length ? groupHTML({ list: undated, note: `<p class="small muted">Recommendations the Conference committed to the General Service Board. The board decides when and how to act on them; the report gives no date.</p>` }, 'h3', 'No date set') : '';
     const pendHTML = (pending.length ? groupBy(pending).map((G) => groupHTML(G, 'h3')).join('')
       : `<p class="muted">Nothing in the Advisory Actions or the Final Reports is dated after today.</p>`) + undatedHTML;
-    const withOut = recent.filter((x) => { const o = outcomeOf(x); return o && o.status !== 'update'; }).length;
+    // what became of each: an outcome in a Final Report, or a progress note that marks it done (a board weekend's report)
+    const withOut = recent.filter((x) => { const o = outcomeOf(x); return (o && o.status !== 'update') || (x.r && seenProg(x.r.progress).some((p) => p.status === 'done')); }).length;
     const confOnly = recent.every((x) => !x.d.month && !x.d.during);
     const recentNote = (confOnly ? 'These were set for a Conference that has now met.' : 'These fell due recently, at a Conference that has now met or by a date now past.')
       + (cyc.reportPending ? ` The ${cyc.lastConference} Final Report is not in the app yet.` : '')
@@ -183,7 +222,7 @@
       </div>
       <nav class="flex rp-jump" aria-label="On this page"><span class="small muted">On this page:</span><button type="button" class="chip" data-jump="aa-pending">Pending follow-ups</button><button type="button" class="chip" data-jump="aa-browse">Browse and search</button>${FCR.learnTree && FCR.learnTree.node('advisory_actions') ? '<a class="chip" href="#/learn/advisory_actions">What is an Advisory Action?</a>' : ''}</nav>
       <section class="card aa-pending" id="aa-pending" tabindex="-1"><h2>Pending follow-ups <span class="badge">${nToCome}</span></h2>
-        <p class="small ink2">Everything dated for later, so none is missed: follow-ups set by Advisory Actions (reports or drafts due at a coming Conference, items deferred to a later year, themes and events already set)${nReq ? `, and ${nReq} request${nReq === 1 ? '' : 's'} in the Final Reports (Conference committee reports, plus the board’s, trustees’ committees’ and G.S.O. reports): progress reports and drafts a committee asked to see again, items recommitted to a committee and other dated plans, which are not Advisory Actions` : ''}. Grouped by when they are due, then by the Conference committee that will receive them; dated ones also appear in the <a href="#/calendar">Calendar</a>.${undated.length ? ' Last, recommendations committed to the General Service Board, which have no date.' : ''}</p>
+        <p class="small ink2">Everything dated for later, so none is missed: follow-ups set by Advisory Actions (reports or drafts due at a coming Conference, items deferred to a later year, themes and events already set)${nReq ? `, and ${nReq} request${nReq === 1 ? '' : 's'} in the Final Reports (Conference committee reports, plus the board’s, trustees’ committees’ and G.S.O. reports): progress reports and drafts a committee asked to see again, items recommitted to a committee and other dated plans, which are not Advisory Actions` : ''}. Grouped by when they are due, then by the Conference committee that will receive them; dated ones also appear in the <a href="#/calendar">Calendar</a>.${undated.length ? ' Last, recommendations committed to the General Service Board, which have no date.' : ''}${pktCited ? ` Progress noted since then is shown under each item; “${esc(bmShort)} p. N” is page N of the PDF packet of board and committee reports sent to Conference members (<a href="#/weekends">Board Weekends</a>).` : ''}</p>
         ${pendHTML}${recentHTML}</section>
       <h2 class="section-title" id="aa-browse">Browse and search</h2>
       <div class="controls aa-controls">

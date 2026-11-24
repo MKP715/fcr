@@ -115,8 +115,10 @@ small, .small { font-size: .85em; }
 .tabs a { padding: 10px 12px; color: var(--ink-2); white-space: nowrap; border-bottom: 2px solid transparent; font-size: .92rem; }
 .tabs a:hover { color: var(--ink); text-decoration: none; }
 .tabs a.active { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
-@media (min-width: 641px) and (max-width: 1480px) { .tabs a { padding: 10px 8px; } }
-@media (min-width: 641px) and (max-width: 1360px) { .tabs a { padding: 10px 6px; } }   /* all 15 tabs fit down to about 1280px (the strip needs ~1455px at 12px padding, ~1335 at 8px, ~1275 at 6px) */
+@media (min-width: 641px) and (max-width: 1600px) { .tabs a { padding: 10px 8px; } }
+@media (min-width: 641px) and (max-width: 1480px) { .tabs a { padding: 10px 6px; } }
+@media (min-width: 641px) and (max-width: 1410px) { .tabs a { padding: 10px 5px; font-size: .88rem; } }
+@media (min-width: 641px) and (max-width: 1330px) { .tabs a { padding: 10px 4px; font-size: .86rem; } }   /* all 16 tabs fit down to about 1280px (the strip needs ~1595px at 12px padding, ~1467 at 8px, ~1403 at 6px, ~1321 at 5px/.88rem, ~1275 at 4px/.86rem); narrower windows scroll it, with edge fades */
 /* edge fades: sticky overlays inside the strip (a mask would let the page scrolling underneath show through) */
 .tabs::before, .tabs::after { content: ""; position: sticky; z-index: 1; flex: none; width: 32px; pointer-events: none; opacity: 0; transition: opacity .15s; }
 .tabs::before { left: 0; margin-left: calc(-1 * var(--tabs-pad)); margin-right: calc(var(--tabs-pad) - 32px); background: linear-gradient(to left, transparent, var(--surface) 75%); }

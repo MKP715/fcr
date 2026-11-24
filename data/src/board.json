@@ -1802,7 +1802,18 @@
      "name": "Daniel S."
     }
    ],
-   "notes": "The AAWS and Grapevine board chairs elected after the annual meeting are not printed in the 2026 report."
+   "notes": "The AAWS and Grapevine board chairs elected after the annual meeting are not printed in the 2026 report; the fall 2026 board reports name them (see chairs).",
+   "chairs": {
+    "as_of": "2026-11-02",
+    "aaws": {
+     "name": "John W.",
+     "ref": "Q4 2026 board reports pp. 10, 19"
+    },
+    "grapevine": {
+     "name": "Gail P.",
+     "ref": "Q4 2026 board reports p. 26"
+    }
+   }
   }
  ],
  "board_assignments": [

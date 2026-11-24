@@ -5,7 +5,10 @@
        cities, panels, Learn terms, junk), viewed as of 2026-10-20;
      - the search/router task's queries (word starts, whole numbers, acronyms, groups, Predict deep links, calendar,
        Conferences, pages, proposed agenda items), also as of 2026-10-20;
-     - a few date-dependent checks as of 2027-03-01, 2027-04-14, 2027-04-18 and 2027-09-15 (?today=).
+     - a few date-dependent checks as of 2027-03-01, 2027-04-14, 2027-04-18 and 2027-09-15 (?today=);
+     - the board weekend and agenda-decision checks as of 2026-11-23, after the fall 2026 board weekend (board_meetings.json:
+       the weekend, its report cards and key figures) and the Nov 6, 2026 grid (agenda topics, status pages); before the
+       weekend (2026-10-20) it is not in the index.
    A query is a string, or {q, expand} to run it with that group expanded ("Show N more").
    Each query has expectations on the flattened result list (display order). Prints the failing queries (every query
    with --all) and a per-category table; exits 1 when fewer than 98% of the queries pass. */
@@ -407,10 +410,50 @@ const TASK = [
   ['task-agenda', 'floor action', H('#/learn/rules', 3)],
   // a title that starts with a common word is no strong hit ("Policy for …" stays below the committee and the people)
   ['task-agenda', 'policy', NOT(/^PAI /, 3)],
+  // a board weekend is indexed only once it has ended: as of Oct 20 the fall 2026 weekend is a calendar item
+  ['task-weekend', 'fall board weekend 2026', NOHREF('#/weekends/2026-11-02'), HR(/^#\/calendar\/gsb-q4-2026$/, 1)],
+  ['task-weekend', 'slido', NOHREF('#/weekends/2026-11-02/conference')],
+  // the 2026-27 Grapevine chair is named in the fall 2026 packet: before it, she is no chair
+  ['task-weekend', 'grapevine chair', NOT(/^Gail P\./, 1)],
 ];
 
 // Date-dependent checks.
+const W = (rid) => '#/weekends/2026-11-02' + (rid ? '/' + rid : '');
 const DATED = {
+  '2026-11-23': [   // after the fall 2026 board weekend (Oct 29 – Nov 2) and the Nov 6 grid
+    ['dated-2026-11', 'board weekend', H(W(), 3), HR(/^#\/calendar\/gsb-q1-2027$/, 4)],
+    ['dated-2026-11', 'board weekends', H('#/weekends', 3)],
+    ['dated-2026-11', 'fall board weekend 2026', H(W(), 1)],
+    ['dated-2026-11', 'board and committee reports', H('#/weekends', 1)],
+    ['dated-2026-11', 'literature committee report', H(W('literature'), 1)],
+    ['dated-2026-11', 'reserve fund months', H(W('finance'), 2)],
+    ['dated-2026-11', 'class a trustee search', H(W('nominating'), 3)],
+    ['dated-2026-11', 'slido', H(W('conference'), 1)],
+    ['dated-2026-11', 'everything aa app', HR(/^#\/calendar\/aa-app-update|^#\/weekends\/2026-11-02\/aaws$/, 1), H(W('aaws'), 3)],
+    ['dated-2026-11', 'grapevine subscriptions', H(W('grapevine'), 1)],
+    ['dated-2026-11', 'forwarded as a general topic', T(/^Forwarded as a general topic/, 1), HR(/^#\/agenda\/(forwarded|topic\/)/, 6)],
+    ['dated-2026-11', 'general topic charter', H('#/agenda/topic/charter-first-164-pages', 1)],
+    ['dated-2026-11', 'pai 10', H('#/agenda/item/10', 1)],
+    ['dated-2026-11', 'what goes to the 77th conference', H('#/agenda/forwarded', 1)],
+    ['dated-2026-11', 'no action', H('#/agenda/status/no', 3)],
+    ['dated-2026-11', 'still open', H('#/agenda/status/under', 1)],
+    ['dated-2026-11', 'party psa', H('#/agenda/topic/retire-party-psa', 1)],
+    ['dated-2026-11', 'pai status grid', H('#/agenda', 1)],
+    ['dated-2026-11', '77th conference', H('#/calendar/gsc77', 1)],
+    // the 2026-27 corporate-board chairs named in the fall 2026 packet (board.json slate chairs, from the day after their as_of date)
+    ['dated-2026-11', 'grapevine chair', H('#/person/Gail%20P.', 3)],
+    ['dated-2026-11', 'aaws chair', H('#/person/John%20W.', 3)],
+    // an agenda topic (its title is its name, with a small prior) shows in the default view before its proposals
+    ['dated-2026-11', 'charter', H('#/agenda/topic/charter-first-164-pages', 5)],
+    ['dated-2026-11', 'reserve fund', H('#/agenda/topic/reserve-fund-three-month-minimum', 8)],
+    // "pai N" finds proposal N first, above proposals whose titles hold the number ("Article 12", "Floor Action No. 6")
+    ['dated-2026-11', 'pai 12', H('#/agenda/item/12', 1)],
+    ['dated-2026-11', 'pai 6', H('#/agenda/item/6', 1)],
+    // ...also for a small number that many titles carry ('Article 3', 'Charter Article 12'), and as 'item N' / 'proposal N'
+    ['dated-2026-11', 'pai 3', H('#/agenda/item/3', 1)],
+    ['dated-2026-11', 'item 12', H('#/agenda/item/12', 1)],
+    ['dated-2026-11', 'proposal 12', H('#/agenda/item/12', 1)],
+  ],
   '2027-03-01': [
     ['dated-2027-03', 'brandy', H(A(65), 1), TD(/Panel 77/, 1)],
     ['dated-2027-03', 'panel 77', T(/^Panel 77$/, 1), H('#/predict/77', 1)],

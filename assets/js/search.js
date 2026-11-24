@@ -4,8 +4,13 @@
      people (FCR.people merged per person with FCR.personGroups: delegates incl. stand-in alternates, elects, chairs and
      delegate chairs; trustees, directors, officers, AAWS/Grapevine board members, ACMs, consultants; GSO and Grapevine
      staff with their desks, committee secretaries, general manager), the Learn tree, glossary and rules, calendar
-     items (FCR.calendar), Conferences, proposed agenda items and their themes (FCR.RAW.pai; "pai 38" / "item 38" find
-     one by number, a bare "38" only weakly so Area 38 comes first), the app's pages and Predict deep links.
+     items (FCR.calendar), Conferences, proposed agenda items and their themes (FCR.RAW.pai; "pai 38" / "item 38" /
+     "proposal 38" find one by number, an exact name that ranks above titles carrying the number; a bare "38" only weakly
+     so Area 38 comes first; each item also by its status words, the reviewing body's reason and the agenda topic it
+     went into), the agenda topics of the next Conference (pai.json agenda_topics ->
+     #/agenda/topic/<id>), the board weekends (FCR.RAW.boardMeetings, once a weekend has ended by FCR.today(): the weekend
+     -> #/weekends/<id>, each report card -> #/weekends/<id>/<report id>, each key figure -> its report card), the app's
+     pages and Predict deep links.
    Text is folded (accents, punctuation, '&' -> 'and', 4-5-9 -> 459, Concept XII -> concept 12); every query word must
    match a word of the entry: exactly, at a word start, or (4+ letters) inside a word — so "pi" never matches
    Mississippi and "lit" never matches Accessibilities; numbers match whole ("6" is not 65).
@@ -101,7 +106,7 @@
     return {
       g: o.g, type: o.type || '', chip: o.chip || '', t: o.t, d: o.d || '', href: o.href, y: o.y || 0, cur: !!o.cur, prior: o.prior || 0,
       f: (o.f || []).map(([list, w, tag]) => [uniq((list || []).filter(Boolean)), w, tag || '']).filter((x) => x[0].length),
-      names: uniq(names.flatMap(nameForms)), phrase: !!o.phrase,
+      names: uniq(names.flatMap(nameForms)), phrase: !!o.phrase, xn: (o.eqNames || []).map(norm).filter(Boolean),
       c: uniq((o.noCompact ? [] : names).concat(o.compacts || []).flatMap((n) => nameForms(n).map((x) => x.replace(/ /g, '')))).filter((x) => x.length >= 2),
       meta: o.meta || null,
     };
@@ -467,18 +472,48 @@
     // a strong hit, a word found inside another stays under MIN_BASE): "first conference" is still the 1st Conference.
     // The title stays out of the compact forms (noCompact), so a title that starts with a common word ("Policy …",
     // "Reserve Fund: …", "(Twelve and Twelve) …") never gets the 0.85 prefix score; it keeps only the small name bonuses.
-    // Its number sits in a 0.5 field, the weakest a number may match: "pai 38" and "item 38" find it (nothing else has
-    // both words), a bare "38" stays below Area 38 and the 38th Conference.
+    // Its number sits in a 0.7 field, above a number inside another item's title (0.6, "Article 12", "12 months"):
+    // "pai 38" and "item 38" find it first, while a bare "38" stays below Area 38 and the 38th Conference.
     const PAI = (FCR.RAW && FCR.RAW.pai) || {};
     const paiCycle = (PAI.source || {}).ordinal;
     const paiTheme = {}; (PAI.themes || []).forEach((t) => { paiTheme[t.id] = t; });
     const isNum = (x) => /^\d+$/.test(x);
+    // the grid status after the fall board weekend: a short chip, and the words people use for it (weight 0.4, under the
+    // 0.5 of a theme, so "no action" lists the status pages and the glossary before 123 single proposals)
+    const ST_CHIP = { under: 'still open', forwarded: 'forwarded', forwarded_topic: 'in a topic', no_action: 'no action' };
+    const ST_WORDS = { under: 'under consideration still open pending', forwarded: 'forwarded', forwarded_topic: 'forwarded general topic',
+      no_action: 'no action took not forwarded', withdrawn: 'withdrawn', superseded: 'superseded', removed: 'removed', deferred: 'deferred held' };
+    const topicOf = {}; (PAI.agenda_topics || []).forEach((t) => (t.keys || []).forEach((k) => { topicOf[k] = t; }));
+    const bodyName = (k) => ((PAI.bodies || {})[k] || {}).name || k || '';
     (PAI.items || []).forEach((x) => {
       const y0 = x.cycle !== paiCycle ? String(x.key).split('-')[0] : '';   // deferred from an earlier cycle: key '2025-7'
-      out.push(entry({ g: 'Agenda items', type: 'pai', chip: x.status === 'under' ? 'PAI' : x.status, t: `${y0 ? y0 + ' ' : ''}PAI ${x.n} · ${x.title || 'entry removed (no text in the grid)'}`,
-        d: clip(x.summary || x.outcome, 120), href: `#/agenda/item/${encodeURIComponent(x.key)}`, prior: -0.02, names: [x.title], noCompact: true,
-        f: [[expand(x.title || ''), 0.6], [[String(x.n), norm(x.key), y0], 0.5], [['pai', 'item'], 0.5],
-          [expand((x.targets || []).concat((x.themes || []).map((id) => (paiTheme[id] || {}).name)).join(' ')), 0.5], [expand(x.summary || x.outcome || ''), 0.3]] }));
+      const dec = x.decision || {}, tp = topicOf[x.key];
+      out.push(entry({ g: 'Agenda items', type: 'pai', chip: ST_CHIP[x.status] || x.status, t: `${y0 ? y0 + ' ' : ''}PAI ${x.n} · ${x.title || 'entry removed (no text in the grid)'}`,
+        d: clip(x.summary || x.outcome, 120), href: `#/agenda/item/${encodeURIComponent(x.key)}`, prior: -0.02, noCompact: true,
+        // its number as an exact name ('pai 3', 'item 12', 'proposal 74'; '2025 pai 7' for one held over), so it ranks
+        // above the proposals whose titles carry that number ('Article 3'); exact only, so a bare 'pai' is not a prefix hit
+        names: [x.title], eqNames: y0 ? [`pai ${y0}-${x.n}`, `${y0} pai ${x.n}`] : [`pai ${x.n}`, `item ${x.n}`, `proposal ${x.n}`],
+        f: [[expand(x.title || ''), 0.6], [[String(x.n), norm(x.key), y0], 0.7], [['pai', 'item'], 0.5], [['proposal'], 0.3],
+          [expand((x.targets || []).concat((x.themes || []).map((id) => (paiTheme[id] || {}).name)).join(' ')), 0.5],
+          [expand([ST_WORDS[x.status] || x.status, tp ? tp.title : ''].join(' ')), 0.4],
+          [expand([x.summary || x.outcome || '', dec.reason, dec.referred_to, bodyName(x.body)].join(' ')), 0.3]] }));
+    });
+    // the agenda entries the trustees' committees and boards sent on (one proposal, a general topic, or their own item);
+    // a 'reference' entry is a note, not an agenda item: it opens the forwarded section. Its title and kind words weigh
+    // 0.7 (an item title 0.6, still no strong hit), its title counts as its name, and it has a small prior over its member
+    // proposals (0.08 vs -0.02), so "general topic charter" and "charter" show the topic before its 41 proposals.
+    const TOPIC_CHIP = { item: 'agenda item', general_topic: 'general topic', added: 'added', reference: 'note' };
+    const TOPIC_WORDS = { item: 'forwarded agenda item topic', general_topic: 'general topic forwarded agenda consolidated', added: 'added agenda item topic trustees', reference: 'note sharing session' };
+    (PAI.agenda_topics || []).forEach((t) => {
+      const n = (t.keys || []).length, cid = t.to_committee && FCR.COMMITTEES[t.to_committee] ? t.to_committee : null;
+      const cm = cid ? `Conference Committee on ${FCR.COMMITTEES[cid].name}${t.to_provisional ? ' (provisional routing)' : ''}` : '';
+      const what = t.kind === 'general_topic' ? `${n} proposals in one general topic` : t.kind === 'item' ? `${n} proposal${n === 1 ? '' : 's'}`
+        : t.kind === 'added' ? `added by the ${bodyName(t.by)}` : 'a note, not an agenda item';
+      out.push(entry({ g: 'Agenda items', type: 'pai-topic', chip: TOPIC_CHIP[t.kind] || 'topic', t: t.title, d: `${what}${cm ? ' · ' + cm : ''} · ${clip(t.summary, 100)}`,
+        href: `#/agenda/topic/${encodeURIComponent(t.id)}`, prior: 0.08, names: [t.title], noCompact: true,   // a reference note opens and highlights the same way
+        f: [[expand(t.title), 0.7], [toks(TOPIC_WORDS[t.kind] || 'topic'), 0.7],
+          [expand([cid ? FCR.COMMITTEES[cid].name : t.to_text || ''].concat((t.themes || []).map((id) => (paiTheme[id] || {}).name)).join(' ')), 0.5],
+          [expand([t.summary, t.why, t.note, bodyName(t.by)].join(' ')), 0.3]] }));
     });
     (PAI.themes || []).forEach((t) => {
       const n = (PAI.items || []).filter((x) => (x.themes || []).includes(t.id)).length;
@@ -487,6 +522,42 @@
         href: `#/agenda/theme/${encodeURIComponent(t.id)}`, prior: 0.03, names: [t.name],
         f: [[tt.filter((w) => !isNum(w)), 1], [tt.filter(isNum).concat(toks(t.scope).filter(isNum)), 0.5], [['theme', 'pai', 'proposed', 'agenda'], 0.5],
           [expand([t.scope, t.lede].join(' ')), 0.3]] }));
+    });
+
+    // ----- board weekends (FCR.RAW.boardMeetings, newest first): only weekends that ended before today (?today= works) -----
+    // The weekend itself, one row per report card (its name weighs like a title; the card's text stays at 0.3-0.5, so a
+    // word in a highlight never outranks a person or a committee), and the weekend's key figures ("Grapevine
+    // subscriptions: 60,176"), each opening the card it comes from.
+    const BM = ((FCR.RAW && FCR.RAW.boardMeetings) || {}).meetings || [];
+    const tIso = C && C.todayStr ? C.todayStr() : (() => { const t = FCR.today(); return `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`; })();
+    const REP_CHIP = { minutes: 'minutes', board: 'board report', trustees_committee: 'trustees’ committee', session: 'session', other: 'report' };
+    const texts = (list, ...keys) => (list || []).map((x) => keys.map((k) => x[k] || '').join(' ')).join(' ');
+    BM.filter((m) => m && m.id && m.end && m.end < tIso).forEach((m) => {
+      const base = '#/weekends/' + encodeURIComponent(m.id), yr = String(m.year || m.id.slice(0, 4)), season = m.season || '';
+      const months = uniq([m.start, m.end].map((s) => MONTH_WORDS[+String(s).slice(5, 7) - 1]).filter(Boolean));
+      const when = ['board', 'weekend', 'weekends', 'quarterly', 'meeting', 'gsb', season, yr].concat(months, m.quarter ? ['q' + m.quarter] : []);
+      out.push(entry({ g: 'Board weekends', type: 'board-weekend', chip: 'board weekend', t: `${m.title || 'Board weekend'} (${fmtRange(m.start, m.end)})`,
+        d: clip(((m.overview || [])[0] || {}).text || m.formal, 120), href: base, y: +yr, prior: 0.04,
+        names: [m.title, m.formal, `${season} board weekend ${yr}`, `${season} ${yr} board weekend`, `board weekend ${yr}`].filter(Boolean),
+        f: [[expand([m.title, m.formal].join(' ')), 1], [uniq(when), 0.7], [toks(m.place), 0.5], [['reports', 'report', 'minutes', 'packet'], 0.5],
+          [expand(texts(m.overview, 'text') + ' ' + texts(m.coming_up, 'text')), 0.3]] }));
+      const names = {};
+      (m.reports || []).forEach((r) => {
+        names[r.id] = r.name;
+        out.push(entry({ g: 'Board weekends', type: 'board-report', chip: REP_CHIP[r.kind] || 'report', t: `${r.name} · ${m.title || 'board weekend'}`,
+          d: clip(r.summary, 120), href: `${base}/${encodeURIComponent(r.id)}`, y: +yr, prior: 0.01, names: [r.name + ' report'],
+          // no generic "board weekend" words here: those find the weekend row, not its 18 cards
+          f: [[expand(r.name), 0.9], [uniq(['report', 'reports', season, yr].concat(months)), 0.6], [expand(texts(r.numbers, 'label', 'value')), 0.5],
+            [expand(texts(r.highlights, 'text')), 0.4],
+            [expand([r.summary, r.accepted, texts(r.recommendations, 'text', 'outcome'), texts(r.next, 'text'), texts(r.followups, 'text')].join(' ')), 0.3]] }));
+      });
+      (m.numbers || []).forEach((x) => {
+        const rid = x.report && names[x.report] ? x.report : null;
+        out.push(entry({ g: 'Board weekends', type: 'board-number', chip: 'figure', t: `${x.label}: ${x.value}`,
+          d: [x.as_of ? 'as of ' + x.as_of : '', rid ? names[rid] : '', `${(m.source || {}).short || m.title} p. ${x.page}`].filter(Boolean).join(' · '),
+          href: rid ? `${base}/${encodeURIComponent(rid)}` : base, y: +yr, prior: 0, names: [x.label],
+          f: [[expand(x.label), 1], [toks(x.value), 0.6], [uniq(['board', 'weekend', season, yr]), 0.4]] }));
+      });
     });
 
     // ----- pages -----
@@ -501,9 +572,20 @@
       ['Agenda items: trends', '#/agenda/trends', 'agenda items proposed pai trends charts themes arrived copies same wording senders'],
       ['PAI status grid', '#/agenda', 'pai proposed agenda items status grid gso list every proposal under consideration withdrawn superseded',
         'GSO’s list of every proposed agenda item and its status, summarized on the Agenda Items page'],
+      ['Board Weekends', '#/weekends', 'board weekends weekend quarterly meetings general service board gsb aaws grapevine boards trustees committees reports minutes fall winter summer',
+        'The General Service Board’s quarterly weekends: what the boards and trustees’ committees reported and decided'],
+      ['Board and committee reports (quarterly board reports)', '#/weekends', 'board committee reports quarterly report packet minutes trustees committees weekend',
+        'The reports of each board weekend, summarized in plain words on the Board Weekends page'],
       ['Structure', '#/structure', 'structure org chart organization flow chart upside down triangle hierarchy counterpart corresponding trustees committees pairs'],
       ['Learn', '#/learn', 'learn service manual structure tree glossary rules'],
       ['Quiz', '#/quiz', 'quiz test flashcards practice questions'], ['Reports', '#/reports', 'reports final conference report pdf library']]
+      // the Agenda Items page's decision views, once the grid carries the fall board weekend's decisions
+      .concat((PAI.agenda_topics || []).length && paiCycle ? [
+        [`What goes to the ${FCR.ordinal(paiCycle)} Conference`, '#/agenda/forwarded', `forwarded agenda topics general topic what goes trustees committees decided agenda entries ${paiCycle + 1950}`,
+          'The proposals forwarded by the trustees’ committees and boards, as agenda entries by Conference committee'],
+        ['Agenda items: no action', '#/agenda/status/no', 'agenda items proposed pai no action took not forwarded why reasons', 'Proposals that got no action at the fall board weekend, and why'],
+        ['Agenda items still open', '#/agenda/status/under', 'agenda items proposed pai still open under consideration pending interim meeting', 'Proposals not decided yet: interim meetings and referrals'],
+      ] : [])
       .forEach(([t, href, words, d]) => out.push(entry({ g: 'Pages', type: 'page', chip: 'page', t, d: d || 'Open the ' + t + ' page', href, prior: -0.1, names: [t], f: [[toks(t + ' ' + words), 0.8]] })));
     return out;
   }
@@ -533,7 +615,7 @@
     return best;
   }
   const inList = (t, list) => tokScore(t, list, 1, /^\d+$/.test(t)) >= 0.85;
-  const GROUP_ORDER = ['Areas', 'Regions', 'Committees', 'Panels', 'Predict', 'Delegates', 'Trustees & boards', 'Staff', 'Calendar', 'Conferences', 'Agenda items', 'Learn', 'Pages'];
+  const GROUP_ORDER = ['Areas', 'Regions', 'Committees', 'Panels', 'Predict', 'Delegates', 'Trustees & boards', 'Staff', 'Calendar', 'Conferences', 'Agenda items', 'Board weekends', 'Learn', 'Pages'];
   const MIN_BASE = 0.25;   // a lone weak hit (a word buried in a summary) is noise
   const MAX_ROWS = 30;
   const index = () => INDEX || (INDEX = build());
@@ -660,7 +742,7 @@
       if (areaHit && e.g === 'Areas' && e.href === areaHit) score = Math.max(score, 2);
       else if (areaHit && score && e.meta && e.meta.area === +an[1]) score += 0.3;   // "65": Area 65's delegates before other mentions of 65
       if (score < MIN_BASE) continue;
-      const base = score, eq = !e.phrase && e.names.some((n) => n === qcore);
+      const base = score, eq = !e.phrase && (e.names.some((n) => n === qcore) || e.xn.includes(qcore));
       // name bonuses (event titles: only a multi-word phrase found in the title)
       if (e.phrase) { if (qt.length > 1 && e.names.some((n) => (' ' + n).includes(' ' + qcore))) score += 0.15; } else if (eq) score += 0.5; else if (e.names.some((n) => pre(n, qcore))) score += 0.25; else if (e.names.some((n) => pre(' ' + n, ' ' + qcore, true))) score += 0.1;
       score += e.prior + (e.cur ? 0.15 : 0) + Math.min(e.y, 2100) / 1e6;
@@ -682,8 +764,8 @@
     }
     // Group, order groups by their best hit, cap each group (fewer per group when many groups match). Concepts vs
     // things: when people/areas/committees match strongly, Learn shows only its exact match (first, as a definition)
-    // or goes last with two items. Proposed agenda items and their themes are concepts too, like Learn and Pages: a
-    // strong hit there never pushes Learn down.
+    // or goes last with two items. Proposed agenda items and their themes, and the board weekends' report cards, are
+    // concepts too, like Learn and Pages: a strong hit there never pushes Learn down.
     const by = {}, kept = new Set();
     res.forEach((r) => {
       const k = r.g === 'Learn' ? r.href : r.g + '|' + r.href + '|' + r.t;
@@ -692,7 +774,7 @@
     });
     // within a group: score, then newest
     Object.values(by).forEach((l) => l.sort((a, b) => b.score - a.score));
-    const concept = (g) => g === 'Learn' || g === 'Pages' || g === 'Agenda items';
+    const concept = (g) => g === 'Learn' || g === 'Pages' || g === 'Agenda items' || g === 'Board weekends';
     const strong = Object.keys(by).some((g) => !concept(g) && by[g].some((r) => r.base >= 0.85));
     const learnEq = by.Learn && by.Learn[0].eq && !Object.keys(by).some((g) => !concept(g) && by[g][0].eq);
     const rank = (g) => (g === 'Learn' && strong ? (learnEq ? 99 : -99) : by[g][0].score);

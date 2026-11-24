@@ -1,7 +1,7 @@
 {
  "panel": 77,
- "as_of": "2026-10-21",
- "method": "Area websites, newsletters, minutes and election announcements searched 2026-10-19. Names reduced to first name + last initial.",
+ "as_of": "2026-11-23",
+ "method": "Area websites, newsletters, minutes and election announcements searched 2026-10-19 and rechecked 2026-11-23. Names reduced to first name + last initial.",
  "areas": [
   {
    "area": 1,
@@ -39,57 +39,58 @@
   {
    "area": 6,
    "area_name": "Northern Coastal California (CNCA)",
-   "status": "election_scheduled",
+   "status": "elected",
    "election_date": "2026-11-14",
-   "panel77_delegate": null,
-   "panel77_alternate": null,
+   "panel77_delegate": "Drew B.",
+   "panel77_alternate": "Dan B.",
    "confidence": "high",
-   "source_url": "https://mailchi.mp/cnca06/cnca-newsletter-10-2026-comments-14201337",
-   "notes": "The October 2026 CNCA Comments newsletter lists the '2026 Fall Election Assembly, November 14, 2026, Hosted by Districts 20 & 7, Richmond Memorial Convention Center, Richmond, CA'. The cnca06.org home page also posts a preliminary flyer for the Fall Election Assembly on Nov 14 (in person and online). No results yet. Panel 75 delegate is Chitra S. and alternate is Claudia N."
+   "source_url": "https://mailchi.mp/cnca06/cnca-newsletter-11-2026-comments-14202226",
+   "notes": "Verified. The Chair's preview in the November 2026 CNCA Comments newsletter (CNCA 06, Area 06), written by Drew B. as CNCA Chair, reads: 'Last Saturday, we had our final Assembly of Panel 75, in where we picked our Officers for Panel 77', followed by 'Delegate: Drew B.' and 'Alternate Delegate: Dan B.' The Panel 77 Chair is Claudia N., the P75 alternate. The newsletter gives no calendar date. The Nov 14, 2026 date comes from the October 2026 newsletter's listing of the Fall Election Assembly, which fits 'last Saturday'. The P75 delegate was Chitra S., so Drew B. is a new delegate, not a holdover."
   },
   {
    "area": 10,
    "area_name": "Colorado",
-   "status": "election_scheduled",
-   "confidence": "high",
+   "status": "held_results_not_found",
+   "confidence": "medium",
    "election_date": "2026-11-07",
    "panel77_delegate": null,
    "panel77_alternate": null,
-   "source_url": "https://coloradoaa.org/wp-content/uploads/2026/09/Winter-2026-Draft-Agenda.pdf",
-   "notes": "The Winter 2026 Assembly runs Nov 6-8, 2026 at the DoubleTree by Hilton Greenwood Village (https://coloradoaa.org/assemblies/). The draft agenda for Sat Nov 7, 2026 has 'G. Elections: a. Southwest Regional Trustee Nominee, b. Delegate, c. Alternate Delegate, d. Area Chair, e. Secretary, f. Treasurer', starting in the 1:00 PM business session. The coloradoaa.org Delegate and Alternate Delegate pages give no names."
+   "source_url": "https://coloradoaa.org/wp-content/uploads/2026/11/Winter-2026-Final-Agenda.pdf",
+   "notes": "I re-checked the final agenda (uploaded Nov 7). Elections are item G of the Saturday Nov 7, 2026 business meeting at the Winter Assembly: SW Regional Trustee Nominee, Delegate, Alternate Delegate, Chair, Secretary, Treasurer. As of Nov 23 there are no names. The newest upload on the site is the final agenda. The Delegate, Alternate Delegate and Past Delegates pages name no one, there are no recent posts, and pages edited since (Assemblies, Districts 11/14/29) have no results. Web searches turn up only Al-Anon Colorado material."
   },
   {
    "area": 11,
    "area_name": "Connecticut",
-   "status": "election_scheduled",
-   "confidence": "high",
+   "status": "held_results_not_found",
+   "confidence": "medium",
    "election_date": "2026-11-07",
    "panel77_delegate": null,
    "panel77_alternate": null,
    "source_url": "https://ct-aa.org/wp-content/uploads/2026/10/FALL-2026-VOTING-ASSEMBLY-REGISTRATION-FLYER_Clickable.pdf",
-   "notes": "The flyer announces the Connecticut Area 11 Fall [Election] Assembly: Saturday, November 7, 2026, 9AM-4PM, at the William Pitkin Community Center, Wethersfield, CT, plus Zoom. It says 'HELP CHOOSE THE NEXT PANEL OF AREA 11 OFFICERS' and 'Elect Area 11 Officers', and the assembly will also select a nominee for Northeast Regional Trustee. The home page (https://ct-aa.org/) repeats 'Save The Date. November 7th VOTING ASSEMBLY.'"
+   "notes": "The flyer set the Fall Voting Assembly for Nov 7, 2026 (Wethersfield + Zoom) to elect Area 11 officers. No result found as of Nov 23: the home page names no delegate-elect, and the Area 11 Information page was last modified Oct 20, 2026, before the vote. The newest media uploads (to Nov 23) are flyers, a D35 minutes file and D2 agenda/treasurer files. The D2 Nov 19 agenda text mentions no election result."
   },
   {
    "area": 13,
    "area_name": "District of Columbia (WAGSA)",
-   "status": "held_results_not_found",
+   "status": "elected",
    "election_date": "2026-10-18",
-   "panel77_delegate": null,
-   "panel77_alternate": null,
+   "panel77_delegate": "Kesi L.",
+   "panel77_alternate": "Joni D.",
    "confidence": "high",
-   "source_url": "https://www.area13aa.org/events",
-   "notes": "The events page lists 'Fall Assembly & Panel 77 Elections' for Sunday, Oct 18, 2026, 9 AM-1 PM, at John F. Kennedy HS in Silver Spring, MD. The slate is Delegate, Alternate Delegate, Chair, Treasurer and Secretary. No results are posted. Delegate's Corner still shows Panel 75 material. Also checked: home and about pages, the intergroup site aa-dc.org (latest New Reporter is the October 2026 issue, published before the election), and web searches."
+   "source_url": "https://aa-dc.org/wp-content/uploads/2026/11/WAIA-Board-Agenda-Draft-Minutes-11_10_2026.pdf",
+   "notes": "Verified from the PDF text of the WAIA (DC intergroup) board draft minutes of 11/10/2026, section 'Washington Area General Service Assembly (WAGSA) Area 13 Liaison Report'. It says: 'On October 18, WAGSA GSRs, DCMs and Officers filled five positions for the next two years: Delegate: Kesi L, who currently serves as Alternate Delegate; Alternate Delegate: Joni D., current WAGSA/WAIA liaison'. 'Next two years' (volunteers for 2027-2028) = Panel 77. The source is a secondary, draft document; the Area 13 site is not yet updated."
   },
   {
    "area": 14,
    "area_name": "North Florida",
-   "status": "held_results_not_found",
+   "status": "elected",
    "election_date": "2026-10-04",
-   "panel77_delegate": null,
-   "panel77_alternate": null,
-   "confidence": "medium",
-   "source_url": "https://aanorthflorida.org/agenda-en.pdf",
-   "notes": "The official agenda for the October 2-4 (2026) assembly lists 'Sunday, October 4, 9:00am, Elections Meeting (Español), Area 14, Grand Ballroom' (also on https://aanorthflorida.org/assembly_agenda.asp). The documents page offers a 'Service Resume for 2027-2028 Panel 77 Positions' form. The election date has passed, but no results are posted on the site (home, delegates, servicebodies, documents and Spanish pages all checked). Panel 75 delegate is Lori P."
+   "panel77_delegate": "Nicole D.",
+   "panel77_alternate": "Pete W.",
+   "confidence": "high",
+   "source_url": "",
+   "source_note": "Area 14 assembly minutes, October 2026, p. 22",
+   "notes": "Area 14's October 2026 assembly minutes (p. 22) list the Panel 77 officers elected at the Third Legacy voting meeting on Sunday, Oct 4, 2026: Delegate Nicole D., Alternate Delegate Pete W. This is the new panel, not Panel 75, whose delegate is Lori P.; the Panel 75 alternate, who signs her reports Nicole D., is likely the same person."
   },
   {
    "area": 15,
@@ -105,13 +106,13 @@
   {
    "area": 17,
    "area_name": "Hawaii",
-   "status": "election_scheduled",
+   "status": "elected",
    "confidence": "high",
    "election_date": "2026-11-07/2026-11-08",
-   "panel77_delegate": null,
-   "panel77_alternate": null,
-   "source_url": "https://area17aa.org/",
-   "notes": "The home page lists the 2026 Elections Assembly for Sat & Sun, November 7-8, 2026, 9am-5pm, at Queen Kaahumanu Elementary School, Honolulu, hosted by District 1 Diamond Head. The 2026 Budget Assembly agenda gives the same dates (https://area17aa.org/panel63/wp-content/uploads/2026/07/2026-Budget-Agenda-.pdf). Current Panel 75 officers are Delegate Deborah S. and Alternate Delegate Sean F."
+   "panel77_delegate": "Sean F.",
+   "panel77_alternate": "Deborah L.",
+   "source_url": "https://area17aa.org/panel63/wp-content/uploads/2026/11/WTB-Elections-Assembly-2026-2.pdf",
+   "notes": "The What-To-Take-Back sheet for the 'Elections Assembly November 7-8, 2026' (PDF text extracted and read) says: 'Area 17, Panel 77 Area Officers: Delegate- Sean F., Alt. Delegate- Deborah L'. The Panel 75 officers were Delegate Deborah S. and Alternate Sean F., so Sean F. moves up from alternate. The new Chair is Sean C."
   },
   {
    "area": 19,
@@ -170,13 +171,13 @@
   {
    "area": 30,
    "area_name": "Eastern Massachusetts",
-   "status": "election_scheduled",
+   "status": "elected",
    "election_date": "2026-11-01",
-   "panel77_delegate": null,
-   "panel77_alternate": null,
+   "panel77_delegate": "Virginia M.",
+   "panel77_alternate": "Joe R.",
    "confidence": "high",
-   "source_url": "https://www.aaemass.org/",
-   "notes": "The aaemass.org home page lists 'Nov. 1, 2026 Orientation 9:15 AM, Assembly 10 AM Election Assembly' at IBEW Local 103, Dorchester, MA. The area's linked Drive folder (https://drive.google.com/drive/folders/1dVkkXOPRmGk_xP9r5QrETfq8au7pjUsF) contains '2026-11-01 Area Election Assembly Area 30'. No delegate names were found on the site."
+   "source_url": "https://drive.google.com/file/d/199Eu_lI099AxHQQgk5FE3RRInZccG-kr/view",
+   "notes": "Source: 'GENERAL SERVICE COMMITTEE OF EASTERN MASSACHUSETTS | AREA 30 November 2026 Election Assembly Minutes', Nov 1, 2026, marked DRAFT - PENDING APPROVAL. The original link (1kpE9...) is a Drive shortcut owned by the aaemass.org alt chair, and this URL is its target PDF. 'Panel 77 Area Officers: DELEGATE Virginia M., ALTERNATE DELEGATE Joe R.' Virginia M. (Panel 75 Alternate Delegate) was elected on the 2nd ballot, and Joe R. (Panel 75 Area Chair) was elected Alternate by acclamation. No one stood for Northeast Regional Trustee nominee."
   },
   {
    "area": 32,
@@ -214,13 +215,13 @@
   {
    "area": 38,
    "area_name": "Eastern Missouri (EAMO)",
-   "status": "held_results_not_found",
+   "status": "elected",
    "election_date": "2026-10-04",
-   "panel77_delegate": null,
-   "panel77_alternate": null,
+   "panel77_delegate": "Laura S.",
+   "panel77_alternate": "Rob W.",
    "confidence": "high",
-   "source_url": "https://eamo.org/fall2026/",
-   "notes": "The Fall Assembly 2026 was Oct 3-4 at St. Louis Community College - Florissant Valley. The Sunday Oct 4 agenda (Drive PDF linked from eamo.org/fall2026) lists 'Third Legacy Elections' for Delegate, Alternate Delegate, Chair and the other officers, plus a candidate for Southwest Regional Trustee. The Fall 2026 Gratitude Gazette (issued before the election) still lists Delegate Jim L. and Alt Delegate Laura S., and names Becca H. as Panel 73 past delegate, which confirms the odd-panel cycle. The EAMO WP API shows no page or media posted after Oct 4 other than the Winter 2027 assembly page, whose PDFs are a map and image flyer. The Delegate Information page is password-protected."
+   "source_url": "https://drive.google.com/file/d/14Bd11WoaX9IgTLV7a0AazhazB-n1oFTH/view",
+   "notes": "Verified by downloading the public Drive PDF 'Area 38 Fall Assembly, October 3rd & 4th, 2026 ... Summary of Actions'. It says: 'Laura S. was elected Panel 77 Delegate on the second ballot' (59 votes) and 'Rob W. was elected Panel 77 Alternate Delegate on the first ballot' ('exactly two-thirds'). Laura S. was the Panel 75 Alternate. Elections were on Sunday Oct 4 per the assembly agenda."
   },
   {
    "area": 39,
@@ -282,24 +283,24 @@
   {
    "area": 49,
    "area_name": "Southeast New York (SENY)",
-   "status": "held_results_not_found",
-   "confidence": "medium",
+   "status": "elected",
+   "confidence": "high",
    "election_date": "2026-09-19",
-   "panel77_delegate": null,
-   "panel77_alternate": null,
-   "source_url": "https://www.aaseny.org/",
-   "notes": "The home page lists the 'Election Assembly (Hybrid)' for Saturday, September 19, 2026, 10:00AM-3:00PM. As of Oct 19, 2026 the home page still shows 'YOUR PANEL 75 OFFICERS': Delegate Nisaa A. and Alternate Delegate Jeanne C. No Panel 77 results appear on the assembly documents page (https://aaseny.org/assembly-documents), the minutes page (latest Nov 2025), or a site search for 'panel 77'. Results not found. The web search budget ran out partway through."
+   "panel77_delegate": "Jeannie B.",
+   "panel77_alternate": "Justin K.",
+   "source_url": "https://aaseny.org/wp-content/uploads/2026/11/9.19.26-Assembly-Minutes-ENG.pdf",
+   "notes": "Verified from the PDF text of the 'SENY Assembly Minutes, September 19th, 2026', section 'Panel 77 Area 49 Elections': 'Jeannie B. was elected as Panel 77 Delegate with substantial unanimity.' and 'Justin K. was elected at Panel 77 Alternate Delegate with substantial unanimity.' Also elected: Area Chair Shawn K. and Treasurer Mike O. Tech Officer and Registration Officer were left OPEN for a November special election. Correction to the earlier note: these minutes list the P75 Alternate Delegate as Jeanne C., so Jeannie B. has a different last initial and should not be assumed to be the P75 alternate. Justin K. was the P75 Registration Officer."
   },
   {
    "area": 51,
    "area_name": "North Carolina",
-   "status": "election_scheduled",
-   "election_date": "2026-11-06/2026-11-08",
+   "status": "held_results_not_found",
+   "election_date": "2026-11-07",
    "panel77_delegate": null,
    "panel77_alternate": null,
    "confidence": "high",
-   "source_url": "https://aanorthcarolina.org/wp-content/uploads/2023/09/2026-P3-Manual.pdf",
-   "notes": "The Area 51 Service Guidelines (P3 Manual, 2026) say 'In Area 51, the normal election assembly is held in the fall of even-numbered years.' The members page (https://aanorthcarolina.org/information-for-members/) lists the 'Area 51 Fall Committee & Assembly Meeting' on Nov 6-8, 2026 at the Hilton Raleigh North Hills. The assembly and officer pages require a login. The Panel 75 delegate is Denise M."
+   "source_url": "https://aanorthcarolina.org/wp-content/uploads/2026-Fall-Assembly-Notice.pdf",
+   "notes": "I confirmed the notice: 'Area 51 Fall Committee & Election Assembly Meeting November 6-8, 2026', with 'Third Legacy Elections for the Panel 77 Delegate Term', held Saturday Nov 7 and in session 'until the elections are completed'. The Nov 2026 delegate newsletter (Denise M., P75) lists the Nov 7-8 Fall Election Assembly. The Assembly, Area Committee and Delegate's Corner pages (edited Nov 6-9) require a login. No results appear in uploads since Nov 8 or in search. I did not re-open the District 23 minutes cited earlier."
   },
   {
    "area": 52,
@@ -326,13 +327,13 @@
   {
    "area": 54,
    "area_name": "Northeast Ohio",
-   "status": "held_results_not_found",
-   "confidence": "medium",
+   "status": "elected",
+   "confidence": "high",
    "election_date": "2026-10-18",
-   "panel77_delegate": null,
-   "panel77_alternate": null,
-   "source_url": "https://area54.org/wp-content/uploads/2026/10/Area-Assembly-Minutes-9-20-26.pdf",
-   "notes": "The Sept 20, 2026 assembly minutes say the next hybrid Assembly is Oct 18 at the 12-Step Club and 'Elections will be held'. The 2026 schedule trifold (http://area54.org/pdfs/2026-Trifold.pdf) lists 'October 18: Hybrid Area Assembly/Elections'. The Oct 18 assembly took place one day before this check, so no results are posted yet. The Oct 18 agenda (https://area54.org/wp-content/uploads/2026/10/Area-54-Agenda-10-18-26.pdf) lists Delegate Beverly F. and Alternate Delegate Wellington R. (Panel 75). The minutes mention some members willing to stand, but no one is known to have been elected."
+   "panel77_delegate": "Katie S.",
+   "panel77_alternate": "Jeff C.",
+   "source_url": "https://area54.org/wp-content/uploads/2026/11/NEOH-Recorder-Vol-XIX-Issue-7.pdf",
+   "notes": "Verified from the PDF text of the Northeast Ohio Area 54 Recorder, November-December 2026 Edition, Volume XIX, Issue 7. It says: 'At the October Assembly, we held our elections for Panel 77. These are your new officers and trusted servants: Katie S., Delegate ... Jeff C., Alternate Delegate'. Beverly F. / Wellington R. are named as the outgoing Panel 75 Delegate and Alternate. The Oct 18 assembly date comes from the Sept 20 minutes and the 2026 trifold."
   },
   {
    "area": 57,
@@ -348,13 +349,13 @@
   {
    "area": 59,
    "area_name": "Eastern Pennsylvania",
-   "status": "election_scheduled",
+   "status": "elected",
    "election_date": "2026-11-14",
-   "panel77_delegate": null,
-   "panel77_alternate": null,
+   "panel77_delegate": "Alex N.",
+   "panel77_alternate": "Tara C.",
    "confidence": "high",
-   "source_url": "https://area59aa.org/wp-content/uploads/2026/10/2026-EPGSA-Program-EN.pdf",
-   "notes": "The 69th EPGSA runs Nov 13-15, 2026 at the Wyndham Lancaster Resort. The program lists the Area 59 Assembly on Saturday Nov 14, 2026, 8:45 am to about 3:00 pm, with Election Chair Matt K. The event page (https://area59aa.org/calendar/69th-annual-eastern-pennsylvania-general-service-convention-and-assembly-epgsa/) says 'In even-numbered years (like 2026), we have elections for the Delegate and Area Officers'. A 'P75 & P77 Area Changeover Meeting' follows on Dec 13, 2026. Panel 75 delegate is Dan B. and alternate is Alex N., per the Sept 13, 2026 minutes."
+   "source_url": "https://area59aa.org/wp-content/uploads/2026/11/EN-2026-EPGSA-Assembly-Minutes.pdf",
+   "notes": "Minutes of the 69th Annual EPGSA Convention & Assembly (Nov 14, 2026, Lancaster; EPGSA = Area 59), PDF text extracted and read: 'Panel 77 Officer Elections ... Delegate: Alex N., Alternate Delegate: Tara C.' Tara C. chaired as the Panel 75 Chairperson, and Alex N. was the Panel 75 alternate. Other new officers: Chair Lauren B. and Secretary Jen F."
   },
   {
    "area": 60,
@@ -442,24 +443,24 @@
   {
    "area": 75,
    "area_name": "Southern Wisconsin",
-   "status": "election_scheduled",
-   "election_date": "2026-11-06 to 2026-11-08",
+   "status": "held_results_not_found",
+   "election_date": "2026-11-07",
    "panel77_delegate": null,
    "panel77_alternate": null,
    "confidence": "medium",
-   "source_url": "https://area75.org/pdfs/area75handbook",
-   "notes": "The Area 75 Handbook (rev. July 2026) says: 'Elections are held at the Fall Conference Assembly in even-numbered years', 'held in conjunction with the Fall Conference', and officers serve terms starting January 1 of odd-numbered years. The area75.org home page lists the 'Area 75 Conference: Fri Nov 6 - Sun Nov 8, The Ingleside Hotel, Pewaukee, WI', and Fri Nov 6 falls in 2026. The listing does not itself mention elections or give an exact election day."
+   "source_url": "https://area75.org/calendar/1993/flyer",
+   "notes": "Flyer confirmed: Area 75 Conference Nov 6-8, 2026, Ingleside Hotel, Pewaukee, with '9:00 AM - 12:00 PM Area 75 Assembly' on Sat Nov 7. The flyer does not mention elections. The handbook says officers are elected at the Fall Conference Assembly in even years. The area75.org home page (rechecked 2026-11-23) lists only upcoming meetings (Jan 17 Winter Assembly, etc.) and no officer names or results. An extra search found nothing."
   },
   {
    "area": 79,
    "area_name": "British Columbia/Yukon",
-   "status": "election_scheduled",
-   "confidence": "medium",
-   "election_date": "2026-10-23",
+   "status": "held_results_not_found",
+   "confidence": "high",
+   "election_date": "2026-10-24",
    "panel77_delegate": null,
    "panel77_alternate": null,
-   "source_url": "https://bcyukonaa.org/event/2026-october-voting-election-assembly/",
-   "notes": "The '2026 October Voting & Election Assembly' runs October 23-25, 2026 at the Alberni Athletic Hall, Port Alberni BC (host District 6, in person and online). The event page does not list the positions up for election. The Area 79 'Elections & Appointments' info sheet (https://bcyukonaa.org/wp-content/uploads/2026/09/elections-appointments-more-info_42.pdf, posted Sept 2026) lists the seven elected officers, including Delegate and Alternate Delegate. It also mentions an 'incoming Chair' and a December transition meeting 'after the election assembly'. That supports officer and delegate elections at this assembly, but the full agenda package was not readable to confirm. The site still references the Panel 75 calendar."
+   "source_url": "https://bcyukonaa.org/wp-content/uploads/2026/11/January-Quarterly-2027-Preliminary-Agenda.pdf",
+   "notes": "Verified that the election was held. The Oct 2026 agenda package (bcyukonaa.org/wp-content/uploads/2026/09/agenda-package-2026-10-.pdf) schedules 'Election of Area 79 Panel 77 - Conducted by Delegate - Drew W.' for Saturday Oct 24 (Port Alberni); the order is Delegate, Alternate Delegate, Chair, and so on. The January 2027 preliminary agenda (posted 11/16) is signed 'Michelle B., Chair, Panel 77 Area 79 - BC/Yukon'. The names of the Delegate and Alternate are not public. A scan of all 49 WP pages found no names, the Delegate page still carries Panel 75 content, and the 10/23 ASC minutes are behind PDA protection. A web search found nothing."
   },
   {
    "area": 82,
@@ -475,12 +476,12 @@
   {
    "area": 83,
    "area_name": "Eastern Ontario",
-   "status": "election_scheduled",
+   "status": "held_results_not_found",
    "panel77_delegate": null,
    "panel77_alternate": null,
-   "confidence": "high",
-   "source_url": "https://ottawaaa.org/fall-area-83-assembly-2026/",
-   "notes": "Ottawa Area Intergroup event page: 'Fall Area 83 Assembly and Service Information Day', Oct 30 - Nov 1, 2026, St. Lawrence College, Kingston (hybrid). The Sunday Nov 1 Area Assembly includes 'the election of Area Officers for Panel 77 (2027 to 2028)' and the election of Area 83's nominee for Class B Trustee-at-Large. The Area 83 Operating Procedures say officer elections (Delegate first) are held at the Fall Assembly before the new term. The area's own 'Upcoming Assembly 2026' page is behind a members login.",
+   "confidence": "medium",
+   "source_url": "https://ottawaaa.org/wp-content/uploads/2026/11/OAI-Minutes-20261111-Draft.pdf",
+   "notes": "Confirmed no result is posted. The election of Panel 77 officers was set for Sun Nov 1, 2026 at the Kingston Fall Assembly. In the Ottawa Intergroup's Nov 11, 2026 draft minutes, the 'Area 83 Update' and the report by Bill C., the Area 83 Alternate Delegate (P75), cover only the Dec 5 final Panel 75 ACM, the Remote Communities Forum and CERAASA 2027, with no officer results. area83aa.org posts since Sept are the Delegate Plenary (Nov 1), SID workshops (Nov 8, behind a login) and the 'Eighty-Three' archives newsletter for October 2026 (uploaded 2026-11-23, history content only). A site search for 'panel 77' found only older posts. The P75 delegate is Amy L.",
    "election_date": "2026-11-01"
   },
   {
@@ -491,19 +492,19 @@
    "panel77_delegate": null,
    "panel77_alternate": null,
    "confidence": "low",
-   "source_url": "",
-   "notes": "I could not find the official Area 85 website: the guessed domains (area85aa.org, area85aa.ca, area85.ca, aanwo.ca, etc.) do not resolve, and neighboring area sites do not link to it. The shared web-search budget ran out before I could locate it, so no election date or results were found."
+   "source_url": "https://www.aa-nwo-area85.org/delegate",
+   "notes": "Site is aa-nwo-area85.org (browser headers needed). The Delegate page still has Joel C. as 'Area 85 Delegate, Panel 75'. The Executive Reports page has the Feb report of Alt. Delegate Luca L. The Area Structure says the Delegate and Alternate are elected by the Area Assembly every two years and the Assembly meets twice a year. The Events page has a 'new District 1 Chair ... as we begin this new term' letter, so rotation appears to be underway, but there is no 2026 election date or result. It is likely held before the Jan 1, 2027 start, but that is unconfirmed."
   },
   {
    "area": 88,
    "area_name": "Southeast Quebec",
-   "status": "election_scheduled",
+   "status": "held_results_not_found",
    "confidence": "medium",
    "election_date": "2026-11-14",
    "panel77_delegate": null,
    "panel77_alternate": null,
-   "source_url": "https://aaregion88.org/wp-content/uploads/2026/01/Calendrier-2026-version-revisee-2.pdf",
-   "notes": "The Région 88 2026 calendar lists '14 novembre - Ass. gén. annuelle: Cap-St-Ignace (09)'. Région 88 elects at its November AGA. The Nov 16, 2024 AGA minutes (https://aaregion88.org/wp-content/uploads/2025/06/ASSEMBLE-GENERALE-16-novembre-2024.pdf) show Panel 75 Delegate Jean-Yves M. and Délégué adjoint Paule R. elected there. So the Panel 77 election is expected at the Nov 14, 2026 AGA, but no 2026 notice explicitly says the delegate election falls on that date. Site: aaregion88.org (aa88.org returns 404)."
+   "source_url": "https://aaregion88.org/wp-content/uploads/2026/11/bulletin-2026.pdf-8810.pdf",
+   "notes": "District bulletin 88-10 (Nov 2026) and Passerelles (Nov 13) confirm the AGA on Nov 14, 2026 at Cap-St-Ignace. The election is inferred from the Nov 2024 AGA, which elected the P75 delegate; no 2026 notice explicitly lists a delegate election, and districts are already electing for 2027-2028. Nothing posted since: Coin du délégué lists AGA reports for 2024 and 2025 only, and the newest upload (Bull 88-11, Dec 2026, posted Nov 21) covers only district elections."
   },
   {
    "area": 89,
@@ -530,13 +531,13 @@
   {
    "area": 93,
    "area_name": "Central California",
-   "status": "election_scheduled",
-   "election_date": "2026-11-14",
+   "status": "held_results_not_found",
+   "election_date": "2026-11-15",
    "panel77_delegate": null,
    "panel77_alternate": null,
-   "confidence": "high",
-   "source_url": "https://area93.org/event/area-elections-assembly/",
-   "notes": "The event is listed as 'Area Elections & Assembly', November 14 (8:00 am) to November 15 (5:00 pm PST), 2026, at the Morro Bay Veterans Building, Morro Bay, CA. The page says only 'Elections' and does not mention Panel 77 explicitly. Officer names are not published on area93.org/trusted-servants."
+   "confidence": "medium",
+   "source_url": "https://area93.org/wp-content/uploads/Assembly-Agenda-Nov-14-2026-Redacted.pdf",
+   "notes": "The Nov 14, 2026 assembly agenda (text extracted) lists under Upcoming Events 'November 15th, 2026 - Area Elections'. The WP REST API shows the latest media upload on 2026-11-10 (PRAASA audio) and the latest page edit on 2026-11-10. The trusted-servants page names no officers, and web searches found no Panel 77 result."
   }
  ]
 }

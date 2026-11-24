@@ -1,0 +1,165 @@
+/* Board Weekends page (view-weekend.js). Class prefix wk-. Colours only from the shared tokens in assets/app.css, so light,
+   dark and print follow the tokens and nothing is set per theme here. Meaning never rides on colour alone: a past date has
+   a "done" tag (and ink-2 text), today's an accent "now" tag and edge; a recommendation's outcome is its badge's words
+   (approved = --good-ink outline, declined = --critical-ink, in progress = --accent-ink, the rest ink-2). */
+.wk-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; margin: 0; padding: 0; }
+.wk-page h2.section-title { scroll-margin-top: calc(var(--stick-top, 100px) + 12px); }
+/* keyboard focus (Tab) never parks a control under the sticky top bar and tabs */
+.wk-page :is(a[href], button, summary, [tabindex="0"]) { scroll-margin-top: calc(var(--stick-top, 100px) + 12px); }
+.wk-page .callout { max-width: 110ch; }
+.wk-page .page-head p { max-width: 110ch; }
+.wk-links, .wk-meets { margin: 0 0 12px; }
+.wk-sec { margin-top: 8px; }
+.wk-h3 { margin: 18px 0 6px; font-size: 1.06rem; }
+.wk-pg { font-size: .8em; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.wk-nums { display: inline-flex; flex-wrap: wrap; gap: 2px 8px; }
+.wk-num { font-weight: 650; font-variant-numeric: tabular-nums; }
+
+/* ---------- the meeting ---------- */
+.wk-meet { margin: 0 0 12px; }
+.wk-meet h2 { margin: 0 0 4px; font-size: 1.25rem; }
+.wk-formal { margin: 0 0 8px; color: var(--ink-2); }
+.wk-asof { margin: 0 0 8px; padding-left: 8px; border-left: 3px solid var(--warning); color: var(--ink-2); max-width: 110ch; }
+.wk-ov { margin: 0 0 8px; padding-left: 20px; }
+.wk-ov li { max-width: 110ch; }
+.wk-ov li + li { margin-top: 4px; }
+.wk-pgnote { margin: 0; max-width: 110ch; }
+
+/* ---------- at a glance: 5 tiles in a row, 3 + 2 on tablets, 2 + 2 + 1 on phones ---------- */
+.grid.g4.wk-kpis { grid-template-columns: repeat(5, minmax(0, 1fr)); margin: 0 0 8px; }
+.wk-kpis .stat .v { font-size: 1.5rem; }
+.wk-kpis .stat .l { overflow-wrap: break-word; }
+@media (max-width: 1100px) {
+  .grid.g4.wk-kpis { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .grid.g4.wk-kpis > * { grid-column: span 2; }
+  .grid.g4.wk-kpis > :nth-child(n+4) { grid-column: span 3; }
+}
+@media (max-width: 640px) {
+  .grid.g4.wk-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid.g4.wk-kpis > *, .grid.g4.wk-kpis > :nth-child(n+4) { grid-column: auto; }
+  .grid.g4.wk-kpis > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .wk-kpis .stat .v { font-size: 1.25rem; }
+}
+
+/* ---------- what it means for the Conference: agenda topics | still open + coming up ---------- */
+.wk-conf { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 8px 32px; align-items: start; }
+.wk-conf.one { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 1000px) { .wk-conf { grid-template-columns: minmax(0, 1fr); } }
+.wk-conf-a > .wk-h3:first-child, .wk-conf-b > .wk-h3:first-child { margin-top: 0; }
+.wk-lead { max-width: 110ch; }
+.wk-cgroup + .wk-cgroup { margin-top: 12px; }
+.wk-cgh { margin: 0 0 2px; font-size: .78rem; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); }
+.wk-cgh a { color: var(--accent-ink); }   /* a link to the Conference committee, coloured like the Agenda page's */
+.wk-cgh a:hover { text-decoration: underline; }
+.wk-prov { margin-left: 4px; padding: 0 5px; border: 1px dashed var(--control); border-radius: 4px; font-size: .68rem; letter-spacing: .03em; color: var(--ink-2); cursor: help; }
+.wk-topics { list-style: none; margin: 0; padding: 0; }
+.wk-topics li { padding: 6px 0; border-bottom: 1px solid var(--grid); overflow-wrap: break-word; }
+.wk-tt { font-weight: 600; }
+.wk-tmeta { display: block; margin-top: 2px; color: var(--ink-2); }
+.wk-kind { display: inline-block; margin-right: 4px; padding: 0 6px; border: 1px solid var(--axis); border-radius: 4px; font-size: .74rem; color: var(--ink-2); }
+.wk-kind.gen { border-color: var(--accent); }
+.wk-kind.add { border-style: dashed; border-color: var(--control); }
+.wk-ref { margin: 12px 0 6px; padding: 8px 12px; border-left: 3px solid var(--axis); background: var(--surface-2); border-radius: 0 6px 6px 0; max-width: 110ch; }
+
+/* dated rows: date | what (stacked on phones) */
+.wk-dates { list-style: none; margin: 0; padding: 0; }
+.wk-d { display: grid; grid-template-columns: 9.5em minmax(0, 1fr); gap: 2px 12px; padding: 7px 0; border-bottom: 1px solid var(--grid); }
+.wk-d:last-child { border-bottom: 0; }
+.wk-dt { font-size: .86rem; font-weight: 600; line-height: 1.35; font-variant-numeric: tabular-nums; }
+.wk-dx { min-width: 0; font-size: .9rem; overflow-wrap: break-word; }
+.wk-d.wk-done .wk-dt, .wk-d.wk-done .wk-dx { color: var(--ink-2); }
+.wk-d.wk-now { margin: 0 -8px; padding-left: 8px; padding-right: 8px; border-radius: 6px; background: color-mix(in srgb, var(--accent-wash) 35%, transparent); box-shadow: inset 3px 0 0 var(--accent); }
+.wk-tag { display: inline-block; margin-left: 6px; padding: 0 5px; border-radius: 4px; font-size: .66rem; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; vertical-align: 1px; }
+.wk-tag.now { background: var(--accent-fill); color: #fff; }
+.wk-tag.done { border: 1px solid var(--axis); color: var(--ink-2); font-weight: 600; }
+.wk-cd { display: block; font-size: .76rem; font-weight: 400; color: var(--muted); }
+.wk-who { font-weight: 650; }
+.wk-otext { margin: 3px 0 2px; }
+.wk-onote { margin: 0; }
+.wk-also { margin: 12px 0 0; font-weight: 600; }
+.wk-d.wk-onokey { grid-template-columns: minmax(0, 1fr); }   /* an entry without proposals: no date column */
+.wk-held { display: block; margin-top: 2px; color: var(--ink); }
+.wk-dates.wk-compact .wk-d { padding-top: 5px; padding-bottom: 5px; }   /* top/bottom only: a "now" row keeps its side padding */
+/* coming up: full width under the two columns; the list runs down two newspaper columns on wide screens (date order
+   reads top to bottom, then on) */
+.wk-coming { margin-top: 8px; }
+@media (min-width: 1001px) { .wk-dates.wk-cols { columns: 2; column-gap: 32px; } .wk-cols .wk-d { break-inside: avoid; } .wk-cols .wk-d:last-child { border-bottom: 1px solid var(--grid); } }
+
+/* ---------- board and committee reports ---------- */
+.wk-intro { max-width: 110ch; margin: 0 0 4px; }
+.wk-rgroup + .wk-rgroup { margin-top: 8px; }
+.wk-reps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
+.wk-reps > .card + .card { margin-top: 0; }
+@media (max-width: 1100px) { .wk-reps { grid-template-columns: minmax(0, 1fr); } }
+.wk-rep { min-width: 0; overflow-wrap: break-word; }
+.wk-rep h4 { margin: 0 0 2px; font-size: 1rem; }
+.wk-rep h4 a { color: var(--ink); text-decoration: underline dotted var(--control); text-underline-offset: 3px; }   /* names stay in ink */
+.wk-rep h4 a:hover { color: var(--accent-ink); }
+.wk-rep h4:focus-visible { outline-offset: 2px; }
+.wk-rmeta { color: var(--ink-2); }
+.wk-rsum { margin: 6px 0; }
+.wk-acc { margin: 0 0 4px; color: var(--ink-2); }
+/* the deep-linked card spans the grid, so its open details do not stretch a neighbour */
+.wk-rep.wk-hit { grid-column: 1 / -1; border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent), var(--shadow); }
+.wk-rep.wk-hit > * { max-width: 110ch; }
+.wk-page details.wk-more { margin-top: 8px; padding: 0; border: 0; background: none; }
+.wk-more > summary { font-size: .84rem; font-weight: 600; color: var(--accent-ink); }
+.wk-more h5 { margin: 12px 0 3px; font-size: .82rem; font-weight: 650; color: var(--ink-2); }   /* app.css styles h1–h4 only */
+.wk-more p { margin: 0 0 4px; font-size: .9rem; }
+.wk-more ul { margin: 0; padding-left: 18px; font-size: .9rem; }
+.wk-more li + li { margin-top: 4px; }
+.wk-more ul.wk-recs, .wk-more ul.wk-dates { padding-left: 0; list-style: none; }
+.wk-recs li { padding-left: 2px; }
+.wk-page .badge.wk-st { margin-right: 2px; background: transparent; border: 1px solid currentColor; color: var(--ink-2); }
+.wk-page .badge.wk-st-approved { color: var(--good-ink); }
+.wk-page .badge.wk-st-declined { color: var(--critical-ink); }
+.wk-page .badge.wk-st-in_progress { color: var(--accent-ink); }
+.wk-page .badge.wk-st-tabled { border-style: dashed; }
+.wk-fig { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr)); gap: 6px 16px; }
+.wk-fig > div { min-width: 0; padding: 4px 0; border-bottom: 1px solid var(--grid); }
+.wk-fig dt { font-size: .8rem; color: var(--ink-2); }
+.wk-fig dd { margin: 0; font-size: .9rem; font-variant-numeric: tabular-nums; }
+.wk-fureq { margin-top: 2px; color: var(--ink-2); }
+
+/* ---------- numbers worth knowing ---------- */
+.wk-ntbl td:first-child { min-width: 220px; }
+.wk-ntbl td.wk-val { font-weight: 650; font-variant-numeric: tabular-nums; }
+
+/* ---------- reading these reports; source ---------- */
+.wk-read dl { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 12px 28px; }
+.wk-read dt { font-weight: 650; }
+.wk-read dd { margin: 2px 0 0; font-size: .9rem; color: var(--ink-2); }
+.wk-src p, .wk-slips li { max-width: 110ch; }
+.wk-src .wk-h3 { margin-top: 12px; font-size: .9rem; }
+.wk-slips { margin: 0; padding-left: 18px; color: var(--ink-2); }
+.wk-slips li + li { margin-top: 3px; }
+
+/* ---------- phones ---------- */
+@media (max-width: 640px) {
+  .wk-d { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .wk-cd { display: inline; margin-left: 6px; }
+  /* numbers: one block per figure instead of a wide table */
+  .wk-ntbl-wrap table.t.wk-ntbl thead { display: none; }
+  .wk-ntbl-wrap table.t.wk-ntbl, .wk-ntbl tbody, .wk-ntbl tr, .wk-ntbl td { display: block; width: 100%; min-width: 0 !important; }
+  .wk-ntbl tr { padding: 8px 0; border-bottom: 1px solid var(--grid); }
+  .wk-ntbl-wrap table.t.wk-ntbl td { padding: 1px 10px; border: 0; text-align: left; }
+  .wk-ntbl td:nth-child(n+3)::before { content: attr(data-l) ": "; color: var(--muted); }
+}
+@media (max-width: 640px), (pointer: coarse) {
+  .wk-nums a, .wk-topics a, .wk-dt a, .wk-ntbl a { display: inline-flex; align-items: center; min-height: 32px; }
+  .wk-more > summary { min-height: 40px; }
+}
+
+/* ---------- print: everything open (app.css + views2.js), one column, no navigation ---------- */
+@media print {
+  .wk-page .rp-jump, .wk-links, .wk-meets { display: none !important; }
+  .wk-conf, .wk-reps { grid-template-columns: minmax(0, 1fr); }
+  .grid.g4.wk-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid.g4.wk-kpis > *, .grid.g4.wk-kpis > :nth-child(n+4) { grid-column: auto; }
+  .wk-page .wk-rep, .wk-meet { break-inside: auto; }
+  .wk-d, .wk-topics li, .wk-more li, .wk-fig > div, .wk-read dl > div { break-inside: avoid; }
+  .wk-h3, .wk-cgh, .wk-rep h4, .wk-more h5, .wk-also { break-after: avoid; }
+  .wk-rep.wk-hit, .wk-d.wk-now { box-shadow: none; background: none; }
+  .wk-d.wk-now { margin: 0; padding-left: 0; padding-right: 0; }
+  .wk-tag.now { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}

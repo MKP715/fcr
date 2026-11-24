@@ -1,6 +1,9 @@
 /* Views part 3: Trustees & Boards, GSO Staff, Openings & rotation, Reports (Final Report library + Conference facts).
    Data: year rosters (FCR.Y), board.json via FCR.currentOfficers / positionHistory / openings, conferences.json via
-   FCR.conference. Styles: assets/css/board.css (class prefixes bd- board, st- staff, op- openings, rp- reports). */
+   FCR.conference. board_meetings.json (FCR.RAW.boardMeetings, through UI.latestBoardWeekend / UI.paiStanding in views.js):
+   the "Latest board weekend" card on Trustees & Boards (#bd-bw, links #/weekends/<id>) and, on Openings, the Class A search
+   stage from that weekend's Nominating Committee report. Reports: future Conferences' notes (conferences.json future[].note
+   / notes[]). Styles: assets/css/board.css (class prefixes bd- board, st- staff, op- openings, rp- reports). */
 (function () {
   'use strict';
   const FCR = window.FCR;
@@ -154,6 +157,18 @@
       return (t.trustee_committees || []).map(esc).join(' · ');
     };
 
+    // a board role as printed in the report of `year` (board_roles): once someone else holds it for the year after that
+    // Conference (currentOfficers: a corporate-board chair named in a later board report, or the GSB slate elected after
+    // the Conference), the chip says it held until then, so the page never names two holders of one post
+    const ROLE_TITLE = { 'gsb chair': 'Chair', 'gsb first vice-chair': 'First Vice-Chair', 'gsb second vice-chair': 'Second Vice-Chair', 'gsb treasurer': 'Treasurer', 'gsb secretary': 'Secretary' };
+    const roleChip = (t) => (r) => {
+      const cur = !!co && co.conferenceYear === year, m = /^(AAWS|Grapevine) chair$/i.exec(r), ti = ROLE_TITLE[String(r).toLowerCase()];
+      const bc = cur && m && co.boardChairs ? co.boardChairs[m[1].toLowerCase() === 'aaws' ? 'aaws' : 'grapevine'] : null;
+      const now = bc && bc.name ? bc.name : cur && ti && co.source === 'slate' && co.byTitle ? co.byTitle[ti] || null : null;
+      if (!now || same(now, t.name)) return `<span class="chip accent">${esc(r)}</span>`;
+      const tip = bc && bc.name ? `As listed in the ${year} report; ${now} chairs the board ${bc.period || 'now'}` : `As listed in the ${year} report; ${now} holds this office ${yr2(year, year + 1)}`;
+      return `<span class="chip accent" data-tip="${esc(tip)}" tabindex="0">${esc(r)} until ${year}</span>`;
+    };
     const card = (t, opt) => {
       opt = opt || {};
       const pid = opt.pid || pidOf(t);
@@ -178,7 +193,7 @@
         <div class="bd-card-h"><strong>${UI.personLink(t.name)}</strong>${badges.join('')}</div>
         <div class="small ink2">${joinDot([esc(label), esc(t.city || '')])}</div>
         <div class="small">${joinDot([line, pdHtml(t.past_delegate || (s && s.past))])}</div>${earlier}
-        ${(t.board_roles || []).length ? `<div class="bd-roles">${t.board_roles.map((r) => `<span class="chip accent">${esc(r)}</span>`).join('')}</div>` : ''}
+        ${(t.board_roles || []).length ? `<div class="bd-roles">${t.board_roles.map(roleChip(t)).join('')}</div>` : ''}
         ${opt.noCmte ? '' : (() => { const c = cmteLine(t); return c ? `<div class="small muted bd-cmte">${c}</div>` : ''; })()}
       </div>`;
     };
@@ -199,7 +214,7 @@
       if (pr) return `${UI.personLink(pr.name)} <span class="small muted">(printed in the ${Yr + 1} report)</span>`;
       if (co && co.conferenceYear === Yr) {
         const bc = co.boardChairs[key === 'aaws_directors' ? 'aaws' : 'grapevine'];
-        if (bc && bc.name) return UI.personLink(bc.name);
+        if (bc && bc.name) return UI.personLink(bc.name) + (bc.status === 'reported' && bc.ref ? ` <span class="small muted">(${esc(bc.ref)})</span>` : '');
         if (bc && bc.pattern) return `<span class="muted">not published</span> — ${esc(bc.pattern.text)}${bc.pattern.candidates.length ? ` (${listAnd(bc.pattern.candidates.map((n) => UI.personLink(n)))})` : ''}`;
       }
       return '<span class="muted">not published</span>';
@@ -216,6 +231,31 @@
             <div class="small bd-corpchairs"><div>AAWS board chair ${yr2(year, year + 1)}: ${corpChair('aaws_directors', year)}</div><div>AA Grapevine board chair ${yr2(year, year + 1)}: ${corpChair('grapevine_directors', year)}</div></div>`
           : `<p class="small muted">No slate recorded for ${year}.</p>`}</div>
       </div></div>`;
+
+    // ---- the latest board weekend (board_meetings.json, once it has ended): computed headline facts + its reports ----
+    const bw = year === FCR.latestYear && UI.latestBoardWeekend ? UI.latestBoardWeekend() : null;
+    const bwCard = (() => {
+      if (!bw) return '';
+      const src = bw.source || {}, at = bw.attendance || {}, ps = UI.paiStanding ? UI.paiStanding() : null;
+      const pg = (p) => (p ? ` <span class="muted nowrap">(p. ${esc(p)})</span>` : '');
+      // only the votes taken at this weekend (reports that met inside it); attached earlier highlights (met null) do not count
+      const recs = (bw.reports || []).filter((r) => r.met && r.met >= bw.start && r.met <= bw.end).flatMap((r) => r.recommendations || []).filter((x) => x.status === 'approved');
+      const nGsb = recs.filter((x) => x.board === 'GSB').length;
+      const facts = [];
+      if (at.trustees_present) facts.push(`${at.trustees_present} of ${at.trustees_total || at.trustees_present} trustees present${at.guests ? '; ' + esc(at.guests) : '.'}${pg(at.page)}`);
+      // past tense once that Conference has met: from the day after its closing day (conf.over is already true on that day)
+      if (ps && ps.decided && ps.latest && ps.ordinal === bw.pai_cycle) facts.push(`Proposed agenda items: <a href="#/agenda/forwarded">${ps.fwd} of ${ps.total} forwarded</a> to the ${FCR.ordinal(ps.ordinal)} Conference${ps.entries ? ` (${ps.entries} agenda entries${ps.added ? `, plus ${ps.added} the trustees’ committees added` : ''})` : ''}, ${ps.no} no action, ${(() => { const cf = FCR.conference(ps.year); return cf.end ? isoNow() > cf.end : cf.over; })() ? `${ps.open} were still open in GSO’s ${esc(fmtD(ps.as_of))} grid` : `<a href="#/agenda/status/under">${ps.open} still open</a> <span class="muted nowrap">(${esc(fmtD(ps.as_of))} grid)</span>`}${ps.out ? `; ${ps.out} more had been withdrawn, superseded or removed` : ''}.`);
+      // the corporate boards' own approvals, named as the Board Weekends page names them ("approved N more of their own")
+      const others = [...new Set(recs.filter((x) => x.board !== 'GSB').map((x) => (x.board === 'GV' ? 'AA Grapevine' : x.board)))];
+      const nOther = recs.length - nGsb, oName = others.length ? listAnd(others) + (others.length > 1 ? ' boards' : ' board') : 'other boards';
+      if (recs.length) facts.push(`${nGsb ? `The General Service Board approved ${nGsb} committee recommendation${nGsb === 1 ? '' : 's'}` : 'No recommendation went to a General Service Board vote'}${nOther ? `; the ${esc(oName)} approved ${nOther}${nGsb ? ' more' : ''} of ${others.length > 1 ? 'their' : 'its'} own` : ''}.`);
+      const later = UI.boardWeekendsSince ? UI.boardWeekendsSince(bw.end) : [];
+      return `<div class="card bd-patterns bd-bw" id="bd-bw"><h3>Latest board weekend${later.length ? ' in this app' : ''} <span class="small muted">${esc(fmtRange(bw.start, bw.end))}${bw.place ? ' · ' + esc(bw.place) : ''}</span></h3>
+        ${later.length ? `<p class="callout warn small">${esc(UI.metSinceText(later))}; its reports are not in this app yet.</p>` : ''}
+        <ul>${facts.map((f) => `<li>${f}</li>`).join('')}</ul>
+        <p class="small"><a href="#/weekends/${encodeURIComponent(bw.id)}">${esc(bw.title || 'Board weekend')}: every board and committee report →</a>${FCR.learnTree && FCR.learnTree.node && FCR.learnTree.node('board_weekend') ? ' · <a href="#/learn/board_weekend">What happens at a board weekend</a>' : ''}</p>
+        <p class="small muted">Source: ${esc(src.short || 'board reports')}${src.minutes_status ? (later.length ? ` (minutes ${esc(src.minutes_status)} when the packet was sent)` : ` (minutes ${esc(src.minutes_status)})`) : ''}; page numbers are PDF pages of the packet.</p></div>`;
+    })();
 
     // ---- trustees' committee matrix (desktop) + per-committee lists (phone) ----
     const rowsM = [];
@@ -304,9 +344,10 @@
         <div class="card stat"><span class="v num">${bs.b}</span><span class="l">Class B (alcoholic)${bs.chairB ? ', incl. the chair' : ''}</span></div>
         <div class="card stat"><span class="v num">${seats} seats</span><span class="l">${bs.chairB ? 'the Class B chair adds one' : 'the chair holds a regular seat'}${bs.total && bs.total < seats ? ` · ${seats - bs.total} vacant at the Conference` : ''}</span></div>
       </div>
-      ${jumpNav([['bd-off', 'Officers'], chairSeat.length ? ['bd-chair', 'Chair'] : null, ['bd-reg', 'Regional'], ['bd-oth', 'At-large &amp; GST'], ['bd-classa', 'Class A'], ['bd-dirs', 'Directors'],
+      ${jumpNav([['bd-off', 'Officers'], bwCard ? ['bd-bw', 'Board weekend'] : null, chairSeat.length ? ['bd-chair', 'Chair'] : null, ['bd-reg', 'Regional'], ['bd-oth', 'At-large &amp; GST'], ['bd-classa', 'Class A'], ['bd-dirs', 'Directors'],
         (Y.newly_elected || []).length ? ['bd-new', 'Newly elected'] : null, ['bd-corp', 'Corporate boards'], ['bd-tc', 'Trustees’ committees']].filter(Boolean))}
       ${officers}
+      ${bwCard}
       ${chairSeat.length ? section('Board chair', chairSeat.map((t) => card(t, { chair: true, noCmte: pidOf(t) === 'GSB_CHAIR' })), bs.chairB ? 'A Class B chair sits in an extra seat, so the board has 22 trustees until the chair term ends (Service Manual p. 58). The chair is ex officio on every trustees’ committee.' : 'A Class A chair serves a four-year chair term over and above the Class A term (Service Manual p. 69).', 'bd-chair') : ''}
       ${section('Regional trustees', regional.map((t) => card(t)), 'Four one-year terms on a fixed Service Manual calendar (p. 54). In years 2–3 each regional trustee usually also serves on the AAWS or AA Grapevine board.', 'bd-reg')}
       ${section('Trustees-at-large &amp; general service trustees', others.map((t) => card(t)), 'General service trustees come from the corporate boards: two serve on AAWS and two on AA Grapevine.', 'bd-oth')}
@@ -512,6 +553,29 @@
     return '';
   }
 
+  /** Where the Class A trustee search for Conference `o` stands: the Class A line of the trustees' Nominating Committee
+      report from the latest board weekend of that cycle (board_meetings.json, once the weekend has ended), dated to that
+      weekend; once the board has met again (UI.boardWeekendsSince) it says the line may be out of date. HTML or ''. */
+  function classAStage(o) {
+    const m = UI.latestBoardWeekend ? UI.latestBoardWeekend() : null;
+    const r = m && m.pai_cycle === o.ordinal ? (m.reports || []).find((x) => x.tc === 'NOMINATING') : null;
+    const h = r ? (r.highlights || []).find((x) => /\bClass A\b/.test(x.text || '')) : null;
+    if (!h) return '';
+    const short = (m.source || {}).short || 'board reports';
+    const later = UI.boardWeekendsSince ? UI.boardWeekendsSince(m.end) : [];
+    return `<div class="small op-stage">Search so far, as of the ${esc(String(m.title || 'board weekend').toLowerCase())} (${esc(fmtRange(m.start, m.end))}): ${esc(h.text)} <span class="muted nowrap" tabindex="0" data-tip="${esc(`Page ${h.page} of the PDF packet of board and committee reports sent to Conference members`)}">(${esc(short)} p. ${esc(h.page)})</span>${later.length ? ` <span class="pg-warn">${esc(UI.metSinceText(later))}; its reports are not in this app yet.</span>` : ''}
+      <a href="#/weekends/${encodeURIComponent(m.id)}/${encodeURIComponent(r.id)}">Nominating Committee report →</a></div>`;
+  }
+  /** A step's 'more' line shows from its `from` date (ISO) when it has one; one that cites a board-report packet
+      (board_meetings.json source.short) shows once that board weekend has ended, as the other packet content does. */
+  const isoNow = () => { const t = FCR.today(); return `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`; };
+  const moreShown = (m) => {
+    const t = isoNow();
+    if (m && m.from) return m.from <= t;
+    const bm = (((RAW.boardMeetings || {}).meetings) || []).find((b) => b && b.source && b.source.short && String((m && m.source) || '').includes(b.source.short));
+    return !bm || !bm.end || bm.end < t;
+  };
+
   function ganttHtml(cyc) {
     const ph = FCR.positionHistory().filter((p) => p.start);
     const now = FCR.today();
@@ -657,7 +721,8 @@
       const badge = k === 'now' ? '<span class="badge op-now">now</span>' : k === 'next' ? `<span class="badge soft">next · ${soon(n)}</span>` : '';
       const dn = x.s.date_note ? [`<li class="muted">Date: ${esc(x.s.date_note.text)}${x.s.date_note.source ? ` (${esc(x.s.date_note.source)})` : ''}</li>`] : [];
       // a step behind us folds its text into the details, so the steps under way and ahead stand out
-      const more = (k === 'done' ? [`<li>${esc(x.s.text)}${pageRef(x.s.page)}</li>`] : []).concat((x.s.more || []).map((m) => `<li>${esc(m.text)}${pageRef(m.page)}</li>`), dn);
+      // a 'more' line cites a Service Manual page, or (source) another document such as a board-report packet
+      const more = (k === 'done' ? [`<li>${esc(x.s.text)}${pageRef(x.s.page)}</li>`] : []).concat((x.s.more || []).filter(moreShown).map((m) => `<li>${esc(m.text)}${m.source ? ` <span class="muted">(${esc(m.source)})</span>` : pageRef(m.page)}</li>`), dn);
       return `<li class="op-step ${k}"${k === 'now' ? ' aria-current="step"' : ''}>
         <span class="op-step-m" aria-hidden="true">${k === 'done' ? '✓' : i + 1}</span>
         <div class="op-step-d">${winText(x.W)}${k === 'todo' && single && n > 0 ? `<span class="op-step-in">${soon(n)}</span>` : ''}</div>
@@ -738,7 +803,7 @@
         <div class="op-seat-h"><strong>${esc(seatName(s))}</strong>${mine ? `<span class="chip accent">${mine}</span>` : ''}${s.soft ? `<span class="badge soft">${s.likely ? 'likely' : 'may continue'}</span>` : ''}</div>
         <div class="small">${who}</div>
         ${s.note ? `<div class="small muted">${esc(s.note)}</div>` : ''}
-        ${s.soft ? '' : `<div class="small op-when">${dueText(s, o)}</div>${nom && o === ops[0] ? `<div class="small muted">${esc(nom)}</div>` : ''}`}
+        ${s.soft ? '' : `<div class="small op-when">${dueText(s, o)}</div>${s.pid === 'CLASS_A' && o === ops[0] ? classAStage(o) : ''}${nom && o === ops[0] ? `<div class="small muted">${esc(nom)}</div>` : ''}`}
       </li>`;
     };
     const officerLines = (o) => (co ? co.officers : []).filter((of) => !/^Assistant/.test(of.title) && !of.employee).map((of) => {
@@ -789,6 +854,9 @@
     }
     const rules = BOARD.seat_rules || {};
     const schedule = sched();
+    // the packet a shown step line cites (any weekend's, not only the newest): its page numbers are explained once
+    const bmShorts = ((RAW.boardMeetings || {}).meetings || []).map((m) => (m.source || {}).short).filter(Boolean);
+    const bmShort = bmShorts.find((sh) => (STEPS.regional_trustee || []).some((s) => (s.more || []).some((m) => moreShown(m) && String(m.source || '').includes(sh)))) || '';
     el.innerHTML = ROOT_CLASS('op-page', `
       <div class="page-head"><div><h1>Openings &amp; rotation</h1>
         <p>Rotation keeps every seat turning over: regional trustees, trustees-at-large and general service trustees serve one 4-year term; Class A trustees up to two 3-year terms; nontrustee directors up to 4 years; the GSB chair a 4-year chair term.
@@ -796,7 +864,7 @@
       ${notes.map((n) => `<div class="callout op-callout">${n}</div>`).join('')}
       ${jumpNav(((STEPS.regional_trustee || []).length ? [['op-trk-h', 'Trustee election steps']] : []).concat(ops.map((o) => ['op-y' + o.year, String(o.year)]), [['op-rules-h', 'How seats are filled'], ['op-gantt-h', 'Seats over time']]))}
       ${(STEPS.regional_trustee || []).length ? `<h2 class="section-title" id="op-trk-h">Regional trustee election, step by step</h2>
-      <p class="small muted">How an area’s candidate becomes a regional trustee (Service Manual pp. 54–56, own words), dated for the coming elections; the step under way is highlighted.</p>
+      <p class="small muted">How an area’s candidate becomes a regional trustee (Service Manual pp. 54–56, own words), dated for the coming elections; the step under way is highlighted.${bmShort ? ` In “${esc(bmShort)} p. N” the number is a PDF page of the packet of board and committee reports sent to Conference members.` : ''}</p>
       ${trackerCard(myR)}` : ''}
       <h2 class="section-title">Seats opening ${ops.length ? ops[0].year + '–' + ops[ops.length - 1].year : ''}</h2>
       <p class="small muted">Counts are trustee seats (the official Nominating Committee tables count the same way); director seats and soft markers (Class A first-term ends, a likely extra director vacancy) are listed but not counted. ${ops.length ? `“The ${ops[0].year} electee” = a successor not elected yet.` : ''}</p>
@@ -865,9 +933,12 @@
     if (!gs.length) return '';
     const n = gs.reduce((k, g) => k + g.list.length, 0);
     const chip = (d) => `<a class="chip" href="${esc(d.url)}" target="_blank" rel="noopener"${d.why ? ` data-tip="${esc(d.why)}"` : ''}>${esc(d.title)}${/drive\.google\.com/.test(d.url) ? '' : ' ↗'}</a>`;
+    // a group the app also summarizes gets in-app links after its Drive chips (the board weekend packets and status grids)
+    const inApp = (g) => (/board weekend|status grid/i.test(g.name) ? [['Board Weekends', '#/weekends'], ['Agenda Items', '#/agenda']] : [])
+      .map(([l, h]) => `<a class="chip accent" href="${h}">${esc(l)} in this app</a>`).join('');
     return `<details class="rp-refs"><summary>Reference documents (${n}): ${gs.map((g) => esc(g.name)).join(' · ')}</summary>
       <p class="small muted">Links marked ↗ open aa.org or the Grapevine sites; the others are in your Drive (Google sign-in).</p>
-      ${gs.map((g) => `<div class="rp-ref-g"><h3 class="small">${esc(g.name)}</h3><div class="flex rp-ref-chips">${g.list.map(chip).join('')}</div></div>`).join('')}</details>`;
+      ${gs.map((g) => `<div class="rp-ref-g"><h3 class="small">${esc(g.name)}</h3><div class="flex rp-ref-chips">${g.list.map(chip).join('')}${inApp(g)}</div></div>`).join('')}</details>`;
   }
 
   V.reports = function (el, args) {
@@ -897,14 +968,23 @@
 
     // coming Conferences
     const fut = FCR.futureConferences().filter((c) => !c.over);
+    // a note citing a board-report packet shows once that weekend has ended (moreShown), as the Openings steps do
+    const futNotes = (c) => (c.notes || []).filter((n) => moreShown({ source: n.ref }));
     const futCards = fut.map((c, i) => `<div class="card rp-fut${i === 0 ? ' next' : ''}"><h3><span>${c.year} · ${FCR.ordinal(c.ordinal)} GSC</span>${i === 0 && c.startDate ? `<span class="small muted">${daysTo(c.startDate) <= 0 ? 'meeting now' : inDays(daysTo(c.startDate))}</span>` : ''}</h3>
-        <div>${c.startDate && c.datesKnown ? fmtRange(c.startDate, c.endDate) : 'Dates not announced'}${c.approx ? ' <span class="small muted">(first-choice dates; venue not chosen)</span>' : ''}</div>
+        <div>${c.startDate && c.datesKnown ? fmtRange(c.startDate, c.endDate) : 'Dates not announced'}${(c.options || []).length > 1 ? ` <span class="small muted">(first choice; then ${c.options.filter((x) => x.preference > 1).sort((a, b) => a.preference - b.preference).map((x) => esc(fmtRange(x.start, x.end))).join(', then ')})</span>` : c.approx && !c.note ? ' <span class="small muted">(first-choice dates; venue not chosen)</span>' : ''}</div>
         ${c.venue ? `<div class="small ink2">${esc(c.venue)}</div>` : ''}
         ${c.theme ? `<div class="small">Theme: <em>${esc(c.theme)}</em></div>` : ''}
         ${(c.presentations || []).length ? `<div class="small muted">Presentations: ${c.presentations.map(esc).join(' · ')}</div>` : ''}
         ${c.workshop ? `<div class="small muted">Workshop: ${esc(c.workshop)}</div>` : ''}
         ${c.delegateChair ? `<div class="small">Delegate chair: ${UI.personLink(c.delegateChair.name)}${c.delegateChair.area ? ' · ' + UI.areaLink(c.delegateChair.area) : ''}</div>` : ''}
+        ${c.note ? `<div class="small muted">${esc(c.note)}</div>` : ''}
+        ${futNotes(c).length ? `<details class="small rp-fut-notes"><summary>Planned for this Conference (${futNotes(c).length})</summary><ul class="rp-plain">${futNotes(c).map((n) => `<li>${esc(n.text)}${n.ref ? ` <span class="muted">(${esc(refText(n.ref))})</span>` : ''}</li>`).join('')}</ul></details>` : ''}
         <div class="small muted">Panels ${c.year - 1951} and ${c.year - 1950}</div></div>`).join('');
+    // a future card citing the board-report packet says once what its page numbers are
+    // (the first packet a shown note cites, whichever weekend's it is)
+    const bmShorts = ((RAW.boardMeetings || {}).meetings || []).map((m) => (m.source || {}).short).filter(Boolean);
+    const bmShort = bmShorts.find((sh) => fut.some((c) => futNotes(c).some((n) => String(n.ref || '').includes(sh)))) || '';
+    const futPkt = !!bmShort;
 
     // per-year glance (newest open unless a year was asked for)
     const glance = held.map((y, i) => {
@@ -969,6 +1049,7 @@
       ${jumpNav(sections)}
       <h2 class="section-title">Coming Conferences</h2>
       <div class="grid g4 rp-futs">${futCards || UI.empty('No future Conference dates recorded.')}</div>
+      ${futPkt ? `<p class="small muted">“${esc(bmShort)} p. N” is page N of the PDF packet of board and committee reports sent to Conference members (<a href="#/weekends">Board Weekends</a>).</p>` : ''}
       <h2 class="section-title" id="rp-glance-h">Conference at a glance</h2>
       <p class="small muted">Counts are from each Final Report (hover a label for its page). “Floor actions” are motions made on the Conference floor; the ones adopted are printed among the Advisory Actions.</p>
       <div class="rp-years">${glance}</div>

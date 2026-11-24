@@ -255,7 +255,7 @@
   {
    "title": "Quarterly Report (F-14): General Service Board, AAWS and Grapevine",
    "url": "https://www.aa.org/quarterly-reports-from-gso",
-   "why": "The board's quarterly report (p. 77). A suggested source for GSR reports (p. 11), and where the trustees report what they have done about Advisory Actions (p. 5). aa.org now calls it 'Quarterly Report from GSO'.",
+   "why": "The board's quarterly report (p. 77), a suggested source for GSR reports (p. 11) and where the trustees report on Advisory Actions (p. 5). aa.org now calls it 'Quarterly Report from GSO'. The full board and committee reports behind it go to Conference members.",
    "group": "Newsletters & reports"
   },
   {
@@ -269,6 +269,30 @@
    "url": "https://www.aa.org/news-and-announcements",
    "why": "The 'What's New' button on aa.org, one of the manual's suggested sources for GSR reports (Service Manual p. 11).",
    "group": "Newsletters & reports"
+  },
+  {
+   "title": "Fall 2026 board weekend: board & committee reports (Nov 2, 2026; minutes pending approval)",
+   "url": "https://drive.google.com/file/d/1-bqgNNwXL_GGNzaYIW1dx4YV-mQLjUcB/view",
+   "why": "The 80-page packet from the board's fourth quarterly meeting: the minutes (still pending approval), the AAWS and Grapevine board reports and each trustees' committee report. GSO sends it to Conference members; the Board Weekends page sums it up and cites its PDF pages.",
+   "group": "Board weekends & status grids"
+  },
+  {
+   "title": "Proposed agenda items status grid, Nov 6, 2026 (77th Conference)",
+   "url": "https://drive.google.com/file/d/1NwdXEACgidShifAvcbLHL3kSlpQdD8Pt/view",
+   "why": "GSO's 36-page grid of all 221 proposals after the fall board weekend: the 210 active ones with their reviewing body and status (forwarded, forwarded in a general topic, no action, or still under consideration), then the 11 withdrawn, superseded or removed. Sent to Conference members; the Agenda Items page summarizes it.",
+   "group": "Board weekends & status grids"
+  },
+  {
+   "title": "Proposed agenda items status grid, Nov 6, 2026 (Spanish edition)",
+   "url": "https://drive.google.com/file/d/18Y4L8WU_kRCB8zn6M__UQiO7TNGwf8el/view",
+   "why": "The same grid in Spanish (44 pages), also for Conference members. Its statuses agree with the English edition on every item, although its header still says Oct 1.",
+   "group": "Board weekends & status grids"
+  },
+  {
+   "title": "Proposed agenda items status grid, Oct 1, 2026 (77th Conference, as received)",
+   "url": "https://drive.google.com/file/d/1tb17tOnuIhV0XO1uuGX-L7_0bNyEVy1T/view",
+   "why": "The earlier grid sent to Conference members: all 221 proposals as received, with the body reviewing each of the 210 still active, before the trustees' committees met. Compare it with the Nov 6 grid to see what the fall weekend decided.",
+   "group": "Board weekends & status grids"
   }
  ]
 }

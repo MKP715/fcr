@@ -27,7 +27,7 @@
   const toggle = document.getElementById('theme-toggle');
   // Views styled by CSS tokens only: no re-render for a theme change (a re-render would close the sections the reader opened).
   // today/delegates/area/person mark the event handled themselves (views.js CSS_THEMED).
-  const CSS_ONLY = new Set(['predict', 'quiz', 'calendar', 'learn', 'committees', 'grid', 'board', 'staff', 'timeline', 'reports', 'structure', 'actions', 'agenda']);
+  const CSS_ONLY = new Set(['predict', 'quiz', 'calendar', 'learn', 'committees', 'grid', 'board', 'staff', 'timeline', 'reports', 'structure', 'actions', 'agenda', 'weekends']);
   const syncToggle = () => {
     if (!toggle) return;
     const label = FCR.currentTheme() === 'dark' ? 'Switch to the light theme' : 'Switch to the dark theme';
@@ -131,6 +131,13 @@
       case 'quiz': return a0 === 'node' && node(args[1]) ? `${node(args[1]).title} · Quiz` : own(QUIZ_MODES, a0) ? `${QUIZ_MODES[a0]} · Quiz` : 'Quiz';
       case 'board': { const y = parseInt(a0, 10); return FCR.Y(y) ? `Trustees & Boards ${y}` : TAB_LABEL.board || 'Trustees & Boards'; }   // V.board / V.structure use parseInt
       case 'structure': { const y = parseInt(a0, 10); return FCR.Y(y) ? `Structure ${y}` : TAB_LABEL.structure || 'Structure'; }
+      case 'weekends': {   // V.weekends (view-weekend.js): /<meeting id>[/<report id>]; an unknown id is the plain page
+        const M = ((FCR.RAW && FCR.RAW.boardMeetings) || {}).meetings || [], tab = TAB_LABEL.weekends || 'Board Weekends';
+        const m = a0 ? M.find((x) => x.id === a0) : null;
+        if (!m) return tab;
+        const a1 = dec(args[1]), r = a1 ? (m.reports || []).find((x) => x.id === a1) : null;
+        return r ? `${r.name} · ${m.title}` : `${m.title} · ${tab}`;
+      }
       case 'actions': {   // V.actions: /pending, /year/<YYYY>, /committee/<ID or section number>, /item/<id>
         const a1 = dec(args[1]);
         if (a0 === 'pending') return 'Pending follow-ups · Advisory Actions';
@@ -142,16 +149,25 @@
         const s = a0 === 'committee' && a1 ? (AA.sections || []).find((x) => x.committee === a1.toUpperCase() || String(x.sid) === a1) : null;
         return s ? `${s.name} · Advisory Actions` : 'Advisory Actions';
       }
-      case 'agenda': {   // V.agenda (view-pai.js): /item/<key>, /theme/<id>, /trends, /last, /process; an unknown key or theme is the plain page
+      case 'agenda': {   // V.agenda (view-pai.js): /item/<key>, /theme/<id>, /topic/<id>, /status/<group>, /body/<key>, /forwarded, /trends, /last, /process; an unknown value is the plain page
         const P = (FCR.RAW && FCR.RAW.pai) || {}, a1 = dec(args[1]), tab = TAB_LABEL.agenda || 'Agenda Items';
         const SECT = { trends: 'Trends', process: 'How a proposal travels' };
         if (P.last && P.last.total) SECT.last = 'Last year';   // the section shows only with last cycle's figures
+        if ((P.agenda_topics || []).some((x) => x.kind !== 'reference')) SECT.forwarded = 'Forwarded';   // "What goes to the Conference"
         if (own(SECT, a0)) return `${SECT[a0]} · ${tab}`;
         const it = a0 === 'item' && a1 ? (P.items || []).find((x) => x.key === a1) : null;
         // an item deferred from an earlier cycle (key '2025-7') names the year it was sent in
         if (it) return `${it.cycle !== (P.source || {}).ordinal ? a1.split('-')[0] + ' ' : ''}PAI ${it.n} · ${tab}`;
         const th = a0 === 'theme' && a1 ? (P.themes || []).find((x) => x.id === a1) : null;
-        return th ? `${th.name} · ${tab}` : tab;
+        if (th) return `${th.name} · ${tab}`;
+        const tp = a0 === 'topic' && a1 ? (P.agenda_topics || []).find((x) => x.id === a1) : null;
+        if (tp) return `${tp.title} · ${tab}`;
+        // a status group as view-pai.js statusGroup() forms it, only when some row has it; a reviewing body in any case
+        const SG = { fwd: 'Forwarded', no: 'No action', under: 'Under consideration', out: 'Withdrawn, superseded or removed', deferred: 'Deferred from 2025' };
+        const grp = (x) => (/^forwarded/.test(x.status) ? 'fwd' : x.status === 'no_action' ? 'no' : x.status === 'under' || x.status === 'deferred' ? x.status : 'out');
+        if (a0 === 'status' && own(SG, a1) && (P.items || []).some((x) => grp(x) === a1)) return `${SG[a1]} · ${tab}`;
+        const bk = UPPER(a1);
+        return a0 === 'body' && bk && own(P.bodies, bk) ? `${P.bodies[bk].name} · ${tab}` : tab;
       }
       case 'reports': {   // a year with a report, a Conference entry, or the Conference whose report is pending
         const CONF = (FCR.RAW && FCR.RAW.conferences) || {}, cyc = FCR.cycle();

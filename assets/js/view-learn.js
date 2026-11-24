@@ -15,7 +15,7 @@
     delegates: ['Delegates & Map', '#/delegates'], committees: ['Committees', '#/committees'], grid: ['Rotation Grid', '#/grid'],
     predict: ['Predict', '#/predict'], board: ['Trustees & Boards', '#/board'], staff: ['GSO Staff', '#/staff'],
     timeline: ['Openings', '#/timeline'], reports: ['Reports', '#/reports'], calendar: ['Calendar', '#/calendar'],
-    actions: ['Advisory Actions', '#/actions'],
+    actions: ['Advisory Actions', '#/actions'], weekends: ['Board Weekends', '#/weekends'],
     // the Conference the agenda-item data is for (pai.json source.ordinal): "Proposed agenda items (77th Conference)"
     agenda: [`Proposed agenda items${((FCR.RAW && FCR.RAW.pai) || {}).source ? ` (${FCR.ordinal(FCR.RAW.pai.source.ordinal)} Conference)` : ''}`, '#/agenda'],
   };
@@ -264,7 +264,7 @@
     const letters = [...new Set(GI.map(letterOf))];
     el.innerHTML = `
       <div class="page-head"><div><h1>Learn the structure</h1>
-        <p>The U.S./Canada general service structure from the group to the General Service Office, built from <em>The A.A. Service Manual 2026–2028</em> (printed page numbers) and, where marked, the Final Conference Reports. Pick any part to see who fills it, how they are chosen, for how long, and where to see the real people in this app.</p></div></div>
+        <p>The U.S./Canada general service structure from the group to the General Service Office, built from <em>The A.A. Service Manual 2026–2028</em> (printed page numbers) and, where marked, the Final Conference Reports and the fall 2026 board reports (“Q4 2026 board reports p. N” is page N of the PDF packet). Pick any part to see who fills it, how they are chosen, for how long, and where to see the real people in this app.</p></div></div>
       <nav class="l-toc" aria-label="On this page"><span class="small muted">On this page</span>
         <button class="chip" data-go="l-structure">Structure</button><button class="chip" data-go="l-rules">Rules</button><button class="chip" data-go="l-glossary">Glossary</button>
         <a class="chip" href="#/calendar">Calendar ↗</a><a class="chip" href="#/quiz">Quiz ↗</a></nav>

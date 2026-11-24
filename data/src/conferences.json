@@ -605,7 +605,29 @@
     "area": 86
    },
    "status": "final",
-   "refs": ["FR25 p46 L3922-3927 (dates, venue)", "FR26 p39 L3190-3202 (theme, topics, workshop)", "FR26 p5 L251-253 (delegate chair)"]
+   "notes": [
+    {
+     "text": "Votes are taken on Slido: a trial the trustees' Conference Committee adopted on Nov 1, 2026, on the advice of its Subcommittee on Conference Improvements after a voting test at the 76th Conference. The minutes put the saving at about $10,000.",
+     "ref": "Q4 2026 board reports p. 50; pp. 5-6"
+    },
+    {
+     "text": "Also a trial: the secondary committees do their preliminary work online before Conference week, starting with joint committee meetings and the trustees' committees' annual reports, so they need no second meeting during the week. Recommendations and considerations are still settled at the Conference.",
+     "ref": "Q4 2026 board reports p. 50"
+    },
+    {
+     "text": "The Equitable Distribution of Workload subcommittee's plan for spreading agenda items among the Conference committees was expected at the winter 2027 board meeting.",
+     "ref": "Q4 2026 board reports p. 50"
+    },
+    {
+     "text": "The trustees' Conference Committee heard how known accessibility needs of 77th Conference members are being met.",
+     "ref": "Q4 2026 board reports p. 53"
+    },
+    {
+     "text": "Conference week includes a sharing session on the Reserve Fund.",
+     "ref": "Q4 2026 board reports p. 51"
+    }
+   ],
+   "refs": ["FR25 p46 L3922-3927 (dates, venue)", "FR26 p39 L3190-3202 (theme, topics, workshop)", "FR26 p5 L251-253 (delegate chair)", "Q4 2026 board reports pp. 5-6, 50-53 (notes; PDF pages of the fall 2026 board & committee reports)"]
   },
   {
    "ordinal": 78,
@@ -645,7 +667,13 @@
     }
    ],
    "note": "Dates in order of preference; venue not yet chosen.",
-   "refs": ["FR26 p49 L4319-4326"]
+   "notes": [
+    {
+     "text": "In fall 2026 the trustees' Conference Committee lifted its hold on contract talks for this Conference while other Conference formats are still explored; more was expected at the winter 2027 board weekend.",
+     "ref": "Q4 2026 board reports p. 53; p. 6"
+    }
+   ],
+   "refs": ["FR26 p49 L4319-4326", "Q4 2026 board reports p. 53; p. 6 (contract talks resumed)"]
   }
  ],
  "regional_forums": {

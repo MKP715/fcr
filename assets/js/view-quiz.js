@@ -295,7 +295,7 @@
     function render(card) {
       const st = getDecks()[key] || {};
       const left = (st.queue || []).length, missed = (st.missed || []).length;
-      el.innerHTML = `<div class="page-head"><div><h1>Quiz yourself</h1><p>Questions from the Service Manual and the Final Reports (with page numbers), the rosters, the committee-draw history and the calendar. Each deck is shuffled: no repeats until you've seen it all, and missed questions come back.</p></div></div>
+      el.innerHTML = `<div class="page-head"><div><h1>Quiz yourself</h1><p>Questions from the Service Manual, the Final Reports and the fall 2026 board reports (with page numbers; “Q4 2026 board reports p. N” is page N of the PDF packet), the rosters, the committee-draw history and the calendar. Each deck is shuffled: no repeats until you've seen it all, and missed questions come back.</p></div></div>
         <div class="qz-bar"><div class="seg" id="qz-mode" role="group" aria-label="Question set">${MODES.map(([k, l]) => `<button data-m="${k}" class="${mode === k ? 'on' : ''}" aria-pressed="${mode === k}">${l}${k === 'region' ? ` (${esc(FCR.regionName(rid))})` : ''}</button>`).join('')}</div>
           <span class="spacer"></span><span id="qz-score" aria-live="polite">Score <strong>${score.right}/${score.total}</strong> · streak ${score.streak}</span><button class="btn" id="qz-reset">Reset score</button></div>
         ${mode === 'node' ? `<div class="callout qz-node">Quiz on <strong>${esc(node ? node.title : nodeId)}</strong> · <a href="#/learn/${esc(nodeId)}">back to Learn</a> · <a href="#/quiz/all">all questions</a></div>` : ''}

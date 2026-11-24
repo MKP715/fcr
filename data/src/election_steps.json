@@ -1,8 +1,8 @@
 {
  "meta": {
   "about": "Steps of a regional trustee election, for the tracker on the Openings page (assets/js/views3.js). Texts are own-words summaries; page = printed page of the Service Manual. when: rel 'year_before' (month = that whole month, or from/to 'MM-DD') | no rel + month_day (a day of the election year) | 'before_conference' (from 'MM-DD' to the day before the Conference opens) | 'conference' (weekday = 0-6, Sunday = 0: the first such day on or after the opening day, at most the closing day; or offset = days after the opening day; to_end = from that day through the closing day; neither = the whole week) | 'annual_meeting' (board.json annual_meetings, else the Saturday on or after the close). A step whose when does not resolve is left out. approx marks a dating pattern, not a rule.",
-  "source": "The A.A. Service Manual 2026-2028 (BM-31), printed pages 54-57, 115 and 137-140 (GSB bylaws, Appendix O)",
-  "as_of": "2026-10-21"
+  "source": "The A.A. Service Manual 2026-2028 (BM-31), printed pages 54-57, 115 and 137-140 (GSB bylaws, Appendix O); one note from the Q4 2026 board reports (board & committee reports of Nov 2, 2026; PDF pages)",
+  "as_of": "2026-11-23"
  },
  "regional_trustee": [
   {
@@ -125,6 +125,10 @@
     {
      "text": "The trustees' Nominating Committee consults the AAWS and AA Grapevine boards about the regional trustees who will serve on them.",
      "page": "56"
+    },
+    {
+     "text": "In 2026 the AAWS and AA Grapevine boards interviewed regional trustees for their board seats at the fall board weekend (AAWS moved its interviews there from July); the trustees' Nominating Committee then recommends, at an interim meeting, which board each joins.",
+     "source": "Q4 2026 board reports pp. 22, 29, 74"
     }
    ]
   }

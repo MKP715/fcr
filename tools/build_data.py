@@ -14,15 +14,21 @@ Sources:
   data/src/conferences.json     per-Conference facts, future Conference dates, forums, conventions (optional)
   data/src/board.json           post-Conference slates, trustees emeriti, general managers (optional)
   data/src/forecast.json        precomputed committee odds for pending panels (tools/dev/precompute_forecast.js)
+  data/src/learn.json           Learn tree, glossary, quiz bank, rules and service-year lines (--check: links, cites, answers)
   data/src/advisory_actions.json  index of the Conference's Advisory Actions 1951-2026 (GSO item M-39): year, section,
                                 page, a summary in our own words (the original wording stays in the PDF), follow-up dates
                                 (tools/dev/m39_merge.py); follow-ups due from the latest report's year on become Calendar events
   data/src/followups.json       dated requests in the Final Reports (committee, board, trustees' and G.S.O. reports) that are
                                 not Advisory Actions, and what became of follow-ups once due (hand-checked; dated ones are
-                                also generated Calendar events) (optional)
+                                also generated Calendar events), plus dated progress news from board weekends (optional)
   data/src/pai.json             proposed agenda items of the next Conference from GSO's status grid: own-words summaries,
-                                themes, related Advisory Actions, last cycle's outcomes (the grid itself, with the
-                                submitted wording and group names, stays in Drive) (optional)
+                                themes, related Advisory Actions, last cycle's outcomes, and what the fall board weekend
+                                decided (per-item decisions, agenda topics, reasons, open meetings, cited to the board
+                                packet) (the grid and packet, with the submitted wording and group names, stay in Drive)
+                                (optional)
+  data/src/board_meetings.json  Board Weekends: the General Service Board's quarterly weekends, newest first, with one
+                                own-words card per report in the packet GSO sends Conference members, the minutes' view
+                                merged in (the packet itself stays in Drive) (optional)
 Derived at build time (never stored in the year files):
   * GSB_CHAIR seat for a Class B chair (seat_since = first report printing them as Chair - 1, because the officers
     printed in report Y are the slate elected at the annual meeting after Conference Y-1)
@@ -331,12 +337,58 @@ FU_KINDS = {'report', 'draft', 'plan', 'recommitted', 'committed', 'deferred', '
 FU_STATUS = {'done', 'progress', 'not_done', 'superseded', 'unclear', 'update'}  # update: news before it falls due
 COMMITTEE_IDS = {'AGENDA', 'ARCHIVES', 'CPC', 'CORRECTIONS', 'FINANCE', 'GRAPEVINE', 'ICRF', 'LITERATURE', 'POLICY', 'PI',
                  'REPORT', 'TREATMENT', 'TRUSTEES'}
+FU_PROGRESS_STATUS = {'done', 'progress', 'update'}
+# progress cites: a board weekend's board & committee reports ('Q4 2026 board reports p. 36', PDF page) or a PAI status grid
+FU_CITE = re.compile(r'(?:(Q[1-4] \d{4} board reports)|([A-Z][a-z]{2}) (\d{1,2}), (\d{4}) PAI status grid) p\. (\d+)$')
 
 
-def check_followups(fu, aa):
+def board_packets(bm, pai):
+    """The board-weekend packets the data may cite: short cite ('Q4 2026 board reports') -> {pages, start, end}, from
+    board_meetings.json meetings[].source and pai.json decisions_source (its weekend_start..weekend_end)."""
+    packets = {}
+    for m in (bm or {}).get('meetings') or []:
+        s = m.get('source') or {}
+        if s.get('short'): packets[s['short']] = {'pages': s.get('pages'), 'start': m.get('start'), 'end': m.get('end')}
+    ds = (pai or {}).get('decisions_source') or {}
+    if ds.get('short'): packets.setdefault(ds['short'], {'pages': ds.get('pages'), 'start': ds.get('weekend_start'), 'end': ds.get('weekend_end')})
+    return packets
+
+
+def check_progress(tag, p, pai, packets=None):
+    """One dated progress note on a follow-up ({date, status?, text, cite, also?}): ISO date, own-words text <= 45 words,
+    cite FU_CITE with pages inside the document (that packet's pages, from packets = board_packets(); the grid of that
+    date, pai.json source or previous_grid, for a grid), also = more pages of the same document."""
+    import datetime as dt
+    errs = []
+    if not isinstance(p, dict): return [f'{tag}: progress note must be an object']
+    if not bm_date(p.get('date')): errs.append(f'{tag}: date {p.get("date")!r} must be YYYY-MM-DD')
+    if 'status' in p and p['status'] not in FU_PROGRESS_STATUS: errs.append(f'{tag}: status {p["status"]}')
+    t = p.get('text') if isinstance(p.get('text'), str) else ''
+    if not t or len(t.split()) > 45: errs.append(f'{tag}: text missing or longer than 45 words')
+    m = FU_CITE.match(p.get('cite') or '')
+    if not m: errs.append(f'{tag}: cite {p.get("cite")!r} must be "Q4 2026 board reports p. N" or "Nov 6, 2026 PAI status grid p. N"'); return errs
+    pai, packets = pai or {}, packets if packets is not None else board_packets(None, pai)
+    if m.group(1):   # a board weekend's packet: bound by its page count
+        pk = packets.get(m.group(1))
+        if pk is None: errs.append(f'{tag}: cite {p["cite"]!r} names no known packet (board_meetings.json source.short)')
+        top = (pk or {}).get('pages')
+    else:   # a grid: bound by the page count of the grid of that date, when pai.json has it
+        try: iso = dt.datetime.strptime(f'{m.group(2)} {m.group(3)} {m.group(4)}', '%b %d %Y').date().isoformat()
+        except ValueError: iso = None; errs.append(f'{tag}: cite date {p["cite"]!r}')
+        g = next((g for g in (pai.get('source') or {}, pai.get('previous_grid') or {}) if g.get('as_of') == iso), {})
+        top = g.get('pages')
+    if 'also' in p and not isinstance(p['also'], list): errs.append(f'{tag}: also must be a list of page numbers')
+    for n in [int(m.group(5))] + (p['also'] if isinstance(p.get('also'), list) else []):
+        if not isinstance(n, int) or isinstance(n, bool) or n < 1 or (isinstance(top, int) and n > top): errs.append(f'{tag}: page {n!r} outside 1..{top or "?"}')
+    return errs
+
+
+def check_followups(fu, aa, pai=None, packets=None):
     """followups.json: requests in the Final Reports (committee, board, trustees' and G.S.O. reports) that are dated for
     later and are not Advisory Actions (only kind 'committed' may have no date), and what became of a follow-up once it
-    fell due. Own-words text only; request refs 'FRyy pP Lx-y', outcome refs may list several 'FRyy pP …; pQ …'."""
+    fell due. Own-words text only; request refs 'FRyy pP Lx-y', outcome refs may list several 'FRyy pP …; pQ …'.
+    Dated news before a follow-up falls due: requests[].progress[] and action_progress[] {action (an Advisory Action with
+    a follow-up), date, status?, text, cite, also?}, each checked by check_progress."""
     errs = []
     if not fu:
         return errs
@@ -353,6 +405,9 @@ def check_followups(fu, aa):
         if r.get('kind') not in FU_KINDS: errs.append(f'{tag}: kind {r.get("kind")}')
         t = r.get('text') if isinstance(r.get('text'), str) else ''
         if not t or len(t.split()) > 34: errs.append(f'{tag}: text missing or longer than 34 words')
+        if 'progress' in r and not isinstance(r['progress'], list): errs.append(f'{tag}: progress must be a list')
+        for j, p in enumerate(r.get('progress') if isinstance(r.get('progress'), list) else []):
+            errs += check_progress(f'{tag} progress[{j}]', p, pai, packets)
         if 'due' not in r and r.get('kind') == 'committed':
             continue  # committed to the General Service Board: the report sets no date
         d = r.get('due')
@@ -379,12 +434,26 @@ def check_followups(fu, aa):
         if o.get('status') not in FU_STATUS: errs.append(f'{tag}: status {o.get("status")}')
         if not isinstance(o.get('text'), str) or not o['text'] or len(o['text'].split()) > 34: errs.append(f'{tag}: text missing or longer than 34 words')
         if not re.match(r'FR\d\d p\d+', o.get('ref') or ''): errs.append(f'{tag}: ref {o.get("ref")!r}')
+    for i, p in enumerate(fu.get('action_progress') or []):
+        tag = f"followups.json action_progress {(p.get('action') if isinstance(p, dict) else None) or i}"
+        a = acts.get(p.get('action')) if isinstance(p, dict) else None
+        if not a: errs.append(f'{tag}: no such Advisory Action'); continue
+        if not (a.get('due') if isinstance(a.get('due'), list) else []): errs.append(f'{tag}: the action has no follow-up')
+        errs += check_progress(tag, p, pai, packets)
     return errs
 
 
 TC_IDS = {'CONFERENCE', 'ARCHIVES', 'CPCTA', 'CORRECTIONS', 'FINANCE', 'ICRF', 'LITERATURE', 'NOMINATING', 'PI',   # FCR.TRUSTEES_COMMITTEES
            'INTERNATIONAL', 'AUDIT', 'COMPENSATION', 'SHARING'}
-PAI_STATUS = {'under', 'withdrawn', 'superseded', 'removed', 'deferred'}
+PAI_STATUS = {'under', 'withdrawn', 'superseded', 'removed', 'deferred',
+              'forwarded', 'forwarded_topic', 'no_action'}   # the grid after a board weekend: decided items
+PAI_DECIDED = {'forwarded', 'forwarded_topic', 'no_action'}
+PAI_ACTIONS = {'forwarded', 'forwarded_topic', 'no_action', 'referred', 'deferred', 'pending'}
+PAI_OPEN_ACTIONS = {'referred', 'deferred', 'pending'}      # still 'under' consideration after the weekend
+PAI_TOPIC_KINDS = {'item', 'general_topic', 'added', 'reference'}   # reference = a note, not an agenda entry
+PAI_SNAP_KEYS = {'under', 'out', 'deferred', 'forwarded', 'forwarded_topic', 'no_action'}
+PAI_CITE = re.compile(r'(Q[1-4] \d{4} board reports) p\. (\d+)$')   # a PDF page of a board weekend's packet
+PAI_GRID_CITE = re.compile(r'[A-Z][a-z]{2} \d{1,2}, \d{4} grid p\. (\d+)$')
 PAI_KINDS = {'group', 'district', 'area', 'committee', 'individual', 'unstated'}
 PAI_NEEDS = ('title', 'asks', 'themes', 'targets', 'submitter', 'language')   # every item that has a summary
 # Privacy: a group's service number (#123456, or any 6+ digit run), an e-mail address, a phone number
@@ -392,14 +461,253 @@ PAI_PRIVATE = [(re.compile(r'#\s*\d{5,}|\b\d{6,}\b'), 'a group service number'),
                (re.compile(r'\(?\b\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}\b'), 'a phone number')]
 
 
-def check_pai(pai, aa, learn, areas=None):
+PAI_FCR_ORDER = ['AGENDA', 'CPC', 'CORRECTIONS', 'FINANCE', 'GRAPEVINE', 'LITERATURE', 'POLICY', 'PI', 'REPORT', 'TREATMENT',
+                 'TRUSTEES', 'ICRF']   # Final Report order of the Conference committees (agenda_topics are sorted by it)
+PAI_SHORT_WORDS = 45   # decision reasons and notes, topic summaries, open-meeting texts: one short paragraph each
+
+
+def pai_out(st):   # the grid's 'Withdrawn / Superseded' section counts as one group in snapshots
+    return 'out' if st in ('withdrawn', 'superseded', 'removed') else st
+
+
+def check_pai_decisions(pai, items, themes, bodies, cal=None, packets=None):
+    """pai.json after a board weekend: what the trustees' committees and boards decided on each proposal.
+    previous_grid = the grid before the weekend (page_oct = an item's page there); decisions_source = the board packet
+    ('Q4 2026 board reports p. N', N = its PDF page; packets = board_packets(), every packet the data may cite).
+    items[].decision {by, met, action, reason, to_committee?, to_provisional?, to_text?, referred_to?, topic?, cite,
+    also?, reason_kind?, note?, prior? {by, action, met, cite, also?}} agrees with the item's grid status and is cited
+    to a packet (met from decisions_source.weekend_start to that packet's last day) or to a grid (met up to the grid's
+    as_of: an interim meeting's outcome first shows there);
+    agenda_topics [{id, title, kind, by, keys, to_committee, to_provisional, to_text, summary, why, cite, also?, themes,
+    related?, note?}] hold every forwarded item exactly once, sorted by Conference committee (PAI_FCR_ORDER) then size;
+    open_meetings [{id, by, date, approx, date_note, keys, text, cite, also?, calendar_id?, title?}] cover every item still under
+    consideration; snapshots[].counts add up to the grid's total (deferred rows of the last cycle are extra)."""
+    import collections
+    import datetime as dt
+    errs = []
+    src, pg, ds = pai.get('source') or {}, pai.get('previous_grid') or {}, pai.get('decisions_source') or {}
+    words = lambda s: len(s.split()) if isinstance(s, str) else 0
+    is_drive = lambda u: isinstance(u, str) and u.startswith('https://drive.google.com/file/d/')
+
+    def iso(v, tag, what, month_ok=False):   # 'YYYY-MM-DD' only (fromisoformat also takes '20261102' or '2026-W45-1')
+        if isinstance(v, str) and bm_date(v, month_ok): return v
+        errs.append(f'{tag}: {what} {v!r} must be YYYY-MM-DD' + (' or YYYY-MM' if month_ok else '')); return None
+    packets = packets if packets is not None else board_packets(None, pai)
+
+    def pages(tag, cite, also, grid_ok=False):
+        """A packet cite (or, where allowed, a grid cite) plus more pages of the same document. Returns the last day the
+        cited document can report on (the packet's weekend end, the grid's as_of), or None."""
+        m = PAI_CITE.match(cite) if isinstance(cite, str) else None
+        top, last = None, None
+        if m:
+            pk = packets.get(m.group(1))
+            if pk is None: errs.append(f'{tag}: cite {cite!r} names no known packet (board_meetings.json source.short or decisions_source.short)')
+            else:
+                top, last = (pk['pages'] if isinstance(pk.get('pages'), int) else None), pk.get('end')
+                if top and not 1 <= int(m.group(2)) <= top: errs.append(f'{tag}: cite page {m.group(2)} outside 1..{top}')
+        elif grid_ok and isinstance(cite, str) and PAI_GRID_CITE.match(cite):
+            try: on = dt.datetime.strptime(cite.split(' grid ')[0], '%b %d, %Y').date().isoformat()
+            except ValueError: on = None
+            g = next((g for g in (src, pg) if g.get('as_of') == on), None)
+            if not g: errs.append(f'{tag}: cite {cite!r} names no grid in pai.json (source / previous_grid)')
+            else:
+                top, last = (g['pages'] if isinstance(g.get('pages'), int) else None), g.get('as_of')
+                if top and not 1 <= int(PAI_GRID_CITE.match(cite).group(1)) <= top: errs.append(f'{tag}: cite {cite!r} beyond the grid\'s {top} pages')
+        else:
+            errs.append(f'{tag}: cite {cite!r} must be "{ds.get("short") or "Q4 2026 board reports"} p. N"' + (' or "Nov 6, 2026 grid p. N"' if grid_ok else ''))
+        if also is not None and (not isinstance(also, list) or not all(isinstance(n, int) and not isinstance(n, bool) and (not top or 1 <= n <= top) for n in also)):
+            errs.append(f'{tag}: also {also!r} must list more pages 1..{top or "?"} of the cited document')
+        return last
+    # the two documents the decisions are read from
+    if pg:
+        for k in ('as_of', 'pages', 'drive_name', 'drive_url'):
+            if not pg.get(k): errs.append(f'pai.json previous_grid: {k} missing')
+        if iso(pg.get('as_of'), 'pai.json previous_grid', 'as_of') and src.get('as_of') and not pg['as_of'] < src['as_of']: errs.append('pai.json previous_grid: as_of must be before source.as_of')
+        if pg.get('pages') is not None and (not isinstance(pg['pages'], int) or pg['pages'] < 1): errs.append(f'pai.json previous_grid: pages {pg["pages"]!r}')
+        if pg.get('drive_url') and not is_drive(pg['drive_url']): errs.append('pai.json previous_grid: drive_url is not a Drive file link')
+    if ds:
+        for k in ('title', 'short', 'date', 'weekend_start', 'weekend_end', 'pages', 'drive_url', 'note'):
+            if not ds.get(k): errs.append(f'pai.json decisions_source: {k} missing')
+        d0, d1, dd = (iso(ds.get(k), 'pai.json decisions_source', k) for k in ('weekend_start', 'weekend_end', 'date'))
+        if d0 and d1 and dd and not d0 <= dd <= d1: errs.append('pai.json decisions_source: date must fall within weekend_start..weekend_end')
+        if dd and src.get('as_of') and not dd <= src['as_of']: errs.append('pai.json decisions_source: the grid (source.as_of) predates the decisions')
+        if ds.get('pages') is not None and (not isinstance(ds['pages'], int) or ds['pages'] < 1): errs.append(f'pai.json decisions_source: pages {ds["pages"]!r}')
+        if ds.get('drive_url') and not is_drive(ds['drive_url']): errs.append('pai.json decisions_source: drive_url is not a Drive file link')
+    else:
+        d0 = d1 = None
+    kinds = pai.get('reason_kinds') or {}
+    for k, v in kinds.items():
+        if not isinstance(v, str) or not v: errs.append(f'pai.json reason_kinds {k}: no label')
+    if pai.get('reason_kinds_about') is not None and set(pai['reason_kinds_about']) != set(kinds): errs.append('pai.json reason_kinds_about: keys differ from reason_kinds')
+    # items: page in the previous grid, and one decision per decided or still-open item
+    for key, it in items.items():
+        tag, st, dec = f'pai.json item {key}', it.get('status'), it.get('decision')
+        if pg and (not isinstance(it.get('page_oct'), int) or isinstance(it['page_oct'], bool) or not 1 <= it['page_oct'] <= (pg.get('pages') or 999)):
+            errs.append(f'{tag}: page_oct {it.get("page_oct")!r} is not a page of the {pg.get("as_of")} grid')
+        if st in PAI_DECIDED and not ds: errs.append(f'{tag}: status {st} but no decisions_source'); continue
+        if dec is None:
+            if ds and (st in PAI_DECIDED or (st == 'under' and it.get('cycle') == src.get('ordinal'))): errs.append(f'{tag}: {st} but no decision')
+            continue
+        if not isinstance(dec, dict): errs.append(f'{tag}: decision must be an object'); continue
+        if not ds: errs.append(f'{tag}: decision but no decisions_source'); continue
+        tag += ' decision'
+        a = dec.get('action')
+        if a not in PAI_ACTIONS: errs.append(f'{tag}: action {a!r}')
+        elif (st in PAI_DECIDED and a != st) or (st == 'under' and a not in PAI_OPEN_ACTIONS):   # out / deferred rows: only when the packet discusses them
+            errs.append(f'{tag}: action {a} does not match the grid status {st}')
+        if dec.get('by') not in bodies: errs.append(f'{tag}: unknown body {dec.get("by")!r}')
+        elif it.get('body') and dec['by'] != it['body']: errs.append(f'{tag}: by {dec["by"]} but the grid sends it to {it["body"]}')
+        m = iso(dec.get('met'), tag, 'met')
+        if not dec.get('reason') or words(dec.get('reason')) > PAI_SHORT_WORDS: errs.append(f'{tag}: reason missing or longer than {PAI_SHORT_WORDS} words')
+        if words(dec.get('note')) > PAI_SHORT_WORDS: errs.append(f'{tag}: note longer than {PAI_SHORT_WORDS} words')
+        last = pages(tag, dec.get('cite'), dec.get('also'), grid_ok=True)   # a grid cite: e.g. an interim meeting's outcome
+        if m and d0 and not d0 <= m <= (last or d1 or m): errs.append(f'{tag}: met {m} is outside {d0}..{last or d1} (from the board weekend to the cited document)')
+        if dec.get('to_committee') is not None and dec['to_committee'] not in COMMITTEE_IDS: errs.append(f'{tag}: unknown Conference committee {dec["to_committee"]!r}')
+        if 'to_provisional' in dec and (not isinstance(dec['to_provisional'], bool) or (dec['to_provisional'] and not dec.get('to_committee'))): errs.append(f'{tag}: to_provisional must be a boolean, true only with a to_committee')
+        if (dec.get('to_committee') or dec.get('to_text') or dec.get('topic')) and a not in ('forwarded', 'forwarded_topic'): errs.append(f'{tag}: to_committee / to_text / topic on a {a} decision')
+        if a in ('forwarded', 'forwarded_topic') and not dec.get('topic'): errs.append(f'{tag}: {a} without a topic')
+        if a == 'referred' and not dec.get('referred_to'): errs.append(f'{tag}: referred to nobody (referred_to)')
+        if a == 'no_action':
+            if dec.get('reason_kind') not in kinds: errs.append(f'{tag}: reason_kind {dec.get("reason_kind")!r} is not one of reason_kinds')
+        elif 'reason_kind' in dec: errs.append(f'{tag}: reason_kind on a {a} decision (no_action only)')
+        pr = dec.get('prior')   # the board weekend's own (open) decision, kept when a later one from another body replaced it
+        if pr is not None:
+            ptag = f'{tag} prior'
+            if not isinstance(pr, dict): errs.append(f'{ptag}: must be an object {{by, action, met, cite}}')
+            else:
+                if pr.get('by') not in bodies: errs.append(f'{ptag}: unknown body {pr.get("by")!r}')
+                elif pr['by'] == dec.get('by'): errs.append(f'{ptag}: same body as the decision (prior is only for a later decision by another body)')
+                if pr.get('action') not in PAI_OPEN_ACTIONS: errs.append(f'{ptag}: action {pr.get("action")!r} must be one of {sorted(PAI_OPEN_ACTIONS)} (the item stayed open)')
+                pm = iso(pr.get('met'), ptag, 'met')
+                if pm and d0 and d1 and not d0 <= pm <= d1: errs.append(f'{ptag}: met {pm} is outside the board weekend {d0}..{d1}')
+                if pm and m and not pm < m: errs.append(f'{ptag}: met {pm} must be before decision.met {m}')
+                pages(ptag, pr.get('cite'), pr.get('also'))
+    # agenda topics: the entries the forwarded items become
+    topics, seen, last = {}, {}, None
+    for i, t in enumerate(pai.get('agenda_topics') or []):
+        tag = f"pai.json agenda_topic {t.get('id', i)}"
+        if not t.get('id') or t['id'] in topics: errs.append(f'{tag}: missing or duplicate id'); continue
+        topics[t['id']] = t
+        k = t.get('kind')
+        if k not in PAI_TOPIC_KINDS: errs.append(f'{tag}: kind {k!r}')
+        for f in ('title', 'summary', 'to_text', 'cite'):
+            if not t.get(f): errs.append(f'{tag}: {f} missing')
+        for f in ('summary', 'why', 'note'):
+            if words(t.get(f)) > PAI_SHORT_WORDS: errs.append(f'{tag}: {f} longer than {PAI_SHORT_WORDS} words')
+        if t.get('by') not in bodies: errs.append(f'{tag}: unknown body {t.get("by")!r}')
+        if t.get('to_committee') is not None and t['to_committee'] not in COMMITTEE_IDS: errs.append(f'{tag}: unknown Conference committee {t["to_committee"]!r}')
+        if not isinstance(t.get('to_provisional'), bool) or (t['to_provisional'] and not t.get('to_committee')): errs.append(f'{tag}: to_provisional must be a boolean, true only with a to_committee')
+        pages(tag, t.get('cite'), t.get('also'))
+        ks = t.get('keys') if isinstance(t.get('keys'), list) else []
+        if not isinstance(t.get('keys'), list): errs.append(f'{tag}: keys must be a list')
+        if k in ('item', 'general_topic') and not ks: errs.append(f'{tag}: a {k} topic with no proposals')
+        if k in ('added', 'reference') and ks: errs.append(f'{tag}: an {k} topic lists proposals (use related for a reference note)')
+        for r in t.get('related') or []:
+            if r not in items: errs.append(f'{tag}: related {r!r} is not an item')
+        main = collections.Counter()
+        for key in ks:
+            it = items.get(key)
+            if not it: errs.append(f'{tag}: no item {key!r}'); continue
+            seen.setdefault(key, []).append(t['id'])
+            dec = it.get('decision') if isinstance(it.get('decision'), dict) else {}
+            want = {'item': 'forwarded', 'general_topic': 'forwarded_topic'}.get(k)
+            if want and it.get('status') != want: errs.append(f'{tag}: item {key} is {it.get("status")}, not {want}')
+            if dec.get('topic') != t['id']: errs.append(f'{tag}: item {key} says topic {dec.get("topic")!r}')
+            for f in ('to_committee', 'to_provisional'):
+                if dec.get(f, False if f == 'to_provisional' else None) != t.get(f): errs.append(f'{tag}: item {key} {f} {dec.get(f)!r} differs from the topic\'s {t.get(f)!r}')
+            if (it.get('themes') or [None])[0]: main[it['themes'][0]] += 1
+        th = t.get('themes') if isinstance(t.get('themes'), list) else None
+        if th is None: errs.append(f'{tag}: themes must be a list')
+        else:
+            for x in th:
+                if x not in themes: errs.append(f'{tag}: unknown theme {x!r}')
+            if set(th) != set(main) or any(main[a] < main[b] for a, b in zip(th, th[1:])): errs.append(f'{tag}: themes {th} are not its items\' main themes, most common first ({dict(main)})')
+        c = t.get('to_committee')
+        order = (k == 'reference', PAI_FCR_ORDER.index(c) if c in PAI_FCR_ORDER else len(PAI_FCR_ORDER), -len(ks))
+        if last and order < last: errs.append(f'{tag}: out of order (by Conference committee in Final Report order, then most proposals first; the reference note last)')
+        last = order
+    for key, it in items.items():
+        if it.get('status') in ('forwarded', 'forwarded_topic') and len(seen.get(key, [])) != 1:
+            errs.append(f'pai.json item {key}: forwarded, but in {len(seen.get(key, []))} agenda topics (need exactly one)')
+        tp = it['decision'].get('topic') if isinstance(it.get('decision'), dict) else None
+        if tp and tp not in topics: errs.append(f'pai.json item {key} decision: unknown topic {tp!r}')
+    # still open after the weekend: when and where each undecided item is taken up
+    oms, held = set(), collections.Counter()
+    ev = {e.get('id') for e in (cal or {}).get('events') or []}
+    for i, o in enumerate(pai.get('open_meetings') or []):
+        tag = f"pai.json open_meeting {o.get('id', i)}"
+        if not o.get('id') or o['id'] in oms: errs.append(f'{tag}: missing or duplicate id')
+        oms.add(o.get('id'))
+        if o.get('by') is None:   # held for the Conference itself (no trustees' body has the items)
+            if any((items.get(k) or {}).get('body') for k in o.get('keys') or []): errs.append(f'{tag}: by null, but its items are sent to a body')
+        elif o['by'] not in bodies: errs.append(f'{tag}: unknown body {o["by"]!r}')
+        if o.get('date') is not None: iso(o['date'], tag, 'date', month_ok=True)
+        elif not o.get('date_note'): errs.append(f'{tag}: no date and no date_note saying why')
+        if not isinstance(o.get('approx'), bool): errs.append(f'{tag}: approx must be true or false')
+        if o.get('title') is not None and (not isinstance(o['title'], str) or not o['title'].strip() or words(o['title']) > 8):
+            errs.append(f'{tag}: title must be a short heading (1-8 words)')
+        for f in ('text', 'date_note'):
+            if f == 'text' and not o.get(f): errs.append(f'{tag}: text missing')
+            if words(o.get(f)) > PAI_SHORT_WORDS: errs.append(f'{tag}: {f} longer than {PAI_SHORT_WORDS} words')
+        pages(tag, o.get('cite'), o.get('also'), grid_ok=True)
+        if not isinstance(o.get('keys'), list): errs.append(f'{tag}: keys must be a list')
+        for key in o.get('keys') or []:
+            it = items.get(key)
+            if not it: errs.append(f'{tag}: no item {key!r}')
+            elif it.get('status') not in ('under', 'deferred'): errs.append(f'{tag}: item {key} is {it.get("status")}, not still open')
+            else: held[key] += 1
+        if o.get('calendar_id') is not None and cal is not None and o['calendar_id'] not in ev: errs.append(f'{tag}: calendar_id {o["calendar_id"]!r} is not a calendar.json event')
+    if ds:
+        for key, it in items.items():
+            if it.get('status') == 'under' and held[key] != 1: errs.append(f'pai.json item {key}: under consideration, but in {held[key]} open_meetings (need exactly one)')
+    # snapshots: status counts of each grid, the latest one computed from the items
+    now = collections.Counter(pai_out(it.get('status')) for it in items.values())
+    prev = ''
+    for i, s in enumerate(pai.get('snapshots') or []):
+        tag = f"pai.json snapshot {s.get('as_of', i)}"
+        a = iso(s.get('as_of'), tag, 'as_of', month_ok=True) or ''
+        if a and a <= prev: errs.append(f'{tag}: snapshots must be oldest first, one per grid')
+        prev = a or prev
+        c = s.get('counts')
+        if c is None: continue
+        if not isinstance(c, dict) or any(k not in PAI_SNAP_KEYS or not isinstance(v, int) or isinstance(v, bool) or v < 0 for k, v in c.items()):
+            errs.append(f'{tag}: counts {c!r} must map {sorted(PAI_SNAP_KEYS)} to whole numbers'); continue
+        if isinstance(s.get('total'), int) and sum(v for k, v in c.items() if k != 'deferred') != s['total']:
+            errs.append(f'{tag}: counts add up to {sum(v for k, v in c.items() if k != "deferred")} (without deferred), not the total {s["total"]}')
+        if a and a == src.get('as_of') and c != {k: v for k, v in now.items() if v}:
+            errs.append(f'{tag}: counts {c} differ from the items\' statuses {dict(now)}')
+    # the history row of this cycle repeats the grid's figures
+    fwd = sum(1 for it in items.values() if it.get('cycle') == src.get('ordinal') and it.get('status') in ('forwarded', 'forwarded_topic'))
+    for c in (pai.get('history') or {}).get('counts') or []:
+        if c.get('year') == src.get('conference_year'):
+            if c.get('received') is not None and c['received'] != src.get('total'): errs.append(f'pai.json history {c["year"]}: received {c["received"]} but source.total is {src.get("total")}')
+            if c.get('forwarded') is not None and c['forwarded'] != fwd: errs.append(f'pai.json history {c["year"]}: forwarded {c["forwarded"]} but the items show {fwd}')
+    for t in themes.values():
+        if words(t.get('now')) > 60: errs.append(f'pai.json theme {t.get("id")}: now longer than 60 words')
+        nc = t.get('now_cite')
+        pm = re.match(r'(Q[1-4] \d{4} board reports)', nc) if isinstance(nc, str) else None
+        if pm:   # pages of a known packet (up to a ';' that starts another source)
+            pk = packets.get(pm.group(1))
+            top = pk.get('pages') if isinstance(pk, dict) and isinstance(pk.get('pages'), int) else None
+            if pk is None: errs.append(f'pai.json theme {t.get("id")}: now_cite {nc!r} names no known packet')
+            for n in re.findall(r'\d+', nc[pm.end():].split(';')[0]) if top else []:
+                if not 1 <= int(n) <= top: errs.append(f'pai.json theme {t.get("id")}: now_cite page {n} outside 1..{top}')
+    if len(pai.get('observations') or []) > 10: errs.append('pai.json observations: keep at most 10')
+    return errs
+
+
+def check_pai(pai, aa, learn, areas=None, cal=None, packets=None):
     """pai.json (proposed agenda items of the next Conference, from GSO's status grid): unique keys; the grid's items of
     cycle source.ordinal numbered 1..source.total (key = the number; items deferred from an earlier cycle '<year>-<n>');
     every theme, family, body, asks and Conference committee id known; every Advisory Action ('aa', 'related_aa'), Learn
     node ('learn') and area id exists; same_as / superseded_by / cluster keys point at items (same_as = identical or, with
     near: true, near-identical wording, always the original, never another copy); items with a summary carry
     the fields the page shows. The grid prints motions as submitted, so the repo keeps own-words summaries only (a quote
-    of at most 15 words); no group service numbers, e-mail addresses or phone numbers anywhere."""
+    of at most 15 words); no group service numbers, e-mail addresses or phone numbers anywhere.
+    After a board weekend (check_pai_decisions): page_oct = the item's page in previous_grid; every decided or still-open
+    item carries a 'decision' cited to the board packet (decisions_source) that agrees with its grid status; agenda_topics
+    hold every forwarded item exactly once; reason_kind only on no-action decisions; open_meetings point at real items
+    and Calendar events (cal = calendar.json); snapshot counts add up to the snapshot's total."""
     errs = []
     if not pai:
         return errs
@@ -407,6 +715,8 @@ def check_pai(pai, aa, learn, areas=None):
     cyc, total, pages, as_of = src.get('ordinal'), src.get('total'), src.get('pages') or 999, src.get('as_of') or ''
     for k in ('title', 'as_of', 'total', 'conference_year', 'ordinal', 'drive_name'):
         if not src.get(k): errs.append(f'pai.json source: {k} missing')
+    for k in ('drive_url', 'spanish_url'):
+        if src.get(k) is not None and not str(src[k]).startswith('https://drive.google.com/file/d/'): errs.append(f'pai.json source: {k} is not a Drive file link')
     if isinstance(cyc, int) and src.get('conference_year') != cyc + 1950: errs.append(f'pai.json source: conference_year {src.get("conference_year")} is not the {cyc}th Conference')
     fams = {f.get('id') for f in pai.get('families') or []}
     bodies = pai.get('bodies') or {}
@@ -440,7 +750,7 @@ def check_pai(pai, aa, learn, areas=None):
             errs.append(f'{tag}: received {it.get("received")!r} is not an ISO date by {as_of}')
         if not isinstance(it.get('page'), int) or not 1 <= it['page'] <= pages: errs.append(f'{tag}: page {it.get("page")}')
         if it.get('body') is not None and it['body'] not in bodies: errs.append(f'{tag}: unknown body {it["body"]}')
-        if it.get('body') is None and it.get('status') == 'under': errs.append(f'{tag}: under consideration but sent to no body')
+        if it.get('body') is None and it.get('status') in PAI_DECIDED | {'under'}: errs.append(f'{tag}: {it["status"]} but sent to no body')
         if it.get('conf_committee') is not None and it['conf_committee'] not in COMMITTEE_IDS: errs.append(f'{tag}: unknown Conference committee {it["conf_committee"]}')
         if it.get('conf_committee') and not it.get('conf_reason'): errs.append(f'{tag}: conf_committee without conf_reason')
         if it.get('summary'):
@@ -484,6 +794,7 @@ def check_pai(pai, aa, learn, areas=None):
         if t.get('theme') not in themes: errs.append(f'pai.json last.theme_counts: unknown theme {t.get("theme")}')
     for f in last.get('forwarded_items') or []:
         if f.get('conf_committee') is not None and f['conf_committee'] not in COMMITTEE_IDS: errs.append(f'pai.json last.forwarded_items #{f.get("n")}: unknown committee {f["conf_committee"]}')
+    errs += check_pai_decisions(pai, items, themes, bodies, cal, packets)
     # ids and privacy, anywhere in the file
     acts = {a.get('id') for a in (aa or {}).get('actions', [])}
     nodes = {n.get('id') for n in (learn or {}).get('nodes', [])}
@@ -535,6 +846,237 @@ def check_study(name, d):
             for i, v in enumerate(o):
                 walk(v, f'{path}[{i}]')
     walk(d, '')
+    return errs
+
+
+BM_KINDS = {'minutes', 'board', 'trustees_committee', 'session', 'other'}
+BM_REC_STATUS = {'approved', 'no_vote', 'tabled', 'in_progress', 'declined', 'referred'}   # recommendations[].status
+BM_SEASON = {1: 'winter', 2: 'spring', 3: 'summer', 4: 'fall'}                            # quarter -> season
+
+
+def bm_date(s, month_ok=False):
+    """A real calendar date 'YYYY-MM-DD' (with month_ok also 'YYYY-MM', an approximate month)."""
+    s = str(s or '')
+    if not re.fullmatch(r'\d{4}-\d\d(-\d\d)?' if month_ok else r'\d{4}-\d\d-\d\d', s):
+        return False
+    try:
+        __import__('datetime').date.fromisoformat(s if len(s) == 10 else s + '-01')
+        return True
+    except ValueError:
+        return False
+
+
+def check_board_meetings(bm, cal, fu, pai):
+    """board_meetings.json (Board Weekends page): the General Service Board's quarterly weekends, newest first, each
+    with one own-words card per report in the packet GSO sends Conference members (the packet stays in Drive). Meeting
+    id = the board meeting's ISO date; report ids unique; ISO dates ('YYYY-MM' only for approximate next/coming_up
+    dates); every page an integer 1..source.pages; every text <= 45 words; kinds, trustees' committees (tc), pai.json
+    bodies, calendar events, followups.json requests and report refs exist; recommendations carry a status and a board;
+    coming_up is in date order; a card's PAI counts add up and, when pai.json carries this weekend's decisions (met from
+    start to end; a later decision on an item of pai_cycle, such as an interim meeting's, counts as 'other' here, under
+    decision.prior.by at the weekend that made the referral), match them for the card's body; no service numbers,
+    e-mail addresses or phone numbers."""
+    errs = []
+    if not bm:
+        return errs
+    events = {e.get('id') for e in (cal or {}).get('events', [])}
+    reqs = {r.get('id') for r in (fu or {}).get('requests', [])}
+    bodies = set((pai or {}).get('bodies') or {})
+    seen, prev = set(), None
+    for mi, m in enumerate(bm.get('meetings') or []):
+        tag = f"board_meetings.json {m.get('id', mi)}"
+        mid = m.get('id')
+        if not isinstance(mid, str) or not bm_date(mid) or mid in seen or mid != m.get('board_meeting'):
+            errs.append(f'{tag}: id must be unique and equal the board meeting date')
+        seen.add(mid)
+        if prev is not None and str(mid) >= prev: errs.append(f'{tag}: meetings must be listed newest first')
+        prev = str(mid)
+        for k in ('start', 'end', 'board_meeting'):
+            if not bm_date(str(m.get(k) or '')): errs.append(f'{tag}: {k} {m.get(k)!r} is not an ISO date')
+        if not str(m.get('start')) <= str(m.get('board_meeting')) <= str(m.get('end')): errs.append(f'{tag}: board_meeting is not within start..end')
+        if m.get('quarter') not in BM_SEASON or m.get('season') != BM_SEASON.get(m.get('quarter')): errs.append(f'{tag}: quarter {m.get("quarter")!r} / season {m.get("season")!r}')
+        if not isinstance(m.get('year'), int) or not str(m.get('board_meeting')).startswith(str(m.get('year'))): errs.append(f'{tag}: year {m.get("year")!r}')
+        for k in ('title', 'formal', 'place', 'source', 'reports'):
+            if not m.get(k): errs.append(f'{tag}: {k} missing')
+        if m.get('calendar_id') is not None and m['calendar_id'] not in events: errs.append(f'{tag}: no calendar event {m["calendar_id"]!r}')
+        if m.get('pai_cycle') is not None and (not isinstance(m['pai_cycle'], int) or isinstance(m['pai_cycle'], bool)): errs.append(f'{tag}: pai_cycle must be an integer')
+        src = m.get('source') or {}
+        for k in ('title', 'short', 'pages', 'drive_url', 'minutes_status'):
+            if not src.get(k): errs.append(f'{tag}: source.{k} missing')
+        if not re.match(r'https://drive\.google\.com/file/d/[\w-]+/view$', str(src.get('drive_url') or '')): errs.append(f'{tag}: source.drive_url is not a Drive file link')
+        if not all(isinstance(s, str) and s.strip() for s in src.get('slips') or []): errs.append(f'{tag}: source.slips must be own-words strings')
+        pages = src.get('pages') if isinstance(src.get('pages'), int) else 0
+
+        def walk(o, path):   # pages, calendar ids, length and privacy of every string
+            if isinstance(o, dict):
+                for k, v in o.items():
+                    if k in ('page', 'accepted_page') and v is not None and (not isinstance(v, int) or isinstance(v, bool) or not 1 <= v <= pages):
+                        errs.append(f'{path}.{k}: {v!r} is not a page 1..{pages}')
+                    if k == 'calendar_id' and v is not None and v not in events: errs.append(f'{path}: no calendar event {v!r}')
+                    walk(v, f'{path}.{k}')
+            elif isinstance(o, list):
+                for i, v in enumerate(o):
+                    walk(v, f'{path}[{i}]')
+            elif isinstance(o, str):
+                if len(o.split()) > 45: errs.append(f'{path}: longer than 45 words')
+                for rx, what in PAI_PRIVATE:
+                    hit = rx.search(o)
+                    if hit: errs.append(f'{path}: looks like {what} ({hit.group(0)!r}); keep it out of the repo')
+        walk(m, tag)
+
+        def need(o, keys, path):
+            for k in keys:
+                if not isinstance(o, dict) or o.get(k) in (None, ''): errs.append(f'{path}: {k} missing')
+
+        def dated(lst, path):
+            for i, e in enumerate(lst or []):
+                p = f'{path}[{i}]'
+                need(e, ('date', 'text', 'page'), p)
+                d = str((e or {}).get('date') or '')
+                if not bm_date(d, True): errs.append(f'{p}: date {d!r} is not YYYY-MM-DD or YYYY-MM')
+                if not isinstance((e or {}).get('approx'), bool) or (len(d) == 7 and e.get('approx') is not True): errs.append(f'{p}: approx must be true/false (true for a month-only date)')
+                if (e or {}).get('end') is not None and (not bm_date(str(e['end'])) or str(e['end']) < d): errs.append(f'{p}: end {e.get("end")!r}')
+        for i, o in enumerate(m.get('overview') or []): need(o, ('text', 'page'), f'{tag}.overview[{i}]')
+        if not 3 <= len(m.get('overview') or []) <= 5: errs.append(f'{tag}: overview needs 3-5 sentences')
+        att = m.get('attendance')
+        if att is not None and not (isinstance(att.get('trustees_present'), int) and isinstance(att.get('trustees_total'), int) and 0 <= att['trustees_present'] <= att['trustees_total']):
+            errs.append(f'{tag}: attendance counts')
+        dated(m.get('coming_up'), f'{tag}.coming_up')
+        cu = [str((e or {}).get('date') or '') for e in m.get('coming_up') or []]
+        if cu != sorted(cu): errs.append(f'{tag}: coming_up must be in date order')
+        rids = [r.get('id') for r in m.get('reports') or []]
+        for i, x in enumerate(m.get('numbers') or []):
+            need(x, ('label', 'value', 'page', 'report'), f'{tag}.numbers[{i}]')
+            if x.get('report') not in rids: errs.append(f'{tag}.numbers[{i}]: no report {x.get("report")!r}')
+            if not isinstance(x.get('value'), str): errs.append(f'{tag}.numbers[{i}]: value must be the printed text')
+        # this weekend's decisions in pai.json, by reviewing body: forwarded / no action / other. A decision made after
+        # the weekend on an item of its cycle (an interim meeting's) was still open here, so it counts as 'other', under
+        # the body that held it at this weekend: decision.prior.by when the referral was made at this weekend (prior.met
+        # on or after its start; a later decision from another body, the referral's outcome, replaced that weekend's
+        # one), else decision.by.
+        dec, m0, m1 = {}, str(m.get('start') or ''), str(m.get('end') or '')
+        for it in (pai or {}).get('items') or []:
+            dd = it.get('decision')
+            met = str(dd.get('met') or '') if isinstance(dd, dict) else ''
+            if not met or not m0 or not m1: continue
+            if m0 <= met <= m1:
+                kind = 'forwarded' if dd.get('action') in ('forwarded', 'forwarded_topic') else 'no_action' if dd.get('action') == 'no_action' else 'other'
+            elif met > m1 and m.get('pai_cycle') is not None and it.get('cycle') == m['pai_cycle']:
+                kind = 'other'
+            else:
+                continue
+            prior = dd.get('prior') if isinstance(dd.get('prior'), dict) else {}
+            who = prior.get('by') if (met > m1 and prior.get('by') and str(prior.get('met') or '') >= m0) else dd.get('by')
+            dec.setdefault(who, {'forwarded': 0, 'no_action': 0, 'other': 0})[kind] += 1
+        rseen = set()
+        for r in m.get('reports') or []:
+            rt = f"{tag} report {r.get('id')}"
+            if not re.fullmatch(r'[a-z0-9]+(-[a-z0-9]+)*', str(r.get('id') or '')) or r['id'] in rseen: errs.append(f'{rt}: missing, malformed or duplicate id')
+            rseen.add(r.get('id'))
+            need(r, ('name', 'summary'), rt)
+            if r.get('kind') not in BM_KINDS: errs.append(f'{rt}: kind {r.get("kind")!r}')
+            if r.get('tc') is not None and r['tc'] not in TC_IDS: errs.append(f'{rt}: unknown trustees\' committee {r["tc"]!r}')
+            if r.get('kind') == 'trustees_committee' and not r.get('tc'): errs.append(f'{rt}: a trustees\' committee card needs tc')
+            if r.get('body') is not None and bodies and r['body'] not in bodies: errs.append(f'{rt}: unknown pai.json body {r["body"]!r}')
+            if r.get('met') is not None and not bm_date(str(r['met'])): errs.append(f'{rt}: met {r["met"]!r} is not an ISO date')
+            if r.get('accepted') is not None and not isinstance(r['accepted'], str): errs.append(f'{rt}: accepted must be text or null')
+            if not 3 <= len(r.get('highlights') or []) <= 8: errs.append(f'{rt}: {len(r.get("highlights") or [])} highlights (3-8)')
+            for i, x in enumerate(r.get('highlights') or []): need(x, ('text', 'page'), f'{rt}.highlights[{i}]')
+            for i, x in enumerate(r.get('recommendations') or []):
+                need(x, ('text', 'outcome', 'page', 'status', 'board'), f'{rt}.recommendations[{i}]')
+                if x.get('status') is not None and x['status'] not in BM_REC_STATUS: errs.append(f'{rt}.recommendations[{i}]: status {x["status"]!r}')
+                if x.get('board') is not None and x['board'] not in ('GSB', 'AAWS', 'GV'): errs.append(f'{rt}.recommendations[{i}]: board {x["board"]!r}')
+            for i, x in enumerate(r.get('numbers') or []):
+                need(x, ('label', 'value', 'page'), f'{rt}.numbers[{i}]')
+                if not isinstance(x.get('value'), str): errs.append(f'{rt}.numbers[{i}]: value must be the printed text')
+            dated(r.get('next'), f'{rt}.next')
+            for i, x in enumerate(r.get('followups') or []):
+                need(x, ('text', 'page'), f'{rt}.followups[{i}]')
+                if x.get('request') is not None and x['request'] not in reqs: errs.append(f'{rt}.followups[{i}]: no followups.json request {x["request"]!r}')
+            p = r.get('pai')
+            if p is not None and not r.get('body'): errs.append(f'{rt}: pai counts need a body (the pai.json body they count)')
+            if p is not None:
+                ks = ('assigned', 'considered', 'forwarded', 'no_action', 'other')
+                if not all(isinstance(p.get(k), int) and not isinstance(p.get(k), bool) and p[k] >= 0 for k in ks): errs.append(f'{rt}: pai counts must be integers'); continue
+                if p['forwarded'] + p['no_action'] + p['other'] != p['assigned'] or p['considered'] > p['assigned']: errs.append(f'{rt}: pai counts do not add up')
+                got = dec.get(r.get('body'))
+                if dec and got and (got['forwarded'], got['no_action'], got['other']) != (p['forwarded'], p['no_action'], p['other']):
+                    errs.append(f'{rt}: pai counts {p["forwarded"]}/{p["no_action"]}/{p["other"]} differ from pai.json decisions {got["forwarded"]}/{got["no_action"]}/{got["other"]}')
+    return errs
+
+
+LEARN_MODES = {'manual', 'rules', 'region'}   # view-quiz.js decks a bank question can join (none: Service Manual + All)
+LEARN_PACKET_CITE = re.compile(r'(Q[1-4] \d{4} board reports)(?: (pp?)\. (N\b|\d+(?:-\d+)?(?:, \d+(?:-\d+)?)*))?')   # 'p. N' = the format
+
+
+def check_learn(learn, packets=None):
+    """learn.json: unique node ids whose parents, see_also, glossary and quiz links resolve; glossary terms and quiz
+    questions unique and cited (page or source); each question has three distinct wrong choices, none equal to the
+    answer, and a known deck mode; every packet cite reads 'Q[1-4] YYYY board reports p./pp. N', names a known packet and
+    has pages inside it (packets = board_packets(): short cite -> {pages, …}); and the correct answer is the strictly longest choice (in characters) in at most
+    40% of the bank (the method learn.json's audit records)."""
+    errs, packets = [], packets or {}
+    nodes = learn.get('nodes', [])
+    ids = [n.get('id') for n in nodes]
+    byid = {n.get('id'): n for n in nodes}
+    errs += [f'learn.json node {i}: id used twice' for i in sorted({i for i in ids if ids.count(i) > 1})]
+    for n in nodes:
+        p, seen = n.get('parent'), {n.get('id')}
+        while p is not None:
+            if p not in byid or p in seen:
+                errs.append(f'learn.json node {n.get("id")}: parent {p} unknown or a loop')
+                break
+            seen.add(p)
+            p = byid[p].get('parent')
+        errs += [f'learn.json node {n.get("id")}: see_also {s.get("node")} unknown' for s in n.get('see_also') or [] if s.get('node') not in byid]
+    terms = set()
+    for g in learn.get('glossary', []):
+        t = g.get('term')
+        if not t or not g.get('definition') or t in terms:
+            errs.append(f'learn.json glossary {t!r}: needs a term and definition, once')
+        if not (g.get('page') or g.get('source')):
+            errs.append(f'learn.json glossary {t!r}: no page or source')
+        if g.get('node') and g['node'] not in byid:
+            errs.append(f'learn.json glossary {t!r}: node {g["node"]} unknown')
+        terms.add(t)
+    asked, longest, bank = set(), 0, learn.get('quiz', [])
+    for q in bank:
+        tag, w = f'learn.json quiz {str(q.get("q"))[:60]!r}', q.get('wrong') if isinstance(q.get('wrong'), list) else []
+        if not q.get('q') or not q.get('a') or len(w) != 3 or len(set(w)) != 3 or q['a'] in w or not all(isinstance(x, str) and x for x in w):
+            errs.append(f'{tag}: needs q, a and three distinct wrong choices other than the answer')
+            continue
+        if q['q'] in asked:
+            errs.append(f'{tag}: asked twice')
+        if q.get('node') not in byid:
+            errs.append(f'{tag}: node {q.get("node")} unknown')
+        if not (q.get('page') or q.get('source')):
+            errs.append(f'{tag}: no page or source')
+        if (q.get('mode') is not None and q['mode'] not in LEARN_MODES) or (q.get('mode') == 'region' and not q.get('region')):
+            errs.append(f'{tag}: mode {q.get("mode")!r} unknown or without its region')
+        asked.add(q['q'])
+        longest += len(q['a']) > max(len(x) for x in w)
+    if bank and longest > 0.4 * len(bank):
+        errs.append(f'learn.json quiz: the correct answer is the longest choice in {longest} of {len(bank)} questions (over 40%)')
+
+    def walk(o, path):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                walk(v, f'{path}.{k}')
+        elif isinstance(o, list):
+            for i, v in enumerate(o):
+                walk(v, f'{path}[{i}]')
+        elif isinstance(o, str):
+            for m in LEARN_PACKET_CITE.finditer(o):
+                if m.group(3) == 'N':
+                    continue
+                pk = packets.get(m.group(1))
+                if pk is None:
+                    errs.append(f'learn.json{path}: {m.group(0)!r} names no known packet (board_meetings.json source.short)')
+                    continue
+                nums, top = [int(x) for x in re.findall(r'\d+', m.group(3) or '')], (pk.get('pages') if isinstance(pk, dict) else pk)
+                if not nums or (m.group(2) == 'p') != (len(nums) == 1) or any(x < 1 or (top and x > top) for x in nums):
+                    errs.append(f'learn.json{path}: {m.group(0)!r}: needs "p. N" (one page) or "pp. N, M" inside the packet ({top or "?"} pages)')
+    walk(learn, '')
     return errs
 
 
@@ -627,6 +1169,7 @@ def main():
     actions = load('advisory_actions.json', {})
     fu = load('followups.json', {})
     pai = load('pai.json', {})
+    bm = load('board_meetings.json', {})
     study ={key: load(f, {}) for f, key in STUDY_FILES.items()}
     calendar = load('calendar.json', {})
     followups = add_followup_events(calendar, actions, fu, conferences, max(int(y) for y in years))
@@ -647,6 +1190,7 @@ def main():
         'advisoryActions': actions,                       # M-39 index: year, section, page, own-words summary, follow-ups
         'followups': fu,                                  # dated requests in the Final Reports + outcomes of follow-ups
         'pai': pai,                                       # proposed agenda items of the next Conference (GSO status grid), own-words summaries
+        'boardMeetings': bm,                              # Board Weekends: quarterly board weekends, one own-words card per packet report
         **study,                                          # study features (STUDY_FILES)
         'conferences': conferences,                       # per-Conference facts, future dates, forums, conventions
         'board': board,                                   # post-Conference slates, emeriti, general managers
@@ -678,15 +1222,21 @@ def main():
             check_names('alias', {'names': g['names']}, errs)
         errs += check_reports(data['reports'])
         aerrs, awarn = check_advisory_actions(actions, conferences, years)
-        errs += aerrs + check_followups(fu, actions)
+        packets = board_packets(bm, pai)   # every board-weekend packet the data may cite: short cite -> pages, start, end
+        errs += aerrs + check_followups(fu, actions, pai, packets)
         check_names('followups.json', fu, errs)
-        errs += check_pai(pai, actions, data['learn'], {a.get('n') for a in data['areas']})
+        errs += check_pai(pai, actions, data['learn'], {a.get('n') for a in data['areas']}, calendar, packets)
         # theme, family and body 'name's are labels, not people: check every other name-like field
         check_names('pai.json', {k: v for k, v in pai.items() if k not in ('themes', 'families', 'bodies')}, errs)
         check_names('pai.json themes', [{k: v for k, v in t.items() if k != 'name'} for t in pai.get('themes', [])], errs)
         for f, key in STUDY_FILES.items():
             errs += check_study(f, study[key])
             check_names(f, study[key], errs)
+        errs += check_learn(data['learn'], packets)
+        errs += check_board_meetings(bm, calendar, fu, pai)
+        # report 'name's are labels ("Trustees' Literature Committee"), not people: check every other name-like field
+        check_names('board_meetings.json', [dict(m, reports=[{k: v for k, v in r.items() if k != 'name'} for r in m.get('reports') or []])
+                                            for m in bm.get('meetings') or []], errs)
         for w in awarn:
             print('WARNING', w)
         for e in errs:

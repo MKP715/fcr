@@ -32,11 +32,19 @@
        source, url, confidence, projected}
      upcoming({limit, scope, days, distinct}) → the next items from FCR.today(): dated items by start (under way first), then
        windows already open; when the limit would cut them all, the last row is the open window that matters most (Area 65
-       first, then the one ending soonest); distinct: one row per multi-date event
+       first, then the one ending soonest); an Area 65 item (not a newsletter) due within 30 days that the limit cuts off
+       replaces the last row more than a week away that is not about Area 65 and not a Conference, board, committee,
+       deadline or election row (date order is kept); distinct: one row per multi-date event
      conference(year) → {start, end, place, approx} | null
      ics(items, name) → RFC 5545 text;   download(items, filename)
-     countdown(item, todayStr) / when(item) → display strings;   inScope(item, scope);   undated() → undated rules
-   UI.comingUp(box, {limit, scope, days}) renders a compact "Coming up" card with a "Full calendar →" link. */
+     countdown(item, todayStr) / when(item) → display strings (an approximate event with a label whose exact day in its
+       span is unsure, such as a meeting the packet dates two ways, reads "expected about now" while under way, as a
+       window does, and shows no weekday range);   inScope(item, scope);   undated() → undated rules
+   UI.comingUp(box, {limit, scope, days}) renders a compact "Coming up" card with a "Full calendar →" link.
+   An item's "In this app" links (appLinks) come from its rule or event id, from board_meetings.json once a weekend has
+   ended (its calendar_id or a board meeting held during it -> #/weekends/<id>; an event a report dates ahead ->
+   #/weekends/<id>/<report>) and from pai.json open_meetings (-> #/agenda/body/<key>, /item/<key>, /status/under or
+   /status/deferred, /forwarded). */
 (function () {
   'use strict';
   const FCR = window.FCR;
@@ -201,9 +209,22 @@
       .filter((o) => !opts.distinct || o.kind !== 'event' || (seen.has(o.id) ? false : seen.add(o.id)));   // weekly series: next date only
     const open = (o) => o.window && o.start < t, n = opts.limit || 5;   // vague windows already open go after the dated items...
     const dated = list.filter((o) => !open(o));
-    const win = list.filter(open).sort((a, b) => (b.scope === 'area65') - (a.scope === 'area65') || num(a.end) - num(b.end));
+    // an item about Area 65: its own scope, or an all-areas item named for it (the Panel 77 committee draw)
+    const mine = (o) => o.scope === 'area65' || (o.scope === 'area' && +o.area === 65) || /\bArea 65\b/.test(o.title || '');
+    const win = list.filter(open).sort((a, b) => mine(b) - mine(a) || num(a.end) - num(b.end));
+    const keep = (o) => ['conference', 'board', 'committee', 'deadline', 'election'].includes(o.category);   // the swap below never drops these
     // ...but keep one row for the most relevant of them, so a short window under way (the Summer Assembly) stays visible
-    return (win.length && dated.length >= n ? dated.slice(0, n - 1).concat(win[0]) : dated.concat(win)).slice(0, n);
+    const oneWin = win.length && dated.length >= n, k = oneWin ? n - 1 : n, head = dated.slice(0, k);
+    const extra = dated.slice(k).find((o) => mine(o) && o.category !== 'publication' && num(o.start) - num(t) <= 30);
+    // an Area 65 item (not a newsletter) due within 30 days that the limit cuts off takes the place of the last row more
+    // than a week away that is neither about Area 65 nor kept; it is later than every row kept, so pushing it keeps the
+    // date order
+    if (extra && head.length === k) {
+      let j = -1;
+      for (let i = head.length - 1; i >= 0; i--) if (!mine(head[i]) && !keep(head[i]) && num(head[i].start) - num(t) > 7) { j = i; break; }
+      if (j >= 0) { head.splice(j, 1); head.push(extra); }
+    }
+    return (oneWin ? head.concat(win[0]) : head.concat(win)).slice(0, n);
   }
   /** Merge the dates of one multi-date event within a list: the first keeps its place and lists the rest in `more`.
       Returns shallow copies (the expansion cache is never mutated). */
@@ -237,6 +258,9 @@
     else s = `${MON[a.m - 1]} ${a.d}–${b.d}, ${a.y}`;
     return (o.approx ? 'about ' : '') + s + (o.time ? ', ' + o.time : '');
   }
+  /** An approximate event with a label (the packet's two dates for one meeting, "week of Jan 11") whose exact day in its
+      span is unsure: under way it is "expected about now", never "now · ends in N days", and it has no weekday range. */
+  const unsureDay = (o) => !o.window && !!o.approx && !!o.label && o.start !== o.end;
   /** "today", "tomorrow", "in 12 days", "in about 6 weeks", "now · ends in 3 days", "4 days ago". */
   function countdown(o, t) {
     t = t || todayStr();
@@ -244,6 +268,7 @@
     if (de < 0) return -de === 1 ? 'yesterday' : `${-de} days ago`;
     if (ds <= 0 && o.window) { const a = parts(o.start), b = parts(o.end);
       return a.d === 1 && b.d === lastDay(b.y, b.m) && a.m === b.m ? 'this month' : 'expected about now'; }
+    if (ds <= 0 && unsureDay(o)) return 'expected about now';
     if (ds <= 0) return o.start === o.end ? 'today' : de === 0 ? 'now · last day' : `now · ends in ${de} day${de === 1 ? '' : 's'}`;
     { const a = parts(o.start), b = parts(o.end);   // a whole-year window ("follow-ups due during 2027")
       if (o.window && a.y === b.y && a.m === 1 && a.d === 1 && b.m === 12 && b.d === 31) return 'some time in ' + a.y; }
@@ -327,7 +352,7 @@
     if (wholeMonth) return [a.m === b.m ? MON[a.m - 1] : `${MON[a.m - 1]}–${MON[b.m - 1]}`, String(a.y)];
     if (o.start === o.end) return [`${MON[a.m - 1]} ${a.d}`, WD[dow(num(o.start))]];
     if (a.m !== b.m || a.y !== b.y) return [`${MON[a.m - 1]} ${a.d}`, `to ${MON[b.m - 1]} ${b.d}`];
-    return [`${MON[a.m - 1]} ${a.d}–${b.d}`, o.window ? '' : `${WD[dow(num(o.start))]}–${WD[dow(num(o.end))]}`];
+    return [`${MON[a.m - 1]} ${a.d}–${b.d}`, o.window || unsureDay(o) ? '' : `${WD[dow(num(o.start))]}–${WD[dow(num(o.end))]}`];
   }
   /** 'past' | 'now' (a dated item under way) | 'now win' (inside an expected window) | 'soon' (≤ 14 days) | ''. */
   function cdClass(o, t) {
@@ -337,15 +362,64 @@
   }
   const shortDay = (s) => { const p = parts(s); return `${MON[p.m - 1]} ${p.d}`; };
   const andList = (a) => (a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1]);
+  /** Board weekend links of an event (board_meetings.json, once that weekend has ended, the day after its board meeting): its own weekend (calendar_id, or a
+      board meeting held during it) -> "Board weekend report"; an event a report or the digest dates ahead -> that report. */
+  function weekendLinks(o, add) {
+    const BM = ((FCR.RAW && FCR.RAW.boardMeetings) || {}).meetings || [], t = todayStr();
+    BM.filter((m) => m && m.id && m.end && m.end < t).forEach((m) => {
+      const base = '#/weekends/' + encodeURIComponent(m.id);
+      if (m.calendar_id === o.id || (o.kind === 'event' && o.category === 'board' && o.start >= m.start && o.end <= m.end)) {
+        add('Board weekend report', base);
+        // the weekend itself, when the loaded grid carries its decisions: what it sent on to the Conference
+        // (once that grid is out: a month-only date counts from the end of the month)
+        const P = (FCR.RAW && FCR.RAW.pai) || {}, ps = P.source || {};
+        const pa = String(ps.as_of || ''), paDay = pa.length === 7 ? pa + '-31' : pa;
+        if (m.calendar_id === o.id && m.pai_cycle && ps.ordinal === m.pai_cycle && pa >= m.end && paDay <= t && (P.agenda_topics || []).length) add(`What goes to the ${FCR.ordinal ? FCR.ordinal(ps.ordinal) : ps.ordinal + 'th'} Conference`, '#/agenda/forwarded');
+        return;
+      }
+      const rs = (m.reports || []).filter((r) => (r.next || []).some((n) => n.calendar_id === o.id));
+      if (rs.length === 1) add(`Board weekend report: ${rs[0].name}`, `${base}/${encodeURIComponent(rs[0].id)}`);
+      else if (rs.length || (m.coming_up || []).some((n) => n.calendar_id === o.id)) add(`${m.title || 'Board weekend'} report`, base);
+    });
+  }
+  /** Proposals of the next Conference this event decides (pai.json open_meetings by calendar_id, shown once the grid that
+      sets them is out): up to 3 still-open proposals (or one held over) -> each one's row; more of one body's ->
+      #/agenda/body/<key> (it lists all that body's proposals, so the label says so); more from several bodies ->
+      #/agenda/status/under or /status/deferred; the final agenda (an entry with no keys) -> what goes on. Once the event
+      has ended, the labels say it was held and that the next grid shows the outcome (not "still open"). */
+  function agendaLinks(o, add) {
+    const P = (FCR.RAW && FCR.RAW.pai) || {}, ms = (P.open_meetings || []).filter((m) => m.calendar_id && m.calendar_id === o.id);
+    if (!ms.length) return;
+    const pa = String((P.source || {}).as_of || '');
+    if (!pa || (pa.length === 7 ? pa + '-31' : pa) > todayStr()) return;   // the grid is dated after the day viewed
+    const keys = [...new Set(ms.flatMap((m) => m.keys || []))], items = (P.items || []).filter((x) => keys.includes(String(x.key)));
+    // a body link only when one body meets on its own proposals (#12 and #74 still carry the PI Committee, which referred
+    // them); otherwise the status filter of those proposals (held-over ones from an earlier cycle are 'deferred')
+    const by = ms.length === 1 && ms[0].by && items.length && items.every((x) => x.body === ms[0].by) ? ms[0].by : null, ord = (P.source || {}).ordinal;
+    const held = items.length && items.every((x) => x.status === 'deferred'), met = !held && !!o.end && o.end < todayStr();
+    const what = held ? 'held over' : met ? 'meeting held; outcome on the next grid' : 'still open';
+    if (items.length === 1 || (items.length <= 3 && !held)) items.forEach((x) => add(`Proposal ${x.n} (${what})`, '#/agenda/item/' + encodeURIComponent(x.key)));
+    else if (by) add(`${((P.bodies || {})[by] || {}).name || by}: all its proposals (${items.length}${met ? ': meeting held, outcome on the next grid' : ' ' + what})`, '#/agenda/body/' + encodeURIComponent(by));
+    else if (items.length) add(met ? 'Proposals set for this meeting (held; outcome on the next grid)' : `Proposals ${what}`, held ? '#/agenda/status/deferred' : '#/agenda/status/under');
+    if (ms.some((m) => !(m.keys || []).length) && ord) add(`What goes to the ${FCR.ordinal ? FCR.ordinal(ord) : ord + 'th'} Conference`, '#/agenda/forwarded');
+  }
   /** Where to read more in the app about an item: [[label, href]] (by its rule or event id, else its category). */
   function appLinks(o) {
     const id = String(o.ruleId || o.id || ''), y = +String(o.start || '').slice(0, 4), out = [];
     const add = (l, h) => { if (!out.some((x) => x[1] === h)) out.push([l, h]); };
     const conf = (yy) => FCR.ordinal ? FCR.ordinal(yy - 1950) : (yy - 1950) + 'th';
+    weekendLinks(o, add);
+    agendaLinks(o, add);
     const cy = FCR.Y(y) || y === FCR.latestYear + 1 ? y : null;   // years the Committees page can show (loaded + the projected next one)
     const P = y - 1949, Pok = FCR.panels.includes(P) || (FCR.predict && FCR.predict.pendingPanels && FCR.predict.pendingPanels().includes(P));
     if (/committee-draw|^panel\d+-draw$/.test(id)) { add(Pok ? `Panel ${P} forecast` : 'Predict', Pok ? `#/predict/${P}` : '#/predict'); add('How the lot works', '#/learn/cc_selection'); }
-    else if (/^(conference|gsc\d+)$/.test(id)) { if (cy) add(`${conf(y)} Conference committees`, `#/committees/${y}`); add('What happens during Conference week', '#/learn/conference_week'); }
+    else if (/^(conference|gsc\d+)$/.test(id)) {
+      if (cy) add(`${conf(y)} Conference committees`, `#/committees/${y}`);
+      // the agenda entries this Conference takes up, once the loaded grid (dated on or before today) carries them
+      const pp = (FCR.RAW && FCR.RAW.pai) || {}, pa = String((pp.source || {}).as_of || '');
+      if (pp.source && pp.source.conference_year === y && (pp.agenda_topics || []).length && pa && (pa.length === 7 ? pa + '-31' : pa) <= todayStr()) add(`What goes to the ${conf(y)} Conference`, '#/agenda/forwarded');
+      add('What happens during Conference week', '#/learn/conference_week');
+    }
     else if (/chairs-(elected|orientation)/.test(id)) { add('Chairs by year', cy ? `#/committees/${y}/chairs` : `#/committees/${FCR.latestYear}/chairs`); add('How chairs are elected', '#/learn/cc_chairs'); }
     else if (/^(pai-|october-feedback|preliminary-agenda|final-agenda|background-posted|pai-status-grid)/.test(id)) add('How an idea becomes an agenda item', '#/learn/agenda_path');
     else if (/trustee|resumes-|openings-|class-a-deadline|director-searches|vacancy-cutoff|past-delegate-eligibility/.test(id)) { add('Seats opening', '#/timeline'); if (/sw-trustee|resume|trustee-elections/.test(id)) add('Regional trustees', '#/learn/regional_trustees'); }
@@ -360,6 +434,8 @@
     const ps = ((FCR.RAW && FCR.RAW.pai) || {}).source || {};
     if (ps.conference_year && /^(pai-|october-feedback|preliminary-agenda|final-agenda|background-posted|pai-status-grid|a65-fall-assembly)/.test(id)
       && o.start >= `${ps.conference_year - 1}-07-01` && o.start <= `${ps.conference_year}-06-30`) add(`Proposed agenda items (${conf(ps.conference_year)} Conference)`, '#/agenda');
+    // the grid the Agenda Items page now carries, once it holds the board weekend's decisions: what goes on
+    if (id === 'pai-status-grid' && ps.as_of && o.start === ps.as_of && (((FCR.RAW && FCR.RAW.pai) || {}).agenda_topics || []).length) add(`What goes to the ${conf(ps.conference_year)} Conference`, '#/agenda/forwarded');
     if (o.scope === 'area65' || (o.scope === 'area' && +o.area === 65)) add('Area 65', '#/area/65');
     return out;
   }
@@ -438,6 +514,9 @@
     const kd = (/@(\d{4}-\d{2}-\d{2})$/.exec(key) || [])[1];         // rule occurrences and series dates carry their date
     const linked = key && !yearList.concat(soon).some((o) => o.key === key)
       ? items({ from: kd || add(t, -1100), to: kd || add(t, 1500), scope: 'everything' }).filter((o) => o.key === key) : [];
+    // a board-report packet cited by a shown item ("Q4 2026 board reports p. N"): the footer says what N is
+    const bmShorts = (((FCR.RAW && FCR.RAW.boardMeetings) || {}).meetings || []).map((m) => (m.source || {}).short).filter(Boolean);
+    const pktShort = bmShorts.find((sh) => yearList.concat(soon, linked).some((o) => String(o.source || '').includes(sh)));
     const chip = (id, label, on) => `<button type="button" class="cal-chip${on ? ' on' : ''}" data-cat="${id}" aria-pressed="${on}">${id !== '*' ? `<i ${mark(id)} aria-hidden="true"></i>` : ''}${esc(label)}</button>`;
     const fsum = [SCOPES.find((s) => s[0] === st.scope)[1], st.horizon + ' months', st.cats.length ? st.cats.map(catLabel).join(', ') : 'all categories'].join(' · ');
     el.innerHTML = `<div class="cal-page">
@@ -472,7 +551,7 @@
       <section class="cal-undated-wrap" aria-labelledby="cal-h-und"><h2 id="cal-h-und" class="section-title">No fixed date</h2>
         <div class="card"><ul class="cal-undated">${FCR.calendar.undated().filter((r) => inScope(r, st.scope) && (!st.cats.length || st.cats.includes(r.category))).map((r) =>
           `<li><strong>${esc(r.title)}</strong> <span class="muted">· ${esc(r.rule.when)}</span><br><span class="small">${esc(r.why)}</span> <span class="small muted">(${esc(r.source)})</span></li>`).join('') || '<li class="muted">None for these filters.</li>'}</ul></div></section>
-      <p class="small muted cal-foot">Calendar data as of ${esc(CAL.as_of ? (FCR.ui && FCR.ui.fmtDate ? FCR.ui.fmtDate(CAL.as_of, 'short') : CAL.as_of) : '—')}. Board weekends follow the bylaw rule (the fifth Monday after a quarter closes, Service Manual p.140) until aa.org lists them; aa.org’s 2028 dates run a week later than the rule, so projected weekends are marked <em>about</em>.</p></div>`;
+      <p class="small muted cal-foot">Calendar data as of ${esc(CAL.as_of ? (FCR.ui && FCR.ui.fmtDate ? FCR.ui.fmtDate(CAL.as_of, 'short') : CAL.as_of) : '—')}. Board weekends follow the bylaw rule (the fifth Monday after a quarter closes, Service Manual p.140) until aa.org lists them; aa.org’s 2028 dates run a week later than the rule, so projected weekends are marked <em>about</em>.${pktShort ? ` In “${esc(pktShort)} p. N”, N is a PDF page of the packet of board and committee reports sent to Conference members.` : ''}</p></div>`;
     const root = el.firstElementChild;   // listeners live on this wrapper, so re-renders never stack handlers on <main>
 
     const save = () => { FCR.store.set('cal', st); V.calendar(el, []); };

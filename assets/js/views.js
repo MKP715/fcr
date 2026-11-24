@@ -2,7 +2,10 @@
    Shared helpers (FCR.ui): regionDot, areaLink, areaShort, personLink, cchip, roleBadge, yearSelect, fmtDate(d, style),
    fmtRange(a, b, style), daysUntil(d), inDays(n), pct(p), rankOdds / oddsSummary / oddsCompact (one forecast for every page:
    FCR.predict.odds), drawStatus(P), electStatus(e), empty(msg), table(el, cols, rows, opts), hideTip, isPhone(), delegateRows(view),
-   predictPanelFor(n), neighborInfo(n, P), myArea(box, onChange). Page styles: assets/css/pages.css (class prefix pg-). */
+   predictPanelFor(n), neighborInfo(n, P), myArea(box, onChange), latestBoardWeekend() / boardWeekendsSince(iso) (board_meetings.json
+   and the calendar's board weekends, date-aware), paiStanding() (the latest pai.json status-grid counts on or before today).
+   Today shows the proposed-agenda line from paiStanding() and, until the next Conference, a "Latest board weekend" line
+   (#/weekends/<id>). Page styles: assets/css/pages.css (class prefix pg-). */
 (function () {
   'use strict';
   const FCR = window.FCR;
@@ -307,6 +310,48 @@
     return out;
   };
 
+  // ---------- board weekends and proposed agenda items (shared by Today, Trustees & Boards, Openings) ----------
+  const isoToday = () => { const t = FCR.today(); return `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`; };
+  /** The newest board weekend in board_meetings.json (FCR.RAW.boardMeetings, newest first) that ended before today
+      (FCR.today(), so ?today= works; on its last day, the board meeting day, it is still meeting), or null. */
+  UI.latestBoardWeekend = () => ((((FCR.RAW && FCR.RAW.boardMeetings) || {}).meetings) || []).find((m) => m && m.end && m.end < isoToday()) || null;
+  /** Board meetings (calendar rules gsb-q1/q3/q4 and gsb-annual-meeting, the board's one-day meeting after the Conference)
+      that met after the ISO date `after` and ended before today, oldest first: the ones whose news a page does not have yet. */
+  UI.boardWeekendsSince = function (after) {
+    try {
+      const C = FCR.calendar, t = isoToday();
+      return C && after < t ? C.items({ from: after, to: t, scope: 'everything' }).filter((o) => /^gsb-(q\d|annual-meeting)$/.test(o.ruleId || '') && o.start > after && o.end < t) : [];
+    } catch (e) { return []; }
+  };
+  /** The note for board meetings that met since a page's news (a UI.boardWeekendsSince list): 'A newer board weekend has met
+      since (Jan 29 – Feb 1, 2027)', 'The board has met again since (Apr 17, 2027)' for its one-day meeting after the
+      Conference, 'The board has met 2 times since (most recently Apr 17, 2027)'; '' for an empty list. Plain text. */
+  UI.metSinceText = function (later) {
+    if (!later || !later.length) return '';
+    const l = later[later.length - 1], when = UI.fmtRange(l.start, l.end);
+    if (later.length > 1) return `The board has met ${later.length} times since (most recently ${when})`;
+    return l.ruleId === 'gsb-annual-meeting' ? `The board has met again since (${when})` : `A newer board weekend has met since (${when})`;
+  };
+  /** Where the proposed agenda items stand in the latest status grid on or before today (pai.json snapshots; a month-only
+      date counts from the end of that month): {as_of, total, fwd, no, open, out, entries, added, decided, latest, ordinal,
+      year} or null. out = proposals withdrawn, superseded or removed (counts.out), so fwd + no + open + out = total.
+      entries = the agenda entries the forwarded proposals make in the latest grid (agenda_topics of kind item or
+      general_topic), else null; added = the entries the trustees' committees added themselves (kind added; they hold no
+      proposal), else 0. */
+  UI.paiStanding = function () {
+    const P = (FCR.RAW && FCR.RAW.pai) || {}, src = P.source || {}, t = isoToday();
+    const on = (s) => (/^\d{4}-\d{2}$/.test(s || '') ? s + '-31' : s || '');
+    const snaps = (P.snapshots || []).filter((s) => s && s.as_of && s.counts && on(s.as_of) <= t).sort((a, b) => (on(a.as_of) < on(b.as_of) ? -1 : 1));
+    const s = snaps[snaps.length - 1];
+    if (!s) return null;
+    const c = s.counts, latest = s.as_of === src.as_of;
+    const fwd = (c.forwarded || 0) + (c.forwarded_topic || 0), no = c.no_action || 0;
+    const entries = latest ? (P.agenda_topics || []).filter((x) => /^(item|general_topic)$/.test(x.kind)).length || null : null;
+    const added = latest ? (P.agenda_topics || []).filter((x) => x.kind === 'added').length : 0;
+    return { as_of: s.as_of, total: s.total || Object.entries(c).filter(([k]) => k !== 'deferred').reduce((a, [, v]) => a + v, 0), fwd, no, open: c.under || 0, out: c.out || 0, entries, added, decided: fwd + no > 0, latest,
+      ordinal: src.ordinal, year: src.conference_year };
+  };
+
   // ---------- TODAY ----------
   const nAreasOf = (p) => FCR.areaList.filter((a) => FCR.areaParity(a.n) === p % 2).length;
   const termsOfPanel = (p) => Object.values(FCR.terms).filter((t) => t.panel === p).length;
@@ -337,14 +382,22 @@
     let calKey = null;
     try { const ci = FCR.calendar && conf.start ? FCR.calendar.items({ from: conf.start, to: conf.end, scope: 'everything' }).find((o) => o.ruleId === 'conference' && o.start === conf.start) : null; calKey = ci ? ci.key : null; } catch (e) { calKey = null; }
     const dc = conf.delegateChair;
-    // proposed agenda items for this Conference (pai.json, GSO's status grid): from the grid's date until the Conference opens
-    const paiSrc = ((FCR.RAW && FCR.RAW.pai) || {}).source || {};
-    const nPai = paiSrc.conference_year === conf.year && !cyc.inSession && now < conf.startDate && (!paiSrc.as_of || now >= new Date(paiSrc.as_of + 'T00:00:00'))
-      ? (FCR.RAW.pai.items || []).filter((x) => x.cycle === paiSrc.ordinal && x.status === 'under').length : 0;
-    // once the trustees' committees have met at the fall board weekend after the grid's date, its statuses are old news
-    let paiQ4 = null;
-    try { paiQ4 = nPai && FCR.calendar && paiSrc.as_of && conf.start ? FCR.calendar.items({ from: paiSrc.as_of, to: conf.start, scope: 'everything' }).find((o) => o.ruleId === 'gsb-q4') : null; } catch (e) { paiQ4 = null; }
-    const paiStale = !!paiQ4 && FCR.calendar.todayStr() > (paiQ4.end || paiQ4.start);
+    // proposed agenda items for this Conference (pai.json: the latest GSO status grid on or before today), until the
+    // Conference opens. Before the fall board weekend's grid: how many are under review; after it: how many were forwarded.
+    const pst = UI.paiStanding();
+    const paiOn = !!pst && pst.year === conf.year && !cyc.inSession && now < conf.startDate && (pst.decided ? pst.fwd + pst.no : pst.open) > 0;
+    // once a board weekend, or a meeting that takes up still-open proposals (pai.json open_meetings with keys), has met
+    // after the grid's date, its statuses are old news: say which grid they come from
+    const endOf = (d) => (/^\d{4}-\d{2}$/.test(d || '') ? d + '-31' : d || '');
+    const omMet = paiOn && ((FCR.RAW.pai || {}).open_meetings || []).some((o) => (o.keys || []).length && o.date && endOf(o.date) > endOf(pst.as_of) && endOf(o.date) < isoToday());
+    const paiStale = paiOn && (omMet || UI.boardWeekendsSince(endOf(pst.as_of)).length > 0);
+    const paiGrid = paiOn ? `GSO’s ${esc(UI.fmtDate(pst.as_of, 'short'))} grid` : '';
+    const paiLine = !paiOn ? '' : pst.decided
+      ? `${paiStale ? `In ${paiGrid}: ` : ''}${pst.fwd} of ${pst.total} proposals forwarded to the ${ord(pst.ordinal)} Conference${pst.entries ? ` (${pst.entries} agenda entries${pst.added ? `, plus ${pst.added} the trustees’ committees added` : ''})` : ''}, ${pst.open} still open`
+      : paiStale ? `${pst.open} proposed agenda items were under review in ${paiGrid}` : `${pst.open} proposed agenda items under review`;
+    // the latest board weekend (board_meetings.json), from its end until the next Conference opens
+    const bw = UI.latestBoardWeekend();
+    const bwOn = !!bw && !cyc.inSession && now < conf.startDate && toDate(bw.end) > lastC.endDate;
     const confCard = `<div class="card pg-conf">
         <div class="pg-kicker">${cyc.inSession ? 'Meeting now' : 'Next Conference'}</div>
         <h2 class="pg-conf-t">${ord(conf.ordinal)} General Service Conference</h2>
@@ -352,7 +405,8 @@
         ${conf.venue ? `<div class="pg-conf-venue ink2">${esc(conf.venue)}</div>` : ''}
         ${conf.theme ? `<div class="pg-conf-theme">Theme: <em>“${esc(conf.theme)}”</em></div>` : `<div class="pg-conf-theme muted small">${FCR.conference(conf.year - 1).over && !FCR.Y(conf.year - 1) ? `Theme chosen at the ${ord(conf.ordinal - 1)} Conference; it appears with the ${conf.year - 1} Final Report.` : `Theme: chosen at the ${ord(conf.ordinal - 1)} Conference.`}</div>`}
         ${dc ? `<div class="small ink2">Delegate chair: ${UI.personLink(dc.name)} · ${UI.areaShort(dc.area)}</div>` : ''}
-        ${nPai ? `<div class="small pg-conf-pai">${paiStale ? `${nPai} proposed agenda items were under review in GSO’s ${esc(UI.fmtDate(paiSrc.as_of, 'short'))} grid` : `${nPai} proposed agenda items under review`} · <a href="#/agenda">Agenda&nbsp;Items&nbsp;→</a></div>` : ''}
+        ${paiOn ? `<div class="small pg-conf-pai">${paiLine} · <a href="#/agenda">Agenda&nbsp;Items&nbsp;→</a></div>` : ''}
+        ${bwOn ? `<div class="small pg-conf-bw">Latest board weekend${UI.boardWeekendsSince(bw.end).length ? ' in this app' : ''} <span class="ink2">(${esc(UI.fmtRange(bw.start, bw.end))})</span>: <a href="#/weekends/${encodeURIComponent(bw.id)}">what the boards and trustees’ committees reported&nbsp;→</a></div>` : ''}
         <div class="pg-conf-links small">${calKey ? `<a href="#/calendar/${encodeURIComponent(calKey)}">In the calendar →</a>` : '<a href="#/calendar">Calendar →</a>'} <a href="#/reports">Conference facts →</a></div>
         ${UI.conferenceGlance && (conf.workshop || conf.presentations) ? `<details class="pg-more"><summary>Workshop and presentation topics</summary>${UI.conferenceGlance(conf.year, { noTheme: true })}</details>` : ''}
       </div>`;
@@ -389,7 +443,7 @@
     const asOf = off && off.asOf ? (/^\d{4}-\d{2}-\d{2}$/.test(off.asOf) && !off.approx ? UI.fmtDate(off.asOf, 'short') : UI.fmtDate(off.asOf.slice(0, 7), 'month')) : '';
     const BOARD = FCR.RAW.board || {};
     const gm = (BOARD.general_managers || []).filter((g) => !g.to).pop();
-    const bc = (k, lbl) => { const b = off && off.boardChairs && off.boardChairs[k]; if (!b) return ''; return `<dt>${lbl} chair <span class="small muted">${esc(b.period || '')}</span></dt><dd>${b.name ? UI.personLink(b.name) : `<span class="muted">not yet published</span>${b.pattern ? ` <span class="small muted" tabindex="0" data-tip="${esc(cap(b.pattern.text) + (b.pattern.candidates && b.pattern.candidates.length ? ': ' + b.pattern.candidates.join(' or ') : ''))}">(pattern)</span>` : ''}`}</dd>`; };
+    const bc = (k, lbl) => { const b = off && off.boardChairs && off.boardChairs[k]; if (!b) return ''; return `<dt>${lbl} chair <span class="small muted">${esc(b.period || '')}</span></dt><dd>${b.name ? UI.personLink(b.name) + (b.status === 'reported' && b.ref ? ` <span class="small muted" tabindex="0" data-tip="Page numbers are PDF pages of the packet of board and committee reports sent to Conference members">${esc(b.ref)} (PDF)</span>` : '') : `<span class="muted">not yet published</span>${b.pattern ? ` <span class="small muted" tabindex="0" data-tip="${esc(cap(b.pattern.text) + (b.pattern.candidates && b.pattern.candidates.length ? ': ' + b.pattern.candidates.join(' or ') : ''))}">(pattern)</span>` : ''}`}</dd>`; };
     const board = off ? `<div class="card pg-board"><h3>Board leadership <span class="small muted">${off.source === 'slate' ? `since ${esc(asOf)}` : esc(off.ref || '')}</span></h3>
         ${staleOff ? `<p class="small pg-warn">${cyc.lastConference - off.conferenceYear > 1 ? `New slates were elected at the annual meetings after the ${ord(off.conferenceYear + 1 - 1950)}–${ord(cyc.lastConference - 1950)} Conferences; they appear when those Final Reports are loaded.` : `A new slate was elected at the annual meeting after the ${ord(cyc.lastConference - 1950)} Conference (${UI.fmtDate(lastC.endDate, 'month')}); it appears when the ${cyc.lastConference} Final Report is loaded.`} Shown: the slate of ${esc(asOf)}.</p>` : ''}
         <dl class="kv">${off.officers.map((o) => `<dt>${esc(o.title)}</dt><dd>${UI.personLink(o.name)}${o.employee ? ' <span class="small muted">GSO employee</span>' : ''}</dd>`).join('')}

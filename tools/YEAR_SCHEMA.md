@@ -159,7 +159,9 @@ page is usually N-1) and quote the words that justify the change (names reduced 
   date_approx?, printed_date?, ref, gsb_trustees {A:[{name, nonalcoholic?}], B:[...], vacancies?, counts},
   gsb_officers [{title (Chair | First Vice-Chair | Second Vice-Chair | Treasurer | Secretary | Assistant Treasurer |
   Assistant Secretary), name, third_legacy?, employee?}], aaws_directors [{name, employee?, nonalcoholic?}],
-  grapevine_directors [...], notes}
+  grapevine_directors [...], notes, chairs? {as_of 'YYYY-MM-DD', aaws? {name, ref}, grapevine? {name, ref}}}.
+  `chairs` = the AAWS / Grapevine board chairs elected after that annual meeting when a later board report names them
+  before the next Final Report prints them (e.g. ref 'Q4 2026 board reports p. 26'); shown from `as_of` on.
 - `board_assignments[]` {year, person, board 'AAWS'|'Grapevine', role trustee_director | nontrustee_director |
   general_service_trustee | class_a_director, term_years?, succeeds?, ref} — the trustees' Nominating Committee moves
 - `gsb_chairs[]` {name, class, from, to, chair_since?, interim?, extra_seat?, served_thru?, note, ref}
@@ -180,7 +182,8 @@ page is usually N-1) and quote the words that justify the change (names reduced 
   total?, stated?, note?, ref?}, keynote {name, role, rotating, ref}, workshop, headlines [{text, ref}],
   next {theme, workshop, topics[], ref} (what this Conference chose for the next one), refs[], delegate_chair? (2017)}
 - `future[]` {ordinal, year, start, end, venue, theme?, workshop?, topics?, delegate_chair?, status
-  final|preference, options? [{start, end, preference}], note?, refs}
+  final|preference, options? [{start, end, preference}], note?, notes? [{text, ref}] (announced format changes and plans,
+  e.g. from the board weekend reports: ref 'Q4 2026 board reports p. N'), refs}
 - `regional_forums` {rule {text, odd[], even[], refs}, list [{year, region, kind? additional|local|special|virtual,
   start?, end?, month?, city, area?, status held|scheduled|cancelled|virtual, attendance?, first_timers?, note?, ref}],
   attendance [{year, attendance, first_timers?, livestream?, approx?, note?, ref}]}
@@ -221,7 +224,14 @@ page is usually N-1) and quote the words that justify the change (names reduced 
   G.S.O. reports) dated for later that are NOT Advisory Actions: {id, from_year, ref 'FRyy pP Lx-y' (PDF page), committee (receiving Conference committee id
   or null), by (who asked), who (who delivers), kind report|draft|plan|recommitted|committed|deferred|deadline|other,
   text (own words, ≤ 34), due {year, month? | during? true} (only kind `committed` — committed to the General Service
-  Board — may have no due; the page lists those under "No date set")}
+  Board — may have no due; the page lists those under "No date set"), progress? [{date 'YYYY-MM-DD', status?
+  done|progress|update, text (own words, ≤ 45), cite 'Q4 2026 board reports p. N' (PDF page of a board weekend's board &
+  committee reports) | 'Nov 6, 2026 PAI status grid p. N', also? [more pages of the same document]}] (news before it falls due)}
+- `action_progress[]` — the same dated news for an Advisory Action follow-up: {action (advisory_actions id with a `due`),
+  date, status?, text, cite, also?}. `--check` (check_progress) validates dates ('YYYY-MM-DD' exactly), length, cite form
+  and page bounds (a 'Q[1-4] YYYY board reports' cite must name a known packet: board_meetings.json meetings[].source.short
+  or pai.json decisions_source.short, bounded by its pages; a grid cite: the grid of that date, pai.json source /
+  previous_grid pages).
 - `outcomes[]` — what became of a follow-up once it fell due: {action (advisory_actions id, e.g. 'p1110') or request
   (requests id), due_year, status done|progress|not_done|superseded|unclear|update (news before it falls due), text
   (own words), ref ('FRyy pP Lx-y', several joined by '; '), next_due?}. `superseded` takes that due off the pending list
@@ -229,6 +239,59 @@ page is usually N-1) and quote the words that justify the change (names reduced 
 - Shown on `#/actions/pending` with the Advisory Action follow-ups; requests due from the latest report year on are
   counted in the generated Calendar events. Each new Final Report: add its dated requests, record outcomes for the
   items that fell due at that Conference.
+
+## data/src/board_meetings.json — board weekends (hand-checked; read as FCR.RAW.boardMeetings, Board Weekends page)
+- `meta` {about, note}; `meetings[]` newest first: {id (= board_meeting, ISO), season winter|spring|summer|fall, quarter
+  1-4, year, title, formal, start, end, board_meeting, place, calendar_id? (calendar.json event), pai_cycle? (Conference
+  ordinal whose proposals the weekend decided), source {title, short ('Q4 2026 board reports'), pages, drive_url (Drive
+  file), minutes_status, audience?, page_note?, slips[] (own words: the packet's own inconsistencies)}, overview[] (3-5
+  {text, page}), attendance? {trustees_present, trustees_total, guests, page}, reports[], coming_up[], numbers[]}.
+- `reports[]` one card per report in the packet: {id (kebab-case), name (a label, not a person), kind
+  minutes|board|trustees_committee|session|other, tc (FCR.TRUSTEES_COMMITTEES key | null), body (pai.json bodies key |
+  null), met, summary, accepted (own words of the board's vote, from the minutes | null), accepted_page?, highlights[]
+  (3-8 {text, page}), recommendations[] {text, outcome, status approved|no_vote|tabled|in_progress|declined|referred,
+  board GSB|AAWS|GV, page} (all required), numbers[] {label, value (exactly as printed), as_of, page}, next[] (dated, below), pai
+  {assigned, considered, forwarded, no_action, other, page, note?} | null, followups[] {request (followups.json id) |
+  null, text, page}}. A `trustees_committee` card needs a `tc`; a card with `pai` counts needs a `body`. When pai.json
+  carries this weekend's decisions (decision.met from start to end), a card's forwarded / no_action / other must equal
+  them for its body; a later decision on an item of `pai_cycle` (an interim meeting's, or a referral's outcome) still
+  counts as other here, since the item was open at this weekend, under the body that held it then (decision.prior.by
+  at the weekend that made the referral, i.e. when prior.met falls on or after this weekend's start; else decision.by).
+  `coming_up[]` is in date order.
+- Dated lists (`next[]`, `coming_up[]`): {date 'YYYY-MM-DD' | 'YYYY-MM' (then approx true), end?, approx, text, page,
+  calendar_id?}; `numbers[]` at meeting level add `report` (a report id). Pages are PDF pages 1..source.pages; every text
+  ≤ 45 words; `--check` (check_board_meetings) validates all of this plus privacy patterns and the name format.
+
+## data/src/pai.json — proposed agenda items (hand-checked; read as FCR.RAW.pai, Agenda Items page)
+- `source` (the latest status grid: title, as_of, total, conference_year, ordinal, pages, drive_name, drive_url,
+  spanish_url?, note), `previous_grid` (the grid before it: as_of, pages, drive_name, drive_url), `previous` (last cycle's
+  grid), `decisions_source` (the board weekend's packet: title, short = the cite prefix 'Q4 2026 board reports', date,
+  weekend_start, weekend_end, pages, drive_url, note), `snapshots[]` {as_of, total, note, counts {forwarded,
+  forwarded_topic, no_action, under, out, deferred}} (the latest one equals the item statuses).
+- `items[]` {key ('38' | '2025-7'), n, cycle, received, body (a `bodies` key), page (latest grid), page_oct (the grid
+  before), status forwarded | forwarded_topic | no_action | under | withdrawn | superseded | removed | deferred, summary,
+  themes, …, decision? {by, met, action forwarded | forwarded_topic | no_action | referred | deferred | pending, reason (≤ 45
+  words), to_committee? (FCR.COMMITTEES id), to_provisional? (named 'for possible routing'), to_text?, referred_to?, topic?
+  (an agenda_topics id), cite 'Q4 2026 board reports p. N' (any known packet, as above) | 'Nov 6, 2026 grid p. N' (e.g. an
+  interim meeting's outcome, first shown on the next grid), also? [more pages of the same document], reason_kind?
+  (no_action only: a `reason_kinds` key), note?, prior? {by, action referred | deferred | pending, met, cite, also?}}}.
+  Every decided or still-open row of the cycle carries a decision whose action agrees with its status; `met` runs from
+  decisions_source.weekend_start to the cited document's last day (that packet's weekend end, or the grid's as_of).
+  `prior` keeps the board weekend's own open decision when a later grid moves the item to another body and that body
+  decides it (e.g. #12, referred by TPI to TCPC: body and decision.by become TCPC, prior {by 'TPI', action 'referred',
+  met '2026-11-01', cite 'Q4 2026 board reports p. 78'}): prior.by is another known body, prior.met falls within
+  decisions_source.weekend_start..weekend_end and before decision.met, and the cite is a packet page.
+- `agenda_topics[]` {id, title, kind item | general_topic | added | reference, by, keys, to_committee | null,
+  to_provisional, to_text, summary, why | null, cite, also?, themes, note?, related? (reference only)}: every forwarded item
+  in exactly one non-reference topic; sorted by Conference committee (Final Report order), most proposals first, reference
+  last. Agenda entries = topics of kind item + general_topic + added.
+- `open_meetings[]` {id, by | null, date 'YYYY-MM-DD' | 'YYYY-MM' | null, approx, date_note, keys, text, cite, also?,
+  calendar_id? (calendar.json event), title? (heading of an entry with no proposals, e.g. 'Final agenda (early
+  February)'; else the body's name)}: every item still under consideration (and each held-over one) appears once. An
+  entry with no proposals is shown as a note under 'Also pending' until its date (a month: that month) has passed.
+- `reason_kinds` {kind: label} + `reason_kinds_about` {kind: one sentence}; `themes[]` (now / now_cite = this fall's
+  outcome), `observations[]` (≤ 10, 'Heading: sentence.'), `last` (the cycle before), `history` {counts[], process[],
+  facts[]}. `--check` runs check_pai and check_pai_decisions (cites, page bounds, enums, counts, calendar ids).
 
 ## Study-feature data (tools/build_data.py STUDY_FILES; each optional; own words, every item page-cited)
 `--check` requires a printed Service Manual `page` (or a `source`) on every item with text/cue/duty/label, caps those fields at
@@ -243,7 +306,8 @@ page is usually N-1) and quote the words that justify the change (names reduced 
   `founding[]` {year, date?, text, page, node?} (Learn node founding_era), `delegate_term[]` {id, title, when, text, page,
   calendar? (calendar.json rule id), from/to windows for the "you are here" markers} (Learn node delegate).
 - `data/src/election_steps.json` -> FCR.RAW.electionSteps (views3.js V.timeline, Openings): `regional_trustee[]` {id, title, text,
-  page, when (how the step is dated: year before / month-day / Conference / annual meeting; approx?), more? (details)}, `regional_trustee_notes[]`.
+  page, when (how the step is dated: year before / month-day / Conference / annual meeting; approx?), more? [{text, page (Service
+  Manual) | source (another document, e.g. 'Q4 2026 board reports pp. 22, 29, 74')}] (details)}, `regional_trustee_notes[]`.
 - `data/src/structure_checks.json` -> FCR.RAW.structureChecks (view-structure.js overlay, #/structure/<year>/checks):
   `levels[]` {id, short, label, node (chart box id or ids), page}, `arrows[]` {from, to, dir down|up, label, text, page}.
 
@@ -304,7 +368,7 @@ Conferences and the clock
 Board
 - `FCR.currentOfficers(date?)` → `{asOf, approx, conferenceYear, source 'slate'|'printed', ref, officers [{title,
   name, third_legacy?, employee?}], byTitle {Chair: ...}, trustees {A, B}, aaws [{name, employee?}], grapevine [...],
-  boardChairs {aaws, grapevine: {name|null, status 'printed'|'not published', period, previous?, pattern? {type
+  boardChairs {aaws, grapevine: {name|null, status 'printed'|'reported'|'not published', period, ref?, previous?, pattern? {type
   GST|REG, candidates[], text}}}, notes}`; `FCR.slates` = board.json slates. board.json `gsb_chairs` interim chairs
   replace the Chair of the slate period they cover (`{title: 'Interim Chair', interim: true}`) when the elected chair's
   `served_thru` month has ended or the slate prints '(vacant)'.

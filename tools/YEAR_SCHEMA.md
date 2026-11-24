@@ -296,6 +296,12 @@ page is usually N-1) and quote the words that justify the change (names reduced 
 ## Study-feature data (tools/build_data.py STUDY_FILES; each optional; own words, every item page-cited)
 `--check` requires a printed Service Manual `page` (or a `source`) on every item with text/cue/duty/label, caps those fields at
 45 words and runs the anonymity name check.
+- `data/src/learn.json` -> FCR.RAW.learn (always loaded; check_learn), `quiz[]` {q, a, wrong[3], node (Learn node), page | source,
+  mode?, region?}: `mode` picks the view-quiz.js deck: none or 'manual' = Service Manual (#/quiz/manual); 'reports' = Reports &
+  board weekends (#/quiz/reports; a question that would otherwise sit in the Service Manual deck must use it when its source
+  cites a Final Report, the board reports or a PAI grid); 'rules' = Draw rules & calendar; 'region' + region (a region id) = My
+  region (and that region's Draw rules deck). All (#/quiz/all) takes every question except other regions'; #/quiz/node/<id>
+  takes the topic's questions whatever their mode.
 - `data/src/quiz_gen.json` -> FCR.RAW.quizGen (view-quiz.js decks #/quiz/concepts and #/quiz/committees):
   `concepts[]` {n 1-12, title, node (Learn node), page}; `concept_cues[]` {concept, cue (no Concept number or title words), page,
   also? [other Concepts it fits: never offered as a wrong answer]}; `committee_scopes[]` {side conference|trustees, committee

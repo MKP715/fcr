@@ -1,15 +1,18 @@
-/* Quiz view: the Learn question bank (Service Manual and Final Reports, page-cited) plus questions generated from the
-   rosters, the committee-draw history, the calendar and data/src/quiz_gen.json (Which Concept? / Which committee does
-   this?). Questions are dealt like a shuffled deck (no repeats until the deck is used up); a missed question comes back
-   a few cards later. Keys: 1-4 answer, N or Enter next.
-   Routes: #/quiz, #/quiz/<mode> (all|manual|concepts|committees|people|region|rules), #/quiz/node/<learn node id>. */
+/* Quiz view: the Learn question bank (Service Manual, Final Reports, board reports; page-cited) plus questions generated
+   from the rosters, the committee-draw history, the calendar and data/src/quiz_gen.json (Which Concept? / Which committee
+   does this?). A bank question's `mode` picks its deck: none or 'manual' = Service Manual, 'reports' = Reports & board
+   weekends (cites a Final Report, the board reports or a PAI grid), 'rules' = Draw rules & calendar, 'region' (+ region)
+   = My region and that region's Draw rules deck; All takes every bank question except other regions'. Questions are
+   dealt like a shuffled deck (no repeats until the deck is used up); a missed question comes back a few cards later.
+   Keys: 1-4 answer, N or Enter next.
+   Routes: #/quiz, #/quiz/<mode> (all|manual|reports|concepts|committees|people|region|rules), #/quiz/node/<learn node id>. */
 (function () {
   'use strict';
   const FCR = window.FCR;
   const esc = FCR.esc;
   const V = FCR.views, UI = FCR.ui;
 
-  const MODES = [['all', 'All'], ['manual', 'Service Manual'], ['concepts', 'Which Concept?'], ['committees', 'Which committee?'], ['people', 'People & committees'], ['region', 'My region'], ['rules', 'Draw rules & calendar']];
+  const MODES = [['all', 'All'], ['manual', 'Service Manual'], ['reports', 'Reports & board weekends'], ['concepts', 'Which Concept?'], ['committees', 'Which committee?'], ['people', 'People & committees'], ['region', 'My region'], ['rules', 'Draw rules & calendar']];
   const SMALL = ['SW', 'WC', 'ECAN', 'WCAN']; // July 2020 small-region rule (2021 Final Report, p. 26)
   const hash = (s) => { let h = 5381; for (let i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0; return (h >>> 0).toString(36); };
   const shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
@@ -238,6 +241,7 @@
     if (mode === 'concepts') return conceptPool();
     if (mode === 'committees') return committeePool();
     if (mode === 'manual') return merge(bank((x) => !x.mode || x.mode === 'manual'), conceptPool(), committeePool(true));
+    if (mode === 'reports') return bank((x) => x.mode === 'reports');
     if (mode === 'people') return peoplePool(() => true, null);
     const regionAreas = FCR.areaList.filter((a) => a.region === rid).map((a) => a.n);
     if (mode === 'region') return merge(bank((x) => x.region === rid), peoplePool((n) => FCR.areas[n] && FCR.areas[n].region === rid, rid), rulesPool({ rid, areas: regionAreas }));
@@ -299,6 +303,7 @@
         <div class="qz-bar"><div class="seg" id="qz-mode" role="group" aria-label="Question set">${MODES.map(([k, l]) => `<button data-m="${k}" class="${mode === k ? 'on' : ''}" aria-pressed="${mode === k}">${l}${k === 'region' ? ` (${esc(FCR.regionName(rid))})` : ''}</button>`).join('')}</div>
           <span class="spacer"></span><span id="qz-score" aria-live="polite">Score <strong>${score.right}/${score.total}</strong> · streak ${score.streak}</span><button class="btn" id="qz-reset">Reset score</button></div>
         ${mode === 'node' ? `<div class="callout qz-node">Quiz on <strong>${esc(node ? node.title : nodeId)}</strong> · <a href="#/learn/${esc(nodeId)}">back to Learn</a> · <a href="#/quiz/all">all questions</a></div>` : ''}
+        ${mode === 'reports' ? `<div class="qz-meta small muted"><span>Questions cited to the fall 2026 board weekend (the trustees’ committee and board reports, and GSO’s status grid of proposed agenda items) and to the Final Reports. Report questions on the Conference’s rules, dates and committee draw are in <a href="#/quiz/rules">Draw rules &amp; calendar</a>, and those on your region in <a href="#/quiz/region">My region</a>. <a href="#/weekends">Board Weekends</a> · <a href="#/agenda">Agenda Items</a></span></div>` : ''}
         ${mode === 'concepts' ? `<div class="qz-meta small muted"><span>Each card puts an idea from the Twelve Concepts in our own words: name the Concept it belongs to. <a href="#/learn/concepts">The Concepts on Learn</a></span></div>` : ''}
         ${mode === 'committees' ? `<div class="qz-meta small muted"><span>Each card gives a duty from the Service Manual (Conference committees pp. 46–48, trustees’ committees pp. 58–60): name the committee. <a href="#/learn/conf_committees">Conference committees</a> · <a href="#/learn/trustees_committees">Trustees’ committees</a></span></div>` : ''}
         ${mode === 'region' ? `<div class="qz-meta small"><label for="qz-area">Your area</label><select id="qz-area">${FCR.areaList.map((a) => `<option value="${a.n}" ${a.n === myArea() ? 'selected' : ''}>${esc(FCR.areaLabel(a.n))}</option>`).join('')}</select><span class="muted">sets the region (also used on Today)</span></div>` : ''}
@@ -347,6 +352,14 @@
       const c = getCur(); if (card) c[key] = card; else delete c[key]; FCR.store.set('quizCur', c);
       render(card);
       const q = el.querySelector('.quiz-card'); if (q && q.getBoundingClientRect().top < 0) q.scrollIntoView({ block: 'start' });
+    }
+    // Saved queue / missed ids that left this deck (a question moved to another deck, a calendar date passed) are dropped
+    // now, so the "left" and "missed" counts are right even when the saved card is shown without dealing (deal() also does this).
+    const saved = getDecks();
+    if (saved[key] && [saved[key].queue, saved[key].missed].some((l) => (l || []).some((id) => !pool.has(id)))) {
+      const st = saved[key];
+      st.queue = (st.queue || []).filter((id) => pool.has(id)); st.missed = (st.missed || []).filter((id) => pool.has(id)); st.size = pool.size;
+      FCR.store.set('quizDeck', saved);
     }
     // Keep the current card across re-renders (theme toggle, Back): only deal when there is none or it left the pool.
     const cur = getCur()[key];

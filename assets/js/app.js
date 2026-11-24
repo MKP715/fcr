@@ -92,7 +92,7 @@
   const dec = (s) => { try { return decodeURIComponent(s || ''); } catch (e) { return s || ''; } };
   const UPPER = (s) => String(s || '').toUpperCase();
   const own = (o, k) => !!o && Object.prototype.hasOwnProperty.call(o, k);
-  const QUIZ_MODES = { manual: 'Service Manual', concepts: 'Which Concept?', committees: 'Which committee?', people: 'People & committees', region: 'My region', rules: 'Draw rules & calendar' };
+  const QUIZ_MODES = { manual: 'Service Manual', reports: 'Reports & board weekends', concepts: 'Which Concept?', committees: 'Which committee?', people: 'People & committees', region: 'My region', rules: 'Draw rules & calendar' };
   /** The page title for a route. Every URL argument is checked the way its view checks it (an argument the view ignores
       gives the plain tab label), so the title always describes the page actually shown. */
   function titleFor(view, args) {

@@ -1005,15 +1005,17 @@ def check_board_meetings(bm, cal, fu, pai):
     return errs
 
 
-LEARN_MODES = {'manual', 'rules', 'region'}   # view-quiz.js decks a bank question can join (none: Service Manual + All)
+LEARN_MODES = {'manual', 'reports', 'rules', 'region'}   # view-quiz.js decks a bank question can join (none: Service Manual + All)
+LEARN_REPORT_CITE = re.compile(r'Final Report|board reports|PAI status grid')   # a no-mode question citing one belongs in 'reports'
 LEARN_PACKET_CITE = re.compile(r'(Q[1-4] \d{4} board reports)(?: (pp?)\. (N\b|\d+(?:-\d+)?(?:, \d+(?:-\d+)?)*))?')   # 'p. N' = the format
 
 
 def check_learn(learn, packets=None):
     """learn.json: unique node ids whose parents, see_also, glossary and quiz links resolve; glossary terms and quiz
     questions unique and cited (page or source); each question has three distinct wrong choices, none equal to the
-    answer, and a known deck mode; every packet cite reads 'Q[1-4] YYYY board reports p./pp. N', names a known packet and
-    has pages inside it (packets = board_packets(): short cite -> {pages, …}); and the correct answer is the strictly longest choice (in characters) in at most
+    answer, and a known deck mode ('reports' needs a source citing a report, and a question with no mode or 'manual'
+    may not cite one: LEARN_REPORT_CITE); every packet cite reads 'Q[1-4] YYYY board reports p./pp. N', names a known
+    packet and has pages inside it (packets = board_packets(): short cite -> {pages, …}); and the correct answer is the strictly longest choice (in characters) in at most
     40% of the bank (the method learn.json's audit records)."""
     errs, packets = [], packets or {}
     nodes = learn.get('nodes', [])
@@ -1053,6 +1055,10 @@ def check_learn(learn, packets=None):
             errs.append(f'{tag}: no page or source')
         if (q.get('mode') is not None and q['mode'] not in LEARN_MODES) or (q.get('mode') == 'region' and not q.get('region')):
             errs.append(f'{tag}: mode {q.get("mode")!r} unknown or without its region')
+        if q.get('mode') in (None, 'manual') and LEARN_REPORT_CITE.search(str(q.get('source') or '')):
+            errs.append(f'{tag}: source {q["source"]!r} cites a report, so set mode "reports" (not the Service Manual deck)')
+        if q.get('mode') == 'reports' and not LEARN_REPORT_CITE.search(str(q.get('source') or '')):
+            errs.append(f'{tag}: mode "reports" needs a source citing a Final Report, the board reports or a PAI grid')
         asked.add(q['q'])
         longest += len(q['a']) > max(len(x) for x in w)
     if bank and longest > 0.4 * len(bank):

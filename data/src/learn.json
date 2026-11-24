@@ -1844,8 +1844,8 @@
    "order": 1,
    "title": "General Warranties (Charter Article 12)",
    "role_label": "Warranties",
-   "summary": "Article 12 of the Charter, the General Warranties of the Conference, lists the safeguards the Conference must observe in all its proceedings; it also opens Chapter 6 and is part of Concept XII. The Conference must never become the seat of perilous wealth or power, must keep sufficient operating funds plus an ample reserve, and must never place any member in unqualified authority over another. Important decisions are reached by discussion, vote and, whenever possible, substantial unanimity. No action may be personally punitive or an incitement to public controversy, the Conference may never perform acts of government, and it must always remain democratic in thought and action. Article 12 can be changed only with the written consent of three-quarters of the A.A. groups.",
-   "chosen_by": "Changes need the written consent of three-quarters of the A.A. groups (Charter Art. 3)",
+   "summary": "Article 12 of the Charter, the General Warranties of the Conference, lists the safeguards the Conference must observe in all its proceedings; it also opens Chapter 6 and is part of Concept XII. The Conference must never become a seat of perilous wealth or power, must keep sufficient operating funds plus an ample reserve, and must never place any member in unqualified authority over another. Important decisions are reached by discussion, vote and, whenever possible, substantial unanimity. No action may be personally punitive or incite public controversy, the Conference may never perform acts of government, and it must always remain democratic in thought and action. Article 12 can be changed only if three-quarters of the A.A. groups agree in writing.",
+   "chosen_by": "Changes need written agreement from three-quarters of the A.A. groups (Charter Art. 3)",
    "term": "",
    "how_many": "",
    "qualifications": [],
@@ -5444,7 +5444,7 @@
   },
   {
    "term": "Concepts",
-   "definition": "Twelve related principles of service drawn from A.A.'s service successes and mistakes, set out by Bill W. in The A.A. Service Manual/Twelve Concepts for World Service.",
+   "definition": "Twelve related principles of service that grew out of A.A.'s service successes and mistakes, as Bill W. set them down in The A.A. Service Manual/Twelve Concepts for World Service.",
    "page": "92"
   },
   {
@@ -5863,7 +5863,7 @@
   },
   {
    "term": "Service Manual",
-   "definition": "The A.A. Service Manual/Twelve Concepts for World Service. It explains the general service structure and includes the Conference Charter, the General Service Board Bylaws and the Twelve Concepts.",
+   "definition": "The A.A. Service Manual/Twelve Concepts for World Service. This book explains the general service structure and includes the Conference Charter, the General Service Board Bylaws and the Twelve Concepts.",
    "page": "93"
   },
   {
@@ -7681,7 +7681,8 @@
    ],
    "page": "108",
    "source": "2026 Final Report",
-   "node": "gsb_officers"
+   "node": "gsb_officers",
+   "mode": "reports"
   },
   {
    "q": "What kind of trustee must the GSB treasurer be?",
@@ -7693,7 +7694,8 @@
    ],
    "page": "109",
    "source": "2026 Final Report",
-   "node": "gsb_officers"
+   "node": "gsb_officers",
+   "mode": "reports"
   },
   {
    "q": "In which years of their term do regional trustees normally serve on the AAWS or Grapevine board?",
@@ -7716,7 +7718,8 @@
    ],
    "page": "49",
    "source": "2021 Final Report",
-   "node": "past_delegates"
+   "node": "past_delegates",
+   "mode": "reports"
   },
   {
    "q": "How many GSO Staff Assignment headings are in the 2026–2028 Service Manual's list on pp. 70–73?",
@@ -10802,7 +10805,8 @@
     "Refer it to another trustees' committee"
    ],
    "source": "Q4 2026 board reports pp. 51-53, 78; Service Manual p. 42",
-   "node": "trustees_committees"
+   "node": "trustees_committees",
+   "mode": "reports"
   },
   {
    "q": "On GSO's PAI status grid, what does 'Forwarded as a general topic' mean?",
@@ -10813,7 +10817,8 @@
     "It will be discussed at Regional Forums instead of the Conference"
    ],
    "source": "Q4 2026 board reports pp. 52-54; Nov 6, 2026 PAI status grid",
-   "node": "agenda_path"
+   "node": "agenda_path",
+   "mode": "reports"
   },
   {
    "q": "In fall 2026, Conference committee chairs sat in on the trustees' General Service Conference Committee. What was their role there?",
@@ -10824,7 +10829,8 @@
     "Co-chairs who lead the discussion of PAIs"
    ],
    "source": "Q4 2026 board reports p. 50",
-   "node": "board_weekend"
+   "node": "board_weekend",
+   "mode": "reports"
   },
   {
    "q": "Which body reviewed the proposed agenda items about the wording of the A.A. Preamble for the 77th Conference?",
@@ -10835,7 +10841,8 @@
     "The trustees' Public Information Committee"
    ],
    "source": "Q4 2026 board reports pp. 3, 31; Service Manual p. 24",
-   "node": "grapevine_inc"
+   "node": "grapevine_inc",
+   "mode": "reports"
   },
   {
    "q": "Why did the AAWS board take no action on PAIs such as reviewing GSO staffing levels or adding sign-language editions?",
@@ -10846,7 +10853,8 @@
     "The AAWS board had no quorum at its October meeting"
    ],
    "source": "Q4 2026 board reports pp. 4, 15",
-   "node": "aaws"
+   "node": "aaws",
+   "mode": "reports"
   },
   {
    "q": "In trustees' committee reports, what is an 'interim meeting'?",
@@ -10857,7 +10865,8 @@
     "The break between the Conference's committee and general sessions"
    ],
    "source": "Q4 2026 board reports pp. 3, 7, 72; Service Manual p. 61",
-   "node": "board_weekend"
+   "node": "board_weekend",
+   "mode": "reports"
   },
   {
    "q": "Which of these is a reason trustees' committees gave in fall 2026 for taking no action on a PAI?",
@@ -10868,7 +10877,8 @@
     "The PAI lacked the signature of the area's delegate"
    ],
    "source": "Q4 2026 board reports p. 64; Service Manual p. 43",
-   "node": "agenda_path"
+   "node": "agenda_path",
+   "mode": "reports"
   },
   {
    "q": "After the fall board weekend, when does the final list of agenda items for each Conference committee come out?",
@@ -10891,7 +10901,8 @@
     "The General Sharing Session"
    ],
    "source": "Q4 2026 board reports pp. 3, 8, 26; Service Manual pp. 147, 155",
-   "node": "board_weekend"
+   "node": "board_weekend",
+   "mode": "reports"
   },
   {
    "q": "At a quarterly board meeting, how does the General Service Board handle a trustees' committee's report?",
@@ -10902,7 +10913,8 @@
     "It files the report unread until the following board weekend"
    ],
    "source": "Q4 2026 board reports pp. 4-7",
-   "node": "board_weekend"
+   "node": "board_weekend",
+   "mode": "reports"
   },
   {
    "q": "A trustees' committee decides a PAI belongs in another trustees' committee's scope. What happens?",
@@ -10913,7 +10925,8 @@
     "The board chair assigns it by lot to one of the standing committees"
    ],
    "source": "Q4 2026 board reports p. 78",
-   "node": "trustees_committees"
+   "node": "trustees_committees",
+   "mode": "reports"
   },
   {
    "q": "Can a trustees' committee take no action on a PAI and still make use of its idea?",
@@ -10924,7 +10937,8 @@
     "Only if the submitter sends it in again the following year"
    ],
    "source": "Q4 2026 board reports pp. 7, 62",
-   "node": "trustees_committees"
+   "node": "trustees_committees",
+   "mode": "reports"
   },
   {
    "q": "Besides proposed agenda items, what else can trustees' committees put forward for the Conference agenda?",
@@ -10935,7 +10949,8 @@
     "Only items written for them by GSO staff members"
    ],
    "source": "Q4 2026 board reports pp. 8, 73; Service Manual p. 43",
-   "node": "agenda_path"
+   "node": "agenda_path",
+   "mode": "reports"
   },
   {
    "q": "A member disagrees with an Advisory Action of the last Conference. What did the trustees' Nominating Committee say in fall 2026 that the member can do?",
@@ -10946,7 +10961,8 @@
     "Nothing; an Advisory Action can never be revisited by a later Conference"
    ],
    "source": "Q4 2026 board reports p. 75",
-   "node": "advisory_actions"
+   "node": "advisory_actions",
+   "mode": "reports"
   },
   {
    "q": "At the fall 2026 weekend, which subcommittee's suggestions led to trials of Slido voting and of online pre-Conference work for the secondary committees?",
@@ -10957,7 +10973,8 @@
     "The Founders' Writing Subcommittee"
    ],
    "source": "Q4 2026 board reports p. 50",
-   "node": "conference"
+   "node": "conference",
+   "mode": "reports"
   }
  ],
  "rules": [
@@ -11277,7 +11294,7 @@
   },
   {
    "topic": "Changing the Steps, Traditions or Article 12",
-   "summary": "No change to Charter Article 12, the Twelve Traditions or the Twelve Steps without the written consent of three-quarters of the A.A. groups. This applies to the original English version only.",
+   "summary": "No change to Charter Article 12, the Twelve Traditions or the Twelve Steps unless three-quarters of the A.A. groups agree in writing. The rule covers only the original English version.",
    "quotes": [
     {
      "text": "no change in Article 12 of the Charter or in the Twelve Traditions of A.A. or in the Twelve Steps of A.A. may be made with less than the written consent of three-quarters of the A.A. groups",
@@ -12437,7 +12454,7 @@
   },
   {
    "when": "Biennially",
-   "what": "Updates to The A.A. Service Manual/Twelve Concepts for World Service, per Conference approval",
+   "what": "The A.A. Service Manual/Twelve Concepts for World Service updated, per Conference approval",
    "page": "71"
   },
   {
